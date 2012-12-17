@@ -92,6 +92,7 @@
 // @include        http://kissdown.com/viewer.php?file=*
 // @include        http://imagerabbit.com/viewer.php?file=*
 // @include        http://games8y.com/viewer.php?file=*
+// @include        http://image69.us/viewer.php?file=*
 // @include        http://bc.vc/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
@@ -497,7 +498,17 @@
 						xhr( encodeURI( opts ) );
 					}, 1200 );
 				}
-			}
+			},
+
+			multi_hoster: {
+				rule: 'image69.us',
+				run: function() {
+					var a = document.querySelector( '#page_body a' );
+					var s = a.href;
+					this.targetUrl = 'http://' + s.substr( s.indexOf( 'image69.us' ) );
+					this.redirect();
+				},
+			},
 		}
 	}
 
