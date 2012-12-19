@@ -93,6 +93,7 @@
 // @include        http://imagerabbit.com/viewer.php?file=*
 // @include        http://games8y.com/viewer.php?file=*
 // @include        http://image69.us/viewer.php?file=*
+// @include        http://gzvd.info/viewer.php?file=*
 // @include        http://bc.vc/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
@@ -450,7 +451,7 @@
 				}
 			},
 
-			imagerabbit: {
+			mihalism: {
 				rule: /(imagerabbit|kissdown|games8y)\.com/,
 				run: function(){
 					this.targetUrl = document.location.href.toString().replace('viewer.php?file=', 'images/');
@@ -500,12 +501,22 @@
 				}
 			},
 
-			multi_hoster: {
+			mihalism1: {
 				rule: 'image69.us',
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
 					this.targetUrl = 'http://' + s.substr( s.indexOf( 'image69.us' ) );
+					this.redirect();
+				},
+			},
+
+			mihalism2: {
+				rule: 'gzvd.info',
+				run: function() {
+					var a = document.querySelector( '#page_body a' );
+					var s = a.href;
+					this.targetUrl = s.substr( s.lastIndexOf( 'http://' ) );
 					this.redirect();
 				},
 			},
