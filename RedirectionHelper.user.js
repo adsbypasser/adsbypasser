@@ -503,17 +503,17 @@
 			},
 
 			mihalism1: {
-				rule: 'image69.us',
+				rule: /image69\.us|picjav\.net/,
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
-					this.targetUrl = 'http://' + s.substr( s.indexOf( 'image69.us' ) );
+					this.targetUrl = 'http://' + s.substr( s.indexOf( window.location.hostname ) );
 					this.redirect();
 				},
 			},
 
 			mihalism2: {
-				rule: /gzvd\.info|picjav\.net/,
+				rule: 'gzvd.info',
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
