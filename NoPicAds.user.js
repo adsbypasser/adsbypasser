@@ -1,10 +1,10 @@
 // ==UserScript==
-// @name           RedirectionHelper
-// @namespace      No.bbs@ptt.cc
-// @description    轉址小幫手 v4.0.3
-// @author         SuYS
-// @updateURL      https://userscripts.org/scripts/source/69797.meta.js
-// @version        4.0.3
+// @name           NoPicAds
+// @namespace      FoolproofProject
+// @description    No Picture Advertisements
+// @author         legnaleurc
+// @version        1.0.0
+// @license        BSD
 // @include        http://*.linkbucks.com/*
 // @include        http://*.allanalpass.com/*
 // @include        http://*.amy.gs/*
@@ -415,7 +415,6 @@
 
 			/*
 				Provided by tuxie.forte@userscripts.org
-				Added in ver.4.01
 			*/
 			adcrun: {
 				rule: /adcrun\.ch/,
@@ -463,10 +462,6 @@
 				}
 			},
 
-			/*
-				Provided by legnaleurc@userscripts.org
-				Added in ver.4.0.3
-			*/
 			bcvc: {
 				rule: 'bc.vc',
 				run: function() {
