@@ -8,6 +8,8 @@ This user script helps you
 
 Forked from `RedirectionHelper`_ writen by `SuYS`_
 
+Stable version will upload to `the page on userscripts.org`_.
+
 Supported Sites
 ---------------
 
@@ -109,3 +111,4 @@ BSD
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797
 .. _SuYS: http://userscripts.org/users/SuYS
+.. _the page on userscripts.org: http://userscripts.org/scripts/show/154858
