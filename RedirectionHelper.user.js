@@ -378,8 +378,11 @@
 			imagetwist: {
 				rule: 'imagetwist.com',
 				run: function(){
-					var o;
+					var o = null;
 					if((o = document.getElementById('chatWindow'))){
+						o.parentNode.removeChild(o);
+					}
+					if((o = document.getElementById('popupOverlay'))){
 						o.parentNode.removeChild(o);
 					}
 
