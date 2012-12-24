@@ -3,7 +3,7 @@
 // @namespace      FoolproofProject
 // @description    No Picture Advertisements
 // @author         legnaleurc
-// @version        1.0.0
+// @version        1.0.1
 // @license        BSD
 // @updateURL      http://userscripts.org/scripts/source/154858.meta.js
 // @downloadURL    http://userscripts.org/scripts/source/154858.user.js
