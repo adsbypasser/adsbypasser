@@ -103,6 +103,7 @@
 // @include        http://bc.vc/*
 // @include        http://imgonion.com/*
 // @include        http://imgrill.com/*
+// @include        http://imagecherry.com/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -545,6 +546,18 @@
 							node = node.nextSibling;
 							node.parentNode.removeChild( node );
 						}
+					}
+				},
+			},
+
+			imagecherry: {
+				rule: /imagecherry\.com/,
+				run: function() {
+					var b = document.querySelector( 'body' );
+					if( b.id ) {
+						b.parentNode.removeChild( b );
+						b = document.querySelector( 'body' );
+						b.style = '';
 					}
 				},
 			},
