@@ -101,6 +101,7 @@
 // @include        http://hentaita.com/viewer.php?file=*
 // @include        http://bc.vc/*
 // @include        http://imgonion.com/*
+// @include        http://imgrill.com/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -527,7 +528,7 @@
 			},
 
 			imgonion: {
-				rule: /imgonion\.com/,
+				rule: /imgonion\.com|imgrill\.com/,
 				run: function() {
 					this.disableWindowOpen();
 					var node = document.querySelector( '#continuetoimage > form input' );
@@ -535,10 +536,14 @@
 						node.click();
 					} else {
 						node = document.querySelector( '#overlayBg' );
-						node.parentNode.removeChild( node );
+						if( node ) {
+							node.parentNode.removeChild( node );
+						}
 						node = document.querySelector( '#footer' );
-						node = node.nextSibling;
-						node.parentNode.removeChild( node );
+						if( node ) {
+							node = node.nextSibling;
+							node.parentNode.removeChild( node );
+						}
 					}
 				},
 			},
