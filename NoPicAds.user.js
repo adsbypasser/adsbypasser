@@ -512,7 +512,7 @@
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
-					this.targetUrl = 'http://' + s.substr( s.indexOf( window.location.hostname ) );
+					this.targetUrl = 'http://' + s.substr( s.lastIndexOf( window.location.hostname ) );
 					this.redirect();
 				},
 			},
