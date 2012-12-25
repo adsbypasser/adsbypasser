@@ -366,6 +366,8 @@
 			adfoc: {
 				rule: /adfoc\.us/,
 				run: function(){
+					// FIXME mutation events has been deprecated, consider rewrite with
+					// mutation observer
 					document.addEventListener('DOMNodeInserted', (function(that){
 						var o;
 						return function(){
