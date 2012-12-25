@@ -99,6 +99,7 @@
 // @include        http://gzvd.info/viewer.php?file=*
 // @include        http://picjav.net/viewer.php?file=*
 // @include        http://hentaita.com/viewer.php?file=*
+// @include        http://picjav.net/picjav2/viewer.php?file=*
 // @include        http://bc.vc/*
 // @include        http://imgonion.com/*
 // @include        http://imgrill.com/*
