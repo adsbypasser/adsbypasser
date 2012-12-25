@@ -557,7 +557,7 @@
 					if( b.id ) {
 						b.parentNode.removeChild( b );
 						b = document.querySelector( 'body' );
-						b.style = '';
+						b.style.display = 'block';
 					}
 				},
 			},
