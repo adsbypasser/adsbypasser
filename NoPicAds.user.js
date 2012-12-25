@@ -98,6 +98,7 @@
 // @include        http://image69.us/viewer.php?file=*
 // @include        http://gzvd.info/viewer.php?file=*
 // @include        http://picjav.net/viewer.php?file=*
+// @include        http://hentaita.com/viewer.php?file=*
 // @include        http://bc.vc/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
@@ -515,7 +516,7 @@
 			},
 
 			mihalism2: {
-				rule: /gzvd\.info/,
+				rule: /gzvd\.info|hentaita\.com/,
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
