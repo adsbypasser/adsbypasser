@@ -106,7 +106,9 @@
 // @exclude        http://adf.ly/?default_ad*
 // ==/UserScript==
 
-(function() {
+( function() {
+	'use strict';
+
 	function RedirectionHelper(baseURI){
 		this.baseURI=baseURI;
 		this.domain=null;
@@ -527,4 +529,4 @@
 	var myRedirector=new RedirectionHelper(document.baseURI);
 	myRedirector.matchDomain().matchAction().invokeAction();
 
-})();
+} )();
