@@ -138,17 +138,16 @@
 		this.targetUrl=null;
 	}
 	Actions.prototype = {
-		find: function(domain){
-			var isMatch;
-			var pattern;
-			for(var key in this.patterns){
-				pattern = this.patterns[key];
-				isMatch = typeof pattern.rule === 'string' ? pattern.rule == domain : pattern.rule.test(domain);
-				if(isMatch){
-					this.invoked = pattern.run;
-					return;
+		find: function( domain ) {
+			for( var key in this.patterns ) {
+				var pattern = this.patterns[key];
+				var matched = pattern.rule.exec( domain );
+				if( matched ) {
+					this.invoked = pattern.run.bind( this, matched );
+					return true;
 				}
 			}
+			return false;
 		},
 
 		redirect: function(){
@@ -277,7 +276,7 @@
 			},
 
 			zpag: {
-				rule: 'zpag.es',
+				rule: /zpag\.es/,
 				run: function(){
 					var matches=document.getElementsByTagName('head')[0].innerHTML.match(/window\.location\s*=\s*(['"])((?:\\\1|[^\1])*?)\1/);
 					if(matches)
@@ -287,7 +286,7 @@
 			},
 
 			pixhost: {
-				rule: 'www.pixhost.org',
+				rule: /www\.pixhost\.org/,
 				run: function(){
 					var o;
 					if((o=document.getElementById('web'))){
@@ -306,7 +305,7 @@
 			},
 
 			ichan: {
-				rule: 'ichan.org',
+				rule: /ichan\.org/,
 				run: function(){
 					var o=document.getElementsByTagName('a');
 					var l=o.length;
@@ -340,7 +339,7 @@
 			},
 
 			imgchili: {
-				rule: 'imgchili.com',
+				rule: /imgchili\.com/,
 				run: function(){
 					var o;
 					if((o=document.getElementById('ad')))
@@ -352,7 +351,7 @@
 			},
 
 			viidii: {
-				rule: 'www.viidii.com',
+				rule: /www\.viidii\.com/,
 				run: function(){
 					var o;
 					if((o=document.getElementById('directlink'))){
@@ -363,7 +362,7 @@
 			},
 
 			adfoc: {
-				rule: 'adfoc.us',
+				rule: /adfoc\.us/,
 				run: function(){
 					document.addEventListener('DOMNodeInserted', (function(that){
 						var o;
@@ -379,7 +378,7 @@
 			},
 
 			imagetwist: {
-				rule: 'imagetwist.com',
+				rule: /imagetwist\.com/,
 				run: function(){
 					var o = null;
 					if((o = document.getElementById('chatWindow'))){
@@ -394,7 +393,7 @@
 			},
 
 			adjoin: {
-				rule: 'adjoin.me',
+				rule: /adjoin\.me/,
 				run: function() {
 					this.targetUrl=document.location.toString().replace(/adjoin\.me\/\d+\//, '');
 					this.redirect();
@@ -402,14 +401,14 @@
 			},
 
 			madlink: {
-				rule: 'www.madlink.sk',
+				rule: /www\.madlink\.sk/,
 				run: function(){
 					document.getElementById('gosterbeni').getElementsByClassName('button')[0].click();
 				}
 			},
 
 			lnxlu: {
-				rule: 'lnx.lu',
+				rule: /lnx\.lu/,
 				run: function() {
 					this.targetUrl = document.getElementById('clickbtn').getElementsByTagName('a')[0].href;
 					this.redirect();
@@ -466,7 +465,7 @@
 			},
 
 			bcvc: {
-				rule: 'bc.vc',
+				rule: /bc\.vc/,
 				run: function() {
 					var matches = null;
 					var opts = '';
@@ -514,7 +513,7 @@
 			},
 
 			mihalism2: {
-				rule: 'gzvd.info',
+				rule: /gzvd\.info/,
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
