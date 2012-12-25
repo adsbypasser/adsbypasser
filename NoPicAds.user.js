@@ -419,9 +419,7 @@
 				}
 			},
 
-			/*
-				Provided by tuxie.forte@userscripts.org
-			*/
+			// Provided by tuxie.forte@userscripts.org
 			adcrun: {
 				rule: /adcrun\.ch/,
 				run: function(){
