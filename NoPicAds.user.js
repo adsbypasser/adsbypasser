@@ -100,6 +100,7 @@
 // @include        http://picjav.net/viewer.php?file=*
 // @include        http://hentaita.com/viewer.php?file=*
 // @include        http://bc.vc/*
+// @include        http://imgonion.com/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -522,6 +523,23 @@
 					var s = a.href;
 					this.targetUrl = s.substr( s.lastIndexOf( 'http://' ) );
 					this.redirect();
+				},
+			},
+
+			imgonion: {
+				rule: /imgonion\.com/,
+				run: function() {
+					this.disableWindowOpen();
+					var node = document.querySelector( '#continuetoimage > form input' );
+					if( node ) {
+						node.click();
+					} else {
+						node = document.querySelector( '#overlayBg' );
+						node.parentNode.removeChild( node );
+						node = document.querySelector( '#footer' );
+						node = node.nextSibling;
+						node.parentNode.removeChild( node );
+					}
 				},
 			},
 		}
