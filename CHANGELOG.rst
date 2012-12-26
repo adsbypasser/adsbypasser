@@ -1,3 +1,10 @@
+1.1.1
+-----
+
+* fixed
+
+  * picjav.net/picjav2
+
 1.1.0
 -----
 
