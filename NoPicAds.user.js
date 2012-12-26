@@ -235,6 +235,8 @@
 					var that = this;
 
 					if(matches){
+						var ad = document.querySelector( 'body iframe' );
+						ad.parentNode.removeChild( ad );
 						window.setTimeout(function(){
 							that.targetUrl=matches[1];
 							that.redirect();
