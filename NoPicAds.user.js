@@ -512,7 +512,12 @@
 			mihalism1: {
 				rule: /image69\.us|picjav\.net/,
 				run: function() {
-					var a = document.querySelector( '#page_body a' );
+					if( window.location.pathname.startsWith( '/picjav2' ) ) {
+						var a = document.querySelectorAll( '#page_body a' );
+						a = a[1];
+					} else {
+						var a = document.querySelector( '#page_body a' );
+					}
 					var s = a.href;
 					// the real link does not immediately appears after http://
 					this.targetUrl = 'http://' + s.substr( s.lastIndexOf( window.location.hostname ) );
