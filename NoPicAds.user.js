@@ -512,7 +512,7 @@
 			mihalism1: {
 				rule: /image69\.us|picjav\.net/,
 				run: function() {
-					if( window.location.pathname.startsWith( '/picjav2' ) ) {
+					if( window.location.pathname.indexOf( '/picjav2' ) === 0 ) {
 						var a = document.querySelectorAll( '#page_body a' );
 						a = a[1];
 					} else {
