@@ -4,7 +4,7 @@
 // @description    No Picture Advertisements
 // @copyright      2012+, legnaleurc (https://github.com/legnaleurc/nopicads)
 // @copyright      2010+, SuYS (http://userscripts.org/scripts/show/69797)
-// @version        1.1.0
+// @version        1.1.1
 // @license        BSD
 // @updateURL      http://userscripts.org/scripts/source/154858.meta.js
 // @downloadURL    http://userscripts.org/scripts/source/154858.user.js
@@ -515,7 +515,12 @@
 			mihalism1: {
 				rule: /image69\.us|picjav\.net/,
 				run: function() {
-					var a = document.querySelector( '#page_body a' );
+					if( window.location.pathname.indexOf( '/picjav2' ) === 0 ) {
+						var a = document.querySelectorAll( '#page_body a' );
+						a = a[1];
+					} else {
+						var a = document.querySelector( '#page_body a' );
+					}
 					var s = a.href;
 					if( window.location.pathname.indexOf( '/x/' ) === 0 ) {
 						this.targetUrl = s;
