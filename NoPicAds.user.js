@@ -100,6 +100,7 @@
 // @include        http://picjav.net/viewer.php?file=*
 // @include        http://hentaita.com/viewer.php?file=*
 // @include        http://picjav.net/picjav2/viewer.php?file=*
+// @include        http://picjav.net/x/viewer.php?file=*
 // @include        http://bc.vc/*
 // @include        http://imgonion.com/*
 // @include        http://imgrill.com/*
@@ -514,8 +515,12 @@
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
-					// the real link does not immediately appears after http://
-					this.targetUrl = 'http://' + s.substr( s.lastIndexOf( window.location.hostname ) );
+					if( window.location.pathname.indexOf( '/x/' ) === 0 ) {
+						this.targetUrl = s;
+					} else {
+						// the real link does not immediately appears after http://
+						this.targetUrl = 'http://' + s.substr( s.lastIndexOf( window.location.hostname ) );
+					}
 					this.redirect();
 				},
 			},
