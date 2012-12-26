@@ -9,9 +9,7 @@
 
 * fixed
 
-  * imagetwist.com
-
-    Remove fullscreen overlay.
+  * imagetwist.com: remove fullscreen overlay
 
 * changed
 
