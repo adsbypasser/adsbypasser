@@ -103,6 +103,10 @@ Supported Sites
 * gzvd.info
 * picjav.net
 * bc.vc
+* hentaita.com
+* imgonion.com
+* imgrill.com
+* imagecherry.com
 
 License
 -------
