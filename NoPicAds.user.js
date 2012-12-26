@@ -533,8 +533,11 @@
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
 					// the real link is diffirent from original host
-					this.targetUrl = s.substr( s.lastIndexOf( 'http://' ) );
-					this.redirect();
+					var i = s.lastIndexOf( 'http://' );
+					if( i >= 0 ) {
+						this.targetUrl = s.substr( i );
+						this.redirect();
+					}
 				},
 			},
 
