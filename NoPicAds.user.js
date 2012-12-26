@@ -514,6 +514,7 @@
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
+					// the real link does not immediately appears after http://
 					this.targetUrl = 'http://' + s.substr( s.lastIndexOf( window.location.hostname ) );
 					this.redirect();
 				},
@@ -524,6 +525,7 @@
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
+					// the real link is diffirent from original host
 					this.targetUrl = s.substr( s.lastIndexOf( 'http://' ) );
 					this.redirect();
 				},
