@@ -571,8 +571,11 @@
 					a = a[1];
 					var s = a.href;
 					// the real link does not immediately appears after http://
-					this.targetUrl = 'http://' + s.substr( s.lastIndexOf( window.location.hostname ) );
-					this.redirect();
+					a = s.lastIndexOf( window.location.hostname );
+					if( a >= 0 ) {
+						this.targetUrl = 'http://' + s.substr( a );
+						this.redirect();
+					}
 				},
 			},
 		}
