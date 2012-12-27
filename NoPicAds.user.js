@@ -510,14 +510,9 @@
 			},
 
 			mihalism1: {
-				rule: /image69\.us|picjav\.net/,
+				rule: /image69\.us/,
 				run: function() {
-					if( window.location.pathname.indexOf( '/picjav2' ) === 0 ) {
-						var a = document.querySelectorAll( '#page_body a' );
-						a = a[1];
-					} else {
-						var a = document.querySelector( '#page_body a' );
-					}
+					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
 					// the real link does not immediately appears after http://
 					this.targetUrl = 'http://' + s.substr( s.lastIndexOf( window.location.hostname ) );
@@ -566,6 +561,18 @@
 						b = document.querySelector( 'body' );
 						b.style.display = 'block';
 					}
+				},
+			},
+
+			mihalism3: {
+				rule: /picjav\.net/,
+				run: function() {
+					var a = document.querySelectorAll( '#page_body a' );
+					a = a[1];
+					var s = a.href;
+					// the real link does not immediately appears after http://
+					this.targetUrl = 'http://' + s.substr( s.lastIndexOf( window.location.hostname ) );
+					this.redirect();
 				},
 			},
 		}
