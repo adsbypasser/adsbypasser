@@ -116,22 +116,22 @@
 	'use strict';
 
 	function Actions() {
-		this.invoked = null;
 		this.targetUrl = null;
 	}
 	Actions.prototype = {
 		run: function() {
-			this.find( {
+			var runner = this.find( {
 				hostname: window.location.hostname,
 				pathname: window.location.pathname,
 			} );
-			if( this.invoked ) {
-				this.invoked();
+			if( runner ) {
+				runner();
 			}
 		},
 
 		find: function( uri ) {
-			this.patterns.forEach( function( pattern ) {
+			for( var i in this.patterns ) {
+				var pattern = this.patterns[i];
 				var matched = {};
 				for( var part in pattern.rule ) {
 					matched[part] = pattern.rule[part].exec( uri[part] );
@@ -141,9 +141,10 @@
 					}
 				}
 				if( matched ) {
-					this.invoked = pattern.run.bind( this, matched );
+					return pattern.run.bind( this, matched );
 				}
-			}, this );
+			}
+			return null;
 		},
 
 		redirect: function(){
