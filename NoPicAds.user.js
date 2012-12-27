@@ -121,18 +121,17 @@
 	}
 	Actions.prototype = {
 		run: function() {
-			var found = this.find( {
+			this.find( {
 				hostname: window.location.hostname,
 				pathname: window.location.pathname,
 			} );
-			if( found ) {
+			if( this.invoked ) {
 				this.invoked();
 			}
 		},
 
 		find: function( uri ) {
-			for( var key in this.patterns ) {
-				var pattern = this.patterns[key];
+			this.patterns.forEach( function( pattern ) {
 				var matched = {};
 				for( var part in pattern.rule ) {
 					matched[part] = pattern.rule[part].exec( uri[part] );
@@ -143,10 +142,8 @@
 				}
 				if( matched ) {
 					this.invoked = pattern.run.bind( this, matched );
-					return true;
 				}
-			}
-			return false;
+			}, this );
 		},
 
 		redirect: function(){
@@ -170,8 +167,9 @@
 			}
 		},
 
-		patterns: {
-			linkbucks: {
+		patterns: [
+			// linkbucks
+			{
 				rule: {
 					hostname: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
 				},
@@ -188,7 +186,8 @@
 				}
 			},
 
-			alabout: {
+			// alabout
+			{
 				rule: {
 					hostname: /(alabout|alafs)\.com/,
 				},
@@ -200,7 +199,8 @@
 				}
 			},
 
-			imageporter: {
+			// imageporter
+			{
 				rule: {
 					hostname: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn)\.com|(piclambo|yankoimages)\.net/,
 				},
@@ -224,7 +224,8 @@
 				}
 			},
 
-			adf: {
+			// adf
+			{
 				rule: {
 					hostname: /adf.ly|[u9]\.bb|[jq]\.gs/,
 				},
@@ -248,7 +249,8 @@
 				}
 			},
 
-			turboimagehost: {
+			// turboimagehost
+			{
 				rule: {
 					hostname: /turboimagehost\.com/,
 				},
@@ -261,7 +263,8 @@
 				}
 			},
 
-			imagevenue: {
+			// imagevenue
+			{
 				rule: {
 					hostname: /imagevenue\.com/,
 				},
@@ -274,7 +277,8 @@
 				}
 			},
 
-			linkbee: {
+			// linkbee
+			{
 				rule: {
 					hostname: /(linkbee\.com|lnk\.co)/,
 				},
@@ -290,7 +294,8 @@
 				}
 			},
 
-			zpag: {
+			// zpag
+			{
 				rule: {
 					hostname: /zpag\.es/,
 				},
@@ -302,7 +307,8 @@
 				}
 			},
 
-			pixhost: {
+			// pixhost
+			{
 				rule: {
 					hostname: /www\.pixhost\.org/,
 				},
@@ -323,7 +329,8 @@
 				}
 			},
 
-			ichan: {
+			// ichan
+			{
 				rule: {
 					hostname: /ichan\.org/,
 				},
@@ -337,7 +344,8 @@
 				}
 			},
 
-			urlcash: {
+			// urlcash
+			{
 				rule: {
 					hostname: /urlcash\.net/,
 				},
@@ -351,7 +359,8 @@
 				}
 			},
 
-			pushba: {
+			// pushba
+			{
 				rule: {
 					hostname: /pushba\.com/,
 				},
@@ -363,7 +372,8 @@
 				}
 			},
 
-			imgchili: {
+			// imgchili
+			{
 				rule: {
 					hostname: /imgchili\.com/,
 				},
@@ -377,7 +387,8 @@
 				}
 			},
 
-			viidii: {
+			// viidii
+			{
 				rule: {
 					hostname: /www\.viidii\.com/,
 				},
@@ -390,7 +401,8 @@
 				}
 			},
 
-			adfoc: {
+			// adfoc
+			{
 				rule: {
 					hostname: /adfoc\.us/,
 				},
@@ -410,7 +422,8 @@
 				}
 			},
 
-			imagetwist: {
+			// imagetwist
+			{
 				rule: {
 					hostname: /imagetwist\.com/,
 				},
@@ -427,7 +440,8 @@
 				}
 			},
 
-			adjoin: {
+			// adjoin
+			{
 				rule: {
 					hostname: /adjoin\.me/,
 				},
@@ -437,7 +451,8 @@
 				}
 			},
 
-			madlink: {
+			// madlink
+			{
 				rule: {
 					hostname: /www\.madlink\.sk/,
 				},
@@ -446,7 +461,8 @@
 				}
 			},
 
-			lnxlu: {
+			// lnxlu
+			{
 				rule: {
 					hostname: /lnx\.lu/,
 				},
@@ -457,7 +473,8 @@
 			},
 
 			// Provided by tuxie.forte@userscripts.org
-			adcrun: {
+			// adcrun
+			{
 				rule: {
 					hostname: /adcrun\.ch/,
 				},
@@ -497,7 +514,8 @@
 				}
 			},
 
-			mihalism: {
+			// mihalism
+			{
 				rule: {
 					hostname: /(imagerabbit|kissdown|games8y)\.com/,
 				},
@@ -507,7 +525,8 @@
 				}
 			},
 
-			bcvc: {
+			// bcvc
+			{
 				rule: {
 					hostname: /bc\.vc/,
 				},
@@ -547,7 +566,8 @@
 				}
 			},
 
-			mihalism1: {
+			// mihalism1
+			{
 				rule: {
 					hostname: /image69\.us|picjav\.net/,
 				},
@@ -569,7 +589,8 @@
 				},
 			},
 
-			mihalism2: {
+			// mihalism2
+			{
 				rule: {
 					hostname: /gzvd\.info|hentaita\.com/,
 				},
@@ -585,7 +606,8 @@
 				},
 			},
 
-			imgonion: {
+			// imgonion
+			{
 				rule: {
 					hostname: /imgonion\.com|imgrill\.com/,
 				},
@@ -608,7 +630,8 @@
 				},
 			},
 
-			imagecherry: {
+			// imagecherry
+			{
 				rule: {
 					hostname: /imagecherry\.com/,
 				},
@@ -621,7 +644,7 @@
 					}
 				},
 			},
-		}
+		],
 	}
 
 	var action = new Actions();
