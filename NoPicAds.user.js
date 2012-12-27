@@ -3,7 +3,7 @@
 // @namespace      FoolproofProject
 // @description    No Picture Advertisements
 // @copyright      2012+, legnaleurc (https://github.com/legnaleurc/nopicads)
-// @version        1.1.1
+// @version        1.1.2
 // @license        BSD
 // @updateURL      http://userscripts.org/scripts/source/154858.meta.js
 // @downloadURL    http://userscripts.org/scripts/source/154858.user.js
@@ -512,14 +512,9 @@
 			},
 
 			mihalism1: {
-				rule: /image69\.us|picjav\.net/,
+				rule: /image69\.us/,
 				run: function() {
-					if( window.location.pathname.indexOf( '/picjav2' ) === 0 ) {
-						var a = document.querySelectorAll( '#page_body a' );
-						a = a[1];
-					} else {
-						var a = document.querySelector( '#page_body a' );
-					}
+					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
 					if( window.location.pathname.indexOf( '/x/' ) === 0 ) {
 						this.targetUrl = s;
@@ -574,6 +569,21 @@
 						b.parentNode.removeChild( b );
 						b = document.querySelector( 'body' );
 						b.style.display = 'block';
+					}
+				},
+			},
+
+			mihalism3: {
+				rule: /picjav\.net/,
+				run: function() {
+					var a = document.querySelectorAll( '#page_body a' );
+					a = a[1];
+					var s = a.href;
+					// the real link does not immediately appears after http://
+					a = s.lastIndexOf( window.location.hostname );
+					if( a >= 0 ) {
+						this.targetUrl = 'http://' + s.substr( a );
+						this.redirect();
 					}
 				},
 			},
