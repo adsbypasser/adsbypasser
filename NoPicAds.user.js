@@ -115,41 +115,32 @@
 ( function() {
 	'use strict';
 
-	function RedirectionHelper(baseURI){
-		this.baseURI=baseURI;
-		this.domain=null;
-		this.action=new Actions();
-	}
-	RedirectionHelper.prototype = {
-		matchDomain: function(){
-			var domain = this.baseURI.match(/^https?:\/\/([^\/]+)\//);
-			if(domain)
-				this.domain=domain[1];
-			return this;
-		},
-
-		matchAction: function(){
-			if(this.domain)
-				this.action.find(this.domain);
-			return this;
-		},
-
-		invokeAction: function(){
-			if(this.action.invoked)
-				this.action.invoked();
-			return this;
-		}
-	}
-
-	function Actions(){
-		this.invoked=null;
-		this.targetUrl=null;
+	function Actions() {
+		this.invoked = null;
+		this.targetUrl = null;
 	}
 	Actions.prototype = {
-		find: function( domain ) {
+		run: function() {
+			var found = this.find( {
+				hostname: window.location.hostname,
+				pathname: window.location.pathname,
+			} );
+			if( found ) {
+				this.invoked();
+			}
+		},
+
+		find: function( uri ) {
 			for( var key in this.patterns ) {
 				var pattern = this.patterns[key];
-				var matched = pattern.rule.exec( domain );
+				var matched = {};
+				for( var part in pattern.rule ) {
+					matched[part] = pattern.rule[part].exec( uri[part] );
+					if( !matched[part] ) {
+						matched = null;
+						break;
+					}
+				}
 				if( matched ) {
 					this.invoked = pattern.run.bind( this, matched );
 					return true;
@@ -181,7 +172,9 @@
 
 		patterns: {
 			linkbucks: {
-				rule: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
+				rule: {
+					hostname: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
+				},
 				run: function(){
 					var matches;
 
@@ -196,7 +189,9 @@
 			},
 
 			alabout: {
-				rule: /(alabout|alafs)\.com/,
+				rule: {
+					hostname: /(alabout|alafs)\.com/,
+				},
 				run: function(){
 					var o=document.getElementsByTagName('a');
 					for(var i in o)
@@ -206,7 +201,9 @@
 			},
 
 			imageporter: {
-				rule: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn)\.com|(piclambo|yankoimages)\.net/,
+				rule: {
+					hostname: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn)\.com|(piclambo|yankoimages)\.net/,
+				},
 				run: function(){
 					var o;
 
@@ -228,7 +225,9 @@
 			},
 
 			adf: {
-				rule: /adf.ly|[u9]\.bb|[jq]\.gs/,
+				rule: {
+					hostname: /adf.ly|[u9]\.bb|[jq]\.gs/,
+				},
 				run: function(){
 					var head = document.getElementsByTagName('head')[0].innerHTML;
 					var matches = head.match(/var\s+url\s*=\s*['"](.+)['"]/);
@@ -250,7 +249,9 @@
 			},
 
 			turboimagehost: {
-				rule: /turboimagehost\.com/,
+				rule: {
+					hostname: /turboimagehost\.com/,
+				},
 				run: function(){
 					var o;
 					if((o=document.getElementById('blanket')))
@@ -261,7 +262,9 @@
 			},
 
 			imagevenue: {
-				rule: /imagevenue\.com/,
+				rule: {
+					hostname: /imagevenue\.com/,
+				},
 				run: function(){
 					var o;
 					if((o=document.getElementById('interContainer')))
@@ -272,7 +275,9 @@
 			},
 
 			linkbee: {
-				rule: /(linkbee\.com|lnk\.co)/,
+				rule: {
+					hostname: /(linkbee\.com|lnk\.co)/,
+				},
 				run: function(){
 					var o;
 					if((o=document.getElementById('urlholder')))
@@ -286,7 +291,9 @@
 			},
 
 			zpag: {
-				rule: /zpag\.es/,
+				rule: {
+					hostname: /zpag\.es/,
+				},
 				run: function(){
 					var matches=document.getElementsByTagName('head')[0].innerHTML.match(/window\.location\s*=\s*(['"])((?:\\\1|[^\1])*?)\1/);
 					if(matches)
@@ -296,7 +303,9 @@
 			},
 
 			pixhost: {
-				rule: /www\.pixhost\.org/,
+				rule: {
+					hostname: /www\.pixhost\.org/,
+				},
 				run: function(){
 					var o;
 					if((o=document.getElementById('web'))){
@@ -315,7 +324,9 @@
 			},
 
 			ichan: {
-				rule: /ichan\.org/,
+				rule: {
+					hostname: /ichan\.org/,
+				},
 				run: function(){
 					var o=document.getElementsByTagName('a');
 					var l=o.length;
@@ -327,7 +338,9 @@
 			},
 
 			urlcash: {
-				rule: /urlcash\.net/,
+				rule: {
+					hostname: /urlcash\.net/,
+				},
 				run: function(){
 					var matches;
 					if(unsafeWindow)
@@ -339,7 +352,9 @@
 			},
 
 			pushba: {
-				rule: /pushba\.com/,
+				rule: {
+					hostname: /pushba\.com/,
+				},
 				run: function(){
 					var o;
 					if((o=document.getElementById('urlTextBox')))
@@ -349,7 +364,9 @@
 			},
 
 			imgchili: {
-				rule: /imgchili\.com/,
+				rule: {
+					hostname: /imgchili\.com/,
+				},
 				run: function(){
 					var o;
 					if((o=document.getElementById('ad')))
@@ -361,7 +378,9 @@
 			},
 
 			viidii: {
-				rule: /www\.viidii\.com/,
+				rule: {
+					hostname: /www\.viidii\.com/,
+				},
 				run: function(){
 					var o;
 					if((o=document.getElementById('directlink'))){
@@ -372,7 +391,9 @@
 			},
 
 			adfoc: {
-				rule: /adfoc\.us/,
+				rule: {
+					hostname: /adfoc\.us/,
+				},
 				run: function(){
 					// FIXME mutation events has been deprecated, consider rewrite with
 					// mutation observer
@@ -390,7 +411,9 @@
 			},
 
 			imagetwist: {
-				rule: /imagetwist\.com/,
+				rule: {
+					hostname: /imagetwist\.com/,
+				},
 				run: function(){
 					var o = null;
 					if((o = document.getElementById('chatWindow'))){
@@ -405,7 +428,9 @@
 			},
 
 			adjoin: {
-				rule: /adjoin\.me/,
+				rule: {
+					hostname: /adjoin\.me/,
+				},
 				run: function() {
 					this.targetUrl=document.location.toString().replace(/adjoin\.me\/\d+\//, '');
 					this.redirect();
@@ -413,14 +438,18 @@
 			},
 
 			madlink: {
-				rule: /www\.madlink\.sk/,
+				rule: {
+					hostname: /www\.madlink\.sk/,
+				},
 				run: function(){
 					document.getElementById('gosterbeni').getElementsByClassName('button')[0].click();
 				}
 			},
 
 			lnxlu: {
-				rule: /lnx\.lu/,
+				rule: {
+					hostname: /lnx\.lu/,
+				},
 				run: function() {
 					this.targetUrl = document.getElementById('clickbtn').getElementsByTagName('a')[0].href;
 					this.redirect();
@@ -429,7 +458,9 @@
 
 			// Provided by tuxie.forte@userscripts.org
 			adcrun: {
-				rule: /adcrun\.ch/,
+				rule: {
+					hostname: /adcrun\.ch/,
+				},
 				run: function(){
 					var matches, opts, scripts = document.getElementsByTagName('script');
 					opts = '';
@@ -467,7 +498,9 @@
 			},
 
 			mihalism: {
-				rule: /(imagerabbit|kissdown|games8y)\.com/,
+				rule: {
+					hostname: /(imagerabbit|kissdown|games8y)\.com/,
+				},
 				run: function(){
 					this.targetUrl = document.location.href.toString().replace('viewer.php?file=', 'images/');
 					this.redirect();
@@ -475,7 +508,9 @@
 			},
 
 			bcvc: {
-				rule: /bc\.vc/,
+				rule: {
+					hostname: /bc\.vc/,
+				},
 				run: function() {
 					var matches = null;
 					var opts = '';
@@ -513,7 +548,9 @@
 			},
 
 			mihalism1: {
-				rule: /image69\.us|picjav\.net/,
+				rule: {
+					hostname: /image69\.us|picjav\.net/,
+				},
 				run: function() {
 					if( window.location.pathname.indexOf( '/picjav2' ) === 0 ) {
 						var a = document.querySelectorAll( '#page_body a' );
@@ -533,7 +570,9 @@
 			},
 
 			mihalism2: {
-				rule: /gzvd\.info|hentaita\.com/,
+				rule: {
+					hostname: /gzvd\.info|hentaita\.com/,
+				},
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
@@ -547,7 +586,9 @@
 			},
 
 			imgonion: {
-				rule: /imgonion\.com|imgrill\.com/,
+				rule: {
+					hostname: /imgonion\.com|imgrill\.com/,
+				},
 				run: function() {
 					this.disableWindowOpen();
 					var node = document.querySelector( '#continuetoimage > form input' );
@@ -568,7 +609,9 @@
 			},
 
 			imagecherry: {
-				rule: /imagecherry\.com/,
+				rule: {
+					hostname: /imagecherry\.com/,
+				},
 				run: function() {
 					var b = document.querySelector( 'body' );
 					if( b.id ) {
@@ -581,7 +624,7 @@
 		}
 	}
 
-	var myRedirector=new RedirectionHelper(document.baseURI);
-	myRedirector.matchDomain().matchAction().invokeAction();
+	var action = new Actions();
+	action.run();
 
 } )();
