@@ -109,10 +109,6 @@ Supported Sites
 * imgrill.com
 * imagecherry.com
 
-License
--------
-
-BSD
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797
 .. _SuYS: http://userscripts.org/users/SuYS
