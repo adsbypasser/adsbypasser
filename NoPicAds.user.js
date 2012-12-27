@@ -516,12 +516,8 @@
 				run: function() {
 					var a = document.querySelector( '#page_body a' );
 					var s = a.href;
-					if( window.location.pathname.indexOf( '/x/' ) === 0 ) {
-						this.targetUrl = s;
-					} else {
-						// the real link does not immediately appears after http://
-						this.targetUrl = 'http://' + s.substr( s.lastIndexOf( window.location.hostname ) );
-					}
+					// the real link does not immediately appears after http://
+					this.targetUrl = 'http://' + s.substr( s.lastIndexOf( window.location.hostname ) );
 					this.redirect();
 				},
 			},
@@ -576,14 +572,23 @@
 			mihalism3: {
 				rule: /picjav\.net/,
 				run: function() {
-					var a = document.querySelectorAll( '#page_body a' );
-					a = a[1];
+					if( window.location.pathname.indexOf( '/x/' ) === 0 ) {
+						var a = document.querySelector( '#page_body a' );
+					} else {
+						var a = document.querySelectorAll( '#page_body a' );
+						a = a[1];
+					}
 					var s = a.href;
-					// the real link does not immediately appears after http://
-					a = s.lastIndexOf( window.location.hostname );
-					if( a >= 0 ) {
-						this.targetUrl = 'http://' + s.substr( a );
+					if( window.location.pathname.indexOf( '/x/' ) === 0 ) {
+						this.targetUrl = s;
 						this.redirect();
+					} else {
+						// the real link does not immediately appears after http://
+						a = s.lastIndexOf( window.location.hostname );
+						if( a >= 0 ) {
+							this.targetUrl = 'http://' + s.substr( a );
+							this.redirect();
+						}
 					}
 				},
 			},
