@@ -108,6 +108,8 @@ Supported Sites
 * imgonion.com
 * imgrill.com
 * imagecherry.com
+* imagecorn.com
+* imagehosting
 
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797
