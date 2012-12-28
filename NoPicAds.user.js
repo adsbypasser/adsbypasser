@@ -105,6 +105,7 @@
 // @include        http://imgrill.com/*
 // @include        http://imagecherry.com/*
 // @include        http://imagecorn.com/*
+// @include        http://imagehosting.2owl.net/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -591,6 +592,14 @@
 							this.redirect();
 						}
 					}
+				},
+			},
+
+			imagehosting: {
+				rule: /imagehosting\.2owl\.net/,
+				run: function() {
+					var d = document.querySelector( '#warning' );
+					d.parentNode.removeChild( d );
 				},
 			},
 		}
