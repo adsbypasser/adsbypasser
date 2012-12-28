@@ -106,6 +106,7 @@
 // @include        http://imagecherry.com/*
 // @include        http://imagecorn.com/*
 // @include        http://imagehosting.2owl.net/*
+// @include        http://imgdino.com/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -681,6 +682,19 @@
 				run: function() {
 					var d = document.querySelector( '#warning' );
 					d.parentNode.removeChild( d );
+				},
+			},
+
+			// imgdino.com
+			{
+				rule: {
+					hostname: /imgdino\.com/,
+				},
+				run: function() {
+					var d = document.querySelector( '#redirect-ad' );
+					if( d ) {
+						d.parentNode.removeChild( d );
+					}
 				},
 			},
 		],
