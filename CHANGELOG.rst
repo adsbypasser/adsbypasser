@@ -6,6 +6,7 @@
   * picjav.net/x
   * imagecorn.com
   * imagehosting.2owl.net
+  * imgdino.com
 
 * fixed
 

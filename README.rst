@@ -110,6 +110,7 @@ Supported Sites
 * imagecherry.com
 * imagecorn.com
 * imagehosting
+* imgdino.com
 
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797
