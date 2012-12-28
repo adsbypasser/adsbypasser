@@ -1,3 +1,30 @@
+2.0.0
+-----
+
+* added
+
+  * picjav.net/x
+  * imagecorn.com
+  * imagehosting.2owl.net
+
+* fixed
+
+  * adf.ly
+
+    * remove iframe
+
+  * gzvd.info
+
+    * don't redirect if picture was removed
+
+  * hentaita.com
+
+    * don't redirect if picture was removed
+
+* changed
+
+  * introduced more rules to match sites
+
 1.1.2
 -----
 
