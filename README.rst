@@ -5,7 +5,7 @@ This user script helps you
 
 * skip ads' count down page
 * remove overlays over pictures
-* prevent windows pops up
+* prevent windows pop up
 
 Forked from `RedirectionHelper`_ writen by `SuYS`_
 
