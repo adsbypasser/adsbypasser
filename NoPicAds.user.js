@@ -104,6 +104,7 @@
 // @include        http://imgonion.com/*
 // @include        http://imgrill.com/*
 // @include        http://imagecherry.com/*
+// @include        http://imagecorn.com/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -537,7 +538,7 @@
 			},
 
 			imgonion: {
-				rule: /imgonion\.com|imgrill\.com/,
+				rule: /imgonion\.com|imgrill\.com|imagecorn\.com/,
 				run: function() {
 					this.disableWindowOpen();
 					var node = document.querySelector( '#continuetoimage > form input' );
