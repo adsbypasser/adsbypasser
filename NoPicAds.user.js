@@ -3,7 +3,7 @@
 // @namespace      FoolproofProject
 // @description    No Picture Advertisements
 // @copyright      2012+, legnaleurc (https://github.com/legnaleurc/nopicads)
-// @version        2.0.0
+// @version        2.0.1
 // @license        BSD
 // @updateURL      http://userscripts.org/scripts/source/154858.meta.js
 // @downloadURL    http://userscripts.org/scripts/source/154858.user.js
@@ -208,23 +208,17 @@
 					hostname: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn)\.com|(piclambo|yankoimages)\.net/,
 				},
 				run: function(){
-					var o;
+					var o = document.querySelectorAll( '#firopage, iframe' );
+					Array.prototype.forEach.call( o, function( v ) {
+						v.parentNode.removeChild( v );
+					} );
 
-					if(o=document.getElementById('firopage')){
-						o.parentNode.removeChild(o);
-					}
-
-					o=document.getElementsByTagName('iframe');
-					for(i=o.length-1;i>=0;i--){
-						o[i].parentNode.removeChild(o[i]);
-					}
-
-					o=(document.compatMode=='CSS1Compat') ? document.documentElement : document.body;
-					o.style.overflow='auto';
+					o = ( document.compatMode === 'CSS1Compat' ) ? document.documentElement : document.body;
+					o.style.overflow = 'auto';
 
 					this.cleanTimer();
 					this.disableWindowOpen();
-				}
+				},
 			},
 
 			// adf
