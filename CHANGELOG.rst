@@ -1,3 +1,10 @@
+2.0.1
+-----
+
+* fixed
+
+  * imageporter.com
+
 2.0.0
 -----
 
