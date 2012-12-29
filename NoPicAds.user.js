@@ -132,7 +132,7 @@
 	};
 
 	Actions.prototype.find = function( uri ) {
-		for( var i in this.patterns ) {
+		for( var i = 0; i < this.patterns.length; ++i ) {
 			var pattern = this.patterns[i];
 			var matched = {};
 			for( var part in pattern.rule ) {
