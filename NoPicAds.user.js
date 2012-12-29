@@ -156,9 +156,9 @@
 	};
 
 	Actions.prototype.cleanTimer = function() {
-		var intervalID = window.setInterval( '', 1 );
-		while( --intervalID > 0 ) {
-			window.clearInterval( intervalID );
+		var intervalID = window.setInterval( ';', 10 );
+		while( intervalID > 0 ) {
+			window.clearInterval( intervalID-- );
 		}
 	};
 
