@@ -524,6 +524,18 @@
 			}
 		},
 
+		// bc.vc, shortcut
+		{
+			rule: {
+				hostname: /bc\.vc/,
+				pathname: /^.+(https?:\/\/.+)/,
+			},
+			run: function( m ) {
+				this.targetUrl = m.pathname[1];
+				this.redirect();
+			},
+		},
+
 		// bcvc
 		{
 			rule: {
