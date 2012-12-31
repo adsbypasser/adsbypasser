@@ -124,8 +124,8 @@
 
 	Actions.prototype.run = function() {
 		var runner = this.find( {
-			hostname: window.location.hostname,
-			pathname: window.location.pathname,
+			host: window.location.hostname,
+			path: window.location.pathname,
 		} );
 		if( runner ) {
 			runner();
@@ -176,7 +176,7 @@
 		// linkbucks
 		{
 			rule: {
-				hostname: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
+				host: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
 			},
 			run: function(){
 				var matches;
@@ -194,7 +194,7 @@
 		// alabout
 		{
 			rule: {
-				hostname: /(alabout|alafs)\.com/,
+				host: /(alabout|alafs)\.com/,
 			},
 			run: function(){
 				var o=document.getElementsByTagName('a');
@@ -207,7 +207,7 @@
 		// imageporter
 		{
 			rule: {
-				hostname: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn)\.com|(piclambo|yankoimages)\.net/,
+				host: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn)\.com|(piclambo|yankoimages)\.net/,
 			},
 			run: function(){
 				var o = document.querySelectorAll( '#firopage, iframe' );
@@ -226,7 +226,7 @@
 		// adf
 		{
 			rule: {
-				hostname: /adf.ly|[u9]\.bb|[jq]\.gs/,
+				host: /adf.ly|[u9]\.bb|[jq]\.gs/,
 			},
 			run: function(){
 				var head = document.getElementsByTagName('head')[0].innerHTML;
@@ -251,7 +251,7 @@
 		// turboimagehost
 		{
 			rule: {
-				hostname: /turboimagehost\.com/,
+				host: /turboimagehost\.com/,
 			},
 			run: function(){
 				var o;
@@ -265,7 +265,7 @@
 		// imagevenue
 		{
 			rule: {
-				hostname: /imagevenue\.com/,
+				host: /imagevenue\.com/,
 			},
 			run: function(){
 				var o;
@@ -279,7 +279,7 @@
 		// linkbee
 		{
 			rule: {
-				hostname: /(linkbee\.com|lnk\.co)/,
+				host: /(linkbee\.com|lnk\.co)/,
 			},
 			run: function(){
 				var o;
@@ -296,7 +296,7 @@
 		// zpag
 		{
 			rule: {
-				hostname: /zpag\.es/,
+				host: /zpag\.es/,
 			},
 			run: function(){
 				var matches=document.getElementsByTagName('head')[0].innerHTML.match(/window\.location\s*=\s*(['"])((?:\\\1|[^\1])*?)\1/);
@@ -309,7 +309,7 @@
 		// pixhost
 		{
 			rule: {
-				hostname: /www\.pixhost\.org/,
+				host: /www\.pixhost\.org/,
 			},
 			run: function(){
 				var o;
@@ -331,7 +331,7 @@
 		// ichan
 		{
 			rule: {
-				hostname: /ichan\.org/,
+				host: /ichan\.org/,
 			},
 			run: function(){
 				var o=document.getElementsByTagName('a');
@@ -346,7 +346,7 @@
 		// urlcash
 		{
 			rule: {
-				hostname: /urlcash\.net/,
+				host: /urlcash\.net/,
 			},
 			run: function(){
 				var matches;
@@ -361,7 +361,7 @@
 		// pushba
 		{
 			rule: {
-				hostname: /pushba\.com/,
+				host: /pushba\.com/,
 			},
 			run: function(){
 				var o;
@@ -374,7 +374,7 @@
 		// imgchili
 		{
 			rule: {
-				hostname: /imgchili\.com/,
+				host: /imgchili\.com/,
 			},
 			run: function(){
 				var o;
@@ -389,7 +389,7 @@
 		// viidii
 		{
 			rule: {
-				hostname: /www\.viidii\.com/,
+				host: /www\.viidii\.com/,
 			},
 			run: function(){
 				var o;
@@ -403,7 +403,7 @@
 		// adfoc
 		{
 			rule: {
-				hostname: /adfoc\.us/,
+				host: /adfoc\.us/,
 			},
 			run: function(){
 				// FIXME mutation events has been deprecated, consider rewrite with
@@ -424,7 +424,7 @@
 		// imagetwist
 		{
 			rule: {
-				hostname: /imagetwist\.com/,
+				host: /imagetwist\.com/,
 			},
 			run: function(){
 				var o = null;
@@ -442,7 +442,7 @@
 		// adjoin
 		{
 			rule: {
-				hostname: /adjoin\.me/,
+				host: /adjoin\.me/,
 			},
 			run: function() {
 				this.targetUrl=document.location.toString().replace(/adjoin\.me\/\d+\//, '');
@@ -453,7 +453,7 @@
 		// madlink
 		{
 			rule: {
-				hostname: /www\.madlink\.sk/,
+				host: /www\.madlink\.sk/,
 			},
 			run: function(){
 				document.getElementById('gosterbeni').getElementsByClassName('button')[0].click();
@@ -463,7 +463,7 @@
 		// lnxlu
 		{
 			rule: {
-				hostname: /lnx\.lu/,
+				host: /lnx\.lu/,
 			},
 			run: function() {
 				this.targetUrl = document.getElementById('clickbtn').getElementsByTagName('a')[0].href;
@@ -475,7 +475,7 @@
 		// adcrun
 		{
 			rule: {
-				hostname: /adcrun\.ch/,
+				host: /adcrun\.ch/,
 			},
 			run: function(){
 				var matches, opts, scripts = document.getElementsByTagName('script');
@@ -516,7 +516,7 @@
 		// mihalism
 		{
 			rule: {
-				hostname: /(imagerabbit|kissdown|games8y)\.com/,
+				host: /(imagerabbit|kissdown|games8y)\.com/,
 			},
 			run: function(){
 				this.targetUrl = document.location.href.toString().replace('viewer.php?file=', 'images/');
@@ -527,11 +527,11 @@
 		// bc.vc, shortcut
 		{
 			rule: {
-				hostname: /bc\.vc/,
-				pathname: /^.+(https?:\/\/.+)/,
+				host: /bc\.vc/,
+				path: /^.+(https?:\/\/.+)/,
 			},
 			run: function( m ) {
-				this.targetUrl = m.pathname[1];
+				this.targetUrl = m.path[1];
 				this.redirect();
 			},
 		},
@@ -539,7 +539,7 @@
 		// bcvc
 		{
 			rule: {
-				hostname: /bc\.vc/,
+				host: /bc\.vc/,
 			},
 			run: function() {
 				var matches = null;
@@ -580,13 +580,13 @@
 		// image69
 		{
 			rule: {
-				hostname: /image69\.us/,
+				host: /image69\.us/,
 			},
 			run: function( m ) {
 				var a = document.querySelector( '#page_body a' );
 				var s = a.href;
 				// the real link does not immediately appears after http://
-				this.targetUrl = 'http://' + s.substr( s.lastIndexOf( m.hostname[0] ) );
+				this.targetUrl = 'http://' + s.substr( s.lastIndexOf( m.host[0] ) );
 				this.redirect();
 			},
 		},
@@ -594,7 +594,7 @@
 		// mihalism2
 		{
 			rule: {
-				hostname: /gzvd\.info|hentaita\.com/,
+				host: /gzvd\.info|hentaita\.com/,
 			},
 			run: function() {
 				var a = document.querySelector( '#page_body a' );
@@ -613,7 +613,7 @@
 		// imagecorn
 		{
 			rule: {
-				hostname: /imgonion\.com|imgrill\.com|imagecorn\.com/,
+				host: /imgonion\.com|imgrill\.com|imagecorn\.com/,
 			},
 			run: function() {
 				this.disableWindowOpen();
@@ -637,7 +637,7 @@
 		// imagecherry
 		{
 			rule: {
-				hostname: /imagecherry\.com/,
+				host: /imagecherry\.com/,
 			},
 			run: function() {
 				var b = document.querySelector( 'body' );
@@ -652,8 +652,8 @@
 		// picjav.net/x
 		{
 			rule: {
-				hostname: /picjav\.net/,
-				pathname: /\/x\/.+/,
+				host: /picjav\.net/,
+				path: /\/x\/.+/,
 			},
 			run: function() {
 				var a = document.querySelector( '#page_body a' );
@@ -667,14 +667,14 @@
 		// picjav.net/picjav2
 		{
 			rule: {
-				hostname: /picjav\.net/,
+				host: /picjav\.net/,
 			},
 			run: function( m ) {
 				var a = document.querySelectorAll( '#page_body a' );
 				a = a[1];
 				var s = a.href;
 				// the real link does not immediately appears after http://
-				a = s.lastIndexOf( m.hostname[0] );
+				a = s.lastIndexOf( m.host[0] );
 				if( a >= 0 ) {
 					this.targetUrl = 'http://' + s.substr( a );
 					this.redirect();
@@ -685,7 +685,7 @@
 		// imagehosting
 		{
 			rule: {
-				hostname: /imagehosting\.2owl\.net/,
+				host: /imagehosting\.2owl\.net/,
 			},
 			run: function() {
 				var d = document.querySelector( '#warning' );
@@ -696,7 +696,7 @@
 		// imgdino.com
 		{
 			rule: {
-				hostname: /imgdino\.com/,
+				host: /imgdino\.com/,
 			},
 			run: function() {
 				var d = document.querySelector( '#redirect-ad' );
