@@ -123,9 +123,14 @@
 	}
 
 	Actions.prototype.run = function() {
+		// <scheme>//<host>:<port><path><query><hash>
 		var runner = this.find( {
+			scheme: window.location.protocol,
 			host: window.location.hostname,
+			port: window.location.port,
 			path: window.location.pathname,
+			query: window.location.search,
+			hash: window.location.hash,
 		} );
 		if( runner ) {
 			runner();
