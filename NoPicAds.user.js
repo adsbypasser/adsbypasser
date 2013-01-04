@@ -381,14 +381,17 @@
 			rule: {
 				host: /imgchili\.com/,
 			},
-			run: function(){
-				var o;
-				if((o=document.getElementById('ad')))
+			run: function() {
+				var o = document.querySelector( '#ad' );
+				if( o ) {
 					o.parentNode.removeChild(o);
-
-				if((o=document.getElementById('all')))
-					o.style.display='';
-			}
+				}
+				o = document.querySelector( '#all' );
+				if( o ) {
+					o.style.display = '';
+				}
+				this.disableWindowOpen();
+			},
 		},
 
 		// viidii
