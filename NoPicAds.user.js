@@ -106,8 +106,9 @@
 // @match          http://imgrill.com/*
 // @match          http://imagecherry.com/*
 // @match          http://imagecorn.com/*
-// @match          http://imagehosting.2owl.net/*
+// @match          http://imagehosting.2owl.net/image/*
 // @match          http://imgdino.com/*
+// @match          http://www.4owl.info/image/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -690,14 +691,16 @@
 			},
 		},
 
-		// imagehosting
+		// chevereto
 		{
 			rule: {
-				host: /imagehosting\.2owl\.net/,
+				host: /imagehosting\.2owl\.net|www\.4owl\.info/,
 			},
 			run: function() {
-				var d = document.querySelector( '#warning' );
-				d.parentNode.removeChild( d );
+				var d = document.querySelectorAll( '#warning, #slide_up, #slide_up2' );
+				Array.prototype.forEach.call( d, function( v ) {
+					v.parentNode.removeChild( v );
+				} );
 			},
 		},
 
