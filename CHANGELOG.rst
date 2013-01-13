@@ -1,3 +1,12 @@
+* added
+
+  * www.4owl.info
+  * bc.vc (shortcut)
+
+* changed
+
+  * use match instead of include
+
 2.0.1
 -----
 
