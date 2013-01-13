@@ -109,8 +109,9 @@ Supported Sites
 * imgrill.com
 * imagecherry.com
 * imagecorn.com
-* imagehosting
+* 2owl.net
 * imgdino.com
+* 4owl.info
 
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797
