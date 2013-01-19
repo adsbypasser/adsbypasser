@@ -134,7 +134,7 @@
 			hash: window.location.hash,
 		} );
 		if( runner ) {
-			runner();
+			runner[0].call( this, runner[1] );
 		}
 	};
 
@@ -142,15 +142,18 @@
 		for( var i = 0; i < this.patterns.length; ++i ) {
 			var pattern = this.patterns[i];
 			var matched = {};
-			for( var part in pattern.rule ) {
-				matched[part] = pattern.rule[part].exec( uri[part] );
-				if( !matched[part] ) {
-					matched = null;
-					break;
+			for( var j = 0; j < pattern.rule.length; ++j ) {
+				var rule = pattern.rule[j];
+				for( var part in rule ) {
+					matched[part] = rule[part].exec( uri[part] );
+					if( !matched[part] ) {
+						matched = null;
+						break;
+					}
 				}
-			}
-			if( matched ) {
-				return pattern.run.bind( this, matched );
+				if( matched ) {
+					return [ pattern.run, matched ];
+				}
 			}
 		}
 		return null;
@@ -181,9 +184,11 @@
 	Actions.prototype.patterns = [
 		// linkbucks
 		{
-			rule: {
-				host: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
-			},
+			rule: [
+				{
+					host: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
+				},
+			],
 			run: function(){
 				var matches;
 
@@ -199,9 +204,11 @@
 
 		// alabout
 		{
-			rule: {
-				host: /(alabout|alafs)\.com/,
-			},
+			rule: [
+				{
+					host: /(alabout|alafs)\.com/,
+				},
+			],
 			run: function(){
 				var o=document.getElementsByTagName('a');
 				for(var i in o)
@@ -212,9 +219,11 @@
 
 		// imageporter
 		{
-			rule: {
-				host: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn)\.com|(piclambo|yankoimages)\.net/,
-			},
+			rule: [
+				{
+					host: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn)\.com|(piclambo|yankoimages)\.net/,
+				},
+			],
 			run: function(){
 				var o = document.querySelectorAll( '#firopage, iframe' );
 				Array.prototype.forEach.call( o, function( v ) {
@@ -231,9 +240,11 @@
 
 		// adf
 		{
-			rule: {
-				host: /adf.ly|[u9]\.bb|[jq]\.gs/,
-			},
+			rule: [
+				{
+					host: /adf.ly|[u9]\.bb|[jq]\.gs/,
+				},
+			],
 			run: function(){
 				var head = document.getElementsByTagName('head')[0].innerHTML;
 				var matches = head.match(/var\s+url\s*=\s*['"](.+)['"]/);
@@ -256,9 +267,11 @@
 
 		// turboimagehost
 		{
-			rule: {
-				host: /turboimagehost\.com/,
-			},
+			rule: [
+				{
+					host: /turboimagehost\.com/,
+				},
+			],
 			run: function(){
 				var o;
 				if((o=document.getElementById('blanket')))
@@ -270,9 +283,11 @@
 
 		// imagevenue
 		{
-			rule: {
-				host: /imagevenue\.com/,
-			},
+			rule: [
+				{
+					host: /imagevenue\.com/,
+				},
+			],
 			run: function(){
 				var o;
 				if((o=document.getElementById('interContainer')))
@@ -284,9 +299,11 @@
 
 		// linkbee
 		{
-			rule: {
-				host: /(linkbee\.com|lnk\.co)/,
-			},
+			rule: [
+				{
+					host: /(linkbee\.com|lnk\.co)/,
+				},
+			],
 			run: function(){
 				var o;
 				if((o=document.getElementById('urlholder')))
@@ -301,9 +318,11 @@
 
 		// zpag
 		{
-			rule: {
-				host: /zpag\.es/,
-			},
+			rule: [
+				{
+					host: /zpag\.es/,
+				},
+			],
 			run: function(){
 				var matches=document.getElementsByTagName('head')[0].innerHTML.match(/window\.location\s*=\s*(['"])((?:\\\1|[^\1])*?)\1/);
 				if(matches)
@@ -314,9 +333,11 @@
 
 		// pixhost
 		{
-			rule: {
-				host: /www\.pixhost\.org/,
-			},
+			rule: [
+				{
+					host: /www\.pixhost\.org/,
+				},
+			],
 			run: function(){
 				var o;
 				if((o=document.getElementById('web'))){
@@ -336,9 +357,11 @@
 
 		// ichan
 		{
-			rule: {
-				host: /ichan\.org/,
-			},
+			rule: [
+				{
+					host: /ichan\.org/,
+				},
+			],
 			run: function(){
 				var o=document.getElementsByTagName('a');
 				var l=o.length;
@@ -351,9 +374,11 @@
 
 		// urlcash
 		{
-			rule: {
-				host: /urlcash\.net/,
-			},
+			rule: [
+				{
+					host: /urlcash\.net/,
+				},
+			],
 			run: function(){
 				var matches;
 				if(unsafeWindow)
@@ -366,9 +391,11 @@
 
 		// pushba
 		{
-			rule: {
-				host: /pushba\.com/,
-			},
+			rule: [
+				{
+					host: /pushba\.com/,
+				},
+			],
 			run: function(){
 				var o;
 				if((o=document.getElementById('urlTextBox')))
@@ -379,9 +406,11 @@
 
 		// imgchili
 		{
-			rule: {
-				host: /imgchili\.com/,
-			},
+			rule: [
+				{
+					host: /imgchili\.com/,
+				},
+			],
 			run: function() {
 				var o = document.querySelector( '#ad' );
 				if( o ) {
@@ -397,9 +426,11 @@
 
 		// viidii
 		{
-			rule: {
-				host: /www\.viidii\.com/,
-			},
+			rule: [
+				{
+					host: /www\.viidii\.com/,
+				},
+			],
 			run: function(){
 				var o;
 				if((o=document.getElementById('directlink'))){
@@ -411,9 +442,11 @@
 
 		// adfoc
 		{
-			rule: {
-				host: /adfoc\.us/,
-			},
+			rule: [
+				{
+					host: /adfoc\.us/,
+				},
+			],
 			run: function(){
 				// FIXME mutation events has been deprecated, consider rewrite with
 				// mutation observer
@@ -432,9 +465,11 @@
 
 		// imagetwist
 		{
-			rule: {
-				host: /imagetwist\.com/,
-			},
+			rule: [
+				{
+					host: /imagetwist\.com/,
+				},
+			],
 			run: function(){
 				var o = null;
 				if((o = document.getElementById('chatWindow'))){
@@ -450,9 +485,11 @@
 
 		// adjoin
 		{
-			rule: {
-				host: /adjoin\.me/,
-			},
+			rule: [
+				{
+					host: /adjoin\.me/,
+				},
+			],
 			run: function() {
 				this.targetUrl=document.location.toString().replace(/adjoin\.me\/\d+\//, '');
 				this.redirect();
@@ -461,9 +498,11 @@
 
 		// madlink
 		{
-			rule: {
-				host: /www\.madlink\.sk/,
-			},
+			rule: [
+				{
+					host: /www\.madlink\.sk/,
+				},
+			],
 			run: function(){
 				document.getElementById('gosterbeni').getElementsByClassName('button')[0].click();
 			}
@@ -471,9 +510,11 @@
 
 		// lnxlu
 		{
-			rule: {
-				host: /lnx\.lu/,
-			},
+			rule: [
+				{
+					host: /lnx\.lu/,
+				},
+			],
 			run: function() {
 				this.targetUrl = document.getElementById('clickbtn').getElementsByTagName('a')[0].href;
 				this.redirect();
@@ -483,9 +524,11 @@
 		// Provided by tuxie.forte@userscripts.org
 		// adcrun
 		{
-			rule: {
-				host: /adcrun\.ch/,
-			},
+			rule: [
+				{
+					host: /adcrun\.ch/,
+				},
+			],
 			run: function(){
 				var matches, opts, scripts = document.getElementsByTagName('script');
 				opts = '';
@@ -524,9 +567,11 @@
 
 		// mihalism
 		{
-			rule: {
-				host: /(imagerabbit|kissdown|games8y)\.com/,
-			},
+			rule: [
+				{
+					host: /(imagerabbit|kissdown|games8y)\.com/,
+				},
+			],
 			run: function(){
 				this.targetUrl = document.location.href.toString().replace('viewer.php?file=', 'images/');
 				this.redirect();
@@ -535,10 +580,12 @@
 
 		// bc.vc, shortcut
 		{
-			rule: {
-				host: /bc\.vc/,
-				path: /^.+(https?:\/\/.+)/,
-			},
+			rule: [
+				{
+					host: /bc\.vc/,
+					path: /^.+(https?:\/\/.+)/,
+				},
+			],
 			run: function( m ) {
 				this.targetUrl = m.path[1];
 				this.redirect();
@@ -547,9 +594,11 @@
 
 		// bcvc
 		{
-			rule: {
-				host: /bc\.vc/,
-			},
+			rule: [
+				{
+					host: /bc\.vc/,
+				},
+			],
 			run: function() {
 				var matches = null;
 				var opts = '';
@@ -588,9 +637,11 @@
 
 		// image69
 		{
-			rule: {
-				host: /image69\.us/,
-			},
+			rule: [
+				{
+					host: /image69\.us/,
+				},
+			],
 			run: function( m ) {
 				var a = document.querySelector( '#page_body a' );
 				var s = a.href;
@@ -602,9 +653,11 @@
 
 		// mihalism2
 		{
-			rule: {
-				host: /gzvd\.info|hentaita\.com/,
-			},
+			rule: [
+				{
+					host: /gzvd\.info|hentaita\.com/,
+				},
+			],
 			run: function() {
 				var a = document.querySelector( '#page_body a' );
 				var s = a.href;
@@ -621,9 +674,11 @@
 		// imgrill
 		// imagecorn
 		{
-			rule: {
-				host: /imgonion\.com|imgrill\.com|imagecorn\.com/,
-			},
+			rule: [
+				{
+					host: /imgonion\.com|imgrill\.com|imagecorn\.com/,
+				},
+			],
 			run: function() {
 				this.disableWindowOpen();
 				var node = document.querySelector( '#continuetoimage > form input' );
@@ -645,9 +700,11 @@
 
 		// imagecherry
 		{
-			rule: {
-				host: /imagecherry\.com/,
-			},
+			rule: [
+				{
+					host: /imagecherry\.com/,
+				},
+			],
 			run: function() {
 				var b = document.querySelector( 'body' );
 				if( b.id ) {
@@ -660,10 +717,12 @@
 
 		// picjav.net/x
 		{
-			rule: {
-				host: /picjav\.net/,
-				path: /\/x\/.+/,
-			},
+			rule: [
+				{
+					host: /picjav\.net/,
+					path: /\/x\/.+/,
+				},
+			],
 			run: function() {
 				var a = document.querySelector( '#page_body a' );
 				var s = a.href;
@@ -675,9 +734,11 @@
 		// picjav.net
 		// picjav.net/picjav2
 		{
-			rule: {
-				host: /picjav\.net/,
-			},
+			rule: [
+				{
+					host: /picjav\.net/,
+				},
+			],
 			run: function( m ) {
 				var a = document.querySelectorAll( '#page_body a' );
 				a = a[1];
@@ -693,9 +754,11 @@
 
 		// chevereto
 		{
-			rule: {
-				host: /imagehosting\.2owl\.net|www\.4owl\.info/,
-			},
+			rule: [
+				{
+					host: /imagehosting\.2owl\.net|www\.4owl\.info/,
+				},
+			],
 			run: function() {
 				var d = document.querySelectorAll( '#warning, #slide_up, #slide_up2' );
 				Array.prototype.forEach.call( d, function( v ) {
@@ -706,9 +769,11 @@
 
 		// imgdino.com
 		{
-			rule: {
-				host: /imgdino\.com/,
-			},
+			rule: [
+				{
+					host: /imgdino\.com/,
+				},
+			],
 			run: function() {
 				var d = document.querySelector( '#redirect-ad' );
 				if( d ) {
