@@ -1,7 +1,15 @@
+2.1.0
+-----
+
 * added
 
   * www.4owl.info
   * bc.vc (shortcut)
+  * s21.imgtube.us
+
+* fixed
+
+  * adf.ly
 
 * changed
 
