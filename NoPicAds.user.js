@@ -246,20 +246,34 @@
 					host: /adf.ly|[u9]\.bb|[jq]\.gs/,
 				},
 			],
-			run: function(){
+			run: function() {
 				var head = document.getElementsByTagName('head')[0].innerHTML;
-				var matches = head.match(/var\s+url\s*=\s*['"](.+)['"]/);
+				var matches = head.match(/var\s+zzz\s*=\s*['"](.+)['"]/);
 				var that = this;
 
-				if(matches){
+				if( matches ) {
 					var ad = document.querySelector( 'body iframe' );
 					ad.parentNode.removeChild( ad );
-					window.setTimeout(function(){
-						that.targetUrl=matches[1];
+
+					matches = matches[1];
+					if( /^http.*$/.test( matches ) ) {
+						that.targetUrl = matches;
 						that.redirect();
-					}, 5000);
-				}
-				else if((matches = document.location.href.toString().match(/\/(https?:\/\/.+)/))) {
+						return;
+					}
+
+					var ajax = new XMLHttpRequest();
+					ajax.open( 'GET', '/shortener/go?zzz=' + matches, true );
+					ajax.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded' );
+					ajax.onreadystatechange = function() {
+						if( ajax.readyState == 4 && ajax.status == 200 ) {
+							var r = JSON.parse( ajax.responseText )
+							that.targetUrl = r.zzz;
+							that.redirect();
+						}
+					};
+					ajax.send( null );
+				} else if( ( matches = document.location.href.toString().match(/\/(https?:\/\/.+)/ ) ) ) {
 					that.targetUrl = matches[1];
 					that.redirect();
 				}
