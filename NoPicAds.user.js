@@ -778,7 +778,7 @@
 				},
 			],
 			run: function() {
-				var d = document.querySelectorAll( '#warning, #slide_up, #slide_up2' );
+				var d = document.querySelectorAll( '#warning, #slide_up, #slide_up2, #fadeinbox, #content + div' );
 				Array.prototype.forEach.call( d, function( v ) {
 					v.parentNode.removeChild( v );
 				} );
