@@ -1,3 +1,10 @@
+2.1.2
+-----
+
+* fixed
+
+  * really fix url patterns in metadata block
+
 2.1.1
 -----
 
