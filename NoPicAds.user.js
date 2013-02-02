@@ -110,6 +110,7 @@
 // @match          http://imagehosting.2owl.net/image/*
 // @match          http://imgdino.com/*
 // @match          http://www.4owl.info/image/*
+// @match          http://imgurban.info/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -797,6 +798,20 @@
 				if( d ) {
 					d.parentNode.removeChild( d );
 				}
+			},
+		},
+
+		// imgurban.info
+		{
+			rule: [
+				{
+					host: /imgurban\.info/,
+				},
+			],
+			run: function() {
+				var d = document.querySelector( '#fadeinbox' );
+				d.parentNode.removeChild( d );
+				this.disableWindowOpen();
 			},
 		},
 	];
