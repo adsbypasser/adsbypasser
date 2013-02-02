@@ -1,3 +1,10 @@
+2.1.1
+-----
+
+* fixed
+
+  * GreaseMonkey install problem
+
 2.1.0
 -----
 
