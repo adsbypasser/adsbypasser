@@ -111,6 +111,7 @@
 // @match          http://imgdino.com/*
 // @match          http://www.4owl.info/image/*
 // @match          http://imgurban.info/*
+// @match          http://*.directupload.net/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -812,6 +813,19 @@
 				var d = document.querySelector( '#fadeinbox' );
 				d.parentNode.removeChild( d );
 				this.disableWindowOpen();
+			},
+		},
+
+		// directupload.net
+		{
+			rule: [
+				{
+					host: /.+\.directupload\.net/,
+				},
+			],
+			run: function() {
+				var b = document.body.lastElementChild;
+				b.parentNode.removeChild( b );
 			},
 		},
 	];
