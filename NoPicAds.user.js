@@ -112,6 +112,7 @@
 // @match          http://www.4owl.info/image/*
 // @match          http://imgurban.info/*
 // @match          http://*.directupload.net/*
+// @match          http://picfox.org/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -826,6 +827,21 @@
 			run: function() {
 				var b = document.body.lastElementChild;
 				b.parentNode.removeChild( b );
+			},
+		},
+
+		// picfox.org
+		{
+			rule: [
+				{
+					host: /picfox\.org/,
+				},
+			],
+			run: function() {
+				var o = document.querySelectorAll( '#overlayBg, #EroIMslider' );
+				Array.prototype.forEach.call( o, function( v ) {
+					v.parentNode.removeChild( v );
+				} );
 			},
 		},
 	];
