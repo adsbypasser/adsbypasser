@@ -113,6 +113,7 @@
 // @match          http://imgurban.info/*
 // @match          http://*.directupload.net/*
 // @match          http://picfox.org/*
+// @match          http://javelite.tk/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -777,11 +778,11 @@
 		{
 			rule: [
 				{
-					host: /imagehosting\.2owl\.net|www\.4owl\.info/,
+					host: /imagehosting\.2owl\.net|www\.4owl\.info|javelite\.tk/,
 				},
 			],
 			run: function() {
-				var d = document.querySelectorAll( '#warning, #slide_up, #slide_up2, #fadeinbox, #content + div' );
+				var d = document.querySelectorAll( '#warning, #slide_up, #slide_up2, #fadeinbox, #content + div, #fullpage, #divExoLayerWrapper' );
 				Array.prototype.forEach.call( d, function( v ) {
 					v.parentNode.removeChild( v );
 				} );
