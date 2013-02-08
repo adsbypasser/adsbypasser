@@ -113,6 +113,11 @@ Supported Sites
 * imgdino.com
 * 4owl.info
 * s21.imgtube.us
+* imgurban.info
+* directupload.net
+* picfox.org
+* javelite.tk
+* imgmoney.com
 
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797
