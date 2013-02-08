@@ -1,3 +1,18 @@
+2.2.0
+-----
+
+* added
+
+  * imgurban.info
+  * directupload.net
+  * picfox.org
+  * javelite.tk
+  * imgmoney.com
+
+* fixed
+
+  * www.4owl.info
+
 2.1.2
 -----
 
