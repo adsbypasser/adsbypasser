@@ -105,6 +105,7 @@
 // @match          http://bc.vc/*
 // @match          http://imgonion.com/*
 // @match          http://imgrill.com/*
+// @match          http://imgmoney.com/*
 // @match          http://imagecherry.com/*
 // @match          http://imagecorn.com/*
 // @match          http://imagehosting.2owl.net/image/*
@@ -692,10 +693,11 @@
 		// imgonion
 		// imgrill
 		// imagecorn
+		// imgmoney
 		{
 			rule: [
 				{
-					host: /imgonion\.com|imgrill\.com|imagecorn\.com/,
+					host: /imgonion\.com|imgrill\.com|imagecorn\.com|imgmoney\.com/,
 				},
 			],
 			run: function() {
@@ -782,7 +784,7 @@
 				},
 			],
 			run: function() {
-				var d = document.querySelectorAll( '#warning, #slide_up, #slide_up2, #fadeinbox, #content + div, #fullpage, #divExoLayerWrapper' );
+				var d = document.querySelectorAll( '#warning, #slide_up, #slide_up2, #fadeinbox, #content + div, #fullpage, #divExoLayerWrapper, #prSliderpr15872' );
 				Array.prototype.forEach.call( d, function( v ) {
 					v.parentNode.removeChild( v );
 				} );
