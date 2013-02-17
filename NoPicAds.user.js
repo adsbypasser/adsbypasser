@@ -115,6 +115,7 @@
 // @match          http://*.directupload.net/*
 // @match          http://picfox.org/*
 // @match          http://javelite.tk/*
+// @match          http://pixhub.eu/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -845,6 +846,24 @@
 				Array.prototype.forEach.call( o, function( v ) {
 					v.parentNode.removeChild( v );
 				} );
+			},
+		},
+
+		// pixhub.eu
+		{
+			rule: [
+				{
+					host: /pixhub\.eu/,
+				},
+			],
+			run: function() {
+				var o = document.querySelectorAll( '.adultpage, #FFN_Banner_Holder' );
+				Array.prototype.forEach.call( o, function( v ) {
+					v.parentNode.removeChild( v );
+				} );
+
+				o = ( document.compatMode === 'CSS1Compat' ) ? document.documentElement : document.body;
+				o.style.overflow = 'auto';
 			},
 		},
 	];
