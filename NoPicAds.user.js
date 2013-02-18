@@ -102,6 +102,7 @@
 // @match          http://picjav.net/picjav2/viewer.php?file=*
 // @match          http://picjav.net/x/viewer.php?file=*
 // @match          http://s21.imgtube.us/viewer.php?file=*
+// @match          http://jpdown.info/viewer.php?file=*
 // @match          http://bc.vc/*
 // @match          http://imgonion.com/*
 // @match          http://imgrill.com/*
@@ -745,7 +746,7 @@
 					path: /\/x\/.+/,
 				},
 				{
-					host: /s21\.imgtube\.us/,
+					host: /s21\.imgtube\.us|jpdown\.info/,
 				},
 			],
 			run: function() {
