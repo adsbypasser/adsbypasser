@@ -111,7 +111,7 @@
 // @match          http://imagecorn.com/*
 // @match          http://imagehosting.2owl.net/image/*
 // @match          http://imgdino.com/*
-// @match          http://www.4owl.info/image/*
+// @match          http://www.4owl.info/*
 // @match          http://imgurban.info/*
 // @match          http://*.directupload.net/*
 // @match          http://picfox.org/*
