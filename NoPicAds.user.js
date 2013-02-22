@@ -117,6 +117,7 @@
 // @match          http://picfox.org/*
 // @match          http://javelite.tk/*
 // @match          http://pixhub.eu/*
+// @match          http://imagedecode.com/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -865,6 +866,21 @@
 
 				o = ( document.compatMode === 'CSS1Compat' ) ? document.documentElement : document.body;
 				o.style.overflow = 'auto';
+			},
+		},
+
+		// imagedecode.com
+		{
+			rule: [
+				{
+					host: /imagedecode\.com/,
+				},
+			],
+			run: function() {
+				var o = document.querySelectorAll( '.overlay_ad' );
+				Array.prototype.forEach.call( o, function( v ) {
+					v.parentNode.removeChild( v );
+				} );
 			},
 		},
 	];
