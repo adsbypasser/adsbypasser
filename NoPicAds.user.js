@@ -118,6 +118,7 @@
 // @match          http://javelite.tk/*
 // @match          http://pixhub.eu/*
 // @match          http://imagedecode.com/*
+// @match          http://imgah.com/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -881,6 +882,19 @@
 				Array.prototype.forEach.call( o, function( v ) {
 					v.parentNode.removeChild( v );
 				} );
+			},
+		},
+
+		// imgah.com
+		{
+			rule: [
+				{
+					host: /imgah\.com/,
+				},
+			],
+			run: function() {
+				var o = document.querySelector( '#dwindow' );
+				o.parentNode.removeChild( o );
 			},
 		},
 	];
