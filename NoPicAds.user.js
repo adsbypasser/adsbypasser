@@ -752,9 +752,14 @@
 				},
 			],
 			run: function() {
-				var a = document.querySelector( '#page_body a' );
-				var s = a.href;
-				this.targetUrl = s;
+				// for jpdown.info
+				var a = document.querySelector( '#divExoLayerWrapper' );
+				if( a ) {
+					a.parentNode.removeChild( a );
+				}
+				a = document.querySelector( '#page_body a' );
+				a = a.href;
+				this.targetUrl = a;
 				this.redirect();
 			},
 		},
