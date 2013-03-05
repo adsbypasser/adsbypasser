@@ -118,6 +118,10 @@ Supported Sites
 * picfox.org
 * javelite.tk
 * imgmoney.com
+* pixhub.eu
+* jpdown.info
+* imagedecode.com
+* imgah.com
 
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797

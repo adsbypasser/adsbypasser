@@ -1,3 +1,17 @@
+2.3.0
+-----
+
+* added
+
+  * pixhub.eu
+  * jpdown.info
+  * iamgedecode.com
+  * imgah.com
+
+* fixed
+
+  * 4owl.info
+
 2.2.0
 -----
 
