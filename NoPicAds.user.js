@@ -86,7 +86,6 @@
 // @match          http://www.viidii.com/*
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
-// @match          http://imagetwist.com/*
 // @match          http://adjoin.me/*
 // @match          http://www.madlink.sk/*
 // @match          http://lnx.lu/*
@@ -122,6 +121,7 @@
 // @match          http://zonezeedimage.com/*
 // ==/reklama==
 // ==else==
+// @match          http://imagetwist.com/*
 // @match          http://imgchili.com/show/*
 // ==/else==
 // @exclude        http://www.linkbucks.com/
@@ -497,16 +497,14 @@
 					host: /imagetwist\.com/,
 				},
 			],
-			run: function(){
-				var o = null;
-				if((o = document.getElementById('chatWindow'))){
-					o.parentNode.removeChild(o);
+			run: function() {
+				var o = document.querySelector( 'img.pic' );
+				if( !o ) {
+					return false;
 				}
-				if((o = document.getElementById('popupOverlay'))){
-					o.parentNode.removeChild(o);
-				}
-
-				this.disableWindowOpen();
+				this.targetUrl = o.src;
+				this.redirect();
+				return true;
 			}
 		},
 
