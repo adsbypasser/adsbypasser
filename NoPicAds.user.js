@@ -83,7 +83,6 @@
 // @match          http://www.pixhost.org/show/*
 // @match          http://ichan.org/*
 // @match          http://zpag.es/*
-// @match          http://imgchili.com/show/*
 // @match          http://www.viidii.com/*
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
@@ -122,6 +121,9 @@
 // @match          http://imagedecode.com/*
 // @match          http://zonezeedimage.com/*
 // ==/reklama==
+// ==else==
+// @match          http://imgchili.com/show/*
+// ==/else==
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -439,15 +441,13 @@
 				},
 			],
 			run: function() {
-				var o = document.querySelector( '#ad' );
-				if( o ) {
-					o.parentNode.removeChild(o);
+				var o = document.querySelector( '#show_image' );
+				if( !o ) {
+					return false;
 				}
-				o = document.querySelector( '#all' );
-				if( o ) {
-					o.style.display = '';
-				}
-				this.disableWindowOpen();
+				this.targetUrl = o.src;
+				this.redirect();
+				return true;
 			},
 		},
 
