@@ -99,7 +99,6 @@
 // @match          http://imagecherry.com/*
 // @match          http://imagecorn.com/*
 // @match          http://imagehosting.2owl.net/image/*
-// @match          http://imgdino.com/*
 // @match          http://www.4owl.info/*
 // @match          http://imgurban.info/*
 // @match          http://*.directupload.net/*
@@ -125,6 +124,7 @@
 // ==else==
 // @match          http://imagetwist.com/*
 // @match          http://imgchili.com/show/*
+// @match          http://imgdino.com/*
 // ==/else==
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
@@ -808,10 +808,13 @@
 				},
 			],
 			run: function() {
-				var d = document.querySelector( '#redirect-ad' );
-				if( d ) {
-					d.parentNode.removeChild( d );
+				var o = document.querySelector( '#cursor_lupa' );
+				if( !o ) {
+					return false;
 				}
+				this.targetUrl = o.src;
+				this.redirect();
+				return true;
 			},
 		},
 
