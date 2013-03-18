@@ -117,10 +117,10 @@
 // @match          http://*.pictureturn.com/*
 // @match          http://*.yankoimages.net/*
 // ==/imageporter==
-// ==reklama==
+// ==imgshot==
 // @match          http://imagedecode.com/*
 // @match          http://zonezeedimage.com/*
-// ==/reklama==
+// ==/imgshot==
 // ==else==
 // @match          http://imagetwist.com/*
 // @match          http://imgchili.com/show/*
@@ -878,18 +878,21 @@
 			},
 		},
 
-		// reklama
+		// imgshot
 		{
 			rule: [
 				{
-					host: /(imagedecode|zonezeedimage)\.com/,
+					host: /(imagedunkecode|zonezeedimage)\.com/,
 				},
 			],
 			run: function() {
-				var o = document.querySelectorAll( '.overlay_ad' );
-				Array.prototype.forEach.call( o, function( v ) {
-					v.parentNode.removeChild( v );
-				} );
+				var o = document.querySelector( '#container img[alt="image"]' );
+				if( !o ) {
+					return false;
+				}
+				this.targetUrl = o.src;
+				this.redirect();
+				return true;
 			},
 		},
 
