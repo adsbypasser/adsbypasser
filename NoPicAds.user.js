@@ -71,15 +71,6 @@
 // @match          http://*.alafs.com/*
 // @match          http://pushba.com/*
 // @match          http://www.turboimagehost.com/*
-// @match          http://*.imageporter.com/*
-// @match          http://*.imagecarry.com/*
-// @match          http://*.imagedunk.com/*
-// @match          http://*.imageswitch.com/*
-// @match          http://*.piclambo.net/*
-// @match          http://*.picleet.com/*
-// @match          http://*.picturedip.com/*
-// @match          http://*.pictureturn.com/*
-// @match          http://*.yankoimages.net/*
 // @match          http://www.pixhost.org/show/*
 // @match          http://ichan.org/*
 // @match          http://zpag.es/*
@@ -116,6 +107,17 @@
 // @match          http://javelite.tk/*
 // @match          http://pixhub.eu/*
 // @match          http://imgah.com/*
+// ==imageporter==
+// @match          http://*.imagedunk.com/*
+// @match          http://*.imagecarry.com/*
+// @match          http://*.imageporter.com/*
+// @match          http://*.imageswitch.com/*
+// @match          http://*.piclambo.net/*
+// @match          http://*.picleet.com/*
+// @match          http://*.picturedip.com/*
+// @match          http://*.pictureturn.com/*
+// @match          http://*.yankoimages.net/*
+// ==/imageporter==
 // ==reklama==
 // @match          http://imagedecode.com/*
 // @match          http://zonezeedimage.com/*
@@ -239,17 +241,14 @@
 					host: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn)\.com|(piclambo|yankoimages)\.net/,
 				},
 			],
-			run: function(){
-				var o = document.querySelectorAll( '#firopage, iframe' );
-				Array.prototype.forEach.call( o, function( v ) {
-					v.parentNode.removeChild( v );
-				} );
-
-				o = ( document.compatMode === 'CSS1Compat' ) ? document.documentElement : document.body;
-				o.style.overflow = 'auto';
-
-				this.cleanTimer();
-				this.disableWindowOpen();
+			run: function() {
+				var o = document.querySelector( 'center img[id]' );
+				if( !o ) {
+					return false;
+				}
+				this.targetUrl = o.src;
+				this.redirect();
+				return true;
 			},
 		},
 
