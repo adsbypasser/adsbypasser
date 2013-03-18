@@ -93,11 +93,7 @@
 // @match          http://s21.imgtube.us/viewer.php?file=*
 // @match          http://jpdown.info/viewer.php?file=*
 // @match          http://bc.vc/*
-// @match          http://imgonion.com/*
-// @match          http://imgrill.com/*
-// @match          http://imgmoney.com/*
 // @match          http://imagecherry.com/*
-// @match          http://imagecorn.com/*
 // @match          http://imagehosting.2owl.net/image/*
 // @match          http://www.4owl.info/*
 // @match          http://imgurban.info/*
@@ -105,6 +101,12 @@
 // @match          http://javelite.tk/*
 // @match          http://pixhub.eu/*
 // @match          http://imgah.com/*
+// ==imgonion==
+// @match          http://imagecorn.com/*
+// @match          http://imgmoney.com/*
+// @match          http://imgonion.com/*
+// @match          http://imgrill.com/*
+// ==/imgonion==
 // ==imageporter==
 // @match          http://*.imagedunk.com/*
 // @match          http://*.imagecarry.com/*
@@ -710,16 +712,14 @@
 				if( node ) {
 					node.click();
 				} else {
-					node = document.querySelector( '#overlayBg' );
-					if( node ) {
-						node.parentNode.removeChild( node );
+					var o = document.querySelector( '#container img[alt="image"]' );
+					if( !o ) {
+						return false;
 					}
-					node = document.querySelector( '#footer' );
-					if( node ) {
-						node = node.nextSibling;
-						node.parentNode.removeChild( node );
-					}
+					this.targetUrl = o.src;
+					this.redirect();
 				}
+				return true;
 			},
 		},
 
