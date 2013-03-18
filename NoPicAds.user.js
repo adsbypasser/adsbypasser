@@ -121,7 +121,7 @@
 // ==reklama==
 // @match          http://imagedecode.com/*
 // @match          http://zonezeedimage.com/*
-// ==/reklama1==
+// ==/reklama==
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
