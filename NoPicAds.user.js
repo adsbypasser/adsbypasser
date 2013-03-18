@@ -102,7 +102,6 @@
 // @match          http://www.4owl.info/*
 // @match          http://imgurban.info/*
 // @match          http://*.directupload.net/*
-// @match          http://picfox.org/*
 // @match          http://javelite.tk/*
 // @match          http://pixhub.eu/*
 // @match          http://imgah.com/*
@@ -125,6 +124,7 @@
 // @match          http://imagetwist.com/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgdino.com/*
+// @match          http://picfox.org/*
 // ==/else==
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
@@ -853,10 +853,13 @@
 				},
 			],
 			run: function() {
-				var o = document.querySelectorAll( '#overlayBg, #EroIMslider' );
-				Array.prototype.forEach.call( o, function( v ) {
-					v.parentNode.removeChild( v );
-				} );
+				var o = document.querySelector( '#iimg' );
+				if( !o ) {
+					return false;
+				}
+				this.targetUrl = o.src;
+				this.redirect();
+				return true;
 			},
 		},
 
