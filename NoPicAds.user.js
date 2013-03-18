@@ -117,8 +117,11 @@
 // @match          http://picfox.org/*
 // @match          http://javelite.tk/*
 // @match          http://pixhub.eu/*
-// @match          http://imagedecode.com/*
 // @match          http://imgah.com/*
+// ==reklama==
+// @match          http://imagedecode.com/*
+// @match          http://zonezeedimage.com/*
+// ==/reklama1==
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -875,11 +878,11 @@
 			},
 		},
 
-		// imagedecode.com
+		// reklama
 		{
 			rule: [
 				{
-					host: /imagedecode\.com/,
+					host: /(imagedecode|zonezeedimage)\.com/,
 				},
 			],
 			run: function() {
