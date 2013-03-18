@@ -96,11 +96,14 @@
 // @match          http://imagecherry.com/*
 // @match          http://imagehosting.2owl.net/image/*
 // @match          http://www.4owl.info/*
-// @match          http://imgurban.info/*
 // @match          http://*.directupload.net/*
 // @match          http://javelite.tk/*
 // @match          http://pixhub.eu/*
 // @match          http://imgah.com/*
+// ==CF Image Host==
+// @match          http://*.imgjav.tk/?pm=*
+// @match          http://imgurban.info/?pm=*
+// ==/CF Image Host==
 // ==imgonion==
 // @match          http://imagecorn.com/*
 // @match          http://imgmoney.com/*
@@ -818,17 +821,21 @@
 			},
 		},
 
-		// imgurban.info
+		// CF Image Host
 		{
 			rule: [
 				{
-					host: /imgurban\.info/,
+					host: /www\.imgjav\.tk|imgurban\.info/,
 				},
 			],
 			run: function() {
-				var d = document.querySelector( '#fadeinbox' );
-				d.parentNode.removeChild( d );
-				this.disableWindowOpen();
+				var o = document.querySelector( 'div.img_box a' );
+				if( !o ) {
+					return false;
+				}
+				this.targetUrl = o.href;
+				this.redirect();
+				return true;
 			},
 		},
 
