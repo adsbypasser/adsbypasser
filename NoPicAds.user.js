@@ -89,9 +89,6 @@
 // @match          http://picjav.net/viewer.php?file=*
 // @match          http://hentaita.com/viewer.php?file=*
 // @match          http://picjav.net/picjav2/viewer.php?file=*
-// @match          http://picjav.net/x/viewer.php?file=*
-// @match          http://s21.imgtube.us/viewer.php?file=*
-// @match          http://jpdown.info/viewer.php?file=*
 // @match          http://bc.vc/*
 // @match          http://imagecherry.com/*
 // @match          http://imagehosting.2owl.net/image/*
@@ -100,6 +97,10 @@
 // @match          http://javelite.tk/*
 // @match          http://pixhub.eu/*
 // @match          http://imgah.com/*
+// ==Mihalism Multi Host v1==
+// @match          http://jpdown.info/viewer.php?file=*
+// @match          http://picjav.net/x/viewer.php?file=*
+// ==/Mihalism Multi Host v1==
 // ==CF Image Host==
 // @match          http://*.imgjav.tk/?pm=*
 // @match          http://imgurban.info/?pm=*
@@ -131,6 +132,9 @@
 // @match          http://imgdino.com/*
 // @match          http://picfox.org/*
 // ==/else==
+// ==dead==
+// @match          http://s21.imgtube.us/viewer.php?file=*
+// ==/dead==
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
@@ -756,10 +760,10 @@
 			],
 			run: function() {
 				// for jpdown.info
-				var a = document.querySelector( '#divExoLayerWrapper' );
-				if( a ) {
-					a.parentNode.removeChild( a );
-				}
+				var a = document.querySelectorAll( '#divExoLayerWrapper, #fadeinbox' );
+				Array.prototype.forEach.call( a, function( v ) {
+					v.parentNode.removeChild( v );
+				} );
 				a = document.querySelector( '#page_body a' );
 				a = a.href;
 				this.targetUrl = a;
