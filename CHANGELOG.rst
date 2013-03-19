@@ -1,3 +1,18 @@
+2.4.0
+-----
+
+* added
+
+  * zonezeedimage.com
+
+* fixed
+
+  * jpdown.info
+
+* changed
+
+  * redirect to image itself for some sites
+
 2.3.0
 -----
 
