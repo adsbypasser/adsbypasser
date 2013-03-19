@@ -14,6 +14,41 @@ Stable version will upload to `the page on userscripts.org`_.
 Supported Sites
 ---------------
 
+* Mihalism Multi Host
+
+  * jpdown.info
+  * picjav.net
+  * s21.imgtube.us
+
+* img shot
+
+  * imagedecode.com
+  * zonezeedimage.com
+
+* imageporter
+
+  * imagecarry.com
+  * imagedunk.com
+  * imageswitch.com
+  * imageporter.com
+  * piclambo.net
+  * picleet.com
+  * picturedip.com
+  * pictureturn.com
+  * yankoimages.net
+
+* CF Image Host
+
+  * imgjav.tk
+  * imgurban.info
+
+* imgonion
+
+  * imgonion.com
+  * imgmoney.com
+  * imagecorn.com
+  * imgrill.com
+
 * linkbucks.com
 * allanalpass.com
 * amy.gs
@@ -77,15 +112,6 @@ Supported Sites
 * alafs.com
 * pushba.com
 * turboimagehost.com
-* imageporter.com
-* imagecarry.com
-* imagedunk.com
-* imageswitch.com
-* piclambo.net
-* picleet.com
-* picturedip.com
-* pictureturn.com
-* yankoimages.net
 * pixhost.org
 * ichan.org
 * zpag.es
@@ -102,25 +128,16 @@ Supported Sites
 * games8y.com
 * image69.us
 * gzvd.info
-* picjav.net
 * bc.vc
 * hentaita.com
-* imgonion.com
-* imgrill.com
 * imagecherry.com
-* imagecorn.com
 * 2owl.net
 * imgdino.com
 * 4owl.info
-* s21.imgtube.us
-* imgurban.info
 * directupload.net
 * picfox.org
 * javelite.tk
-* imgmoney.com
 * pixhub.eu
-* jpdown.info
-* imagedecode.com
 * imgah.com
 
 
