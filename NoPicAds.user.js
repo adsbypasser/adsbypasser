@@ -131,6 +131,7 @@
 // @match          http://picfox.org/*
 // @match          http://*.4owl.info/*
 // @match          http://advertisingg.com/*
+// @match          http://*.imagebam.com/image/*
 // ==/else==
 // ==dead==
 // @match          http://imagehosting.2owl.net/image/*
@@ -967,6 +968,28 @@
 			run: function() {
 				var o = document.querySelector( '#dwindow' );
 				o.parentNode.removeChild( o );
+			},
+		},
+
+		// imagebam.com
+		{
+			rule: [
+				{
+					host: /www\.imagebam\.com/,
+				},
+			],
+			run: function() {
+				var o = document.querySelector( '#imageContainer img[id]' );
+				if( !o ) {
+					return false;
+				}
+				// somehow the server send image as an attachment
+				// so I replace whole document.body with single img
+				var i = document.createElement( 'img' );
+				i.setAttribute( 'src', o.src );
+				document.body = document.createElement( 'body' );
+				document.body.appendChild( i );
+				return true;
 			},
 		},
 	];
