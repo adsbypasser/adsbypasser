@@ -91,8 +91,6 @@
 // @match          http://picjav.net/picjav2/viewer.php?file=*
 // @match          http://bc.vc/*
 // @match          http://imagecherry.com/*
-// @match          http://imagehosting.2owl.net/image/*
-// @match          http://www.4owl.info/*
 // @match          http://*.directupload.net/*
 // @match          http://javelite.tk/*
 // @match          http://pixhub.eu/*
@@ -131,8 +129,10 @@
 // @match          http://imgchili.com/show/*
 // @match          http://imgdino.com/*
 // @match          http://picfox.org/*
+// @match          http://*.4owl.info/*
 // ==/else==
 // ==dead==
+// @match          http://imagehosting.2owl.net/image/*
 // @match          http://s21.imgtube.us/viewer.php?file=*
 // ==/dead==
 // @exclude        http://www.linkbucks.com/
@@ -800,10 +800,13 @@
 				},
 			],
 			run: function() {
-				var d = document.querySelectorAll( '#warning, #slide_up, #slide_up2, #fadeinbox, #content + div, #fullpage, #divExoLayerWrapper, #prSliderpr15872' );
-				Array.prototype.forEach.call( d, function( v ) {
-					v.parentNode.removeChild( v );
-				} );
+				var i = document.querySelector( 'table img' );
+				if( !i ) {
+					return false;
+				}
+				this.targetUrl = i.src;
+				this.redirect();
+				return true;
 			},
 		},
 
