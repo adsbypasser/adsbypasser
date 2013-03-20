@@ -99,6 +99,9 @@
 // @match          http://jpdown.info/viewer.php?file=*
 // @match          http://picjav.net/x/viewer.php?file=*
 // ==/Mihalism Multi Host v1==
+// ==Mihalism Multi Host v2==
+// @match          http://gallery.jpavgod.com/viewer.php?file=*
+// ==/Mihalism Multi Host v2==
 // ==CF Image Host==
 // @match          http://*.imgjav.tk/?pm=*
 // @match          http://imgurban.info/?pm=*
@@ -789,6 +792,21 @@
 					b = document.querySelector( 'body' );
 					b.style.display = 'block';
 				}
+			},
+		},
+
+		// gallery.jpavgod.com
+		{
+			rule: [
+				{
+					host: /gallery\.jpavgod\.com/,
+				},
+			],
+			run: function() {
+				var a = document.querySelectorAll( '#page_body a' );
+				a = a[1];
+				this.targetUrl = a.href;
+				this.redirect();
 			},
 		},
 
