@@ -616,6 +616,20 @@
 			}
 		},
 
+		// bc.vc, shortcut, dirty hack
+		{
+			rule: [
+				{
+					host: /bc\.vc/,
+					query: /^.+(https?:\/\/.+)/,
+				},
+			],
+			run: function( m ) {
+				this.targetUrl = m.query[1];
+				this.redirect();
+			},
+		},
+
 		// bc.vc, shortcut
 		{
 			rule: [
@@ -631,6 +645,7 @@
 		},
 
 		// bcvc
+		// TODO remove this in next release
 		{
 			rule: [
 				{
