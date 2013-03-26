@@ -139,6 +139,9 @@ Supported Sites
 * javelite.tk
 * pixhub.eu
 * imgah.com
+* advertisingg.com
+* imagebam.com
+* gallery.jpavgod.com
 
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797
