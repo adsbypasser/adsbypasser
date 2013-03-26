@@ -1,3 +1,20 @@
+2.5.0
+-----
+
+* added
+
+  * advertisingg.com
+  * imagebam.com
+  * gallery.jpavgod.com
+
+* fixed
+
+  * bc.vc
+
+* changed
+
+  * redirect to image itself for some sites
+
 2.4.0
 -----
 
