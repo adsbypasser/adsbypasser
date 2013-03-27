@@ -111,6 +111,7 @@
 // @match          http://imgmoney.com/*
 // @match          http://imgonion.com/*
 // @match          http://imgrill.com/*
+// @match          http://imgwoot.com/*
 // ==/imgonion==
 // ==imageporter==
 // @match          http://*.imagecarry.com/*
@@ -728,7 +729,7 @@
 		{
 			rule: [
 				{
-					host: /imgonion\.com|imgrill\.com|imagecorn\.com|imgmoney\.com/,
+					host: /imgonion\.com|imgrill\.com|imagecorn\.com|imgmoney\.com|imgwoot\.com/,
 				},
 			],
 			run: function() {
