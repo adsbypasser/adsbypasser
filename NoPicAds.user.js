@@ -136,6 +136,7 @@
 // @match          http://*.4owl.info/*
 // @match          http://advertisingg.com/*
 // @match          http://*.imagebam.com/image/*
+// @match          http://imgbar.net/*
 // ==/else==
 // ==dead==
 // @match          http://imagehosting.2owl.net/image/*
@@ -1023,6 +1024,50 @@
 				i.setAttribute( 'src', o.src );
 				document.body = document.createElement( 'body' );
 				document.body.appendChild( i );
+				return true;
+			},
+		},
+
+		// imgbar.net
+		// second stage
+		{
+			rule: [
+				{
+					host: /imgbar\.net/,
+					path: /\/img_show\.php/,
+				},
+			],
+			run: function() {
+				var i = document.querySelector( 'a.pic1 img' );
+				if( !i ) {
+					return false;
+				}
+				this.targetUrl = i.src;
+				this.redirect();
+				return true;
+			},
+		},
+
+		// imgbar.net
+		// first stage
+		{
+			rule: [
+				{
+					host: /imgbar\.net/,
+				},
+			],
+			run: function() {
+				var a = document.querySelector( 'div.panel.top a' );
+				if( !a ) {
+					return false;
+				}
+				a = a.href.match( /.*sid=([a-z0-9]+).*/ );
+				if( !a ) {
+					return false;
+				}
+				a = a[1];
+				this.targetUrl = '/img_show.php?view_id=' + a;
+				this.redirect();
 				return true;
 			},
 		},
