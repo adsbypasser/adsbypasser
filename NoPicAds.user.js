@@ -137,6 +137,7 @@
 // @match          http://advertisingg.com/*
 // @match          http://*.imagebam.com/image/*
 // @match          http://imgbar.net/*
+// @match          http://*.abload.de/image.php?img=*
 // ==/else==
 // ==dead==
 // @match          http://imagehosting.2owl.net/image/*
@@ -1067,6 +1068,24 @@
 				}
 				a = a[1];
 				this.targetUrl = '/img_show.php?view_id=' + a;
+				this.redirect();
+				return true;
+			},
+		},
+
+		// abload.de
+		{
+			rule: [
+				{
+					host: /www\.abload\.de/,
+				},
+			],
+			run: function() {
+				var i = document.querySelector( '#image' );
+				if( !i ) {
+					return false;
+				}
+				this.targetUrl = i.src;
 				this.redirect();
 				return true;
 			},
