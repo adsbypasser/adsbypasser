@@ -980,7 +980,7 @@
 		{
 			rule: [
 				{
-					host: /(imagedunkecode|zonezeedimage)\.com/,
+					host: /(imagedecode|zonezeedimage)\.com/,
 				},
 			],
 			run: function() {
