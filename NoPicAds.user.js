@@ -5,8 +5,8 @@
 // @copyright      2012+, legnaleurc (https://github.com/legnaleurc/nopicads)
 // @version        2.6.0
 // @license        BSD
-// @updateURL      http://userscripts.org/scripts/source/154858.meta.js
-// @downloadURL    http://userscripts.org/scripts/source/154858.user.js
+// @updateURL      https://userscripts.org/scripts/source/154858.meta.js
+// @downloadURL    https://userscripts.org/scripts/source/154858.user.js
 // @grant          unsafeWindow
 // @match          http://*.linkbucks.com/*
 // @match          http://*.allanalpass.com/*
