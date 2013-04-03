@@ -699,7 +699,7 @@
 				},
 			],
 			run: function( m ) {
-				var a = document.querySelector( '#page_body a' );
+				var a = document.querySelector( '#page_body .text_align_center a' );
 				var s = a.href;
 				// the real link does not immediately appears after http://
 				this.targetUrl = 'http://' + s.substr( s.lastIndexOf( m.host[0] ) );
