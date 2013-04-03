@@ -142,6 +142,9 @@ Supported Sites
 * advertisingg.com
 * imagebam.com
 * gallery.jpavgod.com
+* abload.de
+* imgbar.net
+* imgwoot.com
 
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797
