@@ -1,3 +1,10 @@
+2.6.1
+-----
+
+* fixed
+
+  * Greasemonkey auto update problem
+
 2.6.0
 -----
 
