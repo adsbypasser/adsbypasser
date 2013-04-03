@@ -1,3 +1,16 @@
+2.6.0
+-----
+
+* added
+
+  * abload.de
+  * imgbar.net
+  * imgwoot.com
+
+* fixed
+  * imagedecode.com
+
+
 2.5.0
 -----
 
