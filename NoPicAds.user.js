@@ -852,12 +852,12 @@
 			},
 		},
 
-		// picjav.net
 		// picjav.net/picjav2
 		{
 			rule: [
 				{
 					host: /picjav\.net/,
+					path: /\/picjav2\/.+/,
 				},
 			],
 			run: function( m ) {
@@ -869,7 +869,27 @@
 				if( a >= 0 ) {
 					this.targetUrl = 'http://' + s.substr( a );
 					this.redirect();
+					return true;
 				}
+				return false;
+			},
+		},
+
+		// picjav.net
+		{
+			rule: [
+				{
+					host: /picjav\.net/,
+				},
+			],
+			run: function( m ) {
+				var a = document.querySelector( '#page_body a' );
+				if( !a ) {
+					return false;
+				}
+				this.targetUrl = a.href;
+				this.redirect();
+				return true;
 			},
 		},
 
