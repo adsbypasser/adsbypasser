@@ -215,6 +215,13 @@
 		}
 	};
 
+	Actions.prototype.replaceBody = function( imgSrc ) {
+		var i = document.createElement( 'img' );
+		i.setAttribute( 'src', imgSrc );
+		document.body = document.createElement( 'body' );
+		document.body.appendChild( i );
+	};
+
 	Actions.prototype.patterns = [
 		// linkbucks
 		{
@@ -524,6 +531,25 @@
 			}
 		},
 
+		// imagecherry
+		{
+			rule: [
+				{
+					host: /imagecherry\.com/,
+				},
+			],
+			run: function() {
+				var o = document.querySelector( 'img.pic' );
+				if( !o ) {
+					return false;
+				}
+				// somehow the server send image as an attachment
+				// so I replace whole document.body with single img
+				this.replaceBody( o.src );
+				return true;
+			}
+		},
+
 		// adjoin
 		{
 			rule: [
@@ -796,23 +822,6 @@
 			},
 		},
 
-		// imagecherry
-		{
-			rule: [
-				{
-					host: /imagecherry\.com/,
-				},
-			],
-			run: function() {
-				var b = document.querySelector( 'body' );
-				if( b.id ) {
-					b.parentNode.removeChild( b );
-					b = document.querySelector( 'body' );
-					b.style.display = 'block';
-				}
-			},
-		},
-
 		// gallery.jpavgod.com
 		{
 			rule: [
@@ -1041,10 +1050,7 @@
 				}
 				// somehow the server send image as an attachment
 				// so I replace whole document.body with single img
-				var i = document.createElement( 'img' );
-				i.setAttribute( 'src', o.src );
-				document.body = document.createElement( 'body' );
-				document.body.appendChild( i );
+				this.replaceBody( o.src );
 				return true;
 			},
 		},
