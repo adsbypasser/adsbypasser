@@ -168,8 +168,9 @@
       hash: window.location.hash,
     } );
     if( runner ) {
-      runner[0].call( this, runner[1] );
+      return runner[0].call( this, runner[1] );
     }
+    return false;
   };
 
   Actions.prototype.find = function( uri ) {
@@ -1119,7 +1120,9 @@
   ];
 
   var action = new Actions();
-  action.run();
+  if( !action.run() ) {
+    console.log( 'NoPicAds: failed' );
+  }
 
 } )();
 
