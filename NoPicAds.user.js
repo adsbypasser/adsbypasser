@@ -112,6 +112,7 @@
 // @match          http://imgonion.com/*
 // @match          http://imgrill.com/*
 // @match          http://imgwoot.com/*
+// @match          http://imagepicsa.com/img-*.html
 // ==/imgonion==
 // ==imageporter==
 // @match          http://*.imagecarry.com/*
@@ -758,7 +759,7 @@
     {
       rule: [
         {
-          host: /imgonion\.com|imgrill\.com|imagecorn\.com|imgmoney\.com|imgwoot\.com/,
+          host: /imgonion\.com|imgrill\.com|imagecorn\.com|imgmoney\.com|imgwoot\.com|imagepicsa\.com/,
         },
       ],
       run: function() {
@@ -769,6 +770,7 @@
         } else {
           var o = document.querySelector( '#container img[alt="image"]' );
           if( !o ) {
+            console.info( 'NoPicAds: "#container img[alt="image"]" not found' );
             return false;
           }
           this.targetUrl = o.src;
