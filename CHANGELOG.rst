@@ -1,3 +1,22 @@
+2.7.0
+-----
+
+* added
+
+  * imagepicsa.com
+
+* fixed
+
+  * imagecherry.com
+  * imgmoney.com
+  * imgonion.com
+  * imgrill.com
+
+* change
+
+  * Add log on error
+  * indention style changed
+
 2.6.2
 -----
 
