@@ -48,6 +48,7 @@ Supported Sites
   * imgmoney.com
   * imagecorn.com
   * imgrill.com
+  * imagepicsa.com
 
 * linkbucks.com
 * allanalpass.com
