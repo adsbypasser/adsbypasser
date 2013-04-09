@@ -108,7 +108,7 @@
 // ==/CF Image Host==
 // ==imgonion==
 // @match          http://imagecorn.com/*
-// @match          http://imgmoney.com/*
+// @match          http://imgmoney.com/img-*.html
 // @match          http://imgonion.com/*
 // @match          http://imgrill.com/*
 // @match          http://imgwoot.com/*
