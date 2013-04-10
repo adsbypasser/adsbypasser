@@ -127,7 +127,7 @@
 // ==/imageporter==
 // ==imgshot==
 // @match          http://imagedecode.com/*
-// @match          http://zonezeedimage.com/*
+// @match          http://zonezeedimage.com/img-*.html
 // ==/imgshot==
 // ==else==
 // @match          http://imagetwist.com/*
