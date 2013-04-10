@@ -8,6 +8,7 @@
 // @updateURL      https://userscripts.org/scripts/source/154858.meta.js
 // @downloadURL    https://userscripts.org/scripts/source/154858.user.js
 // @grant          unsafeWindow
+// @grant          GM_xmlhttpRequest
 // @match          http://*.linkbucks.com/*
 // @match          http://*.allanalpass.com/*
 // @match          http://*.amy.gs/*
@@ -154,6 +155,7 @@
 // @exclude        http://lnk.co/
 // @exclude        http://adf.ly/*market.php?*
 // @exclude        http://adf.ly/?default_ad*
+// @exclude        http://adcrun.ch/
 // ==/UserScript==
 
 ( function() {
@@ -202,6 +204,7 @@
 
   Actions.prototype.redirect = function() {
     if( this.targetUrl ) {
+      console.info( 'NoPicAds: redirect to ' + this.targetUrl );
       window.location.replace( this.targetUrl );
     }
   };
@@ -227,6 +230,41 @@
     i.setAttribute( 'src', imgSrc );
     document.body = document.createElement( 'body' );
     document.body.appendChild( i );
+  };
+
+  Actions.prototype.ajax = function( method, url, data, callback ) {
+    function toQuery( data ) {
+      if( typeof data === 'string' || data instanceof String ) {
+        return data;
+      }
+      var tmp = [];
+      for( var key in data ) {
+        tmp.push( key + '=' + data[key] );
+      }
+      return tmp.join( '&' );
+    }
+
+    var controller = GM_xmlhttpRequest( {
+      method: method,
+      url: url,
+      data: encodeURI( toQuery( data ) ),
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      onload: function( response ) {
+        callback( response.responseText );
+      }
+    } );
+
+    return controller;
+  };
+
+  Actions.prototype.post = function( url, data, callback ) {
+    return this.ajax( 'POST', url, data, callback );
+  };
+
+  Actions.prototype.get = function( url, data, callback ) {
+    return this.ajax( 'GET', url, data, callback );
   };
 
   Actions.prototype.patterns = [
@@ -291,9 +329,8 @@
         },
       ],
       run: function() {
-        var head = document.getElementsByTagName('head')[0].innerHTML;
-        var matches = head.match(/var\s+zzz\s*=\s*['"](.+)['"]/);
-        var that = this;
+        var head = document.querySelector( 'head' ).innerHTML;
+        var matches = head.match( /var\s+zzz\s*=\s*['"](.+)['"]/ );
 
         if( matches ) {
           var ad = document.querySelector( 'body iframe' );
@@ -301,26 +338,28 @@
 
           matches = matches[1];
           if( /^http.*$/.test( matches ) ) {
-            that.targetUrl = matches;
-            that.redirect();
-            return;
+            this.targetUrl = matches;
+            this.redirect();
+            return true;
           }
 
-          var ajax = new XMLHttpRequest();
-          ajax.open( 'GET', '/shortener/go?zzz=' + matches, true );
-          ajax.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded' );
-          ajax.onreadystatechange = function() {
-            if( ajax.readyState == 4 && ajax.status == 200 ) {
-              var r = JSON.parse( ajax.responseText )
-              that.targetUrl = r.zzz;
-              that.redirect();
-            }
-          };
-          ajax.send( null );
-        } else if( ( matches = document.location.href.toString().match(/\/(https?:\/\/.+)/ ) ) ) {
-          that.targetUrl = matches[1];
-          that.redirect();
+          this.get( '/shortener/go', {
+            zzz: matches,
+          }, function( response ) {
+            var r = JSON.parse( response );
+            this.targetUrl = r.zzz;
+            this.redirect();
+          } );
+          return true;
         }
+
+        // FIXME dead code?
+        matches = window.location.href.toString().match( /\/(https?:\/\/.+)/ );
+        if( matches ) {
+          this.targetUrl = matches[1];
+          this.redirect();
+        }
+        return false;
       }
     },
 
@@ -603,39 +642,47 @@
           host: /adcrun\.ch/,
         },
       ],
-      run: function(){
-        var matches, opts, scripts = document.getElementsByTagName('script');
-        opts = '';
-        for(var i=0; i<scripts.length; ++i){
-          if(scripts[i].innerHTML.indexOf('eval')!=-1){
-            matches = scripts[i].innerHTML.match(/\|button\|(\d+)/);
-            matches && (opts = 'opt=make_log&args[oid]=' + matches[1]);
+      run: function() {
+        var opts = {}, scripts = document.querySelectorAll( 'script' );
+        for( var i = 0; i < scripts.length; ++i ) {
+          var content = scripts[i].innerHTML;
+          if( content.indexOf( 'eval' ) !== -1 ) {
+            var matches = content.match( /\|button\|(\d+)/ );
+            if( matches ) {
+              opts.opt = 'make_log';
+              opts['args[oid]'] = matches[1];
+            }
 
-            matches = scripts[i].innerHTML.match(/lid\|oid\|(\d+)\|(\d+)/i);
-            matches && (opts += '&args[lid]='+matches[1]+'&args[oid]=' + matches[2] + '&args[ref]=');
+            matches = content.match( /lid\|oid\|(\d+)\|(\d+)/i );
+            if( matches ) {
+              opts['args[lid]'] = matches[1];
+              opts['args[oid]'] = matches[2];
+              opts['args[ref]'] = '';
+            }
+
+            scripts = null;
+            break;
           }
         }
-        var xhr = function(params){
-          var ajax=new XMLHttpRequest();
-          ajax.open('POST', '/links/ajax.fly.php', true);
-          ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-          ajax.onreadystatechange=(function(that){
-            return function(){
-              if(ajax.readyState == 4 && ajax.status == 200){
-                var jj = eval('(' + ajax.responseText + ')');
-                if(jj.message){
-                  top.location.href = jj.message.url
-                }else{
-                  window.setTimeout(function(){ xhr(params) }, 2000);
-                }
-              }
+        if( scripts ) {
+          return false;
+        }
+
+        var self = this;
+        function xhr() {
+          self.post( '/links/ajax.fly.php', opts, function( text ) {
+            var json = JSON.parse( text );
+            if( json.message ) {
+              self.targetUrl = json.message.url;
+              self.redirect();
+              return true;
+            } else {
+              window.setTimeout( xhr, 2000 );
             }
-          })(this);
-          ajax.send(params);
-        };
-        window.setTimeout(function(){
-          xhr(encodeURI(opts))
-        }, 1200);
+          } );
+        }
+        window.setTimeout( xhr, 1200 );
+        return true;
       }
     },
 
