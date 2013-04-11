@@ -234,8 +234,11 @@
 
   Actions.prototype.ajax = function( method, url, data, callback ) {
     function toQuery( data ) {
-      if( typeof data === 'string' || data instanceof String ) {
+      if( typeof data === 'string' ) {
         return data;
+      }
+      if( data instanceof String ) {
+        return data.toString();
       }
       var tmp = [];
       for( var key in data ) {
