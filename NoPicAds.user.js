@@ -85,6 +85,7 @@
 // @match          http://imagerabbit.com/viewer.php?file=*
 // @match          http://games8y.com/viewer.php?file=*
 // @match          http://image69.us/viewer.php?file=*
+// @match          http://image69.us/x/viewer.php?file=*
 // @match          http://gzvd.info/viewer.php?file=*
 // @match          http://picjav.net/viewer.php?file=*
 // @match          http://hentaita.com/viewer.php?file=*
@@ -719,6 +720,35 @@
       }
     },
 
+    // picjav.net/x
+    {
+      rule: [
+        {
+          host: /picjav\.net/,
+          path: /\/x\/.+/,
+        },
+        {
+          host: /s21\.imgtube\.us|jpdown\.info/,
+        },
+        {
+          host: /image69\.us/,
+          path: /\/x\/.+/,
+        },
+
+      ],
+      run: function() {
+        // for jpdown.info
+        var a = document.querySelectorAll( '#divExoLayerWrapper, #fadeinbox' );
+        Array.prototype.forEach.call( a, function( v ) {
+          v.parentNode.removeChild( v );
+        } );
+        a = document.querySelector( '#page_body a' );
+        a = a.href;
+        this.targetUrl = a;
+        this.redirect();
+      },
+    },
+
     // image69
     {
       rule: [
@@ -836,30 +866,6 @@
         var a = document.querySelectorAll( '#page_body a' );
         a = a[1];
         this.targetUrl = a.href;
-        this.redirect();
-      },
-    },
-
-    // picjav.net/x
-    {
-      rule: [
-        {
-          host: /picjav\.net/,
-          path: /\/x\/.+/,
-        },
-        {
-          host: /s21\.imgtube\.us|jpdown\.info/,
-        },
-      ],
-      run: function() {
-        // for jpdown.info
-        var a = document.querySelectorAll( '#divExoLayerWrapper, #fadeinbox' );
-        Array.prototype.forEach.call( a, function( v ) {
-          v.parentNode.removeChild( v );
-        } );
-        a = document.querySelector( '#page_body a' );
-        a = a.href;
-        this.targetUrl = a;
         this.redirect();
       },
     },
