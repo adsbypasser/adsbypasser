@@ -1,3 +1,11 @@
+2.7.1
+-----
+
+* fixed
+
+  * image69.us
+  * zonezeedimage.com
+
 2.7.0
 -----
 
