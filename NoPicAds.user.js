@@ -671,19 +671,18 @@
           return false;
         }
 
-        var self = this;
-        function xhr() {
-          self.post( '/links/ajax.fly.php', opts, function( text ) {
+        var xhr = function () {
+          this.post( '/links/ajax.fly.php', opts, function( text ) {
             var json = JSON.parse( text );
             if( json.message ) {
-              self.targetUrl = json.message.url;
-              self.redirect();
+              this.targetUrl = json.message.url;
+              this.redirect();
               return true;
             } else {
               window.setTimeout( xhr, 2000 );
             }
-          } );
-        }
+          }.bind( this ) );
+        }.bind( this );
         window.setTimeout( xhr, 1200 );
         return true;
       }
