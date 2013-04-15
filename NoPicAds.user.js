@@ -716,50 +716,6 @@
       },
     },
 
-    // bcvc
-    // TODO remove this in next release
-    {
-      rule: [
-        {
-          host: /bc\.vc/,
-        },
-      ],
-      run: function() {
-        var matches = null;
-        var opts = '';
-        var scripts = document.getElementsByTagName( 'script' );
-        for( var i = 0; i < scripts.length; ++i ) {
-          if( scripts[i].innerHTML.indexOf( 'eval' ) !== -1 ) {
-            matches = scripts[i].innerHTML.match( /aid:(\d+),lid:(\d+),oid:(\d+)/ );
-            matches && (opts = [ 'opt=make_log&args[aid]=', matches[1], '&args[lid]=', matches[2], '&args[oid]=', matches[3], '&args[ref]=' ].join( '' ) );
-          }
-        }
-
-        var xhr = function( params ) {
-          var ajax = new XMLHttpRequest();
-          ajax.open( 'POST', '/fly/ajax.fly.php', true );
-          ajax.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded' );
-          ajax.onreadystatechange = ( function( that ) {
-            return function() {
-              if( ajax.readyState == 4 && ajax.status == 200 ) {
-                var jj = eval( '(' + ajax.responseText + ')' );
-                if( jj.message ) {
-                  top.location.href = jj.message.url;
-                } else {
-                  window.setTimeout(function(){ xhr(params) }, 2000);
-                }
-              }
-            }
-          } )( this );
-          ajax.send( params );
-        };
-
-        window.setTimeout( function() {
-          xhr( encodeURI( opts ) );
-        }, 1200 );
-      }
-    },
-
     // mihalism v1
     {
       rule: [
