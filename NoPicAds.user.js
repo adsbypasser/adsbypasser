@@ -81,15 +81,6 @@
 // @match          http://www.madlink.sk/*
 // @match          http://lnx.lu/*
 // @match          http://adcrun.ch/*
-// @match          http://kissdown.com/viewer.php?file=*
-// @match          http://imagerabbit.com/viewer.php?file=*
-// @match          http://games8y.com/viewer.php?file=*
-// @match          http://image69.us/viewer.php?file=*
-// @match          http://image69.us/x/viewer.php?file=*
-// @match          http://gzvd.info/viewer.php?file=*
-// @match          http://picjav.net/viewer.php?file=*
-// @match          http://hentaita.com/viewer.php?file=*
-// @match          http://picjav.net/picjav2/viewer.php?file=*
 // @match          http://bc.vc/*
 // @match          http://imagecherry.com/*
 // @match          http://*.directupload.net/*
@@ -97,12 +88,25 @@
 // @match          http://pixhub.eu/*
 // @match          http://imgah.com/*
 // ==Mihalism Multi Host v1==
-// @match          http://jpdown.info/viewer.php?file=*
-// @match          http://picjav.net/x/viewer.php?file=*
+// @match          http://kissdown.com/viewer.php?file=*
+// @match          http://imagerabbit.com/viewer.php?file=*
+// @match          http://games8y.com/viewer.php?file=*
 // ==/Mihalism Multi Host v1==
 // ==Mihalism Multi Host v2==
-// @match          http://gallery.jpavgod.com/viewer.php?file=*
+// @match          http://jpdown.info/viewer.php?file=*
+// @match          http://picjav.net/x/viewer.php?file=*
+// @match          http://image69.us/x/viewer.php?file=*
 // ==/Mihalism Multi Host v2==
+// ==Mihalism Multi Host v3==
+// @match          http://gzvd.info/viewer.php?file=*
+// @match          http://hentaita.com/viewer.php?file=*
+// ==/Mihalism Multi Host v3==
+// ==Mihalism Multi Host==
+// @match          http://image69.us/viewer.php?file=*
+// @match          http://picjav.net/viewer.php?file=*
+// @match          http://picjav.net/picjav2/viewer.php?file=*
+// @match          http://gallery.jpavgod.com/viewer.php?file=*
+// ==/Mihalism Multi Host==
 // ==CF Image Host==
 // @match          http://*.imgjav.tk/?pm=*
 // @match          http://imgurban.info/?pm=*
@@ -635,19 +639,6 @@
       }
     },
 
-    // mihalism
-    {
-      rule: [
-        {
-          host: /(imagerabbit|kissdown|games8y)\.com/,
-        },
-      ],
-      run: function(){
-        this.targetUrl = document.location.href.toString().replace('viewer.php?file=', 'images/');
-        this.redirect();
-      }
-    },
-
     // bc.vc, shortcut, dirty hack
     {
       rule: [
@@ -720,7 +711,20 @@
       }
     },
 
-    // picjav.net/x
+    // mihalism v1
+    {
+      rule: [
+        {
+          host: /(imagerabbit|kissdown|games8y)\.com/,
+        },
+      ],
+      run: function(){
+        this.targetUrl = document.location.href.toString().replace('viewer.php?file=', 'images/');
+        this.redirect();
+      }
+    },
+
+    // mihalism v2
     {
       rule: [
         {
@@ -749,6 +753,25 @@
       },
     },
 
+    // mihalism v3
+    {
+      rule: [
+        {
+          host: /gzvd\.info|hentaita\.com/,
+        },
+      ],
+      run: function() {
+        var a = document.querySelector( '#page_body a' );
+        var s = a.href;
+        // the real link is diffirent from original host
+        a = s.lastIndexOf( 'http://' );
+        if( a >= 0 ) {
+          this.targetUrl = s.substr( a );
+          this.redirect();
+        }
+      },
+    },
+
     // image69
     {
       rule: [
@@ -765,22 +788,60 @@
       },
     },
 
-    // mihalism2
+    // picjav.net/picjav2
     {
       rule: [
         {
-          host: /gzvd\.info|hentaita\.com/,
+          host: /picjav\.net/,
+          path: /\/picjav2\/.+/,
+        },
+      ],
+      run: function( m ) {
+        var a = document.querySelectorAll( '#page_body a' );
+        a = a[1];
+        var s = a.href;
+        // the real link does not immediately appears after http://
+        a = s.lastIndexOf( m.host[0] );
+        if( a >= 0 ) {
+          this.targetUrl = 'http://' + s.substr( a );
+          this.redirect();
+          return true;
+        }
+        return false;
+      },
+    },
+
+    // picjav.net
+    {
+      rule: [
+        {
+          host: /picjav\.net/,
+        },
+      ],
+      run: function( m ) {
+        var a = document.querySelector( '#page_body a' );
+        if( !a ) {
+          console.info( 'NoPicAds: "#page_body a" not found' );
+          return false;
+        }
+        this.targetUrl = a.href;
+        this.redirect();
+        return true;
+      },
+    },
+
+    // gallery.jpavgod.com
+    {
+      rule: [
+        {
+          host: /gallery\.jpavgod\.com/,
         },
       ],
       run: function() {
-        var a = document.querySelector( '#page_body a' );
-        var s = a.href;
-        // the real link is diffirent from original host
-        a = s.lastIndexOf( 'http://' );
-        if( a >= 0 ) {
-          this.targetUrl = s.substr( a );
-          this.redirect();
-        }
+        var a = document.querySelectorAll( '#page_body a' );
+        a = a[1];
+        this.targetUrl = a.href;
+        this.redirect();
       },
     },
 
@@ -851,63 +912,6 @@
             image: ' ',
           }, 'post' );
         }
-        return true;
-      },
-    },
-
-    // gallery.jpavgod.com
-    {
-      rule: [
-        {
-          host: /gallery\.jpavgod\.com/,
-        },
-      ],
-      run: function() {
-        var a = document.querySelectorAll( '#page_body a' );
-        a = a[1];
-        this.targetUrl = a.href;
-        this.redirect();
-      },
-    },
-
-    // picjav.net/picjav2
-    {
-      rule: [
-        {
-          host: /picjav\.net/,
-          path: /\/picjav2\/.+/,
-        },
-      ],
-      run: function( m ) {
-        var a = document.querySelectorAll( '#page_body a' );
-        a = a[1];
-        var s = a.href;
-        // the real link does not immediately appears after http://
-        a = s.lastIndexOf( m.host[0] );
-        if( a >= 0 ) {
-          this.targetUrl = 'http://' + s.substr( a );
-          this.redirect();
-          return true;
-        }
-        return false;
-      },
-    },
-
-    // picjav.net
-    {
-      rule: [
-        {
-          host: /picjav\.net/,
-        },
-      ],
-      run: function( m ) {
-        var a = document.querySelector( '#page_body a' );
-        if( !a ) {
-          console.info( 'NoPicAds: "#page_body a" not found' );
-          return false;
-        }
-        this.targetUrl = a.href;
-        this.redirect();
         return true;
       },
     },
