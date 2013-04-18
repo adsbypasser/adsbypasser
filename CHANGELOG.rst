@@ -1,3 +1,10 @@
+2.7.2
+-----
+
+* change
+
+  * Always disable popup windows
+
 2.7.1
 -----
 
