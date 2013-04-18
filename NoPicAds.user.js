@@ -9,6 +9,7 @@
 // @downloadURL    https://userscripts.org/scripts/source/154858.user.js
 // @grant          unsafeWindow
 // @grant          GM_xmlhttpRequest
+// @run-at         document-start
 // @match          http://*.linkbucks.com/*
 // @match          http://*.allanalpass.com/*
 // @match          http://*.amy.gs/*
@@ -176,9 +177,11 @@
       hash: window.location.hash,
     } );
     if( runner ) {
-      return runner[0].call( this, runner[1] );
+      this.disableWindowOpen();
+      document.addEventListener( 'DOMContentLoaded', function() {
+        runner[0].call( this, runner[1] );
+      }.bind( this ) );
     }
-    return false;
   };
 
   Actions.prototype.find = function( uri ) {
@@ -1148,9 +1151,7 @@
   ];
 
   var action = new Actions();
-  if( !action.run() ) {
-    console.info( 'NoPicAds: failed' );
-  }
+  action.run();
 
 } )();
 
