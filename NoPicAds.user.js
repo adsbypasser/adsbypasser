@@ -174,6 +174,7 @@
       hash: window.location.hash,
     } );
     if( runner ) {
+      this.disableWindowOpen();
       return runner[0].call( this, runner[1] );
     }
     return false;
