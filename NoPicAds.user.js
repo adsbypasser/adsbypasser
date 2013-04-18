@@ -3,7 +3,7 @@
 // @namespace      FoolproofProject
 // @description    No Picture Advertisements
 // @copyright      2012+, legnaleurc (https://github.com/legnaleurc/nopicads)
-// @version        2.7.1
+// @version        2.7.2
 // @license        BSD
 // @updateURL      https://userscripts.org/scripts/source/154858.meta.js
 // @downloadURL    https://userscripts.org/scripts/source/154858.user.js
