@@ -1051,8 +1051,13 @@
         },
       ],
       run: function() {
-        var o = document.querySelector( '#dwindow' );
-        o.parentNode.removeChild( o );
+        var o = document.querySelector( 'img.pic' );
+        if( !o ) {
+          console.info( 'NoPicAds: "img.pic" not found' );
+          return false;
+        }
+        this.replaceBody( o.src );
+        return true;
       },
     },
 
