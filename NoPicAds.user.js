@@ -319,11 +319,11 @@
       run: function() {
         var o = document.querySelector( 'center img[id]' );
         if( !o ) {
-          return false;
+          console.info( 'NoPicAds: "center img[id]" not found' );
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -346,7 +346,7 @@
           if( /^http.*$/.test( matches ) ) {
             this.targetUrl = matches;
             this.redirect();
-            return true;
+            return;
           }
 
           this.get( '/shortener/go', {
@@ -356,7 +356,7 @@
             this.targetUrl = r.zzz;
             this.redirect();
           } );
-          return true;
+          return;
         }
 
         // FIXME dead code?
@@ -365,7 +365,6 @@
           this.targetUrl = matches[1];
           this.redirect();
         }
-        return false;
       }
     },
 
@@ -518,11 +517,11 @@
       run: function() {
         var o = document.querySelector( '#show_image' );
         if( !o ) {
-          return false;
+          console.info( 'NoPicAds: "#show_image" not found' );
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -575,12 +574,12 @@
       run: function() {
         var o = document.querySelector( 'img.pic' );
         if( !o ) {
-          return false;
+          console.info( 'NoPicAds: "img.pic" not found' );
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
-      }
+      },
     },
 
     // imagecherry
@@ -593,13 +592,13 @@
       run: function() {
         var o = document.querySelector( 'img.pic' );
         if( !o ) {
-          return false;
+          console.info( 'NoPicAds: "img.pic" not found' );
+          return;
         }
         // somehow the server send image as an attachment
         // so I replace whole document.body with single img
         this.replaceBody( o.src );
-        return true;
-      }
+      },
     },
 
     // adjoin
@@ -671,7 +670,8 @@
           }
         }
         if( scripts ) {
-          return false;
+          console.info( 'NoPicAds: script content has been changed' );
+          return;
         }
 
         var xhr = function () {
@@ -680,14 +680,12 @@
             if( json.message ) {
               this.targetUrl = json.message.url;
               this.redirect();
-              return true;
             } else {
               window.setTimeout( xhr, 2000 );
             }
           }.bind( this ) );
         }.bind( this );
         window.setTimeout( xhr, 1200 );
-        return true;
       }
     },
 
@@ -806,16 +804,20 @@
       ],
       run: function( m ) {
         var a = document.querySelectorAll( '#page_body a' );
+        if( a.length < 2 ) {
+          console.info( 'NoPicAds: "#page_body a" not enough' );
+          return;
+        }
         a = a[1];
         var s = a.href;
         // the real link does not immediately appears after http://
         a = s.lastIndexOf( m.host[0] );
-        if( a >= 0 ) {
-          this.targetUrl = 'http://' + s.substr( a );
-          this.redirect();
-          return true;
+        if( a < 0 ) {
+          console.info( 'NoPicAds: a.href does not contains location.host' );
+          return;
         }
-        return false;
+        this.targetUrl = 'http://' + s.substr( a );
+        this.redirect();
       },
     },
 
@@ -830,11 +832,10 @@
         var a = document.querySelector( '#page_body a' );
         if( !a ) {
           console.info( 'NoPicAds: "#page_body a" not found' );
-          return false;
+          return;
         }
         this.targetUrl = a.href;
         this.redirect();
-        return true;
       },
     },
 
@@ -865,17 +866,19 @@
         this.disableWindowOpen();
         var node = document.querySelector( '#continuetoimage > form input' );
         if( node ) {
+          // first pass
           node.click();
-        } else {
-          var o = document.querySelector( '#container img[alt="image"]' );
-          if( !o ) {
-            console.info( 'NoPicAds: "#container img[alt="image"]" not found' );
-            return false;
-          }
-          this.targetUrl = o.src;
-          this.redirect();
+          return;
         }
-        return true;
+
+        // second pass
+        var o = document.querySelector( '#container img[alt="image"]' );
+        if( !o ) {
+          console.info( 'NoPicAds: "#container img[alt="image"]" not found' );
+          return;
+        }
+        this.targetUrl = o.src;
+        this.redirect();
       },
     },
 
@@ -914,13 +917,14 @@
 
         var script = document.querySelector( 'body script' );
         var i = script.innerHTML.indexOf( 'window.location.replace' );
-        if( i < 0 ) {
-          postToUrl( '', {
-            hidden: '1',
-            image: ' ',
-          }, 'post' );
+        if( i >= 0 ) {
+          // let inline script redirect
+          return;
         }
-        return true;
+        postToUrl( '', {
+          hidden: '1',
+          image: ' ',
+        }, 'post' );
       },
     },
 
@@ -935,11 +939,10 @@
         var i = document.querySelector( 'table img' );
         if( !i ) {
           console.info( 'NoPicAds: "table img" not found' );
-          return false;
+          return;
         }
         this.targetUrl = i.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -954,11 +957,10 @@
         var o = document.querySelector( '#cursor_lupa' );
         if( !o ) {
           console.info( 'NoPicAds: "#cursor_lupa" not found' );
-          return false;
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -973,11 +975,10 @@
         var o = document.querySelector( 'div.img_box a' );
         if( !o ) {
           console.info( 'NoPicAds: "div.img_box a" not found' );
-          return false;
+          return;
         }
         this.targetUrl = o.href;
         this.redirect();
-        return true;
       },
     },
 
@@ -1005,11 +1006,10 @@
         var o = document.querySelector( '#iimg' );
         if( !o ) {
           console.info( 'NoPicAds: "#iimg" not found' );
-          return false;
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -1042,11 +1042,10 @@
         var o = document.querySelector( '#container img[alt="image"]' );
         if( !o ) {
           console.info( 'NoPicAds: "#container img[alt="image"]" not found' );
-          return false;
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -1074,12 +1073,11 @@
         var o = document.querySelector( '#imageContainer img[id]' );
         if( !o ) {
           console.info( 'NoPicAds: "#imageContainer img[id]" not found' );
-          return false;
+          return;
         }
         // somehow the server send image as an attachment
         // so I replace whole document.body with single img
         this.replaceBody( o.src );
-        return true;
       },
     },
 
@@ -1096,11 +1094,10 @@
         var i = document.querySelector( 'a.pic1 img' );
         if( !i ) {
           console.info( 'NoPicAds: "a.pic1 img" not found' );
-          return false;
+          return;
         }
         this.targetUrl = i.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -1116,17 +1113,16 @@
         var a = document.querySelector( 'div.panel.top a' );
         if( !a ) {
           console.info( 'NoPicAds: "div.panel.top a" not found' );
-          return false;
+          return;
         }
         a = a.href.match( /.*sid=([a-z0-9]+).*/ );
         if( !a ) {
           console.info( 'NoPicAds: %s mismatch .*sid=([a-z0-9]+).*', a.href );
-          return false;
+          return;
         }
         a = a[1];
         this.targetUrl = '/img_show.php?view_id=' + a;
         this.redirect();
-        return true;
       },
     },
 
@@ -1141,11 +1137,10 @@
         var i = document.querySelector( '#image' );
         if( !i ) {
           console.info( 'NoPicAds: "#image" not found' );
-          return false;
+          return;
         }
         this.targetUrl = i.src;
         this.redirect();
-        return true;
       },
     },
   ];
