@@ -135,6 +135,7 @@
 // ==imgshot==
 // @match          http://imagedecode.com/*
 // @match          http://zonezeedimage.com/img-*.html
+// @match          http://comicalpic.net/img-*.html
 // ==/imgshot==
 // ==else==
 // @match          http://imagetwist.com/*
@@ -1035,7 +1036,7 @@
     {
       rule: [
         {
-          host: /(imagedecode|zonezeedimage)\.com/,
+          host: /(imagedecode|zonezeedimage)\.com|comicalpic\.net/,
         },
       ],
       run: function() {
