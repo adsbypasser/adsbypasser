@@ -108,6 +108,7 @@
 // @match          http://picjav.net/viewer.php?file=*
 // @match          http://picjav.net/picjav2/viewer.php?file=*
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
+// @match          http://preview.jpavgod.com/*.html
 // ==/Mihalism Multi Host==
 // ==CF Image Host==
 // @match          http://*.imgjav.tk/?pm=*
@@ -852,6 +853,20 @@
         var a = document.querySelectorAll( '#page_body a' );
         a = a[1];
         this.targetUrl = a.href;
+        this.redirect();
+      },
+    },
+
+    // preview.jpavgod.com
+    {
+      rule: [
+        {
+          host: /preview\.jpavgod\.com/,
+        },
+      ],
+      run: function() {
+        var i = document.querySelector( '#page_body div.text_align_center img' );
+        this.targetUrl = i.src;
         this.redirect();
       },
     },
