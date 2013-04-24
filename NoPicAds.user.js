@@ -138,6 +138,7 @@
 // @match          http://zonezeedimage.com/img-*.html
 // @match          http://comicalpic.net/img-*.html
 // @match          http://image.torrentjav.net/img-*.html
+// @match          http://zeljeimage.com/img-*.html
 // ==/imgshot==
 // ==else==
 // @match          http://imagetwist.com/*
@@ -1054,7 +1055,7 @@
     {
       rule: [
         {
-          host: /(imagedecode|zonezeedimage)\.com|comicalpic\.net|image\.torrentjav\.net/,
+          host: /(imagedecode|zonezeedimage|zeljeimage)\.com|(comicalpic|image\.torrentjav)\.net/,
         },
       ],
       run: function() {
