@@ -133,13 +133,14 @@
 // @match          http://*.pictureturn.com/*
 // @match          http://*.yankoimages.net/*
 // ==/imageporter==
-// ==imgshot==
+// ==reklama==
 // @match          http://imagedecode.com/*
 // @match          http://zonezeedimage.com/img-*.html
 // @match          http://comicalpic.net/img-*.html
 // @match          http://image.torrentjav.net/img-*.html
 // @match          http://zeljeimage.com/img-*.html
-// ==/imgshot==
+// @match          http://ligasampiona.com/img-*.html
+// ==/reklama==
 // ==picfox==
 // @match          http://picfox.org/*
 // @match          http://amateurfreak.org/share-*.html
@@ -1054,11 +1055,11 @@
       },
     },
 
-    // imgshot
+    // reklama
     {
       rule: [
         {
-          host: /(imagedecode|zonezeedimage|zeljeimage)\.com|(comicalpic|image\.torrentjav)\.net/,
+          host: /(imagedecode|zonezeedimage|zeljeimage|ligasampiona)\.com|(comicalpic|image\.torrentjav)\.net/,
         },
       ],
       run: function() {
