@@ -140,11 +140,14 @@
 // @match          http://image.torrentjav.net/img-*.html
 // @match          http://zeljeimage.com/img-*.html
 // ==/imgshot==
+// ==picfox==
+// @match          http://picfox.org/*
+// @match          http://amateurfreak.org/share-*.html
+// ==/picfox==
 // ==else==
 // @match          http://imagetwist.com/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgdino.com/*
-// @match          http://picfox.org/*
 // @match          http://*.4owl.info/*
 // @match          http://advertisingg.com/*
 // @match          http://*.imagebam.com/image/*
@@ -1019,7 +1022,7 @@
     {
       rule: [
         {
-          host: /picfox\.org/,
+          host: /(picfox|amateurfreak)\.org/,
         },
       ],
       run: function() {
