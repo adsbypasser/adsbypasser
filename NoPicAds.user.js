@@ -232,6 +232,7 @@
   };
 
   Actions.prototype.replaceBody = function( imgSrc ) {
+    this.cleanTimer();
     var i = document.createElement( 'img' );
     i.setAttribute( 'src', imgSrc );
     document.body = document.createElement( 'body' );
