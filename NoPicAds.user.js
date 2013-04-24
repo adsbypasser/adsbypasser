@@ -149,6 +149,7 @@
 // @match          http://*.imagebam.com/image/*
 // @match          http://imgbar.net/*
 // @match          http://*.abload.de/image.php?img=*
+// @match          http://www.sexyimg.com/*
 // ==/else==
 // ==dead==
 // @match          http://imagehosting.2owl.net/image/*
@@ -1159,6 +1160,43 @@
         }
         this.targetUrl = i.src;
         this.redirect();
+      },
+    },
+
+    // www.sexyimg.com
+    {
+      rule: [
+        {
+          host: /www\.sexyimg\.com/,
+          path: /\/s\/.*\.html/,
+        },
+      ],
+      run: function() {
+        var a = document.querySelector( '#imgbox a.divclick' );
+        if( !a ) {
+          console.info( 'NoPicAds: "#imgbox a.divclick" not found' );
+          return;
+        }
+        this.targetUrl = a.href;
+        this.redirect();
+      },
+    },
+
+    // www.sexyimg.com
+    {
+      rule: [
+        {
+          host: /www\.sexyimg\.com/,
+          path: /\/b\/.*\.html/,
+        },
+      ],
+      run: function() {
+        var i = document.querySelector( '#imgbox img.bigimg' );
+        if( !i ) {
+          console.info( 'NoPicAds: "#imgbox img.bigimg" not found' );
+          return;
+        }
+        this.replaceBody( i.src );
       },
     },
   ];
