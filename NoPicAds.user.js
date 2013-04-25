@@ -154,6 +154,8 @@
 // @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgdino.com/*
+// @match          http://www.pics-money.ru/*
+// @exclude        http://www.pics-money.ru/allimage/*
 // @match          http://www.sexyimg.com/*
 // ==/else==
 // ==dead==
@@ -1202,6 +1204,27 @@
           return;
         }
         this.replaceBody( i.src );
+      },
+    },
+
+    // www.pics-money.ru
+    {
+      rule: [
+        {
+          host: /www\.pics-money\.ru/,
+        },
+      ],
+      run: function() {
+        var i = document.querySelector( '#d1 img' );
+        if( !i ) {
+          console.info( 'NoPicAds: "#d1 img" not found' );
+          return;
+        }
+        i = i.onclick.toString();
+        i = i.match( /mshow\('(.+)'\)/ );
+        i = i[1];
+        this.targetUrl = i;
+        this.redirect();
       },
     },
   ];
