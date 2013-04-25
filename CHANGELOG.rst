@@ -1,3 +1,22 @@
+2.8.0
+-----
+
+* added
+
+  * comicalpic.net
+  * image.torrentjav.net
+  * preview.jpavgod.com
+  * www.sexyimg.com
+  * zeljeimage.com
+  * amateurfreak.org
+  * ligasampiona.com
+
+* change
+
+  * centralize wrapped image
+  * remove timer event for wrapped body
+  * run at document start
+
 2.7.3
 -----
 
