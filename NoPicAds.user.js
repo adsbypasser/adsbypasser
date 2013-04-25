@@ -1082,13 +1082,17 @@
         },
       ],
       run: function() {
-        var o = document.querySelector( 'img.pic' );
+        var o = document.querySelector( 'input[type=submit]' );
+        if( o ) {
+          o.click();
+          return;
+        }
+        o = document.querySelector( 'img.pic' );
         if( !o ) {
           console.info( 'NoPicAds: "img.pic" not found' );
-          return false;
+          return;
         }
         this.replaceBody( o.src );
-        return true;
       },
     },
 
