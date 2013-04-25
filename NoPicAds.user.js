@@ -154,6 +154,7 @@
 // @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgdino.com/*
+// @match          http://imgpo.st/*
 // @match          http://www.pics-money.ru/*
 // @exclude        http://www.pics-money.ru/allimage/*
 // @match          http://www.sexyimg.com/*
@@ -599,7 +600,7 @@
     {
       rule: [
         {
-          host: /imagecherry\.com/,
+          host: /imagecherry\.com|imgpo\.st/,
         },
       ],
       run: function() {
