@@ -10,12 +10,14 @@
 // @grant          unsafeWindow
 // @grant          GM_xmlhttpRequest
 // @run-at         document-start
-// @match          http://*.linkbucks.com/*
+// @match          http://*.alabout.com/*
+// @match          http://*.alafs.com/*
 // @match          http://*.allanalpass.com/*
 // @match          http://*.amy.gs/*
 // @match          http://*.any.gs/*
 // @match          http://*.baberepublic.com/*
 // @match          http://*.deb.gs/*
+// @match          http://*.directupload.net/*
 // @match          http://*.drstickyfingers.com/*
 // @match          http://*.dyo.gs/*
 // @match          http://*.fapoff.com/*
@@ -23,7 +25,9 @@
 // @match          http://*.freean.us/*
 // @match          http://*.galleries.bz/*
 // @match          http://*.hornywood.tv/*
+// @match          http://*.imagevenue.com/img.php?*
 // @match          http://*.linkbabes.com/*
+// @match          http://*.linkbucks.com/*
 // @match          http://*.linkgalleries.net/*
 // @match          http://*.linkseer.net/*
 // @match          http://*.miniurls.co/*
@@ -53,6 +57,7 @@
 // @match          http://*.ugalleries.net/*
 // @match          http://*.ultrafiles.net/*
 // @match          http://*.urlbeat.net/*
+// @match          http://*.urlcash.net/*
 // @match          http://*.urlpulse.net/*
 // @match          http://*.whackyvidz.com/*
 // @match          http://*.youfap.com/*
@@ -60,54 +65,49 @@
 // @match          http://*.yyv.co/*
 // @match          http://*.zff.co/*
 // @match          http://*.zxxo.net/*
-// @match          http://adf.ly/*
-// @match          http://u.bb/*
 // @match          http://9.bb/*
-// @match          http://q.gs/*
-// @match          http://j.gs/*
-// @match          http://*.imagevenue.com/img.php?*
-// @match          http://*.urlcash.net/*
-// @match          http://linkbee.com/*
-// @match          http://lnk.co/*
-// @match          http://*.alabout.com/*
-// @match          http://*.alafs.com/*
-// @match          http://pushba.com/*
-// @match          http://www.turboimagehost.com/*
-// @match          http://www.pixhost.org/show/*
-// @match          http://ichan.org/*
-// @match          http://zpag.es/*
-// @match          http://www.viidii.com/*
+// @match          http://adcrun.ch/*
+// @match          http://adf.ly/*
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
 // @match          http://adjoin.me/*
-// @match          http://www.madlink.sk/*
-// @match          http://lnx.lu/*
-// @match          http://adcrun.ch/*
 // @match          http://bc.vc/*
+// @match          http://ichan.org/*
 // @match          http://imagecherry.com/*
-// @match          http://*.directupload.net/*
-// @match          http://javelite.tk/*
-// @match          http://pixhub.eu/*
 // @match          http://imgah.com/*
+// @match          http://j.gs/*
+// @match          http://javelite.tk/*
+// @match          http://linkbee.com/*
+// @match          http://lnk.co/*
+// @match          http://lnx.lu/*
+// @match          http://pixhub.eu/*
+// @match          http://pushba.com/*
+// @match          http://q.gs/*
+// @match          http://u.bb/*
+// @match          http://www.madlink.sk/*
+// @match          http://www.pixhost.org/show/*
+// @match          http://www.turboimagehost.com/*
+// @match          http://www.viidii.com/*
+// @match          http://zpag.es/*
 // ==Mihalism Multi Host v1==
-// @match          http://kissdown.com/viewer.php?file=*
-// @match          http://imagerabbit.com/viewer.php?file=*
 // @match          http://games8y.com/viewer.php?file=*
+// @match          http://imagerabbit.com/viewer.php?file=*
+// @match          http://kissdown.com/viewer.php?file=*
 // ==/Mihalism Multi Host v1==
 // ==Mihalism Multi Host v2==
+// @match          http://image69.us/x/viewer.php?file=*
 // @match          http://jpdown.info/viewer.php?file=*
 // @match          http://picjav.net/x/viewer.php?file=*
-// @match          http://image69.us/x/viewer.php?file=*
 // ==/Mihalism Multi Host v2==
 // ==Mihalism Multi Host v3==
 // @match          http://gzvd.info/viewer.php?file=*
 // @match          http://hentaita.com/viewer.php?file=*
 // ==/Mihalism Multi Host v3==
 // ==Mihalism Multi Host==
-// @match          http://image69.us/viewer.php?file=*
-// @match          http://picjav.net/viewer.php?file=*
-// @match          http://picjav.net/picjav2/viewer.php?file=*
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
+// @match          http://image69.us/viewer.php?file=*
+// @match          http://picjav.net/picjav2/viewer.php?file=*
+// @match          http://picjav.net/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
 // ==/Mihalism Multi Host==
 // ==CF Image Host==
@@ -116,11 +116,11 @@
 // ==/CF Image Host==
 // ==imgonion==
 // @match          http://imagecorn.com/*
+// @match          http://imagepicsa.com/img-*.html
 // @match          http://imgmoney.com/img-*.html
 // @match          http://imgonion.com/img-*.html
 // @match          http://imgrill.com/img-*.html
 // @match          http://imgwoot.com/*
-// @match          http://imagepicsa.com/img-*.html
 // ==/imgonion==
 // ==imageporter==
 // @match          http://*.imagecarry.com/*
@@ -134,38 +134,38 @@
 // @match          http://*.yankoimages.net/*
 // ==/imageporter==
 // ==reklama==
-// @match          http://imagedecode.com/*
-// @match          http://zonezeedimage.com/img-*.html
 // @match          http://comicalpic.net/img-*.html
 // @match          http://image.torrentjav.net/img-*.html
-// @match          http://zeljeimage.com/img-*.html
+// @match          http://imagedecode.com/*
 // @match          http://ligasampiona.com/img-*.html
+// @match          http://zeljeimage.com/img-*.html
+// @match          http://zonezeedimage.com/img-*.html
 // ==/reklama==
 // ==picfox==
-// @match          http://picfox.org/*
 // @match          http://amateurfreak.org/share-*.html
+// @match          http://picfox.org/*
 // ==/picfox==
 // ==else==
+// @match          http://*.4owl.info/*
+// @match          http://*.abload.de/image.php?img=*
+// @match          http://*.imagebam.com/image/*
+// @match          http://advertisingg.com/*
 // @match          http://imagetwist.com/*
+// @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgdino.com/*
-// @match          http://*.4owl.info/*
-// @match          http://advertisingg.com/*
-// @match          http://*.imagebam.com/image/*
-// @match          http://imgbar.net/*
-// @match          http://*.abload.de/image.php?img=*
 // @match          http://www.sexyimg.com/*
 // ==/else==
 // ==dead==
 // @match          http://imagehosting.2owl.net/image/*
 // @match          http://s21.imgtube.us/viewer.php?file=*
 // ==/dead==
-// @exclude        http://www.linkbucks.com/
-// @exclude        http://linkbee.com/
-// @exclude        http://lnk.co/
+// @exclude        http://adcrun.ch/
 // @exclude        http://adf.ly/*market.php?*
 // @exclude        http://adf.ly/?default_ad*
-// @exclude        http://adcrun.ch/
+// @exclude        http://linkbee.com/
+// @exclude        http://lnk.co/
+// @exclude        http://www.linkbucks.com/
 // ==/UserScript==
 
 ( function() {
