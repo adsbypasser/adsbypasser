@@ -242,6 +242,7 @@
     var i = document.createElement( 'img' );
     i.setAttribute( 'src', imgSrc );
     document.body = document.createElement( 'body' );
+    document.body.textAlign = 'center';
     document.body.appendChild( i );
   };
 
