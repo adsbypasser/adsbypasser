@@ -155,7 +155,7 @@ Supported Sites
 * imagebam.com
 * abload.de
 * imgbar.net
-* www.sexyimg.com
+* sexyimg.com
 
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797

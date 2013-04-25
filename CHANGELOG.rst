@@ -6,7 +6,7 @@
   * comicalpic.net
   * image.torrentjav.net
   * preview.jpavgod.com
-  * www.sexyimg.com
+  * sexyimg.com
   * zeljeimage.com
   * amateurfreak.org
   * ligasampiona.com
@@ -145,7 +145,7 @@
 
 * fixed
 
-  * www.4owl.info
+  * 4owl.info
 
 2.1.2
 -----
@@ -166,7 +166,7 @@
 
 * added
 
-  * www.4owl.info
+  * 4owl.info
   * bc.vc (shortcut)
   * s21.imgtube.us
 
