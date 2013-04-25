@@ -1140,18 +1140,12 @@
         },
       ],
       run: function() {
-        var a = document.querySelector( 'div.panel.top a' );
-        if( !a ) {
-          console.info( 'NoPicAds: "div.panel.top a" not found' );
+        var i = document.querySelector( 'div.panel.top form input[name=sid]' );
+        if( !i ) {
+          console.info( 'NoPicAds: "div.panel.top form input[name=sid]" not found' );
           return;
         }
-        a = a.href.match( /.*sid=([a-z0-9]+).*/ );
-        if( !a ) {
-          console.info( 'NoPicAds: %s mismatch .*sid=([a-z0-9]+).*', a.href );
-          return;
-        }
-        a = a[1];
-        this.targetUrl = '/img_show.php?view_id=' + a;
+        this.targetUrl = '/img_show.php?view_id=' + i.value;
         this.redirect();
       },
     },
