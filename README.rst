@@ -16,21 +16,33 @@ Supported Sites
 
 * Mihalism Multi Host
 
+  * gallery.jpavgod.com
+  * games8y.com
+  * gzvd.info
+  * hentaita.com
+  * image69.us
+  * imagerabbit.com
   * jpdown.info
+  * kissdown.com
   * picjav.net
+  * preview.jpavgod.com
   * s21.imgtube.us
 
-* img shot
+* reklama
 
+  * comicalpic.net
+  * image.torrentjav.net
   * imagedecode.com
+  * ligasampiona.com
+  * zeljeimage.com
   * zonezeedimage.com
 
 * imageporter
 
   * imagecarry.com
   * imagedunk.com
-  * imageswitch.com
   * imageporter.com
+  * imageswitch.com
   * piclambo.net
   * picleet.com
   * picturedip.com
@@ -44,11 +56,17 @@ Supported Sites
 
 * imgonion
 
-  * imgonion.com
-  * imgmoney.com
   * imagecorn.com
-  * imgrill.com
   * imagepicsa.com
+  * imgmoney.com
+  * imgonion.com
+  * imgrill.com
+  * imgwoot.com
+
+* picfox
+
+  * amateurfreak.org
+  * picfox.org
 
 * linkbucks.com
 * allanalpass.com
@@ -124,28 +142,20 @@ Supported Sites
 * madlink.sk
 * lnx.lu
 * adcrun.ch
-* kissdown.com
-* imagerabbit.com
-* games8y.com
-* image69.us
-* gzvd.info
 * bc.vc
-* hentaita.com
 * imagecherry.com
 * 2owl.net
 * imgdino.com
 * 4owl.info
 * directupload.net
-* picfox.org
 * javelite.tk
 * pixhub.eu
 * imgah.com
 * advertisingg.com
 * imagebam.com
-* gallery.jpavgod.com
 * abload.de
 * imgbar.net
-* imgwoot.com
+* www.sexyimg.com
 
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797
