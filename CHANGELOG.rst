@@ -1,3 +1,11 @@
+2.8.1
+-----
+
+* fixed
+
+  * fix wrapped body style
+  * imgah.com
+
 2.8.0
 -----
 
