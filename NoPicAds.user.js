@@ -73,7 +73,6 @@
 // @match          http://adjoin.me/*
 // @match          http://bc.vc/*
 // @match          http://ichan.org/*
-// @match          http://imagecherry.com/*
 // @match          http://imgah.com/*
 // @match          http://j.gs/*
 // @match          http://javelite.tk/*
@@ -145,6 +144,10 @@
 // @match          http://amateurfreak.org/share-*.html
 // @match          http://picfox.org/*
 // ==/picfox==
+// ==imagecherry==
+// @match          http://imagecherry.com/*
+// @match          http://imgpo.st/*
+// ==/imagecherry==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.abload.de/image.php?img=*
@@ -154,7 +157,6 @@
 // @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgdino.com/*
-// @match          http://imgpo.st/*
 // @match          http://www.pics-money.ru/*
 // @exclude        http://www.pics-money.ru/allimage/*
 // @match          http://www.sexyimg.com/*
