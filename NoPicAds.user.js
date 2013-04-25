@@ -3,11 +3,13 @@
 // @namespace      FoolproofProject
 // @description    No Picture Advertisements
 // @copyright      2012+, legnaleurc (https://github.com/legnaleurc/nopicads)
-// @version        2.7.3
+// @version        2.8.0
 // @license        BSD
 // @updateURL      https://userscripts.org/scripts/source/154858.meta.js
 // @downloadURL    https://userscripts.org/scripts/source/154858.user.js
 // @grant          unsafeWindow
+// @grant          GM_xmlhttpRequest
+// @run-at         document-start
 // @match          http://*.linkbucks.com/*
 // @match          http://*.allanalpass.com/*
 // @match          http://*.amy.gs/*
@@ -106,6 +108,7 @@
 // @match          http://picjav.net/viewer.php?file=*
 // @match          http://picjav.net/picjav2/viewer.php?file=*
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
+// @match          http://preview.jpavgod.com/*.html
 // ==/Mihalism Multi Host==
 // ==CF Image Host==
 // @match          http://*.imgjav.tk/?pm=*
@@ -130,20 +133,28 @@
 // @match          http://*.pictureturn.com/*
 // @match          http://*.yankoimages.net/*
 // ==/imageporter==
-// ==imgshot==
+// ==reklama==
 // @match          http://imagedecode.com/*
 // @match          http://zonezeedimage.com/img-*.html
-// ==/imgshot==
+// @match          http://comicalpic.net/img-*.html
+// @match          http://image.torrentjav.net/img-*.html
+// @match          http://zeljeimage.com/img-*.html
+// @match          http://ligasampiona.com/img-*.html
+// ==/reklama==
+// ==picfox==
+// @match          http://picfox.org/*
+// @match          http://amateurfreak.org/share-*.html
+// ==/picfox==
 // ==else==
 // @match          http://imagetwist.com/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgdino.com/*
-// @match          http://picfox.org/*
 // @match          http://*.4owl.info/*
 // @match          http://advertisingg.com/*
 // @match          http://*.imagebam.com/image/*
 // @match          http://imgbar.net/*
 // @match          http://*.abload.de/image.php?img=*
+// @match          http://www.sexyimg.com/*
 // ==/else==
 // ==dead==
 // @match          http://imagehosting.2owl.net/image/*
@@ -154,6 +165,7 @@
 // @exclude        http://lnk.co/
 // @exclude        http://adf.ly/*market.php?*
 // @exclude        http://adf.ly/?default_ad*
+// @exclude        http://adcrun.ch/
 // ==/UserScript==
 
 ( function() {
@@ -175,9 +187,10 @@
     } );
     if( runner ) {
       this.disableWindowOpen();
-      return runner[0].call( this, runner[1] );
+      document.addEventListener( 'DOMContentLoaded', function() {
+        runner[0].call( this, runner[1] );
+      }.bind( this ) );
     }
-    return false;
   };
 
   Actions.prototype.find = function( uri ) {
@@ -203,6 +216,7 @@
 
   Actions.prototype.redirect = function() {
     if( this.targetUrl ) {
+      console.info( 'NoPicAds: redirect to ' + this.targetUrl );
       window.location.replace( this.targetUrl );
     }
   };
@@ -224,10 +238,50 @@
   };
 
   Actions.prototype.replaceBody = function( imgSrc ) {
+    this.cleanTimer();
     var i = document.createElement( 'img' );
     i.setAttribute( 'src', imgSrc );
     document.body = document.createElement( 'body' );
+    document.body.textAlign = 'center';
     document.body.appendChild( i );
+  };
+
+  Actions.prototype.ajax = function( method, url, data, callback ) {
+    function toQuery( data ) {
+      if( typeof data === 'string' ) {
+        return data;
+      }
+      if( data instanceof String ) {
+        return data.toString();
+      }
+      var tmp = [];
+      for( var key in data ) {
+        tmp.push( key + '=' + data[key] );
+      }
+      return tmp.join( '&' );
+    }
+
+    var controller = GM_xmlhttpRequest( {
+      method: method,
+      url: url,
+      data: encodeURI( toQuery( data ) ),
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      onload: function( response ) {
+        callback( response.responseText );
+      }
+    } );
+
+    return controller;
+  };
+
+  Actions.prototype.post = function( url, data, callback ) {
+    return this.ajax( 'POST', url, data, callback );
+  };
+
+  Actions.prototype.get = function( url, data, callback ) {
+    return this.ajax( 'GET', url, data, callback );
   };
 
   Actions.prototype.patterns = [
@@ -276,11 +330,11 @@
       run: function() {
         var o = document.querySelector( 'center img[id]' );
         if( !o ) {
-          return false;
+          console.info( 'NoPicAds: "center img[id]" not found' );
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -292,9 +346,8 @@
         },
       ],
       run: function() {
-        var head = document.getElementsByTagName('head')[0].innerHTML;
-        var matches = head.match(/var\s+zzz\s*=\s*['"](.+)['"]/);
-        var that = this;
+        var head = document.querySelector( 'head' ).innerHTML;
+        var matches = head.match( /var\s+zzz\s*=\s*['"](.+)['"]/ );
 
         if( matches ) {
           var ad = document.querySelector( 'body iframe' );
@@ -302,25 +355,26 @@
 
           matches = matches[1];
           if( /^http.*$/.test( matches ) ) {
-            that.targetUrl = matches;
-            that.redirect();
+            this.targetUrl = matches;
+            this.redirect();
             return;
           }
 
-          var ajax = new XMLHttpRequest();
-          ajax.open( 'GET', '/shortener/go?zzz=' + matches, true );
-          ajax.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded' );
-          ajax.onreadystatechange = function() {
-            if( ajax.readyState == 4 && ajax.status == 200 ) {
-              var r = JSON.parse( ajax.responseText )
-              that.targetUrl = r.zzz;
-              that.redirect();
-            }
-          };
-          ajax.send( null );
-        } else if( ( matches = document.location.href.toString().match(/\/(https?:\/\/.+)/ ) ) ) {
-          that.targetUrl = matches[1];
-          that.redirect();
+          this.get( '/shortener/go', {
+            zzz: matches,
+          }, function( response ) {
+            var r = JSON.parse( response );
+            this.targetUrl = r.zzz;
+            this.redirect();
+          } );
+          return;
+        }
+
+        // FIXME dead code?
+        matches = window.location.href.toString().match( /\/(https?:\/\/.+)/ );
+        if( matches ) {
+          this.targetUrl = matches[1];
+          this.redirect();
         }
       }
     },
@@ -474,11 +528,11 @@
       run: function() {
         var o = document.querySelector( '#show_image' );
         if( !o ) {
-          return false;
+          console.info( 'NoPicAds: "#show_image" not found' );
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -531,12 +585,12 @@
       run: function() {
         var o = document.querySelector( 'img.pic' );
         if( !o ) {
-          return false;
+          console.info( 'NoPicAds: "img.pic" not found' );
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
-      }
+      },
     },
 
     // imagecherry
@@ -549,13 +603,13 @@
       run: function() {
         var o = document.querySelector( 'img.pic' );
         if( !o ) {
-          return false;
+          console.info( 'NoPicAds: "img.pic" not found' );
+          return;
         }
         // somehow the server send image as an attachment
         // so I replace whole document.body with single img
         this.replaceBody( o.src );
-        return true;
-      }
+      },
     },
 
     // adjoin
@@ -604,39 +658,45 @@
           host: /adcrun\.ch/,
         },
       ],
-      run: function(){
-        var matches, opts, scripts = document.getElementsByTagName('script');
-        opts = '';
-        for(var i=0; i<scripts.length; ++i){
-          if(scripts[i].innerHTML.indexOf('eval')!=-1){
-            matches = scripts[i].innerHTML.match(/\|button\|(\d+)/);
-            matches && (opts = 'opt=make_log&args[oid]=' + matches[1]);
+      run: function() {
+        var opts = {}, scripts = document.querySelectorAll( 'script' );
+        for( var i = 0; i < scripts.length; ++i ) {
+          var content = scripts[i].innerHTML;
+          if( content.indexOf( 'eval' ) !== -1 ) {
+            var matches = content.match( /\|button\|(\d+)/ );
+            if( matches ) {
+              opts.opt = 'make_log';
+              opts['args[oid]'] = matches[1];
+            }
 
-            matches = scripts[i].innerHTML.match(/lid\|oid\|(\d+)\|(\d+)/i);
-            matches && (opts += '&args[lid]='+matches[1]+'&args[oid]=' + matches[2] + '&args[ref]=');
+            matches = content.match( /lid\|oid\|(\d+)\|(\d+)/i );
+            if( matches ) {
+              opts['args[lid]'] = matches[1];
+              opts['args[oid]'] = matches[2];
+              opts['args[ref]'] = '';
+            }
+
+            scripts = null;
+            break;
           }
         }
-        var xhr = function(params){
-          var ajax=new XMLHttpRequest();
-          ajax.open('POST', '/links/ajax.fly.php', true);
-          ajax.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-          ajax.onreadystatechange=(function(that){
-            return function(){
-              if(ajax.readyState == 4 && ajax.status == 200){
-                var jj = eval('(' + ajax.responseText + ')');
-                if(jj.message){
-                  top.location.href = jj.message.url
-                }else{
-                  window.setTimeout(function(){ xhr(params) }, 2000);
-                }
-              }
+        if( scripts ) {
+          console.info( 'NoPicAds: script content has been changed' );
+          return;
+        }
+
+        var xhr = function () {
+          this.post( '/links/ajax.fly.php', opts, function( text ) {
+            var json = JSON.parse( text );
+            if( json.message ) {
+              this.targetUrl = json.message.url;
+              this.redirect();
+            } else {
+              window.setTimeout( xhr, 2000 );
             }
-          })(this);
-          ajax.send(params);
-        };
-        window.setTimeout(function(){
-          xhr(encodeURI(opts))
-        }, 1200);
+          }.bind( this ) );
+        }.bind( this );
+        window.setTimeout( xhr, 1200 );
       }
     },
 
@@ -666,50 +726,6 @@
         this.targetUrl = m.path[1];
         this.redirect();
       },
-    },
-
-    // bcvc
-    // TODO remove this in next release
-    {
-      rule: [
-        {
-          host: /bc\.vc/,
-        },
-      ],
-      run: function() {
-        var matches = null;
-        var opts = '';
-        var scripts = document.getElementsByTagName( 'script' );
-        for( var i = 0; i < scripts.length; ++i ) {
-          if( scripts[i].innerHTML.indexOf( 'eval' ) !== -1 ) {
-            matches = scripts[i].innerHTML.match( /aid:(\d+),lid:(\d+),oid:(\d+)/ );
-            matches && (opts = [ 'opt=make_log&args[aid]=', matches[1], '&args[lid]=', matches[2], '&args[oid]=', matches[3], '&args[ref]=' ].join( '' ) );
-          }
-        }
-
-        var xhr = function( params ) {
-          var ajax = new XMLHttpRequest();
-          ajax.open( 'POST', '/fly/ajax.fly.php', true );
-          ajax.setRequestHeader( 'Content-type', 'application/x-www-form-urlencoded' );
-          ajax.onreadystatechange = ( function( that ) {
-            return function() {
-              if( ajax.readyState == 4 && ajax.status == 200 ) {
-                var jj = eval( '(' + ajax.responseText + ')' );
-                if( jj.message ) {
-                  top.location.href = jj.message.url;
-                } else {
-                  window.setTimeout(function(){ xhr(params) }, 2000);
-                }
-              }
-            }
-          } )( this );
-          ajax.send( params );
-        };
-
-        window.setTimeout( function() {
-          xhr( encodeURI( opts ) );
-        }, 1200 );
-      }
     },
 
     // mihalism v1
@@ -799,16 +815,20 @@
       ],
       run: function( m ) {
         var a = document.querySelectorAll( '#page_body a' );
+        if( a.length < 2 ) {
+          console.info( 'NoPicAds: "#page_body a" not enough' );
+          return;
+        }
         a = a[1];
         var s = a.href;
         // the real link does not immediately appears after http://
         a = s.lastIndexOf( m.host[0] );
-        if( a >= 0 ) {
-          this.targetUrl = 'http://' + s.substr( a );
-          this.redirect();
-          return true;
+        if( a < 0 ) {
+          console.info( 'NoPicAds: a.href does not contains location.host' );
+          return;
         }
-        return false;
+        this.targetUrl = 'http://' + s.substr( a );
+        this.redirect();
       },
     },
 
@@ -823,11 +843,10 @@
         var a = document.querySelector( '#page_body a' );
         if( !a ) {
           console.info( 'NoPicAds: "#page_body a" not found' );
-          return false;
+          return;
         }
         this.targetUrl = a.href;
         this.redirect();
-        return true;
       },
     },
 
@@ -846,6 +865,20 @@
       },
     },
 
+    // preview.jpavgod.com
+    {
+      rule: [
+        {
+          host: /preview\.jpavgod\.com/,
+        },
+      ],
+      run: function() {
+        var i = document.querySelector( '#page_body div.text_align_center img' );
+        this.targetUrl = i.src;
+        this.redirect();
+      },
+    },
+
     // imgonion
     // FEATURE: continue to image link, POST same URL
     {
@@ -858,17 +891,19 @@
         this.disableWindowOpen();
         var node = document.querySelector( '#continuetoimage > form input' );
         if( node ) {
+          // first pass
           node.click();
-        } else {
-          var o = document.querySelector( '#container img[alt="image"]' );
-          if( !o ) {
-            console.info( 'NoPicAds: "#container img[alt="image"]" not found' );
-            return false;
-          }
-          this.targetUrl = o.src;
-          this.redirect();
+          return;
         }
-        return true;
+
+        // second pass
+        var o = document.querySelector( '#container img[alt="image"]' );
+        if( !o ) {
+          console.info( 'NoPicAds: "#container img[alt="image"]" not found' );
+          return;
+        }
+        this.targetUrl = o.src;
+        this.redirect();
       },
     },
 
@@ -907,13 +942,14 @@
 
         var script = document.querySelector( 'body script' );
         var i = script.innerHTML.indexOf( 'window.location.replace' );
-        if( i < 0 ) {
-          postToUrl( '', {
-            hidden: '1',
-            image: ' ',
-          }, 'post' );
+        if( i >= 0 ) {
+          // let inline script redirect
+          return;
         }
-        return true;
+        postToUrl( '', {
+          hidden: '1',
+          image: ' ',
+        }, 'post' );
       },
     },
 
@@ -928,11 +964,10 @@
         var i = document.querySelector( 'table img' );
         if( !i ) {
           console.info( 'NoPicAds: "table img" not found' );
-          return false;
+          return;
         }
         this.targetUrl = i.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -947,11 +982,10 @@
         var o = document.querySelector( '#cursor_lupa' );
         if( !o ) {
           console.info( 'NoPicAds: "#cursor_lupa" not found' );
-          return false;
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -966,11 +1000,10 @@
         var o = document.querySelector( 'div.img_box a' );
         if( !o ) {
           console.info( 'NoPicAds: "div.img_box a" not found' );
-          return false;
+          return;
         }
         this.targetUrl = o.href;
         this.redirect();
-        return true;
       },
     },
 
@@ -991,18 +1024,17 @@
     {
       rule: [
         {
-          host: /picfox\.org/,
+          host: /(picfox|amateurfreak)\.org/,
         },
       ],
       run: function() {
         var o = document.querySelector( '#iimg' );
         if( !o ) {
           console.info( 'NoPicAds: "#iimg" not found' );
-          return false;
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -1024,22 +1056,21 @@
       },
     },
 
-    // imgshot
+    // reklama
     {
       rule: [
         {
-          host: /(imagedecode|zonezeedimage)\.com/,
+          host: /(imagedecode|zonezeedimage|zeljeimage|ligasampiona)\.com|(comicalpic|image\.torrentjav)\.net/,
         },
       ],
       run: function() {
-        var o = document.querySelector( '#container img[alt="image"]' );
+        var o = document.querySelector( '#container img[class^=centred]' );
         if( !o ) {
-          console.info( 'NoPicAds: "#container img[alt="image"]" not found' );
-          return false;
+          console.info( 'NoPicAds: "#container img[class^=centred]" not found' );
+          return;
         }
         this.targetUrl = o.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -1072,12 +1103,11 @@
         var o = document.querySelector( '#imageContainer img[id]' );
         if( !o ) {
           console.info( 'NoPicAds: "#imageContainer img[id]" not found' );
-          return false;
+          return;
         }
         // somehow the server send image as an attachment
         // so I replace whole document.body with single img
         this.replaceBody( o.src );
-        return true;
       },
     },
 
@@ -1094,11 +1124,10 @@
         var i = document.querySelector( 'a.pic1 img' );
         if( !i ) {
           console.info( 'NoPicAds: "a.pic1 img" not found' );
-          return false;
+          return;
         }
         this.targetUrl = i.src;
         this.redirect();
-        return true;
       },
     },
 
@@ -1114,17 +1143,16 @@
         var a = document.querySelector( 'div.panel.top a' );
         if( !a ) {
           console.info( 'NoPicAds: "div.panel.top a" not found' );
-          return false;
+          return;
         }
         a = a.href.match( /.*sid=([a-z0-9]+).*/ );
         if( !a ) {
           console.info( 'NoPicAds: %s mismatch .*sid=([a-z0-9]+).*', a.href );
-          return false;
+          return;
         }
         a = a[1];
         this.targetUrl = '/img_show.php?view_id=' + a;
         this.redirect();
-        return true;
       },
     },
 
@@ -1139,19 +1167,53 @@
         var i = document.querySelector( '#image' );
         if( !i ) {
           console.info( 'NoPicAds: "#image" not found' );
-          return false;
+          return;
         }
         this.targetUrl = i.src;
         this.redirect();
-        return true;
+      },
+    },
+
+    // www.sexyimg.com
+    {
+      rule: [
+        {
+          host: /www\.sexyimg\.com/,
+          path: /\/s\/.*\.html/,
+        },
+      ],
+      run: function() {
+        var a = document.querySelector( '#imgbox a.divclick' );
+        if( !a ) {
+          console.info( 'NoPicAds: "#imgbox a.divclick" not found' );
+          return;
+        }
+        this.targetUrl = a.href;
+        this.redirect();
+      },
+    },
+
+    // www.sexyimg.com
+    {
+      rule: [
+        {
+          host: /www\.sexyimg\.com/,
+          path: /\/b\/.*\.html/,
+        },
+      ],
+      run: function() {
+        var i = document.querySelector( '#imgbox img.bigimg' );
+        if( !i ) {
+          console.info( 'NoPicAds: "#imgbox img.bigimg" not found' );
+          return;
+        }
+        this.replaceBody( i.src );
       },
     },
   ];
 
   var action = new Actions();
-  if( !action.run() ) {
-    console.info( 'NoPicAds: failed' );
-  }
+  action.run();
 
 } )();
 
