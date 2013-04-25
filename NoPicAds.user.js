@@ -153,7 +153,7 @@
 // @match          http://imagetwist.com/*
 // @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
-// @match          http://imgdino.com/*
+// @match          http://imgdino.com/viewer.php?file=*
 // @match          http://www.sexyimg.com/*
 // ==/else==
 // ==dead==
