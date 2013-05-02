@@ -1,3 +1,16 @@
+2.9.0
+-----
+
+* added
+
+  * imgah.com
+
+* fixed
+
+  * pics-money.ru
+  * imgpo.st
+  * imgserve.net
+
 2.8.1
 -----
 
