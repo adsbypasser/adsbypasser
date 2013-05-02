@@ -157,7 +157,7 @@
 // @match          http://imagetwist.com/*
 // @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
-// @match          http://imgdino.com/*
+// @match          http://imgdino.com/viewer.php?file=*
 // @match          http://www.pics-money.ru/*
 // @exclude        http://www.pics-money.ru/allimage/*
 // @match          http://www.sexyimg.com/*
@@ -1088,13 +1088,17 @@
         },
       ],
       run: function() {
-        var o = document.querySelector( 'img.pic' );
+        var o = document.querySelector( 'input[type=submit]' );
+        if( o ) {
+          o.click();
+          return;
+        }
+        o = document.querySelector( 'img.pic' );
         if( !o ) {
           console.info( 'NoPicAds: "img.pic" not found' );
-          return false;
+          return;
         }
         this.replaceBody( o.src );
-        return true;
       },
     },
 
