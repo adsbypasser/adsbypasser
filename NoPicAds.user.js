@@ -105,6 +105,7 @@
 // ==Mihalism Multi Host==
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://image69.us/viewer.php?file=*
+// @match          http://imagerabbit.com/*.html
 // @match          http://picjav.net/picjav2/viewer.php?file=*
 // @match          http://picjav.net/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
@@ -730,6 +731,25 @@
       ],
       run: function( m ) {
         this.targetUrl = m.path[1];
+        this.redirect();
+      },
+    },
+
+    // imagerabbit.com
+    {
+      rule: [
+        {
+          host: /imagerabbit\.com/,
+          path: /.+\.html$/,
+        },
+      ],
+      run: function() {
+        var a = document.querySelector( '#page_body div.text_align_center a' );
+        if( !a ) {
+          console.info( 'NoPicAds: "#page_body div.text_align_center a" not found' );
+          return;
+        }
+        this.targetUrl = a.href;
         this.redirect();
       },
     },
