@@ -89,7 +89,6 @@
 // @match          http://www.viidii.com/*
 // @match          http://zpag.es/*
 // ==Mihalism Multi Host v1==
-// @match          http://games8y.com/viewer.php?file=*
 // @match          http://imagerabbit.com/viewer.php?file=*
 // @match          http://kissdown.com/viewer.php?file=*
 // ==/Mihalism Multi Host v1==
@@ -165,6 +164,7 @@
 // @match          http://www.sexyimg.com/*
 // ==/else==
 // ==dead==
+// @match          http://games8y.com/viewer.php?file=*
 // @match          http://imagehosting.2owl.net/image/*
 // @match          http://s21.imgtube.us/viewer.php?file=*
 // ==/dead==
