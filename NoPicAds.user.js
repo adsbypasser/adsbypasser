@@ -159,6 +159,7 @@
 // @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgdino.com/viewer.php?file=*
+// @match          http://imgwiev.tk/?pm=*
 // @match          http://www.pics-money.ru/*
 // @exclude        http://www.pics-money.ru/allimage/*
 // @match          http://www.sexyimg.com/*
@@ -1252,6 +1253,20 @@
         i = i.match( /mshow\('(.+)'\)/ );
         i = i[1];
         this.targetUrl = i;
+        this.redirect();
+      },
+    },
+
+    // imgwiev.tk
+    {
+      rule: [
+        {
+          host: /imgwiev\.tk/,
+          query: /\?pm=(.+)/,
+        },
+      ],
+      run: function( m ) {
+        this.targetUrl = '/image.php?di=' + m.query[1];
         this.redirect();
       },
     },
