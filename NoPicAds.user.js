@@ -163,6 +163,7 @@
 // @match          http://www.sexyimg.com/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://www.hostpics.info/view.php?filename=*
+// @match          http://imagescream.com/img/soft/*
 // ==/else==
 // ==dead==
 // @match          http://kissdown.com/viewer.php?file=*
@@ -1297,6 +1298,24 @@
       ],
       run: function( m ) {
         this.targetUrl = '/images/' + m.query[1];
+        this.redirect();
+      },
+    },
+
+    // imagescream.com
+    {
+      rule: [
+        {
+          host: /imagescream\.com/,
+        },
+      ],
+      run: function( m ) {
+        var i = document.querySelector( '#shortURL-content img' );
+        if( !i ) {
+          console.info( 'NoPicAds: "#shortURL-content img" not found' );
+          return;
+        }
+        this.targetUrl = i.src;
         this.redirect();
       },
     },
