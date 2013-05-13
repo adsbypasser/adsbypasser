@@ -164,6 +164,7 @@
 // @match          http://goimagehost.com/xxx/*
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://imagescream.com/img/soft/*
+// @match          http://imgfantasy.com/?p=*
 // ==/else==
 // ==dead==
 // @match          http://kissdown.com/viewer.php?file=*
@@ -1313,6 +1314,24 @@
         var i = document.querySelector( '#shortURL-content img' );
         if( !i ) {
           console.info( 'NoPicAds: "#shortURL-content img" not found' );
+          return;
+        }
+        this.targetUrl = i.src;
+        this.redirect();
+      },
+    },
+
+    // imgfantasy.com
+    {
+      rule: [
+        {
+          host: /imgfantasy\.com/,
+        },
+      ],
+      run: function( m ) {
+        var i = document.querySelector( '#container-home img' );
+        if( !i ) {
+          console.info( 'NoPicAds: "#container-home img" not found' );
           return;
         }
         this.targetUrl = i.src;
