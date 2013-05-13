@@ -161,6 +161,7 @@
 // @match          http://www.pics-money.ru/*
 // @exclude        http://www.pics-money.ru/allimage/*
 // @match          http://www.sexyimg.com/*
+// @match          http://goimagehost.com/xxx/*
 // ==/else==
 // ==dead==
 // @match          http://kissdown.com/viewer.php?file=*
@@ -1267,6 +1268,20 @@
       ],
       run: function( m ) {
         this.targetUrl = '/image.php?di=' + m.query[1];
+        this.redirect();
+      },
+    },
+
+    // goimagehost.com
+    {
+      rule: [
+        {
+          host: /goimagehost\.com/,
+          path: /\/xxx\/(.+)/,
+        },
+      ],
+      run: function( m ) {
+        this.targetUrl = '/xxx/images/' + m.path[1];
         this.redirect();
       },
     },
