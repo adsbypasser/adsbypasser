@@ -162,6 +162,7 @@
 // @exclude        http://www.pics-money.ru/allimage/*
 // @match          http://www.sexyimg.com/*
 // @match          http://goimagehost.com/xxx/*
+// @match          http://www.hostpics.info/view.php?filename=*
 // ==/else==
 // ==dead==
 // @match          http://kissdown.com/viewer.php?file=*
@@ -1282,6 +1283,20 @@
       ],
       run: function( m ) {
         this.targetUrl = '/xxx/images/' + m.path[1];
+        this.redirect();
+      },
+    },
+
+    // www.hostpics.info
+    {
+      rule: [
+        {
+          host: /www\.hostpics\.info/,
+          query: /\?filename=(.+)/,
+        },
+      ],
+      run: function( m ) {
+        this.targetUrl = '/images/' + m.query[1];
         this.redirect();
       },
     },
