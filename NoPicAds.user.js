@@ -147,6 +147,7 @@
 // ==/picfox==
 // ==imagecherry==
 // @match          http://imagecherry.com/*
+// @match          http://imagejumbo.com/*
 // @match          http://imgpo.st/*
 // ==/imagecherry==
 // ==else==
@@ -610,7 +611,7 @@
     {
       rule: [
         {
-          host: /imagecherry\.com|imgpo\.st/,
+          host: /imagecherry\.com|imgpo\.st|imagejumbo\.com/,
         },
       ],
       run: function() {
