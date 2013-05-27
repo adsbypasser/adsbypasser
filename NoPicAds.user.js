@@ -1313,7 +1313,7 @@
           host: /imagescream\.com/,
         },
       ],
-      run: function( m ) {
+      run: function() {
         var i = document.querySelector( '#shortURL-content img' );
         if( !i ) {
           console.info( 'NoPicAds: "#shortURL-content img" not found' );
@@ -1331,7 +1331,7 @@
           host: /imgfantasy\.com/,
         },
       ],
-      run: function( m ) {
+      run: function() {
         var i = document.querySelector( '#container-home img' );
         if( !i ) {
           console.info( 'NoPicAds: "#container-home img" not found' );
