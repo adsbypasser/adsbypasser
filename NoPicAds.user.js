@@ -167,6 +167,7 @@
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://imagescream.com/img/soft/*
 // @match          http://imgfantasy.com/?p=*
+// @match          http://www.imgnip.com/viewerr2.php?file=*
 // ==/else==
 // ==dead==
 // @match          http://kissdown.com/viewer.php?file=*
@@ -1334,6 +1335,24 @@
         var i = document.querySelector( '#container-home img' );
         if( !i ) {
           console.info( 'NoPicAds: "#container-home img" not found' );
+          return;
+        }
+        this.targetUrl = i.src;
+        this.redirect();
+      },
+    },
+
+    // www.imgnip.com
+    {
+      rule: [
+        {
+          host: /www\.imgnip\.com/,
+        },
+      ],
+      run: function() {
+        var i = document.querySelector( '#main_image' );
+        if( !i ) {
+          console.info( 'NoPicAds: "#main_image" not found' );
           return;
         }
         this.targetUrl = i.src;
