@@ -168,6 +168,7 @@
 // @match          http://imagescream.com/img/soft/*
 // @match          http://imgfantasy.com/?p=*
 // @match          http://www.imgnip.com/viewerr2.php?file=*
+// @match          http://www.x45x.info/?pt=*
 // ==/else==
 // ==dead==
 // @match          http://kissdown.com/viewer.php?file=*
@@ -1356,6 +1357,24 @@
           return;
         }
         this.targetUrl = i.src;
+        this.redirect();
+      },
+    },
+
+    // www.x45x.info
+    {
+      rule: [
+        {
+          host: /www\.x45x\.info/,
+        },
+      ],
+      run: function() {
+        var a = document.querySelector( '#content a.lightbox' );
+        if( !a ) {
+          console.info( 'NoPicAds: "#content a.lightbox" not found' );
+          return;
+        }
+        this.targetUrl = a.href;
         this.redirect();
       },
     },
