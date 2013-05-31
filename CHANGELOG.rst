@@ -1,3 +1,27 @@
+2.10.0
+------
+
+* added
+
+  * goimagehost.com
+  * hostpics.info
+  * imagescream.com
+  * imgfantasy.com
+  * imgcloud.co
+  * imagejumbo.com
+  * imgnip.com
+  * x45x.info
+
+* fixed
+
+  * imagerabbit.com
+  * imgwiev.tk
+
+* deprecated
+
+  * games8y.com
+  * kissdown.com
+
 2.9.0
 -----
 
