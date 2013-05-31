@@ -33,6 +33,7 @@ Supported Sites
   * comicalpic.net
   * image.torrentjav.net
   * imagedecode.com
+  * imgcloud.co
   * imgserve.net
   * ligasampiona.com
   * zeljeimage.com
@@ -72,6 +73,7 @@ Supported Sites
 * imagecherry
 
   * imagecherry.com
+  * imagejumbo.com
   * imgpo.st
 
 * linkbucks.com
@@ -162,6 +164,13 @@ Supported Sites
 * imgbar.net
 * sexyimg.com
 * pics-money.ru
+* x45x.info
+* imgnip.com
+* imgfantasy.com
+* imagescream.com
+* hostpics.info
+* goimagehost.com
+* imgwiev.tk
 
 
 .. _RedirectionHelper: http://userscripts.org/scripts/show/69797
