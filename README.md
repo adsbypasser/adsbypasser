@@ -1,5 +1,4 @@
-NoPicAds
-========
+# NoPicAds
 
 This user script helps you
 
@@ -7,75 +6,61 @@ This user script helps you
 * remove overlays over pictures
 * prevent windows pop up
 
-Forked from `RedirectionHelper`_ writen by `SuYS`_
+Forked from [RedirectionHelper] writen by [SuYS].
 
-Stable version will upload to `the page on userscripts.org`_.
+Stable version will upload to [here][1].
 
-Supported Sites
----------------
+
+## Supported Sites
 
 * Mihalism Multi Host
-
-  * gallery.jpavgod.com
-  * games8y.com
-  * gzvd.info
-  * hentaita.com
-  * image69.us
-  * imagerabbit.com
-  * jpdown.info
-  * kissdown.com
-  * picjav.net
-  * preview.jpavgod.com
-  * s21.imgtube.us
-
+    * gallery.jpavgod.com
+    * games8y.com
+    * gzvd.info
+    * hentaita.com
+    * image69.us
+    * imagerabbit.com
+    * jpdown.info
+    * kissdown.com
+    * picjav.net
+    * preview.jpavgod.com
+    * s21.imgtube.us
 * reklama
-
-  * comicalpic.net
-  * image.torrentjav.net
-  * imagedecode.com
-  * imgcloud.co
-  * imgserve.net
-  * ligasampiona.com
-  * zeljeimage.com
-  * zonezeedimage.com
-
+    * comicalpic.net
+    * image.torrentjav.net
+    * imagedecode.com
+    * imgcloud.co
+    * imgserve.net
+    * ligasampiona.com
+    * zeljeimage.com
+    * zonezeedimage.com
 * imageporter
-
-  * imagecarry.com
-  * imagedunk.com
-  * imageporter.com
-  * imageswitch.com
-  * piclambo.net
-  * picleet.com
-  * picturedip.com
-  * pictureturn.com
-  * yankoimages.net
-
+    * imagecarry.com
+    * imagedunk.com
+    * imageporter.com
+    * imageswitch.com
+    * piclambo.net
+    * picleet.com
+    * picturedip.com
+    * pictureturn.com
+    * yankoimages.net
 * CF Image Host
-
-  * imgjav.tk
-  * imgurban.info
-
+    * imgjav.tk
+    * imgurban.info
 * imgonion
-
-  * imagecorn.com
-  * imagepicsa.com
-  * imgmoney.com
-  * imgonion.com
-  * imgrill.com
-  * imgwoot.com
-
+    * imagecorn.com
+    * imagepicsa.com
+    * imgmoney.com
+    * imgonion.com
+    * imgrill.com
+    * imgwoot.com
 * picfox
-
-  * amateurfreak.org
-  * picfox.org
-
+    * amateurfreak.org
+    * picfox.org
 * imagecherry
-
-  * imagecherry.com
-  * imagejumbo.com
-  * imgpo.st
-
+    * imagecherry.com
+    * imagejumbo.com
+    * imgpo.st
 * linkbucks.com
 * allanalpass.com
 * amy.gs
@@ -173,6 +158,6 @@ Supported Sites
 * imgwiev.tk
 
 
-.. _RedirectionHelper: http://userscripts.org/scripts/show/69797
-.. _SuYS: http://userscripts.org/users/SuYS
-.. _the page on userscripts.org: http://userscripts.org/scripts/show/154858
+[1]: http://userscripts.org/scripts/show/154858
+[RedirectionHelper]: http://userscripts.org/scripts/show/69797
+[SuYS]: http://userscripts.org/users/SuYS
