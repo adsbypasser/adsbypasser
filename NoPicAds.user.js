@@ -167,6 +167,7 @@
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://imagescream.com/img/soft/*
 // @match          http://imgfantasy.com/?p=*
+// @match          http://www.h-animes.info/*/*/image_*.html
 // @match          http://www.imgnip.com/viewerr2.php?file=*
 // @match          http://www.x45x.info/?pt=*
 // ==/else==
@@ -1372,6 +1373,24 @@
         var a = document.querySelector( '#content a.lightbox' );
         if( !a ) {
           console.info( 'NoPicAds: "#content a.lightbox" not found' );
+          return;
+        }
+        this.targetUrl = a.href;
+        this.redirect();
+      },
+    },
+
+    // www.h-animes.info
+    {
+      rule: [
+        {
+          host: /www\.h-animes\.info/,
+        },
+      ],
+      run: function() {
+        var a = document.querySelector( '.dlbutton2 > a' );
+        if( !a ) {
+          console.info( 'NoPicAds: ".dlbutton2 > a" not found' );
           return;
         }
         this.targetUrl = a.href;
