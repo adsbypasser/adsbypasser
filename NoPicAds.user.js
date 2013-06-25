@@ -160,6 +160,7 @@
 // @match          http://imagetwist.com/*
 // @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
+// @match          http://imgchili.net/show/*
 // @match          http://imgdino.com/viewer.php?file=*
 // @match          http://imgwiev.tk/?pm=*
 // @match          http://www.pics-money.ru/*
@@ -541,7 +542,7 @@
     {
       rule: [
         {
-          host: /imgchili\.com/,
+          host: /imgchili\.(com|net)/,
         },
       ],
       run: function() {
