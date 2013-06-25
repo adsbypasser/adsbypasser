@@ -923,7 +923,7 @@
     {
       rule: [
         {
-          host: /imgonion\.com|imgrill\.com|imagecorn\.com|imgmoney\.com|imgwoot\.com|imagepicsa\.com|www\.imagefolks\.com|imgcandy\.net/,
+          host: /(img(onion|rill|money|woot)|image(corn|picsa)|www\.imagefolks)\.com|imgcandy\.net/,
         },
       ],
       run: function() {
