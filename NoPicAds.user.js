@@ -115,6 +115,7 @@
 // ==imgonion==
 // @match          http://imagecorn.com/*
 // @match          http://imagepicsa.com/img-*.html
+// @match          http://imgcandy.net/img-*.html
 // @match          http://imgmoney.com/img-*.html
 // @match          http://imgonion.com/img-*.html
 // @match          http://imgrill.com/img-*.html
@@ -921,7 +922,7 @@
     {
       rule: [
         {
-          host: /imgonion\.com|imgrill\.com|imagecorn\.com|imgmoney\.com|imgwoot\.com|imagepicsa\.com|www\.imagefolks\.com/,
+          host: /imgonion\.com|imgrill\.com|imagecorn\.com|imgmoney\.com|imgwoot\.com|imagepicsa\.com|www\.imagefolks\.com|imgcandy\.net/,
         },
       ],
       run: function() {
