@@ -152,6 +152,10 @@
 // @match          http://imagejumbo.com/*
 // @match          http://imgpo.st/*
 // ==/imagecherry==
+// ==imgdino==
+// @match          http://imgdino.com/viewer.php?file=*
+// @match          http://imgtiger.com/viewer.php?file=*
+// ==/imgdino==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.abload.de/image.php?img=*
@@ -161,7 +165,6 @@
 // @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgchili.net/show/*
-// @match          http://imgdino.com/viewer.php?file=*
 // @match          http://imgwiev.tk/?pm=*
 // @match          http://www.pics-money.ru/*
 // @exclude        http://www.pics-money.ru/allimage/*
@@ -1014,7 +1017,7 @@
     {
       rule: [
         {
-          host: /imgdino\.com/,
+          host: /img(dino|tiger)\.com/,
         },
       ],
       run: function() {
