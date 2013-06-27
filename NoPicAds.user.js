@@ -156,6 +156,10 @@
 // @match          http://imgdino.com/viewer.php?file=*
 // @match          http://imgtiger.com/viewer.php?file=*
 // ==/imgdino==
+// ==imgpony==
+// @match          http://imgpony.com/viewer3.php?img=*
+// @match          http://imgtrick.com/viewer3.php?img=*
+// ==imgpony==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.abload.de/image.php?img=*
@@ -165,7 +169,6 @@
 // @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgchili.net/show/*
-// @match          http://imgpony.com/viewer3.php?img=*
 // @match          http://imgwiev.tk/?pm=*
 // @match          http://www.pics-money.ru/*
 // @exclude        http://www.pics-money.ru/allimage/*
@@ -1409,7 +1412,7 @@
     {
       rule: [
         {
-          host: /imgpony\.com/,
+          host: /img(pony|trick)\.com/,
           query: /\?img=(.+)/,
         },
       ],
