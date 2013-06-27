@@ -170,7 +170,7 @@
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://imagescream.com/img/soft/*
 // @match          http://imgfantasy.com/?p=*
-// @match          http://www.h-animes.info/*/*/image_*.html
+// @match          http://www.h-animes.info/*/*/*.html
 // @match          http://www.imgnip.com/viewerr2.php?file=*
 // @match          http://www.x45x.info/?pt=*
 // ==/else==
