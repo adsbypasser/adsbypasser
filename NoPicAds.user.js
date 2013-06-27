@@ -119,6 +119,7 @@
 // @match          http://imgmoney.com/img-*.html
 // @match          http://imgonion.com/img-*.html
 // @match          http://imgrill.com/img-*.html
+// @match          http://imgtube.net/img-*.html
 // @match          http://imgwoot.com/*
 // @match          http://www.imagefolks.com/img-*.html
 // ==/imgonion==
@@ -930,7 +931,7 @@
     {
       rule: [
         {
-          host: /(img(onion|rill|money|woot)|image(corn|picsa)|www\.imagefolks)\.com|imgcandy\.net/,
+          host: /(img(onion|rill|money|woot)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net/,
         },
       ],
       run: function() {
