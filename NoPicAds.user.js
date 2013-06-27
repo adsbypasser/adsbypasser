@@ -165,6 +165,7 @@
 // @match          http://imgbar.net/*
 // @match          http://imgchili.com/show/*
 // @match          http://imgchili.net/show/*
+// @match          http://imgpony.com/viewer3.php?img=*
 // @match          http://imgwiev.tk/?pm=*
 // @match          http://www.pics-money.ru/*
 // @exclude        http://www.pics-money.ru/allimage/*
@@ -1400,6 +1401,20 @@
           return;
         }
         this.targetUrl = a.href;
+        this.redirect();
+      },
+    },
+
+    // imgpony.com
+    {
+      rule: [
+        {
+          host: /imgpony\.com/,
+          query: /\?img=(.+)/,
+        },
+      ],
+      run: function( m ) {
+        this.targetUrl = '/images/' + m.query[1];
         this.redirect();
       },
     },
