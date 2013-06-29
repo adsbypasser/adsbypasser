@@ -1,3 +1,18 @@
+## 2.11.0
+
+* added
+    * h-animes.info
+    * imagefolks.com
+    * imagecandy.net
+    * imagechili.net
+    * imgtiger.com
+    * imgpony.com
+    * imgtrick.com
+    * imgtube.net
+
+* fixed
+    * imgcloud.co
+
 ## 2.10.0
 
 * added
