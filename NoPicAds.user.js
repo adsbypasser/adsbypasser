@@ -931,7 +931,7 @@
     {
       rule: [
         {
-          host: /(img(onion|rill|money|woot)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net/,
+          host: /(img(onion|rill|money|woot)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co/,
         },
       ],
       run: function() {
@@ -1107,7 +1107,7 @@
     {
       rule: [
         {
-          host: /(imagedecode|zonezeedimage|zeljeimage|ligasampiona)\.com|(comicalpic|image\.torrentjav|imgserve)\.net|imgcloud\.co/,
+          host: /(imagedecode|zonezeedimage|zeljeimage|ligasampiona)\.com|(comicalpic|image\.torrentjav|imgserve)\.net/,
         },
       ],
       run: function() {
