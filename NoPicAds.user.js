@@ -12,12 +12,40 @@
 // @run-at         document-start
 // @match          http://*.alabout.com/*
 // @match          http://*.alafs.com/*
+// @match          http://*.directupload.net/*
+// @match          http://*.imagevenue.com/img.php?*
+// @match          http://*.urlcash.net/*
+// @match          http://adcrun.ch/*
+// @match          http://adfoc.us/*
+// @match          http://adfoc.us/serve/?id=*
+// @match          http://adjoin.me/*
+// @match          http://bc.vc/*
+// @match          http://ichan.org/*
+// @match          http://imgah.com/*
+// @match          http://javelite.tk/*
+// @match          http://linkbee.com/*
+// @match          http://lnk.co/*
+// @match          http://lnx.lu/*
+// @match          http://pixhub.eu/*
+// @match          http://pushba.com/*
+// @match          http://www.madlink.sk/*
+// @match          http://www.pixhost.org/show/*
+// @match          http://www.turboimagehost.com/*
+// @match          http://www.viidii.com/*
+// @match          http://zpag.es/*
+// ==adfly==
+// @match          http://adf.ly/*
+// @match          http://9.bb/*
+// @match          http://u.bb/*
+// @match          http://j.gs/*
+// @match          http://q.gs/*
+// ==/adfly==
+// ==linkbucks==
 // @match          http://*.allanalpass.com/*
 // @match          http://*.amy.gs/*
 // @match          http://*.any.gs/*
 // @match          http://*.baberepublic.com/*
 // @match          http://*.deb.gs/*
-// @match          http://*.directupload.net/*
 // @match          http://*.drstickyfingers.com/*
 // @match          http://*.dyo.gs/*
 // @match          http://*.fapoff.com/*
@@ -25,7 +53,6 @@
 // @match          http://*.freean.us/*
 // @match          http://*.galleries.bz/*
 // @match          http://*.hornywood.tv/*
-// @match          http://*.imagevenue.com/img.php?*
 // @match          http://*.linkbabes.com/*
 // @match          http://*.linkbucks.com/*
 // @match          http://*.linkgalleries.net/*
@@ -57,7 +84,6 @@
 // @match          http://*.ugalleries.net/*
 // @match          http://*.ultrafiles.net/*
 // @match          http://*.urlbeat.net/*
-// @match          http://*.urlcash.net/*
 // @match          http://*.urlpulse.net/*
 // @match          http://*.whackyvidz.com/*
 // @match          http://*.youfap.com/*
@@ -65,29 +91,7 @@
 // @match          http://*.yyv.co/*
 // @match          http://*.zff.co/*
 // @match          http://*.zxxo.net/*
-// @match          http://9.bb/*
-// @match          http://adcrun.ch/*
-// @match          http://adf.ly/*
-// @match          http://adfoc.us/*
-// @match          http://adfoc.us/serve/?id=*
-// @match          http://adjoin.me/*
-// @match          http://bc.vc/*
-// @match          http://ichan.org/*
-// @match          http://imgah.com/*
-// @match          http://j.gs/*
-// @match          http://javelite.tk/*
-// @match          http://linkbee.com/*
-// @match          http://lnk.co/*
-// @match          http://lnx.lu/*
-// @match          http://pixhub.eu/*
-// @match          http://pushba.com/*
-// @match          http://q.gs/*
-// @match          http://u.bb/*
-// @match          http://www.madlink.sk/*
-// @match          http://www.pixhost.org/show/*
-// @match          http://www.turboimagehost.com/*
-// @match          http://www.viidii.com/*
-// @match          http://zpag.es/*
+// ==/linkbucks==
 // ==Mihalism Multi Host v1==
 // @match          http://imagerabbit.com/viewer.php?file=*
 // ==/Mihalism Multi Host v1==

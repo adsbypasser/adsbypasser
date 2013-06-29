@@ -13,6 +13,63 @@ Stable version will upload to [here][1].
 
 ## Supported Sites
 
+* adfly
+    * adf.ly
+    * 9.bb
+    * u.bb
+    * j.gs
+    * q.gs
+* linkbucks
+    * allanalpass.com
+    * amy.gs
+    * any.gs
+    * baberepublic.com
+    * deb.gs
+    * drstickyfingers.com
+    * dyo.gs
+    * fapoff.com
+    * filesonthe.net
+    * freean.us
+    * galleries.bz
+    * hornywood.tv
+    * linkbabes.com
+    * linkbucks.com
+    * linkgalleries.net
+    * linkseer.net
+    * miniurls.co
+    * picbucks.com
+    * picturesetc.net
+    * poontown.net
+    * qqc.co
+    * qvvo.com
+    * realfiles.net
+    * rqq.co
+    * seriousdeals.net
+    * seriousfiles.com
+    * seriousurls.com
+    * sexpalace.gs
+    * theseblogs.com
+    * thesefiles.com
+    * theseforums.com
+    * thesegalleries.com
+    * thosegalleries.com
+    * tinybucks.net
+    * tinylinks.co
+    * tnabucks.com
+    * tubeviral.com
+    * uberpicz.com
+    * ubervidz.com
+    * ubucks.net
+    * ugalleries.net
+    * ultrafiles.net
+    * urlbeat.net
+    * urlpulse.net
+    * whackyvidz.com
+    * youfap.com
+    * youfap.me
+    * yyv.co
+    * zff.co
+    * zxxo.net
 * Mihalism Multi Host
     * gallery.jpavgod.com
     * games8y.com
@@ -61,101 +118,46 @@ Stable version will upload to [here][1].
     * imagecherry.com
     * imagejumbo.com
     * imgpo.st
-* linkbucks.com
-* allanalpass.com
-* amy.gs
-* any.gs
-* baberepublic.com
-* deb.gs
-* drstickyfingers.com
-* dyo.gs
-* fapoff.com
-* filesonthe.net
-* freean.us
-* galleries.bz
-* hornywood.tv
-* linkbabes.com
-* linkgalleries.net
-* linkseer.net
-* miniurls.co
-* picbucks.com
-* picturesetc.net
-* poontown.net
-* qqc.co
-* qvvo.com
-* realfiles.net
-* rqq.co
-* seriousdeals.net
-* seriousfiles.com
-* seriousurls.com
-* sexpalace.gs
-* theseblogs.com
-* thesefiles.com
-* theseforums.com
-* thesegalleries.com
-* thosealleries.com
-* tinybucks.net
-* tinylinks.co
-* tnabucks.com
-* tubeviral.com
-* uberpicz.com
-* ubervidz.com
-* ubucks.net
-* ugalleries.net
-* ultrafiles.net
-* urlbeat.net
-* urlpulse.net
-* whackyvidz.com
-* youfap.com
-* youfap.me
-* yyv.co
-* zff.co
-* zxxo.net
-* adf.ly
-* u.bb
-* 9.bb
-* q.gs
-* j.gs
-* imagevenue.com
-* urlcash.net
-* linkbee.com
-* lnk.co
+* 2owl.net
+* 4owl.info
+* abload.de
+* adcrun.ch
+* adfoc.us
+* adjoin.me
+* advertisingg.com
 * alabout.com
 * alafs.com
-* pushba.com
-* turboimagehost.com
-* pixhost.org
-* ichan.org
-* zpag.es
-* imgchili.com
-* viidii.com
-* adfoc.us
-* imagetwist.com
-* adjoin.me
-* madlink.sk
-* lnx.lu
-* adcrun.ch
 * bc.vc
-* 2owl.net
-* imgdino.com
-* 4owl.info
 * directupload.net
-* javelite.tk
-* pixhub.eu
-* imgah.com
-* advertisingg.com
-* imagebam.com
-* abload.de
-* imgbar.net
-* sexyimg.com
-* pics-money.ru
-* x45x.info
-* imgnip.com
-* imgfantasy.com
-* imagescream.com
-* hostpics.info
 * goimagehost.com
+* hostpics.info
+* ichan.org
+* imagebam.com
+* imagescream.com
+* imagetwist.com
+* imagevenue.com
+* imgah.com
+* imgbar.net
+* imgchili.com
+* imgdino.com
+* imgfantasy.com
+* imgnip.com
 * imgwiev.tk
+* javelite.tk
+* linkbee.com
+* lnk.co
+* lnx.lu
+* madlink.sk
+* pics-money.ru
+* pixhost.org
+* pixhub.eu
+* pushba.com
+* sexyimg.com
+* turboimagehost.com
+* urlcash.net
+* viidii.com
+* x45x.info
+* zpag.es
 
 
 [1]: http://userscripts.org/scripts/show/154858
