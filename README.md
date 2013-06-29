@@ -78,7 +78,6 @@ Stable version will upload to [here][1].
     * image69.us
     * imagerabbit.com
     * jpdown.info
-    * kissdown.com
     * picjav.net
     * preview.jpavgod.com
     * s21.imgtube.us

@@ -186,7 +186,6 @@
 // @match          http://zpag.es/*
 // ==/else==
 // ==dead==
-// @match          http://kissdown.com/viewer.php?file=*
 // @match          http://games8y.com/viewer.php?file=*
 // @match          http://s21.imgtube.us/viewer.php?file=*
 // ==/dead==
@@ -782,7 +781,7 @@
     {
       rule: [
         {
-          host: /(imagerabbit|kissdown|games8y)\.com/,
+          host: /(imagerabbit|games8y)\.com/,
         },
       ],
       run: function(){

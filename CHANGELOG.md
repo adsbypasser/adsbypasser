@@ -15,6 +15,7 @@
 
 * removed
     * 2owl.net
+    * kissdown.com
 
 ## 2.10.0
 
