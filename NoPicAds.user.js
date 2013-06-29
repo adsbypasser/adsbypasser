@@ -188,7 +188,6 @@
 // ==dead==
 // @match          http://kissdown.com/viewer.php?file=*
 // @match          http://games8y.com/viewer.php?file=*
-// @match          http://imagehosting.2owl.net/image/*
 // @match          http://s21.imgtube.us/viewer.php?file=*
 // ==/dead==
 // @exclude        http://adcrun.ch/
@@ -1008,7 +1007,7 @@
     {
       rule: [
         {
-          host: /imagehosting\.2owl\.net|www\.4owl\.info|javelite\.tk/,
+          host: /www\.4owl\.info|javelite\.tk/,
         },
       ],
       run: function() {
