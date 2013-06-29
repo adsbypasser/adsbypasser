@@ -13,6 +13,9 @@
 * fixed
     * imgcloud.co
 
+* removed
+    * 2owl.net
+
 ## 2.10.0
 
 * added

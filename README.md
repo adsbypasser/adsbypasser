@@ -118,7 +118,6 @@ Stable version will upload to [here][1].
     * imagecherry.com
     * imagejumbo.com
     * imgpo.st
-* 2owl.net
 * 4owl.info
 * abload.de
 * adcrun.ch
