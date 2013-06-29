@@ -97,6 +97,7 @@
 // @match          http://imagecorn.com/*
 // @match          http://imagepicsa.com/img-*.html
 // @match          http://imgcandy.net/img-*.html
+// @match          http://imgcloud.co/img-*.html
 // @match          http://imgmoney.com/img-*.html
 // @match          http://imgonion.com/img-*.html
 // @match          http://imgrill.com/img-*.html
@@ -119,7 +120,6 @@
 // @match          http://comicalpic.net/img-*.html
 // @match          http://image.torrentjav.net/img-*.html
 // @match          http://imagedecode.com/*
-// @match          http://imgcloud.co/img-*.html
 // @match          http://imgserve.net/img-*.html
 // @match          http://ligasampiona.com/img-*.html
 // @match          http://zeljeimage.com/img-*.html
@@ -142,6 +142,10 @@
 // @match          http://imgpony.com/viewer3.php?img=*
 // @match          http://imgtrick.com/viewer3.php?img=*
 // ==imgpony==
+// ==imgchili==
+// @match          http://imgchili.com/show/*
+// @match          http://imgchili.net/show/*
+// ==/imgchili==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.abload.de/image.php?img=*
@@ -163,8 +167,6 @@
 // @match          http://imagetwist.com/*
 // @match          http://imgah.com/*
 // @match          http://imgbar.net/*
-// @match          http://imgchili.com/show/*
-// @match          http://imgchili.net/show/*
 // @match          http://imgfantasy.com/?p=*
 // @match          http://imgwiev.tk/?pm=*
 // @match          http://javelite.tk/*

@@ -85,7 +85,6 @@ Stable version will upload to [here][1].
     * comicalpic.net
     * image.torrentjav.net
     * imagedecode.com
-    * imgcloud.co
     * imgserve.net
     * ligasampiona.com
     * zeljeimage.com
@@ -105,10 +104,14 @@ Stable version will upload to [here][1].
     * imgurban.info
 * imgonion
     * imagecorn.com
+    * imagefolks.com
     * imagepicsa.com
+    * imgcandy.net
+    * imgcloud.co
     * imgmoney.com
     * imgonion.com
     * imgrill.com
+    * imgtube.net
     * imgwoot.com
 * picfox
     * amateurfreak.org
@@ -117,6 +120,15 @@ Stable version will upload to [here][1].
     * imagecherry.com
     * imagejumbo.com
     * imgpo.st
+* imgchili
+    * imgchili.com
+    * imgchili.net
+* imgdino
+    * imgdino.com
+    * imgtiger.com
+* imgpony
+    * imgpony.com
+    * imgtrick.com
 * 4owl.info
 * abload.de
 * adcrun.ch
@@ -136,8 +148,6 @@ Stable version will upload to [here][1].
 * imagevenue.com
 * imgah.com
 * imgbar.net
-* imgchili.com
-* imgdino.com
 * imgfantasy.com
 * imgnip.com
 * imgwiev.tk
