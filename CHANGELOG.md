@@ -3,6 +3,7 @@
 * added
     * adultmove.info
     * h-animes.info
+    * hosterbin.com
     * imagefolks.com
     * imagecandy.net
     * imagechili.net

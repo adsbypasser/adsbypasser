@@ -83,6 +83,7 @@ Stable version will upload to [here][1].
     * s21.imgtube.us
 * reklama
     * comicalpic.net
+    * hosterbin.com
     * image.torrentjav.net
     * imagedecode.com
     * imgserve.net
