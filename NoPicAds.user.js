@@ -146,6 +146,10 @@
 // @match          http://imgchili.com/show/*
 // @match          http://imgchili.net/show/*
 // ==/imgchili==
+// ==hanimes==
+// @match          http://www.adultmove.info/*/*/*.html
+// @match          http://www.h-animes.info/*/*/*.html
+// ==hanimes==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.abload.de/image.php?img=*
@@ -175,7 +179,6 @@
 // @match          http://lnx.lu/*
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
-// @match          http://www.h-animes.info/*/*/*.html
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.imgnip.com/viewerr2.php?file=*
 // @match          http://www.madlink.sk/*
@@ -1399,7 +1402,7 @@
     {
       rule: [
         {
-          host: /www\.h-animes\.info/,
+          host: /www\.(h-animes|adultmove)\.info/,
         },
       ],
       run: function() {
