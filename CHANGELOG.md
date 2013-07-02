@@ -1,6 +1,7 @@
 ## 2.11.0
 
 * added
+    * adultmove.info
     * h-animes.info
     * imagefolks.com
     * imagecandy.net

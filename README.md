@@ -129,6 +129,9 @@ Stable version will upload to [here][1].
 * imgpony
     * imgpony.com
     * imgtrick.com
+* hanimes
+    * adultmove.info
+    * h-animes.info
 * 4owl.info
 * abload.de
 * adcrun.ch
