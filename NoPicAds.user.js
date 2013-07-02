@@ -118,6 +118,7 @@
 // ==/imageporter==
 // ==reklama==
 // @match          http://comicalpic.net/img-*.html
+// @match          http://hosterbin.com/img-*.html
 // @match          http://image.torrentjav.net/img-*.html
 // @match          http://imagedecode.com/*
 // @match          http://imgserve.net/img-*.html
@@ -1114,7 +1115,7 @@
     {
       rule: [
         {
-          host: /(imagedecode|zonezeedimage|zeljeimage|ligasampiona)\.com|(comicalpic|image\.torrentjav|imgserve)\.net/,
+          host: /(imagedecode|zonezeedimage|zeljeimage|ligasampiona|hosterbin)\.com|(comicalpic|image\.torrentjav|imgserve)\.net/,
         },
       ],
       run: function() {
