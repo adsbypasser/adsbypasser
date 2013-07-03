@@ -11,10 +11,8 @@
     * imgpony.com
     * imgtrick.com
     * imgtube.net
-
 * fixed
     * imgcloud.co
-
 * removed
     * 2owl.net
     * kissdown.com
