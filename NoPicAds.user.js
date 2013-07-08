@@ -152,6 +152,7 @@
 // @match          http://www.h-animes.info/*/*/*.html
 // ==hanimes==
 // ==else==
+// @match          http://1be.biz/s.php?*
 // @match          http://*.4owl.info/*
 // @match          http://*.abload.de/image.php?img=*
 // @match          http://*.alabout.com/*
@@ -1427,6 +1428,20 @@
       ],
       run: function( m ) {
         this.targetUrl = '/images/' + m.query[1];
+        this.redirect();
+      },
+    },
+
+    // 1be.biz
+    {
+      rule: [
+        {
+          host: /1be.biz/,
+          query: /\?(.+)/,
+        },
+      ],
+      run: function( m ) {
+        this.targetUrl = m.query[1];
         this.redirect();
       },
     },
