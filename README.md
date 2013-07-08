@@ -133,6 +133,7 @@ Stable version will upload to [here][1].
 * hanimes
     * adultmove.info
     * h-animes.info
+* 1be.biz
 * 4owl.info
 * abload.de
 * adcrun.ch
