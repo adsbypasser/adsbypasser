@@ -2,6 +2,7 @@
 
 * added
     * 1be.biz
+    * pixup.us
 
 ## 2.11.0
 
