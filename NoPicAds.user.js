@@ -183,7 +183,7 @@
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
 // @match          http://www.hostpics.info/view.php?filename=*
-// @match          http://www.imgnip.com/viewerr2.php?file=*
+// @match          http://www.imgnip.com/viewerr*.php?file=*
 // @match          http://www.madlink.sk/*
 // @match          http://www.pics-money.ru/*
 // @match          http://www.pixhost.org/show/*
