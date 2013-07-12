@@ -1,3 +1,9 @@
+## 2.12.1
+
+* fixed
+    * adf.ly
+    * imgnip.com
+
 ## 2.12.0
 
 * added
