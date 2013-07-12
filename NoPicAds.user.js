@@ -384,35 +384,29 @@
         },
       ],
       run: function() {
-        var head = document.querySelector( 'head' ).innerHTML;
-        var matches = head.match( /var\s+zzz\s*=\s*['"](.+)['"]/ );
-
-        if( matches ) {
-          var ad = document.querySelector( 'body iframe' );
+        var ad = document.querySelector( 'body iframe' );
+        if ( ad ) {
           ad.parentNode.removeChild( ad );
-
-          matches = matches[1];
-          if( /^http.*$/.test( matches ) ) {
-            this.targetUrl = matches;
-            this.redirect();
-            return;
-          }
-
-          this.get( '/shortener/go', {
-            zzz: matches,
-          }, function( response ) {
-            var r = JSON.parse( response );
-            this.targetUrl = r.zzz;
-            this.redirect();
-          } );
-          return;
         }
 
-        // FIXME dead code?
-        matches = window.location.href.toString().match( /\/(https?:\/\/.+)/ );
-        if( matches ) {
-          this.targetUrl = matches[1];
+        var h = unsafeWindow.eu, b64 = unsafeWindow.Base64;
+        if ( h ) {
+          var a = '', b = '';
+          for ( var i = 0; i < h.length; ++i ) {
+            if ( i % 2 === 0 ) {
+              a = a + h.charAt( i );
+            } else {
+              b = h.charAt( i ) + b;
+            }
+          }
+          h = b64.decode( a + b );
+          h = h.substr( 2 );
+          if ( location.hash ) {
+            h += location.hash;
+          }
+          this.targetUrl = h;
           this.redirect();
+          return;
         }
       }
     },
