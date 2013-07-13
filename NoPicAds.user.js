@@ -219,11 +219,11 @@
 ( function() {
   'use strict';
 
-  function Actions() {
+  function NoPicAds() {
     this.targetUrl = null;
   }
 
-  Actions.prototype.run = function() {
+  NoPicAds.prototype.run = function() {
     // <scheme>//<host>:<port><path><query><hash>
     var runner = this.find( {
       scheme: window.location.protocol,
@@ -241,7 +241,7 @@
     }
   };
 
-  Actions.prototype.find = function( uri ) {
+  NoPicAds.prototype.find = function( uri ) {
     for( var i = 0; i < this.patterns.length; ++i ) {
       var pattern = this.patterns[i];
       for( var j = 0; j < pattern.rule.length; ++j ) {
@@ -262,21 +262,21 @@
     return null;
   };
 
-  Actions.prototype.redirect = function() {
+  NoPicAds.prototype.redirect = function() {
     if( this.targetUrl ) {
       console.info( 'NoPicAds: redirect to ' + this.targetUrl );
       window.location.replace( this.targetUrl );
     }
   };
 
-  Actions.prototype.cleanTimer = function() {
+  NoPicAds.prototype.cleanTimer = function() {
     var intervalID = window.setInterval( ';', 10 );
     while( intervalID > 0 ) {
       window.clearInterval( intervalID-- );
     }
   };
 
-  Actions.prototype.disableWindowOpen = function() {
+  NoPicAds.prototype.disableWindowOpen = function() {
     if( unsafeWindow ) {
       unsafeWindow.open = function(){};
     }
@@ -285,7 +285,7 @@
     }
   };
 
-  Actions.prototype.replaceBody = function( imgSrc ) {
+  NoPicAds.prototype.replaceBody = function( imgSrc ) {
     this.cleanTimer();
     var i = document.createElement( 'img' );
     i.setAttribute( 'src', imgSrc );
@@ -294,7 +294,7 @@
     document.body.appendChild( i );
   };
 
-  Actions.prototype.ajax = function( method, url, data, callback ) {
+  NoPicAds.prototype.ajax = function( method, url, data, callback ) {
     function toQuery( data ) {
       if( typeof data === 'string' ) {
         return data;
@@ -324,15 +324,15 @@
     return controller;
   };
 
-  Actions.prototype.post = function( url, data, callback ) {
+  NoPicAds.prototype.post = function( url, data, callback ) {
     return this.ajax( 'POST', url, data, callback );
   };
 
-  Actions.prototype.get = function( url, data, callback ) {
+  NoPicAds.prototype.get = function( url, data, callback ) {
     return this.ajax( 'GET', url, data, callback );
   };
 
-  Actions.prototype.patterns = [
+  NoPicAds.prototype.patterns = [
     // linkbucks
     {
       rule: [
@@ -1533,7 +1533,7 @@
     },
   ];
 
-  var action = new Actions();
+  var action = new NoPicAds();
   action.run();
 
 } )();
