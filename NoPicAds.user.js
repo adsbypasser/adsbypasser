@@ -182,6 +182,7 @@
 // @match          http://lnx.lu/*
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
+// @match          http://qrrro.com/images/*.html
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.imgnip.com/viewerr*.php?file=*
 // @match          http://www.madlink.sk/*
@@ -1437,6 +1438,20 @@
       ],
       run: function( m ) {
         this.targetUrl = m.query[1];
+        this.redirect();
+      },
+    },
+
+    // qrrro.com
+    {
+      rule: [
+        {
+          host: /qrrro\.com/,
+          path: /^(\/images\/.+)\.html$/,
+        },
+      ],
+      run: function( m ) {
+        this.targetUrl = m.path[1];
         this.redirect();
       },
     },
