@@ -1,3 +1,10 @@
+## 2.13.0
+
+* added
+    * qrrro.com
+* fixed
+    * 1be.biz
+
 ## 2.12.1
 
 * fixed
