@@ -1432,7 +1432,7 @@
     {
       rule: [
         {
-          host: /1be.biz/,
+          host: /1be\.biz/,
           query: /\?(.+)/,
         },
       ],
