@@ -225,7 +225,7 @@
 
   NoPicAds.prototype.run = function() {
     // <scheme>//<host>:<port><path><query><hash>
-    var runner = this.find( {
+    var runner = NoPicAds.find( {
       scheme: window.location.protocol,
       host: window.location.hostname,
       port: window.location.port,
@@ -234,16 +234,16 @@
       hash: window.location.hash,
     } );
     if( runner ) {
-      this.disableWindowOpen();
+      NoPicAds.disableWindowOpen();
       document.addEventListener( 'DOMContentLoaded', function() {
         runner[0].call( this, runner[1] );
       }.bind( this ) );
     }
   };
 
-  NoPicAds.prototype.find = function( uri ) {
-    for( var i = 0; i < this.patterns.length; ++i ) {
-      var pattern = this.patterns[i];
+  NoPicAds.find = function( uri ) {
+    for( var i = 0; i < NoPicAds.patterns.length; ++i ) {
+      var pattern = NoPicAds.patterns[i];
       for( var j = 0; j < pattern.rule.length; ++j ) {
         var rule = pattern.rule[j];
         var matched = {};
@@ -269,14 +269,14 @@
     }
   };
 
-  NoPicAds.prototype.cleanTimer = function() {
+  NoPicAds.cleanTimer = function() {
     var intervalID = window.setInterval( ';', 10 );
     while( intervalID > 0 ) {
       window.clearInterval( intervalID-- );
     }
   };
 
-  NoPicAds.prototype.disableWindowOpen = function() {
+  NoPicAds.disableWindowOpen = function() {
     if( unsafeWindow ) {
       unsafeWindow.open = function(){};
     }
@@ -285,8 +285,8 @@
     }
   };
 
-  NoPicAds.prototype.replaceBody = function( imgSrc ) {
-    this.cleanTimer();
+  NoPicAds.replaceBody = function( imgSrc ) {
+    NoPicAds.cleanTimer();
     var i = document.createElement( 'img' );
     i.setAttribute( 'src', imgSrc );
     document.body = document.createElement( 'body' );
@@ -294,7 +294,7 @@
     document.body.appendChild( i );
   };
 
-  NoPicAds.prototype.ajax = function( method, url, data, callback ) {
+  NoPicAds.ajax = function( method, url, data, callback ) {
     function toQuery( data ) {
       if( typeof data === 'string' ) {
         return data;
@@ -324,15 +324,15 @@
     return controller;
   };
 
-  NoPicAds.prototype.post = function( url, data, callback ) {
-    return this.ajax( 'POST', url, data, callback );
+  NoPicAds.post = function( url, data, callback ) {
+    return NoPicAds.ajax( 'POST', url, data, callback );
   };
 
-  NoPicAds.prototype.get = function( url, data, callback ) {
-    return this.ajax( 'GET', url, data, callback );
+  NoPicAds.get = function( url, data, callback ) {
+    return NoPicAds.ajax( 'GET', url, data, callback );
   };
 
-  NoPicAds.prototype.patterns = [
+  NoPicAds.patterns = [
     // linkbucks
     {
       rule: [
@@ -343,7 +343,7 @@
       run: function(){
         var matches;
 
-        this.cleanTimer();
+        NoPicAds.cleanTimer();
 
         if(unsafeWindow && unsafeWindow.Lbjs && unsafeWindow.Lbjs.TargetUrl)
           this.targetUrl=unsafeWindow.Lbjs.TargetUrl;
@@ -654,7 +654,7 @@
         }
         // somehow the server send image as an attachment
         // so I replace whole document.body with single img
-        this.replaceBody( o.src );
+        NoPicAds.replaceBody( o.src );
       },
     },
 
@@ -732,7 +732,7 @@
         }
 
         var xhr = function () {
-          this.post( '/links/ajax.fly.php', opts, function( text ) {
+          NoPicAds.post( '/links/ajax.fly.php', opts, function( text ) {
             var json = JSON.parse( text );
             if( json.message ) {
               this.targetUrl = json.message.url;
@@ -953,7 +953,7 @@
         },
       ],
       run: function() {
-        this.disableWindowOpen();
+        NoPicAds.disableWindowOpen();
         var node = document.querySelector( '#continuetoimage > form input' );
         if( node ) {
           // first pass
@@ -1162,7 +1162,7 @@
           console.info( 'NoPicAds: "img.pic" not found' );
           return;
         }
-        this.replaceBody( o.src );
+        NoPicAds.replaceBody( o.src );
       },
     },
 
@@ -1181,7 +1181,7 @@
         }
         // somehow the server send image as an attachment
         // so I replace whole document.body with single img
-        this.replaceBody( o.src );
+        NoPicAds.replaceBody( o.src );
       },
     },
 
@@ -1275,7 +1275,7 @@
           console.info( 'NoPicAds: "#imgbox img.bigimg" not found' );
           return;
         }
-        this.replaceBody( i.src );
+        NoPicAds.replaceBody( i.src );
       },
     },
 
