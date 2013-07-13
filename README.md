@@ -166,6 +166,7 @@ Stable version will upload to [here][1].
 * pixhost.org
 * pixhub.eu
 * pushba.com
+* qrrro.com
 * sexyimg.com
 * turboimagehost.com
 * urlcash.net
