@@ -332,6 +332,13 @@
     return NoPicAds.ajax( 'GET', url, data, callback );
   };
 
+  NoPicAds.remove = function ( selector ) {
+    var es = document.querySelectorAll( selector );
+    Array.prototype.forEach.call( es, function ( e ) {
+      e.parentNode.removeChild( e );
+    } );
+  };
+
   NoPicAds.patterns = [
     // linkbucks
     {
@@ -394,10 +401,7 @@
         },
       ],
       run: function() {
-        var ad = document.querySelector( 'body iframe' );
-        if ( ad ) {
-          ad.parentNode.removeChild( ad );
-        }
+        NoPicAds.remove( 'iframe' );
 
         var h = unsafeWindow.eu, b64 = unsafeWindow.Base64;
         if ( !h ) {
@@ -499,19 +503,11 @@
         },
       ],
       run: function(){
-        var o;
-        if((o=document.getElementById('web'))){
-          o.style.display='block';
-
-          if((o=document.getElementById('js')))
-            o.parentNode.removeChild(o);
-
-          if((o=document.getElementById('chatWindow')))
-            o.parentNode.removeChild(o);
-
-          if((o=document.getElementById('taskbar')))
-            o.parentNode.removeChild(o);
+        var o = document.querySelector( '#web' );
+        if ( o ) {
+          o.style.display = 'block';
         }
+        NoPicAds.remove( '#js, #chatWindow, #taskbar' );
       }
     },
 
@@ -824,11 +820,9 @@
       ],
       run: function() {
         // for jpdown.info
-        var a = document.querySelectorAll( '#divExoLayerWrapper, #fadeinbox' );
-        Array.prototype.forEach.call( a, function( v ) {
-          v.parentNode.removeChild( v );
-        } );
-        a = document.querySelector( '#page_body a' );
+        NoPicAds.remove( '#divExoLayerWrapper, #fadeinbox' );
+
+        var a = document.querySelector( '#page_body a' );
         a = a.href;
         this.targetUrl = a;
         this.redirect();
@@ -1116,12 +1110,9 @@
         },
       ],
       run: function() {
-        var o = document.querySelectorAll( '.adultpage, #FFN_Banner_Holder' );
-        Array.prototype.forEach.call( o, function( v ) {
-          v.parentNode.removeChild( v );
-        } );
+        NoPicAds.remove( '.adultpage, #FFN_Banner_Holder' );
 
-        o = ( document.compatMode === 'CSS1Compat' ) ? document.documentElement : document.body;
+        var o = ( document.compatMode === 'CSS1Compat' ) ? document.documentElement : document.body;
         o.style.overflow = 'auto';
       },
     },
@@ -1518,10 +1509,7 @@
         },
       ],
       run: function () {
-        var a = document.querySelectorAll('#popupOverlay, #divExoLayerWrapper');
-        Array.prototype.forEach.call(a, function (b) {
-          b.parentNode.removeChild(b);
-        });
+        NoPicAds.remove('#popupOverlay, #divExoLayerWrapper');
         a = document.querySelector('div.span7 a');
         if (!a) {
           console.info('NoPicAds: "div.span7 a" not found');
