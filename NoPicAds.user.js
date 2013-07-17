@@ -377,7 +377,7 @@
       },
     },
 
-    // adf
+    // adf.ly
     {
       rule: [
         {
@@ -391,24 +391,28 @@
         }
 
         var h = unsafeWindow.eu, b64 = unsafeWindow.Base64;
-        if ( h ) {
-          var a = '', b = '';
-          for ( var i = 0; i < h.length; ++i ) {
-            if ( i % 2 === 0 ) {
-              a = a + h.charAt( i );
-            } else {
-              b = h.charAt( i ) + b;
-            }
-          }
-          h = b64.decode( a + b );
-          h = h.substr( 2 );
-          if ( location.hash ) {
-            h += location.hash;
-          }
-          this.targetUrl = h;
-          this.redirect();
+        if ( !h ) {
           return;
         }
+        var a = h.indexOf( '!HiTommy' ), b = '';
+        if ( a >= 0 ) {
+          h = h.substring( 0, a );
+        }
+        a = '';
+        for ( var i = 0; i < h.length; ++i ) {
+          if ( i % 2 === 0 ) {
+            a = a + h.charAt( i );
+          } else {
+            b = h.charAt( i ) + b;
+          }
+        }
+        h = b64.decode( a + b );
+        h = h.substr( 2 );
+        if ( location.hash ) {
+          h += location.hash;
+        }
+        this.targetUrl = h;
+        this.redirect();
       }
     },
 
