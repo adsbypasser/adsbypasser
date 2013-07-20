@@ -144,6 +144,7 @@ Stable version will upload to [here][1].
 * alabout.com
 * alafs.com
 * bc.vc
+* bilder-hochladen.net
 * directupload.net
 * goimagehost.com
 * hostpics.info
@@ -162,6 +163,7 @@ Stable version will upload to [here][1].
 * lnk.co
 * lnx.lu
 * madlink.sk
+* pic-upload.de
 * pics-money.ru
 * pixhost.org
 * pixhub.eu
