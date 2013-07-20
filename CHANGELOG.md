@@ -1,3 +1,9 @@
+## 2.14.0
+
+* added
+    * pic-upload.de
+    * bilder-hochladen.net
+
 ## 2.13.1
 
 * fixed
