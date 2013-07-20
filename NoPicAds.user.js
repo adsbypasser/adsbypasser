@@ -186,6 +186,7 @@
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.imgnip.com/viewerr*.php?file=*
 // @match          http://www.madlink.sk/*
+// @match          http://www.pic-upload.de/view-*.html
 // @match          http://www.pics-money.ru/*
 // @match          http://www.pixhost.org/show/*
 // @match          http://www.sexyimg.com/*
@@ -1456,6 +1457,24 @@
       ],
       run: function( m ) {
         this.targetUrl = m.path[1];
+        this.redirect();
+      },
+    },
+
+    // pic-upload.de
+    {
+      rule: [
+        {
+          host: /www\.pic-upload\.de/,
+        },
+      ],
+      run: function () {
+        var i = document.querySelector('#content + img');
+        if (!i) {
+          console.info('NoPicAds: "#content + img" not found');
+          return;
+        }
+        this.targetUrl = i.src;
         this.redirect();
       },
     },
