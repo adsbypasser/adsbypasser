@@ -183,6 +183,7 @@
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
+// @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.imgnip.com/viewerr*.php?file=*
 // @match          http://www.madlink.sk/*
@@ -1472,6 +1473,24 @@
         var i = document.querySelector('#content + img');
         if (!i) {
           console.info('NoPicAds: "#content + img" not found');
+          return;
+        }
+        this.targetUrl = i.src;
+        this.redirect();
+      },
+    },
+
+    // bilder-hochladen.net
+    {
+      rule: [
+        {
+          host: /www\.bilder-hochladen\.net/,
+        },
+      ],
+      run: function () {
+        var i = document.querySelector('td > img');
+        if (!i) {
+          console.info('NoPicAds: "td > img" not found');
           return;
         }
         this.targetUrl = i.src;
