@@ -158,7 +158,7 @@
 // @match          http://*.abload.de/image.php?img=*
 // @match          http://*.alabout.com/*
 // @match          http://*.alafs.com/*
-// @match          http://*.directupload.net/*
+// @match          http://*.directupload.net/file/*.htm
 // @match          http://*.imagebam.com/image/*
 // @match          http://*.imagevenue.com/img.php?*
 // @match          http://*.urlcash.net/*
@@ -1070,9 +1070,14 @@
           host: /.+\.directupload\.net/,
         },
       ],
-      run: function() {
-        var b = document.body.lastElementChild;
-        b.parentNode.removeChild( b );
+      run: function () {
+        var i = document.querySelector('#showimage');
+        if (!i) {
+          console.info('NoPicAds: "#showimage" not found');
+          return;
+        }
+        this.targetUrl = i.src;
+        this.redirect();
       },
     },
 
