@@ -153,7 +153,6 @@
 // @match          http://www.h-animes.info/*/*/*.html
 // ==hanimes==
 // ==else==
-// @match          http://1be.biz/s.php?*
 // @match          http://*.4owl.info/*
 // @match          http://*.abload.de/image.php?img=*
 // @match          http://*.alabout.com/*
@@ -162,6 +161,8 @@
 // @match          http://*.imagebam.com/image/*
 // @match          http://*.imagevenue.com/img.php?*
 // @match          http://*.urlcash.net/*
+// @match          http://1be.biz/s.php?*
+// @match          http://abload.de/image.php?img=*
 // @match          http://adcrun.ch/*
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
@@ -1219,13 +1220,13 @@
     {
       rule: [
         {
-          host: /www\.abload\.de/,
+          host: /^(.+\.)?abload\.de$/,
         },
       ],
-      run: function() {
-        var i = document.querySelector( '#image' );
-        if( !i ) {
-          console.info( 'NoPicAds: "#image" not found' );
+      run: function () {
+        var i = document.querySelector('#image');
+        if (!i) {
+          console.info('NoPicAds: "#image" not found');
           return;
         }
         this.targetUrl = i.src;
