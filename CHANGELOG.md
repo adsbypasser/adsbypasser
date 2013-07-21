@@ -3,6 +3,9 @@
 * added
     * pic-upload.de
     * bilder-hochladen.net
+* fixed
+    * abload.de
+    * directupload.net
 
 ## 2.13.1
 
