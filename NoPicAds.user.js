@@ -94,7 +94,7 @@
 // @match          http://imgurban.info/?pm=*
 // ==/CF Image Host==
 // ==imgonion==
-// @match          http://imagecorn.com/*
+// @match          http://imagecorn.com/img-*.html
 // @match          http://imagepicsa.com/img-*.html
 // @match          http://imgcandy.net/img-*.html
 // @match          http://imgcloud.co/img-*.html
