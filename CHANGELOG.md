@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * imagecorn.com
+    * imgwoot.com
+
 ## 2.14.0
 
 * added
