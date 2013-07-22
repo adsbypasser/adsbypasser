@@ -102,7 +102,7 @@
 // @match          http://imgonion.com/img-*.html
 // @match          http://imgrill.com/img-*.html
 // @match          http://imgtube.net/img-*.html
-// @match          http://imgwoot.com/*
+// @match          http://imgwoot.com/img-*.html
 // @match          http://pixup.us/img-*.html
 // @match          http://www.imagefolks.com/img-*.html
 // ==/imgonion==
