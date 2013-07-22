@@ -3,6 +3,7 @@
 * fixed
     * imagecorn.com
     * imgwoot.com
+    * imagedecode.com
 
 ## 2.14.0
 
