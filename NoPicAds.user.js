@@ -154,6 +154,10 @@
 // @match          http://www.adultmove.info/*/*/*.html
 // @match          http://www.h-animes.info/*/*/*.html
 // ==hanimes==
+// ==imageback==
+// @match          http://imageback.info/view-image/*
+// @match          http://imagepong.info/view-image/*
+// ==/imageback==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.abload.de/image.php?img=*
@@ -173,7 +177,6 @@
 // @match          http://bc.vc/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
-// @match          http://imageback.info/view-image/*
 // @match          http://imagescream.com/img/soft/*
 // @match          http://imagetwist.com/*
 // @match          http://imgah.com/*
@@ -1511,7 +1514,7 @@
     {
       rule: [
         {
-          host: /imageback\.info/,
+          host: /image(back|pong)\.info/,
         },
       ],
       run: function () {
