@@ -121,7 +121,7 @@
 // @match          http://comicalpic.net/img-*.html
 // @match          http://hosterbin.com/img-*.html
 // @match          http://image.torrentjav.net/img-*.html
-// @match          http://imagedecode.com/*
+// @match          http://imagedecode.com/img-*.html
 // @match          http://imgserve.net/img-*.html
 // @match          http://ligasampiona.com/img-*.html
 // @match          http://zeljeimage.com/img-*.html
