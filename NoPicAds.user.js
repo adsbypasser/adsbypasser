@@ -173,6 +173,7 @@
 // @match          http://bc.vc/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
+// @match          http://imageback.info/view-image/*
 // @match          http://imagescream.com/img/soft/*
 // @match          http://imagetwist.com/*
 // @match          http://imgah.com/*
@@ -1502,6 +1503,28 @@
           return;
         }
         this.targetUrl = i.src;
+        this.redirect();
+      },
+    },
+
+    // imageback.info
+    {
+      rule: [
+        {
+          host: /imageback\.info/,
+        },
+      ],
+      run: function () {
+        var a = document.querySelectorAll('#popupOverlay, #divExoLayerWrapper');
+        Array.prototype.forEach.call(a, function (b) {
+          b.parentNode.removeChild(b);
+        });
+        a = document.querySelector('div.span7 a');
+        if (!a) {
+          console.info('NoPicAds: "div.span7 a" not found');
+          return;
+        }
+        this.targetUrl = a.href;
         this.redirect();
       },
     },
