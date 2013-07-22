@@ -94,7 +94,7 @@
 // @match          http://imgurban.info/?pm=*
 // ==/CF Image Host==
 // ==imgonion==
-// @match          http://imagecorn.com/*
+// @match          http://imagecorn.com/img-*.html
 // @match          http://imagepicsa.com/img-*.html
 // @match          http://imgcandy.net/img-*.html
 // @match          http://imgcloud.co/img-*.html
@@ -103,7 +103,7 @@
 // @match          http://imgonion.com/img-*.html
 // @match          http://imgrill.com/img-*.html
 // @match          http://imgtube.net/img-*.html
-// @match          http://imgwoot.com/*
+// @match          http://imgwoot.com/img-*.html
 // @match          http://pixup.us/img-*.html
 // @match          http://www.imagefolks.com/img-*.html
 // ==/imgonion==
@@ -123,7 +123,7 @@
 // @match          http://croftimage.com/img-*.html
 // @match          http://hosterbin.com/img-*.html
 // @match          http://image.torrentjav.net/img-*.html
-// @match          http://imagedecode.com/*
+// @match          http://imagedecode.com/img-*.html
 // @match          http://imgserve.net/img-*.html
 // @match          http://ligasampiona.com/img-*.html
 // @match          http://zeljeimage.com/img-*.html
