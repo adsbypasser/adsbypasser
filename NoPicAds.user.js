@@ -98,6 +98,7 @@
 // @match          http://imagepicsa.com/img-*.html
 // @match          http://imgcandy.net/img-*.html
 // @match          http://imgcloud.co/img-*.html
+// @match          http://imgcorn.com/img-*.html
 // @match          http://imgmoney.com/img-*.html
 // @match          http://imgonion.com/img-*.html
 // @match          http://imgrill.com/img-*.html
@@ -943,7 +944,7 @@
     {
       rule: [
         {
-          host: /(img(onion|rill|money|woot)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us/,
+          host: /(img(onion|rill|money|woot|corn)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us/,
         },
       ],
       run: function() {
