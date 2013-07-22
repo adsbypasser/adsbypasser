@@ -1,3 +1,11 @@
+## TBA
+
+* added
+    * imgcorn.com
+    * croftimage.com
+    * imageback.info
+    * imagepong.info
+
 ## 2.14.0
 
 * added

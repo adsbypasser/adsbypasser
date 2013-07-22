@@ -83,6 +83,7 @@ Stable version will upload to [here][1].
     * s21.imgtube.us
 * reklama
     * comicalpic.net
+    * croftimage.com
     * hosterbin.com
     * image.torrentjav.net
     * imagedecode.com
@@ -109,6 +110,7 @@ Stable version will upload to [here][1].
     * imagepicsa.com
     * imgcandy.net
     * imgcloud.co
+    * imgcorn.com
     * imgmoney.com
     * imgonion.com
     * imgrill.com
@@ -134,6 +136,9 @@ Stable version will upload to [here][1].
 * hanimes
     * adultmove.info
     * h-animes.info
+* imageback
+    * imageback.info
+    * imagepong.info
 * 1be.biz
 * 4owl.info
 * abload.de
