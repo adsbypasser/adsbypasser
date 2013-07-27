@@ -1,3 +1,8 @@
+## 2.16.0
+
+* added
+    * fastpic.ru
+
 ## 2.15.0
 
 * added
