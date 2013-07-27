@@ -158,9 +158,13 @@
 // @match          http://imageback.info/view-image/*
 // @match          http://imagepong.info/view-image/*
 // ==/imageback==
+// ==abload==
+// @match          http://*.abload.de/image.php?img=*
+// @match          http://abload.de/image.php?img=*
+// @match          http://fastpic.ru/view/*.html
+// ==/abload==
 // ==else==
 // @match          http://*.4owl.info/*
-// @match          http://*.abload.de/image.php?img=*
 // @match          http://*.alabout.com/*
 // @match          http://*.alafs.com/*
 // @match          http://*.directupload.net/file/*.htm
@@ -168,7 +172,6 @@
 // @match          http://*.imagevenue.com/img.php?*
 // @match          http://*.urlcash.net/*
 // @match          http://1be.biz/s.php?*
-// @match          http://abload.de/image.php?img=*
 // @match          http://adcrun.ch/*
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
@@ -1222,7 +1225,7 @@
       {
         rule: [
           {
-            host: /^(.+\.)?abload\.de$/,
+            host: /^(.+\.)?abload\.de|fastpic\.ru$/,
           },
         ],
         run: function () {
