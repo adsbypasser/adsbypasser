@@ -196,6 +196,7 @@
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
+// @match          http://tinypic.com/view.php?pic=*
 // @match          http://www.bild.me/bild.php?file=*
 // @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.bilder-upload.eu/show.php?file=*
@@ -1593,6 +1594,23 @@
           var i = document.querySelector('#img');
           if (!i) {
             console.info('NoPicAds: "#img" not found');
+            return;
+          }
+          NoPicAds.redirect(i.src);
+        },
+      },
+
+      // tinypic.com
+      {
+        rule: [
+          {
+            host: /^tinypic\.com$/,
+          },
+        ],
+        run: function () {
+          var i = document.querySelector('#imgElement');
+          if (!i) {
+            console.info('NoPicAds: "#imgElement" not found');
             return;
           }
           NoPicAds.redirect(i.src);
