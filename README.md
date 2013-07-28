@@ -81,7 +81,6 @@ Stable version will upload to [here][1].
     * picjav.net
     * pornpicuploader.com
     * preview.jpavgod.com
-    * s21.imgtube.us
     * shareimage.ro
 * reklama
     * comicalpic.net

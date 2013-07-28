@@ -14,6 +14,7 @@
     * bayimg.com
 * removed
     * imagerabbit.com
+    * s21.imgtube.us
 
 ## 2.16.0
 
