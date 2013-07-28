@@ -71,6 +71,7 @@
 // ==/linkbucks==
 // ==Mihalism Multi Host v1==
 // @match          http://imagerabbit.com/viewer.php?file=*
+// @match          http://pornpicuploader.com/viewer.php?file=*
 // ==/Mihalism Multi Host v1==
 // ==Mihalism Multi Host v2==
 // @match          http://freeuploadimages.org/viewer.php?file=*
@@ -819,7 +820,7 @@
       {
         rule: [
           {
-            host: /(imagerabbit|games8y)\.com/,
+            host: /(imagerabbit|pornpicuploader)\.com/,
           },
         ],
         run: function () {
