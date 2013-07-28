@@ -179,6 +179,7 @@
 // @match          http://advertisingg.com/*
 // @match          http://bayimg.com/*
 // @match          http://bc.vc/*
+// @match          http://bildr.no/view/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
 // @match          http://imagescream.com/img/soft/*
@@ -1557,6 +1558,23 @@
           var i = document.querySelector('input[type=image]');
           if (!i) {
             console.info('NoPicAds: "input[type=image]" not found');
+            return;
+          }
+          NoPicAds.redirect(i.src);
+        },
+      },
+
+      // bildr.no
+      {
+        rule: [
+          {
+            host: /^bildr\.no$/,
+          },
+        ],
+        run: function () {
+          var i = document.querySelector('img.bilde');
+          if (!i) {
+            console.info('NoPicAds: "img.bilde" not found');
             return;
           }
           NoPicAds.redirect(i.src);
