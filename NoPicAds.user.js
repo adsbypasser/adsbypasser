@@ -196,6 +196,7 @@
 // @match          http://qrrro.com/images/*.html
 // @match          http://www.bild.me/bild.php?file=*
 // @match          http://www.bilder-hochladen.net/files/*.html
+// @match          http://www.bilder-upload.eu/show.php?file=*
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.imgnip.com/viewerr*.php?file=*
 // @match          http://www.madlink.sk/*
@@ -1539,6 +1540,23 @@
           var i = document.querySelector('#Bild');
           if (!i) {
             console.info('NoPicAds: "#Bild" not found');
+            return;
+          }
+          NoPicAds.redirect(i.src);
+        },
+      },
+
+      // www.bilder-upload.eu
+      {
+        rule: [
+          {
+            host: /^www\.bilder-upload\.eu$/,
+          },
+        ],
+        run: function () {
+          var i = document.querySelector('input[type=image]');
+          if (!i) {
+            console.info('NoPicAds: "input[type=image]" not found');
             return;
           }
           NoPicAds.redirect(i.src);
