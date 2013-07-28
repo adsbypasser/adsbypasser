@@ -177,6 +177,7 @@
 // @match          http://adfoc.us/serve/?id=*
 // @match          http://adjoin.me/*
 // @match          http://advertisingg.com/*
+// @match          http://bayimg.com/*
 // @match          http://bc.vc/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
@@ -1506,6 +1507,23 @@
             return;
           }
           NoPicAds.redirect(a.href);
+        },
+      },
+
+      // bayimg.com
+      {
+        rule: [
+          {
+            host: /^bayimg\.com$/,
+          },
+        ],
+        run: function () {
+          var i = document.querySelector('#mainImage');
+          if (!i) {
+            console.info('NoPicAds: "#mainImage" not found');
+            return;
+          }
+          NoPicAds.redirect(i.src);
         },
       },
 
