@@ -1,5 +1,17 @@
 ## TBA
 
+* added
+    * funkyimg.com
+    * shareimage.ro
+    * pornpicuploader.com
+    * imagepremium.com
+    * freeuploadimages.org
+    * tinypic.com
+    * imagearn.com
+    * bildr.no
+    * bilder-upload.eu
+    * bild.me
+    * bayimg.com
 * removed
     * imagerabbit.com
 
