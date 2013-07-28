@@ -194,6 +194,7 @@
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
+// @match          http://www.bild.me/bild.php?file=*
 // @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.imgnip.com/viewerr*.php?file=*
@@ -1521,6 +1522,23 @@
           var i = document.querySelector('#mainImage');
           if (!i) {
             console.info('NoPicAds: "#mainImage" not found');
+            return;
+          }
+          NoPicAds.redirect(i.src);
+        },
+      },
+
+      // www.bild.me
+      {
+        rule: [
+          {
+            host: /^www\.bild\.me$/,
+          },
+        ],
+        run: function () {
+          var i = document.querySelector('#Bild');
+          if (!i) {
+            console.info('NoPicAds: "#Bild" not found');
             return;
           }
           NoPicAds.redirect(i.src);
