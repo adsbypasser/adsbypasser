@@ -70,7 +70,6 @@
 // @match          http://*.zxxo.net/*
 // ==/linkbucks==
 // ==Mihalism Multi Host v1==
-// @match          http://imagerabbit.com/viewer.php?file=*
 // @match          http://pornpicuploader.com/viewer.php?file=*
 // ==/Mihalism Multi Host v1==
 // ==Mihalism Multi Host v2==
@@ -87,7 +86,6 @@
 // ==Mihalism Multi Host==
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://image69.us/viewer.php?file=*
-// @match          http://imagerabbit.com/*.html
 // @match          http://picjav.net/picjav2/viewer.php?file=*
 // @match          http://picjav.net/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
@@ -798,29 +796,11 @@
         },
       },
 
-      // imagerabbit.com
-      {
-        rule: [
-          {
-            host: /imagerabbit\.com/,
-            path: /.+\.html$/,
-          },
-        ],
-        run: function () {
-          var a = document.querySelector('#page_body div.text_align_center a');
-          if (!a) {
-            console.info('NoPicAds: "#page_body div.text_align_center a" not found');
-            return;
-          }
-          NoPicAds.redirect(a.href);
-        },
-      },
-
       // mihalism v1
       {
         rule: [
           {
-            host: /(imagerabbit|pornpicuploader)\.com/,
+            host: /pornpicuploader\.com/,
           },
         ],
         run: function () {
