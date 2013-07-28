@@ -164,6 +164,7 @@
 // @match          http://*.abload.de/image.php?img=*
 // @match          http://abload.de/image.php?img=*
 // @match          http://fastpic.ru/view/*.html
+// @match          http://funkyimg.com/viewer.php?img=*
 // ==/abload==
 // ==else==
 // @match          http://*.4owl.info/*
@@ -1215,7 +1216,7 @@
       {
         rule: [
           {
-            host: /^(.+\.)?abload\.de|fastpic\.ru$/,
+            host: /^(.+\.)?abload\.de|fastpic\.ru|funkyimg\.com$/,
           },
         ],
         run: function () {
