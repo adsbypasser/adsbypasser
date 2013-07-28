@@ -215,10 +215,6 @@
 // @match          http://www.x45x.info/?pt=*
 // @match          http://zpag.es/*
 // ==/else==
-// ==dead==
-// @match          http://games8y.com/viewer.php?file=*
-// @match          http://s21.imgtube.us/viewer.php?file=*
-// ==/dead==
 // @exclude        http://adcrun.ch/
 // @exclude        http://adf.ly/*market.php?*
 // @exclude        http://adf.ly/?default_ad*
@@ -820,7 +816,7 @@
             path: /\/x\/.+/,
           },
           {
-            host: /s21\.imgtube\.us|jpdown\.info/,
+            host: /jpdown\.info/,
           },
           {
             host: /image69\.us/,
