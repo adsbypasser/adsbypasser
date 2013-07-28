@@ -75,6 +75,7 @@
 // ==Mihalism Multi Host v2==
 // @match          http://freeuploadimages.org/viewer.php?file=*
 // @match          http://image69.us/x/viewer.php?file=*
+// @match          http://imagepremium.com/viewer.php?file=*
 // @match          http://jpdown.info/viewer.php?file=*
 // @match          http://picjav.net/x/viewer.php?file=*
 // ==/Mihalism Multi Host v2==
@@ -836,7 +837,7 @@
             path: /\/x\/.+/,
           },
           {
-            host: /s21\.imgtube\.us|jpdown\.info|freeuploadimages\.org/,
+            host: /s21\.imgtube\.us|jpdown\.info|freeuploadimages\.org|imagepremium\.com/,
           },
           {
             host: /image69\.us/,
