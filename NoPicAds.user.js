@@ -182,6 +182,7 @@
 // @match          http://bildr.no/view/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
+// @match          http://imagearn.com/image.php?id=*
 // @match          http://imagescream.com/img/soft/*
 // @match          http://imagetwist.com/*
 // @match          http://imgah.com/*
@@ -1575,6 +1576,23 @@
           var i = document.querySelector('img.bilde');
           if (!i) {
             console.info('NoPicAds: "img.bilde" not found');
+            return;
+          }
+          NoPicAds.redirect(i.src);
+        },
+      },
+
+      // imagearn.com
+      {
+        rule: [
+          {
+            host: /^imagearn\.com$/,
+          },
+        ],
+        run: function () {
+          var i = document.querySelector('#img');
+          if (!i) {
+            console.info('NoPicAds: "#img" not found');
             return;
           }
           NoPicAds.redirect(i.src);
