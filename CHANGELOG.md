@@ -1,3 +1,8 @@
+## TBA
+
+* removed
+    * imagerabbit.com
+
 ## 2.16.0
 
 * added

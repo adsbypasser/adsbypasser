@@ -76,7 +76,6 @@ Stable version will upload to [here][1].
     * gzvd.info
     * hentaita.com
     * image69.us
-    * imagerabbit.com
     * jpdown.info
     * picjav.net
     * preview.jpavgod.com
