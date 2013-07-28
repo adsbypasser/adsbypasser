@@ -71,15 +71,18 @@ Stable version will upload to [here][1].
     * zff.co
     * zxxo.net
 * Mihalism Multi Host
+    * freeuploadimages.org
     * gallery.jpavgod.com
-    * games8y.com
     * gzvd.info
     * hentaita.com
     * image69.us
+    * imagepremium.com
     * jpdown.info
     * picjav.net
+    * pornpicuploader.com
     * preview.jpavgod.com
     * s21.imgtube.us
+    * shareimage.ro
 * reklama
     * comicalpic.net
     * croftimage.com
@@ -141,6 +144,7 @@ Stable version will upload to [here][1].
 * abload
     * abload.de
     * fastpic.ru
+    * funkyimg.com
 * 1be.biz
 * 4owl.info
 * adcrun.ch
@@ -149,12 +153,17 @@ Stable version will upload to [here][1].
 * advertisingg.com
 * alabout.com
 * alafs.com
+* bayimg.com
 * bc.vc
+* bild.me
 * bilder-hochladen.net
+* bilder-upload.eu
+* bildr.no
 * directupload.net
 * goimagehost.com
 * hostpics.info
 * ichan.org
+* imagearn.com
 * imagebam.com
 * imagescream.com
 * imagetwist.com
@@ -176,6 +185,7 @@ Stable version will upload to [here][1].
 * pushba.com
 * qrrro.com
 * sexyimg.com
+* tinypic.com
 * turboimagehost.com
 * urlcash.net
 * viidii.com
