@@ -70,12 +70,12 @@
 // @match          http://*.zxxo.net/*
 // ==/linkbucks==
 // ==Mihalism Multi Host v1==
+// @match          http://freeuploadimages.org/viewer.php?file=*
+// @match          http://imagepremium.com/viewer.php?file=*
 // @match          http://pornpicuploader.com/viewer.php?file=*
 // ==/Mihalism Multi Host v1==
 // ==Mihalism Multi Host v2==
-// @match          http://freeuploadimages.org/viewer.php?file=*
 // @match          http://image69.us/x/viewer.php?file=*
-// @match          http://imagepremium.com/viewer.php?file=*
 // @match          http://jpdown.info/viewer.php?file=*
 // @match          http://picjav.net/x/viewer.php?file=*
 // ==/Mihalism Multi Host v2==
@@ -800,7 +800,7 @@
       {
         rule: [
           {
-            host: /pornpicuploader\.com/,
+            host: /(pornpicuploader|imagepremium)\.com|freeuploadimages\.org/,
           },
         ],
         run: function () {
@@ -818,7 +818,7 @@
             path: /\/x\/.+/,
           },
           {
-            host: /s21\.imgtube\.us|jpdown\.info|freeuploadimages\.org|imagepremium\.com/,
+            host: /s21\.imgtube\.us|jpdown\.info/,
           },
           {
             host: /image69\.us/,
