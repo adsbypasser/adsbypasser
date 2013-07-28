@@ -73,6 +73,7 @@
 // @match          http://freeuploadimages.org/viewer.php?file=*
 // @match          http://imagepremium.com/viewer.php?file=*
 // @match          http://pornpicuploader.com/viewer.php?file=*
+// @match          http://shareimage.ro/viewer.php?file=*
 // ==/Mihalism Multi Host v1==
 // ==Mihalism Multi Host v2==
 // @match          http://image69.us/x/viewer.php?file=*
@@ -800,7 +801,7 @@
       {
         rule: [
           {
-            host: /(pornpicuploader|imagepremium)\.com|freeuploadimages\.org/,
+            host: /(pornpicuploader|imagepremium)\.com|freeuploadimages\.org|shareimage\.ro/,
           },
         ],
         run: function () {
