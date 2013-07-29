@@ -725,46 +725,34 @@
           },
         ],
         run: function () {
-          var opts = {}, scripts = document.querySelectorAll('script');
+          // prevent redirection by iframe
+          NoPicAds.removeNodes('iframe');
 
-          scripts = Array.prototype.some.call(scripts, function (script) {
-            var content = script.innerHTML;
-            if (content.indexOf('eval') < 0) {
-              return false;
+          var scripts = document.querySelectorAll('script');
+          for (var i = 0; i < scripts.length; ++i) {
+            var content = scripts[i].innerHTML;
+            var matches = content.indexOf('make_log');
+            if (matches >= 0) {
+              break;
             }
-
-            var matches = content.match(/\|button\|(\d+)/);
-            if (matches) {
-              opts.opt = 'make_log';
-              opts['args[oid]'] = matches[1];
-            }
-
-            matches = content.match(/lid\|oid\|(\d+)\|(\d+)/i);
-            if (matches) {
-              opts['args[lid]'] = matches[1];
-              opts['args[oid]'] = matches[2];
-              opts['args[ref]'] = '';
-            }
-
-            return true;
-          });
-
-          if (!scripts) {
-            console.info( 'NoPicAds: script content has been changed' );
-            return;
           }
+          matches = content.match(/eval(.*)/);
+          matches = matches[1];
+          content = eval(matches);
 
-          function xhr () {
-            NoPicAds.post('/links/ajax.fly.php', opts, function (text) {
-              var json = JSON.parse(text);
-              if (json.message) {
-                NoPicAds.redirect(json.message.url);
-              } else {
-                window.setTimeout(xhr, 2000);
-              }
-            });
+          // inject AJAX into body
+          function cb (text) {
+            var jj = JSON.parse(text);
+            if (jj.message) {
+              NoPicAds.redirect(jj.message.url);
+            }
           }
-          window.setTimeout(xhr, 1200);
+          unsafeWindow.cb = cb;
+          matches = content.match(/\$.post[^{]+\{opt:'make_log'[^}]+\}\},/i);
+          content = 'function bc(){' + matches[0] + 'cb);}setInterval(bc,1000);';
+          matches = document.createElement('script');
+          matches.textContent = content;
+          document.body.appendChild(matches);
         },
       },
 
