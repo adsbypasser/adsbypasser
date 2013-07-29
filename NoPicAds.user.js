@@ -167,8 +167,10 @@
 // @match          http://funkyimg.com/viewer.php?img=*
 // ==/abload==
 // ==adcrun==
+// @match          http://4ks.net/*
 // @match          http://adcrun.ch/*
 // @match          http://youlinking.com/*
+// @exclude        http://4ks.net/
 // @exclude        http://adcrun.ch/
 // @exclude        http://youlinking.com/
 // ==/adcrun==
@@ -725,7 +727,7 @@
       {
         rule: [
           {
-            host: /adcrun\.ch|youlinking\.com/,
+            host: /adcrun\.ch|youlinking\.com|4ks\.net/,
           },
         ],
         run: function () {
