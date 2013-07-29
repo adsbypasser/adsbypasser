@@ -408,7 +408,7 @@
       {
         rule: [
           {
-            host: /adf.ly|[u9]\.bb|[jq]\.gs/,
+            host: /adf\.ly|[u9]\.bb|[jq]\.gs/,
           },
         ],
         run: function () {
