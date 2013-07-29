@@ -735,7 +735,7 @@
       {
         rule: [
           {
-            host: /adcrun\.ch|youlinking\.com|4ks\.net|zpoz\.net|fly2url\.com|shortit\.in|wwy\.me/,
+            host: /adcrun\.ch|(youlinking|fly2url)\.com|(4ks|zpoz)\.net|shortit\.in|wwy\.me/,
           },
         ],
         run: function () {
