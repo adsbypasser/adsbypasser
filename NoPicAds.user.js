@@ -166,6 +166,12 @@
 // @match          http://fastpic.ru/view/*.html
 // @match          http://funkyimg.com/viewer.php?img=*
 // ==/abload==
+// ==adcrun==
+// @match          http://adcrun.ch/*
+// @match          http://youlinking.com/*
+// @exclude        http://adcrun.ch/
+// @exclude        http://youlinking.com/
+// ==/adcrun==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.alabout.com/*
@@ -175,7 +181,6 @@
 // @match          http://*.imagevenue.com/img.php?*
 // @match          http://*.urlcash.net/*
 // @match          http://1be.biz/s.php?*
-// @match          http://adcrun.ch/*
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
 // @match          http://adjoin.me/*
@@ -215,7 +220,6 @@
 // @match          http://www.x45x.info/?pt=*
 // @match          http://zpag.es/*
 // ==/else==
-// @exclude        http://adcrun.ch/
 // @exclude        http://adf.ly/*market.php?*
 // @exclude        http://adf.ly/?default_ad*
 // @exclude        http://linkbee.com/
@@ -721,7 +725,7 @@
       {
         rule: [
           {
-            host: /adcrun\.ch/,
+            host: /adcrun\.ch|youlinking\.com/,
           },
         ],
         run: function () {
