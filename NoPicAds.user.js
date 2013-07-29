@@ -170,9 +170,11 @@
 // @match          http://4ks.net/*
 // @match          http://adcrun.ch/*
 // @match          http://youlinking.com/*
+// @match          http://zpoz.net/*
 // @exclude        http://4ks.net/
 // @exclude        http://adcrun.ch/
 // @exclude        http://youlinking.com/
+// @exclude        http://zpoz.net/
 // ==/adcrun==
 // ==else==
 // @match          http://*.4owl.info/*
@@ -727,7 +729,7 @@
       {
         rule: [
           {
-            host: /adcrun\.ch|youlinking\.com|4ks\.net/,
+            host: /adcrun\.ch|youlinking\.com|4ks\.net|zpoz\.net/,
           },
         ],
         run: function () {
