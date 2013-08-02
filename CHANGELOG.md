@@ -1,4 +1,4 @@
-## TBA
+## 2.17.0
 
 * added
     * funkyimg.com
