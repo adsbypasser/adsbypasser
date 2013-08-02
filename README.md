@@ -144,9 +144,16 @@ Stable version will upload to [here][1].
     * abload.de
     * fastpic.ru
     * funkyimg.com
+* adcrun
+    * adcrun.ch
+    * wwy.me
+    * fly2url.com
+    * 4ks.net
+    * shortit.in
+    * youlinking.com
+    * zpoz.net
 * 1be.biz
 * 4owl.info
-* adcrun.ch
 * adfoc.us
 * adjoin.me
 * advertisingg.com
@@ -184,6 +191,7 @@ Stable version will upload to [here][1].
 * pushba.com
 * qrrro.com
 * sexyimg.com
+* shortit.in
 * tinypic.com
 * turboimagehost.com
 * urlcash.net

@@ -12,6 +12,15 @@
     * bilder-upload.eu
     * bild.me
     * bayimg.com
+    * wwy.me
+    * shortit.in
+    * fly2url.com
+    * zpoz.net
+    * 4ks.net
+    * youlinking.com
+* fixed
+    * adf.ly
+    * adcrun.ch
 * removed
     * imagerabbit.com
     * s21.imgtube.us
