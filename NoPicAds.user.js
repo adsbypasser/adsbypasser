@@ -199,6 +199,10 @@
 // @match          http://bc.vc/*
 // @match          http://adlock.in/*
 // ==/bcvc==
+// ==lnxlu==
+// @match          http://lnx.lu/*
+// @match          http://url.fm/*
+// ==/lnxlu==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.alabout.com/*
@@ -226,7 +230,6 @@
 // @match          http://javelite.tk/*
 // @match          http://linkbee.com/*
 // @match          http://lnk.co/*
-// @match          http://lnx.lu/*
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
@@ -747,7 +750,7 @@
       {
         rule: [
           {
-            host: /lnx\.lu/,
+            host: /^lnx\.lu|url\.fm$/,
           },
         ],
         run: function () {
