@@ -195,6 +195,10 @@
 // @exclude        http://youlinking.com/
 // @exclude        http://zpoz.net/
 // ==/adcrun==
+// ==bcvc==
+// @match          http://bc.vc/*
+// @match          http://adlock.in/*
+// ==/bcvc==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.alabout.com/*
@@ -209,7 +213,6 @@
 // @match          http://adjoin.me/*
 // @match          http://advertisingg.com/*
 // @match          http://bayimg.com/*
-// @match          http://bc.vc/*
 // @match          http://bildr.no/view/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
@@ -806,11 +809,12 @@
       },
 
       // bc.vc, shortcut
+      // FIXME may cut hash or query string
       {
         rule: [
           {
-            host: /bc\.vc/,
-            path: /^.+(https?:\/\/.+)/,
+            host: /^bc\.vc|adlock\.in$/,
+            path: /^.+(https?:\/\/.+)$/,
           },
         ],
         run: function (m) {
