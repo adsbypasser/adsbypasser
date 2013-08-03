@@ -145,11 +145,17 @@ Stable version will upload to [here][1].
     * fastpic.ru
     * funkyimg.com
 * adcrun
-    * adcrun.ch
-    * wwy.me
-    * fly2url.com
     * 4ks.net
+    * adcrun.ch
+    * bih.cc
+    * fly2url.com
+    * link.tl
+    * mhz.me
+    * short.pk
     * shortit.in
+    * ssl.gs
+    * tr5.in
+    * wwy.me
     * youlinking.com
     * zpoz.net
 * 1be.biz

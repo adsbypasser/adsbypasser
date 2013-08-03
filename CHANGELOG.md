@@ -1,3 +1,13 @@
+## TBA
+
+* added
+    * short.pk
+    * bih.cc
+    * mhz.me
+    * tr5.in
+    * link.tl
+    * ssl.gs
+
 ## 2.17.0
 
 * added
