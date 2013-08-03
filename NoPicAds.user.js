@@ -218,6 +218,7 @@
 // @match          http://advertisingg.com/*
 // @match          http://bayimg.com/*
 // @match          http://bildr.no/view/*
+// @match          http://coinurl.com/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
 // @match          http://imagearn.com/image.php?id=*
@@ -334,7 +335,7 @@
 
     redirect: function (uri) {
       console.info('NoPicAds: redirect to ' + uri);
-      window.location.replace(uri);
+      window.top.location.replace(uri);
     },
 
     nop: function () {
@@ -1506,6 +1507,19 @@
         run: function () {
           var i = $('#imgElement');
           NoPicAds.redirect(i.src);
+        },
+      },
+
+      // coinurl
+      {
+        rule: [
+          {
+            host: /^coinurl\.com$/,
+          },
+        ],
+        run: function () {
+          var a = $('#skip-ad');
+          NoPicAds.redirect(a.href);
         },
       },
 
