@@ -170,6 +170,7 @@
 // @match          http://4ks.net/*
 // @match          http://adcrun.ch/*
 // @match          http://fly2url.com/*
+// @match          http://link.tl/*
 // @match          http://shortit.in/*
 // @match          http://ssl.gs/*
 // @match          http://wwy.me/*
@@ -178,6 +179,7 @@
 // @exclude        http://4ks.net/
 // @exclude        http://adcrun.ch/
 // @exclude        http://fly2url.com/
+// @exclude        http://link.tl/
 // @exclude        http://shortit.in/
 // @exclude        http://ssl.gs/
 // @exclude        http://wwy.me/
@@ -746,7 +748,7 @@
       {
         rule: [
           {
-            host: /adcrun\.ch|(youlinking|fly2url)\.com|(4ks|zpoz)\.net|shortit\.in|wwy\.me|ssl\.gs/,
+            host: /adcrun\.ch|(youlinking|fly2url)\.com|(4ks|zpoz)\.net|shortit\.in|wwy\.me|ssl\.gs|link\.tl/,
           },
         ],
         run: function () {
