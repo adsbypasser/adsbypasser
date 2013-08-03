@@ -241,6 +241,37 @@
 (function () {
   'use strict';
 
+  function DomNotFoundError (selector) {
+    this.message = '"' + selector + '" not found';
+    if (Error.captureStackTrace) {
+      // V8-like
+      Error.captureStackTrace(this, DomNotFoundError);
+    } else {
+      // fallback to Mozilla-like
+      var e = Error();
+      var stack = e.stack.split('\n').slice(1);
+      e = stack[0].match(/^.*@(.*):(\d*)$/);
+      this.fileName = e[1];
+      this.lineNumber = e[2];
+      this.stack = stack.join('\n');
+    }
+  }
+
+  DomNotFoundError.prototype = Object.create(Error.prototype);
+  DomNotFoundError.prototype.constructor = DomNotFoundError;
+  DomNotFoundError.prototype.name = 'DomNotFoundError';
+
+  function $ (selector, context) {
+    if (!context || !context.querySelector) {
+      context = document;
+    }
+    var n = context.querySelector(selector);
+    if (!n) {
+      throw new DomNotFoundError(selector);
+    }
+    return n;
+  }
+
   var NoPicAds = {
 
     exec: function () {
@@ -409,11 +440,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('center img[id]');
-          if (!o) {
-            console.info('NoPicAds: "center img[id]" not found');
-            return;
-          }
+          var o = $('center img[id]');
           NoPicAds.redirect(o.src);
         },
       },
@@ -595,10 +622,8 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('#urlTextBox');
-          if (o) {
-            NoPicAds.redirect(o.value);
-          }
+          var o = $('#urlTextBox');
+          NoPicAds.redirect(o.value);
         },
       },
 
@@ -610,11 +635,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('#show_image');
-          if (!o) {
-            console.info('NoPicAds: "#show_image" not found');
-            return;
-          }
+          var o = $('#show_image');
           NoPicAds.redirect(o.src);
         },
       },
@@ -627,11 +648,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('#directlink');
-          if (!o) {
-            console.info('NoPicAds: "#directlink" not found');
-            return;
-          }
+          var o = $('#directlink');
           NoPicAds.redirect(o.href);
         },
       },
@@ -664,11 +681,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('img.pic');
-          if (!o) {
-            console.info('NoPicAds: "img.pic" not found');
-            return;
-          }
+          var o = $('img.pic');
           NoPicAds.redirect(o.src);
         },
       },
@@ -681,11 +694,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('img.pic');
-          if (!o) {
-            console.info('NoPicAds: "img.pic" not found');
-            return;
-          }
+          var o = $('img.pic');
           // somehow the server send image as an attachment
           // so I replace whole document.body with single img
           NoPicAds.replaceBody(o.src);
@@ -713,7 +722,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('#gosterbeni .button');
+          var o = $('#gosterbeni .button');
           o.click();
         },
       },
@@ -726,7 +735,7 @@
           },
         ],
         run: function () {
-          var a = document.querySelector('#clickbtn a');
+          var a = $('#clickbtn a');
           NoPicAds.redirect(a.href);
         },
       },
@@ -830,7 +839,7 @@
           // for jpdown.info
           NoPicAds.removeNodes('#divExoLayerWrapper, #fadeinbox');
 
-          var a = document.querySelector('#page_body a');
+          var a = $('#page_body a');
           NoPicAds.redirect(a.href);
         },
       },
@@ -843,7 +852,7 @@
           },
         ],
         run: function () {
-          var a = document.querySelector('#page_body a');
+          var a = $('#page_body a');
           var s = a.href;
           // the real link is diffirent from original host
           a = s.lastIndexOf('http://');
@@ -861,7 +870,7 @@
           },
         ],
         run: function (m) {
-          var a = document.querySelector('#page_body .text_align_center a');
+          var a = $('#page_body .text_align_center a');
           var s = a.href;
           // the real link does not immediately appears after http://
           a = s.lastIndexOf(m.host[0]);
@@ -903,11 +912,7 @@
           },
         ],
         run: function (m) {
-          var a = document.querySelector('#page_body a');
-          if (!a) {
-            console.info('NoPicAds: "#page_body a" not found');
-            return;
-          }
+          var a = $('#page_body a');
           NoPicAds.redirect(a.href);
         },
       },
@@ -934,7 +939,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#page_body div.text_align_center img');
+          var i = $('#page_body div.text_align_center img');
           NoPicAds.redirect(i.src);
         },
       },
@@ -957,11 +962,7 @@
           }
 
           // second pass
-          var o = document.querySelector('#container img[alt="image"]');
-          if (!o) {
-            console.info('NoPicAds: "#container img[alt="image"]" not found');
-            return;
-          }
+          var o = $('#container img[alt="image"]');
           NoPicAds.redirect(o.src);
         },
       },
@@ -999,7 +1000,7 @@
             form.submit();
           }
 
-          var script = document.querySelector('body script');
+          var script = $('body script');
           var i = script.innerHTML.indexOf('window.location.replace');
           if (i >= 0) {
             // let inline script redirect
@@ -1020,11 +1021,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('table img');
-          if (!i) {
-            console.info('NoPicAds: "table img" not found');
-            return;
-          }
+          var i = $('table img');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1037,11 +1034,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('#cursor_lupa');
-          if (!o) {
-            console.info('NoPicAds: "#cursor_lupa" not found');
-            return;
-          }
+          var o = $('#cursor_lupa');
           NoPicAds.redirect(o.src);
         },
       },
@@ -1054,11 +1047,7 @@
           },
         ],
         run: function () {
-          var a = document.querySelector('div.img_box a');
-          if (!a) {
-            console.info('NoPicAds: "div.img_box a" not found');
-            return;
-          }
+          var a = $('div.img_box a');
           NoPicAds.redirect(a.href);
         },
       },
@@ -1071,11 +1060,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#showimage');
-          if (!i) {
-            console.info('NoPicAds: "#showimage" not found');
-            return;
-          }
+          var i = $('#showimage');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1088,11 +1073,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('#iimg');
-          if (!o) {
-            console.info('NoPicAds: "#iimg" not found');
-            return;
-          }
+          var o = $('#iimg');
           NoPicAds.redirect(o.src);
         },
       },
@@ -1120,11 +1101,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('#container img[class^=centred]');
-          if (!o) {
-            console.info('NoPicAds: "#container img[class^=centred]" not found');
-            return;
-          }
+          var o = $('#container img[class^=centred]');
           NoPicAds.redirect(o.src);
         },
       },
@@ -1145,11 +1122,7 @@
           }
 
           // second stage
-          o = document.querySelector('img.pic');
-          if (!o) {
-            console.info('NoPicAds: "img.pic" not found');
-            return;
-          }
+          o = $('img.pic');
           NoPicAds.replaceBody(o.src);
         },
       },
@@ -1162,11 +1135,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelector('#imageContainer img[id]');
-          if (!o) {
-            console.info('NoPicAds: "#imageContainer img[id]" not found');
-            return;
-          }
+          var o = $('#imageContainer img[id]');
           // somehow the server send image as an attachment
           // so I replace whole document.body with single img
           NoPicAds.replaceBody(o.src);
@@ -1183,11 +1152,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('a.pic1 img');
-          if (!i) {
-            console.info('NoPicAds: "a.pic1 img" not found');
-            return;
-          }
+          var i = $('a.pic1 img');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1201,11 +1166,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('div.panel.top form input[name=sid]');
-          if (!i) {
-            console.info('NoPicAds: "div.panel.top form input[name=sid]" not found');
-            return;
-          }
+          var i = $('div.panel.top form input[name=sid]');
           NoPicAds.redirect('/img_show.php?view_id=' + i.value);
         },
       },
@@ -1218,11 +1179,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#image');
-          if (!i) {
-            console.info('NoPicAds: "#image" not found');
-            return;
-          }
+          var i = $('#image');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1236,11 +1193,7 @@
           },
         ],
         run: function () {
-          var a = document.querySelector('#imgbox a.divclick');
-          if (!a) {
-            console.info('NoPicAds: "#imgbox a.divclick" not found');
-            return;
-          }
+          var a = $('#imgbox a.divclick');
           NoPicAds.redirect(a.href);
         },
       },
@@ -1254,11 +1207,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#imgbox img.bigimg');
-          if (!i) {
-            console.info('NoPicAds: "#imgbox img.bigimg" not found');
-            return;
-          }
+          var i = $('#imgbox img.bigimg');
           NoPicAds.replaceBody(i.src);
         },
       },
@@ -1271,13 +1220,9 @@
           },
         ],
         run: function () {
-          var i = document.querySelector( '#d1 img' );
-          if (!i) {
-            console.info('NoPicAds: "#d1 img" not found');
-            return;
-          }
+          var i = $('#d1 img');
           i = i.onclick.toString();
-          i = i.match( /mshow\('(.+)'\)/ );
+          i = i.match(/mshow\('(.+)'\)/);
           i = i[1];
           NoPicAds.redirect(i);
         },
@@ -1330,11 +1275,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#shortURL-content img');
-          if (!i) {
-            console.info('NoPicAds: "#shortURL-content img" not found');
-            return;
-          }
+          var i = $('#shortURL-content img');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1347,11 +1288,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#container-home img');
-          if (!i) {
-            console.info('NoPicAds: "#container-home img" not found');
-            return;
-          }
+          var i = $('#container-home img');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1364,11 +1301,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#main_image');
-          if (!i) {
-            console.info('NoPicAds: "#main_image" not found');
-            return;
-          }
+          var i = $('#main_image');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1381,11 +1314,7 @@
           },
         ],
         run: function () {
-          var a = document.querySelector('#content a.lightbox');
-          if (!a) {
-            console.info('NoPicAds: "#content a.lightbox" not found');
-            return;
-          }
+          var a = $('#content a.lightbox');
           NoPicAds.redirect(a.href);
         },
       },
@@ -1398,11 +1327,7 @@
           },
         ],
         run: function () {
-          var a = document.querySelector('.dlbutton2 > a');
-          if (!a) {
-            console.info('NoPicAds: ".dlbutton2 > a" not found');
-            return;
-          }
+          var a = $('.dlbutton2 > a');
           NoPicAds.redirect(a.href);
         },
       },
@@ -1454,11 +1379,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#content + img');
-          if (!i) {
-            console.info('NoPicAds: "#content + img" not found');
-            return;
-          }
+          var i = $('#content + img');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1471,11 +1392,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('td > img');
-          if (!i) {
-            console.info('NoPicAds: "td > img" not found');
-            return;
-          }
+          var i = $('td > img');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1489,11 +1406,7 @@
         ],
         run: function () {
           NoPicAds.removeNodes('#popupOverlay, #divExoLayerWrapper');
-          a = document.querySelector('div.span7 a');
-          if (!a) {
-            console.info('NoPicAds: "div.span7 a" not found');
-            return;
-          }
+          var a = $('div.span7 a');
           NoPicAds.redirect(a.href);
         },
       },
@@ -1506,11 +1419,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#mainImage');
-          if (!i) {
-            console.info('NoPicAds: "#mainImage" not found');
-            return;
-          }
+          var i = $('#mainImage');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1523,11 +1432,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#Bild');
-          if (!i) {
-            console.info('NoPicAds: "#Bild" not found');
-            return;
-          }
+          var i = $('#Bild');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1540,11 +1445,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('input[type=image]');
-          if (!i) {
-            console.info('NoPicAds: "input[type=image]" not found');
-            return;
-          }
+          var i = $('input[type=image]');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1557,11 +1458,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('img.bilde');
-          if (!i) {
-            console.info('NoPicAds: "img.bilde" not found');
-            return;
-          }
+          var i = $('img.bilde');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1574,11 +1471,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#img');
-          if (!i) {
-            console.info('NoPicAds: "#img" not found');
-            return;
-          }
+          var i = $('#img');
           NoPicAds.redirect(i.src);
         },
       },
@@ -1591,11 +1484,7 @@
           },
         ],
         run: function () {
-          var i = document.querySelector('#imgElement');
-          if (!i) {
-            console.info('NoPicAds: "#imgElement" not found');
-            return;
-          }
+          var i = $('#imgElement');
           NoPicAds.redirect(i.src);
         },
       },
