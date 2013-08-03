@@ -171,6 +171,7 @@
 // @match          http://adcrun.ch/*
 // @match          http://fly2url.com/*
 // @match          http://shortit.in/*
+// @match          http://ssl.gs/*
 // @match          http://wwy.me/*
 // @match          http://youlinking.com/*
 // @match          http://zpoz.net/*
@@ -178,6 +179,7 @@
 // @exclude        http://adcrun.ch/
 // @exclude        http://fly2url.com/
 // @exclude        http://shortit.in/
+// @exclude        http://ssl.gs/
 // @exclude        http://wwy.me/
 // @exclude        http://youlinking.com/
 // @exclude        http://zpoz.net/
@@ -744,7 +746,7 @@
       {
         rule: [
           {
-            host: /adcrun\.ch|(youlinking|fly2url)\.com|(4ks|zpoz)\.net|shortit\.in|wwy\.me/,
+            host: /adcrun\.ch|(youlinking|fly2url)\.com|(4ks|zpoz)\.net|shortit\.in|wwy\.me|ssl\.gs/,
           },
         ],
         run: function () {
