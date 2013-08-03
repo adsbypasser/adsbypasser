@@ -202,6 +202,7 @@
 // ==lnxlu==
 // @match          http://lnx.lu/*
 // @match          http://url.fm/*
+// @match          http://z.gs/*
 // ==/lnxlu==
 // ==coinurl==
 // @match          http://coinurl.com/*
@@ -754,7 +755,7 @@
       {
         rule: [
           {
-            host: /^lnx\.lu|url\.fm$/,
+            host: /^lnx\.lu|url\.fm|z\.gs$/,
           },
         ],
         run: function () {
