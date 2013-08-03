@@ -203,6 +203,10 @@
 // @match          http://lnx.lu/*
 // @match          http://url.fm/*
 // ==/lnxlu==
+// ==coinurl==
+// @match          http://coinurl.com/*
+// @match          http://cur.lv/*
+// ==/coinurl==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.alabout.com/*
@@ -218,7 +222,6 @@
 // @match          http://advertisingg.com/*
 // @match          http://bayimg.com/*
 // @match          http://bildr.no/view/*
-// @match          http://coinurl.com/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
 // @match          http://imagearn.com/image.php?id=*
@@ -1514,7 +1517,7 @@
       {
         rule: [
           {
-            host: /^coinurl\.com$/,
+            host: /^coinurl\.com|cur\.lv$/,
           },
         ],
         run: function () {
