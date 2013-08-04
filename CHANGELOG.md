@@ -1,4 +1,4 @@
-## TBA
+## 2.18.2
 
 * fixed
     * adcrun.in
