@@ -74,6 +74,7 @@ Stable version will upload to [here][1].
     * freeuploadimages.org
     * gallery.jpavgod.com
     * gzvd.info
+    * hentai-hosting.com
     * hentaita.com
     * image69.us
     * imagepremium.com
@@ -158,6 +159,16 @@ Stable version will upload to [here][1].
     * wwy.me
     * youlinking.com
     * zpoz.net
+* coinurl
+    * coinurl.com
+    * cur.lv
+* lnxlu
+    * lnx.lu
+    * url.fm
+    * z.gs
+* bcvc
+    * bc.vc
+    * adlock.in
 * 1be.biz
 * 4owl.info
 * adfoc.us
@@ -166,7 +177,6 @@ Stable version will upload to [here][1].
 * alabout.com
 * alafs.com
 * bayimg.com
-* bc.vc
 * bild.me
 * bilder-hochladen.net
 * bilder-upload.eu
@@ -188,7 +198,6 @@ Stable version will upload to [here][1].
 * javelite.tk
 * linkbee.com
 * lnk.co
-* lnx.lu
 * madlink.sk
 * pic-upload.de
 * pics-money.ru

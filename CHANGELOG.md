@@ -7,6 +7,12 @@
     * tr5.in
     * link.tl
     * ssl.gs
+    * hentai-hosting.com
+    * z.gs
+    * cur.lv
+    * coinurl.com
+    * url.fm
+    * adlock.in
 
 ## 2.17.0
 
