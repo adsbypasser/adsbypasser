@@ -1,7 +1,7 @@
 ## 2.18.2
 
 * fixed
-    * adcrun.in
+    * adlock.in
 
 ## 2.18.1
 
