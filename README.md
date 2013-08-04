@@ -166,17 +166,16 @@ Stable version will upload to [here][1].
     * lnx.lu
     * url.fm
     * z.gs
-* bcvc
-    * bc.vc
-    * adlock.in
 * 1be.biz
 * 4owl.info
 * adfoc.us
 * adjoin.me
+* adlock.in
 * advertisingg.com
 * alabout.com
 * alafs.com
 * bayimg.com
+* bc.vc
 * bild.me
 * bilder-hochladen.net
 * bilder-upload.eu
