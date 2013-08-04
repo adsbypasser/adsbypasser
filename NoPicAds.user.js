@@ -84,6 +84,7 @@
 // ==Mihalism Multi Host v3==
 // @match          http://gzvd.info/viewer.php?file=*
 // @match          http://hentaita.com/viewer.php?file=*
+// @match          http://howtohemorrhoidscure.com/viewer.php?file=*
 // ==/Mihalism Multi Host v3==
 // ==Mihalism Multi Host==
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
@@ -915,7 +916,7 @@
       {
         rule: [
           {
-            host: /gzvd\.info|hentaita\.com/,
+            host: /gzvd\.info|hentaita\.com|howtohemorrhoidscure\.com/,
           },
         ],
         run: function () {
