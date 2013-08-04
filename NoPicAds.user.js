@@ -789,15 +789,19 @@
           content = eval(matches);
 
           // inject AJAX into body
-          function cb (text) {
-            var jj = JSON.parse(text);
-            if (jj.message) {
-              NoPicAds.redirect(jj.message.url);
-            }
+          matches = content.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
+          var url = matches[1];
+          var opts = eval('(' + matches[2] + ')');
+          function bc () {
+            unsafeWindow.$.post(url, opts, function (text) {
+              var jj = JSON.parse(text);
+              if (jj.message) {
+                NoPicAds.redirect(jj.message.url);
+              }
+            });
           }
-          unsafeWindow.cb = cb;
-          matches = content.match(/\$.post[^{]+\{opt:'make_log'[^}]+\}\},/i);
-          content = 'function bc(){' + matches[0] + 'cb);}setInterval(bc,1000);';
+          unsafeWindow.bc = bc;
+          content = 'setInterval(bc,1000);';
           matches = document.createElement('script');
           matches.textContent = content;
           document.body.appendChild(matches);
@@ -828,6 +832,45 @@
         ],
         run: function (m) {
           NoPicAds.redirect(m.path[1]);
+        },
+      },
+
+      // bc.vc
+      {
+        rule: [
+          {
+            host: /bc\.vc/,
+          },
+        ],
+        run: function () {
+          NoPicAds.removeNodes('iframe');
+
+          var scripts = document.querySelectorAll('script');
+          for (var i = 0; i < scripts.length; ++i) {
+            var content = scripts[i].innerHTML;
+            var matches = content.indexOf('make_log');
+            if (matches >= 0) {
+              break;
+            }
+          }
+
+          // inject AJAX into body
+          matches = content.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
+          var url = matches[1];
+          var opts = eval('(' + matches[2] + ')');
+          function bc () {
+            unsafeWindow.$.post(url, opts, function (text) {
+              var jj = JSON.parse(text);
+              if (jj.message) {
+                NoPicAds.redirect(jj.message.url);
+              }
+            });
+          }
+          unsafeWindow.bc = bc;
+          content = 'setInterval(bc,1000);';
+          matches = document.createElement('script');
+          matches.textContent = content;
+          document.body.appendChild(matches);
         },
       },
 
