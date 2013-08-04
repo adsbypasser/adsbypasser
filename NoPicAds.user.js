@@ -196,10 +196,6 @@
 // @exclude        http://youlinking.com/
 // @exclude        http://zpoz.net/
 // ==/adcrun==
-// ==bcvc==
-// @match          http://bc.vc/*
-// @match          http://adlock.in/*
-// ==/bcvc==
 // ==lnxlu==
 // @match          http://lnx.lu/*
 // @match          http://url.fm/*
@@ -221,8 +217,10 @@
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
 // @match          http://adjoin.me/*
+// @match          http://adlock.in/*
 // @match          http://advertisingg.com/*
 // @match          http://bayimg.com/*
+// @match          http://bc.vc/*
 // @match          http://bildr.no/view/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
@@ -826,7 +824,7 @@
       {
         rule: [
           {
-            host: /^bc\.vc|adlock\.in$/,
+            host: /^bc\.vc$/,
             path: /^.+(https?:\/\/.+)$/,
           },
         ],
@@ -1567,6 +1565,19 @@
         ],
         run: function () {
           var a = $('#skip-ad');
+          NoPicAds.redirect(a.href);
+        },
+      },
+
+      // adlock
+      {
+        rule: [
+          {
+            host: /^adlock\.in$/,
+          },
+        ],
+        run: function () {
+          var a = $('#xre a.xxr');
           NoPicAds.redirect(a.href);
         },
       },
