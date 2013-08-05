@@ -234,6 +234,7 @@
 // @match          http://javelite.tk/*
 // @match          http://linkbee.com/*
 // @match          http://lnk.co/*
+// @match          http://madlink.sk/*
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
@@ -243,7 +244,6 @@
 // @match          http://www.bilder-upload.eu/show.php?file=*
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.imgnip.com/viewerr*.php?file=*
-// @match          http://www.madlink.sk/*
 // @match          http://www.pic-upload.de/view-*.html
 // @match          http://www.pics-money.ru/*
 // @match          http://www.pixhost.org/show/*
@@ -252,13 +252,15 @@
 // @match          http://www.viidii.com/*
 // @match          http://www.x45x.info/?pt=*
 // @match          http://zpag.es/*
-// ==/else==
 // @exclude        http://adf.ly/*market.php?*
 // @exclude        http://adf.ly/?default_ad*
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
+// @exclude        http://madlink.sk/
+// @exclude        http://madlink.sk/*.html
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://www.pics-money.ru/allimage/*
+// ==/else==
 // ==/UserScript==
 
 (function () {
@@ -743,12 +745,17 @@
       {
         rule: [
           {
-            host: /www\.madlink\.sk/,
+            host: /madlink\.sk/,
+            path: /\/(.+)/,
           },
         ],
-        run: function () {
-          var o = $('#gosterbeni .button');
-          o.click();
+        run: function (m) {
+          NoPicAds.removeNodes('iframe');
+          NoPicAds.post('/ajax/check_redirect.php', {
+            link: m.path[1],
+          }, function (text) {
+            NoPicAds.redirect(text);
+          });
         },
       },
 
