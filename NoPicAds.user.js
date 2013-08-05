@@ -16,6 +16,8 @@
 // @match          http://u.bb/*
 // @match          http://j.gs/*
 // @match          http://q.gs/*
+// @exclude        http://adf.ly/*market.php?*
+// @exclude        http://adf.ly/?default_ad*
 // ==/adfly==
 // ==linkbucks==
 // @match          http://*.allanalpass.com/*
@@ -252,8 +254,6 @@
 // @match          http://www.viidii.com/*
 // @match          http://www.x45x.info/?pt=*
 // @match          http://zpag.es/*
-// @exclude        http://adf.ly/*market.php?*
-// @exclude        http://adf.ly/?default_ad*
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
 // @exclude        http://madlink.sk/
