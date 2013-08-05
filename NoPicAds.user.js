@@ -215,6 +215,7 @@
 // @match          http://*.imagevenue.com/img.php?*
 // @match          http://*.urlcash.net/*
 // @match          http://1be.biz/s.php?*
+// @match          http://3ra.be/*
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
 // @match          http://adjoin.me/*
@@ -1606,6 +1607,29 @@
           }
 
           NoPicAds.redirect(script);
+        },
+      },
+
+      // 3ra.be
+      {
+        rule: [
+          {
+            host: /^3ra\.be$/,
+          },
+        ],
+        run: function () {
+          NoPicAds.removeNodes('iframe');
+
+          var f = unsafeWindow.fc;
+          if (!f) {
+            return;
+          }
+          f = f.toString();
+          f = f.match(/href="([^"]*)/);
+          if (!f) {
+            return;
+          }
+          NoPicAds.redirect(f[1]);
         },
       },
 
