@@ -122,6 +122,7 @@
 // @match          http://*.picleet.com/*
 // @match          http://*.picturedip.com/*
 // @match          http://*.pictureturn.com/*
+// @match          http://*.pixroute.com/*
 // @match          http://*.yankoimages.net/*
 // ==/imageporter==
 // ==reklama==
@@ -471,7 +472,7 @@
       {
         rule: [
           {
-            host: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn)\.com|(piclambo|yankoimages)\.net/,
+            host: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn|pixroute)\.com|(piclambo|yankoimages)\.net/,
           },
         ],
         run: function () {
