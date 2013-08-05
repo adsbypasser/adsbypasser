@@ -1,3 +1,9 @@
+## 2.18.3
+
+* fixed
+    * adf.ly
+    * madlink.sk
+
 ## 2.18.2
 
 * fixed
