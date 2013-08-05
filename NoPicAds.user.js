@@ -480,6 +480,8 @@
 
           var h = unsafeWindow.eu, b64 = unsafeWindow.Base64;
           if (!h) {
+            h = $('#adfly_bar');
+            unsafeWindow.close_bar();
             return;
           }
           var a = h.indexOf('!HiTommy'), b = '';
