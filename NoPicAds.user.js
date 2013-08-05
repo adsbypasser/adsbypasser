@@ -230,6 +230,7 @@
 // @match          http://bayimg.com/*
 // @match          http://bc.vc/*
 // @match          http://bildr.no/view/*
+// @match          http://bilurl.com/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
 // @match          http://imagearn.com/image.php?id=*
@@ -1636,6 +1637,19 @@
             return;
           }
           NoPicAds.redirect(f[1]);
+        },
+      },
+
+      // bilurl
+      {
+        rule: [
+          {
+            host: /^bilurl\.com$/,
+          },
+        ],
+        run: function () {
+          var d = $('#event');
+          NoPicAds.redirect(d.getAttribute('rel'));
         },
       },
 
