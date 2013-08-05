@@ -235,6 +235,7 @@
 // @match          http://javelite.tk/*
 // @match          http://linkbee.com/*
 // @match          http://lnk.co/*
+// @match          http://p.pw/*
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
@@ -1580,6 +1581,31 @@
         run: function () {
           var a = $('#xre a.xxr');
           NoPicAds.redirect(a.href);
+        },
+      },
+
+      // p.pw
+      {
+        rule: [
+          {
+            host: /^p\.pw$/,
+          },
+        ],
+        run: function () {
+          NoPicAds.removeNodes('iframe');
+
+          var scripts = document.querySelectorAll('script');
+          for (var i = 0; i < scripts.length; ++i) {
+            var script = scripts[i].innerHTML;
+            var matches = script.match(/window\.location = "(.*)";/);
+            if (matches) {
+              script = matches[1];
+              break;
+            }
+            script = null;
+          }
+
+          NoPicAds.redirect(script);
         },
       },
 
