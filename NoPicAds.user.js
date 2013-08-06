@@ -220,6 +220,7 @@
 // ==advertisingg==
 // @match          http://adf.my.id/*
 // @match          http://advertisingg.com/*
+// @match          http://riurl.com/*
 // ==/advertisingg==
 // ==else==
 // @match          http://*.4owl.info/*
@@ -1072,7 +1073,7 @@
       {
         rule: [
           {
-            host: /advertisingg\.com|adf\.my\.id/,
+            host: /advertisingg\.com|adf\.my\.id|riurl\.com/,
           },
         ],
         run: function () {
