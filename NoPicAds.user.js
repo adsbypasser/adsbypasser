@@ -215,6 +215,10 @@
 // @match          http://coinurl.com/*
 // @match          http://cur.lv/*
 // ==/coinurl==
+// ==advertisingg==
+// @match          http://adf.my.id/*
+// @match          http://advertisingg.com/*
+// ==/advertisingg==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.alabout.com/*
@@ -229,7 +233,6 @@
 // @match          http://adfoc.us/serve/?id=*
 // @match          http://adjoin.me/*
 // @match          http://adlock.in/*
-// @match          http://advertisingg.com/*
 // @match          http://bayimg.com/*
 // @match          http://bc.vc/*
 // @match          http://bildr.no/view/*
@@ -306,6 +309,15 @@
       throw new DomNotFoundError(selector);
     }
     return n;
+  }
+
+  function $_ (selector, context) {
+    try {
+      return $(selector, context);
+    } catch (e) {
+      console.info(e);
+      return null;
+    }
   }
 
   var NoPicAds = {
@@ -1058,7 +1070,7 @@
       {
         rule: [
           {
-            host: /advertisingg\.com/,
+            host: /advertisingg\.com|adf\.my\.id/,
           },
         ],
         run: function () {
@@ -1087,11 +1099,13 @@
             form.submit();
           }
 
-          var script = $('body script');
-          var i = script.innerHTML.indexOf('window.location.replace');
-          if (i >= 0) {
-            // let inline script redirect
-            return;
+          var s = $_('body script');
+          if (s) {
+            s = s.innerHTML.indexOf('window.location.replace');
+            if (s >= 0) {
+              // let inline script redirect
+              return;
+            }
           }
           postToUrl( '', {
             hidden: '1',
