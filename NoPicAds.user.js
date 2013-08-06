@@ -288,23 +288,32 @@
 (function () {
   'use strict';
 
-  function DomNotFoundError (selector) {
-    this.message = '"' + selector + '" not found';
+  function NoPicAdsError (message) {
+    this.message = message;
+    this._setupStack();
+  }
+  NoPicAdsError.prototype = Object.create(Error.prototype);
+  NoPicAdsError.prototype.constructor = NoPicAdsError;
+  NoPicAdsError.prototype.name = 'NoPicAdsError';
+  NoPicAdsError.prototype._setupStack = function () {
     if (Error.captureStackTrace) {
       // V8-like
-      Error.captureStackTrace(this, DomNotFoundError);
+      Error.captureStackTrace(this, this.constructor);
     } else {
       // fallback to Mozilla-like
-      var e = Error();
-      var stack = e.stack.split('\n').slice(1);
-      e = stack[0].match(/^.*@(.*):(\d*)$/);
+      this._stack = this._stack ? this._stack.slice(1) : Error().stack.split('\n').slice(2);
+      var e = this._stack[0].match(/^.*@(.*):(\d*)$/);
       this.fileName = e[1];
       this.lineNumber = e[2];
-      this.stack = stack.join('\n');
+      this.stack = this._stack.join('\n');
     }
-  }
+  };
 
-  DomNotFoundError.prototype = Object.create(Error.prototype);
+  function DomNotFoundError (selector) {
+    NoPicAdsError.call(this, $tpl('`{0}` not found', selector));
+    this._setupStack();
+  }
+  DomNotFoundError.prototype = Object.create(NoPicAdsError.prototype);
   DomNotFoundError.prototype.constructor = DomNotFoundError;
   DomNotFoundError.prototype.name = 'DomNotFoundError';
 
@@ -323,12 +332,52 @@
     try {
       return $(selector, context);
     } catch (e) {
-      console.info(e);
+      NoPicAds.info(e);
       return null;
     }
   }
 
+  function $tpl (s) {
+    if (!s || arguments.length < 2) {
+      return s;
+    }
+
+    var T = {
+      '{{': '{',
+      '}}': '}',
+    };
+    var args = Array.prototype.slice.call(arguments, 1);
+    var kwargs = args[args.length-1];
+
+    return s.replace(/\{\{|\}\}|\{([^\}]+)\}/g, function (m, key) {
+      if (T.hasOwnProperty(m)) {
+        return T[m];
+      }
+      if (args.hasOwnProperty(key)) {
+        return args[key];
+      }
+      if (kwargs.hasOwnProperty(key)) {
+        return kwargs[key];
+      }
+      return m;
+    });
+  }
+
+  function $log (method, args) {
+    args = Array.prototype.slice.call(args);
+    args.unshift('NoPicAds:');
+    console[method].apply(console, args);
+  }
+
   var NoPicAds = {
+
+    info: function () {
+      $log('warn', arguments);
+    },
+
+    warn: function () {
+      $log('warn', arguments);
+    },
 
     exec: function () {
       // <scheme>//<host>:<port><path><query><hash>
@@ -369,14 +418,14 @@
       return null;
     },
 
-    redirect: function (uri) {
-      if (!uri) {
-        console.warn('NoPicAds: false URL');
+    redirect: function (to) {
+      if (!to) {
+        NoPicAds.warn('false URL');
         return;
       }
       var from = window.location.toString();
-      console.info('NoPicAds: ' + from + ' -> ' + uri);
-      window.top.location.replace(uri);
+      NoPicAds.info($tpl('{0} -> {1}', from, to));
+      window.top.location.replace(to);
     },
 
     nop: function () {
@@ -1016,18 +1065,12 @@
           },
         ],
         run: function (m) {
-          var a = document.querySelectorAll('#page_body a');
-          if (a.length < 2) {
-            console.info( 'NoPicAds: "#page_body a" not enough' );
-            return;
-          }
-          a = a[1];
+          var a = $('#page_body a:nth-child(2)');
           var s = a.href;
           // the real link does not immediately appears after http://
           a = s.lastIndexOf(m.host[0]);
           if (a < 0) {
-            console.info('NoPicAds: a.href does not contains location.host');
-            return;
+            throw new NoPicAdsError('a.href does not contains location.hostname');
           }
           NoPicAds.redirect('http://' + s.substr(a));
         },
@@ -1683,12 +1726,12 @@
 
           var f = unsafeWindow.fc;
           if (!f) {
-            return;
+            throw new NoPicAds('window.fc is undefined');
           }
           f = f.toString();
           f = f.match(/href="([^"]*)/);
           if (!f) {
-            return;
+            throw new NoPicAds('url pattern outdated');
           }
           NoPicAds.redirect(f[1]);
         },
