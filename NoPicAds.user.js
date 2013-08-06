@@ -222,6 +222,13 @@
 // @match          http://advertisingg.com/*
 // @match          http://riurl.com/*
 // ==/advertisingg==
+// ==linkbee==
+// @match          http://linkbee.com/*
+// @match          http://lnk.co/*
+// @match          http://rdlnk.co/*
+// @exclude        http://linkbee.com/
+// @exclude        http://lnk.co/
+// ==/linkbee==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.alabout.com/*
@@ -250,8 +257,6 @@
 // @match          http://imgfantasy.com/?p=*
 // @match          http://imgwiev.tk/?pm=*
 // @match          http://javelite.tk/*
-// @match          http://linkbee.com/*
-// @match          http://lnk.co/*
 // @match          http://madlink.sk/*
 // @match          http://p.pw/*
 // @match          http://pixhub.eu/*
@@ -273,8 +278,6 @@
 // @match          http://www.viidii.com/*
 // @match          http://www.x45x.info/?pt=*
 // @match          http://zpag.es/*
-// @exclude        http://linkbee.com/
-// @exclude        http://lnk.co/
 // @exclude        http://madlink.sk/
 // @exclude        http://madlink.sk/*.html
 // @exclude        http://www.linkbucks.com/
@@ -577,10 +580,12 @@
       {
         rule: [
           {
-            host: /(linkbee\.com|lnk\.co)/,
+            host: /(linkbee\.com|(rd?)lnk\.co)/,
           },
         ],
         run: function () {
+          NoPicAds.removeNodes('iframe');
+
           var o = document.querySelector('#urlholder');
           if (o) {
             NoPicAds.redirect(o.value);
