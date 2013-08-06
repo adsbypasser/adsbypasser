@@ -1,3 +1,21 @@
+## TBA
+
+* added
+    * howtohemorrhoidscure.com
+    * p.pw
+    * 3ra.be
+    * urlsir.com
+    * urlvisa.com
+    * biaiai.com
+    * bilurl.com
+    * pixroute.com
+    * adf.my.id
+    * raksoyun.com
+    * riurl.com
+    * stash-coins.com
+    * ref.so
+    * rdlnk.co
+
 ## 2.18.3
 
 * fixed
