@@ -76,6 +76,7 @@ Stable version will upload to [here][1].
     * gzvd.info
     * hentai-hosting.com
     * hentaita.com
+    * howtohemorrhoidscure.com
     * image69.us
     * imagepremium.com
     * jpdown.info
@@ -102,6 +103,7 @@ Stable version will upload to [here][1].
     * picleet.com
     * picturedip.com
     * pictureturn.com
+    * pixroute.com
     * yankoimages.net
 * CF Image Host
     * imgjav.tk
@@ -148,14 +150,18 @@ Stable version will upload to [here][1].
 * adcrun
     * 4ks.net
     * adcrun.ch
+    * biaiai.com
     * bih.cc
     * fly2url.com
     * link.tl
     * mhz.me
+    * raksoyun.com
     * short.pk
     * shortit.in
     * ssl.gs
     * tr5.in
+    * urlsir.com
+    * urlvisa.com
     * wwy.me
     * youlinking.com
     * zpoz.net
@@ -166,52 +172,63 @@ Stable version will upload to [here][1].
     * lnx.lu
     * url.fm
     * z.gs
-* 1be.biz
-* 4owl.info
-* adfoc.us
-* adjoin.me
-* adlock.in
-* advertisingg.com
-* alabout.com
-* alafs.com
-* bayimg.com
-* bc.vc
-* bild.me
-* bilder-hochladen.net
-* bilder-upload.eu
-* bildr.no
-* directupload.net
-* goimagehost.com
-* hostpics.info
-* ichan.org
-* imagearn.com
-* imagebam.com
-* imagescream.com
-* imagetwist.com
-* imagevenue.com
-* imgah.com
-* imgbar.net
-* imgfantasy.com
-* imgnip.com
-* imgwiev.tk
-* javelite.tk
-* linkbee.com
-* lnk.co
-* madlink.sk
-* pic-upload.de
-* pics-money.ru
-* pixhost.org
-* pixhub.eu
-* pushba.com
-* qrrro.com
-* sexyimg.com
-* shortit.in
-* tinypic.com
-* turboimagehost.com
-* urlcash.net
-* viidii.com
-* x45x.info
-* zpag.es
+* advertisingg
+    * adf.my.id
+    * advertisingg.com
+    * riurl.com
+* linkbee
+    * linkbee.com
+    * lnk.co
+    * rdlnk.co
+* else
+    * 1be.biz
+    * 3ra.be
+    * 4owl.info
+    * adfoc.us
+    * adjoin.me
+    * adlock.in
+    * alabout.com
+    * alafs.com
+    * bayimg.com
+    * bc.vc
+    * bild.me
+    * bilder-hochladen.net
+    * bilder-upload.eu
+    * bildr.no
+    * bilurl.com
+    * directupload.net
+    * goimagehost.com
+    * hostpics.info
+    * ichan.org
+    * imagearn.com
+    * imagebam.com
+    * imagescream.com
+    * imagetwist.com
+    * imagevenue.com
+    * imgah.com
+    * imgbar.net
+    * imgfantasy.com
+    * imgnip.com
+    * imgwiev.tk
+    * javelite.tk
+    * madlink.sk
+    * p.pw
+    * pic-upload.de
+    * pics-money.ru
+    * pixhost.org
+    * pixhub.eu
+    * pushba.com
+    * qrrro.com
+    * ref.so
+    * sexyimg.com
+    * shortit.in
+    * stash-coins.com
+    * tinypic.com
+    * turboimagehost.com
+    * urlcash.net
+    * viidii.com
+    * x45x.info
+    * zpag.es
 
 
 [1]: http://userscripts.org/scripts/show/154858
