@@ -370,7 +370,12 @@
     },
 
     redirect: function (uri) {
-      console.info('NoPicAds: redirect to ' + uri);
+      if (!uri) {
+        console.warn('NoPicAds: false URL');
+        return;
+      }
+      var from = window.location.toString();
+      console.info('NoPicAds: ' + from + ' -> ' + uri);
       window.top.location.replace(uri);
     },
 
