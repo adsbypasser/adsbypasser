@@ -257,6 +257,7 @@
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
+// @match          http://ref.so/*
 // @match          http://stash-coins.com/*
 // @match          http://tinypic.com/view.php?pic=*
 // @match          http://www.bild.me/bild.php?file=*
@@ -1693,6 +1694,20 @@
         run: function () {
           var d = $('#event');
           NoPicAds.redirect(d.getAttribute('rel'));
+        },
+      },
+
+      // ref.so
+      {
+        rule: [
+          {
+            host: /^ref\.so$/,
+          },
+        ],
+        run: function () {
+          NoPicAds.removeNodes('iframe');
+          var a = $('#btn_open a');
+          NoPicAds.redirect(a.href);
         },
       },
 
