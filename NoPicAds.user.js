@@ -257,6 +257,7 @@
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
+// @match          http://stash-coins.com/*
 // @match          http://tinypic.com/view.php?pic=*
 // @match          http://www.bild.me/bild.php?file=*
 // @match          http://www.bilder-hochladen.net/files/*.html
@@ -838,6 +839,21 @@
           matches = document.createElement('script');
           matches.textContent = content;
           document.body.appendChild(matches);
+        },
+      },
+
+      // stash-coins.com
+      {
+        rule: [
+          {
+            host: /stash-coins\.com/,
+          },
+        ],
+        run: function () {
+          var url = window.location.toString();
+          var i = url.lastIndexOf('http');
+          url = url.substr(i);
+          NoPicAds.redirect(url);
         },
       },
 
