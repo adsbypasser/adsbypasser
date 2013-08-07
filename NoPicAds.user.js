@@ -243,6 +243,7 @@
 // @match          http://adfoc.us/serve/?id=*
 // @match          http://adjoin.me/*
 // @match          http://adlock.in/*
+// @match          http://adv.li/*
 // @match          http://bayimg.com/*
 // @match          http://bc.vc/*
 // @match          http://bildr.no/view/*
@@ -1761,6 +1762,19 @@
           NoPicAds.removeNodes('iframe');
           var a = $('#btn_open a');
           NoPicAds.redirect(a.href);
+        },
+      },
+
+      // adv.li
+      {
+        rule: [
+          {
+            host: /^adv\.li$/,
+          },
+        ],
+        run: function () {
+          NoPicAds.removeNodes('iframe');
+          NoPicAds.redirect(unsafeWindow._url);
         },
       },
 
