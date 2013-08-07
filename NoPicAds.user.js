@@ -279,6 +279,7 @@
 // @match          http://www.turboimagehost.com/*
 // @match          http://www.viidii.com/*
 // @match          http://www.x45x.info/?pt=*
+// @match          http://xip.ir/*
 // @match          http://zpag.es/*
 // @exclude        http://madlink.sk/
 // @exclude        http://madlink.sk/*.html
@@ -865,7 +866,7 @@
       {
         rule: [
           {
-            host: /adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|(4ks|zpoz)\.net|(shortit|tr5)\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk/,
+            host: /adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|(4ks|zpoz)\.net|(shortit|tr5)\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir/,
           },
         ],
         run: function () {
