@@ -1,3 +1,12 @@
+## TBA
+
+* added
+    * adv.li
+    * cf.ly
+    * xip.ir
+    * seomafia.net
+    * 4fun.tw
+
 ## 2.19.0
 
 * added

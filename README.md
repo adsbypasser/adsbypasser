@@ -164,6 +164,7 @@ Stable version will upload to [here][1].
     * urlvisa.com
     * wwy.me
     * youlinking.com
+    * xip.ir
     * zpoz.net
 * coinurl
     * coinurl.com
@@ -183,10 +184,12 @@ Stable version will upload to [here][1].
 * else
     * 1be.biz
     * 3ra.be
+    * 4fun.tw
     * 4owl.info
     * adfoc.us
     * adjoin.me
     * adlock.in
+    * adv.li
     * alabout.com
     * alafs.com
     * bayimg.com
@@ -196,6 +199,7 @@ Stable version will upload to [here][1].
     * bilder-upload.eu
     * bildr.no
     * bilurl.com
+    * cf.ly
     * directupload.net
     * goimagehost.com
     * hostpics.info
@@ -220,6 +224,7 @@ Stable version will upload to [here][1].
     * pushba.com
     * qrrro.com
     * ref.so
+    * seomafia.net
     * sexyimg.com
     * shortit.in
     * stash-coins.com
