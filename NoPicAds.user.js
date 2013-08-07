@@ -273,6 +273,8 @@
 // @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.bilder-upload.eu/show.php?file=*
 // @match          http://www.hostpics.info/view.php?filename=*
+// @match          http://www.imagesnake.com/index.php?*
+// @match          http://www.imagesnake.com/show/*
 // @match          http://www.imgnip.com/viewerr*.php?file=*
 // @match          http://www.pic-upload.de/view-*.html
 // @match          http://www.pics-money.ru/*
@@ -1820,6 +1822,36 @@
         run: function () {
           var i = $('#original_url');
           NoPicAds.redirect(i.value);
+        },
+      },
+
+      // imagesnake.com, first stage
+      {
+        rule: [
+          {
+            host: /\.imagesnake\.com$/,
+            path: /^\/index\.php$/,
+            query: /^\?/,
+          },
+        ],
+        run: function () {
+          var a = $('#tablewraper a:nth-child(2)');
+          NoPicAds.redirect(a.href);
+        },
+      },
+
+      // imagesnake.com, second stage
+      {
+        rule: [
+          {
+            host: /\.imagesnake\.com$/,
+            path: /^\/show/,
+          },
+        ],
+        run: function () {
+          unsafeWindow.onbeforeunload = null;
+          var i = $('#img_obj');
+          NoPicAds.redirect(i.src);
         },
       },
 
