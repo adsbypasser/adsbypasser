@@ -6,6 +6,7 @@
     * xip.ir
     * seomafia.net
     * 4fun.tw
+    * imagesnake.com
 
 ## 2.19.0
 
