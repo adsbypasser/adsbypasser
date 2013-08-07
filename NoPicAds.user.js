@@ -275,6 +275,7 @@
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.imagesnake.com/index.php?*
 // @match          http://www.imagesnake.com/show/*
+// @match          http://www.imgbabes.com/*.html
 // @match          http://www.imgnip.com/viewerr*.php?file=*
 // @match          http://www.pic-upload.de/view-*.html
 // @match          http://www.pics-money.ru/*
@@ -1852,6 +1853,19 @@
           unsafeWindow.onbeforeunload = null;
           var i = $('#img_obj');
           NoPicAds.redirect(i.src);
+        },
+      },
+
+      // imgbabes.com
+      {
+        rule: [
+          {
+            host: /\.imgbabes\.com$/,
+          },
+        ],
+        run: function () {
+          var i = $('#this_image');
+          NoPicAds.replaceBody(i.src);
         },
       },
 
