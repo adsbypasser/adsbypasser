@@ -265,6 +265,7 @@
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
 // @match          http://ref.so/*
+// @match          http://seomafia.net/*
 // @match          http://stash-coins.com/*
 // @match          http://tinypic.com/view.php?pic=*
 // @match          http://www.bild.me/bild.php?file=*
@@ -1791,6 +1792,20 @@
         run: function (m) {
           NoPicAds.removeNodes('iframe');
           NoPicAds.redirect('/skip' + m.path[0]);
+        },
+      },
+
+      // seomafia.net
+      {
+        rule: [
+          {
+            host: /^seomafia\.net$/,
+          },
+        ],
+        run: function () {
+          NoPicAds.removeNodes('iframe');
+          var a = $('table a');
+          NoPicAds.redirect(a.href);
         },
       },
 
