@@ -239,6 +239,7 @@
 // @match          http://*.urlcash.net/*
 // @match          http://1be.biz/s.php?*
 // @match          http://3ra.be/*
+// @match          http://4fun.tw/*
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
 // @match          http://adjoin.me/*
@@ -1806,6 +1807,19 @@
           NoPicAds.removeNodes('iframe');
           var a = $('table a');
           NoPicAds.redirect(a.href);
+        },
+      },
+
+      // 4fun.tw
+      {
+        rule: [
+          {
+            host: /^4fun\.tw$/,
+          },
+        ],
+        run: function () {
+          var i = $('#original_url');
+          NoPicAds.redirect(i.value);
         },
       },
 
