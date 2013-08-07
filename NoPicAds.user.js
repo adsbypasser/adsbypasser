@@ -248,6 +248,7 @@
 // @match          http://bc.vc/*
 // @match          http://bildr.no/view/*
 // @match          http://bilurl.com/*
+// @match          http://cf.ly/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
 // @match          http://imagearn.com/image.php?id=*
@@ -1775,6 +1776,20 @@
         run: function () {
           NoPicAds.removeNodes('iframe');
           NoPicAds.redirect(unsafeWindow._url);
+        },
+      },
+
+      // cf.ly
+      {
+        rule: [
+          {
+            host: /^cf\.ly$/,
+            path: /^\/[^\/]+$/,
+          },
+        ],
+        run: function (m) {
+          NoPicAds.removeNodes('iframe');
+          NoPicAds.redirect('/skip' + m.path[0]);
         },
       },
 
