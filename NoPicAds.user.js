@@ -261,6 +261,7 @@
 // @match          http://bildr.no/view/*
 // @match          http://bilurl.com/*
 // @match          http://cf.ly/*
+// @match          http://cl.my/*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ichan.org/*
 // @match          http://imagearn.com/image.php?id=*
@@ -1895,6 +1896,40 @@
             throw new NoPicAds('function changed');
           }
           NoPicAds.redirect(s[1]);
+        },
+      },
+
+      // cl.my
+      {
+        rule: [
+          {
+            host: /^cl\.my$/,
+          },
+        ],
+        run: function () {
+          unsafeWindow.document.body.onload = null;
+          unsafeWindow.document.body.onunload = null;
+
+          var scripts = document.querySelectorAll('script');
+          for (var i = 0; i < scripts.length; ++i) {
+            var content = scripts[i].innerHTML;
+            var matches = content.indexOf('callAjax');
+            if (matches >= 0) {
+              break;
+            }
+            content = null;
+          }
+          matches = content.match(/'id': '([^']+)'/);
+          content = matches[1];
+
+          NoPicAds.post('get_security_status.html', {
+            context: 'url',
+            cmd: 'chk',
+            id: content,
+          }, function (text) {
+            var data = JSON.parse(text);
+            NoPicAds.redirect(data.data.u);
+          });
         },
       },
 
