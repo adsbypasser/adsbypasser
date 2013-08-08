@@ -231,6 +231,7 @@
 // ==/linkbee==
 // ==urlcash==
 // @match          http://*.bat5.com/*
+// @match          http://*.detonating.com/*
 // @match          http://*.urlcash.net/*
 // ==/urlcash==
 // ==else==
@@ -722,7 +723,7 @@
       {
         rule: [
           {
-            host: /urlcash\.net|bat5\.com/,
+            host: /urlcash\.net|(bat5|detonating)\.com/,
           },
         ],
         run: function () {
