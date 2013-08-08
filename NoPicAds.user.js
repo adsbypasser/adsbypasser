@@ -231,11 +231,13 @@
 // ==/linkbee==
 // ==urlcash==
 // @match          http://*.bat5.com/*
+// @match          http://*.celebclk.com/*
 // @match          http://*.detonating.com/*
 // @match          http://*.looble.net/*
 // @match          http://*.urlcash.net/*
 // @match          http://*.urlcash.org/*
 // @match          http://*.xxxs.org/*
+// @match          http://celebclk.com/*
 // ==/urlcash==
 // ==else==
 // @match          http://*.4owl.info/*
@@ -726,7 +728,7 @@
       {
         rule: [
           {
-            host: /urlcash\.(net|org)|(bat5|detonating)\.com|looble\.net|xxxs\.org$/,
+            host: /urlcash\.(net|org)|(bat5|detonating|celebclk)\.com|looble\.net|xxxs\.org$/,
           },
         ],
         run: function () {
