@@ -233,6 +233,7 @@
 // @match          http://*.bat5.com/*
 // @match          http://*.detonating.com/*
 // @match          http://*.urlcash.net/*
+// @match          http://*.urlcash.org/*
 // ==/urlcash==
 // ==else==
 // @match          http://*.4owl.info/*
@@ -723,7 +724,7 @@
       {
         rule: [
           {
-            host: /urlcash\.net|(bat5|detonating)\.com/,
+            host: /urlcash\.(net|org)|(bat5|detonating)\.com/,
           },
         ],
         run: function () {
