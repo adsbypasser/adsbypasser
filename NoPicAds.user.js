@@ -235,6 +235,7 @@
 // @match          http://*.detonating.com/*
 // @match          http://*.eightteen.com/*
 // @match          http://*.looble.net/*
+// @match          http://*.smilinglinks.com/*
 // @match          http://*.urlcash.net/*
 // @match          http://*.urlcash.org/*
 // @match          http://*.xxxs.org/*
@@ -729,7 +730,7 @@
       {
         rule: [
           {
-            host: /urlcash\.(net|org)|(bat5|detonating|celebclk|eightteen)\.com|looble\.net|xxxs\.org$/,
+            host: /urlcash\.(net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks)\.com|looble\.net|xxxs\.org$/,
           },
         ],
         run: function () {
