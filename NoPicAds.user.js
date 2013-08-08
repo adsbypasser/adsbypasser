@@ -311,6 +311,7 @@
 (function () {
   'use strict';
 
+
   function NoPicAdsError (message) {
     this.message = message;
     this._setupStack();
@@ -340,6 +341,25 @@
   DomNotFoundError.prototype.constructor = DomNotFoundError;
   DomNotFoundError.prototype.name = 'DomNotFoundError';
 
+  function ArrayProxy (nodeList) {
+    this._nodeList = nodeList;
+  }
+  ArrayProxy.prototype.each = function (fn) {
+    Array.prototype.forEach.call(this._nodeList, fn);
+    return this;
+  };
+  ArrayProxy.prototype.find = function (fn) {
+    var result;
+    Array.prototype.some.call(this._nodeList, function (value, index, self) {
+      if (fn(value, index, self)) {
+        result = value;
+        return true;
+      }
+    });
+    return result;
+  };
+
+
   function $ (selector, context) {
     if (!context || !context.querySelector) {
       context = document;
@@ -358,6 +378,14 @@
       NoPicAds.info(e);
       return null;
     }
+  }
+
+  function $$ (selector, context) {
+    if (!context || !context.querySelector) {
+      context = document;
+    }
+    var ns = context.querySelectorAll(selector);
+    return new ArrayProxy(ns);
   }
 
   function $tpl (s) {
@@ -518,8 +546,7 @@
     },
 
     removeNodes: function (selector) {
-      var es = document.querySelectorAll(selector);
-      Array.prototype.forEach.call(es, function (e) {
+      $$(selector).each(function (e) {
         e.parentNode.removeChild(e);
       });
     },
@@ -556,8 +583,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelectorAll('a');
-          Array.prototype.forEach.call(o, function (a) {
+          $$('a').each(function (a) {
             if (/http:\/\/(www\.)?(alabout|alafs)\.com\/j\.phtml\?url=/.test(a.href)) {
               a.href = a.textContent;
             }
@@ -721,8 +747,7 @@
           },
         ],
         run: function () {
-          var o = document.querySelectorAll('a');
-          Array.prototype.forEach.call(o, function (a) {
+          $$('a').each(function (a) {
             if (a.href.indexOf('/url/http://') > -1) {
               a.href = a.href.replace(/http:\/\/.+\/url\/(?=http:\/\/)/, '');
             }
@@ -893,15 +918,10 @@
           // prevent redirection by iframe
           NoPicAds.removeNodes('iframe');
 
-          var scripts = document.querySelectorAll('script');
-          for (var i = 0; i < scripts.length; ++i) {
-            var content = scripts[i].innerHTML;
-            var matches = content.indexOf('make_log');
-            if (matches >= 0) {
-              break;
-            }
-          }
-          matches = content.match(/eval(.*)/);
+          var content = $$('script').find(function (script) {
+            return script.innerHTML.indexOf('make_log') >= 0;
+          });
+          var matches = content.innerHTML.match(/eval(.*)/);
           matches = matches[1];
           content = eval(matches);
 
@@ -977,14 +997,11 @@
         run: function () {
           NoPicAds.removeNodes('iframe');
 
-          var scripts = document.querySelectorAll('script');
-          for (var i = 0; i < scripts.length; ++i) {
-            var content = scripts[i].innerHTML;
-            var matches = content.indexOf('make_log');
-            if (matches >= 0) {
-              break;
-            }
-          }
+
+          var content = $$('script').find(function (script) {
+            return script.innerHTML.indexOf('make_log') >= 0;
+          });
+          content = content.innerHTML;
 
           // inject AJAX into body
           matches = content.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
@@ -1120,8 +1137,7 @@
           },
         ],
         run: function () {
-          var a = document.querySelectorAll('#page_body a');
-          a = a[1];
+          var a = $('#page_body a:nth-child(2)');
           NoPicAds.redirect(a.href);
         },
       },
@@ -1722,18 +1738,16 @@
         run: function () {
           NoPicAds.removeNodes('iframe');
 
-          var scripts = document.querySelectorAll('script');
-          for (var i = 0; i < scripts.length; ++i) {
-            var script = scripts[i].innerHTML;
-            var matches = script.match(/window\.location = "(.*)";/);
-            if (matches) {
-              script = matches[1];
-              break;
+          var url = null;
+          $$('script').find(function (script) {
+            var m = script.innerHTML.match(/window\.location = "(.*)";/);
+            if (m) {
+              url = m[1];
+              return true;
             }
-            script = null;
-          }
+          });
 
-          NoPicAds.redirect(script);
+          NoPicAds.redirect(url);
         },
       },
 
@@ -1912,16 +1926,10 @@
           unsafeWindow.document.body.onload = null;
           unsafeWindow.document.body.onunload = null;
 
-          var scripts = document.querySelectorAll('script');
-          for (var i = 0; i < scripts.length; ++i) {
-            var content = scripts[i].innerHTML;
-            var matches = content.indexOf('callAjax');
-            if (matches >= 0) {
-              break;
-            }
-            content = null;
-          }
-          matches = content.match(/'id': '([^']+)'/);
+          var content = $$('script').find(function (script) {
+            return script.innerHTML.indexOf('callAjax') >= 0;
+          });
+          var matches = content.innerHTML.match(/'id': '([^']+)'/);
           content = matches[1];
 
           NoPicAds.post('get_security_status.html', {
