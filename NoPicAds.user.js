@@ -229,6 +229,10 @@
 // @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
 // ==/linkbee==
+// ==urlcash==
+// @match          http://*.bat5.com/*
+// @match          http://*.urlcash.net/*
+// ==/urlcash==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.alabout.com/*
@@ -236,7 +240,6 @@
 // @match          http://*.directupload.net/file/*.htm
 // @match          http://*.imagebam.com/image/*
 // @match          http://*.imagevenue.com/img.php?*
-// @match          http://*.urlcash.net/*
 // @match          http://1be.biz/s.php?*
 // @match          http://3ra.be/*
 // @match          http://4fun.tw/*
@@ -719,7 +722,7 @@
       {
         rule: [
           {
-            host: /urlcash\.net/,
+            host: /urlcash\.net|bat5\.com/,
           },
         ],
         run: function () {
