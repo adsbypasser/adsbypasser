@@ -280,6 +280,7 @@
 // @match          http://seomafia.net/*
 // @match          http://stash-coins.com/*
 // @match          http://tinypic.com/view.php?pic=*
+// @match          http://ulmt.in/*
 // @match          http://www.bild.me/bild.php?file=*
 // @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.bilder-upload.eu/show.php?file=*
@@ -1877,6 +1878,23 @@
         run: function () {
           var i = $('#this_image');
           NoPicAds.replaceBody(i.src);
+        },
+      },
+
+      // ulmt.in
+      {
+        rule: [
+          {
+            host: /^ulmt\.in$/,
+          },
+        ],
+        run: function () {
+          var s = unsafeWindow.CountdownTimer.toString();
+          s = s.match(/href="([^"]+)"/);
+          if (!s) {
+            throw new NoPicAds('function changed');
+          }
+          NoPicAds.redirect(s[1]);
         },
       },
 
