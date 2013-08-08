@@ -341,22 +341,70 @@
   DomNotFoundError.prototype.constructor = DomNotFoundError;
   DomNotFoundError.prototype.name = 'DomNotFoundError';
 
-  function ArrayProxy (nodeList) {
-    this._nodeList = nodeList;
+  function CollectionProxy (collection) {
+    this._c = collection;
   }
-  ArrayProxy.prototype.each = function (fn) {
-    Array.prototype.forEach.call(this._nodeList, fn);
+  CollectionProxy._any = function (c, fn) {
+    if (c.some) {
+      return c.some(fn);
+    }
+    if (c instanceof NodeList) {
+      return Array.prototype.some.call(c, fn);
+    }
+    for (var k in c) {
+      if (c.hasOwnProperty(k)) {
+        if (fn(c[k], k, c)) {
+          return true;
+        }
+      }
+    }
+    return false;
+  };
+  CollectionProxy._all = function (c, fn) {
+    if (c.every) {
+      return c.every(fn);
+    }
+    if (c instanceof NodeList) {
+      return Array.prototype.every.call(c, fn);
+    }
+    for (var k in c) {
+      if (c.hasOwnProperty(k)) {
+        if (!fn(c[k], k, c)) {
+          return false;
+        }
+      }
+    }
+    return true;
+  };
+  CollectionProxy.prototype.each = function (fn) {
+    if (this._c.forEach) {
+      // Array
+      this._c.forEach(fn);
+    } else if (this._c instanceof NodeList) {
+      // Array-like
+      Array.prototype.forEach.call(this._c, fn);
+    } else {
+      // Object
+      for (var k in this._c) {
+        if (this._c.hasOwnProperty(k)) {
+          fn(this._c[k], k, this._c);
+        }
+      }
+    }
     return this;
   };
-  ArrayProxy.prototype.find = function (fn) {
+  CollectionProxy.prototype.find = function (fn) {
     var result;
-    Array.prototype.some.call(this._nodeList, function (value, index, self) {
+    CollectionProxy._any(this._c, function (value, index, self) {
       if (fn(value, index, self)) {
         result = value;
         return true;
       }
     });
     return result;
+  };
+  CollectionProxy.prototype.all = function (fn) {
+    return CollectionProxy._all(this._c, fn);
   };
 
 
@@ -380,12 +428,16 @@
     }
   }
 
+  function $C (collection) {
+    return new CollectionProxy(collection);
+  }
+
   function $$ (selector, context) {
     if (!context || !context.querySelector) {
       context = document;
     }
     var ns = context.querySelectorAll(selector);
-    return new ArrayProxy(ns);
+    return $C(ns);
   }
 
   function $tpl (s) {
@@ -428,45 +480,6 @@
 
     warn: function () {
       $log('warn', arguments);
-    },
-
-    exec: function () {
-      // <scheme>//<host>:<port><path><query><hash>
-      var runner = NoPicAds.find({
-        scheme: window.location.protocol,
-        host: window.location.hostname,
-        port: window.location.port,
-        path: window.location.pathname,
-        query: window.location.search,
-        hash: window.location.hash,
-      });
-      if (runner) {
-        NoPicAds.disableWindowOpen();
-        document.addEventListener('DOMContentLoaded', function () {
-          runner[0].call(this, runner[1]);
-        }.bind(this));
-      }
-    },
-
-    find: function (uri) {
-      for (var i = 0; i < NoPicAds.patterns.length; ++i) {
-        var pattern = NoPicAds.patterns[i];
-        for (var j = 0; j < pattern.rule.length; ++j) {
-          var rule = pattern.rule[j];
-          var matched = {};
-          for (var part in rule) {
-            matched[part] = rule[part].exec(uri[part]);
-            if (!matched[part]) {
-              matched = null;
-              break;
-            }
-          }
-          if (matched) {
-            return [pattern.run, matched];
-          }
-        }
-      }
-      return null;
     },
 
     redirect: function (to) {
@@ -555,7 +568,7 @@
 
       // linkbucks
       {
-        rule: [
+        rules: [
           {
             host: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
           },
@@ -577,7 +590,7 @@
 
       // alabout
       {
-        rule: [
+        rules: [
           {
             host: /(alabout|alafs)\.com/,
           },
@@ -593,7 +606,7 @@
 
       // imageporter
       {
-        rule: [
+        rules: [
           {
             host: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn|pixroute)\.com|(piclambo|yankoimages)\.net/,
           },
@@ -606,7 +619,7 @@
 
       // adf.ly
       {
-        rule: [
+        rules: [
           {
             host: /adf\.ly|[u9]\.bb|[jq]\.gs/,
           },
@@ -643,7 +656,7 @@
 
       // turboimagehost
       {
-        rule: [
+        rules: [
           {
             host: /turboimagehost\.com/,
           },
@@ -662,7 +675,7 @@
 
       // imagevenue
       {
-        rule: [
+        rules: [
           {
             host: /imagevenue\.com/,
           },
@@ -681,7 +694,7 @@
 
       // linkbee
       {
-        rule: [
+        rules: [
           {
             host: /(linkbee\.com|(rd?)lnk\.co)/,
           },
@@ -709,7 +722,7 @@
 
       // zpag
       {
-        rule: [
+        rules: [
           {
             host: /zpag\.es/,
           },
@@ -725,7 +738,7 @@
 
       // pixhost
       {
-        rule: [
+        rules: [
           {
             host: /www\.pixhost\.org/,
           },
@@ -741,7 +754,7 @@
 
       // ichan
       {
-        rule: [
+        rules: [
           {
             host: /ichan\.org/,
           },
@@ -757,7 +770,7 @@
 
       // urlcash
       {
-        rule: [
+        rules: [
           {
             host: /urlcash\.(net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks)\.com|looble\.net|xxxs\.org$/,
           },
@@ -778,7 +791,7 @@
 
       // pushba
       {
-        rule: [
+        rules: [
           {
             host: /pushba\.com/,
           },
@@ -791,7 +804,7 @@
 
       // imgchili
       {
-        rule: [
+        rules: [
           {
             host: /imgchili\.(com|net)/,
           },
@@ -804,7 +817,7 @@
 
       // viidii
       {
-        rule: [
+        rules: [
           {
             host: /www\.viidii\.com/,
           },
@@ -817,7 +830,7 @@
 
       // adfoc
       {
-        rule: [
+        rules: [
           {
             host: /adfoc\.us/,
           },
@@ -837,7 +850,7 @@
 
       // imagetwist
       {
-        rule: [
+        rules: [
           {
             host: /imagetwist\.com/,
           },
@@ -850,7 +863,7 @@
 
       // imagecherry
       {
-        rule: [
+        rules: [
           {
             host: /imagecherry\.com|imgpo\.st|imagejumbo\.com/,
           },
@@ -865,7 +878,7 @@
 
       // adjoin
       {
-        rule: [
+        rules: [
           {
             host: /adjoin\.me/,
           },
@@ -878,7 +891,7 @@
 
       // madlink
       {
-        rule: [
+        rules: [
           {
             host: /madlink\.sk/,
             path: /\/(.+)/,
@@ -896,7 +909,7 @@
 
       // lnxlu
       {
-        rule: [
+        rules: [
           {
             host: /^lnx\.lu|url\.fm|z\.gs$/,
           },
@@ -909,7 +922,7 @@
 
       // adcrun
       {
-        rule: [
+        rules: [
           {
             host: /^adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|(4ks|zpoz)\.net|(shortit|tr5)\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
           },
@@ -947,7 +960,7 @@
 
       // stash-coins.com
       {
-        rule: [
+        rules: [
           {
             host: /stash-coins\.com/,
           },
@@ -962,7 +975,7 @@
 
       // bc.vc, shortcut, dirty hack
       {
-        rule: [
+        rules: [
           {
             host: /bc\.vc/,
             query: /^.+(https?:\/\/.+)/,
@@ -976,7 +989,7 @@
       // bc.vc, shortcut
       // FIXME may cut hash or query string
       {
-        rule: [
+        rules: [
           {
             host: /^bc\.vc$/,
             path: /^.+(https?:\/\/.+)$/,
@@ -989,7 +1002,7 @@
 
       // bc.vc
       {
-        rule: [
+        rules: [
           {
             host: /bc\.vc/,
           },
@@ -1025,7 +1038,7 @@
 
       // mihalism v1
       {
-        rule: [
+        rules: [
           {
             host: /(pornpicuploader|imagepremium|hentai-hosting)\.com|freeuploadimages\.org|shareimage\.ro/,
           },
@@ -1039,7 +1052,7 @@
 
       // mihalism v2
       {
-        rule: [
+        rules: [
           {
             host: /picjav\.net/,
             path: /\/x\/.+/,
@@ -1064,7 +1077,7 @@
 
       // mihalism v3
       {
-        rule: [
+        rules: [
           {
             host: /gzvd\.info|hentaita\.com|howtohemorrhoidscure\.com/,
           },
@@ -1082,7 +1095,7 @@
 
       // image69
       {
-        rule: [
+        rules: [
           {
             host: /image69\.us/,
           },
@@ -1098,7 +1111,7 @@
 
       // picjav.net/picjav2
       {
-        rule: [
+        rules: [
           {
             host: /picjav\.net/,
             path: /\/picjav2\/.+/,
@@ -1118,7 +1131,7 @@
 
       // picjav.net
       {
-        rule: [
+        rules: [
           {
             host: /picjav\.net/,
           },
@@ -1131,7 +1144,7 @@
 
       // gallery.jpavgod.com
       {
-        rule: [
+        rules: [
           {
             host: /gallery\.jpavgod\.com/,
           },
@@ -1144,7 +1157,7 @@
 
       // preview.jpavgod.com
       {
-        rule: [
+        rules: [
           {
             host: /preview\.jpavgod\.com/,
           },
@@ -1158,7 +1171,7 @@
       // imgonion
       // FEATURE: continue to image link, POST same URL
       {
-        rule: [
+        rules: [
           {
             host: /(img(onion|rill|money|woot|corn)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us/,
           },
@@ -1180,7 +1193,7 @@
 
       // advertisingg.com
       {
-        rule: [
+        rules: [
           {
             host: /advertisingg\.com|adf\.my\.id|riurl\.com/,
           },
@@ -1228,7 +1241,7 @@
 
       // chevereto
       {
-        rule: [
+        rules: [
           {
             host: /www\.4owl\.info|javelite\.tk/,
           },
@@ -1241,7 +1254,7 @@
 
       // imgdino.com
       {
-        rule: [
+        rules: [
           {
             host: /img(dino|tiger)\.com/,
           },
@@ -1254,7 +1267,7 @@
 
       // CF Image Host
       {
-        rule: [
+        rules: [
           {
             host: /www\.imgjav\.tk|imgurban\.info/,
           },
@@ -1267,7 +1280,7 @@
 
       // directupload.net
       {
-        rule: [
+        rules: [
           {
             host: /.+\.directupload\.net/,
           },
@@ -1280,7 +1293,7 @@
 
       // picfox.org
       {
-        rule: [
+        rules: [
           {
             host: /(picfox|amateurfreak)\.org/,
           },
@@ -1293,7 +1306,7 @@
 
       // pixhub.eu
       {
-        rule: [
+        rules: [
           {
             host: /pixhub\.eu/,
           },
@@ -1308,7 +1321,7 @@
 
       // reklama
       {
-        rule: [
+        rules: [
           {
             host: /(imagedecode|zonezeedimage|zeljeimage|ligasampiona|hosterbin|croftimage)\.com|(comicalpic|image\.torrentjav|imgserve)\.net/,
           },
@@ -1321,7 +1334,7 @@
 
       // imgah.com
       {
-        rule: [
+        rules: [
           {
             host: /imgah\.com/,
           },
@@ -1342,7 +1355,7 @@
 
       // imagebam.com
       {
-        rule: [
+        rules: [
           {
             host: /www\.imagebam\.com/,
           },
@@ -1358,7 +1371,7 @@
       // imgbar.net
       // second stage
       {
-        rule: [
+        rules: [
           {
             host: /imgbar\.net/,
             path: /\/img_show\.php/,
@@ -1373,7 +1386,7 @@
       // imgbar.net
       // first stage
       {
-        rule: [
+        rules: [
           {
             host: /imgbar\.net/,
           },
@@ -1386,7 +1399,7 @@
 
       // abload.de
       {
-        rule: [
+        rules: [
           {
             host: /^(.+\.)?abload\.de|fastpic\.ru|funkyimg\.com$/,
           },
@@ -1399,7 +1412,7 @@
 
       // www.sexyimg.com
       {
-        rule: [
+        rules: [
           {
             host: /www\.sexyimg\.com/,
             path: /\/s\/.*\.html/,
@@ -1413,7 +1426,7 @@
 
       // www.sexyimg.com
       {
-        rule: [
+        rules: [
           {
             host: /www\.sexyimg\.com/,
             path: /\/b\/.*\.html/,
@@ -1427,7 +1440,7 @@
 
       // www.pics-money.ru
       {
-        rule: [
+        rules: [
           {
             host: /www\.pics-money\.ru/,
           },
@@ -1443,7 +1456,7 @@
 
       // imgwiev.tk
       {
-        rule: [
+        rules: [
           {
             host: /imgwiev\.tk/,
             query: /\?pm=(.+)/,
@@ -1456,7 +1469,7 @@
 
       // goimagehost.com
       {
-        rule: [
+        rules: [
           {
             host: /goimagehost\.com/,
             path: /\/xxx\/(.+)/,
@@ -1469,7 +1482,7 @@
 
       // www.hostpics.info
       {
-        rule: [
+        rules: [
           {
             host: /www\.hostpics\.info/,
             query: /\?filename=(.+)/,
@@ -1482,7 +1495,7 @@
 
       // imagescream.com
       {
-        rule: [
+        rules: [
           {
             host: /imagescream\.com/,
           },
@@ -1495,7 +1508,7 @@
 
       // imgfantasy.com
       {
-        rule: [
+        rules: [
           {
             host: /imgfantasy\.com/,
           },
@@ -1508,7 +1521,7 @@
 
       // www.imgnip.com
       {
-        rule: [
+        rules: [
           {
             host: /www\.imgnip\.com/,
           },
@@ -1521,7 +1534,7 @@
 
       // www.x45x.info
       {
-        rule: [
+        rules: [
           {
             host: /www\.x45x\.info/,
           },
@@ -1534,7 +1547,7 @@
 
       // www.h-animes.info
       {
-        rule: [
+        rules: [
           {
             host: /www\.(h-animes|adultmove)\.info/,
           },
@@ -1547,7 +1560,7 @@
 
       // imgpony.com
       {
-        rule: [
+        rules: [
           {
             host: /img(pony|trick)\.com/,
             query: /\?img=(.+)/,
@@ -1560,7 +1573,7 @@
 
       // 1be.biz
       {
-        rule: [
+        rules: [
           {
             host: /1be\.biz/,
             query: /\?(.+)/,
@@ -1573,7 +1586,7 @@
 
       // qrrro.com
       {
-        rule: [
+        rules: [
           {
             host: /qrrro\.com/,
             path: /^(\/images\/.+)\.html$/,
@@ -1586,7 +1599,7 @@
 
       // pic-upload.de
       {
-        rule: [
+        rules: [
           {
             host: /www\.pic-upload\.de/,
           },
@@ -1599,7 +1612,7 @@
 
       // bilder-hochladen.net
       {
-        rule: [
+        rules: [
           {
             host: /www\.bilder-hochladen\.net/,
           },
@@ -1612,7 +1625,7 @@
 
       // imageback.info
       {
-        rule: [
+        rules: [
           {
             host: /image(back|pong)\.info/,
           },
@@ -1626,7 +1639,7 @@
 
       // bayimg.com
       {
-        rule: [
+        rules: [
           {
             host: /^bayimg\.com$/,
           },
@@ -1639,7 +1652,7 @@
 
       // www.bild.me
       {
-        rule: [
+        rules: [
           {
             host: /^www\.bild\.me$/,
           },
@@ -1652,7 +1665,7 @@
 
       // www.bilder-upload.eu
       {
-        rule: [
+        rules: [
           {
             host: /^www\.bilder-upload\.eu$/,
           },
@@ -1665,7 +1678,7 @@
 
       // bildr.no
       {
-        rule: [
+        rules: [
           {
             host: /^bildr\.no$/,
           },
@@ -1678,7 +1691,7 @@
 
       // imagearn.com
       {
-        rule: [
+        rules: [
           {
             host: /^imagearn\.com$/,
           },
@@ -1691,7 +1704,7 @@
 
       // tinypic.com
       {
-        rule: [
+        rules: [
           {
             host: /^tinypic\.com$/,
           },
@@ -1704,7 +1717,7 @@
 
       // coinurl
       {
-        rule: [
+        rules: [
           {
             host: /^coinurl\.com|cur\.lv$/,
           },
@@ -1717,7 +1730,7 @@
 
       // adlock
       {
-        rule: [
+        rules: [
           {
             host: /^adlock\.in$/,
           },
@@ -1730,7 +1743,7 @@
 
       // p.pw
       {
-        rule: [
+        rules: [
           {
             host: /^p\.pw$/,
           },
@@ -1753,7 +1766,7 @@
 
       // 3ra.be
       {
-        rule: [
+        rules: [
           {
             host: /^3ra\.be$/,
           },
@@ -1776,7 +1789,7 @@
 
       // bilurl
       {
-        rule: [
+        rules: [
           {
             host: /^bilurl\.com$/,
           },
@@ -1789,7 +1802,7 @@
 
       // ref.so
       {
-        rule: [
+        rules: [
           {
             host: /^ref\.so$/,
           },
@@ -1803,7 +1816,7 @@
 
       // adv.li
       {
-        rule: [
+        rules: [
           {
             host: /^adv\.li$/,
           },
@@ -1816,7 +1829,7 @@
 
       // cf.ly
       {
-        rule: [
+        rules: [
           {
             host: /^cf\.ly$/,
             path: /^\/[^\/]+$/,
@@ -1830,7 +1843,7 @@
 
       // seomafia.net
       {
-        rule: [
+        rules: [
           {
             host: /^seomafia\.net$/,
           },
@@ -1844,7 +1857,7 @@
 
       // 4fun.tw
       {
-        rule: [
+        rules: [
           {
             host: /^4fun\.tw$/,
           },
@@ -1857,7 +1870,7 @@
 
       // imagesnake.com, first stage
       {
-        rule: [
+        rules: [
           {
             host: /\.imagesnake\.com$/,
             path: /^\/index\.php$/,
@@ -1872,7 +1885,7 @@
 
       // imagesnake.com, second stage
       {
-        rule: [
+        rules: [
           {
             host: /\.imagesnake\.com$/,
             path: /^\/show/,
@@ -1887,7 +1900,7 @@
 
       // imgbabes.com
       {
-        rule: [
+        rules: [
           {
             host: /\.imgbabes\.com$/,
           },
@@ -1900,7 +1913,7 @@
 
       // ulmt.in
       {
-        rule: [
+        rules: [
           {
             host: /^ulmt\.in$/,
           },
@@ -1917,7 +1930,7 @@
 
       // cl.my
       {
-        rule: [
+        rules: [
           {
             host: /^cl\.my$/,
           },
@@ -1947,7 +1960,45 @@
 
   };
 
-  NoPicAds.exec();
+  (function () {
+
+    function find (uri) {
+      var matched = {};
+      var pattern = $C(NoPicAds.patterns).find(function (pattern) {
+        var rule = $C(pattern.rules).find(function (rule) {
+          return $C(rule).all(function (pattern, part) {
+            matched[part] = uri[part].match(pattern);
+            return !!matched[part];
+          });
+        });
+        return !!rule;
+      });
+      if (!pattern) {
+        return null;
+      }
+      return {
+        runner: pattern.run,
+        matched: matched,
+      };
+    };
+
+    // <scheme>//<host>:<port><path><query><hash>
+    var handler = find({
+      scheme: window.location.protocol,
+      host: window.location.hostname,
+      port: window.location.port,
+      path: window.location.pathname,
+      query: window.location.search,
+      hash: window.location.hash,
+    });
+    if (handler) {
+      NoPicAds.disableWindowOpen();
+      document.addEventListener('DOMContentLoaded', function () {
+        handler.runner.call(this, handler.matched);
+      }.bind(this));
+    }
+
+  }());
 
 }());
 
