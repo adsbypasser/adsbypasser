@@ -176,6 +176,7 @@
 // @match          http://adcrun.ch/*
 // @match          http://biaiai.com/*
 // @match          http://bih.cc/*
+// @match          http://www.budurl.ru/*
 // @match          http://fly2url.com/*
 // @match          http://link.tl/*
 // @match          http://mhz.me/*
@@ -193,6 +194,7 @@
 // @exclude        http://adcrun.ch/
 // @exclude        http://biaiai.com/
 // @exclude        http://bih.cc/
+// @exclude        http://www.budurl.ru/
 // @exclude        http://fly2url.com/
 // @exclude        http://link.tl/
 // @exclude        http://mhz.me/
@@ -884,7 +886,7 @@
       {
         rule: [
           {
-            host: /adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|(4ks|zpoz)\.net|(shortit|tr5)\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir/,
+            host: /^adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|(4ks|zpoz)\.net|(shortit|tr5)\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
           },
         ],
         run: function () {
