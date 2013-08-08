@@ -2,6 +2,17 @@
 
 * added
     * imgbabes.com
+    * bat5.com
+    * detonating.com
+    * urlcash.org
+    * looble.net
+    * xxxs.org
+    * celebclk.com
+    * eightteen.com
+    * smilinglinks.com
+    * ulmt.in
+    * cl.my
+    * budurl.ru
 
 ## 2.20.0
 

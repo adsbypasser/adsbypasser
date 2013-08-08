@@ -152,6 +152,7 @@ Stable version will upload to [here][1].
     * adcrun.ch
     * biaiai.com
     * bih.cc
+    * budurl.ru
     * fly2url.com
     * link.tl
     * mhz.me
@@ -181,6 +182,16 @@ Stable version will upload to [here][1].
     * linkbee.com
     * lnk.co
     * rdlnk.co
+* urlcash
+    * bat5.com
+    * celebclk.com
+    * detonating.com
+    * eightteen.com
+    * looble.net
+    * smilinglinks.com
+    * urlcash.org
+    * urlcash.net
+    * xxxs.org
 * else
     * 1be.biz
     * 3ra.be
@@ -200,6 +211,7 @@ Stable version will upload to [here][1].
     * bildr.no
     * bilurl.com
     * cf.ly
+    * cl.my
     * directupload.net
     * goimagehost.com
     * hostpics.info
@@ -232,7 +244,7 @@ Stable version will upload to [here][1].
     * stash-coins.com
     * tinypic.com
     * turboimagehost.com
-    * urlcash.net
+    * ulmt.in
     * viidii.com
     * x45x.info
     * zpag.es
