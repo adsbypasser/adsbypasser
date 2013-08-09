@@ -182,7 +182,6 @@
 // @match          http://mhz.me/*
 // @match          http://raksoyun.com/*
 // @match          http://short.pk/*
-// @match          http://shortit.in/*
 // @match          http://ssl.gs/*
 // @match          http://tr5.in/*
 // @match          http://urlsir.com/*
@@ -201,7 +200,6 @@
 // @exclude        http://raksoyun.com/
 // @exclude        http://short.pk/
 // @exclude        http://short.pk/*.php
-// @exclude        http://shortit.in/
 // @exclude        http://ssl.gs/
 // @exclude        http://tr5.in/
 // @exclude        http://urlsir.com/
@@ -908,7 +906,7 @@
       {
         rules: [
           {
-            host: /^adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|(4ks|zpoz)\.net|(shortit|tr5)\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
+            host: /^adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|(4ks|zpoz)\.net|tr5\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
           },
         ],
         run: function () {

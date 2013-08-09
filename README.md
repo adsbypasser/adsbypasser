@@ -238,7 +238,6 @@ Stable version will upload to [here][1].
     * ref.so
     * seomafia.net
     * sexyimg.com
-    * shortit.in
     * stash-coins.com
     * tinypic.com
     * turboimagehost.com

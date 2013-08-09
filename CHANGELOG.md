@@ -3,6 +3,7 @@
 * removed
     * adjoin.me
     * linkbee.com
+    * shortit.in
 
 ## 2.21.0
 
