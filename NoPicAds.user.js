@@ -475,7 +475,7 @@
   var NoPicAds = {
 
     info: function () {
-      $log('warn', arguments);
+      $log('info', arguments);
     },
 
     warn: function () {
