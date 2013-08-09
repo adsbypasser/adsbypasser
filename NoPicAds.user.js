@@ -511,6 +511,11 @@
       }
     },
 
+    enableScrolling: function () {
+      var o = document.compatMode === 'CSS1Compat' ? document.documentElement : document.body;
+      o.style.overflow = '';
+    },
+
     replaceBody: function (imgSrc) {
       NoPicAds.removeAllTimer();
       var i = document.createElement('img');
@@ -1313,9 +1318,7 @@
         ],
         run: function () {
           NoPicAds.removeNodes('.adultpage, #FFN_Banner_Holder');
-
-          var o = (document.compatMode === 'CSS1Compat') ? document.documentElement : document.body;
-          o.style.overflow = 'auto';
+          NoPicAds.enableScrolling();
         },
       },
 
@@ -1908,6 +1911,7 @@
         run: function () {
           var i = $('#this_image');
           NoPicAds.replaceBody(i.src);
+          NoPicAds.enableScrolling();
         },
       },
 
