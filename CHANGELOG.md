@@ -2,6 +2,7 @@
 
 * removed
     * adjoin.me
+    * linkbee.com
 
 ## 2.21.0
 

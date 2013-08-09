@@ -178,8 +178,7 @@ Stable version will upload to [here][1].
     * adf.my.id
     * advertisingg.com
     * riurl.com
-* linkbee
-    * linkbee.com
+* lnkco
     * lnk.co
     * rdlnk.co
 * urlcash

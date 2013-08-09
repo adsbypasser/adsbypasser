@@ -224,13 +224,11 @@
 // @match          http://advertisingg.com/*
 // @match          http://riurl.com/*
 // ==/advertisingg==
-// ==linkbee==
-// @match          http://linkbee.com/*
+// ==lnkco==
 // @match          http://lnk.co/*
 // @match          http://rdlnk.co/*
-// @exclude        http://linkbee.com/
 // @exclude        http://lnk.co/
-// ==/linkbee==
+// ==/lnkco==
 // ==urlcash==
 // @match          http://*.bat5.com/*
 // @match          http://*.celebclk.com/*
@@ -691,23 +689,23 @@
         },
       },
 
-      // linkbee
+      // lnkco
       {
         rules: [
           {
-            host: /(linkbee\.com|(rd?)lnk\.co)/,
+            host: /^(rd?)lnk\.co$/,
           },
         ],
         run: function () {
           NoPicAds.removeNodes('iframe');
 
-          var o = document.querySelector('#urlholder');
+          var o = $_('#urlholder');
           if (o) {
             NoPicAds.redirect(o.value);
             return;
           }
 
-          o = document.querySelector('#skipBtn');
+          o = $_('#skipBtn');
           if (o) {
             o = o.querySelector('a');
             NoPicAds.redirect(o.href);
