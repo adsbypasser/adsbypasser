@@ -198,7 +198,6 @@ Stable version will upload to [here][1].
     * 4fun.tw
     * 4owl.info
     * adfoc.us
-    * adjoin.me
     * adlock.in
     * adv.li
     * alabout.com

@@ -1,3 +1,8 @@
+## TBA
+
+* removed
+    * adjoin.me
+
 ## 2.21.0
 
 * added

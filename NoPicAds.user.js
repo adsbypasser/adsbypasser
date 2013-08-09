@@ -255,7 +255,6 @@
 // @match          http://4fun.tw/*
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
-// @match          http://adjoin.me/*
 // @match          http://adlock.in/*
 // @match          http://adv.li/*
 // @match          http://bayimg.com/*
@@ -873,19 +872,6 @@
           // somehow the server send image as an attachment
           // so I replace whole document.body with single img
           NoPicAds.replaceBody(o.src);
-        },
-      },
-
-      // adjoin
-      {
-        rules: [
-          {
-            host: /adjoin\.me/,
-          },
-        ],
-        run: function () {
-          var uri = document.location.toString().replace(/adjoin\.me\/\d+\//, '');
-          NoPicAds.redirect(uri);
         },
       },
 
