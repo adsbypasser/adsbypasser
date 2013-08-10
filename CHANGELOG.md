@@ -2,6 +2,7 @@
 
 * fixed
     * imgbabes.com
+    * adlock.in
 
 ## 2.21.0
 

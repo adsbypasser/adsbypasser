@@ -1739,8 +1739,16 @@
           },
         ],
         run: function () {
-          var a = $('#xre a.xxr');
-          NoPicAds.redirect(a.href);
+          var a = $_('#xre a.xxr');
+          if (a) {
+            NoPicAds.redirect(a.href);
+            return;
+          }
+
+          a = unsafeWindow.fileLocation;
+          if (a) {
+            NoPicAds.redirect(a);
+          }
         },
       },
 
