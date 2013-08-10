@@ -1978,10 +1978,14 @@
       var matched = {};
       var pattern = $C(NoPicAds.patterns).find(function (pattern) {
         var rule = $C(pattern.rules).find(function (rule) {
-          return $C(rule).all(function (pattern, part) {
+          var tmp = $C(rule).all(function (pattern, part) {
             matched[part] = uri[part].match(pattern);
             return !!matched[part];
           });
+          if (!tmp) {
+            matched = {};
+          }
+          return tmp;
         });
         return !!rule;
       });
