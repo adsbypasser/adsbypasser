@@ -2010,7 +2010,7 @@
     if (handler) {
       NoPicAds.disableWindowOpen();
       document.addEventListener('DOMContentLoaded', function () {
-        handler.runner.call(this, handler.matched);
+        handler.runner(handler.matched);
       }.bind(this));
     }
 
