@@ -282,6 +282,7 @@
 // @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.bilder-upload.eu/show.php?file=*
 // @match          http://www.dumppix.com/viewer.php?*
+// @match          http://www.freeporndumpster.com/show.php?*
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.imagesnake.com/index.php?*
 // @match          http://www.imagesnake.com/show/*
@@ -1969,6 +1970,19 @@
         ],
         run: function () {
           var i = $('#picture');
+          NoPicAds.redirect(i.src);
+        },
+      },
+
+      // freeporndumpster
+      {
+        rules: [
+          {
+            host: /^www\.freeporndumpster\.com$/,
+          },
+        ],
+        run: function () {
+          var i = $('#thepic');
           NoPicAds.redirect(i.src);
         },
       },

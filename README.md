@@ -211,6 +211,7 @@ Stable version will upload to [here][1].
     * cl.my
     * directupload.net
     * dumppix.com
+    * freeporndumpster.com
     * goimagehost.com
     * hostpics.info
     * ichan.org
