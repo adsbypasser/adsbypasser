@@ -2,6 +2,8 @@
 
 * fixed
     * imgbabes.com
+    * adlock.in
+    * gallery.jpavgod.com
 * removed
     * adjoin.me
     * linkbee.com

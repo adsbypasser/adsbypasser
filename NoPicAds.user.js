@@ -73,6 +73,7 @@
 // ==/linkbucks==
 // ==Mihalism Multi Host v1==
 // @match          http://freeuploadimages.org/viewer.php?file=*
+// @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://hentai-hosting.com/viewer.php?file=*
 // @match          http://imagepremium.com/viewer.php?file=*
 // @match          http://pornpicuploader.com/viewer.php?file=*
@@ -88,7 +89,6 @@
 // @match          http://howtohemorrhoidscure.com/viewer.php?file=*
 // ==/Mihalism Multi Host v3==
 // ==Mihalism Multi Host==
-// @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://image69.us/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
 // ==/Mihalism Multi Host==
@@ -1058,7 +1058,7 @@
       {
         rules: [
           {
-            host: /(pornpicuploader|imagepremium|hentai-hosting)\.com|freeuploadimages\.org|shareimage\.ro/,
+            host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod)\.com|freeuploadimages\.org|shareimage\.ro/,
           },
         ],
         run: function () {
@@ -1120,19 +1120,6 @@
           // the real link does not immediately appears after http://
           a = s.lastIndexOf(m.host[0]);
           NoPicAds.redirect('http://' + s.substr(a));
-        },
-      },
-
-      // gallery.jpavgod.com
-      {
-        rules: [
-          {
-            host: /gallery\.jpavgod\.com/,
-          },
-        ],
-        run: function () {
-          var a = $('#page_body a:nth-child(2)');
-          NoPicAds.redirect(a.href);
         },
       },
 
@@ -1690,8 +1677,16 @@
           },
         ],
         run: function () {
-          var a = $('#xre a.xxr');
-          NoPicAds.redirect(a.href);
+          var a = $_('#xre a.xxr');
+          if (a) {
+            NoPicAds.redirect(a.href);
+            return;
+          }
+
+          a = unsafeWindow.fileLocation;
+          if (a) {
+            NoPicAds.redirect(a);
+          }
         },
       },
 
@@ -1960,10 +1955,14 @@
       var matched = {};
       var pattern = $C(NoPicAds.patterns).find(function (pattern) {
         var rule = $C(pattern.rules).find(function (rule) {
-          return $C(rule).all(function (pattern, part) {
+          var tmp = $C(rule).all(function (pattern, part) {
             matched[part] = uri[part].match(pattern);
             return !!matched[part];
           });
+          if (!tmp) {
+            matched = {};
+          }
+          return tmp;
         });
         return !!rule;
       });
@@ -1988,7 +1987,7 @@
     if (handler) {
       NoPicAds.disableWindowOpen();
       document.addEventListener('DOMContentLoaded', function () {
-        handler.runner.call(this, handler.matched);
+        handler.runner(handler.matched);
       }.bind(this));
     }
 
