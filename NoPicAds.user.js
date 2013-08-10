@@ -236,6 +236,11 @@
 // @match          http://*.xxxs.org/*
 // @match          http://celebclk.com/*
 // ==/urlcash==
+// ==imagesnake==
+// @match          http://www.freebunker.com/show/*
+// @match          http://www.imagesnake.com/index.php?*
+// @match          http://www.imagesnake.com/show/*
+// ==/imagesnake==
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.alabout.com/*
@@ -285,8 +290,6 @@
 // @match          http://www.freeporndumpster.com/show.php?*
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.hotimg.com/image/*
-// @match          http://www.imagesnake.com/index.php?*
-// @match          http://www.imagesnake.com/show/*
 // @match          http://www.imgbabes.com/*.html
 // @match          http://www.imgnip.com/viewerr*.php?file=*
 // @match          http://www.pic-upload.de/view-*.html
@@ -1840,7 +1843,7 @@
       {
         rules: [
           {
-            host: /\.imagesnake\.com$/,
+            host: /\.(imagesnake|freebunker)\.com$/,
             path: /^\/show/,
           },
         ],
