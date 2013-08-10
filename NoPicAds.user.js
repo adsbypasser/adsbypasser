@@ -418,7 +418,7 @@
     try {
       return $(selector, context);
     } catch (e) {
-      NoPicAds.info(e);
+      $info(e);
       return null;
     }
   }
@@ -461,37 +461,107 @@
     });
   }
 
-  function $log (method, args) {
-    args = Array.prototype.slice.call(args);
-    args.unshift('NoPicAds:');
-    console[method].apply(console, args);
+  function $nop () {
   }
+
+  (function () {
+
+    function log (method, args) {
+      args = Array.prototype.slice.call(args);
+      args.unshift('NoPicAds:');
+      console[method].apply(console, args);
+    }
+
+    window.$info = function () {
+      log('info', arguments);
+    };
+
+    window.$warn = function () {
+      log('warn', arguments);
+    };
+
+  }());
+
+  (function () {
+
+    function toQuery (data) {
+      if (typeof data === 'string') {
+        return data;
+      }
+      if (data instanceof String) {
+        return data.toString();
+      }
+      var tmp = [];
+      for (var key in data) {
+        tmp.push(key + '=' + data[key]);
+      }
+      return tmp.join('&');
+    }
+
+    function ajax (method, url, data, callback) {
+      var controller = GM_xmlhttpRequest({
+        method: method,
+        url: url,
+        data: encodeURI(toQuery(data)),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        onload: function (response) {
+          callback(response.responseText);
+        }
+      });
+
+      return controller;
+    }
+
+    function go (path, params, method) {
+      // Set method to post by default, if not specified.
+      method = method || 'post';
+
+      // The rest of this code assumes you are not using a library.
+      // It can be made less wordy if you use one.
+      var form = document.createElement('form');
+      form.method = method;
+      form.action = path;
+
+      for (var key in params) {
+        if (params.hasOwnProperty(key)) {
+          var input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = params[key];
+
+          form.appendChild(input);
+        }
+      }
+
+      form.submit();
+    }
+
+    window.$post = function (url, data, callback) {
+      return ajax('POST', url, data, callback);
+    };
+
+    window.$postTo = function (url, data) {
+      go(url, data, 'post');
+    };
+
+  }());
 
   var NoPicAds = {
 
-    info: function () {
-      $log('info', arguments);
-    },
-
-    warn: function () {
-      $log('warn', arguments);
-    },
-
     redirect: function (to) {
       if (!to) {
-        NoPicAds.warn('false URL');
+        $warn('false URL');
         return;
       }
       var from = window.location.toString();
-      NoPicAds.info($T('{0} -> {1}', from, to));
+      $info($T('{0} -> {1}', from, to));
       window.top.location.replace(to);
     },
 
-    nop: function () {
-    },
-
     removeAllTimer: function () {
-      var intervalID = window.setInterval(NoPicAds.nop, 10);
+      var intervalID = window.setInterval($nop, 10);
       while (intervalID > 0) {
         window.clearInterval(intervalID--);
       }
@@ -499,10 +569,10 @@
 
     disableWindowOpen: function () {
       if (unsafeWindow) {
-        unsafeWindow.open = NoPicAds.nop;
+        unsafeWindow.open = $nop;
       }
       if (window) {
-        window.open = NoPicAds.nop;
+        window.open = $nop;
       }
     },
 
@@ -518,44 +588,6 @@
       document.body = document.createElement('body');
       document.body.style.textAlign = 'center';
       document.body.appendChild(i);
-    },
-
-    ajax: function (method, url, data, callback) {
-      function toQuery (data) {
-        if (typeof data === 'string') {
-          return data;
-        }
-        if (data instanceof String) {
-          return data.toString();
-        }
-        var tmp = [];
-        for (var key in data) {
-          tmp.push(key + '=' + data[key]);
-        }
-        return tmp.join('&');
-      }
-
-      var controller = GM_xmlhttpRequest({
-        method: method,
-        url: url,
-        data: encodeURI(toQuery(data)),
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        onload: function (response) {
-          callback(response.responseText);
-        }
-      });
-
-      return controller;
-    },
-
-    post: function (url, data, callback) {
-      return NoPicAds.ajax('POST', url, data, callback);
-    },
-
-    get: function (url, data, callback) {
-      return NoPicAds.ajax('GET', url, data, callback);
     },
 
     removeNodes: function (selector) {
@@ -886,7 +918,7 @@
         ],
         run: function (m) {
           NoPicAds.removeNodes('iframe');
-          NoPicAds.post('/ajax/check_redirect.php', {
+          $post('/ajax/check_redirect.php', {
             link: m.path[1],
           }, function (text) {
             NoPicAds.redirect(text);
@@ -1186,31 +1218,6 @@
           },
         ],
         run: function () {
-          function postToUrl (path, params, method) {
-            // Set method to post by default, if not specified.
-            method = method || 'post';
-
-            // The rest of this code assumes you are not using a library.
-            // It can be made less wordy if you use one.
-            var form = document.createElement('form');
-            form.setAttribute('method', method);
-            form.setAttribute('action', path);
-
-            for (var key in params) {
-              if (params.hasOwnProperty(key)) {
-                var hiddenField = document.createElement('input');
-                hiddenField.setAttribute('type', 'hidden');
-                hiddenField.setAttribute('name', key);
-                hiddenField.setAttribute('value', params[key]);
-
-                form.appendChild(hiddenField);
-              }
-            }
-
-            document.body.appendChild(form);
-            form.submit();
-          }
-
           var s = $_('body script');
           if (s) {
             s = s.innerHTML.indexOf('window.location.replace');
@@ -1219,7 +1226,7 @@
               return;
             }
           }
-          postToUrl( '', {
+          $postTo( '', {
             hidden: '1',
             image: ' ',
           } );
@@ -1931,7 +1938,7 @@
           var matches = content.innerHTML.match(/'id': '([^']+)'/);
           content = matches[1];
 
-          NoPicAds.post('get_security_status.html', {
+          $post('get_security_status.html', {
             context: 'url',
             cmd: 'chk',
             id: content,
