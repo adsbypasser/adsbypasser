@@ -275,6 +275,7 @@
 // @match          http://javelite.tk/*
 // @match          http://madlink.sk/*
 // @match          http://p.pw/*
+// @match          http://picshare.geenza.com/pics/*
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
@@ -604,6 +605,19 @@
     },
 
     patterns: [
+
+      // picshare
+      {
+        rules: [
+          {
+            host: /^picshare\.geenza\.com$/,
+          },
+        ],
+        run: function () {
+          var i = $('#picShare_image_container');
+          NoPicAds.redirect(i.src);
+        },
+      },
 
       // linkbucks
       {

@@ -238,6 +238,7 @@ Stable version will upload to [here][1].
     * p.pw
     * pic-upload.de
     * pics-money.ru
+    * picshare.geenza.com
     * pixhost.org
     * pixhub.eu
     * pushba.com

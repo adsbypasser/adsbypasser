@@ -13,6 +13,7 @@
     * hotimg.com
     * freebunker.com
     * ibunker.us
+    * picshare.geenza.com
 * removed
     * adjoin.me
     * linkbee.com
