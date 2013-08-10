@@ -80,7 +80,6 @@ Stable version will upload to [here][1].
     * image69.us
     * imagepremium.com
     * jpdown.info
-    * picjav.net
     * pornpicuploader.com
     * preview.jpavgod.com
     * shareimage.ro

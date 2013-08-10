@@ -81,7 +81,6 @@
 // ==Mihalism Multi Host v2==
 // @match          http://image69.us/x/viewer.php?file=*
 // @match          http://jpdown.info/viewer.php?file=*
-// @match          http://picjav.net/x/viewer.php?file=*
 // ==/Mihalism Multi Host v2==
 // ==Mihalism Multi Host v3==
 // @match          http://gzvd.info/viewer.php?file=*
@@ -91,8 +90,6 @@
 // ==Mihalism Multi Host==
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://image69.us/viewer.php?file=*
-// @match          http://picjav.net/picjav2/viewer.php?file=*
-// @match          http://picjav.net/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
 // ==/Mihalism Multi Host==
 // ==CF Image Host==
@@ -1075,10 +1072,6 @@
       {
         rules: [
           {
-            host: /picjav\.net/,
-            path: /\/x\/.+/,
-          },
-          {
             host: /jpdown\.info/,
           },
           {
@@ -1127,39 +1120,6 @@
           // the real link does not immediately appears after http://
           a = s.lastIndexOf(m.host[0]);
           NoPicAds.redirect('http://' + s.substr(a));
-        },
-      },
-
-      // picjav.net/picjav2
-      {
-        rules: [
-          {
-            host: /picjav\.net/,
-            path: /\/picjav2\/.+/,
-          },
-        ],
-        run: function (m) {
-          var a = $('#page_body a:nth-child(2)');
-          var s = a.href;
-          // the real link does not immediately appears after http://
-          a = s.lastIndexOf(m.host[0]);
-          if (a < 0) {
-            throw new NoPicAdsError('a.href does not contains location.hostname');
-          }
-          NoPicAds.redirect('http://' + s.substr(a));
-        },
-      },
-
-      // picjav.net
-      {
-        rules: [
-          {
-            host: /picjav\.net/,
-          },
-        ],
-        run: function (m) {
-          var a = $('#page_body a');
-          NoPicAds.redirect(a.href);
         },
       },
 

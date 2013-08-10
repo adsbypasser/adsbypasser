@@ -6,6 +6,7 @@
     * adjoin.me
     * linkbee.com
     * shortit.in
+    * picjav.net
 
 ## 2.21.0
 
