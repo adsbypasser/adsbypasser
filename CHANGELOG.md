@@ -4,6 +4,9 @@
     * imgbabes.com
     * adlock.in
     * gallery.jpavgod.com
+* added
+    * yfrog.com
+    * dumppix.com
 * removed
     * adjoin.me
     * linkbee.com

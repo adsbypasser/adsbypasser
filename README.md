@@ -210,6 +210,7 @@ Stable version will upload to [here][1].
     * cf.ly
     * cl.my
     * directupload.net
+    * dumppix.com
     * goimagehost.com
     * hostpics.info
     * ichan.org
@@ -243,6 +244,7 @@ Stable version will upload to [here][1].
     * ulmt.in
     * viidii.com
     * x45x.info
+    * yfrog.com
     * zpag.es
 
 
