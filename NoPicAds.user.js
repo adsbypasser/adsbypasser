@@ -73,6 +73,7 @@
 // ==/linkbucks==
 // ==Mihalism Multi Host v1==
 // @match          http://freeuploadimages.org/viewer.php?file=*
+// @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://hentai-hosting.com/viewer.php?file=*
 // @match          http://imagepremium.com/viewer.php?file=*
 // @match          http://pornpicuploader.com/viewer.php?file=*
@@ -89,7 +90,6 @@
 // @match          http://howtohemorrhoidscure.com/viewer.php?file=*
 // ==/Mihalism Multi Host v3==
 // ==Mihalism Multi Host==
-// @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://image69.us/viewer.php?file=*
 // @match          http://picjav.net/picjav2/viewer.php?file=*
 // @match          http://picjav.net/viewer.php?file=*
@@ -1045,7 +1045,7 @@
       {
         rules: [
           {
-            host: /(pornpicuploader|imagepremium|hentai-hosting)\.com|freeuploadimages\.org|shareimage\.ro/,
+            host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod)\.com|freeuploadimages\.org|shareimage\.ro/,
           },
         ],
         run: function () {
@@ -1143,19 +1143,6 @@
         ],
         run: function (m) {
           var a = $('#page_body a');
-          NoPicAds.redirect(a.href);
-        },
-      },
-
-      // gallery.jpavgod.com
-      {
-        rules: [
-          {
-            host: /gallery\.jpavgod\.com/,
-          },
-        ],
-        run: function () {
-          var a = $('#page_body a:nth-child(2)');
           NoPicAds.redirect(a.href);
         },
       },

@@ -3,6 +3,7 @@
 * fixed
     * imgbabes.com
     * adlock.in
+    * gallery.jpavgod.com
 
 ## 2.21.0
 
