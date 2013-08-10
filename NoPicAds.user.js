@@ -283,6 +283,7 @@
 // @match          http://www.bild.me/bild.php?file=*
 // @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.bilder-upload.eu/show.php?file=*
+// @match          http://www.dumppix.com/viewer.php?*
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.imagesnake.com/index.php?*
 // @match          http://www.imagesnake.com/show/*
@@ -1968,6 +1969,24 @@
             NoPicAds.redirect('/z' + window.location.pathname);
             return;
           }
+        },
+      },
+
+      // dumppix
+      {
+        rules: [
+          {
+            host: /^www\.dumppix\.com$/,
+          },
+        ],
+        run: function () {
+          var i = $_('#boring');
+          if (i) {
+            NoPicAds.redirect(i.src);
+            return;
+          }
+          i = $('table td:nth-child(1) a');
+          NoPicAds.redirect(i.href);
         },
       },
 
