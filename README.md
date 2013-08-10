@@ -236,6 +236,7 @@ Stable version will upload to [here][1].
     * pushba.com
     * qrrro.com
     * ref.so
+    * screenlist.ru
     * seomafia.net
     * sexyimg.com
     * stash-coins.com

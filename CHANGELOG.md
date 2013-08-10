@@ -8,6 +8,7 @@
     * yfrog.com
     * dumppix.com
     * subirimagenes.com
+    * screenlist.ru
 * removed
     * adjoin.me
     * linkbee.com

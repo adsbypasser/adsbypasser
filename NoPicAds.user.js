@@ -273,6 +273,7 @@
 // @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
 // @match          http://ref.so/*
+// @match          http://screenlist.ru/details.php?image_id=*
 // @match          http://seomafia.net/*
 // @match          http://stash-coins.com/*
 // @match          http://tinypic.com/view.php?pic=*
@@ -1955,6 +1956,19 @@
         ],
         run: function () {
           var i = $('#ImagenVisualizada');
+          NoPicAds.redirect(i.src);
+        },
+      },
+
+      // screenlist
+      {
+        rules: [
+          {
+            host: /^screenlist\.ru$/,
+          },
+        ],
+        run: function () {
+          var i = $('#picture');
           NoPicAds.redirect(i.src);
         },
       },
