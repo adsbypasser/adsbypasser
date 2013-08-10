@@ -472,6 +472,7 @@
   function $nop () {
   }
 
+  var $info, $warn;
   (function () {
 
     function log (method, args) {
@@ -480,16 +481,17 @@
       console[method].apply(console, args);
     }
 
-    window.$info = function () {
+    $info = function () {
       log('info', arguments);
     };
 
-    window.$warn = function () {
+    $warn = function () {
       log('warn', arguments);
     };
 
   }());
 
+  var $post, $postTo;
   (function () {
 
     function toQuery (data) {
@@ -546,11 +548,11 @@
       form.submit();
     }
 
-    window.$post = function (url, data, callback) {
+    $post = function (url, data, callback) {
       return ajax('POST', url, data, callback);
     };
 
-    window.$postTo = function (url, data) {
+    $postTo = function (url, data) {
       go(url, data, 'post');
     };
 
