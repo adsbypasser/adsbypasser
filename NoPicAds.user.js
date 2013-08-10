@@ -246,6 +246,7 @@
 // @match          http://*.directupload.net/file/*.htm
 // @match          http://*.imagebam.com/image/*
 // @match          http://*.imagevenue.com/img.php?*
+// @match          http://*.yfrog.com/*
 // @match          http://1be.biz/s.php?*
 // @match          http://3ra.be/*
 // @match          http://4fun.tw/*
@@ -1946,6 +1947,27 @@
             var data = JSON.parse(text);
             NoPicAds.redirect(data.data.u);
           });
+        },
+      },
+
+      // yfrog
+      {
+        rules: [
+          {
+            host: /\.yfrog\.com$/,
+          },
+        ],
+        run: function () {
+          if (/^\/z/.test(window.location.pathname)) {
+            var i = $('#the-image img');
+            NoPicAds.redirect(i.src);
+            return;
+          }
+          var a = $_('#continue-link a, #main_image');
+          if (a) {
+            NoPicAds.redirect('/z' + window.location.pathname);
+            return;
+          }
         },
       },
 
