@@ -7,6 +7,7 @@
 * added
     * yfrog.com
     * dumppix.com
+    * subirimagenes.com
 * removed
     * adjoin.me
     * linkbee.com

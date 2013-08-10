@@ -290,6 +290,7 @@
 // @match          http://www.pics-money.ru/*
 // @match          http://www.pixhost.org/show/*
 // @match          http://www.sexyimg.com/*
+// @match          http://www.subirimagenes.com/*.html
 // @match          http://www.turboimagehost.com/*
 // @match          http://www.viidii.com/*
 // @match          http://www.x45x.info/?pt=*
@@ -1942,6 +1943,19 @@
           }
           i = $('table td:nth-child(1) a');
           NoPicAds.redirect(i.href);
+        },
+      },
+
+      // subirimagenes
+      {
+        rules: [
+          {
+            host: /^www\.subirimagenes\.com$/,
+          },
+        ],
+        run: function () {
+          var i = $('#ImagenVisualizada');
+          NoPicAds.redirect(i.src);
         },
       },
 

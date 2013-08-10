@@ -239,6 +239,7 @@ Stable version will upload to [here][1].
     * seomafia.net
     * sexyimg.com
     * stash-coins.com
+    * subirimagenes.com
     * tinypic.com
     * turboimagehost.com
     * ulmt.in
