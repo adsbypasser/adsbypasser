@@ -470,7 +470,7 @@
   var NoPicAds = {
 
     info: function () {
-      $log('warn', arguments);
+      $log('info', arguments);
     },
 
     warn: function () {
@@ -504,6 +504,11 @@
       if (window) {
         window.open = NoPicAds.nop;
       }
+    },
+
+    enableScrolling: function () {
+      var o = document.compatMode === 'CSS1Compat' ? document.documentElement : document.body;
+      o.style.overflow = '';
     },
 
     replaceBody: function (imgSrc) {
@@ -1295,9 +1300,7 @@
         ],
         run: function () {
           NoPicAds.removeNodes('.adultpage, #FFN_Banner_Holder');
-
-          var o = (document.compatMode === 'CSS1Compat') ? document.documentElement : document.body;
-          o.style.overflow = 'auto';
+          NoPicAds.enableScrolling();
         },
       },
 
@@ -1890,6 +1893,7 @@
         run: function () {
           var i = $('#this_image');
           NoPicAds.replaceBody(i.src);
+          NoPicAds.enableScrolling();
         },
       },
 
