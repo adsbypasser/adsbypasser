@@ -193,6 +193,9 @@ Stable version will upload to [here][1].
 * imagesnake
     * freebunker.com
     * imagesnake.com
+* screenlist
+    * ibunker.us
+    * screenlist.ru
 * else
     * 1be.biz
     * 3ra.be
@@ -240,7 +243,6 @@ Stable version will upload to [here][1].
     * pushba.com
     * qrrro.com
     * ref.so
-    * screenlist.ru
     * seomafia.net
     * sexyimg.com
     * stash-coins.com

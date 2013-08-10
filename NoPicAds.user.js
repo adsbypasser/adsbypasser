@@ -263,6 +263,7 @@
 // @match          http://cf.ly/*
 // @match          http://cl.my/*
 // @match          http://goimagehost.com/xxx/*
+// @match          http://ibunker.us/*
 // @match          http://ichan.org/*
 // @match          http://imagearn.com/image.php?id=*
 // @match          http://imagescream.com/img/soft/*
@@ -1969,7 +1970,7 @@
       {
         rules: [
           {
-            host: /^screenlist\.ru$/,
+            host: /^screenlist\.ru|ibunker\.us$/,
           },
         ],
         run: function () {
