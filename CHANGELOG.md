@@ -10,6 +10,7 @@
     * subirimagenes.com
     * screenlist.ru
     * freeporndumpster.com
+    * hotimg.com
 * removed
     * adjoin.me
     * linkbee.com

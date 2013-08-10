@@ -214,6 +214,7 @@ Stable version will upload to [here][1].
     * freeporndumpster.com
     * goimagehost.com
     * hostpics.info
+    * hotimg.com
     * ichan.org
     * imagearn.com
     * imagebam.com

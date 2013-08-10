@@ -284,6 +284,7 @@
 // @match          http://www.dumppix.com/viewer.php?*
 // @match          http://www.freeporndumpster.com/show.php?*
 // @match          http://www.hostpics.info/view.php?filename=*
+// @match          http://www.hotimg.com/image/*
 // @match          http://www.imagesnake.com/index.php?*
 // @match          http://www.imagesnake.com/show/*
 // @match          http://www.imgbabes.com/*.html
@@ -1984,6 +1985,19 @@
         run: function () {
           var i = $('#thepic');
           NoPicAds.redirect(i.src);
+        },
+      },
+
+      // hotimg
+      {
+        rules: [
+          {
+            host: /^www\.hotimg\.com$/,
+            path: /\/image(\/.*)/,
+          },
+        ],
+        run: function (m) {
+          NoPicAds.redirect('/direct' + m.path[1]);
         },
       },
 
