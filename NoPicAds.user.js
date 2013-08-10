@@ -329,7 +329,7 @@
   };
 
   function DomNotFoundError (selector) {
-    NoPicAdsError.call(this, $tpl('`{0}` not found', selector));
+    NoPicAdsError.call(this, $T('`{0}` not found', selector));
     this._setupStack();
   }
   DomNotFoundError.prototype = Object.create(NoPicAdsError.prototype);
@@ -435,7 +435,7 @@
     return $C(ns);
   }
 
-  function $tpl (s) {
+  function $T (s) {
     if (!s || arguments.length < 2) {
       return s;
     }
@@ -483,7 +483,7 @@
         return;
       }
       var from = window.location.toString();
-      NoPicAds.info($tpl('{0} -> {1}', from, to));
+      NoPicAds.info($T('{0} -> {1}', from, to));
       window.top.location.replace(to);
     },
 
