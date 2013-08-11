@@ -599,6 +599,7 @@
       i.setAttribute('src', imgSrc);
       document.body = document.createElement('body');
       document.body.style.textAlign = 'center';
+      document.body.style.background = 'black';
       document.body.appendChild(i);
     },
 
@@ -2010,6 +2011,7 @@
         ],
         run: function () {
           var i = $('#picture');
+          // FIXME somehow the mime type is text/html
           NoPicAds.replaceBody(i.src);
         },
       },
