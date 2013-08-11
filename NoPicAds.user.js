@@ -1984,12 +1984,25 @@
       {
         rules: [
           {
-            host: /^screenlist\.ru|ibunker\.us$/,
+            host: /^screenlist\.ru$/,
           },
         ],
         run: function () {
           var i = $('#picture');
           NoPicAds.redirect(i.src);
+        },
+      },
+
+      // ibunker
+      {
+        rules: [
+          {
+            host: /^ibunker\.us$/,
+          },
+        ],
+        run: function () {
+          var i = $('#picture');
+          NoPicAds.replaceBody(i.src);
         },
       },
 
