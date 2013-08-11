@@ -2002,6 +2002,7 @@
         ],
         run: function () {
           var i = $('#picture');
+          // FIXME somehow the mime type is text/html
           NoPicAds.replaceBody(i.src);
         },
       },
