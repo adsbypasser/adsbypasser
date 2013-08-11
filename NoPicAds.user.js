@@ -595,6 +595,7 @@
       i.setAttribute('src', imgSrc);
       document.body = document.createElement('body');
       document.body.style.textAlign = 'center';
+      document.body.style.background = 'black';
       document.body.appendChild(i);
     },
 
