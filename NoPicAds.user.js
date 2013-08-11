@@ -346,72 +346,66 @@
   DomNotFoundError.prototype.constructor = DomNotFoundError;
   DomNotFoundError.prototype.name = 'DomNotFoundError';
 
-  function CollectionProxy (collection) {
-    this._c = collection;
-  }
-  CollectionProxy._any = function (c, fn) {
-    if (c.some) {
-      return c.some(fn);
+  var $C;
+  (function () {
+
+    function any (c, fn) {
+      if (c.some) {
+        return c.some(fn);
+      }
+      return Object.keys(c).some(function (k) {
+        return fn(c[k], k, c);
+      });
     }
-    if (c instanceof NodeList) {
-      return Array.prototype.some.call(c, fn);
+
+    function all (c, fn) {
+      if (c.every) {
+        return c.every(fn);
+      }
+      return Object.keys(c).every(function (k) {
+        return fn(c[k], k, c);
+      });
     }
-    for (var k in c) {
-      if (c.hasOwnProperty(k)) {
-        if (fn(c[k], k, c)) {
+
+    function each (c, fn) {
+      if (c.forEach) {
+        c.forEach(fn);
+      } else {
+        Object.keys(c).forEach(function (k) {
+          fn(c[k], k, c);
+        });
+      }
+    }
+
+    function CollectionProxy (collection) {
+      this._c = collection;
+    }
+
+    CollectionProxy.prototype.each = function (fn) {
+      each(this._c, fn);
+      return this;
+    };
+
+    CollectionProxy.prototype.find = function (fn) {
+      var result;
+      any(this._c, function (value, index, self) {
+        if (fn(value, index, self)) {
+          result = value;
           return true;
         }
-      }
-    }
-    return false;
-  };
-  CollectionProxy._all = function (c, fn) {
-    if (c.every) {
-      return c.every(fn);
-    }
-    if (c instanceof NodeList) {
-      return Array.prototype.every.call(c, fn);
-    }
-    for (var k in c) {
-      if (c.hasOwnProperty(k)) {
-        if (!fn(c[k], k, c)) {
-          return false;
-        }
-      }
-    }
-    return true;
-  };
-  CollectionProxy.prototype.each = function (fn) {
-    if (this._c.forEach) {
-      // Array
-      this._c.forEach(fn);
-    } else if (this._c instanceof NodeList) {
-      // Array-like
-      Array.prototype.forEach.call(this._c, fn);
-    } else {
-      // Object
-      for (var k in this._c) {
-        if (this._c.hasOwnProperty(k)) {
-          fn(this._c[k], k, this._c);
-        }
-      }
-    }
-    return this;
-  };
-  CollectionProxy.prototype.find = function (fn) {
-    var result;
-    CollectionProxy._any(this._c, function (value, index, self) {
-      if (fn(value, index, self)) {
-        result = value;
-        return true;
-      }
-    });
-    return result;
-  };
-  CollectionProxy.prototype.all = function (fn) {
-    return CollectionProxy._all(this._c, fn);
-  };
+      });
+      return result;
+    };
 
+    CollectionProxy.prototype.all = function (fn) {
+      return all(this._c, fn);
+    };
+
+    $C = function (collection) {
+      return new CollectionProxy(collection);
+    };
+
+  }());
 
   function $ (selector, context) {
     if (!context || !context.querySelector) {
@@ -431,10 +425,6 @@
       $info(e);
       return null;
     }
-  }
-
-  function $C (collection) {
-    return new CollectionProxy(collection);
   }
 
   function $$ (selector, context) {
@@ -702,9 +692,9 @@
           a = '';
           for (var i = 0; i < h.length; ++i) {
             if (i % 2 === 0) {
-              a = a + h.charAt( i );
+              a = a + h.charAt(i);
             } else {
-              b = h.charAt( i ) + b;
+              b = h.charAt(i) + b;
             }
           }
           h = b64.decode(a + b);
@@ -2085,7 +2075,7 @@
         runner: pattern.run,
         matched: matched,
       };
-    };
+    }
 
     // <scheme>//<host>:<port><path><query><hash>
     var handler = find({
