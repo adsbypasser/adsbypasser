@@ -274,6 +274,7 @@
 // @match          http://imgfantasy.com/?p=*
 // @match          http://imgwiev.tk/?pm=*
 // @match          http://javelite.tk/*
+// @match          http://www.lienscash.com/l/*
 // @match          http://madlink.sk/*
 // @match          http://p.pw/*
 // @match          http://picshare.geenza.com/pics/*
@@ -2036,6 +2037,21 @@
         ],
         run: function (m) {
           NoPicAds.redirect('/direct' + m.path[1]);
+        },
+      },
+
+      // lienscash
+      {
+        rules: [
+          {
+            host: /^www\.lienscash\.com$/,
+          },
+        ],
+        run: function () {
+          NoPicAds.removeNodes('iframe');
+
+          var a = $('#time a');
+          NoPicAds.redirect(a.id);
         },
       },
 
