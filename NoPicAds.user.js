@@ -3,7 +3,7 @@
 // @namespace      FoolproofProject
 // @description    No Picture Advertisements
 // @copyright      2012+, legnaleurc (https://github.com/legnaleurc/nopicads)
-// @version        2.22.0
+// @version        2.22.1
 // @license        BSD
 // @updateURL      https://userscripts.org/scripts/source/154858.meta.js
 // @downloadURL    https://userscripts.org/scripts/source/154858.user.js
@@ -1986,12 +1986,25 @@
       {
         rules: [
           {
-            host: /^screenlist\.ru|ibunker\.us$/,
+            host: /^screenlist\.ru$/,
           },
         ],
         run: function () {
           var i = $('#picture');
           NoPicAds.redirect(i.src);
+        },
+      },
+
+      // ibunker
+      {
+        rules: [
+          {
+            host: /^ibunker\.us$/,
+          },
+        ],
+        run: function () {
+          var i = $('#picture');
+          NoPicAds.replaceBody(i.src);
         },
       },
 

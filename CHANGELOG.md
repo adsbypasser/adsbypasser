@@ -1,3 +1,8 @@
+## 2.22.1
+
+* fixed
+    * ibunker.us
+
 ## 2.22.0
 
 * fixed
