@@ -36,6 +36,7 @@
 // @match          http://*.linkbucks.com/*
 // @match          http://*.linkgalleries.net/*
 // @match          http://*.linkseer.net/*
+// @match          http://*.megaline.co/*
 // @match          http://*.miniurls.co/*
 // @match          http://*.picbucks.com/*
 // @match          http://*.picturesetc.net/*
@@ -630,6 +631,10 @@
         ],
         run: function () {
           NoPicAds.removeAllTimer();
+
+          if (unsafeWindow.document.body.onbeforeunload) {
+            unsafeWindow.document.body.onbeforeunload = null;
+          }
 
           if (unsafeWindow && unsafeWindow.Lbjs && unsafeWindow.Lbjs.TargetUrl) {
             NoPicAds.redirect(unsafeWindow.Lbjs.TargetUrl);

@@ -36,6 +36,7 @@ Stable version will upload to [here][1].
     * linkbucks.com
     * linkgalleries.net
     * linkseer.net
+    * megaline.co
     * miniurls.co
     * picbucks.com
     * picturesetc.net
