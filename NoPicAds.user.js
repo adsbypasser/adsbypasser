@@ -719,18 +719,12 @@
       {
         rules: [
           {
-            host: /turboimagehost\.com/,
+            host: /turboimagehost\.com$/,
           },
         ],
         run: function () {
-          var o = document.querySelector('#blanket');
-          if (o) {
-            o.style.width = '0px';
-          }
-          o = document.querySelector('#popUpDiv1');
-          if (o) {
-            o.style.visibility = 'hidden';
-          }
+          var i = $('#imageid');
+          NoPicAds.redirect(i.src);
         },
       },
 

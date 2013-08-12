@@ -2,6 +2,7 @@
 
 * fixed
     * adv.li
+    * turboimagehost.com
 
 ## 2.23.0
 
