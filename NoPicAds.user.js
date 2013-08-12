@@ -274,7 +274,7 @@
 // @match          http://imgbar.net/*
 // @match          http://imgfantasy.com/?p=*
 // @match          http://imgwiev.tk/?pm=*
-// @match          http://javelite.tk/*
+// @match          http://javelite.tk/viewer.php?id=*
 // @match          http://madlink.sk/*
 // @match          http://p.pw/*
 // @match          http://pics-money.ru/*
@@ -308,6 +308,7 @@
 // @match          http://www.x45x.info/?pt=*
 // @match          http://xip.ir/*
 // @match          http://zpag.es/*
+// @exclude        http://javelite.tk/
 // @exclude        http://madlink.sk/
 // @exclude        http://madlink.sk/*.html
 // @exclude        http://pics-money.ru/allpicfree/*

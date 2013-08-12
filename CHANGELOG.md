@@ -6,6 +6,7 @@
     * bc.vc
     * pixhost.org
     * pics-money.ru
+    * javelite.tk
 
 ## 2.23.0
 
