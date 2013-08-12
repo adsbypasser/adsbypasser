@@ -546,6 +546,7 @@
           form.appendChild(input);
       });
 
+      document.body.appendChild(form);
       form.submit();
     }
 
@@ -1198,10 +1199,10 @@
               return;
             }
           }
-          $postTo( '', {
+          $postTo('', {
             hidden: '1',
             image: ' ',
-          } );
+          });
         },
       },
 
