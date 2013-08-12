@@ -275,9 +275,9 @@
 // @match          http://imgfantasy.com/?p=*
 // @match          http://imgwiev.tk/?pm=*
 // @match          http://javelite.tk/*
-// @match          http://www.lienscash.com/l/*
 // @match          http://madlink.sk/*
 // @match          http://p.pw/*
+// @match          http://pics-money.ru/*
 // @match          http://picshare.geenza.com/pics/*
 // @match          http://pixhub.eu/*
 // @match          http://pushba.com/*
@@ -297,6 +297,7 @@
 // @match          http://www.hotimg.com/image/*
 // @match          http://www.imgbabes.com/*.html
 // @match          http://www.imgnip.com/viewerr*.php?file=*
+// @match          http://www.lienscash.com/l/*
 // @match          http://www.pic-upload.de/view-*.html
 // @match          http://www.pics-money.ru/*
 // @match          http://www.pixhost.org/show/*
@@ -309,6 +310,7 @@
 // @match          http://zpag.es/*
 // @exclude        http://madlink.sk/
 // @exclude        http://madlink.sk/*.html
+// @exclude        http://pics-money.ru/allpicfree/*
 // @exclude        http://www.linkbucks.com/
 // @exclude        http://www.pics-money.ru/allimage/*
 // ==/else==
@@ -1387,14 +1389,32 @@
         },
       },
 
+      // pics-money.ru
+      {
+        rules: [
+          {
+            host: /pics-money\.ru$/,
+            path: /^\/v\.php/,
+          },
+        ],
+        run: function () {
+          NoPicAds.removeNodes('iframe');
+
+          var i = $('center img:not([id])');
+          NoPicAds.redirect(i.src);
+        },
+      },
+
       // www.pics-money.ru
       {
         rules: [
           {
-            host: /www\.pics-money\.ru/,
+            host: /\.pics-money\.ru$/,
           },
         ],
         run: function () {
+          NoPicAds.removeNodes('iframe');
+
           var i = $('#d1 img');
           i = i.onclick.toString();
           i = i.match(/mshow\('(.+)'\)/);

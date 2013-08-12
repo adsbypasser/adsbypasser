@@ -5,6 +5,7 @@
     * turboimagehost.com
     * bc.vc
     * pixhost.org
+    * pics-money.ru
 
 ## 2.23.0
 
