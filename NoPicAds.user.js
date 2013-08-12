@@ -245,6 +245,7 @@
 // ==else==
 // @match          http://*.4owl.info/*
 // @match          http://*.alabout.com/*
+// @match          http://*.adv.li/*
 // @match          http://*.alafs.com/*
 // @match          http://*.directupload.net/file/*.htm
 // @match          http://*.imagebam.com/image/*
@@ -1796,7 +1797,7 @@
       {
         rules: [
           {
-            host: /^adv\.li$/,
+            host: /adv\.li$/,
           },
         ],
         run: function () {
