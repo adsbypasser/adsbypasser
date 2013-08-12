@@ -792,22 +792,6 @@
         },
       },
 
-      // pixhost
-      {
-        rules: [
-          {
-            host: /www\.pixhost\.org/,
-          },
-        ],
-        run: function () {
-          var o = document.querySelector('#web');
-          if (o) {
-            o.style.display = 'block';
-          }
-          NoPicAds.removeNodes('#js, #chatWindow, #taskbar');
-        },
-      },
-
       // ichan
       {
         rules: [
@@ -862,7 +846,7 @@
       {
         rules: [
           {
-            host: /imgchili\.(com|net)/,
+            host: /imgchili\.(com|net)|www\.pixhost\.org/,
           },
         ],
         run: function () {

@@ -4,6 +4,7 @@
     * adv.li
     * turboimagehost.com
     * bc.vc
+    * pixhost.org
 
 ## 2.23.0
 
