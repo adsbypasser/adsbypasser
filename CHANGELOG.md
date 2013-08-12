@@ -3,6 +3,7 @@
 * fixed
     * adv.li
     * turboimagehost.com
+    * bc.vc
 
 ## 2.23.0
 

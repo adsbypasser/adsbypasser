@@ -1046,12 +1046,11 @@
       {
         rules: [
           {
-            host: /bc\.vc/,
+            host: /^bc\.vc$/,
           },
         ],
         run: function () {
           NoPicAds.removeNodes('iframe');
-
 
           var content = $$('script').find(function (script) {
             return script.innerHTML.indexOf('make_log') >= 0;
@@ -1059,7 +1058,7 @@
           content = content.innerHTML;
 
           // inject AJAX into body
-          matches = content.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
+          var matches = content.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
           var url = matches[1];
           var opts = eval('(' + matches[2] + ')');
           function bc () {
