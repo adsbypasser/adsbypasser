@@ -428,7 +428,7 @@
   }
 
   function $$ (selector, context) {
-    if (!context || !context.querySelector) {
+    if (!context || !context.querySelectorAll) {
       context = document;
     }
     var ns = context.querySelectorAll(selector);
