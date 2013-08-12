@@ -377,6 +377,15 @@
       }
     }
 
+    function map (c, fn) {
+      if (c.map) {
+        return c.map(fn);
+      }
+      return Object.keys(c).map(function (k) {
+        return fn(c[k], k, c);
+      });
+    }
+
     function CollectionProxy (collection) {
       this._c = collection;
     }
@@ -399,6 +408,10 @@
 
     CollectionProxy.prototype.all = function (fn) {
       return all(this._c, fn);
+    };
+
+    CollectionProxy.prototype.map = function (fn) {
+      return map(this._c, fn);
     };
 
     $C = function (collection) {
@@ -493,11 +506,9 @@
       if (data instanceof String) {
         return data.toString();
       }
-      var tmp = [];
-      for (var key in data) {
-        tmp.push(key + '=' + data[key]);
-      }
-      return tmp.join('&');
+      return $C(data).map(function (v, k) {
+        return $T('{0}={1}', k, v);
+      }).join('&');
     }
 
     function ajax (method, url, data, callback) {
@@ -526,16 +537,13 @@
       form.method = method;
       form.action = path;
 
-      for (var key in params) {
-        if (params.hasOwnProperty(key)) {
+      $C(params).each(function (value, key) {
           var input = document.createElement('input');
           input.type = 'hidden';
           input.name = key;
-          input.value = params[key];
-
+          input.value = value;
           form.appendChild(input);
-        }
-      }
+      });
 
       form.submit();
     }
