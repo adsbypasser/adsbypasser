@@ -422,7 +422,7 @@
     try {
       return $(selector, context);
     } catch (e) {
-      $info(e);
+      $info(e.message);
       return null;
     }
   }
