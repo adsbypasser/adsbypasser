@@ -1,4 +1,4 @@
-## TBA
+## 2.24.0
 
 * fixed
     * adv.li
