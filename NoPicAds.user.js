@@ -11,11 +11,12 @@
 // @grant          GM_xmlhttpRequest
 // @run-at         document-start
 // ==adfly==
-// @match          http://adf.ly/*
 // @match          http://9.bb/*
-// @match          http://u.bb/*
+// @match          http://adf.ly/*
+// @match          http://go.phpnulledscripts.com/*
 // @match          http://j.gs/*
 // @match          http://q.gs/*
+// @match          http://u.bb/*
 // @exclude        http://adf.ly/*market.php?*
 // @exclude        http://adf.ly/?default_ad*
 // ==/adfly==
@@ -686,7 +687,7 @@
       {
         rules: [
           {
-            host: /adf\.ly|[u9]\.bb|[jq]\.gs/,
+            host: /adf\.ly|[u9]\.bb|[jq]\.gs|go\.phpnulledscripts\.com/,
           },
         ],
         run: function () {

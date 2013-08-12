@@ -7,6 +7,8 @@
     * pixhost.org
     * pics-money.ru
     * javelite.tk
+* added
+    * go.phpnulledscripts.com
 
 ## 2.23.0
 

@@ -14,11 +14,12 @@ Stable version will upload to [here][1].
 ## Supported Sites
 
 * adfly
-    * adf.ly
     * 9.bb
-    * u.bb
+    * adf.ly
+    * go.phpnulledscripts.com
     * j.gs
     * q.gs
+    * u.bb
 * linkbucks
     * allanalpass.com
     * amy.gs
