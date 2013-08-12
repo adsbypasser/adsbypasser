@@ -216,11 +216,10 @@
 // @match          http://coinurl.com/*
 // @match          http://cur.lv/*
 // ==/coinurl==
-// ==advertisingg==
+// ==adfmyid==
 // @match          http://adf.my.id/*
-// @match          http://advertisingg.com/*
 // @match          http://riurl.com/*
-// ==/advertisingg==
+// ==/adfmyid==
 // ==lnkco==
 // @match          http://lnk.co/*
 // @match          http://rdlnk.co/*
@@ -1171,11 +1170,11 @@
         },
       },
 
-      // advertisingg.com
+      // adf.my.id
       {
         rules: [
           {
-            host: /advertisingg\.com|adf\.my\.id|riurl\.com/,
+            host: /adf\.my\.id|riurl\.com/,
           },
         ],
         run: function () {

@@ -9,6 +9,8 @@
     * javelite.tk
 * added
     * go.phpnulledscripts.com
+* removed
+    * advertisingg.com
 
 ## 2.23.0
 

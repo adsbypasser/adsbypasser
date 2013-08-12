@@ -175,9 +175,8 @@ Stable version will upload to [here][1].
     * lnx.lu
     * url.fm
     * z.gs
-* advertisingg
+* adfmyid
     * adf.my.id
-    * advertisingg.com
     * riurl.com
 * lnkco
     * lnk.co
