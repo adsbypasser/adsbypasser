@@ -2,6 +2,7 @@
 
 * fixed
     * cl.my
+    * broken loop on Chrome
 
 ## 2.24.0
 
