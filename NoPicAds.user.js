@@ -357,6 +357,9 @@
       if (c.some) {
         return c.some(fn);
       }
+      if (c instanceof NodeList) {
+        Array.prototype.some.call(c, fn);
+      }
       return Object.keys(c).some(function (k) {
         return fn(c[k], k, c);
       });
@@ -366,6 +369,9 @@
       if (c.every) {
         return c.every(fn);
       }
+      if (c instanceof NodeList) {
+        Array.prototype.every.call(c, fn);
+      }
       return Object.keys(c).every(function (k) {
         return fn(c[k], k, c);
       });
@@ -374,6 +380,8 @@
     function each (c, fn) {
       if (c.forEach) {
         c.forEach(fn);
+      } else if (c instanceof NodeList) {
+        Array.prototype.forEach.call(c, fn);
       } else {
         Object.keys(c).forEach(function (k) {
           fn(c[k], k, c);
@@ -384,6 +392,9 @@
     function map (c, fn) {
       if (c.map) {
         return c.map(fn);
+      }
+      if (c instanceof NodeList) {
+        Array.prototype.map.call(c, fn);
       }
       return Object.keys(c).map(function (k) {
         return fn(c[k], k, c);
