@@ -1935,14 +1935,13 @@
           var matches = content.innerHTML.match(/'id': '([^']+)'/);
           content = matches[1];
 
-          $post('get_security_status.html', {
+          unsafeWindow.$.post('get_security_status.html', {
             context: 'url',
             cmd: 'chk',
             id: content,
-          }, function (text) {
-            var data = JSON.parse(text);
+          }, function (data) {
             NoPicAds.redirect(data.data.u);
-          });
+          }, 'json');
         },
       },
 
