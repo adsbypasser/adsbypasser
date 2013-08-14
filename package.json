@@ -9,6 +9,11 @@
   "devDependencies": {
     "grunt": "",
     "grunt-contrib-concat": "",
-    "grunt-contrib-clean": ""
+    "grunt-contrib-clean": "",
+    "grunt-mocha-test": "",
+    "chai": ""
+  },
+  "scripts": {
+    "test": "grunt test"
   }
 }

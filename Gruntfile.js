@@ -32,6 +32,11 @@ module.exports = function (grunt) {
       },
     },
     clean: ['dest'],
+    mochaTest: {
+      test: {
+        src: ['test/**/*.js'],
+      },
+    },
   });
 
   grunt.registerMultiTask('sites', function () {
@@ -85,8 +90,10 @@ module.exports = function (grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-mocha-test');
 
   grunt.registerTask('default', ['clean', 'sites', 'concat:metadata', 'concat:script', 'concat:nopicads']);
+  grunt.registerTask('test', 'mochaTest');
 
   function removeModelines (s) {
     return s.replace(/^\/\/\s*.+:.*[\r\n]+/gm, '');
@@ -106,6 +113,7 @@ module.exports = function (grunt) {
   }
 
 };
+
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
