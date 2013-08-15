@@ -343,7 +343,7 @@
   };
 
   function DomNotFoundError (selector) {
-    NoPicAdsError.call(this, $T('`{0}` not found', selector));
+    NoPicAdsError.call(this, $T('`{0}` not found')(selector));
     this._setupStack();
   }
   DomNotFoundError.prototype = Object.create(NoPicAdsError.prototype);
@@ -464,29 +464,33 @@
   }
 
   function $T (s) {
-    if (!s || arguments.length < 2) {
-      return s;
+    if (typeof s === 'string') {
+    } else if (s instanceof String) {
+      s = s.toString();
+    } else {
+      throw new NoPicAdsError('template must be a string');
     }
-
     var T = {
       '{{': '{',
       '}}': '}',
     };
-    var args = Array.prototype.slice.call(arguments, 1);
-    var kwargs = args[args.length-1];
+    return function () {
+      var args = Array.prototype.slice.call(arguments);
+      var kwargs = args[args.length-1];
 
-    return s.replace(/\{\{|\}\}|\{([^\}]+)\}/g, function (m, key) {
-      if (T.hasOwnProperty(m)) {
-        return T[m];
-      }
-      if (args.hasOwnProperty(key)) {
-        return args[key];
-      }
-      if (kwargs.hasOwnProperty(key)) {
-        return kwargs[key];
-      }
-      return m;
-    });
+      return s.replace(/\{\{|\}\}|\{([^\}]+)\}/g, function (m, key) {
+        if (T.hasOwnProperty(m)) {
+          return T[m];
+        }
+        if (args.hasOwnProperty(key)) {
+          return args[key];
+        }
+        if (kwargs.hasOwnProperty(key)) {
+          return kwargs[key];
+        }
+        return m;
+      });
+    };
   }
 
   function $nop () {
@@ -522,7 +526,7 @@
         return data.toString();
       }
       return $C(data).map(function (v, k) {
-        return $T('{0}={1}', k, v);
+        return $T('{0}={1}')(k, v);
       }).join('&');
     }
 
@@ -582,7 +586,7 @@
         return;
       }
       var from = window.location.toString();
-      $info($T('{0} -> {1}', from, to));
+      $info($T('{0} -> {1}')(from, to));
       window.top.location.replace(to);
     },
 
