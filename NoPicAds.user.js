@@ -2108,7 +2108,7 @@
       NoPicAds.disableWindowOpen();
       document.addEventListener('DOMContentLoaded', function () {
         handler.runner(handler.matched);
-      }.bind(this));
+      });
     }
 
   }());
