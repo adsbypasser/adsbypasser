@@ -1769,12 +1769,12 @@
 
           var f = unsafeWindow.fc;
           if (!f) {
-            throw new NoPicAds('window.fc is undefined');
+            throw new NoPicAdsError('window.fc is undefined');
           }
           f = f.toString();
           f = f.match(/href="([^"]*)/);
           if (!f) {
-            throw new NoPicAds('url pattern outdated');
+            throw new NoPicAdsError('url pattern outdated');
           }
           NoPicAds.redirect(f[1]);
         },
@@ -1916,7 +1916,7 @@
           var s = unsafeWindow.CountdownTimer.toString();
           s = s.match(/href="([^"]+)"/);
           if (!s) {
-            throw new NoPicAds('function changed');
+            throw new NoPicAdsError('function changed');
           }
           NoPicAds.redirect(s[1]);
         },
