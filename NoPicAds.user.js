@@ -288,6 +288,7 @@
 // @match          http://stash-coins.com/*
 // @match          http://tinypic.com/view.php?pic=*
 // @match          http://ulmt.in/*
+// @match          http://urlz.so/l/*
 // @match          http://www.bild.me/bild.php?file=*
 // @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.bilder-upload.eu/show.php?file=*
@@ -625,6 +626,23 @@
       $$(selector).each(function (e) {
         e.parentNode.removeChild(e);
       });
+    },
+
+    captcha: function (imgSrc, cb) {
+      var a = document.createElement('canvas');
+      var b = a.getContext('2d');
+      var c = new Image();
+      c.src = imgSrc;
+      c.onload = function () {
+        a.width = c.width;
+        a.height = c.height;
+        b.drawImage(c, 0, 0);
+        var d = a.toDataURL();
+        var e = d.substr(d.indexOf(',') + 1);
+        $post('http://www.wcpan.info/cgi-bin/captcha.cgi', {
+          i: e,
+        }, cb);
+      };
     },
 
     patterns: [
@@ -2066,6 +2084,29 @@
 
           var a = $('#time a');
           NoPicAds.redirect(a.id);
+        },
+      },
+
+      // urlz.so
+      {
+        rules: [
+          {
+            host: /^urlz\.so$/,
+          },
+        ],
+        run: function () {
+          var i = $_('img');
+          if (i) {
+            NoPicAds.captcha(i.src, function (a) {
+              var b = $('input[name=captcha]');
+              var c = $('input[name=submit]');
+              b.value = a;
+              c.click();
+            });
+            return;
+          }
+          i = $('td > a');
+          NoPicAds.redirect(i.href);
         },
       },
 
