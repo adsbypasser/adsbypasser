@@ -274,6 +274,7 @@
 // @match          http://imgbar.net/*
 // @match          http://imgfantasy.com/?p=*
 // @match          http://imgwiev.tk/?pm=*
+// @match          http://ity.im/*
 // @match          http://javelite.tk/viewer.php?id=*
 // @match          http://madlink.sk/*
 // @match          http://p.pw/*
@@ -2109,6 +2110,41 @@
           }
           i = $('td > a');
           NoPicAds.redirect(i.href);
+        },
+      },
+
+      // ity.im
+      {
+        rules: [
+          {
+            host: /^ity\.im$/,
+          },
+        ],
+        run: function () {
+          var f = $_('#main');
+          if (f) {
+            NoPicAds.redirect(f.src);
+          }
+          f = $$('frame').find(function (frame) {
+            return frame.src.indexOf('interheader.php') >= 0;
+          });
+          if (f) {
+            NoPicAds.redirect(f.src);
+          }
+
+          var data = null;
+          $$('script').find(function (script) {
+            data = script.innerHTML.match(/krypted=([^&]+)/);
+            return !!data;
+          });
+          if (!data) {
+            return;
+          }
+          data = data[1];
+          f = unsafeWindow.des('ksnslmtmk0v4Pdviusajqu', unsafeWindow.hexToString(data), 0, 0);
+          if (f) {
+            NoPicAds.redirect('http://ity.im/1104_21_50846_' + f);
+          }
         },
       },
 
