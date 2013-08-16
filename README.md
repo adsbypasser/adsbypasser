@@ -232,6 +232,7 @@ Stable version will upload to [here][1].
     * imgfantasy.com
     * imgnip.com
     * imgwiev.tk
+    * ity.im
     * javelite.tk
     * lienscash.com
     * madlink.sk
@@ -252,6 +253,7 @@ Stable version will upload to [here][1].
     * tinypic.com
     * turboimagehost.com
     * ulmt.in
+    * urlz.so
     * viidii.com
     * x45x.info
     * yfrog.com

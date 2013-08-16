@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * ulmt.in
+* added
+    * urlz.so
+    * ity.im
+
 ## 2.24.1
 
 * fixed
