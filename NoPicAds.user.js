@@ -1933,10 +1933,12 @@
         run: function () {
           var s = unsafeWindow.CountdownTimer.toString();
           s = s.match(/href="([^"]+)"/);
-          if (!s) {
+          if (s) {
+            NoPicAds.redirect(s[1]);
             throw new NoPicAdsError('function changed');
           }
-          NoPicAds.redirect(s[1]);
+          s = $('#iframe_win');
+          NoPicAds.redirect(s.src);
         },
       },
 
