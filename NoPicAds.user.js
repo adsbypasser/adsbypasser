@@ -526,7 +526,7 @@
         return data.toString();
       }
       return $C(data).map(function (v, k) {
-        return $T('{0}={1}')(k, v);
+        return $T('{0}={1}')(encodeURIComponent(k), encodeURIComponent(v));
       }).join('&');
     }
 
@@ -534,7 +534,7 @@
       var controller = GM_xmlhttpRequest({
         method: method,
         url: url,
-        data: encodeURI(toQuery(data)),
+        data: toQuery(data),
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
