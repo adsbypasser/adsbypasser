@@ -123,6 +123,16 @@
 // @match          http://*.pictureturn.com/*
 // @match          http://*.pixroute.com/*
 // @match          http://*.yankoimages.net/*
+// @match          http://imagecarry.com/*
+// @match          http://imagedunk.com/*
+// @match          http://imageporter.com/*
+// @match          http://imageswitch.com/*
+// @match          http://piclambo.net/*
+// @match          http://picleet.com/*
+// @match          http://picturedip.com/*
+// @match          http://pictureturn.com/*
+// @match          http://pixroute.com/*
+// @match          http://yankoimages.net/*
 // ==/imageporter==
 // ==reklama==
 // @match          http://comicalpic.net/img-*.html
