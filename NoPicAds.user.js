@@ -178,7 +178,6 @@
 // @match          http://*.abload.de/image.php?img=*
 // @match          http://abload.de/image.php?img=*
 // @match          http://fastpic.ru/view/*.html
-// @match          http://funkyimg.com/viewer.php?img=*
 // ==/abload==
 // ==adcrun==
 // @match          http://4ks.net/*
@@ -274,6 +273,7 @@
 // @match          http://bilurl.com/*
 // @match          http://cf.ly/*
 // @match          http://cl.my/*
+// @match          http://funkyimg.com/viewer.php?img=*
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ibunker.us/*
 // @match          http://ichan.org/*
@@ -1397,7 +1397,7 @@
       {
         rules: [
           {
-            host: /^(.+\.)?abload\.de|fastpic\.ru|funkyimg\.com$/,
+            host: /^(.+\.)?abload\.de|fastpic\.ru$/,
           },
         ],
         run: function () {
@@ -2155,6 +2155,19 @@
           if (f) {
             NoPicAds.redirect('http://ity.im/1104_21_50846_' + f);
           }
+        },
+      },
+
+      // funkyimg
+      {
+        rules: [
+          {
+            host: /^funkyimg\.com$/,
+          },
+        ],
+        run: function () {
+          var i = $('#viewer img');
+          NoPicAds.redirect(i.src);
         },
       },
 
