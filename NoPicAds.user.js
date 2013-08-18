@@ -1209,7 +1209,7 @@
           }
 
           // second pass
-          var o = $('#container img[alt="image"]');
+          var o = $('img[alt="image"]');
           NoPicAds.redirect(o.src);
         },
       },
