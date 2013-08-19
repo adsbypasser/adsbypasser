@@ -2108,18 +2108,23 @@
           },
         ],
         run: function () {
-          var i = $_('img');
+          var i = $_('td > a');
           if (i) {
-            NoPicAds.captcha(i.src, function (a) {
-              var b = $('input[name=captcha]');
-              var c = $('input[name=submit]');
-              b.value = a;
-              c.click();
-            });
+            i = i.href;
+            var m = i.match(/javascript:declocation\('(.+)'\);/);
+            if (m) {
+              i = atob(m[1]);
+            }
+            NoPicAds.redirect(i);
             return;
           }
-          i = $('td > a');
-          NoPicAds.redirect(i.href);
+          i = $('img');
+          NoPicAds.captcha(i.src, function (a) {
+            var b = $('input[name=captcha]');
+            var c = $('input[name=submit]');
+            b.value = a;
+            c.click();
+          });
         },
       },
 
