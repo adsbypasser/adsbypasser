@@ -307,7 +307,7 @@
 // @match          http://www.freeporndumpster.com/show.php?*
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.hotimg.com/image/*
-// @match          http://www.imgbabes.com/*.html
+// @match          http://www.imgbabes.com/*
 // @match          http://www.imgnip.com/viewerr*.php?file=*
 // @match          http://www.lienscash.com/l/*
 // @match          http://www.pic-upload.de/view-*.html
