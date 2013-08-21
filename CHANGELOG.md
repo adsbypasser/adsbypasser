@@ -1,3 +1,12 @@
+## 2.25.1
+
+* fixed
+    * linkbucks
+    * urlz.so
+    * imgbabes.com
+    * funkyimg.com
+    * imgonion.com
+
 ## 2.25.0
 
 * fixed

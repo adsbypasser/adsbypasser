@@ -147,7 +147,6 @@ Stable version will upload to [here][1].
 * abload
     * abload.de
     * fastpic.ru
-    * funkyimg.com
 * adcrun
     * 4ks.net
     * adcrun.ch
@@ -215,6 +214,7 @@ Stable version will upload to [here][1].
     * cl.my
     * directupload.net
     * dumppix.com
+    * funkyimg.com
     * freeporndumpster.com
     * goimagehost.com
     * hostpics.info
