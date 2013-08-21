@@ -685,6 +685,11 @@
             unsafeWindow.document.body.onbeforeunload = null;
           }
 
+          if (window.location.pathname.indexOf('verify') >= 0) {
+            NoPicAds.redirect('/');
+            return;
+          }
+
           if (unsafeWindow && unsafeWindow.Lbjs && unsafeWindow.Lbjs.TargetUrl) {
             NoPicAds.redirect(unsafeWindow.Lbjs.TargetUrl);
             return;
