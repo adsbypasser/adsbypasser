@@ -34,7 +34,6 @@ grunt
     * allanalpass.com
     * amy.gs
     * any.gs
-    * baberepublic.com
     * deb.gs
     * drstickyfingers.com
     * dyo.gs
