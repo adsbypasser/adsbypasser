@@ -1,5 +1,4 @@
 // ==UserScript==
-// @match          http://9.bb/*
 // @match          http://adf.ly/*
 // @match          http://go.phpnulledscripts.com/*
 // @match          http://j.gs/*
@@ -14,7 +13,7 @@
 
   $register({
     rule: {
-      host: /adf\.ly|[u9]\.bb|[jq]\.gs|go\.phpnulledscripts\.com/,
+      host: /^adf\.ly|u\.bb|[jq]\.gs|go\.phpnulledscripts\.com$/,
     },
     run: function () {
       $removeNodes('iframe');

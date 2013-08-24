@@ -24,7 +24,6 @@ grunt
 ## Supported Sites
 
 * adfly
-    * 9.bb
     * adf.ly
     * go.phpnulledscripts.com
     * j.gs

@@ -6,6 +6,7 @@
     * youfap.com
     * baberepublic.com
     * hentaita.com
+    * 9.bb
 * changed
     * split script to parts
 
