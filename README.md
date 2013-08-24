@@ -11,6 +11,16 @@ Forked from [RedirectionHelper] writen by [SuYS].
 Stable version will upload to [here][1].
 
 
+## How To Build
+
+Please install *npm* and run:
+
+```
+npm install
+grunt
+```
+
+
 ## Supported Sites
 
 * adfly
