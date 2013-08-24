@@ -8,6 +8,7 @@
     * hentaita.com
     * 9.bb
     * image69.us
+    * jpdown.info
 * changed
     * split script to parts
 

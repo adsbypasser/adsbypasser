@@ -9,7 +9,6 @@
 // ==/Mihalism Multi Host v1==
 // ==Mihalism Multi Host==
 // @match          http://howtohemorrhoidscure.com/viewer.php?file=*
-// @match          http://jpdown.info/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
 // ==/Mihalism Multi Host==
 // ==/UserScript==
@@ -27,19 +26,6 @@
       var uri = window.location.href.toString();
       uri = uri.replace('viewer.php?file=', 'images/');
       $redirect(uri);
-    },
-  });
-
-  // mihalism v2
-  $register({
-    rule: {
-      host: /jpdown\.info/,
-    },
-    run: function () {
-      $removeNodes('#divExoLayerWrapper, #fadeinbox');
-
-      var a = $('#page_body a');
-      $redirect(a.href);
     },
   });
 
