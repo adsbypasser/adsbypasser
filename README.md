@@ -77,7 +77,6 @@ grunt
     * urlbeat.net
     * urlpulse.net
     * whackyvidz.com
-    * youfap.com
     * youfap.me
     * yyv.co
     * zff.co

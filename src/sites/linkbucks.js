@@ -45,7 +45,6 @@
 // @match          http://*.urlbeat.net/*
 // @match          http://*.urlpulse.net/*
 // @match          http://*.whackyvidz.com/*
-// @match          http://*.youfap.com/*
 // @match          http://*.youfap.me/*
 // @match          http://*.yyv.co/*
 // @match          http://*.zff.co/*

@@ -3,6 +3,7 @@
 * removed
     * gzvd.info
     * image.torrentjav.net
+    * youfap.com
 * changed
     * split script to parts
 
