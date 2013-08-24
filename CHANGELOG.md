@@ -11,6 +11,7 @@
     * jpdown.info
     * pushba.com
     * imgwoot.com
+    * hosterbin.com
 * changed
     * split script to parts
 

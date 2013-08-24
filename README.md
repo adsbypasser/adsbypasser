@@ -91,7 +91,6 @@ grunt
 * reklama
     * comicalpic.net
     * croftimage.com
-    * hosterbin.com
     * imagedecode.com
     * imgserve.net
     * ligasampiona.com
