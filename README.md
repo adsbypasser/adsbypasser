@@ -93,7 +93,6 @@ grunt
     * croftimage.com
     * imagedecode.com
     * imgserve.net
-    * ligasampiona.com
     * zeljeimage.com
     * zonezeedimage.com
 * imageporter

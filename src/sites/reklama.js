@@ -3,7 +3,6 @@
 // @match          http://croftimage.com/img-*.html
 // @match          http://imagedecode.com/img-*.html
 // @match          http://imgserve.net/img-*.html
-// @match          http://ligasampiona.com/img-*.html
 // @match          http://zeljeimage.com/img-*.html
 // @match          http://zonezeedimage.com/img-*.html
 // ==/UserScript==
@@ -13,7 +12,7 @@
 
   $register({
     rule: {
-      host: /(imagedecode|zonezeedimage|zeljeimage|ligasampiona|croftimage)\.com|(comicalpic|imgserve)\.net/,
+      host: /(imagedecode|zonezeedimage|zeljeimage|croftimage)\.com|(comicalpic|imgserve)\.net/,
     },
     run: function () {
       var o = $('#container img[class^=centred]');

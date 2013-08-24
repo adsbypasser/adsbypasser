@@ -12,6 +12,7 @@
     * pushba.com
     * imgwoot.com
     * hosterbin.com
+    * ligasampiona.com
 * changed
     * split script to parts
 
