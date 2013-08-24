@@ -98,7 +98,6 @@ grunt
     * comicalpic.net
     * croftimage.com
     * hosterbin.com
-    * image.torrentjav.net
     * imagedecode.com
     * imgserve.net
     * ligasampiona.com

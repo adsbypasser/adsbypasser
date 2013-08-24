@@ -2,6 +2,7 @@
 
 * removed
     * gzvd.info
+    * image.torrentjav.net
 * changed
     * split script to parts
 
