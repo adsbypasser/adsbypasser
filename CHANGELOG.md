@@ -5,6 +5,7 @@
     * image.torrentjav.net
     * youfap.com
     * baberepublic.com
+    * hentaita.com
 * changed
     * split script to parts
 

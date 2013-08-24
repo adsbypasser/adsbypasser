@@ -11,11 +11,8 @@
 // @match          http://image69.us/x/viewer.php?file=*
 // @match          http://jpdown.info/viewer.php?file=*
 // ==/Mihalism Multi Host v2==
-// ==Mihalism Multi Host v3==
-// @match          http://hentaita.com/viewer.php?file=*
-// @match          http://howtohemorrhoidscure.com/viewer.php?file=*
-// ==/Mihalism Multi Host v3==
 // ==Mihalism Multi Host==
+// @match          http://howtohemorrhoidscure.com/viewer.php?file=*
 // @match          http://image69.us/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
 // ==/Mihalism Multi Host==
@@ -59,10 +56,10 @@
     run: v2,
   });
 
-  // mihalism v3
+  // howtohemorrhoidscure.com
   $register({
     rule: {
-      host: /hentaita\.com|howtohemorrhoidscure\.com/,
+      host: /howtohemorrhoidscure\.com/,
     },
     run: function () {
       var a = $('#page_body a');
