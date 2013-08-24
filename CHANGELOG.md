@@ -1,5 +1,7 @@
 ## TBA
 
+* removed
+    * gzvd.info
 * changed
     * split script to parts
 

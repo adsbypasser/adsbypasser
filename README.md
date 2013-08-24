@@ -85,7 +85,6 @@ grunt
 * Mihalism Multi Host
     * freeuploadimages.org
     * gallery.jpavgod.com
-    * gzvd.info
     * hentai-hosting.com
     * hentaita.com
     * howtohemorrhoidscure.com

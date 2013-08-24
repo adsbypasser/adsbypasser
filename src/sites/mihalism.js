@@ -12,7 +12,6 @@
 // @match          http://jpdown.info/viewer.php?file=*
 // ==/Mihalism Multi Host v2==
 // ==Mihalism Multi Host v3==
-// @match          http://gzvd.info/viewer.php?file=*
 // @match          http://hentaita.com/viewer.php?file=*
 // @match          http://howtohemorrhoidscure.com/viewer.php?file=*
 // ==/Mihalism Multi Host v3==
@@ -63,7 +62,7 @@
   // mihalism v3
   $register({
     rule: {
-      host: /gzvd\.info|hentaita\.com|howtohemorrhoidscure\.com/,
+      host: /hentaita\.com|howtohemorrhoidscure\.com/,
     },
     run: function () {
       var a = $('#page_body a');
