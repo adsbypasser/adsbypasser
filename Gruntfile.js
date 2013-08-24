@@ -11,22 +11,30 @@ module.exports = function (grunt) {
     },
     concat: {
       metadata: {
+        options: {
+          banner: '// ==UserScript==\n' + grunt.file.read('src/utils/metadata.js'),
+          footer: '\n// ==/UserScript==\n',
+        },
         src: ['dest/sites/*.metadata.js'],
-        dest: 'dest/sites/metadata.js',
+        dest: 'dest/metadata.js',
       },
       script: {
-        src: ['dest/sites/*.script.js'],
-        dest: 'dest/sites/script.js',
+        src: ['src/utils/sugar.js', 'src/utils/dom.js', 'dest/sites/*.script.js'],
+        dest: 'dest/script.js',
       },
-      build: {
-        src: ['dest/sites/metadata.js', 'dest/sites/script.min.js'],
+      nopicads: {
+        src: ['dest/metadata.js', 'dest/script.min.js'],
         dest: 'dest/nopicads.user.js',
+      },
+      debug: {
+        src: ['dest/metadata.js', 'dest/script.js'],
+        dest: 'dest/nopicads.debug.js',
       },
     },
     uglify: {
-      build: {
-        src: 'dest/sites/script.js',
-        dest: 'dest/sites/script.min.js',
+      script: {
+        src: 'dest/script.js',
+        dest: 'dest/script.min.js',
       },
     },
   });
@@ -55,7 +63,8 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['sites', 'concat:metadata', 'concat:script', 'uglify', 'concat:build']);
+  grunt.registerTask('default', ['sites', 'concat:metadata', 'concat:script', 'uglify', 'concat:nopicads']);
+  grunt.registerTask('debug', ['sites', 'concat:metadata', 'concat:script', 'concat:debug']);
 
 };
 
