@@ -133,9 +133,6 @@ grunt
 * imgdino
     * imgdino.com
     * imgtiger.com
-* imgpony
-    * imgpony.com
-    * imgtrick.com
 * hanimes
     * adultmove.info
     * h-animes.info
@@ -229,6 +226,7 @@ grunt
     * imgbar.net
     * imgfantasy.com
     * imgnip.com
+    * imgpony.com
     * imgwiev.tk
     * ity.im
     * javelite.tk

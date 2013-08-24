@@ -30,6 +30,7 @@
 // @match          http://imgah.com/*
 // @match          http://imgbar.net/*
 // @match          http://imgfantasy.com/?p=*
+// @match          http://imgpony.com/viewer3.php?img=*
 // @match          http://imgwiev.tk/?pm=*
 // @match          http://ity.im/*
 // @match          http://javelite.tk/viewer.php?id=*
@@ -968,6 +969,16 @@
     run: function () {
       var i = $('#viewer img');
       $redirect(i.src);
+    },
+  });
+
+  $register({
+    rule: {
+      host: /imgpony\.com/,
+      query: /\?img=(.+)/,
+    },
+    run: function (m) {
+      $redirect('/images/' + m.query[1]);
     },
   });
 

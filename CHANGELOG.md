@@ -14,6 +14,7 @@
     * hosterbin.com
     * ligasampiona.com
     * imagejumbo.com
+    * imgtrick.com
 * changed
     * split script to parts
 
