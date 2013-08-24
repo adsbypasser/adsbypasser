@@ -38,7 +38,6 @@
 // @match          http://pics-money.ru/*
 // @match          http://picshare.geenza.com/pics/*
 // @match          http://pixhub.eu/*
-// @match          http://pushba.com/*
 // @match          http://qrrro.com/images/*.html
 // @match          http://ref.so/*
 // @match          http://screenlist.ru/details.php?image_id=*
@@ -155,17 +154,6 @@
           a.href = a.href.replace(/http:\/\/.+\/url\/(?=http:\/\/)/, '');
         }
       });
-    },
-  });
-
-  // pushba
-  $register({
-    rule: {
-      host: /pushba\.com$/,
-    },
-    run: function () {
-      var o = $('#urlTextBox');
-      $redirect(o.value);
     },
   });
 

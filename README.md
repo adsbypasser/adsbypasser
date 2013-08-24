@@ -244,7 +244,6 @@ grunt
     * picshare.geenza.com
     * pixhost.org
     * pixhub.eu
-    * pushba.com
     * qrrro.com
     * ref.so
     * screenlist.ru
