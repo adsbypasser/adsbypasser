@@ -1,4 +1,4 @@
-## TBA
+## 3.0.0
 
 * removed
     * gzvd.info
