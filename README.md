@@ -126,7 +126,6 @@ grunt
     * picfox.org
 * imagecherry
     * imagecherry.com
-    * imagejumbo.com
     * imgpo.st
 * imgchili
     * imgchili.com

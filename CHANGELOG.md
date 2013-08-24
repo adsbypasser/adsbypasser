@@ -13,6 +13,7 @@
     * imgwoot.com
     * hosterbin.com
     * ligasampiona.com
+    * imagejumbo.com
 * changed
     * split script to parts
 

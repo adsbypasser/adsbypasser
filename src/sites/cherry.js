@@ -1,6 +1,5 @@
 // ==UserScript==
 // @match          http://imagecherry.com/*
-// @match          http://imagejumbo.com/*
 // @match          http://imgpo.st/*
 // ==/UserScript==
 
@@ -9,7 +8,7 @@
 
   $register({
     rule: {
-      host: /imagecherry\.com|imgpo\.st|imagejumbo\.com/,
+      host: /imagecherry\.com|imgpo\.st/,
     },
     run: function () {
       var o = $('img.pic');
