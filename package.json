@@ -1,0 +1,13 @@
+{
+  "name": "nopicads",
+  "version": "3.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/legnaleurc/nopicads.git"
+  },
+  "devDependencies": {
+    "grunt": "",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-uglify": ""
+  }
+}
