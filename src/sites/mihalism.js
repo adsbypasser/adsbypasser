@@ -7,13 +7,9 @@
 // @match          http://pornpicuploader.com/viewer.php?file=*
 // @match          http://shareimage.ro/viewer.php?file=*
 // ==/Mihalism Multi Host v1==
-// ==Mihalism Multi Host v2==
-// @match          http://image69.us/x/viewer.php?file=*
-// @match          http://jpdown.info/viewer.php?file=*
-// ==/Mihalism Multi Host v2==
 // ==Mihalism Multi Host==
 // @match          http://howtohemorrhoidscure.com/viewer.php?file=*
-// @match          http://image69.us/viewer.php?file=*
+// @match          http://jpdown.info/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
 // ==/Mihalism Multi Host==
 // ==/UserScript==
@@ -35,25 +31,16 @@
   });
 
   // mihalism v2
-  function v2 () {
-    // for jpdown.info
-    $removeNodes('#divExoLayerWrapper, #fadeinbox');
-
-    var a = $('#page_body a');
-    $redirect(a.href);
-  }
   $register({
     rule: {
       host: /jpdown\.info/,
     },
-    run: v2,
-  });
-  $register({
-    rule: {
-      host: /image69\.us/,
-      path: /\/x\/.+/,
+    run: function () {
+      $removeNodes('#divExoLayerWrapper, #fadeinbox');
+
+      var a = $('#page_body a');
+      $redirect(a.href);
     },
-    run: v2,
   });
 
   // howtohemorrhoidscure.com
@@ -69,20 +56,6 @@
       if (a >= 0) {
         $redirect(s.substr(a));
       }
-    },
-  });
-
-  // image69
-  $register({
-    rule: {
-      host: /image69\.us/,
-    },
-    run: function (m) {
-      var a = $('#page_body .text_align_center a');
-      var s = a.href;
-      // the real link does not immediately appears after http://
-      a = s.lastIndexOf(m.host[0]);
-      $redirect('http://' + s.substr(a));
     },
   });
 

@@ -7,6 +7,7 @@
     * baberepublic.com
     * hentaita.com
     * 9.bb
+    * image69.us
 * changed
     * split script to parts
 
