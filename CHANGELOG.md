@@ -10,6 +10,7 @@
     * image69.us
     * jpdown.info
     * pushba.com
+    * imgwoot.com
 * changed
     * split script to parts
 

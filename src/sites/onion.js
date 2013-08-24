@@ -8,7 +8,6 @@
 // @match          http://imgonion.com/img-*.html
 // @match          http://imgrill.com/img-*.html
 // @match          http://imgtube.net/img-*.html
-// @match          http://imgwoot.com/img-*.html
 // @match          http://pixup.us/img-*.html
 // @match          http://www.imagefolks.com/img-*.html
 // ==/UserScript==
@@ -18,7 +17,7 @@
 
   $register({
     rule: {
-      host: /(img(onion|rill|money|woot|corn)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us/,
+      host: /(img(onion|rill|money|corn)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us/,
     },
     run: function () {
       var node = $_('#continuetoimage > form input');

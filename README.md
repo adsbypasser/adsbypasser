@@ -122,7 +122,6 @@ grunt
     * imgonion.com
     * imgrill.com
     * imgtube.net
-    * imgwoot.com
     * pixup.us
 * picfox
     * amateurfreak.org
