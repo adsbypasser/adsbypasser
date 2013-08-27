@@ -1,3 +1,10 @@
+## 3.1.0
+
+* added
+    * imgboo.me
+* fixed
+    * broken replaceBody function
+
 ## 3.0.0
 
 * removed

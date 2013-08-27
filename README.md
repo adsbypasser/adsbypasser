@@ -113,6 +113,7 @@ grunt
     * imagecorn.com
     * imagefolks.com
     * imagepicsa.com
+    * imgboo.me
     * imgcandy.net
     * imgcloud.co
     * imgcorn.com
