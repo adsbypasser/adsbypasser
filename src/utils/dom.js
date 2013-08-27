@@ -170,7 +170,7 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
   };
 
   $replaceBody = function (imgSrc) {
-    NoPicAds.removeAllTimer();
+    $removeAllTimer();
     var i = document.createElement('img');
     i.setAttribute('src', imgSrc);
     document.body = document.createElement('body');
