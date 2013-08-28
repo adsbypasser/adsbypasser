@@ -9,6 +9,7 @@
 // @match          http://*.fapoff.com/*
 // @match          http://*.filesonthe.net/*
 // @match          http://*.freean.us/*
+// @match          http://*.freegaysitepass.com/
 // @match          http://*.galleries.bz/*
 // @match          http://*.goneviral.com/*
 // @match          http://*.hornywood.tv/*

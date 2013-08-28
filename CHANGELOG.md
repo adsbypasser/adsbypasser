@@ -10,6 +10,7 @@
     * imagefruit.com
     * cash4files.com
     * goneviral.com
+    * freegaysitepass.com
 
 ## 3.1.0
 

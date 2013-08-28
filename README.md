@@ -40,6 +40,7 @@ grunt
     * fapoff.com
     * filesonthe.net
     * freean.us
+    * freegaysitepass.com
     * galleries.bz
     * goneviral.com
     * hornywood.tv
