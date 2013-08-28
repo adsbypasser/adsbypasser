@@ -33,6 +33,7 @@ grunt
     * allanalpass.com
     * amy.gs
     * any.gs
+    * cash4files.com
     * deb.gs
     * drstickyfingers.com
     * dyo.gs

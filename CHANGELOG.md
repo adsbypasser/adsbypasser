@@ -8,6 +8,7 @@
     * goimagehost.com
 * added
     * imagefruit.com
+    * cash4files.com
 
 ## 3.1.0
 

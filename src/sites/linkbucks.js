@@ -2,6 +2,7 @@
 // @match          http://*.allanalpass.com/*
 // @match          http://*.amy.gs/*
 // @match          http://*.any.gs/*
+// @match          http://*.cash4files.com/*
 // @match          http://*.deb.gs/*
 // @match          http://*.drstickyfingers.com/*
 // @match          http://*.dyo.gs/*
