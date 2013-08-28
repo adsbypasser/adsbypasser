@@ -356,7 +356,7 @@
       path: /\/img_show\.php/,
     },
     run: function () {
-      var i = $('a.pic1 img');
+      var i = $('center img');
       $redirect(i.src);
     },
   });

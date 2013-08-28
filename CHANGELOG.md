@@ -3,6 +3,7 @@
 * fixed
     * amateurfreak.org
     * imgnip.com
+    * imgbar.net
 * added
     * imagefruit.com
 
