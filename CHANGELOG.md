@@ -15,6 +15,7 @@
     * pornyhost.com
     * clb1.com
     * urlgalleries.com
+    * urlcash.com
 
 ## 3.1.0
 

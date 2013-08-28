@@ -189,6 +189,7 @@ grunt
     * peekatmygirlfriend.com
     * pornyhost.com
     * smilinglinks.com
+    * urlcash.com
     * urlcash.org
     * urlcash.net
     * urlgalleries.com

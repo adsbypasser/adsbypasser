@@ -8,8 +8,7 @@
 // @match          http://*.peekatmygirlfriend.com/*
 // @match          http://*.pornyhost.com/*
 // @match          http://*.smilinglinks.com/*
-// @match          http://*.urlcash.net/*
-// @match          http://*.urlcash.org/*
+// @include        /http://.+\.urlcash\.(com|net|org)\/.*/
 // @match          http://*.urlgalleries.com/*
 // @match          http://*.xxxs.org/*
 // @match          http://celebclk.com/*
@@ -20,7 +19,7 @@
 
   $register({
     rule: {
-      host: /urlcash\.(net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks|peekatmygirlfriend|pornyhost|clb1|urlgalleries)\.com|looble\.net|xxxs\.org$/,
+      host: /urlcash\.(com|net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks|peekatmygirlfriend|pornyhost|clb1|urlgalleries)\.com|looble\.net|xxxs\.org$/,
     },
     run: function () {
       if (unsafeWindow && unsafeWindow.linkDestUrl) {
