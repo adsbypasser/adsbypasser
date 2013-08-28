@@ -1,5 +1,4 @@
-var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$, $redirect, $removeAllTimer, $enableScrolling, $replaceBody, $removeNodes, $captcha, $register;
-(function () {
+(function (root) {
   'use strict';
 
 
@@ -23,7 +22,7 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
       this.stack = this._stack.join('\n');
     }
   };
-  NoPicAdsError = NoPicAdsError;
+  root.NoPicAdsError = NoPicAdsError;
 
   function DomNotFoundError (selector) {
     NoPicAdsError.call(this, $T('`{0}` not found')(selector));
@@ -32,7 +31,7 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
   DomNotFoundError.prototype = Object.create(NoPicAdsError.prototype);
   DomNotFoundError.prototype.constructor = DomNotFoundError;
   DomNotFoundError.prototype.name = 'DomNotFoundError';
-  DomNotFoundError = DomNotFoundError;
+  root.DomNotFoundError = DomNotFoundError;
 
 
   function log (method, args) {
@@ -41,11 +40,11 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
     console[method].apply(console, args);
   }
 
-  $info = function () {
+  root.$info = function () {
     log('info', arguments);
   };
 
-  $warn = function () {
+  root.$warn = function () {
     log('warn', arguments);
   };
 
@@ -100,16 +99,16 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
     form.submit();
   }
 
-  $post = function (url, data, callback) {
+  root.$post = function (url, data, callback) {
     return ajax('POST', url, data, callback);
   };
 
-  $postAndGo = function (url, data) {
+  root.$postAndGo = function (url, data) {
     go(url, data, 'post');
   };
 
 
-  $ = function (selector, context) {
+  root.$ = function (selector, context) {
     if (!context || !context.querySelector) {
       context = document;
     }
@@ -120,7 +119,7 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
     return n;
   };
 
-  $_ = function (selector, context) {
+  root.$_ = function (selector, context) {
     try {
       return $(selector, context);
     } catch (e) {
@@ -129,7 +128,7 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
     }
   };
 
-  $$ = function (selector, context) {
+  root.$$ = function (selector, context) {
     if (!context || !context.querySelectorAll) {
       context = document;
     }
@@ -138,7 +137,7 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
   };
 
 
-  $redirect = function (to) {
+  root.$redirect = function (to) {
     if (!to) {
       $warn('false URL');
       return;
@@ -148,7 +147,7 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
     window.top.location.replace(to);
   };
 
-  $removeAllTimer = function () {
+  root.$removeAllTimer = function () {
     var intervalID = window.setInterval($nop, 10);
     while (intervalID > 0) {
       window.clearInterval(intervalID--);
@@ -164,12 +163,12 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
     }
   }
 
-  $enableScrolling = function () {
+  root.$enableScrolling = function () {
     var o = document.compatMode === 'CSS1Compat' ? document.documentElement : document.body;
     o.style.overflow = '';
   };
 
-  $replaceBody = function (imgSrc) {
+  root.$replaceBody = function (imgSrc) {
     $removeAllTimer();
     var i = document.createElement('img');
     i.setAttribute('src', imgSrc);
@@ -179,13 +178,13 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
     document.body.appendChild(i);
   };
 
-  $removeNodes = function (selector) {
+  root.$removeNodes = function (selector) {
     $$(selector).each(function (e) {
       e.parentNode.removeChild(e);
     });
   };
 
-  $captcha = function (imgSrc, cb) {
+  root.$captcha = function (imgSrc, cb) {
     var a = document.createElement('canvas');
     var b = a.getContext('2d');
     var c = new Image();
@@ -205,7 +204,7 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
 
   var patterns = [];
 
-  $register = function (pattern) {
+  root.$register = function (pattern) {
     patterns.push(pattern);
   };
 
@@ -248,7 +247,7 @@ var NoPicAdsError, DomNotFoundError, $info, $warn, $post, $postAndGo, $, $_, $$,
   });
 
 
-})();
+})((0,eval)('this'));
 
 
 // vim: ts=2 sts=2 sw=2 et

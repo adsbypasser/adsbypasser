@@ -1,5 +1,4 @@
-var $C, $T, $nop;
-(function () {
+(function (root) {
   'use strict';
 
 
@@ -79,12 +78,12 @@ var $C, $T, $nop;
     return map(this._c, fn);
   };
 
-  $C = function (collection) {
+  root.$C = function (collection) {
     return new CollectionProxy(collection);
   };
 
 
-  $T = function (s) {
+  root.$T = function (s) {
     if (typeof s === 'string') {
     } else if (s instanceof String) {
       s = s.toString();
@@ -115,11 +114,11 @@ var $C, $T, $nop;
   };
 
 
-  $nop = function () {
+  root.$nop = function () {
   };
 
 
-})();
+})((0,eval)('this'));
 
 
 // vim: ts=2 sts=2 sw=2 et
