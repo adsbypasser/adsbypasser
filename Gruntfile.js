@@ -8,6 +8,10 @@ module.exports = function (grunt) {
         src: ['src/sites/*.js'],
         dest: 'dest/sites',
       },
+      strip: {
+        src: ['src/utils/*.js'],
+        dest: 'dest/utils',
+      },
     },
     concat: {
       metadata: {
@@ -19,7 +23,7 @@ module.exports = function (grunt) {
         dest: 'dest/metadata.js',
       },
       script: {
-        src: ['src/utils/sugar.js', 'src/utils/dom.js', 'dest/sites/*.script.js'],
+        src: ['dest/utils/sugar.js', 'dest/utils/dom.js', 'dest/sites/*.script.js'],
         dest: 'dest/script.js',
       },
       nopicads: {
@@ -40,24 +44,46 @@ module.exports = function (grunt) {
   });
 
   grunt.registerMultiTask('sites', function () {
-    this.files.forEach(function (f) {
-      grunt.file.mkdir(f.dest);
+    var handler = {
 
-      f.src.forEach(function (filepath) {
-        var m = filepath.match(/([^\/]+)\.js$/);
-        var basename = m[1];
-        var metadata_file = f.dest + '/' + basename + '.metadata.js';
-        var script_file = f.dest + '/' + basename + '.script.js';
+      split: function () {
+        this.files.forEach(function (f) {
+          grunt.file.mkdir(f.dest);
 
-        var source = grunt.file.read(filepath);
-        m = source.match(/\/\/ ==UserScript==([\s\S]*)\/\/ ==\/UserScript==([\s\S]*)/m);
-        var metadata = m[1].trim();
-        var script = m[2].trim();
+          f.src.forEach(function (filepath) {
+            var basename = baseName(filepath);
+            var metadata_file = f.dest + '/' + basename + '.metadata.js';
+            var script_file = f.dest + '/' + basename + '.script.js';
 
-        grunt.file.write(metadata_file, metadata);
-        grunt.file.write(script_file, script);
-      });
-    });
+            var source = grunt.file.read(filepath);
+            var m = source.match(/\/\/ ==UserScript==([\s\S]*)\/\/ ==\/UserScript==([\s\S]*)/m);
+            var metadata = m[1].trim();
+            var script = removeModelines(m[2]).trim() + '\n';
+
+            grunt.file.write(metadata_file, metadata);
+            grunt.file.write(script_file, script);
+          });
+        });
+      },
+
+      strip: function () {
+        this.files.forEach(function (f) {
+          grunt.file.mkdir(f.dest);
+
+          f.src.forEach(function (filepath) {
+            var script_file = f.dest + '/' + baseName(filepath) + '.js';
+
+            var source = grunt.file.read(filepath);
+            var script = removeModelines(source).trim() + '\n';
+
+            grunt.file.write(script_file, script);
+          });
+        });
+      },
+
+    };
+
+    handler[this.target].call(this);
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
@@ -65,6 +91,15 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', ['sites', 'concat:metadata', 'concat:script', 'uglify', 'concat:nopicads']);
   grunt.registerTask('debug', ['sites', 'concat:metadata', 'concat:script', 'concat:debug']);
+
+  function removeModelines (s) {
+    return s.replace(/^\/\/\s*.+:.*[\r\n]/gm, '');
+  }
+
+  function baseName (s) {
+    var m = s.match(/([^\/]+)\.js$/);
+    return m[1];
+  }
 
 };
 
