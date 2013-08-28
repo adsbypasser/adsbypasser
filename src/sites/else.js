@@ -26,6 +26,7 @@
 // @match          http://ichan.org/*
 // @match          http://imagearn.com/image.php?id=*
 // @match          http://imagescream.com/img/soft/*
+// @match          http://imagescream.com/?v=*
 // @match          http://imagetwist.com/*
 // @match          http://imgah.com/*
 // @match          http://imgbar.net/*
@@ -464,9 +465,20 @@
   $register({
     rule: {
       host: /imagescream\.com/,
+      path: /^\/img\/soft\//,
     },
     run: function () {
       var i = $('#shortURL-content img');
+      $redirect(i.src);
+    },
+  });
+  $register({
+    rule: {
+      host: /imagescream\.com/,
+      query: /^\?v=/,
+    },
+    run: function () {
+      var i = $('#imagen img');
       $redirect(i.src);
     },
   });
