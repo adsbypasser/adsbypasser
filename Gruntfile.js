@@ -31,6 +31,7 @@ module.exports = function (grunt) {
         dest: 'dest/nopicads.user.js',
       },
     },
+    clean: ['dest'],
   });
 
   grunt.registerMultiTask('sites', function () {
@@ -77,8 +78,9 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
-  grunt.registerTask('default', ['sites', 'concat:metadata', 'concat:script', 'concat:nopicads']);
+  grunt.registerTask('default', ['clean', 'sites', 'concat:metadata', 'concat:script', 'concat:nopicads']);
 
   function removeModelines (s) {
     return s.replace(/^\/\/\s*.+:.*[\r\n]/gm, '');
