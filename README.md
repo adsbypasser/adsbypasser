@@ -41,6 +41,7 @@ grunt
     * filesonthe.net
     * freean.us
     * galleries.bz
+    * goneviral.com
     * hornywood.tv
     * linkbabes.com
     * linkbucks.com

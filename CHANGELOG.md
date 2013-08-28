@@ -9,6 +9,7 @@
 * added
     * imagefruit.com
     * cash4files.com
+    * goneviral.com
 
 ## 3.1.0
 

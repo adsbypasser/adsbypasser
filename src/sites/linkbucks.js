@@ -10,6 +10,7 @@
 // @match          http://*.filesonthe.net/*
 // @match          http://*.freean.us/*
 // @match          http://*.galleries.bz/*
+// @match          http://*.goneviral.com/*
 // @match          http://*.hornywood.tv/*
 // @match          http://*.linkbabes.com/*
 // @match          http://*.linkbucks.com/*
