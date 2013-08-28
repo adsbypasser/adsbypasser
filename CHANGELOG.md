@@ -1,3 +1,10 @@
+## TBA
+
+* fixed
+    * duplicated rules
+* changed
+    * do not uglify script
+
 ## 3.2.0
 
 * fixed
