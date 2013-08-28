@@ -186,6 +186,7 @@ grunt
     * eightteen.com
     * looble.net
     * peekatmygirlfriend.com
+    * pornyhost.com
     * smilinglinks.com
     * urlcash.org
     * urlcash.net
