@@ -55,7 +55,7 @@
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.hotimg.com/image/*
 // @match          http://www.imgbabes.com/*
-// @match          http://www.imgnip.com/viewerr*.php?file=*
+// @include        /http://(www\.)?imgnip\.com/viewer.*\.php\?file=.*/
 // @match          http://www.lienscash.com/l/*
 // @match          http://www.pic-upload.de/view-*.html
 // @match          http://www.pics-money.ru/*
@@ -482,10 +482,10 @@
     },
   });
 
-  // www.imgnip.com
+  // imgnip.com
   $register({
     rule: {
-      host: /www\.imgnip\.com/,
+      host: /imgnip\.com$/,
     },
     run: function () {
       var i = $('#main_image');
