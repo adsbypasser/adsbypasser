@@ -5,6 +5,7 @@
     * imgnip.com
     * imgbar.net
     * imagescream.com
+    * goimagehost.com
 * added
     * imagefruit.com
 

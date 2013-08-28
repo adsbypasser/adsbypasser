@@ -443,10 +443,19 @@
   $register({
     rule: {
       host: /goimagehost\.com/,
-      path: /\/xxx\/(.+)/,
+      path: /^\/xxx\/(.+)/,
     },
     run: function (m) {
       $redirect('/xxx/images/' + m.path[1]);
+    },
+  });
+  $register({
+    rule: {
+      host: /goimagehost\.com/,
+      query: /^\?v=(.+)/,
+    },
+    run: function (m) {
+      $redirect('/xxx/images/' + m.query[1]);
     },
   });
 
