@@ -1,4 +1,4 @@
-## TBA
+## 3.2.1
 
 * fixed
     * duplicated rules
