@@ -4,6 +4,7 @@
 // @match          http://*.detonating.com/*
 // @match          http://*.eightteen.com/*
 // @match          http://*.looble.net/*
+// @match          http://*.peekatmygirlfriend.com/*
 // @match          http://*.smilinglinks.com/*
 // @match          http://*.urlcash.net/*
 // @match          http://*.urlcash.org/*
@@ -16,7 +17,7 @@
 
   $register({
     rule: {
-      host: /urlcash\.(net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks)\.com|looble\.net|xxxs\.org$/,
+      host: /urlcash\.(net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks|peekatmygirlfriend)\.com|looble\.net|xxxs\.org$/,
     },
     run: function () {
       if (unsafeWindow && unsafeWindow.linkDestUrl) {
