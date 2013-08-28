@@ -179,6 +179,7 @@ grunt
 * lnkco
     * lnk.co
     * rdlnk.co
+    * reducelnk.com
 * urlcash
     * bat5.com
     * celebclk.com

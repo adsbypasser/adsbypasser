@@ -1,7 +1,7 @@
 // ==UserScript==
-// @match          http://lnk.co/*
+// @include        /http://lnk\.co/.+/
 // @match          http://rdlnk.co/*
-// @exclude        http://lnk.co/
+// @include        /https?://reducelnk\.com/.+/
 // ==/UserScript==
 
 (function () {
@@ -9,7 +9,7 @@
 
   $register({
     rule: {
-      host: /^(rd?)lnk\.co$/,
+      host: /^(rd?)lnk\.co|reducelnk\.com$/,
     },
     run: function () {
       $removeNodes('iframe');

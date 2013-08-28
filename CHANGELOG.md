@@ -16,6 +16,7 @@
     * clb1.com
     * urlgalleries.com
     * urlcash.com
+    * reducelnk.com
 
 ## 3.1.0
 
