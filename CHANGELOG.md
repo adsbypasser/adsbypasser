@@ -2,6 +2,8 @@
 
 * fixed
     * amateurfreak.org
+* added
+    * imagefruit.com
 
 ## 3.1.0
 

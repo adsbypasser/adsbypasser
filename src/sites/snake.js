@@ -2,6 +2,7 @@
 // @match          http://www.freebunker.com/show/*
 // @match          http://www.imagesnake.com/index.php?*
 // @match          http://www.imagesnake.com/show/*
+// @match          http://www.imagefruit.com/img/*
 // ==/UserScript==
 
 (function () {
@@ -21,16 +22,23 @@
   });
 
   // second stage
+  function run () {
+    unsafeWindow.onbeforeunload = null;
+    var i = $('#img_obj');
+    $redirect(i.src);
+  }
   $register({
     rule: {
       host: /\.(imagesnake|freebunker)\.com$/,
       path: /^\/show/,
     },
-    run: function () {
-      unsafeWindow.onbeforeunload = null;
-      var i = $('#img_obj');
-      $redirect(i.src);
+    run: run,
+  });
+  $register({
+    rule: {
+      host: /\.imagefruit\.com$/,
     },
+    run: run,
   });
 
 })();

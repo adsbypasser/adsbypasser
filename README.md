@@ -188,6 +188,7 @@ grunt
     * xxxs.org
 * imagesnake
     * freebunker.com
+    * imagefruit.com
     * imagesnake.com
 * else
     * 1be.biz
