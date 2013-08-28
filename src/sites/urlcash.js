@@ -10,6 +10,7 @@
 // @match          http://*.smilinglinks.com/*
 // @match          http://*.urlcash.net/*
 // @match          http://*.urlcash.org/*
+// @match          http://*.urlgalleries.com/*
 // @match          http://*.xxxs.org/*
 // @match          http://celebclk.com/*
 // ==/UserScript==
@@ -19,7 +20,7 @@
 
   $register({
     rule: {
-      host: /urlcash\.(net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks|peekatmygirlfriend|pornyhost|clb1)\.com|looble\.net|xxxs\.org$/,
+      host: /urlcash\.(net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks|peekatmygirlfriend|pornyhost|clb1|urlgalleries)\.com|looble\.net|xxxs\.org$/,
     },
     run: function () {
       if (unsafeWindow && unsafeWindow.linkDestUrl) {

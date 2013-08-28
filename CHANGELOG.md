@@ -14,6 +14,7 @@
     * peekatmygirlfriend.com
     * pornyhost.com
     * clb1.com
+    * urlgalleries.com
 
 ## 3.1.0
 
