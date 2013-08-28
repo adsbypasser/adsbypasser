@@ -1,5 +1,6 @@
 // ==UserScript==
 // @match          http://amateurfreak.org/share-*.html
+// @match          http://amateurfreak.org/share.php?id=*
 // @match          http://picfox.org/*
 // ==/UserScript==
 
