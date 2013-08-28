@@ -27,18 +27,8 @@ module.exports = function (grunt) {
         dest: 'dest/script.js',
       },
       nopicads: {
-        src: ['dest/metadata.js', 'dest/script.min.js'],
-        dest: 'dest/nopicads.user.js',
-      },
-      debug: {
         src: ['dest/metadata.js', 'dest/script.js'],
-        dest: 'dest/nopicads.debug.js',
-      },
-    },
-    uglify: {
-      script: {
-        src: 'dest/script.js',
-        dest: 'dest/script.min.js',
+        dest: 'dest/nopicads.user.js',
       },
     },
   });
@@ -87,10 +77,8 @@ module.exports = function (grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['sites', 'concat:metadata', 'concat:script', 'uglify', 'concat:nopicads']);
-  grunt.registerTask('debug', ['sites', 'concat:metadata', 'concat:script', 'concat:debug']);
+  grunt.registerTask('default', ['sites', 'concat:metadata', 'concat:script', 'concat:nopicads']);
 
   function removeModelines (s) {
     return s.replace(/^\/\/\s*.+:.*[\r\n]/gm, '');
