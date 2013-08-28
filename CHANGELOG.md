@@ -1,4 +1,4 @@
-## TBA
+## 3.2.0
 
 * fixed
     * amateurfreak.org
