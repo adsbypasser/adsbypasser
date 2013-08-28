@@ -182,6 +182,7 @@ grunt
 * urlcash
     * bat5.com
     * celebclk.com
+    * clb1.com
     * detonating.com
     * eightteen.com
     * looble.net
