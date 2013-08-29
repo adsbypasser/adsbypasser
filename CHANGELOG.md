@@ -3,6 +3,7 @@
 * fixed
     * API error
     * imageporter.com
+    * imagevenue.com
 
 ## 3.2.1
 

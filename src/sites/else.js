@@ -120,14 +120,8 @@
       host: /imagevenue\.com$/,
     },
     run: function () {
-      var o = $_('#interContainer');
-      if (o) {
-        o.style.display = 'none';
-      }
-      o = $_('#interVeil');
-      if (o) {
-        o.style.display = 'none';
-      }
+      var i = $('#thepic');
+      $redirect(i.src);
     },
   });
 
