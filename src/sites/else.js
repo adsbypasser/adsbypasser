@@ -25,8 +25,9 @@
 // @match          http://ibunker.us/*
 // @match          http://ichan.org/*
 // @match          http://imagearn.com/image.php?id=*
-// @match          http://imagescream.com/img/soft/*
+// @match          http://imagehosting.gr/*.html
 // @match          http://imagescream.com/?v=*
+// @match          http://imagescream.com/img/soft/*
 // @match          http://imagetwist.com/*
 // @match          http://imgah.com/*
 // @match          http://imgbar.net/*
@@ -553,9 +554,11 @@
   });
 
   // bilder-hochladen.net
+  // imagehosting.gr
+  // this two are not homogeneous but do have same action
   $register({
     rule: {
-      host: /www\.bilder-hochladen\.net/,
+      host: /www\.bilder-hochladen\.net|imagehosting\.gr/,
     },
     run: function () {
       var i = $('td > img');

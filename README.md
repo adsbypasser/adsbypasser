@@ -229,6 +229,7 @@ grunt
     * ichan.org
     * imagearn.com
     * imagebam.com
+    * imagehosting.gr
     * imagescream.com
     * imagetwist.com
     * imagevenue.com

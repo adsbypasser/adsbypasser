@@ -1,3 +1,8 @@
+## TBA
+
+* added
+    * imagehosting.gr
+
 ## 3.2.2
 
 * fixed
