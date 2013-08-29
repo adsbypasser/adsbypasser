@@ -19,7 +19,7 @@
           return;
         }
       }
-      $postTo('', {
+      $postAndGo('', {
         hidden: '1',
         image: ' ',
       });
