@@ -1,7 +1,7 @@
 // ==UserScript==
 // @match          http://*.imagecarry.com/*
 // @match          http://*.imagedunk.com/*
-// @match          http://*.imageporter.com/*
+// @include        /http://.*\.imageporter\.com/\w{12}/.*\.html/
 // @match          http://*.imageswitch.com/*
 // @match          http://*.piclambo.net/*
 // @match          http://*.picleet.com/*

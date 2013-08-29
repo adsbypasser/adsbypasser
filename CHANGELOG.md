@@ -2,6 +2,7 @@
 
 * fixed
     * API error
+    * imageporter.com
 
 ## 3.2.1
 
