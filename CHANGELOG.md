@@ -1,4 +1,4 @@
-## TBA
+## 3.2.2
 
 * fixed
     * API error
