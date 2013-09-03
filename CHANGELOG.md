@@ -2,6 +2,7 @@
 
 * added
     * imagehosting.gr
+    * imgpay.me
 * changed
     * image resizing and centering
 

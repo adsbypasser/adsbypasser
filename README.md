@@ -122,6 +122,7 @@ grunt
     * imgcorn.com
     * imgmoney.com
     * imgonion.com
+    * imgpay.me
     * imgrill.com
     * imgtube.net
     * pixup.us
