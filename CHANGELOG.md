@@ -2,6 +2,8 @@
 
 * added
     * imagehosting.gr
+* changed
+    * image resizing and centering
 
 ## 3.2.2
 
