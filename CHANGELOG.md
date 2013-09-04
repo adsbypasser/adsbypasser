@@ -1,4 +1,4 @@
-## TBA
+## 3.3.0
 
 * fixed
     * fix global scope for TamperMonkey's incomplete sandbox model
