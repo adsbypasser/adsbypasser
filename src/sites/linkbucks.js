@@ -57,30 +57,30 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
     },
     run: function () {
-      $removeAllTimer();
+      $.removeAllTimer();
 
       if (unsafeWindow.document.body.onbeforeunload) {
         unsafeWindow.document.body.onbeforeunload = null;
       }
 
       if (window.location.pathname.indexOf('verify') >= 0) {
-        $redirect('/');
+        $.redirect('/');
         return;
       }
 
       if (unsafeWindow && unsafeWindow.Lbjs && unsafeWindow.Lbjs.TargetUrl) {
-        $redirect(unsafeWindow.Lbjs.TargetUrl);
+        $.redirect(unsafeWindow.Lbjs.TargetUrl);
         return;
       }
 
       var matches = document.body.innerHTML.match(/TargetUrl\s*=\s*['"]([^'"]+)['"]/);
       if (matches) {
-        $redirect(matches[1]);
+        $.redirect(matches[1]);
       }
     },
   });

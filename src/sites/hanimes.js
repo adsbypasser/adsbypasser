@@ -6,13 +6,13 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /www\.(h-animes|adultmove)\.info/,
     },
     run: function () {
       var a = $('.dlbutton2 > a');
-      $redirect(a.href);
+      $.redirect(a.href);
     },
   });
 

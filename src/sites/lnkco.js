@@ -7,28 +7,28 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /^(rd?)lnk\.co|reducelnk\.com$/,
     },
     run: function () {
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
 
-      var o = $_('#urlholder');
+      var o = $.$('#urlholder');
       if (o) {
-        $redirect(o.value);
+        $.redirect(o.value);
         return;
       }
 
-      o = $_('#skipBtn');
+      o = $.$('#skipBtn');
       if (o) {
         o = o.querySelector('a');
-        $redirect(o.href);
+        $.redirect(o.href);
         return;
       }
 
       o = document.title.replace(/(LNK.co|Linkbee)\s*:\s*/, '');
-      $redirect(o);
+      $.redirect(o);
     },
   });
 

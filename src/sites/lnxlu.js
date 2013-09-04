@@ -7,13 +7,13 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /^lnx\.lu|url\.fm|z\.gs$/,
     },
     run: function () {
       var a = $('#clickbtn a');
-      $redirect(a.href);
+      $.redirect(a.href);
     },
   });
 

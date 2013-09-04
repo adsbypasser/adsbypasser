@@ -6,13 +6,13 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /imgchili\.(com|net)|www\.pixhost\.org/,
     },
     run: function () {
       var o = $('#show_image');
-      $redirect(o.src);
+      $.redirect(o.src);
     },
   });
 

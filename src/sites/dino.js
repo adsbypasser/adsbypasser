@@ -6,13 +6,13 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /img(dino|tiger)\.com/,
     },
     run: function () {
       var o = $('#cursor_lupa');
-      $redirect(o.src);
+      $.redirect(o.src);
     },
   });
 

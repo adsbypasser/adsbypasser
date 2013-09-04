@@ -7,13 +7,13 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /^(.+\.)?abload\.de|fastpic\.ru$/,
     },
     run: function () {
       var i = $('#image');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 

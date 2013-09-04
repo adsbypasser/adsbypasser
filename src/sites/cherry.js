@@ -6,7 +6,7 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /imagecherry\.com|imgpo\.st/,
     },
@@ -14,7 +14,7 @@
       var o = $('img.pic');
       // somehow the server send image as an attachment
       // so I replace whole document.body with single img
-      $replaceBody(o.src);
+      $.replaceBody(o.src);
     },
   });
 

@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * fix global scope for TamperMonkey's incomplete sandbox model
 * added
     * imagehosting.gr
     * imgpay.me

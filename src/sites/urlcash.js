@@ -17,19 +17,19 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /urlcash\.(com|net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks|peekatmygirlfriend|pornyhost|clb1|urlgalleries)\.com|looble\.net|xxxs\.org$/,
     },
     run: function () {
       if (unsafeWindow && unsafeWindow.linkDestUrl) {
-        $redirect(unsafeWindow.linkDestUrl);
+        $.redirect(unsafeWindow.linkDestUrl);
         return;
       }
 
       var matches = document.body.innerHTML.match(/linkDestUrl = '(.+)'/);
       if (matches) {
-        $redirect(matches[1]);
+        $.redirect(matches[1]);
         return;
       }
     },

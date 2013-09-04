@@ -39,15 +39,15 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /^adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|(4ks|zpoz)\.net|tr5\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
     },
     run: function () {
       // prevent redirection by iframe
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
 
-      var content = $$('script').find(function (script) {
+      var content = $.$$('script').find(function (script) {
         return script.innerHTML.indexOf('make_log') >= 0;
       });
       var matches = content.innerHTML.match(/eval(.*)/);
@@ -62,7 +62,7 @@
         unsafeWindow.$.post(url, opts, function (text) {
           var jj = JSON.parse(text);
           if (jj.message) {
-            $redirect(jj.message.url);
+            $.redirect(jj.message.url);
           }
         });
       }

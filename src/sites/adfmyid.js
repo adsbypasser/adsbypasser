@@ -6,12 +6,12 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /adf\.my\.id|riurl\.com/,
     },
     run: function () {
-      var s = $_('body script');
+      var s = $.$('body script');
       if (s) {
         s = s.innerHTML.indexOf('window.location.replace');
         if (s >= 0) {
@@ -19,7 +19,7 @@
           return;
         }
       }
-      $postAndGo('', {
+      $.postAndGo('', {
         hidden: '1',
         image: ' ',
       });

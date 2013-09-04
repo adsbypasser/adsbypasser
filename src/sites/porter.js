@@ -24,13 +24,13 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn|pixroute)\.com|(piclambo|yankoimages)\.net/,
     },
     run: function () {
       var o = $('center img[id]');
-      $redirect(o.src);
+      $.redirect(o.src);
     },
   });
 

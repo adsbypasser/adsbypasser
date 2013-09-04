@@ -10,13 +10,13 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /(imagedecode|zonezeedimage|zeljeimage|croftimage)\.com|(comicalpic|imgserve)\.net/,
     },
     run: function () {
       var o = $('#container img[class^=centred]');
-      $redirect(o.src);
+      $.redirect(o.src);
     },
   });
 

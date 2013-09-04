@@ -9,7 +9,7 @@
   'use strict';
 
   // first stage
-  $register({
+  $.register({
     rule: {
       host: /\.imagesnake\.com$/,
       path: /^\/index\.php$/,
@@ -17,7 +17,7 @@
     },
     run: function () {
       var a = $('#tablewraper a:nth-child(2)');
-      $redirect(a.href);
+      $.redirect(a.href);
     },
   });
 
@@ -25,16 +25,16 @@
   function run () {
     unsafeWindow.onbeforeunload = null;
     var i = $('#img_obj');
-    $redirect(i.src);
+    $.redirect(i.src);
   }
-  $register({
+  $.register({
     rule: {
       host: /\.(imagesnake|freebunker)\.com$/,
       path: /^\/show/,
     },
     run: run,
   });
-  $register({
+  $.register({
     rule: {
       host: /\.imagefruit\.com$/,
     },

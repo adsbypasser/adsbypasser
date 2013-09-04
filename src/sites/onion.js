@@ -17,12 +17,12 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /^(img(onion|rill|money|corn)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us|img(boo|pay)\.me$/,
     },
     run: function () {
-      var node = $_('#continuetoimage > form input');
+      var node = $.$('#continuetoimage > form input');
       if (node) {
         // first pass
         node.click();
@@ -31,7 +31,7 @@
 
       // second pass
       var o = $('img[alt="image"]');
-      $redirect(o.src);
+      $.redirect(o.src);
     },
   });
 

@@ -7,13 +7,13 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /(picfox|amateurfreak)\.org/,
     },
     run: function () {
       var o = $('#iimg');
-      $redirect(o.src);
+      $.redirect(o.src);
     },
   });
 

@@ -11,12 +11,12 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /^adf\.ly|u\.bb|[jq]\.gs|go\.phpnulledscripts\.com$/,
     },
     run: function () {
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
 
       var h = unsafeWindow.eu, b64 = unsafeWindow.Base64;
       if (!h) {
@@ -41,7 +41,7 @@
       if (location.hash) {
         h += location.hash;
       }
-      $redirect(h);
+      $.redirect(h);
     },
   });
 

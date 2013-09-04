@@ -6,13 +6,13 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /www\.imgjav\.tk|imgurban\.info/,
     },
     run: function () {
       var a = $('div.img_box a');
-      $redirect(a.href);
+      $.redirect(a.href);
     },
   });
 

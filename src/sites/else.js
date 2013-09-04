@@ -80,23 +80,23 @@
   'use strict';
 
   // picshare
-  $register({
+  $.register({
     rule: {
       host: /^picshare\.geenza\.com$/,
     },
     run: function () {
       var i = $('#picShare_image_container');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // alabout
-  $register({
+  $.register({
     rule: {
       host: /(alabout|alafs)\.com$/,
     },
     run: function () {
-      $$('a').each(function (a) {
+      $.$$('a').each(function (a) {
         if (/http:\/\/(www\.)?(alabout|alafs)\.com\/j\.phtml\?url=/.test(a.href)) {
           a.href = a.textContent;
         }
@@ -105,29 +105,29 @@
   });
 
   // turboimagehost
-  $register({
+  $.register({
     rule: {
       host: /turboimagehost\.com$/,
     },
     run: function () {
       var i = $('#imageid');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // imagevenue
-  $register({
+  $.register({
     rule: {
       host: /imagevenue\.com$/,
     },
     run: function () {
       var i = $('#thepic');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // zpag
-  $register({
+  $.register({
     rule: {
       host: /zpag\.es$/,
     },
@@ -135,18 +135,18 @@
       var matches = document.head.innerHTML;
       matches = matches.match(/window\.location\s*=\s*(['"])((?:\\\1|[^\1])*?)\1/);
       if (matches) {
-        $redirect(matches[2]);
+        $.redirect(matches[2]);
       }
     },
   });
 
   // ichan
-  $register({
+  $.register({
     rule: {
       host: /ichan\.org$/,
     },
     run: function () {
-      $$('a').each(function (a) {
+      $.$$('a').each(function (a) {
         if (a.href.indexOf('/url/http://') > -1) {
           a.href = a.href.replace(/http:\/\/.+\/url\/(?=http:\/\/)/, '');
         }
@@ -155,18 +155,18 @@
   });
 
   // viidii
-  $register({
+  $.register({
     rule: {
       host: /www\.viidii\.com$/,
     },
     run: function () {
       var o = $('#directlink');
-      $redirect(o.href);
+      $.redirect(o.href);
     },
   });
 
   // adfoc
-  $register({
+  $.register({
     rule: {
       host: /adfoc\.us/,
     },
@@ -174,44 +174,44 @@
       // FIXME mutation events has been deprecated, consider rewrite with
       // mutation observer
       document.addEventListener('DOMNodeInserted', function () {
-        var o = $_('#showSkip');
+        var o = $.$('#showSkip');
         if (o) {
           o = o.querySelector('a');
-          $redirect(o.href);
+          $.redirect(o.href);
         }
       }, null);
     },
   });
 
   // imagetwist
-  $register({
+  $.register({
     rule: {
       host: /imagetwist\.com/,
     },
     run: function () {
       var o = $('img.pic');
-      $redirect(o.src);
+      $.redirect(o.src);
     },
   });
 
   // madlink
-  $register({
+  $.register({
     rule: {
       host: /madlink\.sk/,
       path: /\/(.+)/,
     },
     run: function (m) {
-      $removeNodes('iframe');
-      $post('/ajax/check_redirect.php', {
+      $.removeNodes('iframe');
+      $.post('/ajax/check_redirect.php', {
         link: m.path[1],
       }, function (text) {
-        $redirect(text);
+        $.redirect(text);
       });
     },
   });
 
   // stash-coins.com
-  $register({
+  $.register({
     rule: {
       host: /stash-coins\.com/,
     },
@@ -219,42 +219,42 @@
       var url = window.location.toString();
       var i = url.lastIndexOf('http');
       url = url.substr(i);
-      $redirect(url);
+      $.redirect(url);
     },
   });
 
   // bc.vc, shortcut, dirty hack
-  $register({
+  $.register({
     rule: {
       host: /bc\.vc/,
       query: /^.+(https?:\/\/.+)/,
     },
     run: function (m) {
-      $redirect(m.query[1]);
+      $.redirect(m.query[1]);
     },
   });
 
   // bc.vc, shortcut
   // FIXME may cut hash or query string
-  $register({
+  $.register({
     rule: {
       host: /^bc\.vc$/,
       path: /^.+(https?:\/\/.+)$/,
     },
     run: function (m) {
-      $redirect(m.path[1]);
+      $.redirect(m.path[1]);
     },
   });
 
   // bc.vc
-  $register({
+  $.register({
     rule: {
       host: /^bc\.vc$/,
     },
     run: function () {
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
 
-      var content = $$('script').find(function (script) {
+      var content = $.$$('script').find(function (script) {
         return script.innerHTML.indexOf('make_log') >= 0;
       });
       content = content.innerHTML;
@@ -267,7 +267,7 @@
         unsafeWindow.$.post(url, opts, function (text) {
           var jj = JSON.parse(text);
           if (jj.message) {
-            $redirect(jj.message.url);
+            $.redirect(jj.message.url);
           }
         });
       }
@@ -280,46 +280,46 @@
   });
 
   // chevereto
-  $register({
+  $.register({
     rule: {
       host: /www\.4owl\.info|javelite\.tk/,
     },
     run: function () {
       var i = $('table img');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // directupload.net
-  $register({
+  $.register({
     rule: {
       host: /.+\.directupload\.net/,
     },
     run: function () {
       var i = $('#showimage');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // pixhub.eu
-  $register({
+  $.register({
     rule: {
       host: /pixhub\.eu/,
     },
     run: function () {
-      $removeNodes('.adultpage, #FFN_Banner_Holder');
-      $enableScrolling();
+      $.removeNodes('.adultpage, #FFN_Banner_Holder');
+      $.enableScrolling();
     },
   });
 
   // imgah.com
-  $register({
+  $.register({
     rule: {
       host: /imgah\.com/,
     },
     run: function () {
       // first stage
-      var o = $_('input[type=submit]');
+      var o = $.$('input[type=submit]');
       if (o) {
         o.click();
         return;
@@ -327,12 +327,12 @@
 
       // second stage
       o = $('img.pic');
-      $replaceBody(o.src);
+      $.replaceBody(o.src);
     },
   });
 
   // imagebam.com
-  $register({
+  $.register({
     rule: {
       host: /www\.imagebam\.com/,
     },
@@ -340,327 +340,327 @@
       var o = $('#imageContainer img[id]');
       // somehow the server send image as an attachment
       // so I replace whole document.body with single img
-      $replaceBody(o.src);
+      $.replaceBody(o.src);
     },
   });
 
   // imgbar.net
   // second stage
-  $register({
+  $.register({
     rule: {
       host: /imgbar\.net/,
       path: /\/img_show\.php/,
     },
     run: function () {
       var i = $('center img');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // imgbar.net
   // first stage
-  $register({
+  $.register({
     rule: {
       host: /imgbar\.net/,
     },
     run: function () {
       var i = $('div.panel.top form input[name=sid]');
-      $redirect('/img_show.php?view_id=' + i.value);
+      $.redirect('/img_show.php?view_id=' + i.value);
     },
   });
 
   // www.sexyimg.com
-  $register({
+  $.register({
     rule: {
       host: /www\.sexyimg\.com/,
       path: /\/s\/.*\.html/,
     },
     run: function () {
       var a = $('#imgbox a.divclick');
-      $redirect(a.href);
+      $.redirect(a.href);
     },
   });
 
   // www.sexyimg.com
-  $register({
+  $.register({
     rule: {
       host: /www\.sexyimg\.com/,
       path: /\/b\/.*\.html/,
     },
     run: function () {
       var i = $('#imgbox img.bigimg');
-      $replaceBody(i.src);
+      $.replaceBody(i.src);
     },
   });
 
   // pics-money.ru
-  $register({
+  $.register({
     rule: {
       host: /pics-money\.ru$/,
       path: /^\/v\.php/,
     },
     run: function () {
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
 
       var i = $('center img:not([id])');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // www.pics-money.ru
-  $register({
+  $.register({
     rule: {
       host: /\.pics-money\.ru$/,
     },
     run: function () {
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
 
       var i = $('#d1 img');
       i = i.onclick.toString();
       i = i.match(/mshow\('(.+)'\)/);
       i = i[1];
-      $redirect(i);
+      $.redirect(i);
     },
   });
 
   // imgwiev.tk
-  $register({
+  $.register({
     rule: {
       host: /imgwiev\.tk/,
       query: /\?pm=(.+)/,
     },
     run: function (m) {
-      $redirect('/image.php?di=' + m.query[1]);
+      $.redirect('/image.php?di=' + m.query[1]);
     },
   });
 
   // goimagehost.com
-  $register({
+  $.register({
     rule: {
       host: /goimagehost\.com/,
       path: /^\/xxx\/(.+)/,
     },
     run: function (m) {
-      $redirect('/xxx/images/' + m.path[1]);
+      $.redirect('/xxx/images/' + m.path[1]);
     },
   });
-  $register({
+  $.register({
     rule: {
       host: /goimagehost\.com/,
       query: /^\?v=(.+)/,
     },
     run: function (m) {
-      $redirect('/xxx/images/' + m.query[1]);
+      $.redirect('/xxx/images/' + m.query[1]);
     },
   });
 
   // www.hostpics.info
-  $register({
+  $.register({
     rule: {
       host: /www\.hostpics\.info/,
       query: /\?filename=(.+)/,
     },
     run: function (m) {
-      $redirect('/images/' + m.query[1]);
+      $.redirect('/images/' + m.query[1]);
     },
   });
 
   // imagescream.com
-  $register({
+  $.register({
     rule: {
       host: /imagescream\.com/,
       path: /^\/img\/soft\//,
     },
     run: function () {
       var i = $('#shortURL-content img');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
-  $register({
+  $.register({
     rule: {
       host: /imagescream\.com/,
       query: /^\?v=/,
     },
     run: function () {
       var i = $('#imagen img');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // imgfantasy.com
-  $register({
+  $.register({
     rule: {
       host: /imgfantasy\.com/,
     },
     run: function () {
       var i = $('#container-home img');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // imgnip.com
-  $register({
+  $.register({
     rule: {
       host: /imgnip\.com$/,
     },
     run: function () {
       var i = $('#main_image');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // www.x45x.info
-  $register({
+  $.register({
     rule: {
       host: /www\.x45x\.info/,
     },
     run: function () {
       var a = $('#content a.lightbox');
-      $redirect(a.href);
+      $.redirect(a.href);
     },
   });
 
   // 1be.biz
-  $register({
+  $.register({
     rule: {
       host: /1be\.biz/,
       query: /\?(.+)/,
     },
     run: function (m) {
-      $redirect(m.query[1]);
+      $.redirect(m.query[1]);
     },
   });
 
   // qrrro.com
-  $register({
+  $.register({
     rule: {
       host: /qrrro\.com/,
       path: /^(\/images\/.+)\.html$/,
     },
     run: function (m) {
-      $redirect(m.path[1]);
+      $.redirect(m.path[1]);
     },
   });
 
   // pic-upload.de
-  $register({
+  $.register({
     rule: {
       host: /www\.pic-upload\.de/,
     },
     run: function () {
       var i = $('#content + img');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // bilder-hochladen.net
   // imagehosting.gr
   // this two are not homogeneous but do have same action
-  $register({
+  $.register({
     rule: {
       host: /www\.bilder-hochladen\.net|imagehosting\.gr/,
     },
     run: function () {
       var i = $('td > img');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // bayimg.com
-  $register({
+  $.register({
     rule: {
       host: /^bayimg\.com$/,
     },
     run: function () {
       var i = $('#mainImage');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // www.bild.me
-  $register({
+  $.register({
     rule: {
       host: /^www\.bild\.me$/,
     },
     run: function () {
       var i = $('#Bild');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // www.bilder-upload.eu
-  $register({
+  $.register({
     rule: {
       host: /^www\.bilder-upload\.eu$/,
     },
     run: function () {
       var i = $('input[type=image]');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // bildr.no
-  $register({
+  $.register({
     rule: {
       host: /^bildr\.no$/,
     },
     run: function () {
       var i = $('img.bilde');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // imagearn.com
-  $register({
+  $.register({
     rule: {
       host: /^imagearn\.com$/,
     },
     run: function () {
       var i = $('#img');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // tinypic.com
-  $register({
+  $.register({
     rule: {
       host: /^tinypic\.com$/,
     },
     run: function () {
       var i = $('#imgElement');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // adlock
-  $register({
+  $.register({
     rule: {
       host: /^adlock\.in$/,
     },
     run: function () {
-      var a = $_('#xre a.xxr');
+      var a = $.$('#xre a.xxr');
       if (a) {
-        $redirect(a.href);
+        $.redirect(a.href);
         return;
       }
 
       a = unsafeWindow.fileLocation;
       if (a) {
-        $redirect(a);
+        $.redirect(a);
       }
     },
   });
 
   // p.pw
-  $register({
+  $.register({
     rule: {
       host: /^p\.pw$/,
     },
     run: function () {
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
 
       var url = null;
-      $$('script').find(function (script) {
+      $.$$('script').find(function (script) {
         var m = script.innerHTML.match(/window\.location = "(.*)";/);
         if (m) {
           url = m[1];
@@ -668,17 +668,17 @@
         }
       });
 
-      $redirect(url);
+      $.redirect(url);
     },
   });
 
   // 3ra.be
-  $register({
+  $.register({
     rule: {
       host: /^3ra\.be$/,
     },
     run: function () {
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
 
       var f = unsafeWindow.fc;
       if (!f) {
@@ -689,93 +689,93 @@
       if (!f) {
         throw new NoPicAdsError('url pattern outdated');
       }
-      $redirect(f[1]);
+      $.redirect(f[1]);
     },
   });
 
   // bilurl
-  $register({
+  $.register({
     rule: {
       host: /^bilurl\.com$/,
     },
     run: function () {
       var d = $('#event');
-      $redirect(d.getAttribute('rel'));
+      $.redirect(d.getAttribute('rel'));
     },
   });
 
   // ref.so
-  $register({
+  $.register({
     rule: {
       host: /^ref\.so$/,
     },
     run: function () {
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
       var a = $('#btn_open a');
-      $redirect(a.href);
+      $.redirect(a.href);
     },
   });
 
   // adv.li
-  $register({
+  $.register({
     rule: {
       host: /adv\.li$/,
     },
     run: function () {
-      $removeNodes('iframe');
-      $redirect(unsafeWindow._url);
+      $.removeNodes('iframe');
+      $.redirect(unsafeWindow._url);
     },
   });
 
   // cf.ly
-  $register({
+  $.register({
     rule: {
       host: /^cf\.ly$/,
       path: /^\/[^\/]+$/,
     },
     run: function (m) {
-      $removeNodes('iframe');
-      $redirect('/skip' + m.path[0]);
+      $.removeNodes('iframe');
+      $.redirect('/skip' + m.path[0]);
     },
   });
 
   // seomafia.net
-  $register({
+  $.register({
     rule: {
       host: /^seomafia\.net$/,
     },
     run: function () {
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
       var a = $('table a');
-      $redirect(a.href);
+      $.redirect(a.href);
     },
   });
 
   // 4fun.tw
-  $register({
+  $.register({
     rule: {
       host: /^4fun\.tw$/,
     },
     run: function () {
       var i = $('#original_url');
-      $redirect(i.value);
+      $.redirect(i.value);
     },
   });
 
   // imgbabes.com
-  $register({
+  $.register({
     rule: {
       host: /\.imgbabes\.com$/,
     },
     run: function () {
       var i = $('#this_image');
-      $replaceBody(i.src);
-      $enableScrolling();
+      $.replaceBody(i.src);
+      $.enableScrolling();
     },
   });
 
   // ulmt.in
-  $register({
+  $.register({
     rule: {
       host: /^ulmt\.in$/,
     },
@@ -783,16 +783,16 @@
       var s = unsafeWindow.CountdownTimer.toString();
       s = s.match(/href="([^"]+)"/);
       if (s) {
-        $redirect(s[1]);
+        $.redirect(s[1]);
         throw new NoPicAdsError('function changed');
       }
       s = $('#iframe_win');
-      $redirect(s.src);
+      $.redirect(s.src);
     },
   });
 
   // cl.my
-  $register({
+  $.register({
     rule: {
       host: /^cl\.my$/,
     },
@@ -800,7 +800,7 @@
       unsafeWindow.document.body.onload = null;
       unsafeWindow.document.body.onunload = null;
 
-      var content = $$('script').find(function (script) {
+      var content = $.$$('script').find(function (script) {
         return script.innerHTML.indexOf('callAjax') >= 0;
       });
       var matches = content.innerHTML.match(/'id': '([^']+)'/);
@@ -811,133 +811,133 @@
         cmd: 'chk',
         id: content,
       }, function (data) {
-        $redirect(data.data.u);
+        $.redirect(data.data.u);
       }, 'json');
     },
   });
 
   // yfrog
-  $register({
+  $.register({
     rule: {
       host: /\.yfrog\.com$/,
     },
     run: function () {
       if (/^\/z/.test(window.location.pathname)) {
         var i = $('#the-image img');
-        $redirect(i.src);
+        $.redirect(i.src);
         return;
       }
-      var a = $_('#continue-link a, #main_image');
+      var a = $.$('#continue-link a, #main_image');
       if (a) {
-        $redirect('/z' + window.location.pathname);
+        $.redirect('/z' + window.location.pathname);
         return;
       }
     },
   });
 
   // dumppix
-  $register({
+  $.register({
     rule: {
       host: /^www\.dumppix\.com$/,
     },
     run: function () {
-      var i = $_('#boring');
+      var i = $.$('#boring');
       if (i) {
-        $redirect(i.src);
+        $.redirect(i.src);
         return;
       }
       i = $('table td:nth-child(1) a');
-      $redirect(i.href);
+      $.redirect(i.href);
     },
   });
 
   // subirimagenes
-  $register({
+  $.register({
     rule: {
       host: /^www\.subirimagenes\.com$/,
     },
     run: function () {
       var i = $('#ImagenVisualizada');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // screenlist
-  $register({
+  $.register({
     rule: {
       host: /^screenlist\.ru$/,
     },
     run: function () {
       var i = $('#picture');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // ibunker
-  $register({
+  $.register({
     rule: {
       host: /^ibunker\.us$/,
     },
     run: function () {
       var i = $('#picture');
       // FIXME somehow the mime type is text/html
-      $replaceBody(i.src);
+      $.replaceBody(i.src);
     },
   });
 
   // freeporndumpster
-  $register({
+  $.register({
     rule: {
       host: /^www\.freeporndumpster\.com$/,
     },
     run: function () {
       var i = $('#thepic');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
   // hotimg
-  $register({
+  $.register({
     rule: {
       host: /^www\.hotimg\.com$/,
       path: /\/image(\/.*)/,
     },
     run: function (m) {
-      $redirect('/direct' + m.path[1]);
+      $.redirect('/direct' + m.path[1]);
     },
   });
 
   // lienscash
-  $register({
+  $.register({
     rule: {
       host: /^www\.lienscash\.com$/,
     },
     run: function () {
-      $removeNodes('iframe');
+      $.removeNodes('iframe');
 
       var a = $('#time a');
-      $redirect(a.id);
+      $.redirect(a.id);
     },
   });
 
   // urlz.so
-  $register({
+  $.register({
     rule: {
       host: /^urlz\.so$/,
     },
     run: function () {
-      var i = $_('td > a');
+      var i = $.$('td > a');
       if (i) {
         i = i.href;
         var m = i.match(/javascript:declocation\('(.+)'\);/);
         if (m) {
           i = atob(m[1]);
         }
-        $redirect(i);
+        $.redirect(i);
         return;
       }
       i = $('img');
-      $captcha(i.src, function (a) {
+      $.captcha(i.src, function (a) {
         var b = $('input[name=captcha]');
         var c = $('input[name=submit]');
         b.value = a;
@@ -947,24 +947,24 @@
   });
 
   // ity.im
-  $register({
+  $.register({
     rule: {
       host: /^ity\.im$/,
     },
     run: function () {
-      var f = $_('#main');
+      var f = $.$('#main');
       if (f) {
-        $redirect(f.src);
+        $.redirect(f.src);
       }
-      f = $$('frame').find(function (frame) {
+      f = $.$$('frame').find(function (frame) {
         return frame.src.indexOf('interheader.php') >= 0;
       });
       if (f) {
-        $redirect(f.src);
+        $.redirect(f.src);
       }
 
       var data = null;
-      $$('script').find(function (script) {
+      $.$$('script').find(function (script) {
         data = script.innerHTML.match(/krypted=([^&]+)/);
         return !!data;
       });
@@ -974,29 +974,29 @@
       data = data[1];
       f = unsafeWindow.des('ksnslmtmk0v4Pdviusajqu', unsafeWindow.hexToString(data), 0, 0);
       if (f) {
-        $redirect('http://ity.im/1104_21_50846_' + f);
+        $.redirect('http://ity.im/1104_21_50846_' + f);
       }
     },
   });
 
   // funkyimg
-  $register({
+  $.register({
     rule: {
       host: /^funkyimg\.com$/,
     },
     run: function () {
       var i = $('#viewer img');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 
-  $register({
+  $.register({
     rule: {
       host: /imgpony\.com/,
       query: /\?img=(.+)/,
     },
     run: function (m) {
-      $redirect('/images/' + m.query[1]);
+      $.redirect('/images/' + m.query[1]);
     },
   });
 

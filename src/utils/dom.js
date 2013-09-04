@@ -1,5 +1,35 @@
-(function (root) {
+var $;
+(function () {
   'use strict';
+
+
+  $ = function (selector, context) {
+    if (!context || !context.querySelector) {
+      context = document;
+    }
+    var n = context.querySelector(selector);
+    if (!n) {
+      throw new DomNotFoundError(selector);
+    }
+    return n;
+  };
+
+  $.$ = function (selector, context) {
+    try {
+      return $(selector, context);
+    } catch (e) {
+      $.info(e.message);
+      return null;
+    }
+  };
+
+  $.$$ = function (selector, context) {
+    if (!context || !context.querySelectorAll) {
+      context = document;
+    }
+    var ns = context.querySelectorAll(selector);
+    return _.C(ns);
+  };
 
 
   function NoPicAdsError (message) {
@@ -22,16 +52,15 @@
       this.stack = this._stack.join('\n');
     }
   };
-  root.NoPicAdsError = NoPicAdsError;
+  $.NoPicAdsError = NoPicAdsError;
 
   function DomNotFoundError (selector) {
-    NoPicAdsError.call(this, $T('`{0}` not found')(selector));
+    NoPicAdsError.call(this, _.T('`{0}` not found')(selector));
     this._setupStack();
   }
   DomNotFoundError.prototype = Object.create(NoPicAdsError.prototype);
   DomNotFoundError.prototype.constructor = DomNotFoundError;
   DomNotFoundError.prototype.name = 'DomNotFoundError';
-  root.DomNotFoundError = DomNotFoundError;
 
 
   function log (method, args) {
@@ -40,11 +69,11 @@
     console[method].apply(console, args);
   }
 
-  root.$info = function () {
+  $.info = function () {
     log('info', arguments);
   };
 
-  root.$warn = function () {
+  $.warn = function () {
     log('warn', arguments);
   };
 
@@ -56,8 +85,8 @@
     if (data instanceof String) {
       return data.toString();
     }
-    return $C(data).map(function (v, k) {
-      return $T('{0}={1}')(encodeURIComponent(k), encodeURIComponent(v));
+    return _.C(data).map(function (v, k) {
+      return _.T('{0}={1}')(encodeURIComponent(k), encodeURIComponent(v));
     }).join('&');
   }
 
@@ -87,7 +116,7 @@
     form.method = method;
     form.action = path;
 
-    $C(params).each(function (value, key) {
+    _.C(params).each(function (value, key) {
         var input = document.createElement('input');
         input.type = 'hidden';
         input.name = key;
@@ -99,56 +128,27 @@
     form.submit();
   }
 
-  root.$post = function (url, data, callback) {
+  $.post = function (url, data, callback) {
     return ajax('POST', url, data, callback);
   };
 
-  root.$postAndGo = function (url, data) {
+  $.postAndGo = function (url, data) {
     go(url, data, 'post');
   };
 
 
-  root.$ = function (selector, context) {
-    if (!context || !context.querySelector) {
-      context = document;
-    }
-    var n = context.querySelector(selector);
-    if (!n) {
-      throw new DomNotFoundError(selector);
-    }
-    return n;
-  };
-
-  root.$_ = function (selector, context) {
-    try {
-      return $(selector, context);
-    } catch (e) {
-      $info(e.message);
-      return null;
-    }
-  };
-
-  root.$$ = function (selector, context) {
-    if (!context || !context.querySelectorAll) {
-      context = document;
-    }
-    var ns = context.querySelectorAll(selector);
-    return $C(ns);
-  };
-
-
-  root.$redirect = function (to) {
+  $.redirect = function (to) {
     if (!to) {
-      $warn('false URL');
+      $.warn('false URL');
       return;
     }
     var from = window.location.toString();
-    $info($T('{0} -> {1}')(from, to));
+    $.info(_.T('{0} -> {1}')(from, to));
     window.top.location.replace(to);
   };
 
-  root.$removeAllTimer = function () {
-    var intervalID = window.setInterval($nop, 10);
+  $.removeAllTimer = function () {
+    var intervalID = window.setInterval(_.nop, 10);
     while (intervalID > 0) {
       window.clearInterval(intervalID--);
     }
@@ -156,21 +156,21 @@
 
   function disableWindowOpen () {
     if (unsafeWindow) {
-      unsafeWindow.open = $nop;
+      unsafeWindow.open = _.nop;
     }
     if (window) {
-      window.open = $nop;
+      window.open = _.nop;
     }
   }
 
-  root.$enableScrolling = function () {
+  $.enableScrolling = function () {
     var o = document.compatMode === 'CSS1Compat' ? document.documentElement : document.body;
     o.style.overflow = '';
   };
 
-  root.$replaceBody = function (imgSrc) {
-    $removeAllTimer();
-    $removeNodes('style, link[rel=stylesheet]');
+  $.replaceBody = function (imgSrc) {
+    $.removeAllTimer();
+    $.removeNodes('style, link[rel=stylesheet]');
 
     document.documentElement.style.height = '100%';
 
@@ -222,13 +222,13 @@
     }
   };
 
-  root.$removeNodes = function (selector) {
-    $$(selector).each(function (e) {
+  $.removeNodes = function (selector) {
+    $.$$(selector).each(function (e) {
       e.parentNode.removeChild(e);
     });
   };
 
-  root.$captcha = function (imgSrc, cb) {
+  $.captcha = function (imgSrc, cb) {
     var a = document.createElement('canvas');
     var b = a.getContext('2d');
     var c = new Image();
@@ -239,7 +239,7 @@
       b.drawImage(c, 0, 0);
       var d = a.toDataURL();
       var e = d.substr(d.indexOf(',') + 1);
-      $post('http://www.wcpan.info/cgi-bin/captcha.cgi', {
+      $.post('http://www.wcpan.info/cgi-bin/captcha.cgi', {
         i: e,
       }, cb);
     };
@@ -248,14 +248,14 @@
 
   var patterns = [];
 
-  root.$register = function (pattern) {
+  $.register = function (pattern) {
     patterns.push(pattern);
   };
 
   function find (uri) {
     var matched = {};
-    var pattern = $C(patterns).find(function (pattern) {
-      var tmp = $C(pattern.rule).all(function (pattern, part) {
+    var pattern = _.C(patterns).find(function (pattern) {
+      var tmp = _.C(pattern.rule).all(function (pattern, part) {
         matched[part] = uri[part].match(pattern);
         return !!matched[part];
       });
@@ -291,7 +291,7 @@
   });
 
 
-})((0,eval)('this'));
+})();
 
 
 // vim: ts=2 sts=2 sw=2 et

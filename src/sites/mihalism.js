@@ -18,19 +18,19 @@
 
 
   // mihalism v1
-  $register({
+  $.register({
     rule: {
       host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod)\.com|freeuploadimages\.org|shareimage\.ro/,
     },
     run: function () {
       var uri = window.location.href.toString();
       uri = uri.replace('viewer.php?file=', 'images/');
-      $redirect(uri);
+      $.redirect(uri);
     },
   });
 
   // howtohemorrhoidscure.com
-  $register({
+  $.register({
     rule: {
       host: /howtohemorrhoidscure\.com/,
     },
@@ -40,19 +40,19 @@
       // the real link is diffirent from original host
       a = s.lastIndexOf('http://');
       if (a >= 0) {
-        $redirect(s.substr(a));
+        $.redirect(s.substr(a));
       }
     },
   });
 
   // preview.jpavgod.com
-  $register({
+  $.register({
     rule: {
       host: /preview\.jpavgod\.com/,
     },
     run: function () {
       var i = $('#page_body div.text_align_center img');
-      $redirect(i.src);
+      $.redirect(i.src);
     },
   });
 

@@ -6,13 +6,13 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /^coinurl\.com|cur\.lv$/,
     },
     run: function () {
       var a = $('#skip-ad');
-      $redirect(a.href);
+      $.redirect(a.href);
     },
   });
 

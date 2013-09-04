@@ -6,14 +6,14 @@
 (function () {
   'use strict';
 
-  $register({
+  $.register({
     rule: {
       host: /image(back|pong)\.info/,
     },
     run: function () {
-      $removeNodes('#popupOverlay, #divExoLayerWrapper');
+      $.removeNodes('#popupOverlay, #divExoLayerWrapper');
       var a = $('div.span7 a');
-      $redirect(a.href);
+      $.redirect(a.href);
     },
   });
 
