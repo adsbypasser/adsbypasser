@@ -197,22 +197,20 @@ var $;
     d.appendChild(i);
 
     if (i.naturalWidth > document.documentElement.clientWidth || i.naturalHeight > document.documentElement.clientHeight) {
-      var s = document.createElement('style');
-      s.textContent = (function () {/*!
-        img {
-          cursor: -webkit-zoom-out;
-          cursor: -moz-zoom-out;
-          cursor: zoom-out;
-        }
-        img.nopicads-shrink {
-          max-width: 100%;
-          max-height: 100%;
-          cursor: -webkit-zoom-in;
-          cursor: -moz-zoom-in;
-          cursor: zoom-in;
-        }
-      */}).toString().replace(/^[^\/]+\/\*!?/, '').replace(/\*\/[^\/]+$/, '');
-      document.head.appendChild(s);
+      GM_addStyle([
+        'img {',
+        '  cursor: -webkit-zoom-out;',
+        '  cursor: -moz-zoom-out;',
+        '  cursor: zoom-out;',
+        '}',
+        'img.nopicads-shrink {',
+        '  max-width: 100%;',
+        '  max-height: 100%;',
+        '  cursor: -webkit-zoom-in;',
+        '  cursor: -moz-zoom-in;',
+        '  cursor: zoom-in;',
+        '}',
+      ].join('\n'));
 
       i.classList.add('nopicads-shrink');
 

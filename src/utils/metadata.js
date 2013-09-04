@@ -8,4 +8,5 @@
 // @downloadURL    https://userscripts.org/scripts/source/154858.user.js
 // @grant          unsafeWindow
 // @grant          GM_xmlhttpRequest
+// @grant          GM_addStyle
 // @run-at         document-start
