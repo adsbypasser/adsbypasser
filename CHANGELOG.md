@@ -5,6 +5,7 @@
 * added
     * euro-pic.eu
     * miragepics.com
+    * fotolink.su
 * changed
     * use resource to load css and background
 

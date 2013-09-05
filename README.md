@@ -223,8 +223,9 @@ grunt
     * cl.my
     * directupload.net
     * dumppix.com
-    * funkyimg.com
+    * fotolink.su
     * freeporndumpster.com
+    * funkyimg.com
     * goimagehost.com
     * hostpics.info
     * hotimg.com

@@ -53,6 +53,7 @@
 // @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.bilder-upload.eu/show.php?file=*
 // @match          http://www.dumppix.com/viewer.php?*
+// @match          http://www.fotolink.su/v.php?id=*
 // @match          http://www.freeporndumpster.com/show.php?*
 // @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.hotimg.com/image/*
@@ -997,6 +998,17 @@
     },
     run: function (m) {
       $.redirect('/images/' + m.query[1]);
+    },
+  });
+
+  // www.fotolink.su
+  $.register({
+    rule: {
+      host: /www\.fotolink\.su/,
+    },
+    run: function () {
+      var i = $('#content img');
+      $.redirect(i.src);
     },
   });
 
