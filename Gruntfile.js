@@ -23,7 +23,7 @@ module.exports = function (grunt) {
         dest: 'dest/metadata.js',
       },
       script: {
-        src: ['dest/utils/sugar.js', 'dest/utils/dom.js', 'dest/sites/*.script.js'],
+        src: ['dest/utils/core.js', 'dest/utils/dom.js', 'dest/sites/*.script.js'],
         dest: 'dest/script.js',
       },
       nopicads: {
