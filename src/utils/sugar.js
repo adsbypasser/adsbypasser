@@ -3,6 +3,29 @@ var _ = {};
   'use strict';
 
 
+  function NoPicAdsError (message) {
+    this.message = message;
+    this._setupStack();
+  }
+  NoPicAdsError.prototype = Object.create(Error.prototype);
+  NoPicAdsError.prototype.constructor = NoPicAdsError;
+  NoPicAdsError.prototype.name = 'NoPicAdsError';
+  NoPicAdsError.prototype._setupStack = function () {
+    if (Error.captureStackTrace) {
+      // V8-like
+      Error.captureStackTrace(this, this.constructor);
+    } else {
+      // fallback to Mozilla-like
+      this._stack = this._stack ? this._stack.slice(1) : Error().stack.split('\n').slice(2);
+      var e = this._stack[0].match(/^.*@(.*):(\d*)$/);
+      this.fileName = e[1];
+      this.lineNumber = e[2];
+      this.stack = this._stack.join('\n');
+    }
+  };
+  _.NoPicAdsError = NoPicAdsError;
+
+
   function any (c, fn) {
     if (c.some) {
       return c.some(fn);

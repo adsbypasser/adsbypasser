@@ -3,6 +3,15 @@ var $;
   'use strict';
 
 
+  function DomNotFoundError (selector) {
+    _.NoPicAdsError.call(this, _.T('`{0}` not found')(selector));
+    this._setupStack();
+  }
+  DomNotFoundError.prototype = Object.create(_.NoPicAdsError.prototype);
+  DomNotFoundError.prototype.constructor = DomNotFoundError;
+  DomNotFoundError.prototype.name = 'DomNotFoundError';
+
+
   $ = function (selector, context) {
     if (!context || !context.querySelector) {
       context = document;
@@ -30,37 +39,6 @@ var $;
     var ns = context.querySelectorAll(selector);
     return _.C(ns);
   };
-
-
-  function NoPicAdsError (message) {
-    this.message = message;
-    this._setupStack();
-  }
-  NoPicAdsError.prototype = Object.create(Error.prototype);
-  NoPicAdsError.prototype.constructor = NoPicAdsError;
-  NoPicAdsError.prototype.name = 'NoPicAdsError';
-  NoPicAdsError.prototype._setupStack = function () {
-    if (Error.captureStackTrace) {
-      // V8-like
-      Error.captureStackTrace(this, this.constructor);
-    } else {
-      // fallback to Mozilla-like
-      this._stack = this._stack ? this._stack.slice(1) : Error().stack.split('\n').slice(2);
-      var e = this._stack[0].match(/^.*@(.*):(\d*)$/);
-      this.fileName = e[1];
-      this.lineNumber = e[2];
-      this.stack = this._stack.join('\n');
-    }
-  };
-  $.NoPicAdsError = NoPicAdsError;
-
-  function DomNotFoundError (selector) {
-    NoPicAdsError.call(this, _.T('`{0}` not found')(selector));
-    this._setupStack();
-  }
-  DomNotFoundError.prototype = Object.create(NoPicAdsError.prototype);
-  DomNotFoundError.prototype.constructor = DomNotFoundError;
-  DomNotFoundError.prototype.name = 'DomNotFoundError';
 
 
   function log (method, args) {

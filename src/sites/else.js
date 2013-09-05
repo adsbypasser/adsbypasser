@@ -682,12 +682,12 @@
 
       var f = unsafeWindow.fc;
       if (!f) {
-        throw new NoPicAdsError('window.fc is undefined');
+        throw new _.NoPicAdsError('window.fc is undefined');
       }
       f = f.toString();
       f = f.match(/href="([^"]*)/);
       if (!f) {
-        throw new NoPicAdsError('url pattern outdated');
+        throw new _.NoPicAdsError('url pattern outdated');
       }
       $.redirect(f[1]);
     },
@@ -784,7 +784,7 @@
       s = s.match(/href="([^"]+)"/);
       if (s) {
         $.redirect(s[1]);
-        throw new NoPicAdsError('function changed');
+        throw new _.NoPicAdsError('function changed');
       }
       s = $('#iframe_win');
       $.redirect(s.src);
