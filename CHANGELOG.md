@@ -6,6 +6,7 @@
     * euro-pic.eu
     * miragepics.com
     * fotolink.su
+    * x.pixfarm.net
 * changed
     * use resource to load css and background
 

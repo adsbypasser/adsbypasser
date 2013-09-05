@@ -68,6 +68,7 @@
 // @match          http://www.turboimagehost.com/*
 // @match          http://www.viidii.com/*
 // @match          http://www.x45x.info/?pt=*
+// @include        /http://x\.pixfarm\.net/sexy/\d+/\d+/.+\.html/
 // @match          http://xip.ir/*
 // @match          http://zpag.es/*
 // @exclude        http://javelite.tk/
@@ -1008,6 +1009,17 @@
     },
     run: function () {
       var i = $('#content img');
+      $.redirect(i.src);
+    },
+  });
+
+  // x.pixfarm.net
+  $.register({
+    rule: {
+      host: /x\.pixfarm\.net/,
+    },
+    run: function () {
+      var i = $('img');
       $.redirect(i.src);
     },
   });

@@ -266,6 +266,7 @@ grunt
     * ulmt.in
     * urlz.so
     * viidii.com
+    * x.pixfarm.net
     * x45x.info
     * yfrog.com
     * zpag.es
