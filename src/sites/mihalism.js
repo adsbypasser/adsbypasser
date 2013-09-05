@@ -4,6 +4,7 @@
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://hentai-hosting.com/viewer.php?file=*
 // @match          http://imagepremium.com/viewer.php?file=*
+// @match          http://miragepics.com/viewer.php?file=*
 // @match          http://pornpicuploader.com/viewer.php?file=*
 // @match          http://shareimage.ro/viewer.php?file=*
 // ==/Mihalism Multi Host v1==
@@ -20,7 +21,7 @@
   // mihalism v1
   $.register({
     rule: {
-      host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod)\.com|freeuploadimages\.org|shareimage\.ro/,
+      host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics)\.com|freeuploadimages\.org|shareimage\.ro/,
     },
     run: function () {
       var uri = window.location.href.toString();

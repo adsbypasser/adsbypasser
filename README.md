@@ -88,6 +88,7 @@ grunt
     * hentai-hosting.com
     * howtohemorrhoidscure.com
     * imagepremium.com
+    * miragepics.com
     * pornpicuploader.com
     * preview.jpavgod.com
     * shareimage.ro

@@ -4,6 +4,7 @@
     * exception's namespace
 * added
     * euro-pic.eu
+    * miragepics.com
 * changed
     * use resource to load css and background
 
