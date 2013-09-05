@@ -128,6 +128,7 @@ grunt
     * pixup.us
 * picfox
     * amateurfreak.org
+    * euro-pic.eu
     * picfox.org
 * imagecherry
     * imagecherry.com

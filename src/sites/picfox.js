@@ -1,6 +1,7 @@
 // ==UserScript==
 // @match          http://amateurfreak.org/share-*.html
 // @match          http://amateurfreak.org/share.php?id=*
+// @match          http://www.euro-pic.eu/share.php?id=*
 // @match          http://picfox.org/*
 // ==/UserScript==
 
@@ -9,7 +10,7 @@
 
   $.register({
     rule: {
-      host: /(picfox|amateurfreak)\.org/,
+      host: /^(picfox|amateurfreak)\.org|www\.euro-pic\.eu$/,
     },
     run: function () {
       var o = $('#iimg');

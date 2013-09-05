@@ -2,6 +2,8 @@
 
 * fixed
     * exception's namespace
+* added
+    * euro-pic.eu
 * changed
     * use resource to load css and background
 
