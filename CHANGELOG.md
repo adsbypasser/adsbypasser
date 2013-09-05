@@ -1,4 +1,4 @@
-## TBA
+## 3.4.0
 
 * fixed
     * exception's namespace
