@@ -1,3 +1,10 @@
+## TBA
+
+* fixed
+    * exception's namespace
+* changed
+    * use resource to load css and background
+
 ## 3.3.0
 
 * fixed
