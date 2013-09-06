@@ -6,6 +6,7 @@
     * adf.my.id
     * 4ks.net
     * mhz.me
+    * urlsir.com
 
 ## 3.4.0
 

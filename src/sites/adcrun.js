@@ -9,7 +9,6 @@
 // @match          http://short.pk/*
 // @match          http://ssl.gs/*
 // @match          http://tr5.in/*
-// @match          http://urlsir.com/*
 // @match          http://urlvisa.com/*
 // @match          http://wwy.me/*
 // @match          http://youlinking.com/*
@@ -25,7 +24,6 @@
 // @exclude        http://short.pk/*.php
 // @exclude        http://ssl.gs/
 // @exclude        http://tr5.in/
-// @exclude        http://urlsir.com/
 // @exclude        http://urlvisa.com/
 // @exclude        http://wwy.me/
 // @exclude        http://youlinking.com/
@@ -37,7 +35,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|zpoz\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
+      host: /^adcrun\.ch|(youlinking|fly2url|urlvisa|biaiai|raksoyun)\.com|zpoz\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
     },
     run: function () {
       // prevent redirection by iframe

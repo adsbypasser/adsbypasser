@@ -162,7 +162,6 @@ grunt
     * shortit.in
     * ssl.gs
     * tr5.in
-    * urlsir.com
     * urlvisa.com
     * wwy.me
     * youlinking.com
