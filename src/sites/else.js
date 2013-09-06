@@ -773,8 +773,7 @@
     },
     run: function () {
       var i = $('#this_image');
-      $.replaceBody(i.src);
-      $.enableScrolling();
+      $.redirect(i.src);
     },
   });
 
