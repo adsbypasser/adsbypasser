@@ -132,6 +132,12 @@ var $;
   };
 
   $.replaceBody = function (imgSrc) {
+    if (!imgSrc) {
+      _.warn('false url');
+      return;
+    }
+    _.info(_.T('replacing body with `{0}` ...')(imgSrc));
+
     $.removeAllTimer();
     $.removeNodes('style, link[rel=stylesheet]');
 
