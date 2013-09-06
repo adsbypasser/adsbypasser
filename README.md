@@ -132,9 +132,6 @@ grunt
     * amateurfreak.org
     * euro-pic.eu
     * picfox.org
-* imagecherry
-    * imagecherry.com
-    * imgpo.st
 * imgchili
     * imgchili.com
     * imgchili.net
@@ -237,6 +234,7 @@ grunt
     * imgbar.net
     * imgfantasy.com
     * imgnip.com
+    * imgpo.st
     * imgpony.com
     * imgwiev.tk
     * ity.im

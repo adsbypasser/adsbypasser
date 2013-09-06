@@ -4,6 +4,8 @@
     * imgbabes.com
 * fixed
     * sexyimg.com
+* removed
+    * imagecherry.com
 
 ## 3.5.0
 
