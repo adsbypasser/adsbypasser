@@ -14,7 +14,7 @@
 // @match          http://*.goneviral.com/*
 // @match          http://*.hornywood.tv/*
 // @match          http://*.linkbabes.com/*
-// @match          http://*.linkbucks.com/*
+// @include        /http://.+\.linkbucks\.com/.+/
 // @match          http://*.linkgalleries.net/*
 // @match          http://*.linkseer.net/*
 // @match          http://*.megaline.co/*
@@ -51,7 +51,6 @@
 // @match          http://*.yyv.co/*
 // @match          http://*.zff.co/*
 // @match          http://*.zxxo.net/*
-// @exclude        http://www.linkbucks.com/
 // ==/UserScript==
 
 (function () {

@@ -1,33 +1,18 @@
 // ==UserScript==
-// @match          http://adcrun.ch/*
-// @match          http://biaiai.com/*
-// @match          http://bih.cc/*
-// @match          http://www.budurl.ru/*
-// @match          http://fly2url.com/*
-// @match          http://link.tl/*
-// @match          http://raksoyun.com/*
-// @match          http://short.pk/*
-// @match          http://ssl.gs/*
-// @match          http://tr5.in/*
-// @match          http://urlvisa.com/*
-// @match          http://wwy.me/*
-// @match          http://youlinking.com/*
-// @match          http://zpoz.net/*
-// @exclude        http://adcrun.ch/
-// @exclude        http://biaiai.com/
-// @exclude        http://bih.cc/
-// @exclude        http://www.budurl.ru/
-// @exclude        http://fly2url.com/
-// @exclude        http://link.tl/
-// @exclude        http://raksoyun.com/
-// @exclude        http://short.pk/
-// @exclude        http://short.pk/*.php
-// @exclude        http://ssl.gs/
-// @exclude        http://tr5.in/
-// @exclude        http://urlvisa.com/
-// @exclude        http://wwy.me/
-// @exclude        http://youlinking.com/
-// @exclude        http://zpoz.net/
+// @include        /http://adcrun\.ch/.+/
+// @include        /http://biaiai\.com/.+/
+// @include        /http://bih\.cc/.+/
+// @include        /http://www\.budurl\.ru/.+/
+// @include        /http://fly2url\.com/.+/
+// @include        /http://link\.tl/.+/
+// @include        /http://raksoyun\.com/.+/
+// @include        /http://short\.pk/.+/
+// @include        /http://ssl\.gs/.+/
+// @include        /http://tr5\.in/.+/
+// @include        /http://urlvisa\.com/.+/
+// @include        /http://wwy\.me/.+/
+// @include        /http://youlinking\.com/.+/
+// @include        /http://zpoz\.net/.+/
 // ==/UserScript==
 
 (function () {
