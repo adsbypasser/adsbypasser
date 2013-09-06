@@ -4,6 +4,7 @@
     * cookie issues
 * removed
     * adf.my.id
+    * 4ks.net
 
 ## 3.4.0
 

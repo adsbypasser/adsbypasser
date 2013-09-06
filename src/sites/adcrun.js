@@ -1,5 +1,4 @@
 // ==UserScript==
-// @match          http://4ks.net/*
 // @match          http://adcrun.ch/*
 // @match          http://biaiai.com/*
 // @match          http://bih.cc/*
@@ -16,7 +15,6 @@
 // @match          http://wwy.me/*
 // @match          http://youlinking.com/*
 // @match          http://zpoz.net/*
-// @exclude        http://4ks.net/
 // @exclude        http://adcrun.ch/
 // @exclude        http://biaiai.com/
 // @exclude        http://bih.cc/
@@ -41,7 +39,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|(4ks|zpoz)\.net|tr5\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
+      host: /^adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|zpoz\.net|tr5\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
     },
     run: function () {
       // prevent redirection by iframe
