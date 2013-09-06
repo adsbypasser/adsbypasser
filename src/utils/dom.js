@@ -131,6 +131,28 @@ var $;
     o.style.overflow = '';
   };
 
+  function toggleShrinking () {
+    this.classList.toggle('nopicads-shrinked');
+  }
+
+  function checkScaling () {
+    var nw = this.naturalWidth;
+    var nh = this.naturalHeight;
+    var cw = document.documentElement.clientWidth;
+    var ch = document.documentElement.clientHeight;
+    if ((nw > cw || nh > ch) && !this.classList.contains('nopicads-resizable')) {
+      this.classList.add('nopicads-resizable');
+      this.classList.add('nopicads-shrinked');
+
+      this.addEventListener('click', toggleShrinking);
+    } else {
+      this.removeEventListener('click', toggleShrinking);
+
+      this.classList.remove('nopicads-shrinked');
+      this.classList.remove('nopicads-resizable');
+    }
+  }
+
   $.replaceBody = function (imgSrc) {
     if (!imgSrc) {
       _.warn('false url');
@@ -140,16 +162,15 @@ var $;
 
     $.removeAllTimer();
     $.removeNodes('style, link[rel=stylesheet]');
+    $.enableScrolling();
 
     var imageStyle = GM_getResourceText('imageStyle');
-    var bgImage = GM_getResourceURL('bgImage');
-    imageStyle = _.T(imageStyle)({
-      url: bgImage,
-    });
-
     GM_addStyle(imageStyle);
 
+    var bgImage = GM_getResourceURL('bgImage');
     document.body = document.createElement('body');
+    document.body.style.backgroundImage = _.T('url(\'{0}\')')(bgImage);
+
     var d = document.createElement('div');
     d.id = 'nopicads-wrapper';
     document.body.appendChild(d);
@@ -157,18 +178,18 @@ var $;
     var i = document.createElement('img');
     i.id = 'nopicads-image';
     i.src = imgSrc;
+    if (i.naturalWidth && i.naturalHeight) {
+      checkScaling.call(i);
+    } else {
+      i.addEventListener('load', checkScaling);
+    }
     d.appendChild(i);
 
-    if (i.naturalWidth > document.documentElement.clientWidth || i.naturalHeight > document.documentElement.clientHeight) {
-      var scaleStyle = GM_getResourceText('scaleStyle');
-      GM_addStyle(scaleStyle);
-
-      i.classList.add('nopicads-shrink');
-
-      i.addEventListener('click', function () {
-        this.classList.toggle('nopicads-shrink');
-      });
-    }
+    var h;
+    window.addEventListener('resize', function () {
+      window.clearTimeout(h);
+      h = window.setTimeout(checkScaling.bind(i), 100);
+    });
   };
 
   $.removeNodes = function (selector) {
