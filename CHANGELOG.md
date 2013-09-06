@@ -1,4 +1,4 @@
-## TBA
+## 3.5.0
 
 * fixed
     * cookie issues
