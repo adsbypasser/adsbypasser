@@ -27,7 +27,7 @@ var $;
     try {
       return $(selector, context);
     } catch (e) {
-      $.info(e.message);
+      _.info(e.message);
       return null;
     }
   };
@@ -38,21 +38,6 @@ var $;
     }
     var ns = context.querySelectorAll(selector);
     return _.C(ns);
-  };
-
-
-  function log (method, args) {
-    args = Array.prototype.slice.call(args);
-    args.unshift('NoPicAds:');
-    console[method].apply(console, args);
-  }
-
-  $.info = function () {
-    log('info', arguments);
-  };
-
-  $.warn = function () {
-    log('warn', arguments);
   };
 
 
@@ -117,11 +102,11 @@ var $;
 
   $.redirect = function (to) {
     if (!to) {
-      $.warn('false URL');
+      _.warn('false URL');
       return;
     }
     var from = window.location.toString();
-    $.info(_.T('{0} -> {1}')(from, to));
+    _.info(_.T('{0} -> {1}')(from, to));
     window.top.location.replace(to);
   };
 

@@ -142,6 +142,21 @@ var _ = {};
   };
 
 
+  function log (method, args) {
+    args = Array.prototype.slice.call(args);
+    args.unshift('NoPicAds:');
+    console[method].apply(console, args);
+  }
+
+  _.info = function () {
+    log('info', arguments);
+  };
+
+  _.warn = function () {
+    log('warn', arguments);
+  };
+
+
 })();
 
 
