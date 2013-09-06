@@ -17,6 +17,7 @@
     },
     run: function () {
       $.removeNodes('iframe');
+      $.resetCookies();
 
       var h = unsafeWindow.eu, b64 = unsafeWindow.Base64;
       if (!h) {

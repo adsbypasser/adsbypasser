@@ -63,6 +63,7 @@
     },
     run: function () {
       $.removeAllTimer();
+      $.resetCookies();
 
       if (unsafeWindow.document.body.onbeforeunload) {
         unsafeWindow.document.body.onbeforeunload = null;

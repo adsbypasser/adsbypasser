@@ -171,6 +171,24 @@ var $;
     });
   };
 
+  $.resetCookies = function () {
+    var a = document.domain;
+    var b = document.domain.replace(/^www\./, '');
+    var c = document.domain.replace(/^(\w+\.)+?(\w+\.\w+)$/, '$2');
+    var d = (new Date(1e3)).toUTCString();
+
+    _.C(document.cookie.split(';')).each(function (v) {
+      var k = v.replace(/^\s*(\w+)=.+$/, '$1');
+
+      document.cookie = _.T('{0}=;expires={1};')(k, d);
+      document.cookie = _.T('{0}=;path=/;expires={1};')(k, d);
+      var e = _.T('{0}=;path=/;domain={1};expires={2};');
+      document.cookie = e(k, a, d);
+      document.cookie = e(k, b, d);
+      document.cookie = e(k, c, d);
+    });
+  };
+
   $.captcha = function (imgSrc, cb) {
     var a = document.createElement('canvas');
     var b = a.getContext('2d');
