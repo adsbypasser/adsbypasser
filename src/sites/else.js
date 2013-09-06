@@ -380,8 +380,8 @@
       path: /\/s\/.*\.html/,
     },
     run: function () {
-      var a = $('#imgbox a.divclick');
-      $.redirect(a.href);
+      var f = $('#imgbox form');
+      $.redirect(f.action);
     },
   });
 

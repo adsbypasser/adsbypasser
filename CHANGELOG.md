@@ -2,6 +2,8 @@
 
 * changed
     * imgbabes.com
+* fixed
+    * sexyimg.com
 
 ## 3.5.0
 
