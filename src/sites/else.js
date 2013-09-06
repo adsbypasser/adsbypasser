@@ -994,6 +994,7 @@
     },
   });
 
+  // imgpony.com
   $.register({
     rule: {
       host: /imgpony\.com/,
