@@ -47,6 +47,7 @@
 // @match          http://screenlist.ru/details.php?image_id=*
 // @match          http://seomafia.net/*
 // @match          http://stash-coins.com/*
+// @match          http://tinyarrows.com/preview.php?page=*
 // @match          http://tinypic.com/view.php?pic=*
 // @match          http://ulmt.in/*
 // @match          http://urlz.so/l/*
@@ -1043,6 +1044,17 @@
         hidden: '1',
         image: ' ',
       });
+    },
+  });
+
+  // tinyarrows.com
+  $.register({
+    rule: {
+      host: /^tinyarrows\.com$/,
+      query: /page=([^&]+)/,
+    },
+    run: function (m) {
+      $.redirect(decodeURIComponent(m.query[1]));
     },
   });
 

@@ -7,6 +7,8 @@
     * 4ks.net
     * mhz.me
     * urlsir.com
+* added
+    * tinyarrows.com
 
 ## 3.4.0
 

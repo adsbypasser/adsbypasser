@@ -257,6 +257,7 @@ grunt
     * sexyimg.com
     * stash-coins.com
     * subirimagenes.com
+    * tinyarrows.com
     * tinypic.com
     * turboimagehost.com
     * ulmt.in
