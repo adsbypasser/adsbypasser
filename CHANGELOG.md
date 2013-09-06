@@ -2,6 +2,8 @@
 
 * fixed
     * cookie issues
+* removed
+    * adf.my.id
 
 ## 3.4.0
 

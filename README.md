@@ -177,9 +177,6 @@ grunt
     * lnx.lu
     * url.fm
     * z.gs
-* adfmyid
-    * adf.my.id
-    * riurl.com
 * lnkco
     * lnk.co
     * rdlnk.co
@@ -257,6 +254,7 @@ grunt
     * pixhub.eu
     * qrrro.com
     * ref.so
+    * riurl.com
     * screenlist.ru
     * seomafia.net
     * sexyimg.com

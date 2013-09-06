@@ -43,6 +43,7 @@
 // @match          http://pixhub.eu/*
 // @match          http://qrrro.com/images/*.html
 // @match          http://ref.so/*
+// @match          http://riurl.com/*
 // @match          http://screenlist.ru/details.php?image_id=*
 // @match          http://seomafia.net/*
 // @match          http://stash-coins.com/*
@@ -1021,6 +1022,27 @@
     run: function () {
       var i = $('img');
       $.redirect(i.src);
+    },
+  });
+
+  // riurl.com
+  $.register({
+    rule: {
+      host: /^riurl\.com$/,
+    },
+    run: function () {
+      var s = $.$('body script');
+      if (s) {
+        s = s.innerHTML.indexOf('window.location.replace');
+        if (s >= 0) {
+          // let inline script redirect
+          return;
+        }
+      }
+      $.postAndGo('', {
+        hidden: '1',
+        image: ' ',
+      });
     },
   });
 
