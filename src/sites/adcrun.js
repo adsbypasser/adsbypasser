@@ -5,7 +5,6 @@
 // @match          http://www.budurl.ru/*
 // @match          http://fly2url.com/*
 // @match          http://link.tl/*
-// @match          http://mhz.me/*
 // @match          http://raksoyun.com/*
 // @match          http://short.pk/*
 // @match          http://ssl.gs/*
@@ -21,7 +20,6 @@
 // @exclude        http://www.budurl.ru/
 // @exclude        http://fly2url.com/
 // @exclude        http://link.tl/
-// @exclude        http://mhz.me/
 // @exclude        http://raksoyun.com/
 // @exclude        http://short.pk/
 // @exclude        http://short.pk/*.php
@@ -39,7 +37,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|zpoz\.net|tr5\.in|(wwy|mhz)\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
+      host: /^adcrun\.ch|(youlinking|fly2url|urlsir|urlvisa|biaiai|raksoyun)\.com|zpoz\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
     },
     run: function () {
       // prevent redirection by iframe

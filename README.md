@@ -157,7 +157,6 @@ grunt
     * budurl.ru
     * fly2url.com
     * link.tl
-    * mhz.me
     * raksoyun.com
     * short.pk
     * shortit.in

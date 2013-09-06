@@ -5,6 +5,7 @@
 * removed
     * adf.my.id
     * 4ks.net
+    * mhz.me
 
 ## 3.4.0
 
