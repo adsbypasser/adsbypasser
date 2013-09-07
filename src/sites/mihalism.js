@@ -1,17 +1,14 @@
 // ==UserScript==
-// ==Mihalism Multi Host v1==
 // @match          http://freeuploadimages.org/viewer.php?file=*
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://hentai-hosting.com/viewer.php?file=*
+// @match          http://howtohemorrhoidscure.com/viewer.php?file=*
 // @match          http://imagepremium.com/viewer.php?file=*
+// @match          http://javimage.us/viewer.php?file=*
 // @match          http://miragepics.com/viewer.php?file=*
 // @match          http://pornpicuploader.com/viewer.php?file=*
-// @match          http://shareimage.ro/viewer.php?file=*
-// ==/Mihalism Multi Host v1==
-// ==Mihalism Multi Host==
-// @match          http://howtohemorrhoidscure.com/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
-// ==/Mihalism Multi Host==
+// @match          http://shareimage.ro/viewer.php?file=*
 // ==/UserScript==
 
 (function () {
@@ -33,7 +30,7 @@
   // howtohemorrhoidscure.com
   $.register({
     rule: {
-      host: /howtohemorrhoidscure\.com/,
+      host: /howtohemorrhoidscure\.com|javimage\.us/,
     },
     run: function () {
       var a = $('#page_body a');

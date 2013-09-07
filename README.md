@@ -91,6 +91,7 @@ Combined file will be `dest/nopicads.user.js`.
     * hentai-hosting.com
     * howtohemorrhoidscure.com
     * imagepremium.com
+    * javimage.us
     * miragepics.com
     * pornpicuploader.com
     * preview.jpavgod.com
