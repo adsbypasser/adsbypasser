@@ -253,6 +253,7 @@ Combined file will be `dest/nopicads.user.js`.
     * pixhub.eu
     * qrrro.com
     * riurl.com
+    * robo.us
     * screenlist.ru
     * seomafia.net
     * sexyimg.com

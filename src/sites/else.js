@@ -45,6 +45,7 @@
 // @match          http://pixhub.eu/*
 // @match          http://qrrro.com/images/*.html
 // @match          http://riurl.com/*
+// @match          http://robo.us/*
 // @match          http://screenlist.ru/details.php?image_id=*
 // @match          http://seomafia.net/*
 // @match          http://stash-coins.com/*
@@ -1105,6 +1106,18 @@
         });
       }
       fetch();
+    },
+  });
+
+  // robo.us
+  $.register({
+    rule: {
+      host: /^robo\.us$/,
+    },
+    run: function (m) {
+      $.removeNodes('iframe');
+      var url = atob(unsafeWindow.fl);
+      $.redirect(url);
     },
   });
 
