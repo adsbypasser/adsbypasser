@@ -5,6 +5,7 @@
 * fixed
     * sexyimg.com
     * sometimes TamperMonkey may not work
+    * adf.ly lock page
 * removed
     * imagecherry.com
 

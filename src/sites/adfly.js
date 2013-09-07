@@ -14,6 +14,18 @@
   $.register({
     rule: {
       host: /^adf\.ly|u\.bb|[jq]\.gs|go\.phpnulledscripts\.com$/,
+      path: /\/locked$/,
+      query: /url=([^&]+)/,
+    },
+    run: function (m) {
+      $.resetCookies();
+      $.redirect(m.query[1]);
+    },
+  });
+
+  $.register({
+    rule: {
+      host: /^adf\.ly|u\.bb|[jq]\.gs|go\.phpnulledscripts\.com$/,
     },
     run: function () {
       $.removeNodes('iframe');
