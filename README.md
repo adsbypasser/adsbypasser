@@ -13,13 +13,15 @@ Stable version will upload to [here][1].
 
 ## How To Build
 
-Please install *Node.js* and *npm* then run:
+Please install *Node.js* and *npm*, then run:
 
 ```
 npm install -g grunt-cli
 npm install
 grunt
 ```
+
+Combined file will be `dest/nopicads.user.js`.
 
 
 ## Supported Sites
