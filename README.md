@@ -203,6 +203,7 @@ Combined file will be `dest/nopicads.user.js`.
     * 4owl.info
     * adfoc.us
     * adlock.in
+    * adultf.ly
     * adv.li
     * alabout.com
     * alafs.com

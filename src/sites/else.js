@@ -52,6 +52,7 @@
 // @match          http://tinypic.com/view.php?pic=*
 // @match          http://ulmt.in/*
 // @match          http://urlz.so/l/*
+// @match          http://www.adultf.ly/*
 // @match          http://www.bild.me/bild.php?file=*
 // @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.bilder-upload.eu/show.php?file=*
@@ -1072,6 +1073,38 @@
       script = script.innerHTML.match(/href=(\S+)/);
       script = script[1];
       $.redirect(script);
+    },
+  });
+
+  // www.adultf.ly
+  $.register({
+    rule: {
+      host: /^www\.adultf\.ly$/,
+      path: /\/(.+)/,
+    },
+    run: function (m) {
+      var i = $('#iframeID');
+      var advID = i.dataset.cmp;
+      var u = i.dataset.u;
+      $.removeNodes('iframe');
+      unsafeWindow.$ = null;
+
+      function fetch () {
+        $.post('/ajax/r.php', {
+          advID: advID,
+          page: m.path[1],
+          u: u,
+        }, function (data) {
+          if (/^\d+/.test(data)) {
+            fetch();
+            return;
+          }
+          var m = data.match(/href="([^"]+)"/);
+          m = m[1];
+          $.redirect(m);
+        });
+      }
+      fetch();
     },
   });
 
