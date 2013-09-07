@@ -75,6 +75,7 @@
 // @match          http://www.x45x.info/?pt=*
 // @include        /http://x\.pixfarm\.net/sexy/\d+/\d+/.+\.html/
 // @match          http://xip.ir/*
+// @match          http://zo.mu/redirector/process?link=*
 // @match          http://zpag.es/*
 // @exclude        http://javelite.tk/
 // @exclude        http://madlink.sk/
@@ -1118,6 +1119,17 @@
       $.removeNodes('iframe');
       var url = atob(unsafeWindow.fl);
       $.redirect(url);
+    },
+  });
+
+  // zo.mu
+  $.register({
+    rule: {
+      host: /^zo\.mu$/,
+    },
+    run: function (m) {
+      $.removeNodes('iframe');
+      window.location.reload();
     },
   });
 

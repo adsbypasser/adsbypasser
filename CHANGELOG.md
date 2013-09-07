@@ -13,6 +13,7 @@
     * iiiii.in
     * adultf.ly
     * robo.us
+    * zo.mu
 
 ## 3.5.0
 

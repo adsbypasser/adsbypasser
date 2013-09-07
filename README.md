@@ -268,6 +268,7 @@ Combined file will be `dest/nopicads.user.js`.
     * x.pixfarm.net
     * x45x.info
     * yfrog.com
+    * zo.mu
     * zpag.es
 
 
