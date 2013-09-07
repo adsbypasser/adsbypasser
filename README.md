@@ -151,6 +151,7 @@ Combined file will be `dest/nopicads.user.js`.
     * fastpic.ru
 * adcrun
     * adcrun.ch
+    * adli.pw
     * biaiai.com
     * bih.cc
     * budurl.ru

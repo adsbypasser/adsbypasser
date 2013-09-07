@@ -1,8 +1,8 @@
 // ==UserScript==
 // @include        /http://adcrun\.ch/.+/
+// @include        /http://adli\.pw/.+/
 // @include        /http://biaiai\.com/.+/
 // @include        /http://bih\.cc/.+/
-// @include        /http://www\.budurl\.ru/.+/
 // @include        /http://fly2url\.com/.+/
 // @include        /http://link\.tl/.+/
 // @include        /http://raksoyun\.com/.+/
@@ -10,6 +10,7 @@
 // @include        /http://ssl\.gs/.+/
 // @include        /http://tr5\.in/.+/
 // @include        /http://urlvisa\.com/.+/
+// @include        /http://www\.budurl\.ru/.+/
 // @include        /http://wwy\.me/.+/
 // @include        /http://youlinking\.com/.+/
 // @include        /http://zpoz\.net/.+/
@@ -20,7 +21,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(youlinking|fly2url|urlvisa|biaiai|raksoyun)\.com|zpoz\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru$/,
+      host: /^adcrun\.ch|(youlinking|fly2url|urlvisa|biaiai|raksoyun)\.com|zpoz\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru|adli\.pw$/,
     },
     run: function () {
       // prevent redirection by iframe

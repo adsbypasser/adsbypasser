@@ -14,6 +14,7 @@
     * adultf.ly
     * robo.us
     * zo.mu
+    * adli.pw
 
 ## 3.5.0
 
