@@ -255,10 +255,7 @@ var $;
     if (!pattern) {
       return null;
     }
-    return {
-      runner: pattern.run,
-      matched: matched,
-    };
+    return _.P(pattern.run, matched);
   }
 
   $.exec = function () {
@@ -273,7 +270,7 @@ var $;
     });
 
     if (handler) {
-      handler.runner(handler.matched);
+      handler();
     }
   };
 
