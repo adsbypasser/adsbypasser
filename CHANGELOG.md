@@ -1,4 +1,4 @@
-## TBA
+## 3.6.0
 
 * changed
     * imgbabes.com
