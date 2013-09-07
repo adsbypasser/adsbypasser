@@ -225,6 +225,7 @@ Combined file will be `dest/nopicads.user.js`.
     * hotimg.com
     * ibunker.us
     * ichan.org
+    * iiiii.in
     * imagearn.com
     * imagebam.com
     * imagehosting.gr

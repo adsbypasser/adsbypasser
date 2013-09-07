@@ -24,6 +24,7 @@
 // @match          http://goimagehost.com/xxx/*
 // @match          http://ibunker.us/*
 // @match          http://ichan.org/*
+// @match          http://iiiii.in/*
 // @match          http://imagearn.com/image.php?id=*
 // @match          http://imagehosting.gr/*.html
 // @match          http://imagescream.com/?v=*
@@ -1056,6 +1057,21 @@
       // somehow the server send image as an attachment
       // so I replace whole document.body with single img
       $.replaceBody(o.src);
+    },
+  });
+
+  // iiiii.in
+  $.register({
+    rule: {
+      host: /^iiiii\.in$/,
+    },
+    run: function () {
+      var script = $.$$('script').find(function (v) {
+        return v.innerHTML.indexOf('href=') >= 0;
+      });
+      script = script.innerHTML.match(/href=(\S+)/);
+      script = script[1];
+      $.redirect(script);
     },
   });
 
