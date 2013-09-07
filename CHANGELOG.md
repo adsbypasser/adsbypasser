@@ -4,6 +4,7 @@
     * imgbabes.com
 * fixed
     * sexyimg.com
+    * sometimes TamperMonkey may not work
 * removed
     * imagecherry.com
 

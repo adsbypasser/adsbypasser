@@ -261,8 +261,7 @@ var $;
     };
   }
 
-  disableWindowOpen();
-  document.addEventListener('DOMContentLoaded', function () {
+  $.exec = function () {
     // <scheme>//<host>:<port><path><query><hash>
     var handler = find({
       scheme: window.location.protocol,
@@ -276,10 +275,17 @@ var $;
     if (handler) {
       handler.runner(handler.matched);
     }
-  });
+  };
+
+
+  disableWindowOpen();
 
 
 })();
+
+
+// do this in anon function may not work in TamperMonkey
+document.addEventListener('DOMContentLoaded', $.exec);
 
 
 // vim: ts=2 sts=2 sw=2 et
