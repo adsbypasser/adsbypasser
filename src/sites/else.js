@@ -43,7 +43,6 @@
 // @match          http://picshare.geenza.com/pics/*
 // @match          http://pixhub.eu/*
 // @match          http://qrrro.com/images/*.html
-// @match          http://ref.so/*
 // @match          http://riurl.com/*
 // @match          http://screenlist.ru/details.php?image_id=*
 // @match          http://seomafia.net/*
@@ -706,18 +705,6 @@
     run: function () {
       var d = $('#event');
       $.redirect(d.getAttribute('rel'));
-    },
-  });
-
-  // ref.so
-  $.register({
-    rule: {
-      host: /^ref\.so$/,
-    },
-    run: function () {
-      $.removeNodes('iframe');
-      var a = $('#btn_open a');
-      $.redirect(a.href);
     },
   });
 

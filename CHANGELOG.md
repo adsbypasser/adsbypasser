@@ -8,6 +8,7 @@
     * adf.ly lock page
 * removed
     * imagecherry.com
+    * ref.so
 
 ## 3.5.0
 

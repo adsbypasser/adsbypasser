@@ -250,7 +250,6 @@ Combined file will be `dest/nopicads.user.js`.
     * pixhost.org
     * pixhub.eu
     * qrrro.com
-    * ref.so
     * riurl.com
     * screenlist.ru
     * seomafia.net
