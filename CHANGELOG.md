@@ -1,4 +1,4 @@
-## TBA
+## 3.7.0
 
 * added
     * javimage.us
