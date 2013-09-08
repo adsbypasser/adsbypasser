@@ -246,6 +246,7 @@ Combined file will be `dest/nopicads.user.js`.
     * ity.im
     * javelite.tk
     * lienscash.com
+    * lnk.in
     * madlink.sk
     * p.pw
     * pic-upload.de
@@ -261,12 +262,15 @@ Combined file will be `dest/nopicads.user.js`.
     * sexyimg.com
     * stash-coins.com
     * subirimagenes.com
+    * thinfi.com
     * tinyarrows.com
     * tinypic.com
     * turboimagehost.com
     * ulmt.in
+    * urlms.com
     * urlz.so
     * viidii.com
+    * vvcap.net
     * x.pixfarm.net
     * x45x.info
     * yfrog.com

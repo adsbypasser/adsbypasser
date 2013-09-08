@@ -2,6 +2,10 @@
 
 * added
     * javimage.us
+    * lnk.in
+    * thinfi.com
+    * urlms.com
+    * vvcap.net
 
 ## 3.6.0
 
