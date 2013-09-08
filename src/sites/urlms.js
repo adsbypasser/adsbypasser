@@ -12,7 +12,7 @@
     run: function () {
       var iframe = $('#content');
       $.redirect(iframe.src);
-    }
+    },
   });
 
 })();

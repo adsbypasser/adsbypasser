@@ -10,9 +10,9 @@
       host: /thinfi\.com/
     },
     run: function () {
-      var a = $('div p a'); 
+      var a = $('div p a');
       $.redirect(a.href);
-    }
+    },
   });
 
 })();

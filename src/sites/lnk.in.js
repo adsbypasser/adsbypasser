@@ -12,7 +12,7 @@
     run: function () {
       var a = $('#divRedirectText a');
       $.redirect(a.innerHTML);
-    }
+    },
   });
 
 })();

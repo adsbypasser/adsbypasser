@@ -12,7 +12,7 @@
     run: function () {
       var i = $('img');
       $.replaceBody(i.src);
-    }
+    },
   });
 
 })();
