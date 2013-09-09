@@ -335,7 +335,7 @@
 
       // second stage
       o = $('img.pic');
-      $.replaceBody(o.src);
+      $.replace(o.src);
     },
   });
 
@@ -348,7 +348,7 @@
       var o = $('#imageContainer img[id]');
       // somehow the server send image as an attachment
       // so I replace whole document.body with single img
-      $.replaceBody(o.src);
+      $.replace(o.src);
     },
   });
 
@@ -397,7 +397,7 @@
     },
     run: function () {
       var i = $('#imgbox img.bigimg');
-      $.replaceBody(i.src);
+      $.replace(i.src);
     },
   });
 
@@ -876,7 +876,7 @@
     run: function () {
       var i = $('#picture');
       // FIXME somehow the mime type is text/html
-      $.replaceBody(i.src);
+      $.replace(i.src);
     },
   });
 
@@ -1059,7 +1059,7 @@
       var o = $('img.pic');
       // somehow the server send image as an attachment
       // so I replace whole document.body with single img
-      $.replaceBody(o.src);
+      $.replace(o.src);
     },
   });
 

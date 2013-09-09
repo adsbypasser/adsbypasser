@@ -152,7 +152,7 @@ var $;
     }
   }
 
-  $.replaceBody = function (imgSrc) {
+  $.replace = function (imgSrc) {
     if (!imgSrc) {
       _.warn('false url');
       return;
