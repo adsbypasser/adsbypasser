@@ -3,6 +3,7 @@
 * added
     * comyonet.com
     * durl.me
+    * anonpic.com
 
 ## 3.7.0
 

@@ -209,6 +209,7 @@ Combined file will be `dest/nopicads.user.js`.
     * adv.li
     * alabout.com
     * alafs.com
+    * anonpic.com
     * bayimg.com
     * bc.vc
     * bild.me

@@ -10,6 +10,7 @@
 // @match          http://1be.biz/s.php?*
 // @match          http://3ra.be/*
 // @match          http://4fun.tw/*
+// @match          http://anonpic.com/?v=*
 // @match          http://adfoc.us/*
 // @match          http://adfoc.us/serve/?id=*
 // @match          http://adlock.in/*
@@ -1130,6 +1131,17 @@
     run: function (m) {
       $.removeNodes('iframe');
       window.location.reload();
+    },
+  });
+
+  // anonpic.com
+  $.register({
+    rule: {
+      host: /^anonpic\.com$/,
+    },
+    run: function () {
+      var i = $('#imagen img');
+      $.redirect(i.src);
     },
   });
 
