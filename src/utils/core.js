@@ -3,26 +3,56 @@ var _ = {};
   'use strict';
 
 
-  function NoPicAdsError (message) {
-    this.message = message;
-    this._setupStack();
-  }
-  NoPicAdsError.prototype = Object.create(Error.prototype);
-  NoPicAdsError.prototype.constructor = NoPicAdsError;
-  NoPicAdsError.prototype.name = 'NoPicAdsError';
-  NoPicAdsError.prototype._setupStack = function () {
+  function setupStack () {
     if (Error.captureStackTrace) {
       // V8-like
       Error.captureStackTrace(this, this.constructor);
     } else {
       // fallback to Mozilla-like
-      this._stack = this._stack ? this._stack.slice(1) : Error().stack.split('\n').slice(2);
-      var e = this._stack[0].match(/^.*@(.*):(\d*)$/);
+      var stack = (new Error()).stack.split('\n').slice(2);
+      var e = stack[0].match(/^.*@(.*):(\d*)$/);
       this.fileName = e[1];
-      this.lineNumber = e[2];
-      this.stack = this._stack.join('\n');
+      this.lineNumber = parseInt(e[2], 10);
+      this.stack = stack.join('\n');
     }
+  }
+
+  function NoPicAdsError () {
+    setupStack.call(this);
+    NoPicAdsError.prototype.__new__.apply(this, arguments);
+  }
+  NoPicAdsError.prototype = Object.create(Error.prototype);
+  NoPicAdsError.prototype.constructor = NoPicAdsError;
+  NoPicAdsError.prototype.name = 'NoPicAdsError';
+  NoPicAdsError.prototype.__new__ = function (message) {
+    this.message = message;
   };
+  NoPicAdsError.extend = function (protoProps, staticProps) {
+    var parent = this, child;
+
+    if (protoProps && protoProps.hasOwnProperty('constructor')) {
+      child = protoProps.constructor;
+    } else {
+      child = function () {
+        setupStack.call(this);
+        protoProps.__new__.apply(this, arguments);
+      };
+    }
+
+    extend(child, parent, staticProps);
+
+    child.prototype = Object.create(parent.prototype);
+    child.prototype.constructor = child;
+
+    if (protoProps) {
+      extend(child.prototype, protoProps);
+    }
+
+    child.super = parent.prototype;
+
+    return child;
+  };
+  NoPicAdsError.super = null;
   _.NoPicAdsError = NoPicAdsError;
 
 
@@ -72,6 +102,18 @@ var _ = {};
     return Object.keys(c).map(function (k) {
       return fn(c[k], k, c);
     });
+  }
+
+  function extend(c) {
+    Array.prototype.slice.call(arguments, 1).forEach(function (source) {
+      if (!source) {
+        return;
+      }
+      _.C(source).each(function (v, k) {
+        c[k] = v;
+      });
+    });
+    return c;
   }
 
   function CollectionProxy (collection) {

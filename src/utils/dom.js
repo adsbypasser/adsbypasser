@@ -3,13 +3,12 @@ var $;
   'use strict';
 
 
-  function DomNotFoundError (selector) {
-    _.NoPicAdsError.call(this, _.T('`{0}` not found')(selector));
-    this._setupStack();
-  }
-  DomNotFoundError.prototype = Object.create(_.NoPicAdsError.prototype);
-  DomNotFoundError.prototype.constructor = DomNotFoundError;
-  DomNotFoundError.prototype.name = 'DomNotFoundError';
+  var DomNotFoundError = _.NoPicAdsError.extend({
+    name: 'DomNotFoundError',
+    __new__: function (selector) {
+      DomNotFoundError.super.__new__.call(this, _.T('`{0}` not found')(selector));
+    },
+  });
 
 
   $ = function (selector, context) {
