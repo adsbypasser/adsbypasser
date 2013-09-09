@@ -218,8 +218,10 @@ Combined file will be `dest/nopicads.user.js`.
     * bilurl.com
     * cf.ly
     * cl.my
+    * comyonet.com
     * directupload.net
     * dumppix.com
+    * durl.me
     * fotolink.su
     * freeporndumpster.com
     * funkyimg.com

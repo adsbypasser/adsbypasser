@@ -1,3 +1,9 @@
+## TBA
+
+* added
+    * comyonet.com
+    * durl.me
+
 ## 3.7.0
 
 * added
