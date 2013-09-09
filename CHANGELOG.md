@@ -4,6 +4,7 @@
     * comyonet.com
     * durl.me
     * anonpic.com
+    * cyberpics.net
 
 ## 3.7.0
 

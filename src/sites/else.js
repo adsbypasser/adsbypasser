@@ -58,6 +58,7 @@
 // @match          http://www.bild.me/bild.php?file=*
 // @match          http://www.bilder-hochladen.net/files/*.html
 // @match          http://www.bilder-upload.eu/show.php?file=*
+// @match          http://www.cyberpics.net/pm/*.html
 // @match          http://www.dumppix.com/viewer.php?*
 // @match          http://www.fotolink.su/v.php?id=*
 // @match          http://www.freeporndumpster.com/show.php?*
@@ -1142,6 +1143,17 @@
     run: function () {
       var i = $('#imagen img');
       $.redirect(i.src);
+    },
+  });
+
+  // cyberpics.net
+  $.register({
+    rule: {
+      host: /^www\.cyberpics\.net$/,
+    },
+    run: function () {
+      var a = $('#content a.lightbox');
+      $.redirect(a.href);
     },
   });
 

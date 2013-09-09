@@ -220,6 +220,7 @@ Combined file will be `dest/nopicads.user.js`.
     * cf.ly
     * cl.my
     * comyonet.com
+    * cyberpics.net
     * directupload.net
     * dumppix.com
     * durl.me
