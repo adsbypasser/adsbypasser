@@ -1117,7 +1117,7 @@
     rule: {
       host: /^robo\.us$/,
     },
-    run: function (m) {
+    run: function () {
       $.removeNodes('iframe');
       var url = atob(unsafeWindow.fl);
       $.redirect(url);
@@ -1129,7 +1129,7 @@
     rule: {
       host: /^zo\.mu$/,
     },
-    run: function (m) {
+    run: function () {
       $.removeNodes('iframe');
       window.location.reload();
     },
