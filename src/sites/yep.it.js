@@ -1,5 +1,5 @@
 // ==UserScript==
-// @match          http://yep.it/*
+// @match          http://yep.it/preview.php?p=*
 // ==/UserScript==
 
 (function () {
