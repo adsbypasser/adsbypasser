@@ -4,6 +4,7 @@
     * yep.it
     * url.ie
     * ah-informatique.com
+    * depic.me
 
 ## 3.8.0
 

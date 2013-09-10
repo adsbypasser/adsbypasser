@@ -222,6 +222,7 @@ Combined file will be `dest/nopicads.user.js`.
     * cl.my
     * comyonet.com
     * cyberpics.net
+    * depic.me
     * directupload.net
     * dumppix.com
     * durl.me
