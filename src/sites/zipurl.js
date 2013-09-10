@@ -1,5 +1,4 @@
 // ==UserScript==
-// @match          http://zipurl.fr/*
 // @match          http://ah-informatique.com/ZipUrl/*
 // ==/UserScript==
 
@@ -8,12 +7,12 @@
 
   $.register({
     rule: {
-      host: /$zipurl\.fr|ah-informatique\.com$/
+      host: /^ah-informatique\.com$/
     },
     run: function () {
       var a = $('#zip3 a');
       $.redirect(a.href);
-    }
+    },
   });
 
 })();
