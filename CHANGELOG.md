@@ -1,3 +1,10 @@
+## TBA
+
+* added
+    * yep.it
+    * url.ie
+    * ah-informatique.com
+
 ## 3.8.0
 
 * added
