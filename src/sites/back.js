@@ -3,21 +3,18 @@
 // @match          http://imagepong.info/view-image/*
 // ==/UserScript==
 
-(function () {
-  'use strict';
+$.register({
+  rule: {
+    host: /image(back|pong)\.info/,
+  },
+  run: function () {
+    'use strict';
 
-  $.register({
-    rule: {
-      host: /image(back|pong)\.info/,
-    },
-    run: function () {
-      $.removeNodes('#popupOverlay, #divExoLayerWrapper');
-      var a = $('div.span7 a');
-      $.redirect(a.href);
-    },
-  });
-
-})();
+    $.removeNodes('#popupOverlay, #divExoLayerWrapper');
+    var a = $('div.span7 a');
+    $.redirect(a.href);
+  },
+});
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;

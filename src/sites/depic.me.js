@@ -8,6 +8,7 @@ $.register({
   },
   run: function () {
     'use strict';
+
     var i = $('#pic');
     $.redirect(i.src);
   },

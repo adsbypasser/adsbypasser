@@ -3,20 +3,17 @@
 // @match          http://www.h-animes.info/*/*/*.html
 // ==/UserScript==
 
-(function () {
-  'use strict';
+$.register({
+  rule: {
+    host: /www\.(h-animes|adultmove)\.info/,
+  },
+  run: function () {
+    'use strict';
 
-  $.register({
-    rule: {
-      host: /www\.(h-animes|adultmove)\.info/,
-    },
-    run: function () {
-      var a = $('.dlbutton2 > a');
-      $.redirect(a.href);
-    },
-  });
-
-})();
+    var a = $('.dlbutton2 > a');
+    $.redirect(a.href);
+  },
+});
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;

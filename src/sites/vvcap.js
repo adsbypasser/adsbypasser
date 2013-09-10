@@ -2,20 +2,17 @@
 // @match          http://vvcap.net/db/*.htp
 // ==/UserScript==
 
-(function () {
-  'use strict';
+$.register({
+  rule: {
+    host: /vvcap\.net/
+  },
+  run: function () {
+    'use strict';
 
-  $.register({
-    rule: {
-      host: /vvcap\.net/
-    },
-    run: function () {
-      var i = $('img');
-      $.replace(i.src);
-    },
-  });
-
-})();
+    var i = $('img');
+    $.replace(i.src);
+  },
+});
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
