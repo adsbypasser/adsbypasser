@@ -12,7 +12,7 @@
     run: function () {
       var link = $('font[color="grey"]').innerHTML;
       $.redirect(link);
-    }
+    },
   });
 
 })();
