@@ -4,7 +4,7 @@
 
 $.register({
   rule: {
-    host: /durl\.me/
+    host: /durl\.me/,
   },
   run: function () {
     'use strict';

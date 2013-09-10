@@ -4,7 +4,7 @@
 
 $.register({
   rule: {
-    host: /^ah-informatique\.com$/
+    host: /^ah-informatique\.com$/,
   },
   run: function () {
     'use strict';

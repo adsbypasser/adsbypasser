@@ -4,7 +4,7 @@
 
 $.register({
   rule: {
-    host: /vvcap\.net/
+    host: /vvcap\.net/,
   },
   run: function () {
     'use strict';

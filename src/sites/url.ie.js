@@ -4,7 +4,7 @@
 
 $.register({
   rule: {
-    host: /url\.ie/
+    host: /url\.ie/,
   },
   run: function () {
     'use strict';
