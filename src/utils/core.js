@@ -209,6 +209,11 @@ var _ = {};
     GM_setValue('align_center', c.alignCenter);
   }
 
+  GM_registerMenuCommand('Toggle Image Center Aligning', function () {
+    _.config.alignCenter = !_.config.alignCenter;
+    save(_.config);
+  });
+
   _.config = load();
 
 
