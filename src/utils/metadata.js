@@ -11,6 +11,8 @@
 // @grant          GM_addStyle
 // @grant          GM_getResourceText
 // @grant          GM_getResourceURL
+// @grant          GM_getValue
+// @grant          GM_setValue
 // @run-at         document-start
 // @resource       imageStyle https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/css/image.css
 // @resource       bgImage https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/img/imagedoc-darknoise.png

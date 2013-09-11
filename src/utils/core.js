@@ -195,6 +195,23 @@ var _ = {};
   };
 
 
+  function load () {
+    var tmp = {
+      version: GM_getValue('version', 0),
+      alignCenter: GM_getValue('align_center', true),
+    };
+    save(tmp);
+    return tmp;
+  }
+
+  function save (c) {
+    GM_setValue('version', c.version);
+    GM_setValue('align_center', c.alignCenter);
+  }
+
+  _.config = load();
+
+
 })();
 
 
