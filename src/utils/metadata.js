@@ -12,5 +12,5 @@
 // @grant          GM_getResourceText
 // @grant          GM_getResourceURL
 // @run-at         document-start
-// @resource       imageStyle http://legnaleurc.github.io/nopicads/image.css
-// @resource       bgImage http://legnaleurc.github.io/nopicads/imagedoc-darknoise.png
+// @resource       imageStyle https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/css/image.css
+// @resource       bgImage https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/img/imagedoc-darknoise.png

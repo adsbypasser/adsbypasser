@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #222222;
+  height: 100%;
+  margin: 0;
+}
+
+#nopicads-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#nopicads-image {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#nopicads-image.nopicads-resizable {
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+  cursor: zoom-out;
+}
+
+#nopicads-image.nopicads-resizable.nopicads-shrinked {
+  max-width: 100%;
+  max-height: 100%;
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  cursor: zoom-in;
+}
+
+/* vim: set ts=2 sts=2 sw=2 et : */
+/* sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true; */
+/* kate: space-indent on; indent-width 2; */
