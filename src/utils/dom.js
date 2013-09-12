@@ -5,8 +5,8 @@ var $;
 
   var DomNotFoundError = _.NoPicAdsError.extend({
     name: 'DomNotFoundError',
-    __new__: function (selector) {
-      DomNotFoundError.super.__new__.call(this, _.T('`{0}` not found')(selector));
+    constructor: function (selector) {
+      DomNotFoundError.super.constructor.call(this, _.T('`{0}` not found')(selector));
     },
   });
 
