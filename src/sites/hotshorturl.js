@@ -7,14 +7,12 @@
 
   $.register({
     rule: {
-      host: /hotshorturl\.com/
+      host: /hotshorturl\.com/,
     },
     run: function () {
-      var frame = $.$$('frame').find(function(frame) {
-        return frame.name == '';
-      });
+      var frame = $('frame[scrolling=yes]');
       $.redirect(frame.src);
-    }
+    },
   });
 
 })();
