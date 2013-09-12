@@ -3,20 +3,17 @@
 // @match          http://cur.lv/*
 // ==/UserScript==
 
-(function () {
-  'use strict';
+$.register({
+  rule: {
+    host: /^coinurl\.com|cur\.lv$/,
+  },
+  run: function () {
+    'use strict';
 
-  $.register({
-    rule: {
-      host: /^coinurl\.com|cur\.lv$/,
-    },
-    run: function () {
-      var a = $('#skip-ad');
-      $.redirect(a.href);
-    },
-  });
-
-})();
+    var a = $('#skip-ad');
+    $.redirect(a.href);
+  },
+});
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;

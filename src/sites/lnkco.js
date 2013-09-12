@@ -4,35 +4,32 @@
 // @include        /https?://reducelnk\.com/.+/
 // ==/UserScript==
 
-(function () {
-  'use strict';
+$.register({
+  rule: {
+    host: /^(rd?)lnk\.co|reducelnk\.com$/,
+  },
+  run: function () {
+    'use strict';
 
-  $.register({
-    rule: {
-      host: /^(rd?)lnk\.co|reducelnk\.com$/,
-    },
-    run: function () {
-      $.removeNodes('iframe');
+    $.removeNodes('iframe');
 
-      var o = $.$('#urlholder');
-      if (o) {
-        $.redirect(o.value);
-        return;
-      }
+    var o = $.$('#urlholder');
+    if (o) {
+      $.redirect(o.value);
+      return;
+    }
 
-      o = $.$('#skipBtn');
-      if (o) {
-        o = o.querySelector('a');
-        $.redirect(o.href);
-        return;
-      }
+    o = $.$('#skipBtn');
+    if (o) {
+      o = o.querySelector('a');
+      $.redirect(o.href);
+      return;
+    }
 
-      o = document.title.replace(/(LNK.co|Linkbee)\s*:\s*/, '');
-      $.redirect(o);
-    },
-  });
-
-})();
+    o = document.title.replace(/(LNK.co|Linkbee)\s*:\s*/, '');
+    $.redirect(o);
+  },
+});
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;

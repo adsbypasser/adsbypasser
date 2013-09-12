@@ -3,20 +3,17 @@
 // @match          http://imgtiger.com/viewer.php?file=*
 // ==/UserScript==
 
-(function () {
-  'use strict';
+$.register({
+  rule: {
+    host: /img(dino|tiger)\.com/,
+  },
+  run: function () {
+    'use strict';
 
-  $.register({
-    rule: {
-      host: /img(dino|tiger)\.com/,
-    },
-    run: function () {
-      var o = $('#cursor_lupa');
-      $.redirect(o.src);
-    },
-  });
-
-})();
+    var o = $('#cursor_lupa');
+    $.redirect(o.src);
+  },
+});
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;

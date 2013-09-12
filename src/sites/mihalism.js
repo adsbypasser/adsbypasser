@@ -14,7 +14,6 @@
 (function () {
   'use strict';
 
-
   // mihalism v1
   $.register({
     rule: {
@@ -53,7 +52,6 @@
       $.redirect(i.src);
     },
   });
-
 
 })();
 

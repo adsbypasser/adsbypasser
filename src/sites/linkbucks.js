@@ -53,39 +53,36 @@
 // @match          http://*.zxxo.net/*
 // ==/UserScript==
 
-(function () {
-  'use strict';
+$.register({
+  rule: {
+    host: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
+  },
+  run: function () {
+    'use strict';
 
-  $.register({
-    rule: {
-      host: /^[\w]{8}\..*\.(com?|net|gs|me|tv|bz|us)/,
-    },
-    run: function () {
-      $.removeAllTimer();
-      $.resetCookies();
+    $.removeAllTimer();
+    $.resetCookies();
 
-      if (unsafeWindow.document.body.onbeforeunload) {
-        unsafeWindow.document.body.onbeforeunload = null;
-      }
+    if (unsafeWindow.document.body.onbeforeunload) {
+      unsafeWindow.document.body.onbeforeunload = null;
+    }
 
-      if (window.location.pathname.indexOf('verify') >= 0) {
-        $.redirect('/');
-        return;
-      }
+    if (window.location.pathname.indexOf('verify') >= 0) {
+      $.redirect('/');
+      return;
+    }
 
-      if (unsafeWindow && unsafeWindow.Lbjs && unsafeWindow.Lbjs.TargetUrl) {
-        $.redirect(unsafeWindow.Lbjs.TargetUrl);
-        return;
-      }
+    if (unsafeWindow && unsafeWindow.Lbjs && unsafeWindow.Lbjs.TargetUrl) {
+      $.redirect(unsafeWindow.Lbjs.TargetUrl);
+      return;
+    }
 
-      var matches = document.body.innerHTML.match(/TargetUrl\s*=\s*['"]([^'"]+)['"]/);
-      if (matches) {
-        $.redirect(matches[1]);
-      }
-    },
-  });
-
-})();
+    var matches = document.body.innerHTML.match(/TargetUrl\s*=\s*['"]([^'"]+)['"]/);
+    if (matches) {
+      $.redirect(matches[1]);
+    }
+  },
+});
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;

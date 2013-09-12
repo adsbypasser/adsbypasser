@@ -207,6 +207,7 @@ Combined file will be `dest/nopicads.user.js`.
     * adlock.in
     * adultf.ly
     * adv.li
+    * ah-informatique.com
     * alabout.com
     * alafs.com
     * anonpic.com
@@ -221,6 +222,7 @@ Combined file will be `dest/nopicads.user.js`.
     * cl.my
     * comyonet.com
     * cyberpics.net
+    * depic.me
     * directupload.net
     * dumppix.com
     * durl.me
@@ -271,12 +273,14 @@ Combined file will be `dest/nopicads.user.js`.
     * tinypic.com
     * turboimagehost.com
     * ulmt.in
+    * url.ie
     * urlms.com
     * urlz.so
     * viidii.com
     * vvcap.net
     * x.pixfarm.net
     * x45x.info
+    * yep.it
     * yfrog.com
     * zo.mu
     * zpag.es

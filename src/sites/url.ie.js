@@ -1,19 +1,19 @@
 // ==UserScript==
-// @match          http://durl.me/*
+// @match          http://url.ie/*
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /durl\.me/,
+    host: /url\.ie/,
   },
   run: function () {
     'use strict';
 
-    var a = $('a[class="proceedBtn"]');
+    var a = $('a[title="Link to original URL"]');
     $.redirect(a.href);
-  }
+  },
 });
 
-// ex: ts=2 sts=2 sw=2 et
+// vim: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
 // kate: space-indent on; indent-width 2;

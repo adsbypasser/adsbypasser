@@ -7,7 +7,7 @@ var _ = {};
     if (Error.captureStackTrace) {
       // V8-like
       Error.captureStackTrace(this, this.constructor);
-    } else {
+    } else if (!this.hasOwnProperty('stack')) {
       // fallback to Mozilla-like
       var stack = (new Error()).stack.split('\n').slice(2);
       var e = stack[0].match(/^.*@(.*):(\d*)$/);
@@ -17,36 +17,23 @@ var _ = {};
     }
   }
 
-  function NoPicAdsError () {
+  function NoPicAdsError (message) {
     setupStack.call(this);
-    NoPicAdsError.prototype.__new__.apply(this, arguments);
+    this.message = message;
   }
   NoPicAdsError.prototype = Object.create(Error.prototype);
   NoPicAdsError.prototype.constructor = NoPicAdsError;
   NoPicAdsError.prototype.name = 'NoPicAdsError';
-  NoPicAdsError.prototype.__new__ = function (message) {
-    this.message = message;
-  };
   NoPicAdsError.extend = function (protoProps, staticProps) {
-    var parent = this, child;
-
-    if (protoProps && protoProps.hasOwnProperty('constructor')) {
-      child = protoProps.constructor;
-    } else {
-      child = function () {
-        setupStack.call(this);
-        protoProps.__new__.apply(this, arguments);
-      };
-    }
-
+    var parent = this, child = function () {
+      setupStack.call(this);
+      protoProps.constructor.apply(this, arguments);
+    };
     extend(child, parent, staticProps);
 
     child.prototype = Object.create(parent.prototype);
+    extend(child.prototype, protoProps);
     child.prototype.constructor = child;
-
-    if (protoProps) {
-      extend(child.prototype, protoProps);
-    }
 
     child.super = parent.prototype;
 
