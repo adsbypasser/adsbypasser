@@ -5,6 +5,8 @@
     * url.ie
     * ah-informatique.com
     * depic.me
+    * unfake.it
+    * hotshorturl.com
 
 ## 3.8.0
 

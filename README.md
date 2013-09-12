@@ -232,6 +232,7 @@ Combined file will be `dest/nopicads.user.js`.
     * goimagehost.com
     * hostpics.info
     * hotimg.com
+    * hotshorturl.com
     * ibunker.us
     * ichan.org
     * iiiii.in
@@ -273,6 +274,7 @@ Combined file will be `dest/nopicads.user.js`.
     * tinypic.com
     * turboimagehost.com
     * ulmt.in
+    * unfake.it
     * url.ie
     * urlms.com
     * urlz.so
