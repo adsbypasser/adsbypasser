@@ -13,7 +13,7 @@ Stable version will upload to [here][1].
 
 ## How To Build
 
-Please install *Node.js* and *npm*, then run:
+Please install [Node.js] and [npm], then run:
 
 ```
 npm install -g grunt-cli
@@ -21,7 +21,8 @@ npm install
 grunt
 ```
 
-Combined file will be `dest/nopicads.user.js`.
+Combined userscript will be `dest/nopicads.user.js`, which could install on
+browser.
 
 
 ## Supported Sites
@@ -289,5 +290,7 @@ Combined file will be `dest/nopicads.user.js`.
 
 
 [1]: http://userscripts.org/scripts/show/154858
+[Node.js]: http://nodejs.org/
+[npm]: https://npmjs.org/
 [RedirectionHelper]: http://userscripts.org/scripts/show/69797
 [SuYS]: http://userscripts.org/users/SuYS
