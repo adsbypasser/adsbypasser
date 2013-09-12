@@ -7,13 +7,12 @@
 
   $.register({
     rule: {
-      host: /unfake\.it/
+      host: /unfake\.it/,
     },
     run: function () {
-      var frame = $.$$('frame').find(function(frame) {
-        return frame.src.lastIndexOf('http://') === 0;
-      });
-      $.redirect(frame.src);
+      var frame = $('frame');
+      var i = frame.src.lastIndexOf('http://');
+      $.redirect(frame.src.substr(i));
     },
   });
 
