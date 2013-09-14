@@ -32,23 +32,29 @@ $.register({
     matches = matches[1];
     content = eval(matches);
 
-    // inject AJAX into body
+    unsafeWindow.$ = null;
+
+    matches = content.match(/\$.post\('([^']*)'[^{]+(\{opt:'check_log'[^}]+\}\}),/i);
+    var check_url = matches[1];
+    var check_opts = eval('(' + matches[2] + ')');
     matches = content.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
-    var url = matches[1];
-    var opts = eval('(' + matches[2] + ')');
-    function bc () {
-      unsafeWindow.$.post(url, opts, function (text) {
+    var make_url = matches[1];
+    var make_opts = eval('(' + matches[2] + ')');
+
+    var i = setInterval(function () {
+      $.post(check_url, check_opts, function (text) {
         var jj = JSON.parse(text);
         if (jj.message) {
-          $.redirect(jj.message.url);
+          clearInterval(i);
+          $.post(make_url, make_opts, function (text) {
+            var jj = JSON.parse(text);
+            if (jj.message) {
+              $.redirect(jj.message.url);
+            }
+          });
         }
       });
-    }
-    unsafeWindow.bc = bc;
-    content = 'setInterval(bc,1000);';
-    matches = document.createElement('script');
-    matches.textContent = content;
-    document.body.appendChild(matches);
+    }, 1000);
   },
 });
 
