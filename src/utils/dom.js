@@ -40,6 +40,16 @@ var $;
   };
 
 
+  function deepJoin (prefix, object) {
+    return _.C(object).map(function (v, k) {
+      var key = _.T('{0}[{1}]')(prefix, k);
+      if (typeof v === 'object') {
+        return deepJoin(key, v);
+      }
+      return _.T('{0}={1}').apply(this, [key, v].map(encodeURIComponent));
+    }).join('&');
+  }
+
   function toQuery (data) {
     if (typeof data === 'string') {
       return data;
@@ -48,21 +58,27 @@ var $;
       return data.toString();
     }
     return _.C(data).map(function (v, k) {
-      return _.T('{0}={1}')(encodeURIComponent(k), encodeURIComponent(v));
+      if (typeof v === 'object') {
+        return deepJoin(k, v);
+      }
+      return _.T('{0}={1}').apply(this, [k, v].map(encodeURIComponent));
     }).join('&');
   }
 
   function ajax (method, url, data, callback) {
+    var qs = toQuery(data);
     var controller = GM_xmlhttpRequest({
       method: method,
       url: url,
-      data: toQuery(data),
+      data: qs,
       headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        'Content-Length': qs.length,
+        'X-Requested-With': 'XMLHttpRequest',
       },
       onload: function (response) {
         callback(response.responseText);
-      }
+      },
     });
 
     return controller;
