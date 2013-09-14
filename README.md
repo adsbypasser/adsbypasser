@@ -24,6 +24,8 @@ grunt
 Combined userscript will be `dest/nopicads.user.js`, which could install on
 browser.
 
+For more information, please see [Wiki].
+
 
 ## Supported Sites
 
@@ -294,3 +296,4 @@ browser.
 [npm]: https://npmjs.org/
 [RedirectionHelper]: http://userscripts.org/scripts/show/69797
 [SuYS]: http://userscripts.org/users/SuYS
+[Wiki]: https://github.com/legnaleurc/nopicads/wiki
