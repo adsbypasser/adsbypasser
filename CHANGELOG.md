@@ -1,3 +1,10 @@
+## TBA
+
+* added
+    * urlgator.com
+    * nsfw.in
+    * bridgeurl.com
+
 ## 3.9.0
 
 * added

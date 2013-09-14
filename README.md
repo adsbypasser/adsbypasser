@@ -221,6 +221,7 @@ For more information, please see [Wiki].
     * bilder-upload.eu
     * bildr.no
     * bilurl.com
+    * bridgeurl.com
     * cf.ly
     * cl.my
     * comyonet.com
@@ -258,6 +259,7 @@ For more information, please see [Wiki].
     * lienscash.com
     * lnk.in
     * madlink.sk
+    * nsfw.in
     * p.pw
     * pic-upload.de
     * pics-money.ru
@@ -279,6 +281,7 @@ For more information, please see [Wiki].
     * ulmt.in
     * unfake.it
     * url.ie
+    * urlgator.com
     * urlms.com
     * urlz.so
     * viidii.com
