@@ -17,6 +17,16 @@ Before you create any issue or pull request, please read this guide carefully:
     By providing a link, we can speed up testing and developing.
 
 
+## TL; DR
+
+Basically you could submit anything as you like. But I'll be very glad if you
+have read sections below:
+
+* [Bug Report](#bug-report)
+* [Feature Request](#feature-request)
+* [Pull Request](#pull-request)
+
+
 ## Bug Report
 
 Please note that it's very hard to guarantee the compatibility to other
@@ -102,9 +112,3 @@ There is something you should keep in mind:
 * do not add multiple feature in one commit
 
     I'll reject such pull request. Please split them into different commits.
-
-
-## TL; DR
-
-You could just submit whatever issues you like. I'll remind you to read this
-guide should your issues don't satisfy the requirments.
