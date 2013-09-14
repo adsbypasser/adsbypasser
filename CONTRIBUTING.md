@@ -2,17 +2,17 @@
 
 Before you create any issue or pull request, please read this guide carefully:
 
-1. **Please search existing issues first.**
+* **Please search existing issues first.**
 
-    Avoid to create a duplicate issue. If the issue has been closed, you can
-    reopen it.
+    Avoid to create a duplicate issue. If the existing issue has been closed,
+    you could reopen it.
 
-2. **One site, one issue.**
+* **One site, one issue.**
 
     Avoid to report multiple sites in an issue, except you are pretty sure they
     are similar.
 
-3. **Please provide an example link if possible.**
+* **Please provide an example link if possible.**
 
     By providing a link, we can speed up testing and developing.
 
@@ -21,6 +21,7 @@ Before you create any issue or pull request, please read this guide carefully:
 
 Please note that it's very hard to guarantee the compatibility to other
 userscripts or browser extensions.
+
 If other people can not reproduce your problem, you could create a new profile
 and try again.
 
@@ -72,11 +73,11 @@ Any feature request is welcome, but won't always be accepted.
 
 Typical feature types are:
 
-1. new site
+* new site
 
     Please provide a sample link.
 
-2. new functionality
+* new functionality
 
     Please explain why this is important to you.
 
@@ -87,21 +88,20 @@ Please send pull requests to `develop` branch, or I will not accept them.
 
 There is something you should keep in mind:
 
-1. coding style
+* coding style
 
     Especially indention, I suggest you use an editor which supports vim's
     modeline feature.
 
-2. some sites are using same system
+* some sites are using same system
 
     Such as *adf.ly*, *linkbucks.com*, *bc.vc* ... etc.
     If you can find an existing site which is homogeneous to your new site,
     simply update the url rule instead of add a new file.
 
-3. do not add multiple feature in one commit
+* do not add multiple feature in one commit
 
-    I'll refuse to accept such pull request. Please split them into different
-    commits.
+    I'll reject such pull request. Please split them into different commits.
 
 
 ## TL; DR
