@@ -273,7 +273,7 @@ var $;
     return _.P(pattern.run, matched);
   }
 
-  $.exec = function () {
+  $.main = function () {
     // <scheme>//<host>:<port><path><query><hash>
     var handler = find({
       scheme: window.location.protocol,
@@ -297,7 +297,7 @@ var $;
 
 
 // do this in anon function may not work in TamperMonkey
-document.addEventListener('DOMContentLoaded', $.exec);
+document.addEventListener('DOMContentLoaded', $.main);
 
 
 // ex: ts=2 sts=2 sw=2 et
