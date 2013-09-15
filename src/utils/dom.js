@@ -207,8 +207,8 @@ var $;
     });
   };
 
-  $.removeNodes = function (selector) {
-    $.$$(selector).each(function (e) {
+  $.removeNodes = function (selector, context) {
+    $.$$(selector, context).each(function (e) {
       e.parentNode.removeChild(e);
     });
   };
