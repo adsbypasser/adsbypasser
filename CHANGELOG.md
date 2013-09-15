@@ -2,6 +2,7 @@
 
 * fixed
     * riurl.com
+    * linkbucks.com
 * added
     * urlgator.com
     * nsfw.in

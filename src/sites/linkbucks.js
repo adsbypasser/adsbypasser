@@ -14,7 +14,7 @@
 // @match          http://*.goneviral.com/*
 // @match          http://*.hornywood.tv/*
 // @match          http://*.linkbabes.com/*
-// @include        /http://.+\.linkbucks\.com/.+/
+// @include        /http://\w{8}\.linkbucks\.com//
 // @match          http://*.linkgalleries.net/*
 // @match          http://*.linkseer.net/*
 // @match          http://*.megaline.co/*
