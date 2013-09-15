@@ -45,7 +45,7 @@
 // @match          http://picshare.geenza.com/pics/*
 // @match          http://pixhub.eu/*
 // @match          http://qrrro.com/images/*.html
-// @match          http://riurl.com/*
+// @include        /http://riurl\.com/.+/
 // @match          http://robo.us/*
 // @match          http://screenlist.ru/details.php?image_id=*
 // @match          http://seomafia.net/*

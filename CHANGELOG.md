@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * riurl.com
 * added
     * urlgator.com
     * nsfw.in
