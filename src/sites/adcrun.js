@@ -6,7 +6,6 @@
 // @include        /http://fly2url\.com/.+/
 // @include        /http://link\.tl/.+/
 // @include        /http://raksoyun\.com/.+/
-// @include        /http://short\.pk/.+/
 // @include        /http://ssl\.gs/.+/
 // @include        /http://tr5\.in/.+/
 // @include        /http://urlvisa\.com/.+/
@@ -18,7 +17,7 @@
 
 $.register({
   rule: {
-    host: /^adcrun\.ch|(youlinking|fly2url|urlvisa|biaiai|raksoyun)\.com|zpoz\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|short\.pk|xip\.ir|www\.budurl\.ru|adli\.pw$/,
+    host: /^adcrun\.ch|(youlinking|fly2url|urlvisa|biaiai|raksoyun)\.com|zpoz\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru|adli\.pw$/,
   },
   run: function () {
     'use strict';

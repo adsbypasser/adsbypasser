@@ -3,6 +3,7 @@
 * fixed
     * riurl.com
     * linkbucks.com
+    * short.pk
 * added
     * urlgator.com
     * nsfw.in
