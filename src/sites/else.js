@@ -150,7 +150,19 @@
     },
   });
 
-  // ichan
+  // ichan (image)
+  $.register({
+    rule: {
+      host: /^ichan\.org$/,
+      path: /^\/image\.php$/,
+      query: /path=(.+)$/,
+    },
+    run: function (m) {
+      $.redirect('/' + m.query[1]);
+    },
+  });
+
+  // ichan (board)
   $.register({
     rule: {
       host: /ichan\.org$/,
