@@ -1,4 +1,4 @@
-## TBA
+## 3.10.0
 
 * fixed
     * riurl.com
