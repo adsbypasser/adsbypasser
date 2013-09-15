@@ -4,6 +4,8 @@
     * riurl.com
     * linkbucks.com
     * short.pk
+    * ichan.org
+    * imgfantasy.com
 * added
     * urlgator.com
     * nsfw.in
