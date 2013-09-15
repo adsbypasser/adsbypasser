@@ -6,6 +6,8 @@
     * urlgator.com
     * nsfw.in
     * bridgeurl.com
+    * cli.gs
+    * gkurl.us
 
 ## 3.9.0
 

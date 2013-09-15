@@ -224,6 +224,7 @@ For more information, please see [Wiki].
     * bridgeurl.com
     * cf.ly
     * cl.my
+    * cli.gs
     * comyonet.com
     * cyberpics.net
     * depic.me
@@ -233,6 +234,7 @@ For more information, please see [Wiki].
     * fotolink.su
     * freeporndumpster.com
     * funkyimg.com
+    * gkurl.us
     * goimagehost.com
     * hostpics.info
     * hotimg.com
