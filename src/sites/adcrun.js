@@ -1,6 +1,6 @@
 // ==UserScript==
 // @include        /http://adcrun\.ch/.+/
-// @include        /http://adli\.pw/.+/
+// @include        /http://adli\.pw/[^.]+$/
 // @include        /http://biaiai\.com/.+/
 // @include        /http://bih\.cc/.+/
 // @include        /http://fly2url\.com/.+/

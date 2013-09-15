@@ -8,6 +8,7 @@
     * imgfantasy.com
     * imgwiev.tk
     * reducelnk.com
+    * adli.pw
 * added
     * urlgator.com
     * nsfw.in
