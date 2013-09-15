@@ -1,7 +1,7 @@
 // ==UserScript==
 // @include        /http://lnk\.co/.+/
 // @match          http://rdlnk.co/*
-// @include        /https?://reducelnk\.com/.+/
+// @include        /https?://reducelnk\.com/[^.]+$/
 // ==/UserScript==
 
 $.register({

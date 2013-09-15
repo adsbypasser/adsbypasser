@@ -7,6 +7,7 @@
     * ichan.org
     * imgfantasy.com
     * imgwiev.tk
+    * reducelnk.com
 * added
     * urlgator.com
     * nsfw.in
