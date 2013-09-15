@@ -6,6 +6,7 @@
     * short.pk
     * ichan.org
     * imgfantasy.com
+    * imgwiev.tk
 * added
     * urlgator.com
     * nsfw.in

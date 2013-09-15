@@ -36,7 +36,7 @@
 // @include        /http://imgfantasy\.com/\?[pv]=.+/
 // @match          http://imgpo.st/*
 // @match          http://imgpony.com/viewer3.php?img=*
-// @match          http://imgwiev.tk/?pm=*
+// @include        /http://imgwiev\.tk/\?p[mt]=.+/
 // @match          http://ity.im/*
 // @match          http://javelite.tk/viewer.php?id=*
 // @match          http://madlink.sk/*
@@ -449,7 +449,7 @@
   $.register({
     rule: {
       host: /imgwiev\.tk/,
-      query: /\?pm=(.+)/,
+      query: /\?p[mt]=(.+)/,
     },
     run: function (m) {
       $.redirect('/image.php?di=' + m.query[1]);
