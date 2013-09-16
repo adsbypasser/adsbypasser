@@ -235,6 +235,7 @@ For more information, please see [Wiki].
     * freeporndumpster.com
     * funkyimg.com
     * gkurl.us
+    * go2.me
     * goimagehost.com
     * hostpics.info
     * hotimg.com
@@ -262,6 +263,7 @@ For more information, please see [Wiki].
     * lnk.in
     * madlink.sk
     * nsfw.in
+    * nutshellurl.com
     * p.pw
     * pic-upload.de
     * pics-money.ru

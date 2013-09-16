@@ -2,6 +2,9 @@
 
 * fixed
     * urlgator.com
+* added
+    * go2.me
+    * nutshellurl.com
 
 ## 3.10.0
 
