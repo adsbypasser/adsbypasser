@@ -5,6 +5,8 @@
 * added
     * go2.me
     * nutshellurl.com
+* changed
+    * trying to optimize bc.vc loading
 
 ## 3.10.0
 
