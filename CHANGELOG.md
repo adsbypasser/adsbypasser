@@ -1,4 +1,4 @@
-## TBA
+## 3.11.0
 
 * fixed
     * urlgator.com
