@@ -1,5 +1,5 @@
 // ==UserScript==
-// @match          http://urlgator.com/*
+// @include        /http://urlgator\.com/.+/
 // ==/UserScript==
 
 $.register({
@@ -9,7 +9,7 @@ $.register({
   run: function () {
     'use strict';
 
-    var a = $('a');
+    var a = $('#nifty a');
     $.redirect(a.href);
   },
 });
