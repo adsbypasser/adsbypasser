@@ -16,7 +16,6 @@
 // @match          http://adlock.in/*
 // @match          http://adv.li/*
 // @match          http://bayimg.com/*
-// @match          http://bc.vc/*
 // @match          http://bildr.no/view/*
 // @match          http://bilurl.com/*
 // @match          http://cf.ly/*
@@ -242,62 +241,6 @@
       var i = url.lastIndexOf('http');
       url = url.substr(i);
       $.redirect(url);
-    },
-  });
-
-  // bc.vc, shortcut, dirty hack
-  $.register({
-    rule: {
-      host: /bc\.vc/,
-      query: /^.+(https?:\/\/.+)/,
-    },
-    run: function (m) {
-      $.redirect(m.query[1]);
-    },
-  });
-
-  // bc.vc, shortcut
-  // FIXME may cut hash or query string
-  $.register({
-    rule: {
-      host: /^bc\.vc$/,
-      path: /^.+(https?:\/\/.+)$/,
-    },
-    run: function (m) {
-      $.redirect(m.path[1]);
-    },
-  });
-
-  // bc.vc
-  $.register({
-    rule: {
-      host: /^bc\.vc$/,
-    },
-    run: function () {
-      $.removeNodes('iframe');
-
-      var content = $.$$('script').find(function (script) {
-        return script.innerHTML.indexOf('make_log') >= 0;
-      });
-      content = content.innerHTML;
-
-      // inject AJAX into body
-      var matches = content.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
-      var url = matches[1];
-      var opts = eval('(' + matches[2] + ')');
-      function bc () {
-        unsafeWindow.$.post(url, opts, function (text) {
-          var jj = JSON.parse(text);
-          if (jj.message) {
-            $.redirect(jj.message.url);
-          }
-        });
-      }
-      unsafeWindow.bc = bc;
-      content = 'setInterval(bc,1000);';
-      matches = document.createElement('script');
-      matches.textContent = content;
-      document.body.appendChild(matches);
     },
   });
 
