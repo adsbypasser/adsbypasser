@@ -73,7 +73,19 @@ var $;
       data: data,
       headers: headers,
       onload: function (response) {
-        callback(response.responseText, response.status);
+        var headers = {
+          get: function (key) {
+            return this[key.toLowerCase()];
+          },
+        };
+        response.responseHeaders.split(/[\r\n]+/g).filter(function (v) {
+          return v.length !== 0;
+        }).map(function (v) {
+          return v.split(/:\s+/);
+        }).forEach(function (v) {
+          headers[v[0].toLowerCase()] = v[1];
+        });
+        callback(response.responseText, headers);
       },
     });
 
@@ -119,7 +131,7 @@ var $;
   };
 
 
-  $.redirect = function (to) {
+  function redirect (to) {
     if (!to) {
       _.warn('false URL');
       return;
@@ -127,6 +139,18 @@ var $;
     var from = window.location.toString();
     _.info(_.T('{0} -> {1}')(from, to));
     window.top.location.replace(to);
+  }
+
+  $.redirect = function (to) {
+    if (_.config.redirectImage) {
+      redirect(to);
+      return;
+    }
+    head(to, function (text, headers) {
+      if (!/^image\/.*/.test(headers.get('Content-Type'))) {
+        redirect(to);
+      }
+    });
   };
 
   $.removeAllTimer = function () {

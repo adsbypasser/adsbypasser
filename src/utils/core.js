@@ -199,6 +199,7 @@ var _ = {};
     var tmp = {
       version: GM_getValue('version', 0),
       alignCenter: GM_getValue('align_center', true),
+      redirectImage: GM_getValue('redirect_image', true),
     };
     save(tmp);
     return tmp;
@@ -207,10 +208,16 @@ var _ = {};
   function save (c) {
     GM_setValue('version', c.version);
     GM_setValue('align_center', c.alignCenter);
+    GM_setValue('redirect_image', c.redirectImage);
   }
 
   GM_registerMenuCommand('Toggle Image Center Aligning', function () {
     _.config.alignCenter = !_.config.alignCenter;
+    save(_.config);
+  });
+
+  GM_registerMenuCommand('Toggle Image Redirecting', function () {
+    _.config.redirectImage = !_.config.redirectImage;
     save(_.config);
   });
 
