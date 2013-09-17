@@ -11,6 +11,24 @@ Forked from [RedirectionHelper] writen by [SuYS].
 Stable version will upload to [here][1].
 
 
+## Compatibility With Other Userscripts/Add-Ons/Extensions
+
+You could disable some features on the menu to resolve conflict with
+other userscripts/add-ons/extentions ... etc.
+
+* Image Aligning (default: on)
+
+    Image will align to screen center, and have a dark background(the theme is
+    same as Mozilla Firefox) if this option is on.
+
+* Image Redirect (default: on)
+
+    If this option is on, NoPicAds will directly open the image url by browser.
+    You may turn this option off and let other scripts to handle this image.
+
+If you still have problem, you could adjust userscripts' execution order.
+
+
 ## How To Build
 
 Please install [Node.js] and [npm], then run:
