@@ -202,6 +202,7 @@ var _ = {};
       redirectImage: GM_getValue('redirect_image', true),
     };
     save(tmp);
+    _.info('loaded config:', tmp);
     return tmp;
   }
 
