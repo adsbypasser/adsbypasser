@@ -1,3 +1,8 @@
+## 3.11.1
+
+* changed
+    * rolling back bc.vc
+
 ## 3.11.0
 
 * fixed
