@@ -1,3 +1,8 @@
+## TBA
+
+* changed
+    * add configurations to enhance compatibility
+
 ## 3.11.1
 
 * changed
