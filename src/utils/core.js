@@ -212,17 +212,19 @@ var _ = {};
     GM_setValue('redirect_image', c.redirectImage);
   }
 
-  GM_registerMenuCommand('Toggle Image Center Aligning', function () {
+  _.config = load();
+
+  GM_registerMenuCommand(_.T('Turn {0} Image Center Aligning (will reload page)')(_.config.alignCenter ? 'Off' : 'On'), function () {
     _.config.alignCenter = !_.config.alignCenter;
     save(_.config);
+    window.location.reload();
   });
 
-  GM_registerMenuCommand('Toggle Image Redirecting', function () {
+  GM_registerMenuCommand(_.T('Turn {0} Image Redirecting (will reload page)')(_.config.redirectImage ? 'Off' : 'On'), function () {
     _.config.redirectImage = !_.config.redirectImage;
     save(_.config);
+    window.location.reload();
   });
-
-  _.config = load();
 
 
 })();
