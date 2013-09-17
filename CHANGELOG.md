@@ -1,4 +1,4 @@
-## TBA
+## 3.12.0
 
 * changed
     * add configurations to enhance compatibility
