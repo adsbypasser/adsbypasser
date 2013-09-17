@@ -51,26 +51,16 @@
   }
 
   function knockServer (script) {
-    unsafeWindow.$ = null;
-
-    var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'check_log'[^}]+\}\}),/i);
-    var check_url = matches[1];
-    var check_opts = eval('(' + matches[2] + ')');
-    matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
+    var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
     var make_url = matches[1];
     var make_opts = eval('(' + matches[2] + ')');
 
     var i = setInterval(function () {
-      $.post(check_url, check_opts, function (text) {
+      $.post(make_url, make_opts, function (text) {
         var jj = JSON.parse(text);
         if (jj.message) {
           clearInterval(i);
-          $.post(make_url, make_opts, function (text) {
-            var jj = JSON.parse(text);
-            if (jj.message) {
-              $.redirect(jj.message.url);
-            }
-          });
+          $.redirect(jj.message.url);
         }
       });
     }, 1000);
