@@ -65,24 +65,32 @@ var $;
     }).join('&');
   }
 
-  function ajax (method, url, data, callback) {
-    var qs = toQuery(data);
+  function ajax (method, url, data, headers, callback) {
+    headers['X-Requested-With'] = 'XMLHttpRequest';
     var controller = GM_xmlhttpRequest({
       method: method,
       url: url,
-      data: qs,
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-        'Content-Length': qs.length,
-        'X-Requested-With': 'XMLHttpRequest',
-      },
+      data: data,
+      headers: headers,
       onload: function (response) {
-        callback(response.responseText);
+        callback(response.responseText, response.status);
       },
     });
 
     return controller;
   }
+
+  function head (url, callback) {
+    return ajax('HEAD', url, '', {}, callback);
+  }
+
+  $.post = function (url, data, callback) {
+    data = toQuery(data);
+    return ajax('POST', url, data, {
+      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      'Content-Length': data.length,
+    }, callback);
+  };
 
   function go (path, params, method) {
     // Set method to post by default, if not specified.
@@ -105,10 +113,6 @@ var $;
     document.body.appendChild(form);
     form.submit();
   }
-
-  $.post = function (url, data, callback) {
-    return ajax('POST', url, data, callback);
-  };
 
   $.postAndGo = function (url, data) {
     go(url, data, 'post');
