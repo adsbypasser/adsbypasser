@@ -8,6 +8,7 @@
     * bilder-space.de
     * blackcatpix.com
     * ref.so
+    * thasnasty.com
 * changed
     * privide a blank page to change config
 

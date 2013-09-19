@@ -226,6 +226,7 @@ For more information, please see [Wiki].
     * imagesnake.com
 * imgwiev
     * imgwiev.tk
+    * thasnasty.com
     * x45x.info
 * else
     * 1be.biz
