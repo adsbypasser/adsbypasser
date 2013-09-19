@@ -9,6 +9,7 @@
     * blackcatpix.com
     * ref.so
     * thasnasty.com
+    * chathu.apkmania.co
 * changed
     * privide a blank page to change config
 

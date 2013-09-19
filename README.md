@@ -53,6 +53,7 @@ For more information, please see [Wiki].
 
 * adfly
     * adf.ly
+    * chathu.apkmania.co
     * go.phpnulledscripts.com
     * j.gs
     * q.gs
