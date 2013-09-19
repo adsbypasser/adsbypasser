@@ -190,6 +190,7 @@ For more information, please see [Wiki].
     * shortit.in
     * ssl.gs
     * tr5.in
+    * ultry.net
     * urlvisa.com
     * wwy.me
     * xip.ir

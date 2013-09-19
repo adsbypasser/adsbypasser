@@ -10,6 +10,7 @@
     * ref.so
     * thasnasty.com
     * chathu.apkmania.co
+    * ultry.net
 * changed
     * privide a blank page to change config
 
