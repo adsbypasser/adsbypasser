@@ -224,6 +224,9 @@ For more information, please see [Wiki].
     * freebunker.com
     * imagefruit.com
     * imagesnake.com
+* imgwiev
+    * imgwiev.tk
+    * x45x.info
 * else
     * 1be.biz
     * 1pics.ru
@@ -284,7 +287,6 @@ For more information, please see [Wiki].
     * imgnip.com
     * imgpo.st
     * imgpony.com
-    * imgwiev.tk
     * ity.im
     * javelite.tk
     * lienscash.com
@@ -320,7 +322,6 @@ For more information, please see [Wiki].
     * viidii.com
     * vvcap.net
     * x.pixfarm.net
-    * x45x.info
     * yep.it
     * yfrog.com
     * zo.mu
