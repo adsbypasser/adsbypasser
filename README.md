@@ -13,18 +13,22 @@ Stable version will upload to [here][1].
 
 ## Compatibility With Other Userscripts/Add-Ons/Extensions
 
-You could disable some features on the menu to resolve conflict with
+By disabling some features, you could resolve conflicts with
 other userscripts/add-ons/extentions ... etc.
+
+To doing this, you could open [this page][2] and look the menu.
 
 * Image Aligning (default: on)
 
-    Image will align to screen center, and have a dark background(the theme is
-    same as Mozilla Firefox) if this option is on.
+    With this option on, image will align to screen center and have a dark
+    background, just like the theme used in Mozilla Firefox.
+    If you turn this off, NoPicAds will not adjust that for you.
 
 * Image Redirect (default: on)
 
-    If this option is on, NoPicAds will directly open the image url by browser.
-    You may turn this option off and let other scripts to handle this image.
+    With this option on, NoPicAds will directly open the image by browser if
+    current site is a image hosting site.
+    If you turn this off, NoPicAds will only works on link shortener sites.
 
 If you still have problem, you could adjust userscripts' execution order.
 
@@ -323,6 +327,7 @@ For more information, please see [Wiki].
 
 
 [1]: http://userscripts.org/scripts/show/154858
+[2]: http://legnaleurc.github.io/nopicads/blank.html
 [Node.js]: http://nodejs.org/
 [npm]: https://npmjs.org/
 [RedirectionHelper]: http://userscripts.org/scripts/show/69797
