@@ -7,6 +7,8 @@
     * beeimg.com
     * bilder-space.de
     * blackcatpix.com
+* changed
+    * privide a blank page to change config
 
 ## 3.12.0
 
