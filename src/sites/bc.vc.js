@@ -8,6 +8,7 @@
 // @include        /http://raksoyun\.com/.+/
 // @include        /http://ssl\.gs/.+/
 // @include        /http://tr5\.in/.+/
+// @include        /http://ultry\.net/.+/
 // @include        /http://urlvisa\.com/.+/
 // @include        /http://www\.budurl\.ru/.+/
 // @include        /http://wwy\.me/.+/
@@ -82,7 +83,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(youlinking|fly2url|urlvisa|biaiai|raksoyun)\.com|zpoz\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru|adli\.pw$/,
+      host: /^adcrun\.ch|(youlinking|fly2url|urlvisa|biaiai|raksoyun)\.com|(zpoz|ultry)\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru|adli\.pw$/,
     },
     run: function () {
       // prevent redirection by iframe
