@@ -8,56 +8,61 @@
 // @exclude        http://adf.ly/?default_ad*
 // ==/UserScript==
 
-$.register({
-  rule: {
-    host: /^adf\.ly|u\.bb|[jq]\.gs|go\.phpnulledscripts\.com$/,
-    path: /\/locked$/,
-    query: /url=([^&]+)/,
-  },
-  run: function (m) {
-    'use strict';
 
-    $.resetCookies();
-    $.redirect(m.query[1]);
-  },
-});
+(function () {
+  'use strict';
 
-$.register({
-  rule: {
-    host: /^adf\.ly|u\.bb|[jq]\.gs|go\.phpnulledscripts\.com$/,
-  },
-  run: function () {
-    'use strict';
+  var hostRule = /^adf\.ly|u\.bb|[jq]\.gs|go\.phpnulledscripts\.com$/;
 
-    $.removeNodes('iframe');
-    $.resetCookies();
+  $.register({
+    rule: {
+      host: hostRule,
+      path: /\/locked$/,
+      query: /url=([^&]+)/,
+    },
+    run: function (m) {
+      $.resetCookies();
+      $.redirect(m.query[1]);
+    },
+  });
 
-    var h = unsafeWindow.eu, b64 = unsafeWindow.Base64;
-    if (!h) {
-      h = $('#adfly_bar');
-      unsafeWindow.close_bar();
-      return;
-    }
-    var a = h.indexOf('!HiTommy'), b = '';
-    if (a >= 0) {
-      h = h.substring(0, a);
-    }
-    a = '';
-    for (var i = 0; i < h.length; ++i) {
-      if (i % 2 === 0) {
-        a = a + h.charAt(i);
-      } else {
-        b = h.charAt(i) + b;
+  $.register({
+    rule: {
+      host: hostRule,
+    },
+    run: function () {
+      $.removeNodes('iframe');
+      $.resetCookies();
+
+      var h = unsafeWindow.eu, b64 = unsafeWindow.Base64;
+      if (!h) {
+        h = $('#adfly_bar');
+        unsafeWindow.close_bar();
+        return;
       }
-    }
-    h = b64.decode(a + b);
-    h = h.substr(2);
-    if (location.hash) {
-      h += location.hash;
-    }
-    $.redirect(h);
-  },
-});
+      var a = h.indexOf('!HiTommy'), b = '';
+      if (a >= 0) {
+        h = h.substring(0, a);
+      }
+      a = '';
+      for (var i = 0; i < h.length; ++i) {
+        if (i % 2 === 0) {
+          a = a + h.charAt(i);
+        } else {
+          b = h.charAt(i) + b;
+        }
+      }
+      h = b64.decode(a + b);
+      h = h.substr(2);
+      if (location.hash) {
+        h += location.hash;
+      }
+      $.redirect(h);
+    },
+  });
+
+})();
+
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
