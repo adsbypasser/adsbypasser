@@ -1,4 +1,4 @@
-## TBA
+## 3.13.0
 
 * added
     * 1pics.ru
