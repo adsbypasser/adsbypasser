@@ -7,6 +7,7 @@
     * beeimg.com
     * bilder-space.de
     * blackcatpix.com
+    * ref.so
 * changed
     * privide a blank page to change config
 

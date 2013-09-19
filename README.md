@@ -299,6 +299,7 @@ For more information, please see [Wiki].
     * pixhost.org
     * pixhub.eu
     * qrrro.com
+    * ref.so
     * riurl.com
     * robo.us
     * screenlist.ru
