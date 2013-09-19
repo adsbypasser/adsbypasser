@@ -222,6 +222,9 @@ For more information, please see [Wiki].
     * imagesnake.com
 * else
     * 1be.biz
+    * 1pics.ru
+    * 2i.sk
+    * 2imgs.com
     * 3ra.be
     * 4fun.tw
     * 4owl.info
@@ -234,11 +237,14 @@ For more information, please see [Wiki].
     * alafs.com
     * anonpic.com
     * bayimg.com
+    * beeimg.com
     * bild.me
     * bilder-hochladen.net
+    * bilder-space.de
     * bilder-upload.eu
     * bildr.no
     * bilurl.com
+    * blackcatpix.com
     * bridgeurl.com
     * cf.ly
     * cl.my

@@ -1,3 +1,13 @@
+## TBA
+
+* added
+    * 1pics.ru
+    * 2i.sk
+    * 2imgs.com
+    * beeimg.com
+    * bilder-space.de
+    * blackcatpix.com
+
 ## 3.12.0
 
 * changed
