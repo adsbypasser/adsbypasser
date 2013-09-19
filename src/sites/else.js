@@ -35,7 +35,6 @@
 // @include        /http://imgfantasy\.com/\?[pv]=.+/
 // @match          http://imgpo.st/*
 // @match          http://imgpony.com/viewer3.php?img=*
-// @include        /http://imgwiev\.tk/\?p[mt]=.+/
 // @match          http://ity.im/*
 // @match          http://javelite.tk/viewer.php?id=*
 // @match          http://madlink.sk/*
@@ -73,7 +72,6 @@
 // @match          http://www.subirimagenes.com/*.html
 // @match          http://www.turboimagehost.com/*
 // @match          http://www.viidii.com/*
-// @match          http://www.x45x.info/?pt=*
 // @include        /http://x\.pixfarm\.net/sexy/\d+/\d+/.+\.html/
 // @match          http://xip.ir/*
 // @match          http://zo.mu/redirector/process?link=*
@@ -388,17 +386,6 @@
     },
   });
 
-  // imgwiev.tk
-  $.register({
-    rule: {
-      host: /imgwiev\.tk/,
-      query: /\?p[mt]=(.+)/,
-    },
-    run: function (m) {
-      $.redirect('/image.php?di=' + m.query[1]);
-    },
-  });
-
   // goimagehost.com
   $.register({
     rule: {
@@ -488,17 +475,6 @@
     run: function () {
       var i = $('#main_image');
       $.redirect(i.src);
-    },
-  });
-
-  // www.x45x.info
-  $.register({
-    rule: {
-      host: /www\.x45x\.info/,
-    },
-    run: function () {
-      var a = $('#content a.lightbox');
-      $.redirect(a.href);
     },
   });
 
