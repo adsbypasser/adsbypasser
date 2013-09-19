@@ -1,5 +1,6 @@
 // ==UserScript==
 // @match          http://adf.ly/*
+// @match          http://chathu.apkmania.co/*
 // @match          http://go.phpnulledscripts.com/*
 // @match          http://j.gs/*
 // @match          http://q.gs/*
@@ -12,7 +13,7 @@
 (function () {
   'use strict';
 
-  var hostRule = /^adf\.ly|u\.bb|[jq]\.gs|go\.phpnulledscripts\.com$/;
+  var hostRule = /^adf\.ly|u\.bb|[jq]\.gs|go\.phpnulledscripts\.com|chathu\.apkmania\.co$/;
 
   $.register({
     rule: {
