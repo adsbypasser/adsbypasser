@@ -1,4 +1,5 @@
 // ==UserScript==
+// @include        /http://imagehost\.thasnasty\.com/\?p[mt]=.+/
 // @include        /http://imgwiev\.tk/\?p[mt]=.+/
 // @include        /http://www\.x45x\.info/\?p[mt]=.+/
 // ==/UserScript==
@@ -7,7 +8,7 @@
 // imgwiev.tk
 $.register({
   rule: {
-    host: /^imgwiev\.tk|www\.x45x\.info$/,
+    host: /^imgwiev\.tk|www\.x45x\.info|imagehost\.thasnasty\.com$/,
     query: /\?p[mt]=(.+)/,
   },
   run: function (m) {
