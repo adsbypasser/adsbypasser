@@ -9,6 +9,7 @@
 // @match          http://pornpicuploader.com/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
 // @match          http://shareimage.ro/viewer.php?file=*
+// @match          http://bilder.nixhelp.de/viewer.php?*
 // ==/UserScript==
 
 (function () {
@@ -17,7 +18,7 @@
   // mihalism v1
   $.register({
     rule: {
-      host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics)\.com|freeuploadimages\.org|shareimage\.ro/,
+      host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de/,
     },
     run: function () {
       var uri = window.location.href.toString();
