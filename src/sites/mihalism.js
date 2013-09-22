@@ -1,4 +1,5 @@
 // ==UserScript==
+// @match          http://bilder.nixhelp.de/viewer.php?*
 // @match          http://freeuploadimages.org/viewer.php?file=*
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://hentai-hosting.com/viewer.php?file=*
@@ -9,51 +10,51 @@
 // @match          http://pornpicuploader.com/viewer.php?file=*
 // @match          http://preview.jpavgod.com/*.html
 // @match          http://shareimage.ro/viewer.php?file=*
-// @match          http://bilder.nixhelp.de/viewer.php?*
 // ==/UserScript==
 
-(function () {
-  'use strict';
+// mihalism v1
+$.register({
+  rule: {
+    host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de/,
+    query: /file=([^&]+)/,
+  },
+  run: function (m) {
+    'use strict';
 
-  // mihalism v1
-  $.register({
-    rule: {
-      host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de/,
-      query: /file=([^&]+)/,
-    },
-    run: function (m) {
-      $.redirect('/images/' + m.query[1]);
-    },
-  });
+    $.redirect('/images/' + m.query[1]);
+  },
+});
 
-  // howtohemorrhoidscure.com
-  $.register({
-    rule: {
-      host: /howtohemorrhoidscure\.com|javimage\.us/,
-    },
-    run: function () {
-      var a = $('#page_body a');
-      var s = a.href;
-      // the real link is diffirent from original host
-      a = s.lastIndexOf('http://');
-      if (a >= 0) {
-        $.redirect(s.substr(a));
-      }
-    },
-  });
+// mihalism v2
+$.register({
+  rule: {
+    host: /howtohemorrhoidscure\.com|javimage\.us/,
+  },
+  run: function () {
+    'use strict';
 
-  // preview.jpavgod.com
-  $.register({
-    rule: {
-      host: /preview\.jpavgod\.com/,
-    },
-    run: function () {
-      var i = $('#page_body div.text_align_center img');
-      $.redirect(i.src);
-    },
-  });
+    var a = $('#page_body a');
+    var s = a.href;
+    // the real link is diffirent from original host
+    a = s.lastIndexOf('http://');
+    if (a >= 0) {
+      $.redirect(s.substr(a));
+    }
+  },
+});
 
-})();
+// preview.jpavgod.com
+$.register({
+  rule: {
+    host: /preview\.jpavgod\.com/,
+  },
+  run: function () {
+    'use strict';
+
+    var i = $('#page_body div.text_align_center img');
+    $.redirect(i.src);
+  },
+});
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
