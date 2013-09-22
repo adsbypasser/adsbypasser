@@ -2,6 +2,7 @@
 
 * added
     * nixhelp.de
+    * richlink.com
 
 ## 3.13.0
 
