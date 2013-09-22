@@ -19,11 +19,10 @@
   $.register({
     rule: {
       host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de/,
+      query: /file=([^&]+)/,
     },
-    run: function () {
-      var uri = window.location.href.toString();
-      uri = uri.replace('viewer.php?file=', 'images/');
-      $.redirect(uri);
+    run: function (m) {
+      $.redirect('/images/' + m.query[1]);
     },
   });
 
