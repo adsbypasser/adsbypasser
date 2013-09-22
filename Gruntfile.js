@@ -49,7 +49,10 @@ module.exports = function (grunt) {
             var source = grunt.file.read(filepath);
             var m = source.match(/\/\/ ==UserScript==([\s\S]*)\/\/ ==\/UserScript==([\s\S]*)/m);
             var metadata = m[1].trim();
-            var script = removeModelines(m[2]).trim() + '\n';
+            var script = removeModelines(m[2]);
+            script = removeSingleLineComments(script);
+            script = removeEmptyLines(script);
+            script = script.trim();
 
             grunt.file.write(metadata_file, metadata);
             grunt.file.write(script_file, script);
@@ -65,7 +68,10 @@ module.exports = function (grunt) {
             var script_file = f.dest + '/' + baseName(filepath) + '.js';
 
             var source = grunt.file.read(filepath);
-            var script = removeModelines(source).trim() + '\n';
+            var script = removeModelines(source);
+            script = removeSingleLineComments(script);
+            script = removeEmptyLines(script);
+            script = script.trim() + '\n';
 
             grunt.file.write(script_file, script);
           });
@@ -83,7 +89,15 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean', 'sites', 'concat:metadata', 'concat:script', 'concat:nopicads']);
 
   function removeModelines (s) {
-    return s.replace(/^\/\/\s*.+:.*[\r\n]/gm, '');
+    return s.replace(/^\/\/\s*.+:.*[\r\n]+/gm, '');
+  }
+
+  function removeSingleLineComments (s) {
+    return s.replace(/^\s*\/\/.*[\r\n]+/gm, '');
+  }
+
+  function removeEmptyLines (s) {
+    return s.replace(/^\s*[\r\n]+/gm, '');
   }
 
   function baseName (s) {
