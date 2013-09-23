@@ -9,8 +9,10 @@ $.register({
   run: function () {
     'use strict';
 
-    var img = $('img');
-    $.redirect(img.src);
+    $.removeNodes('iframe');
+
+    var img = $('img.picture');
+    $.replace(img.src);
   },
 });
 
