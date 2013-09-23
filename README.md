@@ -231,6 +231,9 @@ For more information, please see [Wiki].
     * imgwiev.tk
     * thasnasty.com
     * x45x.info
+* imagecherry
+    * imagecherry.com
+    * imgpo.st
 * else
     * 1be.biz
     * 1pics.ru
@@ -288,7 +291,6 @@ For more information, please see [Wiki].
     * imgbar.net
     * imgfantasy.com
     * imgnip.com
-    * imgpo.st
     * imgpony.com
     * ity.im
     * javelite.tk

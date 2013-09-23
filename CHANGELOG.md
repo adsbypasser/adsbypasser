@@ -4,6 +4,8 @@
     * bilder-space.de
 * removed
     * hostpics.info
+* added
+    * imagecherry.com
 
 ## 3.14.0
 
