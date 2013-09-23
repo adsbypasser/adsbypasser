@@ -4,6 +4,7 @@
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://hentai-hosting.com/viewer.php?file=*
 // @match          http://howtohemorrhoidscure.com/viewer.php?file=*
+// @match          http://imagecurl.com/viewer.php?file=*
 // @match          http://imagepremium.com/viewer.php?file=*
 // @match          http://javimage.us/viewer.php?file=*
 // @match          http://miragepics.com/viewer.php?file=*
@@ -15,7 +16,7 @@
 // mihalism v1
 $.register({
   rule: {
-    host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de/,
+    host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de|imagecurl\.com/,
     query: /file=([^&]+)/,
   },
   run: function (m) {
