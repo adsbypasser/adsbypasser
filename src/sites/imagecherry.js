@@ -1,10 +1,11 @@
 // ==UserScript==
 // @match          http://imagecherry.com/*
+// @match          http://imgpo.st/*
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /^imagecherry\.com$/,
+    host: /^imagecherry\.com|imgpo\.st$/,
   },
   run: function () {
     'use strict';

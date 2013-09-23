@@ -33,7 +33,6 @@
 // @match          http://imgah.com/*
 // @match          http://imgbar.net/*
 // @include        /http://imgfantasy\.com/\?[pv]=.+/
-// @match          http://imgpo.st/*
 // @match          http://imgpony.com/viewer3.php?img=*
 // @match          http://ity.im/*
 // @match          http://javelite.tk/viewer.php?id=*
@@ -985,19 +984,6 @@
     },
     run: function (m) {
       $.redirect(decodeURIComponent(m.query[1]));
-    },
-  });
-
-  // imgpo.st
-  $.register({
-    rule: {
-      host: /^imgpo\.st$/,
-    },
-    run: function () {
-      var o = $('img.pic');
-      // somehow the server send image as an attachment
-      // so I replace whole document.body with single img
-      $.replace(o.src);
     },
   });
 
