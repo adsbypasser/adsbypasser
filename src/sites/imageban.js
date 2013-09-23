@@ -1,10 +1,10 @@
 // ==UserScript==
-// @include        /http://imageban\.ru/show/\d{4}/\d{2}/\d{2}/.+/
+// @include        /http://imageban\.(ru|net)/show/\d{4}/\d{2}/\d{2}/.+/
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /^imageban\.ru$/,
+    host: /^imageban\.(ru|net)$/,
   },
   run: function () {
     'use strict';
