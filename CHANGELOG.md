@@ -2,6 +2,7 @@
 
 * fixed
     * bilder-space.de
+    * funkyimg.com
 * removed
     * hostpics.info
 * added
