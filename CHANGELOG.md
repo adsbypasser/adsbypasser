@@ -9,6 +9,8 @@
     * imagecherry.com
     * imagecurl.com
     * imagecurl.org
+    * imageban.ru
+    * imageban.net
 
 ## 3.14.0
 
