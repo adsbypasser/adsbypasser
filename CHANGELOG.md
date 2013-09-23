@@ -6,6 +6,8 @@
     * hostpics.info
 * added
     * imagecherry.com
+    * imagecurl.com
+    * imagecurl.org
 
 ## 3.14.0
 

@@ -116,6 +116,8 @@ For more information, please see [Wiki].
     * gallery.jpavgod.com
     * hentai-hosting.com
     * howtohemorrhoidscure.com
+    * imagecurl.com
+    * imagecurl.org
     * imagepremium.com
     * javimage.us
     * miragepics.com
