@@ -2,6 +2,8 @@
 
 * fixed
     * bilder-space.de
+* removed
+    * hostpics.info
 
 ## 3.14.0
 

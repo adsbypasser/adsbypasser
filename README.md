@@ -272,7 +272,6 @@ For more information, please see [Wiki].
     * gkurl.us
     * go2.me
     * goimagehost.com
-    * hostpics.info
     * hotimg.com
     * hotshorturl.com
     * ibunker.us
