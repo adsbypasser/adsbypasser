@@ -60,7 +60,6 @@
 // @match          http://www.dumppix.com/viewer.php?*
 // @match          http://www.fotolink.su/v.php?id=*
 // @match          http://www.freeporndumpster.com/show.php?*
-// @match          http://www.hostpics.info/view.php?filename=*
 // @match          http://www.hotimg.com/image/*
 // @match          http://www.imgbabes.com/*
 // @include        /http://(www\.)?imgnip\.com/viewer.*\.php\?file=.*/
@@ -403,17 +402,6 @@
     },
     run: function (m) {
       $.redirect('/xxx/images/' + m.query[1]);
-    },
-  });
-
-  // www.hostpics.info
-  $.register({
-    rule: {
-      host: /www\.hostpics\.info/,
-      query: /\?filename=(.+)/,
-    },
-    run: function (m) {
-      $.redirect('/images/' + m.query[1]);
     },
   });
 
