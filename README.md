@@ -151,13 +151,11 @@ For more information, please see [Wiki].
     * imagecorn.com
     * imagefolks.com
     * imagepicsa.com
-    * imgboo.me
     * imgcandy.net
     * imgcloud.co
     * imgcorn.com
     * imgmoney.com
     * imgonion.com
-    * imgpay.me
     * imgrill.com
     * imgtube.net
     * pixup.us
@@ -174,9 +172,6 @@ For more information, please see [Wiki].
 * hanimes
     * adultmove.info
     * h-animes.info
-* imageback
-    * imageback.info
-    * imagepong.info
 * abload
     * abload.de
     * fastpic.ru

@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * imagefruit.com
 * added
     * b4he.com
     * casimages.com
@@ -7,6 +9,11 @@
     * digitalfrenzy.net
     * dwimg.com
     * emptypix.com
+* removed
+    * imgboo.me
+    * imgpay.me
+    * imageback.info
+    * imagepong.info
 
 ## 3.15.0
 
