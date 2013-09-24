@@ -2,7 +2,7 @@
 // @match          http://www.freebunker.com/show/*
 // @match          http://www.imagesnake.com/index.php?*
 // @match          http://www.imagesnake.com/show/*
-// @match          http://www.imagefruit.com/img/*
+// @include        /http://www\.imagefruit\.com/(img|show)/.+/
 // ==/UserScript==
 
 (function () {
