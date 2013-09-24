@@ -112,6 +112,7 @@ For more information, please see [Wiki].
     * zff.co
     * zxxo.net
 * Mihalism Multi Host
+    * dwimg.com
     * freeuploadimages.org
     * gallery.jpavgod.com
     * hentai-hosting.com
@@ -252,6 +253,7 @@ For more information, please see [Wiki].
     * alabout.com
     * alafs.com
     * anonpic.com
+    * b4he.com
     * bayimg.com
     * beeimg.com
     * bild.me
@@ -262,15 +264,19 @@ For more information, please see [Wiki].
     * bilurl.com
     * blackcatpix.com
     * bridgeurl.com
+    * casimages.com
     * cf.ly
     * cl.my
     * cli.gs
     * comyonet.com
+    * cubeupload.com
     * cyberpics.net
     * depic.me
+    * digitalfrenzy.net
     * directupload.net
     * dumppix.com
     * durl.me
+    * emptypix.com
     * fotolink.su
     * freeporndumpster.com
     * funkyimg.com

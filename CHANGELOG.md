@@ -1,3 +1,13 @@
+## TBA
+
+* added
+    * b4he.com
+    * casimages.com
+    * cubeupload.com
+    * digitalfrenzy.net
+    * dwimg.com
+    * emptypix.com
+
 ## 3.15.0
 
 * fixed
