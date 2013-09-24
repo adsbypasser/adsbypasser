@@ -1,4 +1,4 @@
-## TBA
+## 3.16.0
 
 * fixed
     * imagefruit.com
