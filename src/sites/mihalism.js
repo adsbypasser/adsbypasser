@@ -1,5 +1,6 @@
 // ==UserScript==
 // @match          http://bilder.nixhelp.de/viewer.php?*
+// @match          http://b4he.com/?v=*
 // @match          http://freeuploadimages.org/viewer.php?file=*
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://hentai-hosting.com/viewer.php?file=*
@@ -17,8 +18,8 @@
 // mihalism v1
 $.register({
   rule: {
-    host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de|imagecurl\.(com|org)/,
-    query: /file=([^&]+)/,
+    host: /(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics|b4he)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de|imagecurl\.(com|org)/,
+    query: /[file|v]=([^&]+)/,
   },
   run: function (m) {
     'use strict';
