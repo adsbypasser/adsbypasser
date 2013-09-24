@@ -1,5 +1,6 @@
 // ==UserScript==
 // @match          http://bilder.nixhelp.de/viewer.php?*
+// @match          http://dwimg.com/viewer.php?file=*
 // @match          http://freeuploadimages.org/viewer.php?file=*
 // @match          http://gallery.jpavgod.com/viewer.php?file=*
 // @match          http://hentai-hosting.com/viewer.php?file=*
@@ -55,6 +56,19 @@ $.register({
 
     var i = $('#page_body div.text_align_center img');
     $.redirect(i.src);
+  },
+});
+
+// dwimg.com
+$.register({
+  rule: {
+    host: /dwimg\.com/,
+    query: /file=([^&]+)/,
+  },
+  run: function (m) {
+    'use strict';
+
+    $.redirect('/files/' + m.query[1]);
   },
 });
 
