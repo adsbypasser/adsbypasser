@@ -9,6 +9,7 @@
     * digitalfrenzy.net
     * dwimg.com
     * emptypix.com
+    * reffbux.com
 * removed
     * imgboo.me
     * imgpay.me
