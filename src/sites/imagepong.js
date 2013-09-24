@@ -1,11 +1,10 @@
 // ==UserScript==
-// @match          http://imageback.info/view-image/*
 // @match          http://imagepong.info/view-image/*
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /image(back|pong)\.info/,
+    host: /imagepong\.info/,
   },
   run: function () {
     'use strict';
