@@ -1,7 +1,6 @@
 // ==UserScript==
 // @match          http://imagecorn.com/img-*.html
 // @match          http://imagepicsa.com/img-*.html
-// @match          http://imgboo.me/img-*.html
 // @match          http://imgcandy.net/img-*.html
 // @match          http://imgcloud.co/img-*.html
 // @match          http://imgcorn.com/img-*.html
@@ -16,7 +15,7 @@
 
 $.register({
   rule: {
-    host: /^(img(onion|rill|money|corn)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us|img(boo|pay)\.me$/,
+    host: /^(img(onion|rill|money|corn)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us|imgpay\.me$/,
   },
   run: function () {
     'use strict';
