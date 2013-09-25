@@ -1,11 +1,12 @@
 // ==UserScript==
 // @match          http://*.imgjav.tk/?pm=*
 // @match          http://imgurban.info/?pm=*
+// @match          http://d69.in/?pm=*
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /www\.imgjav\.tk|imgurban\.info/,
+    host: /www\.imgjav\.tk|imgurban\.info|d69\.in/,
   },
   run: function () {
     'use strict';
