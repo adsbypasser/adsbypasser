@@ -1,10 +1,11 @@
 // ==UserScript==
 // @match          http://emptypix.com/image/*
+// @match          http://flickimg.com/image/*
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /emptypix\.com/,
+    host: /(emptypix|flickimg)\.com/,
   },
   run: function () {
     'use strict';
