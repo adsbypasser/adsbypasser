@@ -1,3 +1,14 @@
+## TBA
+
+* added
+    * d69.in
+    * eropix.me
+    * fastpics.net
+    * filedump.net
+    * flickimg.com
+    * fotohosting.net
+    * fotoo.pl
+
 ## 3.16.0
 
 * fixed

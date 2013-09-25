@@ -145,6 +145,7 @@ For more information, please see [Wiki].
     * pixroute.com
     * yankoimages.net
 * CF Image Host
+    * d69.in
     * imgjav.tk
     * imgurban.info
 * imgonion
@@ -232,6 +233,13 @@ For more information, please see [Wiki].
 * imagecherry
     * imagecherry.com
     * imgpo.st
+* b4he
+    * b4he.com
+    * fastpics.net
+* emptypix
+    * emptypix.com
+    * flickimg.com
+    * fotohosting.net
 * else
     * 1be.biz
     * 1pics.ru
@@ -248,7 +256,6 @@ For more information, please see [Wiki].
     * alabout.com
     * alafs.com
     * anonpic.com
-    * b4he.com
     * bayimg.com
     * beeimg.com
     * bild.me
@@ -271,7 +278,9 @@ For more information, please see [Wiki].
     * directupload.net
     * dumppix.com
     * durl.me
-    * emptypix.com
+    * eropix.me
+    * filedump.net
+    * fotoo.pl
     * fotolink.su
     * freeporndumpster.com
     * funkyimg.com
