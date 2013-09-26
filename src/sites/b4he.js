@@ -1,11 +1,12 @@
 // ==UserScript==
 // @match          http://b4he.com/?v=*
 // @match          http://fastpics.net/?v=*
+// @match          http://freeimgup.com/?v=*
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /b4he\.com|fastpics\.net/,
+    host: /^b4he\.com|fastpics\.net|freeimgup\.com$/,
     query: /v=([^&]+)/,
   },
   run: function (m) {
