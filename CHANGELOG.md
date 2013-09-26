@@ -1,4 +1,4 @@
-## TBA
+## 3.18.0
 
 * added
     * fotosik.pl
