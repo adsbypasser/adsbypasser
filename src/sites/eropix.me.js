@@ -1,10 +1,11 @@
 // ==UserScript==
 // @match          http://eropix.me/view.php?filename=*
+// @match          http://freakimage.com/view.php?filename=*
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /^eropix\.me$/,
+    host: /^eropix\.me|freakimage\.com$/,
     query: /filename=([^&]+)/,
   },
   run: function (m) {
