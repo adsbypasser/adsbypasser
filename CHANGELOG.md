@@ -1,3 +1,13 @@
+## TBA
+
+* added
+    * fotosik.pl
+    * fotoszok.pl
+    * freakimage.com
+    * freeimage.us
+    * freeimagehosting.net
+    * freeimgup.com
+
 ## 3.17.0
 
 * added

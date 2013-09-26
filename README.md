@@ -163,6 +163,7 @@ For more information, please see [Wiki].
 * picfox
     * amateurfreak.org
     * euro-pic.eu
+    * freeimage.us
     * picfox.org
 * imgchili
     * imgchili.com
@@ -236,10 +237,17 @@ For more information, please see [Wiki].
 * b4he
     * b4he.com
     * fastpics.net
+    * freeimgup.com
 * emptypix
     * emptypix.com
     * flickimg.com
     * fotohosting.net
+* fotoo
+    * fotoo.pl
+    * fotoszok.pl
+* eropix
+    * eropix.me
+    * freakimage.com
 * else
     * 1be.biz
     * 1pics.ru
@@ -278,10 +286,10 @@ For more information, please see [Wiki].
     * directupload.net
     * dumppix.com
     * durl.me
-    * eropix.me
     * filedump.net
-    * fotoo.pl
     * fotolink.su
+    * fotosik.pl
+    * freeimagehosting.net
     * freeporndumpster.com
     * funkyimg.com
     * gkurl.us
