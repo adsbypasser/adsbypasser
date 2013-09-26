@@ -1,10 +1,11 @@
 // ==UserScript==
 // @match          http://fotoo.pl/show.php?img=*.html
+// @match          http://www.fotoszok.pl/show.php/*.html
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /^fotoo\.pl$/,
+    host: /^fotoo\.pl|www\.fotoszok\.pl$/,
   },
   run: function () {
     'use strict';
