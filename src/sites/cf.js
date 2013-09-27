@@ -13,6 +13,8 @@ $.register({
     query: /\?p[mt]=(.+)/,
   },
   run: function (m) {
+    'use strict';
+
     $.redirect('/?di=' + m.query[1]);
   },
 });
