@@ -2,13 +2,14 @@
 // @include        /http://imagehost\.thasnasty\.com/\?p[mt]=.+/
 // @include        /http://imgwiev\.tk/\?p[mt]=.+/
 // @include        /http://www\.x45x\.info/\?p[mt]=.+/
+// @include        /http://ghanaimages\.co/\?p[mt]=.+/
 // ==/UserScript==
 
 
 // imgwiev.tk
 $.register({
   rule: {
-    host: /^imgwiev\.tk|www\.x45x\.info|imagehost\.thasnasty\.com$/,
+    host: /^imgwiev\.tk|www\.x45x\.info|imagehost\.thasnasty\.com|ghanaimages\.co$/,
     query: /\?p[mt]=(.+)/,
   },
   run: function (m) {
