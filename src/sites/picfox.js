@@ -3,12 +3,13 @@
 // @match          http://amateurfreak.org/share.php?id=*
 // @match          http://picfox.org/*
 // @match          http://www.euro-pic.eu/share.php?id=*
+// @match          http://www.gratisimage.dk/share-*.html
 // @match          http://xxx.freeimage.us/share.php?id=*
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /^(picfox|amateurfreak)\.org|www\.euro-pic\.eu|xxx\.freeimage\.us$/,
+    host: /^(picfox|amateurfreak)\.org|www\.euro-pic\.eu|xxx\.freeimage\.us|www\.gratisimage\.dk$/,
   },
   run: function () {
     'use strict';
