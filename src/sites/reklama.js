@@ -1,6 +1,7 @@
 // ==UserScript==
 // @match          http://comicalpic.net/img-*.html
 // @match          http://croftimage.com/img-*.html
+// @match          http://gallerycloud.net/img-*.html
 // @match          http://imagedecode.com/img-*.html
 // @match          http://imgserve.net/img-*.html
 // @match          http://zeljeimage.com/img-*.html
@@ -9,7 +10,7 @@
 
 $.register({
   rule: {
-    host: /(imagedecode|zonezeedimage|zeljeimage|croftimage)\.com|(comicalpic|imgserve)\.net/,
+    host: /(imagedecode|zonezeedimage|zeljeimage|croftimage)\.com|(comicalpic|imgserve|gallerycloud)\.net/,
   },
   run: function () {
     'use strict';
