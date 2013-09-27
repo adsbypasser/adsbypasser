@@ -1,17 +1,19 @@
 // ==UserScript==
-// @match          http://imgurban.info/?pm=*
-// @match          http://d69.in/?pm=*
+// @include        /http://d69\.in/\?p[mt]=.+/
+// @include        /http://ghanaimages\.co/\?p[mt]=.+/
+// @include        /http://imagehost\.thasnasty\.com/\?p[mt]=.+/
+// @include        /http://imgurban\.info/\?p[mt]=.+/
+// @include        /http://imgwiev\.tk/\?p[mt]=.+/
+// @include        /http://www\.x45x\.info/\?p[mt]=.+/
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /imgurban\.info|d69\.in/,
+    host: /^imgwiev\.tk|www\.x45x\.info|imagehost\.thasnasty\.com|ghanaimages\.co|imgurban\.info|d69\.in$/,
+    query: /\?p[mt]=(.+)/,
   },
-  run: function () {
-    'use strict';
-
-    var a = $('div.img_box a');
-    $.redirect(a.href);
+  run: function (m) {
+    $.redirect('/?di=' + m.query[1]);
   },
 });
 
