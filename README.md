@@ -116,6 +116,7 @@ For more information, please see [Wiki].
     * freeuploadimages.org
     * gallery.jpavgod.com
     * hentai-hosting.com
+    * hostzi.com
     * howtohemorrhoidscure.com
     * imagecurl.com
     * imagecurl.org
@@ -129,6 +130,7 @@ For more information, please see [Wiki].
 * reklama
     * comicalpic.net
     * croftimage.com
+    * gallerycloud.net
     * imagedecode.com
     * imgserve.net
     * zeljeimage.com
@@ -164,6 +166,7 @@ For more information, please see [Wiki].
     * amateurfreak.org
     * euro-pic.eu
     * freeimage.us
+    * gratisimage.dk
     * picfox.org
 * imgchili
     * imgchili.com
@@ -228,6 +231,7 @@ For more information, please see [Wiki].
     * imagefruit.com
     * imagesnake.com
 * imgwiev
+    * ghanaimages.co
     * imgwiev.tk
     * thasnasty.com
     * x45x.info
@@ -238,6 +242,7 @@ For more information, please see [Wiki].
     * b4he.com
     * fastpics.net
     * freeimgup.com
+    * fullimg.com
 * emptypix
     * emptypix.com
     * flickimg.com
@@ -245,9 +250,11 @@ For more information, please see [Wiki].
 * fotoo
     * fotoo.pl
     * fotoszok.pl
+    * hornyimage.com
 * eropix
     * eropix.me
     * freakimage.com
+    * hostpic.org
 * else
     * 1be.biz
     * 1pics.ru
@@ -295,6 +302,8 @@ For more information, please see [Wiki].
     * gkurl.us
     * go2.me
     * goimagehost.com
+    * hostingfailov.com
+    * hostingpics.net
     * hotimg.com
     * hotshorturl.com
     * ibunker.us

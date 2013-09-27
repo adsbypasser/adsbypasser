@@ -1,3 +1,16 @@
+## TBA
+
+* added
+    * fullimg.com
+    * hostzi.com
+    * gallerycloud.net
+    * ghanaimages.co
+    * gratisimage.dk
+    * hornyimage.com
+    * hostingfailov.com
+    * hostingpics.net
+    * hostpic.org
+
 ## 3.18.0
 
 * added
