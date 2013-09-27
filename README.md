@@ -148,8 +148,12 @@ For more information, please see [Wiki].
     * yankoimages.net
 * CF Image Host
     * d69.in
-    * imgjav.tk
+    * ghanaimages.co
+    * images.woh.to
     * imgurban.info
+    * imgwiev.tk
+    * thasnasty.com
+    * x45x.info
 * imgonion
     * imagecorn.com
     * imagefolks.com
@@ -230,11 +234,6 @@ For more information, please see [Wiki].
     * freebunker.com
     * imagefruit.com
     * imagesnake.com
-* imgwiev
-    * ghanaimages.co
-    * imgwiev.tk
-    * thasnasty.com
-    * x45x.info
 * imagecherry
     * imagecherry.com
     * imgpo.st
