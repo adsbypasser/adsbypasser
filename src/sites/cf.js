@@ -5,11 +5,12 @@
 // @include        /http://imgurban\.info/\?p[mt]=.+/
 // @include        /http://imgwiev\.tk/\?p[mt]=.+/
 // @include        /http://www\.x45x\.info/\?p[mt]=.+/
+// @include        /http://www\.images\.woh\.to/\?p[mt]=.+/
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /^imgwiev\.tk|www\.x45x\.info|imagehost\.thasnasty\.com|ghanaimages\.co|imgurban\.info|d69\.in$/,
+    host: /^imgwiev\.tk|www\.x45x\.info|imagehost\.thasnasty\.com|ghanaimages\.co|imgurban\.info|d69\.in|www\.images\.woh\.to$/,
     query: /\?p[mt]=(.+)/,
   },
   run: function (m) {
