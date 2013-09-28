@@ -1,10 +1,13 @@
 // ==UserScript==
+// @match          http://*.imagevenue.com/img.php?*
 // @match          http://www.hostingfailov.com/photo/*
+// @match          http://www.freeporndumpster.com/show.php?*
 // ==/UserScript==
 
+// I don't think these sites are the same
 $.register({
   rule: {
-    host: /^www\.hostingfailov\.com$/,
+    host: /(hostingfailov|freeporndumpster|imagevenue)\.com$/,
   },
   run: function () {
     'use strict';

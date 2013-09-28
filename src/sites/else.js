@@ -5,7 +5,6 @@
 // @match          http://*.alafs.com/*
 // @match          http://*.directupload.net/file/*.htm
 // @match          http://*.imagebam.com/image/*
-// @match          http://*.imagevenue.com/img.php?*
 // @match          http://*.yfrog.com/*
 // @match          http://1be.biz/s.php?*
 // @match          http://3ra.be/*
@@ -57,7 +56,6 @@
 // @match          http://www.cyberpics.net/pm/*.html
 // @match          http://www.dumppix.com/viewer.php?*
 // @match          http://www.fotolink.su/v.php?id=*
-// @match          http://www.freeporndumpster.com/show.php?*
 // @match          http://www.hotimg.com/image/*
 // @match          http://www.imgbabes.com/*
 // @include        /http://(www\.)?imgnip\.com/viewer.*\.php\?file=.*/
@@ -115,17 +113,6 @@
     },
     run: function () {
       var i = $('#imageid');
-      $.redirect(i.src);
-    },
-  });
-
-  // imagevenue
-  $.register({
-    rule: {
-      host: /imagevenue\.com$/,
-    },
-    run: function () {
-      var i = $('#thepic');
       $.redirect(i.src);
     },
   });
@@ -813,17 +800,6 @@
       var i = $('#picture');
       // FIXME somehow the mime type is text/html
       $.replace(i.src);
-    },
-  });
-
-  // freeporndumpster
-  $.register({
-    rule: {
-      host: /^www\.freeporndumpster\.com$/,
-    },
-    run: function () {
-      var i = $('#thepic');
-      $.redirect(i.src);
     },
   });
 
