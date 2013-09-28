@@ -4,6 +4,13 @@
     * imgjav.tk
 * added
     * images.woh.to
+    * hostpornpics.net
+    * hotchyx.com
+    * hotimages.eu
+    * ifap.co
+    * ifotos.pl
+    * ima.so
+    * image2you.ru
 
 ## 3.19.0
 
