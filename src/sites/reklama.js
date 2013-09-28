@@ -2,6 +2,7 @@
 // @match          http://comicalpic.net/img-*.html
 // @match          http://croftimage.com/img-*.html
 // @match          http://gallerycloud.net/img-*.html
+// @match          http://hotimages.eu/img-*.html
 // @match          http://imagedecode.com/img-*.html
 // @match          http://imgserve.net/img-*.html
 // @match          http://zeljeimage.com/img-*.html
@@ -10,12 +11,12 @@
 
 $.register({
   rule: {
-    host: /(imagedecode|zonezeedimage|zeljeimage|croftimage)\.com|(comicalpic|imgserve|gallerycloud)\.net/,
+    host: /^(imagedecode|zonezeedimage|zeljeimage|croftimage)\.com|(comicalpic|imgserve|gallerycloud)\.net|hotimages\.eu$/,
   },
   run: function () {
     'use strict';
 
-    var o = $('#container img[class^=centred]');
+    var o = $('img[class^=centred]');
     $.redirect(o.src);
   },
 });
