@@ -1,4 +1,5 @@
 // ==UserScript==
+// @include        /http://hostpornpics\.net/viewer\.php?.*file=.+/
 // @match          http://bilder.nixhelp.de/viewer.php?*
 // @match          http://dwimg.com/viewer.php?file=*
 // @match          http://freeuploadimages.org/viewer.php?file=*
@@ -50,7 +51,7 @@ $.register({
 // preview.jpavgod.com
 $.register({
   rule: {
-    host: /preview\.jpavgod\.com/,
+    host: /^preview\.jpavgod\.com|hostpornpics\.net$/,
   },
   run: function () {
     'use strict';
