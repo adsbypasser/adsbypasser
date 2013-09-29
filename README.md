@@ -262,6 +262,9 @@ For more information, please see [Wiki].
     * hotchyx.com
     * freeporndumpster.com
     * hostingfailov.com
+* imgfantasy
+    * imgfantasy.com
+    * imagedomino.com
 * else
     * 1be.biz
     * 1pics.ru
@@ -316,6 +319,7 @@ For more information, please see [Wiki].
     * ifotos.pl
     * iiiii.in
     * ima.so
+    * image18.org
     * image2you.ru
     * imagearn.com
     * imagebam.com
@@ -327,7 +331,6 @@ For more information, please see [Wiki].
     * imgah.com
     * imgbabes.com
     * imgbar.net
-    * imgfantasy.com
     * imgnip.com
     * imgpony.com
     * ity.im

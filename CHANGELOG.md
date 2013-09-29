@@ -1,3 +1,9 @@
+## TBA
+
+* added
+    * image18.org
+    * imagedomino.com
+
 ## 3.20.0
 
 * removed
