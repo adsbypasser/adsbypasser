@@ -30,7 +30,6 @@
 // @match          http://imagetwist.com/*
 // @match          http://imgah.com/*
 // @match          http://imgbar.net/*
-// @include        /http://imgfantasy\.com/\?[pv]=.+/
 // @match          http://imgpony.com/viewer3.php?img=*
 // @match          http://ity.im/*
 // @match          http://javelite.tk/viewer.php?id=*
@@ -408,34 +407,6 @@
     },
     run: function () {
       var i = $('#imagen img');
-      $.redirect(i.src);
-    },
-  });
-
-  // imgfantasy.com (p)
-  $.register({
-    rule: {
-      host: /^imgfantasy\.com$/,
-      query: /^\?p=/,
-    },
-    run: function () {
-      var i = $('#container-home img');
-      $.redirect(i.src);
-    },
-  });
-
-  // imgfantasy.com (v)
-  $.register({
-    rule: {
-      host: /^imgfantasy\.com$/,
-      query: /^\?v=/,
-    },
-    run: function () {
-      if (unsafeWindow.confirmAge) {
-        unsafeWindow.confirmAge(1);
-        return;
-      }
-      var i = $('#container-home img');
       $.redirect(i.src);
     },
   });
