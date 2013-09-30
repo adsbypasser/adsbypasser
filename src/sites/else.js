@@ -27,7 +27,6 @@
 // @match          http://imagehosting.gr/*.html
 // @match          http://imagescream.com/?v=*
 // @match          http://imagescream.com/img/soft/*
-// @match          http://imagetwist.com/*
 // @match          http://imgah.com/*
 // @match          http://imgbar.net/*
 // @match          http://imgpony.com/viewer3.php?img=*
@@ -181,17 +180,6 @@
           $.redirect(o.href);
         }
       }, null);
-    },
-  });
-
-  // imagetwist
-  $.register({
-    rule: {
-      host: /imagetwist\.com/,
-    },
-    run: function () {
-      var o = $('img.pic');
-      $.redirect(o.src);
     },
   });
 
