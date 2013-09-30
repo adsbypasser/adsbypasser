@@ -12,7 +12,7 @@
 
 $.register({
   rule: {
-    host: /^(image(decode|ontime)|zonezeedimage|zeljeimage|croftimage)\.com|(comicalpic|imgserve|gallerycloud)\.net|hotimages\.eu$/,
+    host: /^(image(decode|ontime)|(zonezeed|zelje|croft)image)\.com|(comicalpic|imgserve|gallerycloud)\.net|hotimages\.eu$/,
   },
   run: function () {
     'use strict';
