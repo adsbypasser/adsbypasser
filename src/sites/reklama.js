@@ -4,6 +4,7 @@
 // @match          http://gallerycloud.net/img-*.html
 // @match          http://hotimages.eu/img-*.html
 // @match          http://imagedecode.com/img-*.html
+// @match          http://imageontime.com/img-*.html
 // @match          http://imgserve.net/img-*.html
 // @match          http://zeljeimage.com/img-*.html
 // @match          http://zonezeedimage.com/img-*.html
@@ -11,7 +12,7 @@
 
 $.register({
   rule: {
-    host: /^(imagedecode|zonezeedimage|zeljeimage|croftimage)\.com|(comicalpic|imgserve|gallerycloud)\.net|hotimages\.eu$/,
+    host: /^(image(decode|ontime)|zonezeedimage|zeljeimage|croftimage)\.com|(comicalpic|imgserve|gallerycloud)\.net|hotimages\.eu$/,
   },
   run: function () {
     'use strict';
