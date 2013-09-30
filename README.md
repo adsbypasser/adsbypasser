@@ -134,6 +134,7 @@ For more information, please see [Wiki].
     * gallerycloud.net
     * hotimages.eu
     * imagedecode.com
+    * imageontime.com
     * imgserve.net
     * zeljeimage.com
     * zonezeedimage.com
@@ -186,6 +187,7 @@ For more information, please see [Wiki].
 * abload
     * abload.de
     * fastpic.ru
+    * imagebanana.com
 * bc.vc
     * adcrun.ch
     * adli.pw
@@ -236,8 +238,10 @@ For more information, please see [Wiki].
     * freebunker.com
     * imagefruit.com
     * imagesnake.com
-* imagecherry
+* imagetwist
     * imagecherry.com
+    * imagenpic.com
+    * imagetwist.com
     * imgpo.st
 * b4he
     * b4he.com
@@ -326,8 +330,11 @@ For more information, please see [Wiki].
     * imageban.net
     * imageban.ru
     * imagehosting.gr
+    * imagehousing.com
+    * imagenetz.de
+    * imageno.com
+    * imagepix.org
     * imagescream.com
-    * imagetwist.com
     * imgah.com
     * imgbabes.com
     * imgbar.net
