@@ -1,10 +1,12 @@
 // ==UserScript==
 // @match          http://image18.org/show/*
+// @match          http://screenlist.ru/details.php?image_id=*
 // ==/UserScript==
 
+// I don't think these sites are same
 $.register({
   rule: {
-    host: /^image18\.org$/,
+    host: /^image18\.org|screenlist\.ru$/,
   },
   run: function () {
     'use strict';

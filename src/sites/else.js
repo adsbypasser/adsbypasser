@@ -41,7 +41,6 @@
 // @match          http://qrrro.com/images/*.html
 // @include        /http://riurl\.com/.+/
 // @match          http://robo.us/*
-// @match          http://screenlist.ru/details.php?image_id=*
 // @match          http://seomafia.net/*
 // @match          http://stash-coins.com/*
 // @match          http://tinyarrows.com/preview.php?page=*
@@ -747,17 +746,6 @@
     },
     run: function () {
       var i = $('#ImagenVisualizada');
-      $.redirect(i.src);
-    },
-  });
-
-  // screenlist
-  $.register({
-    rule: {
-      host: /^screenlist\.ru$/,
-    },
-    run: function () {
-      var i = $('#picture');
       $.redirect(i.src);
     },
   });
