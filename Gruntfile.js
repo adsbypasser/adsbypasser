@@ -9,21 +9,21 @@ module.exports = function (grunt) {
         dest: 'dest/sites',
       },
       strip: {
-        src: ['src/utils/*.js'],
-        dest: 'dest/utils',
+        src: ['src/util/*.js'],
+        dest: 'dest/util',
       },
     },
     concat: {
       metadata: {
         options: {
-          banner: '// ==UserScript==\n' + grunt.file.read('src/utils/metadata.js'),
+          banner: '// ==UserScript==\n' + grunt.file.read('src/util/metadata.js'),
           footer: '\n// ==/UserScript==\n',
         },
         src: ['dest/sites/*.metadata.js'],
         dest: 'dest/metadata.js',
       },
       script: {
-        src: ['dest/utils/core.js', 'dest/utils/dom.js', 'dest/sites/*.script.js'],
+        src: ['dest/util/core.js', 'dest/util/dom.js', 'dest/sites/*.script.js'],
         dest: 'dest/script.js',
       },
       nopicads: {
