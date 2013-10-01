@@ -195,38 +195,6 @@ var _ = {};
   };
 
 
-  function load () {
-    var tmp = {
-      version: GM_getValue('version', 0),
-      alignCenter: GM_getValue('align_center', true),
-      redirectImage: GM_getValue('redirect_image', true),
-    };
-    save(tmp);
-    _.info('loaded config:', tmp);
-    return tmp;
-  }
-
-  function save (c) {
-    GM_setValue('version', c.version);
-    GM_setValue('align_center', c.alignCenter);
-    GM_setValue('redirect_image', c.redirectImage);
-  }
-
-  _.config = load();
-
-  GM_registerMenuCommand(_.T('Turn {0} Image Center Aligning (will reload page)')(_.config.alignCenter ? 'Off' : 'On'), function () {
-    _.config.alignCenter = !_.config.alignCenter;
-    save(_.config);
-    window.location.reload();
-  });
-
-  GM_registerMenuCommand(_.T('Turn {0} Image Redirecting (will reload page)')(_.config.redirectImage ? 'Off' : 'On'), function () {
-    _.config.redirectImage = !_.config.redirectImage;
-    save(_.config);
-    window.location.reload();
-  });
-
-
 })();
 
 

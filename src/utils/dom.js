@@ -11,6 +11,38 @@ var $;
   });
 
 
+  function load () {
+    var tmp = {
+      version: GM_getValue('version', 0),
+      alignCenter: GM_getValue('align_center', true),
+      redirectImage: GM_getValue('redirect_image', true),
+    };
+    save(tmp);
+    _.info('loaded config:', tmp);
+    return tmp;
+  }
+
+  function save (c) {
+    GM_setValue('version', c.version);
+    GM_setValue('align_center', c.alignCenter);
+    GM_setValue('redirect_image', c.redirectImage);
+  }
+
+  var config = load();
+
+  GM_registerMenuCommand(_.T('Turn {0} Image Center Aligning (will reload page)')(config.alignCenter ? 'Off' : 'On'), function () {
+    config.alignCenter = !config.alignCenter;
+    save(_onfig);
+    window.location.reload();
+  });
+
+  GM_registerMenuCommand(_.T('Turn {0} Image Redirecting (will reload page)')(config.redirectImage ? 'Off' : 'On'), function () {
+    config.redirectImage = !config.redirectImage;
+    save(config);
+    window.location.reload();
+  });
+
+
   $ = function (selector, context) {
     if (!context || !context.querySelector) {
       context = document;
@@ -142,7 +174,7 @@ var $;
   }
 
   $.redirect = function (to) {
-    if (_.config.redirectImage) {
+    if (config.redirectImage) {
       redirect(to);
       return;
     }
@@ -240,7 +272,7 @@ var $;
     i.src = imgSrc;
     d.appendChild(i);
 
-    if (_.config.alignCenter) {
+    if (config.alignCenter) {
       alignCenter(d, i);
     }
   };
