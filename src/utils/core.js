@@ -1,4 +1,4 @@
-var _ = {};
+var _ = typeof module !== 'undefined' ? module.exports : {};
 (function () {
   'use strict';
 
