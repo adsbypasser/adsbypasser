@@ -168,6 +168,9 @@ var _ = {};
 
 
   _.P = function (fn) {
+    if (typeof fn !== 'function') {
+      throw new _.NoPicAdsError('must give a function');
+    }
     var slice = Array.prototype.slice;
     var args = slice.call(arguments, 1);
     return function () {
