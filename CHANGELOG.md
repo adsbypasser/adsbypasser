@@ -1,4 +1,4 @@
-## TBA
+## 3.23.0
 
 * added
     * images.maxigame.by
