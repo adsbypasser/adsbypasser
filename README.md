@@ -174,6 +174,7 @@ For more information, please see [Wiki].
     * euro-pic.eu
     * freeimage.us
     * gratisimage.dk
+    * images.maxigame.by
     * picfox.org
 * imgchili
     * imgchili.com
@@ -335,6 +336,7 @@ For more information, please see [Wiki].
     * imageno.com
     * imagepix.org
     * imagescream.com
+    * imageshack.us
     * imgah.com
     * imgbabes.com
     * imgbar.net

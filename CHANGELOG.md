@@ -1,3 +1,9 @@
+## TBA
+
+* added
+    * images.maxigame.by
+    * imageshack.us
+
 ## 3.22.0
 
 * added
