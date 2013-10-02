@@ -48,7 +48,7 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
       return c.some(fn);
     }
     if (c instanceof NodeList) {
-      Array.prototype.some.call(c, fn);
+      return Array.prototype.some.call(c, fn);
     }
     return Object.keys(c).some(function (k) {
       return fn(c[k], k, c);
@@ -60,7 +60,7 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
       return c.every(fn);
     }
     if (c instanceof NodeList) {
-      Array.prototype.every.call(c, fn);
+      return Array.prototype.every.call(c, fn);
     }
     return Object.keys(c).every(function (k) {
       return fn(c[k], k, c);
@@ -84,7 +84,7 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
       return c.map(fn);
     }
     if (c instanceof NodeList) {
-      Array.prototype.map.call(c, fn);
+      return Array.prototype.map.call(c, fn);
     }
     return Object.keys(c).map(function (k) {
       return fn(c[k], k, c);
