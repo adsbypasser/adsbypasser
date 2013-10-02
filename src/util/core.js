@@ -59,7 +59,7 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
     if (c.every) {
       return c.every(fn);
     }
-    if (c instanceof NodeList) {
+    if (typeof c.length === 'number') {
       return Array.prototype.every.call(c, fn);
     }
     return Object.keys(c).every(function (k) {
@@ -70,7 +70,7 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
   function each (c, fn) {
     if (c.forEach) {
       c.forEach(fn);
-    } else if (c instanceof NodeList) {
+    } else if (typeof c.length === 'number') {
       Array.prototype.forEach.call(c, fn);
     } else {
       Object.keys(c).forEach(function (k) {
@@ -83,7 +83,7 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
     if (c.map) {
       return c.map(fn);
     }
-    if (c instanceof NodeList) {
+    if (typeof c.length === 'number') {
       return Array.prototype.map.call(c, fn);
     }
     return Object.keys(c).map(function (k) {
