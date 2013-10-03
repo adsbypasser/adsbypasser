@@ -94,7 +94,8 @@ Typical feature types are:
 
 ## Pull Request
 
-Please send pull requests to `develop` branch, or I will not accept them.
+If it is a bug fix, please send to `master` branch. Any other types should send
+to `develop` branch.
 
 There is something you should keep in mind:
 
