@@ -1,4 +1,4 @@
-## TBA
+## 3.24.0
 
 * added
     * imageshost.ru
