@@ -1,7 +1,6 @@
 // ==UserScript==
 // @include        /http://adcrun\.ch/.+/
 // @include        /http://adli\.pw/[^.]+$/
-// @include        /http://biaiai\.com/.+/
 // @include        /http://bih\.cc/.+/
 // @include        /http://fly2url\.com/.+/
 // @include        /http://link\.tl/.+/
@@ -83,7 +82,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(youlinking|fly2url|urlvisa|biaiai|raksoyun)\.com|(zpoz|ultry)\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru|adli\.pw$/,
+      host: /^adcrun\.ch|(youlinking|fly2url|urlvisa|raksoyun)\.com|(zpoz|ultry)\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru|adli\.pw$/,
     },
     run: function () {
       // prevent redirection by iframe
