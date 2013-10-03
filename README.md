@@ -337,6 +337,14 @@ For more information, please see [Wiki].
     * imagepix.org
     * imagescream.com
     * imageshack.us
+    * imageshost.ru
+    * imageupper.com
+    * imagevau.eu
+    * imagezilla.net
+    * imagik.fr
+    * img.acianetmedia.com
+    * img.deli.sh
+    * img1.imagilive.com
     * imgah.com
     * imgbabes.com
     * imgbar.net

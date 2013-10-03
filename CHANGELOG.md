@@ -1,3 +1,15 @@
+## TBA
+
+* added
+    * imageshost.ru
+    * imageupper.com
+    * imagevau.eu
+    * imagezilla.net
+    * imagik.fr
+    * img1.imagilive.com
+    * img.acianetmedia.com
+    * img.deli.sh
+
 ## 3.23.1
 
 * fixed
