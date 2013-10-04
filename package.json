@@ -11,7 +11,9 @@
     "grunt-contrib-concat": "",
     "grunt-contrib-clean": "",
     "grunt-mocha-test": "",
-    "chai": ""
+    "chai": "",
+    "connect": "",
+    "zombie": ""
   },
   "scripts": {
     "test": "grunt test"
