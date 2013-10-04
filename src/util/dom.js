@@ -192,15 +192,6 @@ var $;
     }
   };
 
-  function disableWindowOpen () {
-    if (unsafeWindow) {
-      unsafeWindow.open = _.nop;
-    }
-    if (window) {
-      window.open = _.nop;
-    }
-  }
-
   $.enableScrolling = function () {
     var o = document.compatMode === 'CSS1Compat' ? document.documentElement : document.body;
     o.style.overflow = '';
@@ -343,7 +334,22 @@ var $;
     return _.P(pattern.run, matched);
   }
 
+  function disableWindowOpen () {
+    unsafeWindow.open = _.nop;
+  }
+
+  function disableLeavePrompt () {
+    if (unsafeWindow.onbeforeunload) {
+      unsafeWindow.onbeforeunload = _.nop;
+    }
+    if (unsafeWindow.document.body.onbeforeunload) {
+      unsafeWindow.document.body.onbeforeunload = _.nop;
+    }
+  }
+
   $.main = function () {
+    disableLeavePrompt();
+
     // <scheme>//<host>:<port><path><query><hash>
     var handler = find({
       scheme: window.location.protocol,
@@ -361,7 +367,6 @@ var $;
 
 
   disableWindowOpen();
-
 
 })();
 

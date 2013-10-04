@@ -63,10 +63,6 @@ $.register({
     $.removeAllTimer();
     $.resetCookies();
 
-    if (unsafeWindow.document.body.onbeforeunload) {
-      unsafeWindow.document.body.onbeforeunload = null;
-    }
-
     if (window.location.pathname.indexOf('verify') >= 0) {
       $.redirect('/');
       return;

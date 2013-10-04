@@ -23,7 +23,6 @@
 
   // second stage
   function run () {
-    unsafeWindow.onbeforeunload = null;
     var i = $('#img_obj');
     $.redirect(i.src);
   }
