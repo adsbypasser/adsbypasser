@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^biaiai\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#yourls-frame');

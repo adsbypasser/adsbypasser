@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /digitalfrenzy\.net/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var img = $('#share_image img');

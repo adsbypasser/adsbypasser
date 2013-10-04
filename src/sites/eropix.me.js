@@ -9,7 +9,7 @@ $.register({
     host: /^eropix\.me|freakimage\.com|www\.hostpic\.org$/,
     query: /filename=([^&]+)/,
   },
-  run: function (m) {
+  start: function (m) {
     'use strict';
 
     $.redirect('/images/' + m.query[1]);

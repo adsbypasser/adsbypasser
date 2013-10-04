@@ -7,7 +7,7 @@ $.register({
   rule: {
     host: /www\.(h-animes|adultmove)\.info/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('.dlbutton2 > a');

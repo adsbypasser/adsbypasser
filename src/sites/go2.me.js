@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^u\.go2\.me$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var iframe = $('iframe');

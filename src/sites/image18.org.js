@@ -9,7 +9,7 @@ $.register({
   rule: {
     host: /^image18\.org|screenlist\.ru|www\.imagenetz\.de$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var img = $('#picture');

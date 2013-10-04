@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^imageupper\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#img');

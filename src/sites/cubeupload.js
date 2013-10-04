@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /cubeupload\.com/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var img = $('img.galleryBigImg');

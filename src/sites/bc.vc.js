@@ -25,7 +25,7 @@
       host: /bc\.vc/,
       query: /^.+(https?:\/\/.+)/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect(m.query[1]);
     },
   });
@@ -37,7 +37,7 @@
       host: /^bc\.vc$/,
       path: /^.+(https?:\/\/.+)$/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect(m.path[1]);
     },
   });
@@ -70,7 +70,7 @@
     rule: {
       host: /^bc\.vc$/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
 
       var content = searchScript();
@@ -83,7 +83,7 @@
     rule: {
       host: /^adcrun\.ch|(youlinking|fly2url|raksoyun)\.com|(zpoz|ultry)\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru|adli\.pw$/,
     },
-    run: function () {
+    ready: function () {
       // prevent redirection by iframe
       $.removeNodes('iframe');
 

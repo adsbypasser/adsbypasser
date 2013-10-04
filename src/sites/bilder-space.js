@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /bilder-space\.de/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     $.removeNodes('iframe');

@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /casimages\.com/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var img = $('td a img');

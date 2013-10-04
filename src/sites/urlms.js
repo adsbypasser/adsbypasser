@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /urlms\.com/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var iframe = $('#content');

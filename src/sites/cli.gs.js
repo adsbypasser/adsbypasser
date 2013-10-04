@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^cli\.gs$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('a.RedirectLink');

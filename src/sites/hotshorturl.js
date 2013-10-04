@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /hotshorturl\.com/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var frame = $('frame[scrolling=yes]');

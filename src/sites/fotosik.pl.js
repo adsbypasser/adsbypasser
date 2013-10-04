@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /fotosik\.pl$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('a.noborder img');

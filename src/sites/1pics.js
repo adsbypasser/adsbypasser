@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /1pics\.ru/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var img = $('img[alt="Бесплатный фотохостинг 1Pics.Ru"]');

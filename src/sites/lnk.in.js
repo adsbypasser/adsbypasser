@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /lnk\.in/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('#divRedirectText a');

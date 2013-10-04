@@ -83,7 +83,7 @@
     rule: {
       host: /^picshare\.geenza\.com$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#picShare_image_container');
       $.redirect(i.src);
     },
@@ -94,7 +94,7 @@
     rule: {
       host: /(alabout|alafs)\.com$/,
     },
-    run: function () {
+    ready: function () {
       $.$$('a').each(function (a) {
         if (/http:\/\/(www\.)?(alabout|alafs)\.com\/j\.phtml\?url=/.test(a.href)) {
           a.href = a.textContent;
@@ -108,7 +108,7 @@
     rule: {
       host: /turboimagehost\.com$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#imageid');
       $.redirect(i.src);
     },
@@ -119,7 +119,7 @@
     rule: {
       host: /zpag\.es$/,
     },
-    run: function () {
+    ready: function () {
       var matches = document.head.innerHTML;
       matches = matches.match(/window\.location\s*=\s*(['"])((?:\\\1|[^\1])*?)\1/);
       if (matches) {
@@ -135,7 +135,7 @@
       path: /^\/image\.php$/,
       query: /path=(.+)$/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect('/' + m.query[1]);
     },
   });
@@ -145,7 +145,7 @@
     rule: {
       host: /ichan\.org$/,
     },
-    run: function () {
+    ready: function () {
       $.$$('a').each(function (a) {
         if (a.href.indexOf('/url/http://') > -1) {
           a.href = a.href.replace(/http:\/\/.+\/url\/(?=http:\/\/)/, '');
@@ -159,7 +159,7 @@
     rule: {
       host: /www\.viidii\.com$/,
     },
-    run: function () {
+    ready: function () {
       var o = $('#directlink');
       $.redirect(o.href);
     },
@@ -170,7 +170,7 @@
     rule: {
       host: /adfoc\.us/,
     },
-    run: function () {
+    ready: function () {
       // FIXME mutation events has been deprecated, consider rewrite with
       // mutation observer
       document.addEventListener('DOMNodeInserted', function () {
@@ -189,7 +189,7 @@
       host: /madlink\.sk/,
       path: /\/(.+)/,
     },
-    run: function (m) {
+    start: function (m) {
       $.removeNodes('iframe');
       $.post('/ajax/check_redirect.php', {
         link: m.path[1],
@@ -204,7 +204,7 @@
     rule: {
       host: /stash-coins\.com/,
     },
-    run: function () {
+    start: function () {
       var url = window.location.toString();
       var i = url.lastIndexOf('http');
       url = url.substr(i);
@@ -217,7 +217,7 @@
     rule: {
       host: /www\.4owl\.info|javelite\.tk/,
     },
-    run: function () {
+    ready: function () {
       var i = $('table img');
       $.redirect(i.src);
     },
@@ -228,7 +228,7 @@
     rule: {
       host: /.+\.directupload\.net/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#showimage');
       $.redirect(i.src);
     },
@@ -239,7 +239,7 @@
     rule: {
       host: /pixhub\.eu/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('.adultpage, #FFN_Banner_Holder');
       $.enableScrolling();
     },
@@ -250,7 +250,7 @@
     rule: {
       host: /imgah\.com/,
     },
-    run: function () {
+    ready: function () {
       // first stage
       var o = $.$('input[type=submit]');
       if (o) {
@@ -269,7 +269,7 @@
     rule: {
       host: /www\.imagebam\.com/,
     },
-    run: function () {
+    ready: function () {
       var o = $('#imageContainer img[id]');
       // somehow the server send image as an attachment
       // so I replace whole document.body with single img
@@ -284,7 +284,7 @@
       host: /imgbar\.net/,
       path: /\/img_show\.php/,
     },
-    run: function () {
+    ready: function () {
       var i = $('center img');
       $.redirect(i.src);
     },
@@ -296,7 +296,7 @@
     rule: {
       host: /imgbar\.net/,
     },
-    run: function () {
+    ready: function () {
       var i = $('div.panel.top form input[name=sid]');
       $.redirect('/img_show.php?view_id=' + i.value);
     },
@@ -308,7 +308,7 @@
       host: /www\.sexyimg\.com/,
       path: /\/s\/.*\.html/,
     },
-    run: function () {
+    ready: function () {
       var f = $('#imgbox form');
       $.redirect(f.action);
     },
@@ -320,7 +320,7 @@
       host: /www\.sexyimg\.com/,
       path: /\/b\/.*\.html/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#imgbox img.bigimg');
       $.replace(i.src);
     },
@@ -332,7 +332,7 @@
       host: /pics-money\.ru$/,
       path: /^\/v\.php/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
 
       var i = $('center img:not([id])');
@@ -345,7 +345,7 @@
     rule: {
       host: /\.pics-money\.ru$/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
 
       var i = $('#d1 img');
@@ -362,7 +362,7 @@
       host: /goimagehost\.com/,
       path: /^\/xxx\/(.+)/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect('/xxx/images/' + m.path[1]);
     },
   });
@@ -371,7 +371,7 @@
       host: /goimagehost\.com/,
       query: /^\?v=(.+)/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect('/xxx/images/' + m.query[1]);
     },
   });
@@ -382,7 +382,7 @@
       host: /imagescream\.com/,
       path: /^\/img\/soft\//,
     },
-    run: function () {
+    ready: function () {
       var i = $('#shortURL-content img');
       $.redirect(i.src);
     },
@@ -392,7 +392,7 @@
       host: /imagescream\.com/,
       query: /^\?v=/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#imagen img');
       $.redirect(i.src);
     },
@@ -403,7 +403,7 @@
     rule: {
       host: /imgnip\.com$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#main_image');
       $.redirect(i.src);
     },
@@ -415,7 +415,7 @@
       host: /1be\.biz/,
       query: /\?(.+)/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect(m.query[1]);
     },
   });
@@ -426,7 +426,7 @@
       host: /qrrro\.com/,
       path: /^(\/images\/.+)\.html$/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect(m.path[1]);
     },
   });
@@ -436,7 +436,7 @@
     rule: {
       host: /www\.pic-upload\.de/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#content + img');
       $.redirect(i.src);
     },
@@ -449,7 +449,7 @@
     rule: {
       host: /www\.bilder-hochladen\.net|imagehosting\.gr/,
     },
-    run: function () {
+    ready: function () {
       var i = $('td > img');
       $.redirect(i.src);
     },
@@ -460,7 +460,7 @@
     rule: {
       host: /^bayimg\.com$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#mainImage');
       $.redirect(i.src);
     },
@@ -471,7 +471,7 @@
     rule: {
       host: /^www\.bild\.me$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#Bild');
       $.redirect(i.src);
     },
@@ -482,7 +482,7 @@
     rule: {
       host: /^www\.bilder-upload\.eu$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('input[type=image]');
       $.redirect(i.src);
     },
@@ -493,7 +493,7 @@
     rule: {
       host: /^bildr\.no$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('img.bilde');
       $.redirect(i.src);
     },
@@ -504,7 +504,7 @@
     rule: {
       host: /^imagearn\.com$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#img');
       $.redirect(i.src);
     },
@@ -515,7 +515,7 @@
     rule: {
       host: /^tinypic\.com$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#imgElement');
       $.redirect(i.src);
     },
@@ -526,7 +526,7 @@
     rule: {
       host: /^adlock\.in$/,
     },
-    run: function () {
+    ready: function () {
       var a = $.$('#xre a.xxr');
       if (a) {
         $.redirect(a.href);
@@ -545,7 +545,7 @@
     rule: {
       host: /^p\.pw$/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
 
       var url = null;
@@ -566,7 +566,7 @@
     rule: {
       host: /^3ra\.be$/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
 
       var f = unsafeWindow.fc;
@@ -587,7 +587,7 @@
     rule: {
       host: /^bilurl\.com$/,
     },
-    run: function () {
+    ready: function () {
       var d = $('#event');
       $.redirect(d.getAttribute('rel'));
     },
@@ -598,7 +598,7 @@
     rule: {
       host: /adv\.li$/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
       $.redirect(unsafeWindow._url);
     },
@@ -610,7 +610,7 @@
       host: /^cf\.ly$/,
       path: /^\/[^\/]+$/,
     },
-    run: function (m) {
+    start: function (m) {
       $.removeNodes('iframe');
       $.redirect('/skip' + m.path[0]);
     },
@@ -621,7 +621,7 @@
     rule: {
       host: /^seomafia\.net$/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
       var a = $('table a');
       $.redirect(a.href);
@@ -633,7 +633,7 @@
     rule: {
       host: /^4fun\.tw$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#original_url');
       $.redirect(i.value);
     },
@@ -644,7 +644,7 @@
     rule: {
       host: /\.imgbabes\.com$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#this_image');
       $.redirect(i.src);
     },
@@ -655,7 +655,7 @@
     rule: {
       host: /^ulmt\.in$/,
     },
-    run: function () {
+    ready: function () {
       var s = unsafeWindow.CountdownTimer.toString();
       s = s.match(/href="([^"]+)"/);
       if (s) {
@@ -672,7 +672,7 @@
     rule: {
       host: /^cl\.my$/,
     },
-    run: function () {
+    ready: function () {
       unsafeWindow.document.body.onload = null;
       unsafeWindow.document.body.onunload = null;
 
@@ -697,7 +697,7 @@
     rule: {
       host: /\.yfrog\.com$/,
     },
-    run: function () {
+    ready: function () {
       if (/^\/z/.test(window.location.pathname)) {
         var i = $('#the-image img');
         $.redirect(i.src);
@@ -716,7 +716,7 @@
     rule: {
       host: /^www\.dumppix\.com$/,
     },
-    run: function () {
+    ready: function () {
       var i = $.$('#boring');
       if (i) {
         $.redirect(i.src);
@@ -732,7 +732,7 @@
     rule: {
       host: /^www\.subirimagenes\.com$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#ImagenVisualizada');
       $.redirect(i.src);
     },
@@ -743,7 +743,7 @@
     rule: {
       host: /^ibunker\.us$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#picture');
       // FIXME somehow the mime type is text/html
       $.replace(i.src);
@@ -756,7 +756,7 @@
       host: /^www\.hotimg\.com$/,
       path: /\/image(\/.*)/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect('/direct' + m.path[1]);
     },
   });
@@ -766,7 +766,7 @@
     rule: {
       host: /^www\.lienscash\.com$/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
 
       var a = $('#time a');
@@ -779,7 +779,7 @@
     rule: {
       host: /^urlz\.so$/,
     },
-    run: function () {
+    ready: function () {
       var i = $.$('td > a');
       if (i) {
         i = i.href;
@@ -805,7 +805,7 @@
     rule: {
       host: /^ity\.im$/,
     },
-    run: function () {
+    ready: function () {
       var f = $.$('#main');
       if (f) {
         $.redirect(f.src);
@@ -839,7 +839,7 @@
       host: /imgpony\.com/,
       query: /\?img=(.+)/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect('/images/' + m.query[1]);
     },
   });
@@ -849,7 +849,7 @@
     rule: {
       host: /www\.fotolink\.su/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#content img');
       $.redirect(i.src);
     },
@@ -860,7 +860,7 @@
     rule: {
       host: /x\.pixfarm\.net/,
     },
-    run: function () {
+    ready: function () {
       var i = $('img');
       $.redirect(i.src);
     },
@@ -871,7 +871,7 @@
     rule: {
       host: /^riurl\.com$/,
     },
-    run: function () {
+    ready: function () {
       var s = $.$('body script');
       if (s) {
         s = s.innerHTML.indexOf('window.location.replace');
@@ -893,7 +893,7 @@
       host: /^tinyarrows\.com$/,
       query: /page=([^&]+)/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect(decodeURIComponent(m.query[1]));
     },
   });
@@ -903,7 +903,7 @@
     rule: {
       host: /^iiiii\.in$/,
     },
-    run: function () {
+    ready: function () {
       var script = $.$$('script').find(function (v) {
         return v.innerHTML.indexOf('href=') >= 0;
       });
@@ -919,7 +919,7 @@
       host: /^www\.adultf\.ly$/,
       path: /\/(.+)/,
     },
-    run: function (m) {
+    ready: function (m) {
       var i = $('#iframeID');
       var advID = i.dataset.cmp;
       var u = i.dataset.u;
@@ -950,7 +950,7 @@
     rule: {
       host: /^robo\.us$/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
       var url = atob(unsafeWindow.fl);
       $.redirect(url);
@@ -962,7 +962,7 @@
     rule: {
       host: /^zo\.mu$/,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
       window.location.reload();
     },
@@ -973,7 +973,7 @@
     rule: {
       host: /^anonpic\.com$/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#imagen img');
       $.redirect(i.src);
     },
@@ -984,7 +984,7 @@
     rule: {
       host: /^www\.cyberpics\.net$/,
     },
-    run: function () {
+    ready: function () {
       var a = $('#content a.lightbox');
       $.redirect(a.href);
     },

@@ -7,7 +7,7 @@ $.register({
   rule: {
     host: /^funkyimg\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#viewer img');

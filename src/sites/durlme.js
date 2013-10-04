@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /durl\.me/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('a[class="proceedBtn"]');

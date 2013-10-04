@@ -7,7 +7,7 @@ $.register({
   rule: {
     host: /2i\.sk|2imgs\.com/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var img = $('#wrap3 img');

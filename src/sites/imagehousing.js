@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^www\.imagehousing\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('td.text_item img');

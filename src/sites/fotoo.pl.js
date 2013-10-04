@@ -9,7 +9,7 @@ $.register({
   rule: {
     host: /^fotoo\.pl|www\.(fotoszok\.pl|hornyimage|imagestime)\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#img_obj');

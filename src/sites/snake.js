@@ -15,7 +15,7 @@
       path: /^\/index\.php$/,
       query: /^\?/,
     },
-    run: function () {
+    ready: function () {
       var a = $('#tablewraper a:nth-child(2)');
       $.redirect(a.href);
     },
@@ -31,13 +31,13 @@
       host: /\.(imagesnake|freebunker)\.com$/,
       path: /^\/show/,
     },
-    run: run,
+    ready: run,
   });
   $.register({
     rule: {
       host: /\.imagefruit\.com$/,
     },
-    run: run,
+    ready: run,
   });
 
 })();

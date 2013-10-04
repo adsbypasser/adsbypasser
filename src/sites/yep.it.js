@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /yep\.it/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var link = $('font[color="grey"]').innerHTML;

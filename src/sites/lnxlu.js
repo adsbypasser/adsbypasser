@@ -8,7 +8,7 @@ $.register({
   rule: {
     host: /^lnx\.lu|url\.fm|z\.gs$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('#clickbtn a');

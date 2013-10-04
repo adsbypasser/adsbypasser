@@ -7,7 +7,7 @@ $.register({
   rule: {
     host: /^coinurl\.com|cur\.lv$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('#skip-ad');

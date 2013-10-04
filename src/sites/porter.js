@@ -25,7 +25,7 @@ $.register({
   rule: {
     host: /(imagecarry|imagedunk|imageporter|imageswitch|picleet|picturedip|pictureturn|pixroute)\.com|(piclambo|yankoimages)\.net/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var o = $('center img[id]');

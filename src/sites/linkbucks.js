@@ -57,7 +57,7 @@ $.register({
   rule: {
     host: /^[\w]{8}\.(allanalpass|a[mn]y|cash4files|deb|drstickyfingers|dyo|fapoff|filesonthe|free(an|gaysitepass)|galleries|goneviral|hornywood|link(babes|bucks|galleries|seer)|megaline|miniurls|picbucks|picturesetc|poontown|qqc|qvvo|realfiles|rqq|serious(deals|files|urls)|sexpalace|these(blogs|files|forums)|(these|those|u)galleries|tiny(bucks|links)|tnabucks|tubeviral|uber(picz|vidz)|ubucks|ultrafiles|url(beat|pulse)|whackyvidz|youfap|yyv|zff|zxxo)\.(com?|net|gs|me|tv|bz|us)/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     $.removeAllTimer();

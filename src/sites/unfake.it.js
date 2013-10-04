@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /unfake\.it/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var frame = $('frame');

@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^short\.pk$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     $.removeNodes('iframe');

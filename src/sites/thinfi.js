@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /thinfi\.com/
   },
-  run: function () {
+  ready: function () {
     'use strict';
     var a = $('div p a');
     $.redirect(a.href);

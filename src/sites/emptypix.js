@@ -8,7 +8,7 @@ $.register({
   rule: {
     host: /^(emptypix|flickimg)\.com|fotohosting\.net$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var img = $('#full_image');

@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /url\.ie/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('a[title="Link to original URL"]');

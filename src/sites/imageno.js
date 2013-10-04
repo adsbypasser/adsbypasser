@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^imageno\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#image_div img');

@@ -25,7 +25,7 @@ $.register({
     host: /^(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics|funextra\.hostzi)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de|imagecurl\.(com|org)|imagevau\.eu|img\.deli\.sh$/,
     query: /file=([^&]+)/,
   },
-  run: function (m) {
+  start: function (m) {
     'use strict';
 
     $.redirect('/images/' + m.query[1]);
@@ -37,7 +37,7 @@ $.register({
   rule: {
     host: /howtohemorrhoidscure\.com|javimage\.us/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('#page_body a');
@@ -55,7 +55,7 @@ $.register({
   rule: {
     host: /^preview\.jpavgod\.com|hostpornpics\.net$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#page_body div.text_align_center img');
@@ -69,7 +69,7 @@ $.register({
     host: /dwimg\.com/,
     query: /file=([^&]+)/,
   },
-  run: function (m) {
+  start: function (m) {
     'use strict';
 
     $.redirect('/files/' + m.query[1]);

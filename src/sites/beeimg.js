@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /beeimg\.com/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var img = $('img.img-responsive');

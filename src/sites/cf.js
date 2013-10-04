@@ -14,7 +14,7 @@ $.register({
     host: /^(imgwiev|www\.imgjav)\.tk|www\.x45x\.info|imagehost\.thasnasty\.com|ghanaimages\.co|imgurban\.info|d69\.in|www\.images\.woh\.to$/,
     query: /\?p[mt]=(.+)/,
   },
-  run: function (m) {
+  start: function (m) {
     'use strict';
 
     $.redirect('/?di=' + m.query[1]);

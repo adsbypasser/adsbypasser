@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^imageshost\.ru$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('#bphoto a');

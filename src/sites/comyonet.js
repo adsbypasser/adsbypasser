@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /comyonet\.com/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var input = $('input[name="enter"]');

@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^www\.freeimagehosting\.net$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('img');

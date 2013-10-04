@@ -8,7 +8,7 @@ $.register({
   rule: {
     host: /^(rd?)lnk\.co|reducelnk\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     $.removeNodes('iframe');

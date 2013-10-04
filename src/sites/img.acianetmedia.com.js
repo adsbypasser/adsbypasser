@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^img\.acianetmedia\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var img = $('#full_image, #shortURL-content img');
