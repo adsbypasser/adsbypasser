@@ -204,7 +204,6 @@ For more information, please see [Wiki].
     * ssl.gs
     * tr5.in
     * ultry.net
-    * urlvisa.com
     * wwy.me
     * xip.ir
     * youlinking.com

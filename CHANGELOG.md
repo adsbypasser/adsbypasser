@@ -1,3 +1,10 @@
+## 3.24.1
+
+* removed
+    * urlvisa.com
+* fixed
+    * remove onbeforeunload event for every sites
+
 ## 3.24.0
 
 * added
