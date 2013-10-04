@@ -331,7 +331,10 @@ var $;
     if (!pattern) {
       return null;
     }
-    return _.P(pattern.run, matched);
+    return {
+      start: pattern.start ? _.P(pattern.start, matched) : _.nop,
+      ready: pattern.ready ? _.P(pattern.ready, matched) : _.nop,
+    };
   }
 
   function disableWindowOpen () {
@@ -347,10 +350,7 @@ var $;
     }
   }
 
-  $.main = function () {
-    disableLeavePrompt();
-
-    // <scheme>//<host>:<port><path><query><hash>
+  setTimeout(function () {
     var handler = find({
       scheme: window.location.protocol,
       host: window.location.hostname,
@@ -360,19 +360,19 @@ var $;
       hash: window.location.hash,
     });
 
-    if (handler) {
-      handler();
+    if (!handler) {
+      return;
     }
-  };
+
+    handler.start();
+
+    document.addEventListener('DOMContentLoaded', handler.ready);
+  }, 0);
 
 
   disableWindowOpen();
 
 })();
-
-
-// do this in anon function may not work in TamperMonkey
-document.addEventListener('DOMContentLoaded', $.main);
 
 
 // ex: ts=2 sts=2 sw=2 et
