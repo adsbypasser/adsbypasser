@@ -153,6 +153,7 @@ For more information, please see [Wiki].
     * d69.in
     * ghanaimages.co
     * images.woh.to
+    * imgjav.tk
     * imgurban.info
     * imgwiev.tk
     * thasnasty.com
