@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var url = unsafeWindow.urls[1];
-    $.redirect(url);
+    $.openLink(url);
   },
 });
 

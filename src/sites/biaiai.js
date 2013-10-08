@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var i = $('#yourls-frame');
-    $.redirect(i.src);
+    $.openLink(i.src);
   },
 });
 

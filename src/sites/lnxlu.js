@@ -12,7 +12,7 @@ $.register({
     'use strict';
 
     var a = $('#clickbtn a');
-    $.redirect(a.href);
+    $.openLink(a.href);
   },
 });
 

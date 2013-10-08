@@ -11,7 +11,7 @@ $.register({
     'use strict';
 
     // mimetype is text/plain
-    $.replace('/uploads/' + m.path[2]);
+    $.openImage('/uploads/' + m.path[2]);
   },
 });
 

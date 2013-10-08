@@ -18,7 +18,7 @@ $.register({
     'use strict';
 
     var o = $('img[class^=centred]');
-    $.redirect(o.src);
+    $.openImage(o.src);
   },
 });
 

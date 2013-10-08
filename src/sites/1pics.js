@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var img = $('img[alt="Бесплатный фотохостинг 1Pics.Ru"]');
-    $.redirect(img.src);
+    $.openImage(img.src);
   },
 });
 

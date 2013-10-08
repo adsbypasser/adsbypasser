@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var i = $('td.text_item img');
-    $.redirect(i.src);
+    $.openImage(i.src);
   },
 });
 

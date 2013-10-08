@@ -11,7 +11,7 @@ $.register({
     'use strict';
 
     var a = $('.dlbutton2 > a');
-    $.redirect(a.href);
+    $.openImage(a.href);
   },
 });
 

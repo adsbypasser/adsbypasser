@@ -85,7 +85,7 @@
     },
     run: function () {
       var i = $('#picShare_image_container');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -110,7 +110,7 @@
     },
     run: function () {
       var i = $('#imageid');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -123,7 +123,7 @@
       var matches = document.head.innerHTML;
       matches = matches.match(/window\.location\s*=\s*(['"])((?:\\\1|[^\1])*?)\1/);
       if (matches) {
-        $.redirect(matches[2]);
+        $.openLink(matches[2]);
       }
     },
   });
@@ -136,7 +136,7 @@
       query: /path=(.+)$/,
     },
     run: function (m) {
-      $.redirect('/' + m.query[1]);
+      $.openImage('/' + m.query[1]);
     },
   });
 
@@ -161,7 +161,7 @@
     },
     run: function () {
       var o = $('#directlink');
-      $.redirect(o.href);
+      $.openLink(o.href);
     },
   });
 
@@ -177,7 +177,7 @@
         var o = $.$('#showSkip');
         if (o) {
           o = o.querySelector('a');
-          $.redirect(o.href);
+          $.openLink(o.href);
         }
       }, null);
     },
@@ -194,7 +194,7 @@
       $.post('/ajax/check_redirect.php', {
         link: m.path[1],
       }, function (text) {
-        $.redirect(text);
+        $.openLink(text);
       });
     },
   });
@@ -208,7 +208,7 @@
       var url = window.location.toString();
       var i = url.lastIndexOf('http');
       url = url.substr(i);
-      $.redirect(url);
+      $.openLink(url);
     },
   });
 
@@ -219,7 +219,7 @@
     },
     run: function () {
       var i = $('table img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -230,7 +230,7 @@
     },
     run: function () {
       var i = $('#showimage');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -286,7 +286,7 @@
     },
     run: function () {
       var i = $('center img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -298,7 +298,7 @@
     },
     run: function () {
       var i = $('div.panel.top form input[name=sid]');
-      $.redirect('/img_show.php?view_id=' + i.value);
+      $.openLink('/img_show.php?view_id=' + i.value);
     },
   });
 
@@ -310,7 +310,7 @@
     },
     run: function () {
       var f = $('#imgbox form');
-      $.redirect(f.action);
+      $.openLink(f.action);
     },
   });
 
@@ -336,7 +336,7 @@
       $.removeNodes('iframe');
 
       var i = $('center img:not([id])');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -352,7 +352,7 @@
       i = i.onclick.toString();
       i = i.match(/mshow\('(.+)'\)/);
       i = i[1];
-      $.redirect(i);
+      $.openImage(i);
     },
   });
 
@@ -363,7 +363,7 @@
       path: /^\/xxx\/(.+)/,
     },
     run: function (m) {
-      $.redirect('/xxx/images/' + m.path[1]);
+      $.openImage('/xxx/images/' + m.path[1]);
     },
   });
   $.register({
@@ -372,7 +372,7 @@
       query: /^\?v=(.+)/,
     },
     run: function (m) {
-      $.redirect('/xxx/images/' + m.query[1]);
+      $.openImage('/xxx/images/' + m.query[1]);
     },
   });
 
@@ -384,7 +384,7 @@
     },
     run: function () {
       var i = $('#shortURL-content img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
   $.register({
@@ -394,7 +394,7 @@
     },
     run: function () {
       var i = $('#imagen img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -405,7 +405,7 @@
     },
     run: function () {
       var i = $('#main_image');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -416,7 +416,7 @@
       query: /\?(.+)/,
     },
     run: function (m) {
-      $.redirect(m.query[1]);
+      $.openLink(m.query[1]);
     },
   });
 
@@ -427,7 +427,7 @@
       path: /^(\/images\/.+)\.html$/,
     },
     run: function (m) {
-      $.redirect(m.path[1]);
+      $.openImage(m.path[1]);
     },
   });
 
@@ -438,7 +438,7 @@
     },
     run: function () {
       var i = $('#content + img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -451,7 +451,7 @@
     },
     run: function () {
       var i = $('td > img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -462,7 +462,7 @@
     },
     run: function () {
       var i = $('#mainImage');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -473,7 +473,7 @@
     },
     run: function () {
       var i = $('#Bild');
-      $.redirect(i.src);
+      $.openLink(i.src);
     },
   });
 
@@ -484,7 +484,7 @@
     },
     run: function () {
       var i = $('input[type=image]');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -495,7 +495,7 @@
     },
     run: function () {
       var i = $('img.bilde');
-      $.redirect(i.src);
+      $.openLink(i.src);
     },
   });
 
@@ -506,7 +506,7 @@
     },
     run: function () {
       var i = $('#img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -517,7 +517,7 @@
     },
     run: function () {
       var i = $('#imgElement');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -529,13 +529,13 @@
     run: function () {
       var a = $.$('#xre a.xxr');
       if (a) {
-        $.redirect(a.href);
+        $.openLink(a.href);
         return;
       }
 
       a = unsafeWindow.fileLocation;
       if (a) {
-        $.redirect(a);
+        $.openLink(a);
       }
     },
   });
@@ -557,7 +557,7 @@
         }
       });
 
-      $.redirect(url);
+      $.openLink(url);
     },
   });
 
@@ -578,7 +578,7 @@
       if (!f) {
         throw new _.NoPicAdsError('url pattern outdated');
       }
-      $.redirect(f[1]);
+      $.openLink(f[1]);
     },
   });
 
@@ -589,7 +589,7 @@
     },
     run: function () {
       var d = $('#event');
-      $.redirect(d.getAttribute('rel'));
+      $.openLink(d.getAttribute('rel'));
     },
   });
 
@@ -600,7 +600,7 @@
     },
     run: function () {
       $.removeNodes('iframe');
-      $.redirect(unsafeWindow._url);
+      $.openLink(unsafeWindow._url);
     },
   });
 
@@ -612,7 +612,7 @@
     },
     run: function (m) {
       $.removeNodes('iframe');
-      $.redirect('/skip' + m.path[0]);
+      $.openLink('/skip' + m.path[0]);
     },
   });
 
@@ -624,7 +624,7 @@
     run: function () {
       $.removeNodes('iframe');
       var a = $('table a');
-      $.redirect(a.href);
+      $.openLink(a.href);
     },
   });
 
@@ -635,7 +635,7 @@
     },
     run: function () {
       var i = $('#original_url');
-      $.redirect(i.value);
+      $.openLink(i.value);
     },
   });
 
@@ -646,7 +646,7 @@
     },
     run: function () {
       var i = $('#this_image');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -659,11 +659,11 @@
       var s = unsafeWindow.CountdownTimer.toString();
       s = s.match(/href="([^"]+)"/);
       if (s) {
-        $.redirect(s[1]);
+        $.openLink(s[1]);
         throw new _.NoPicAdsError('function changed');
       }
       s = $('#iframe_win');
-      $.redirect(s.src);
+      $.openLink(s.src);
     },
   });
 
@@ -687,7 +687,7 @@
         cmd: 'chk',
         id: content,
       }, function (data) {
-        $.redirect(data.data.u);
+        $.openLink(data.data.u);
       }, 'json');
     },
   });
@@ -700,12 +700,12 @@
     run: function () {
       if (/^\/z/.test(window.location.pathname)) {
         var i = $('#the-image img');
-        $.redirect(i.src);
+        $.openImage(i.src);
         return;
       }
       var a = $.$('#continue-link a, #main_image');
       if (a) {
-        $.redirect('/z' + window.location.pathname);
+        $.openLink('/z' + window.location.pathname);
         return;
       }
     },
@@ -719,11 +719,11 @@
     run: function () {
       var i = $.$('#boring');
       if (i) {
-        $.redirect(i.src);
+        $.openLink(i.src);
         return;
       }
       i = $('table td:nth-child(1) a');
-      $.redirect(i.href);
+      $.openLink(i.href);
     },
   });
 
@@ -734,7 +734,7 @@
     },
     run: function () {
       var i = $('#ImagenVisualizada');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -757,7 +757,7 @@
       path: /\/image(\/.*)/,
     },
     run: function (m) {
-      $.redirect('/direct' + m.path[1]);
+      $.openImage('/direct' + m.path[1]);
     },
   });
 
@@ -770,7 +770,7 @@
       $.removeNodes('iframe');
 
       var a = $('#time a');
-      $.redirect(a.id);
+      $.openLink(a.id);
     },
   });
 
@@ -787,7 +787,7 @@
         if (m) {
           i = atob(m[1]);
         }
-        $.redirect(i);
+        $.openLink(i);
         return;
       }
       i = $('img');
@@ -808,13 +808,13 @@
     run: function () {
       var f = $.$('#main');
       if (f) {
-        $.redirect(f.src);
+        $.openLink(f.src);
       }
       f = $.$$('frame').find(function (frame) {
         return frame.src.indexOf('interheader.php') >= 0;
       });
       if (f) {
-        $.redirect(f.src);
+        $.openLink(f.src);
       }
 
       var data = null;
@@ -828,7 +828,7 @@
       data = data[1];
       f = unsafeWindow.des('ksnslmtmk0v4Pdviusajqu', unsafeWindow.hexToString(data), 0, 0);
       if (f) {
-        $.redirect('http://ity.im/1104_21_50846_' + f);
+        $.openLink('http://ity.im/1104_21_50846_' + f);
       }
     },
   });
@@ -840,7 +840,7 @@
       query: /\?img=(.+)/,
     },
     run: function (m) {
-      $.redirect('/images/' + m.query[1]);
+      $.openImage('/images/' + m.query[1]);
     },
   });
 
@@ -851,7 +851,7 @@
     },
     run: function () {
       var i = $('#content img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -862,7 +862,7 @@
     },
     run: function () {
       var i = $('img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -894,7 +894,7 @@
       query: /page=([^&]+)/,
     },
     run: function (m) {
-      $.redirect(decodeURIComponent(m.query[1]));
+      $.openLink(decodeURIComponent(m.query[1]));
     },
   });
 
@@ -909,7 +909,7 @@
       });
       script = script.innerHTML.match(/href=(\S+)/);
       script = script[1];
-      $.redirect(script);
+      $.openLink(script);
     },
   });
 
@@ -938,7 +938,7 @@
           }
           var m = data.match(/href="([^"]+)"/);
           m = m[1];
-          $.redirect(m);
+          $.openLink(m);
         });
       }
       fetch();
@@ -953,7 +953,7 @@
     run: function () {
       $.removeNodes('iframe');
       var url = atob(unsafeWindow.fl);
-      $.redirect(url);
+      $.openLink(url);
     },
   });
 
@@ -975,7 +975,7 @@
     },
     run: function () {
       var i = $('#imagen img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -986,7 +986,7 @@
     },
     run: function () {
       var a = $('#content a.lightbox');
-      $.redirect(a.href);
+      $.openImage(a.href);
     },
   });
 

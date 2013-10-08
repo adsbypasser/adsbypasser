@@ -29,7 +29,7 @@ $.register({
 
     // second pass
     var o = $('img[alt="image"]');
-    $.redirect(o.src);
+    $.openImage(o.src);
   },
 });
 

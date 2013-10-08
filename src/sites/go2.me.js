@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var iframe = $('iframe');
-    $.redirect(iframe.src);
+    $.openLink(iframe.src);
   },
 });
 

@@ -9,7 +9,7 @@ $.register({
   run: function () {
     'use strict';
     var a = $('div p a');
-    $.redirect(a.href);
+    $.openLink(a.href);
   },
 });
 

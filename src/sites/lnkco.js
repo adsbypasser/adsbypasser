@@ -15,19 +15,19 @@ $.register({
 
     var o = $.$('#urlholder');
     if (o) {
-      $.redirect(o.value);
+      $.openLink(o.value);
       return;
     }
 
     o = $.$('#skipBtn');
     if (o) {
       o = o.querySelector('a');
-      $.redirect(o.href);
+      $.openLink(o.href);
       return;
     }
 
     o = document.title.replace(/(LNK.co|Linkbee)\s*:\s*/, '');
-    $.redirect(o);
+    $.openLink(o);
   },
 });
 

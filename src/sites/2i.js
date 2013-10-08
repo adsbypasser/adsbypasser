@@ -11,7 +11,7 @@ $.register({
     'use strict';
 
     var img = $('#wrap3 img');
-    $.redirect(img.src);
+    $.openImage(img.src);
   },
 });
 

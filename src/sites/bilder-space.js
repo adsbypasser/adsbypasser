@@ -12,7 +12,7 @@ $.register({
     $.removeNodes('iframe');
 
     var img = $('img.picture');
-    $.replace(img.src);
+    $.openImage(img.src);
   },
 });
 

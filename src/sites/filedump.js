@@ -10,7 +10,7 @@ $.register({
   run: function (m) {
     'use strict';
 
-    $.redirect('/dumped/' + m.query[1]);
+    $.openImage('/dumped/' + m.query[1]);
   },
 });
 

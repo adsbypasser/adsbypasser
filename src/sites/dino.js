@@ -11,7 +11,7 @@ $.register({
     'use strict';
 
     var o = $('#cursor_lupa');
-    $.redirect(o.src);
+    $.openImage(o.src);
   },
 });
 

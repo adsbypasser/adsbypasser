@@ -23,7 +23,7 @@
     },
     run: function (m) {
       $.resetCookies();
-      $.redirect(m.query[1]);
+      $.openLink(m.query[1]);
     },
   });
 
@@ -58,7 +58,7 @@
       if (location.hash) {
         h += location.hash;
       }
-      $.redirect(h);
+      $.openLink(h);
     },
   });
 

@@ -16,7 +16,7 @@ $.register({
     }
 
     var i = $('#page > img:not([id])');
-    $.redirect(i.src);
+    $.openImage(i.src);
   },
 });
 

@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var frame = $('frame[scrolling=yes]');
-    $.redirect(frame.src);
+    $.openLink(frame.src);
   },
 });
 

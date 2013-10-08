@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var m = $('meta[property="og:image"]');
-    $.redirect(m.content);
+    $.openImage(m.content);
   },
 });
 

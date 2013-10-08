@@ -12,7 +12,7 @@ $.register({
     'use strict';
 
     var img = $('#full_image');
-    $.redirect(img.src);
+    $.openImage(img.src);
   },
 });
 

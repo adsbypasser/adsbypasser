@@ -17,7 +17,7 @@ $.register({
   run: function (m) {
     'use strict';
 
-    $.redirect('/?di=' + m.query[1]);
+    $.openImage('/?di=' + m.query[1]);
   },
 });
 

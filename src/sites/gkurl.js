@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var iframe = $('#gkurl-frame');
-    $.redirect(iframe.src);
+    $.openLink(iframe.src);
   },
 });
 
