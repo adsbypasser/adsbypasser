@@ -124,10 +124,6 @@ var $;
     return controller;
   }
 
-  function head (url, callback) {
-    return ajax('HEAD', url, '', {}, callback);
-  }
-
   $.post = function (url, data, callback) {
     data = toQuery(data);
     return ajax('POST', url, data, {
@@ -163,7 +159,7 @@ var $;
   };
 
 
-  function redirect (to) {
+  $.openLink = function (to) {
     if (!to) {
       _.warn('false URL');
       return;
@@ -171,19 +167,14 @@ var $;
     var from = window.location.toString();
     _.info(_.T('{0} -> {1}')(from, to));
     window.top.location.replace(to);
-  }
-
-  $.redirect = function (to) {
-    if (config.redirectImage) {
-      redirect(to);
-      return;
-    }
-    head(to, function (text, headers) {
-      if (!/^image\/.*/.test(headers.get('Content-Type'))) {
-        redirect(to);
-      }
-    });
   };
+
+  $.openImage = function (imgSrc) {
+    if (config.redirectImage) {
+      $.openLink(imgSrc);
+    }
+  };
+
 
   $.removeAllTimer = function () {
     var intervalID = window.setInterval(_.nop, 10);
