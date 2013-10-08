@@ -3,11 +3,12 @@
 // @match          http://abload.de/image.php?img=*
 // @match          http://fastpic.ru/view/*.html
 // @match          http://www.imagebanana.com/view/*
+// @match          http://www.imageup.ru/*/*/*.html
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /^(.+\.)?abload\.de|fastpic\.ru|www\.imagebanana\.com$/,
+    host: /^(.+\.)?abload\.de|fastpic\.ru|www\.imagebanana\.com|www\.imageup\.ru$/,
   },
   run: function () {
     'use strict';
