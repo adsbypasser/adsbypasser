@@ -1,4 +1,4 @@
-## TBA
+## 3.26.0
 
 * added
     * imgnext.com
