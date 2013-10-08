@@ -166,6 +166,7 @@ For more information, please see [Wiki].
     * imgcloud.co
     * imgcorn.com
     * imgmoney.com
+    * imgnext.com
     * imgonion.com
     * imgrill.com
     * imgtube.net
@@ -190,6 +191,7 @@ For more information, please see [Wiki].
     * abload.de
     * fastpic.ru
     * imagebanana.com
+    * imageup.ru
 * bc.vc
     * adcrun.ch
     * adli.pw
@@ -258,6 +260,7 @@ For more information, please see [Wiki].
     * fotoo.pl
     * fotoszok.pl
     * hornyimage.com
+    * imagestime.com
 * eropix
     * eropix.me
     * freakimage.com

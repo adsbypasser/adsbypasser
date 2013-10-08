@@ -1,3 +1,10 @@
+## TBA
+
+* added
+    * imgnext.com
+    * imagestime.com
+    * imageup.ru
+
 ## 3.25.0
 
 * added
