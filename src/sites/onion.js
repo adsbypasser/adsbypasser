@@ -5,6 +5,7 @@
 // @match          http://imgcloud.co/img-*.html
 // @match          http://imgcorn.com/img-*.html
 // @match          http://imgmoney.com/img-*.html
+// @match          http://imgnext.com/img-*.html
 // @match          http://imgonion.com/img-*.html
 // @match          http://imgrill.com/img-*.html
 // @match          http://imgtube.net/img-*.html
@@ -14,7 +15,7 @@
 
 $.register({
   rule: {
-    host: /^(img(onion|rill|money|corn)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us$/,
+    host: /^(img(onion|rill|money|corn|next)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us$/,
   },
   run: function () {
     'use strict';
