@@ -2,11 +2,12 @@
 // @match          http://fotoo.pl/show.php?img=*.html
 // @match          http://www.fotoszok.pl/show.php/*.html
 // @match          http://www.hornyimage.com/show.php/*.html
+// @match          http://www.imagestime.com/show.php/*.html
 // ==/UserScript==
 
 $.register({
   rule: {
-    host: /^fotoo\.pl|www\.fotoszok\.pl|www\.hornyimage\.com$/,
+    host: /^fotoo\.pl|www\.(fotoszok\.pl|hornyimage|imagestime)\.com$/,
   },
   run: function () {
     'use strict';
