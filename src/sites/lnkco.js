@@ -1,12 +1,7 @@
-// ==UserScript==
-// @include        /http://lnk\.co/.+/
-// @match          http://rdlnk.co/*
-// @include        /https?://reducelnk\.com/[^.]+$/
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^(rd?)lnk\.co|reducelnk\.com$/,
+    path: /^\/[^.]+$/,
   },
   run: function () {
     'use strict';

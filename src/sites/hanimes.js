@@ -1,11 +1,7 @@
-// ==UserScript==
-// @match          http://www.adultmove.info/*/*/*.html
-// @match          http://www.h-animes.info/*/*/*.html
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /www\.(h-animes|adultmove)\.info/,
+    path: /^\/.+\/.+\/.+\.html$/,
   },
   run: function () {
     'use strict';

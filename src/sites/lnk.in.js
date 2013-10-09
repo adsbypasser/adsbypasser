@@ -1,10 +1,6 @@
-// ==UserScript==
-// @match          http://lnk.in/*
-// ==/UserScript==
-
 $.register({
   rule: {
-    host: /lnk\.in/,
+    host: /^lnk\.in$/,
   },
   run: function () {
     'use strict';

@@ -1,8 +1,3 @@
-// ==UserScript==
-// @match          http://coinurl.com/*
-// @match          http://cur.lv/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^coinurl\.com|cur\.lv$/,

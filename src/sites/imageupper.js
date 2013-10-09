@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://imageupper.com/i/?*
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /^imageupper\.com$/,
-  },
+  rule: 'http://imageupper.com/i/?*',
   run: function () {
     'use strict';
 

@@ -1,8 +1,3 @@
-// ==UserScript==
-// @match          http://ref.so/*
-// ==/UserScript==
-
-
 $.register({
   rule: {
     host: /^ref\.so$/,

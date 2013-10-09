@@ -1,10 +1,6 @@
-// ==UserScript==
-// @match          http://comyonet.com/*
-// ==/UserScript==
-
 $.register({
   rule: {
-    host: /comyonet\.com/,
+    host: /^comyonet\.com$/,
   },
   run: function () {
     'use strict';

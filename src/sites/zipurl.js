@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://ah-informatique.com/ZipUrl/*
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /^ah-informatique\.com$/,
-  },
+  rule: 'http://ah-informatique.com/ZipUrl/*',
   run: function () {
     'use strict';
 

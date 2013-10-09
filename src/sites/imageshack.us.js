@@ -1,8 +1,3 @@
-// ==UserScript==
-// @match          http://imageshack.us/photo/*/*/*/
-// @match          http://imageshack.us/f/*/*/
-// ==/UserScript==
-
 (function () {
   'use strict';
 

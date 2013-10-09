@@ -1,13 +1,8 @@
-// ==UserScript==
-// @match          http://eropix.me/view.php?filename=*
-// @match          http://freakimage.com/view.php?filename=*
-// @match          http://www.hostpic.org/view.php?filename=*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^eropix\.me|freakimage\.com|www\.hostpic\.org$/,
-    query: /filename=([^&]+)/,
+    path: /^\/view\.php$/,
+    query: /^\?filename=([^&]+)/,
   },
   run: function (m) {
     'use strict';

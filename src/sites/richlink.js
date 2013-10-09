@@ -1,12 +1,5 @@
-// ==UserScript==
-// @match          http://richlink.com/app/webscr?cmd=_click&key=*
-// ==/UserScript==
-
-
 $.register({
-  rule: {
-    host: /^richlink\.com$/,
-  },
+  rule: 'http://richlink.com/app/webscr?cmd=_click&key=*',
   run: function () {
     'use strict';
 

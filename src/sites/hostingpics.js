@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://www.hostingpics.net/viewer.php?id=*
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /^www\.hostingpics\.net$/,
-  },
+  rule: 'http://www.hostingpics.net/viewer.php?id=*',
   run: function () {
     'use strict';
 

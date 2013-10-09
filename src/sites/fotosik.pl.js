@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://www.fotosik.pl/pokaz_obrazek/pelny/*.html
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /fotosik\.pl$/,
-  },
+  rule: 'http://www.fotosik.pl/pokaz_obrazek/pelny/*.html',
   run: function () {
     'use strict';
 

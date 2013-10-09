@@ -1,22 +1,7 @@
-// ==UserScript==
-// @match          http://*.bat5.com/*
-// @match          http://*.celebclk.com/*
-// @match          http://*.clb1.com/*
-// @match          http://*.detonating.com/*
-// @match          http://*.eightteen.com/*
-// @match          http://*.looble.net/*
-// @match          http://*.peekatmygirlfriend.com/*
-// @match          http://*.pornyhost.com/*
-// @match          http://*.smilinglinks.com/*
-// @include        /http://.+\.urlcash\.(com|net|org)\/.*/
-// @match          http://*.urlgalleries.com/*
-// @match          http://*.xxxs.org/*
-// @match          http://celebclk.com/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /urlcash\.(com|net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks|peekatmygirlfriend|pornyhost|clb1|urlgalleries)\.com|looble\.net|xxxs\.org$/,
+    path: /^\/.+/,
   },
   run: function () {
     'use strict';

@@ -1,10 +1,7 @@
-// ==UserScript==
-// @include        /http://image2you\.ru/\d+/\d+/
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^image2you\.ru$/,
+    path: /^\/\d+\/\d+/,
   },
   run: function () {
     'use strict';

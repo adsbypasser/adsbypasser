@@ -1,7 +1,3 @@
-// ==UserScript==
-// @match          http:/gkurl.us/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^gkurl\.us$/,

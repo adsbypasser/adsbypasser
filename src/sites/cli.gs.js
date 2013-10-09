@@ -1,7 +1,3 @@
-// ==UserScript==
-// @match          http://cli.gs/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^cli\.gs$/,

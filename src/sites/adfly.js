@@ -1,15 +1,3 @@
-// ==UserScript==
-// @match          http://adf.ly/*
-// @match          http://chathu.apkmania.co/*
-// @match          http://go.phpnulledscripts.com/*
-// @match          http://j.gs/*
-// @match          http://q.gs/*
-// @match          http://u.bb/*
-// @exclude        http://adf.ly/*market.php?*
-// @exclude        http://adf.ly/?default_ad*
-// ==/UserScript==
-
-
 (function () {
   'use strict';
 

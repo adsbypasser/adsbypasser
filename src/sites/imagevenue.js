@@ -1,15 +1,11 @@
-// ==UserScript==
-// @match          http://*.imagevenue.com/img.php?*
-// @match          http://hotchyx.com/d/adult-image-hosting-view-08.php?id=*
-// @match          http://www.freeporndumpster.com/show.php?*
-// @match          http://www.hostingfailov.com/photo/*
-// ==/UserScript==
-
 // I don't think these sites are the same
 $.register({
-  rule: {
-    host: /(hostingfailov|freeporndumpster|imagevenue|hotchyx)\.com$/,
-  },
+  rule: [
+    'http://*.imagevenue.com/img.php?*',
+    'http://hotchyx.com/d/adult-image-hosting-view-08.php?id=*',
+    'http://www.freeporndumpster.com/show.php?*',
+    'http://www.hostingfailov.com/photo/*',
+  ],
   run: function () {
     'use strict';
 

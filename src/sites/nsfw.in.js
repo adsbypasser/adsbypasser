@@ -1,7 +1,3 @@
-// ==UserScript==
-// @match          http://nsfw.in/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^nsfw\.in$/,

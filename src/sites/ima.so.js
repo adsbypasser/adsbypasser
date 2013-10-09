@@ -1,7 +1,3 @@
-// ==UserScript==
-// @match          http://ima.so/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^ima\.so$/,

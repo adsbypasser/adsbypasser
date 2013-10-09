@@ -1,7 +1,3 @@
-// ==UserScript==
-// @match          http://imagik.fr/view*/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^imagik\.fr$/,

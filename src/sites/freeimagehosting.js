@@ -1,10 +1,7 @@
-// ==UserScript==
-// @include        /http://www\.freeimagehosting\.net/[\d\w]+$/
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^www\.freeimagehosting\.net$/,
+    path: /^\/[\d\w]+$/
   },
   run: function () {
     'use strict';

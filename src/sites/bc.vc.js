@@ -1,28 +1,10 @@
-// ==UserScript==
-// @include        /http://adcrun\.ch/.+/
-// @include        /http://adli\.pw/[^.]+$/
-// @include        /http://bih\.cc/.+/
-// @include        /http://fly2url\.com/.+/
-// @include        /http://link\.tl/.+/
-// @include        /http://raksoyun\.com/.+/
-// @include        /http://ssl\.gs/.+/
-// @include        /http://tr5\.in/.+/
-// @include        /http://ultry\.net/.+/
-// @include        /http://www\.budurl\.ru/.+/
-// @include        /http://wwy\.me/.+/
-// @include        /http://youlinking\.com/.+/
-// @include        /http://zpoz\.net/.+/
-// @match          http://bc.vc/*
-// ==/UserScript==
-
-
 (function () {
   'use strict';
 
   // bc.vc, shortcut, dirty hack
   $.register({
     rule: {
-      host: /bc\.vc/,
+      host: /^bc\.vc$/,
       query: /^.+(https?:\/\/.+)/,
     },
     run: function (m) {
@@ -69,6 +51,7 @@
   $.register({
     rule: {
       host: /^bc\.vc$/,
+      path: /^\/.+/,
     },
     run: function () {
       $.removeNodes('iframe');
@@ -79,21 +62,33 @@
     },
   });
 
+  function run () {
+    // prevent redirection by iframe
+    $.removeNodes('iframe');
+
+    var content = searchScript();
+    var matches = content.match(/eval(.*)/);
+    matches = matches[1];
+    content = eval(matches);
+
+    knockServer(content);
+  }
+
+  // adli.pw
   $.register({
     rule: {
-      host: /^adcrun\.ch|(youlinking|fly2url|raksoyun)\.com|(zpoz|ultry)\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru|adli\.pw$/,
+      host: /^adli\.pw$/,
+      path: /^\/[^.]+$/,
     },
-    run: function () {
-      // prevent redirection by iframe
-      $.removeNodes('iframe');
+    run: run,
+  });
 
-      var content = searchScript();
-      var matches = content.match(/eval(.*)/);
-      matches = matches[1];
-      content = eval(matches);
-
-      knockServer(content);
+  $.register({
+    rule: {
+      host: /^adcrun\.ch|(youlinking|fly2url|raksoyun)\.com|(zpoz|ultry)\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru$/,
+      path: /^\/.+/,
     },
+    run: run,
   });
 
 })();
