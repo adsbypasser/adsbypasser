@@ -17,4 +17,4 @@
 // @run-at         document-start
 // @resource       imageStyle https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/css/image.css
 // @resource       bgImage https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/img/imagedoc-darknoise.png
-// @match          http://legnaleurc.github.io/nopicads/blank.html
+// @include        /^https?://.+$/

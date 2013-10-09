@@ -334,9 +334,9 @@ var $;
     return _.P(pattern.run, matched);
   }
 
-  function disableWindowOpen () {
+  $.disableWindowOpen = function () {
     unsafeWindow.open = _.nop;
-  }
+  };
 
   function disableLeavePrompt () {
     if (unsafeWindow.onbeforeunload) {
@@ -366,13 +366,14 @@ var $;
   };
 
 
-  disableWindowOpen();
-
 })();
 
 
-// do this in anon function may not work in TamperMonkey
-document.addEventListener('DOMContentLoaded', $.main);
+if (window.parent === window.self) {
+  $.disableWindowOpen();
+  // do this in anon function may not work in TamperMonkey
+  document.addEventListener('DOMContentLoaded', $.main);
+}
 
 
 // ex: ts=2 sts=2 sw=2 et
