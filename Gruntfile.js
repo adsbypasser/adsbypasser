@@ -3,31 +3,19 @@ module.exports = function (grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    sites: {
-      split: {
+    strip: {
+      util: {
+        src: ['src/util/core.js', 'src/util/dom.js'],
+        dest: 'dest/util',
+      },
+      sites: {
         src: ['src/sites/*.js'],
         dest: 'dest/sites',
       },
-      strip: {
-        src: ['src/util/*.js'],
-        dest: 'dest/util',
-      },
     },
     concat: {
-      metadata: {
-        options: {
-          banner: '// ==UserScript==\n' + grunt.file.read('src/util/metadata.js'),
-          footer: '\n// ==/UserScript==\n',
-        },
-        src: ['dest/sites/*.metadata.js'],
-        dest: 'dest/metadata.js',
-      },
-      script: {
-        src: ['dest/util/core.js', 'dest/util/dom.js', 'dest/sites/*.script.js'],
-        dest: 'dest/script.js',
-      },
       nopicads: {
-        src: ['dest/metadata.js', 'dest/script.js'],
+        src: ['src/util/metadata.js', 'dest/util/core.js', 'dest/util/dom.js', 'dest/sites/*.js'],
         dest: 'dest/nopicads.user.js',
       },
     },
@@ -39,60 +27,29 @@ module.exports = function (grunt) {
     },
   });
 
-  grunt.registerMultiTask('sites', function () {
-    var handler = {
+  grunt.registerMultiTask('strip', function () {
+    this.files.forEach(function (f) {
+      grunt.file.mkdir(f.dest);
 
-      split: function () {
-        this.files.forEach(function (f) {
-          grunt.file.mkdir(f.dest);
+      f.src.forEach(function (filepath) {
+        var script_file = f.dest + '/' + baseName(filepath) + '.js';
 
-          f.src.forEach(function (filepath) {
-            var basename = baseName(filepath);
-            var metadata_file = f.dest + '/' + basename + '.metadata.js';
-            var script_file = f.dest + '/' + basename + '.script.js';
+        var source = grunt.file.read(filepath);
+        var script = removeModelines(source);
+        script = removeSingleLineComments(script);
+        script = removeEmptyLines(script);
+        script = script.trim() + '\n';
 
-            var source = grunt.file.read(filepath);
-            var m = source.match(/\/\/ ==UserScript==([\s\S]*)\/\/ ==\/UserScript==([\s\S]*)/m);
-            var metadata = m[1].trim();
-            var script = removeModelines(m[2]);
-            script = removeSingleLineComments(script);
-            script = removeEmptyLines(script);
-            script = script.trim();
-
-            grunt.file.write(metadata_file, metadata);
-            grunt.file.write(script_file, script);
-          });
-        });
-      },
-
-      strip: function () {
-        this.files.forEach(function (f) {
-          grunt.file.mkdir(f.dest);
-
-          f.src.forEach(function (filepath) {
-            var script_file = f.dest + '/' + baseName(filepath) + '.js';
-
-            var source = grunt.file.read(filepath);
-            var script = removeModelines(source);
-            script = removeSingleLineComments(script);
-            script = removeEmptyLines(script);
-            script = script.trim() + '\n';
-
-            grunt.file.write(script_file, script);
-          });
-        });
-      },
-
-    };
-
-    handler[this.target].call(this);
+        grunt.file.write(script_file, script);
+      });
+    });
   });
 
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-mocha-test');
 
-  grunt.registerTask('default', ['clean', 'sites', 'concat:metadata', 'concat:script', 'concat:nopicads']);
+  grunt.registerTask('default', ['clean', 'strip', 'concat']);
   grunt.registerTask('test', 'mochaTest');
 
   function removeModelines (s) {
