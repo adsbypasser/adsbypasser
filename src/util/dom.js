@@ -316,21 +316,150 @@ var $;
     patterns.push(pattern);
   };
 
-  function find (uri) {
+  function dispatchByObject (uri, rule) {
     var matched = {};
-    var pattern = _.C(patterns).find(function (pattern) {
-      var tmp = _.C(pattern.rule).all(function (pattern, part) {
-        matched[part] = uri[part].match(pattern);
-        return !!matched[part];
-      });
-      if (!tmp) {
-        matched = {};
-      }
-      return tmp;
+
+    var passed = _.C(rule).all(function (pattern, part) {
+      matched[part] = uri[part].match(pattern);
+      return !!matched[part];
     });
+
+    return passed ? matched : null;
+  }
+
+  function dispatchByRegExp (uri_1, rule) {
+    var matched = uri_1.match(rule);
+    return matched;
+  }
+
+  function dispatchByArray (uri_1, uri_3, uri_6, rules) {
+    var matched = null;
+    _.C(rules).find(function (rule) {
+      if (rule instanceof RegExp) {
+        // regexp
+        matched = dispatchByRegExp(uri_1, rule);
+      } else if (rule instanceof Array) {
+        // array
+        matched = dispatchByArray(uri_1, uri_3, uri_6, rule);
+      } else if (typeof rule === 'function') {
+        // function
+        matched = dispatchByFunction(uri_1, uri_3, uri_6, rule);
+      } else if (typeof rule === 'string' || rule instanceof String) {
+        // string
+        matched = dispatchByString(uri_3, rule);
+      } else {
+        // object
+        matched = dispatchByObject(uri_6, rule);
+      }
+      return !!matched;
+    });
+    return matched;
+  }
+
+  function dispatchByString (uri_3, rule) {
+    // <scheme> := '*' | 'http' | 'https' | 'file' | 'ftp' | 'chrome-extension'
+    var scheme = /\*|https?|file|ftp|chrome-extension/;
+    // <host> := '*' | '*.' <any char except '/' and '*'>+
+    var host = /\*|(\*\.)?([^\/*]+)/;
+    // <path> := '/' <any chars>
+    var path = /\/.*/;
+    // <url-pattern> := <scheme>://<host><path>
+    var up = new RegExp(_.T('^({scheme})://({host})?({path})$')({
+      scheme: scheme.source,
+      host: host.source,
+      path: path.source,
+    }));
+    var matched = rule.match(up);
+
+    if (!matched) {
+      return null;
+    }
+
+    scheme = matched[1];
+    host = matched[2];
+    var wc = matched[3];
+    var sd = matched[4];
+    path = matched[5];
+
+    if (scheme === '*' && !/https?/.test(uri_3.scheme)) {
+      return null;
+    } else if (scheme !== uri_3.scheme) {
+      return null;
+    }
+
+    if (scheme !== 'file' && host !== '*') {
+      if (wc) {
+        up = uri_3.host.indexOf(sd);
+        if (up < 0 || up + sd.length === uri_3.host.length) {
+          return null;
+        }
+      } else if (host !== uri_3.host) {
+        return null;
+      }
+    }
+
+    path = new RegExp(_.T('^{0}$')(path.replace(/[*.\[\]?+#]/g, function (c) {
+      if (c === '*') {
+        return '.*';
+      }
+      return '\\' + c;
+    })));
+    if (!uri_3.path.test(path)) {
+      return null;
+    }
+
+    return uri_3;
+  }
+
+  function dispatchByFunction (uri_1, uri_3, uri_6, rule) {
+    return rule(uri_1, uri_3, uri_6);
+  }
+
+  function dispatch () {
+    var uri_1 = window.location.toString();
+    // <scheme>://<host><path>
+    var uri_3 = {
+      scheme: window.location.protocol.slice(0, -1),
+      host: window.location.host,
+      path: window.location.pathname + window.location.search + window.location.hash,
+    };
+    // <scheme>//<host>:<port><path><query><hash>
+    var uri_6 = {
+      scheme: window.location.protocol,
+      host: window.location.hostname,
+      port: window.location.port,
+      path: window.location.pathname,
+      query: window.location.search,
+      hash: window.location.hash,
+    };
+
+    var matched = null;
+    var pattern = _.C(patterns).find(function (pattern) {
+      var rule = pattern.rule;
+      if (rule instanceof RegExp) {
+        // regex
+        matched = dispatchByRegExp(uri_1, rule);
+      } else if (rule instanceof Array) {
+        // array
+        matched = dispatchByArray(uri_1, uri_3, uri_6, rule);
+      } else if (typeof rule === 'function') {
+        // function
+        matched = dispatchByFunction(uri_1, uri_3, uri_6, rule);
+      } else if (typeof rule === 'string' || rule instanceof String) {
+        // string
+        matched = dispatchByString(uri_3, rule);
+      } else {
+        // object
+        matched = dispatchByObject(uri_6, rule);
+      }
+
+      return !!matched;
+    });
+
     if (!pattern) {
       return null;
     }
+
     return _.P(pattern.run, matched);
   }
 
@@ -350,15 +479,7 @@ var $;
   $.main = function () {
     disableLeavePrompt();
 
-    // <scheme>//<host>:<port><path><query><hash>
-    var handler = find({
-      scheme: window.location.protocol,
-      host: window.location.hostname,
-      port: window.location.port,
-      path: window.location.pathname,
-      query: window.location.search,
-      hash: window.location.hash,
-    });
+    var handler = dispatch();
 
     if (handler) {
       handler();
