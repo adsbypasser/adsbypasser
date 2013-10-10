@@ -1,10 +1,7 @@
-// ==UserScript==
-// @include        /http://biaiai\.com/.+/
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^biaiai\.com$/,
+    path: /^\/.+/,
   },
   ready: function () {
     'use strict';

@@ -1,10 +1,7 @@
-// ==UserScript==
-// @include        /http://short\.pk/.+/
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^short\.pk$/,
+    path: /^\/.+/,
   },
   ready: function () {
     'use strict';

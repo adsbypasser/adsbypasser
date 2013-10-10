@@ -1,10 +1,6 @@
-// ==UserScript==
-// @match          http://bridgeurl.com/*
-// ==/UserScript==
-
 $.register({
   rule: {
-    host: /bridgeurl\.com/,
+    host: /^bridgeurl\.com$/,
   },
   ready: function () {
     'use strict';

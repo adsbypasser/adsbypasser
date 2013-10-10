@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://cubeupload.com/im/*
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /cubeupload\.com/,
-  },
+  rule: 'http://cubeupload.com/im/*',
   ready: function () {
     'use strict';
 

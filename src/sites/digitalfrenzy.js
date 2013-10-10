@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://www.digitalfrenzy.net/*.html
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /digitalfrenzy\.net/,
-  },
+  rule: 'http://www.digitalfrenzy.net/*.html',
   ready: function () {
     'use strict';
 

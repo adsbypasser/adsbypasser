@@ -1,17 +1,10 @@
-// ==UserScript==
-// @match          http://www.freebunker.com/show/*
-// @match          http://www.imagesnake.com/index.php?*
-// @match          http://www.imagesnake.com/show/*
-// @include        /http://www\.imagefruit\.com/(img|show)/.+/
-// ==/UserScript==
-
 (function () {
   'use strict';
 
   // first stage
   $.register({
     rule: {
-      host: /\.imagesnake\.com$/,
+      host: /^www\.imagesnake\.com$/,
       path: /^\/index\.php$/,
       query: /^\?/,
     },
@@ -28,14 +21,15 @@
   }
   $.register({
     rule: {
-      host: /\.(imagesnake|freebunker)\.com$/,
-      path: /^\/show/,
+      host: /^www\.(imagesnake|freebunker)\.com$/,
+      path: /^\/show\//,
     },
     ready: run,
   });
   $.register({
     rule: {
-      host: /\.imagefruit\.com$/,
+      host: /^www\.imagefruit\.com$/,
+      path: /^\/(img|show)\/.+/,
     },
     ready: run,
   });

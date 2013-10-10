@@ -9,9 +9,15 @@
 // ==/UserScript==
 
 $.register({
-  rule: {
-    host: /^(picfox|amateurfreak)\.org|www\.euro-pic\.eu|xxx\.freeimage\.us|www\.gratisimage\.dk|images\.maxigame\.by$/,
-  },
+  rule: [
+    'http://amateurfreak.org/share-*.html',
+    'http://amateurfreak.org/share.php?id=*',
+    'http://images.maxigame.by/share-*.html',
+    'http://picfox.org/*',
+    'http://www.euro-pic.eu/share.php?id=*',
+    'http://www.gratisimage.dk/share-*.html',
+    'http://xxx.freeimage.us/share.php?id=*',
+  ],
   ready: function () {
     'use strict';
 

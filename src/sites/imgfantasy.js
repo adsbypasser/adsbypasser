@@ -1,8 +1,3 @@
-// ==UserScript==
-// @include        /http://imgfantasy\.com/\?[pv]=.+/
-// @include        /http://imagedomino\.com/\?[pv]=.+/
-// ==/UserScript==
-
 (function () {
   'use strict';
 

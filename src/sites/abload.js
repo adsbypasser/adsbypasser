@@ -1,15 +1,10 @@
-// ==UserScript==
-// @match          http://*.abload.de/image.php?img=*
-// @match          http://abload.de/image.php?img=*
-// @match          http://fastpic.ru/view/*.html
-// @match          http://www.imagebanana.com/view/*
-// @match          http://www.imageup.ru/*/*/*.html
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /^(.+\.)?abload\.de|fastpic\.ru|www\.imagebanana\.com|www\.imageup\.ru$/,
-  },
+  rule: [
+    'http://*.abload.de/image.php?img=*',
+    'http://fastpic.ru/view/*.html',
+    'http://www.imagebanana.com/view/*',
+    'http://www.imageup.ru/*/*/*.html',
+  ],
   ready: function () {
     'use strict';
 

@@ -1,7 +1,3 @@
-// ==UserScript==
-// @match          http://imagezilla.net/show/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^imagezilla\.net$/,

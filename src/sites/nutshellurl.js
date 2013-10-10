@@ -1,7 +1,3 @@
-// ==UserScript==
-// @match          http://nutshellurl.com/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^nutshellurl\.com$/,

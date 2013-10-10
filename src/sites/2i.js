@@ -1,11 +1,6 @@
-// ==UserScript==
-// @match          http://www.2i.sk/*
-// @match          http://www.2imgs.com/*
-// ==/UserScript==
-
 $.register({
   rule: {
-    host: /2i\.sk|2imgs\.com/,
+    host: /^www\.(2i\.sk|2imgs\.com)$/,
   },
   ready: function () {
     'use strict';

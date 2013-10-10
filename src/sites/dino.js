@@ -1,11 +1,8 @@
-// ==UserScript==
-// @match          http://imgdino.com/viewer.php?file=*
-// @match          http://imgtiger.com/viewer.php?file=*
-// ==/UserScript==
-
 $.register({
   rule: {
-    host: /img(dino|tiger)\.com/,
+    host: /^img(dino|tiger)\.com$/,
+    path: /^\/viewer\.php$/,
+    query: /^\?file=/,
   },
   ready: function () {
     'use strict';

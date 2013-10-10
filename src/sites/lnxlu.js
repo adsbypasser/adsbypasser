@@ -1,9 +1,3 @@
-// ==UserScript==
-// @match          http://lnx.lu/*
-// @match          http://url.fm/*
-// @match          http://z.gs/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^lnx\.lu|url\.fm|z\.gs$/,

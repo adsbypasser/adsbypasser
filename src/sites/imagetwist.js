@@ -1,21 +1,27 @@
-// ==UserScript==
-// @match          http://imagecherry.com/*
-// @match          http://imagenpic.com/*/*.html
-// @match          http://imagetwist.com/*
-// @match          http://imgpo.st/*
-// ==/UserScript==
+(function () {
+  'use strict';
 
-$.register({
-  rule: {
-    host: /^image(twist|cherry|npic)\.com|imgpo\.st$/,
-  },
-  ready: function () {
-    'use strict';
-
+  function run () {
     var i = $('img.pic');
-    $.openImage(i.src);
-  },
-});
+    $.replace(i.src);
+  }
+
+  $.register({
+    rule: {
+      host: /^imagenpic\.com$/,
+      path: /^\/.*\/.+\.html$/,
+    },
+    ready: run,
+  });
+
+  $.register({
+    rule: {
+      host: /^image(twist|cherry)\.com|imgpo\.st$/,
+    },
+    ready: run,
+  });
+
+})();
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;

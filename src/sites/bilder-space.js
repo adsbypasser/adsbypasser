@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://www.bilder-space.de/*.htm
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /bilder-space\.de/,
-  },
+  rule: 'http://www.bilder-space.de/*.htm',
   ready: function () {
     'use strict';
 

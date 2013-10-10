@@ -1,12 +1,5 @@
-// ==UserScript==
-// @match          http://www.filedump.net/index.php?pic=*
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /filedump\.net$/,
-    query: /pic=([^&]+)/,
-  },
+  rule: 'http://www.filedump.net/index.php?pic=*',
   start: function (m) {
     'use strict';
 

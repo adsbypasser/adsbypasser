@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://ifotos.pl/zobacz/*
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /^ifotos\.pl$/,
-  },
+  rule: 'http://ifotos.pl/zobacz/*',
   ready: function () {
     'use strict';
 

@@ -1,10 +1,7 @@
-// ==UserScript==
-// @include        /http://img\.acianetmedia\.com/(image/)?[^.]+/
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^img\.acianetmedia\.com$/,
+    path: /^\/(image\/)?[^.]+$/,
   },
   ready: function () {
     'use strict';

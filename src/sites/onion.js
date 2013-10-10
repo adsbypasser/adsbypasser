@@ -1,21 +1,7 @@
-// ==UserScript==
-// @match          http://imagecorn.com/img-*.html
-// @match          http://imagepicsa.com/img-*.html
-// @match          http://imgcandy.net/img-*.html
-// @match          http://imgcloud.co/img-*.html
-// @match          http://imgcorn.com/img-*.html
-// @match          http://imgmoney.com/img-*.html
-// @match          http://imgnext.com/img-*.html
-// @match          http://imgonion.com/img-*.html
-// @match          http://imgrill.com/img-*.html
-// @match          http://imgtube.net/img-*.html
-// @match          http://pixup.us/img-*.html
-// @match          http://www.imagefolks.com/img-*.html
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^(img(onion|rill|money|corn|next)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us$/,
+    path: /^\/img-.*\.html$/,
   },
   ready: function () {
     'use strict';

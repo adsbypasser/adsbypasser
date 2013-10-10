@@ -1,21 +1,25 @@
-// ==UserScript==
-// @match          http://fotoo.pl/show.php?img=*.html
-// @match          http://www.fotoszok.pl/show.php/*.html
-// @match          http://www.hornyimage.com/show.php/*.html
-// @match          http://www.imagestime.com/show.php/*.html
-// ==/UserScript==
+(function () {
+  'use strict';
 
-$.register({
-  rule: {
-    host: /^fotoo\.pl|www\.(fotoszok\.pl|hornyimage|imagestime)\.com$/,
-  },
-  ready: function () {
-    'use strict';
-
+  function run () {
     var i = $('#img_obj');
     $.openImage(i.src);
-  },
-});
+  }
+
+  $.register({
+    rule: 'http://fotoo.pl/show.php?img=*.html',
+    ready: run,
+  });
+
+  $.register({
+    rule: {
+      host: /^www\.(fotoszok\.pl|hornyimage|imagestime)\.com$/,
+      path: /^\/show\.php\/.*\.html$/,
+    },
+    ready: run,
+  });
+
+})();
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;

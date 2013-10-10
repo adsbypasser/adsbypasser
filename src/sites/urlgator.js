@@ -1,10 +1,7 @@
-// ==UserScript==
-// @include        /http://urlgator\.com/.+/
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^urlgator\.com$/,
+    path: /^\/.+/,
   },
   ready: function () {
     'use strict';

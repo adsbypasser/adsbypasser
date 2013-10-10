@@ -1,11 +1,9 @@
 // ==UserScript==
-// @match          http://blackcatpix.com/v.php?*
+// @match
 // ==/UserScript==
 
 $.register({
-  rule: {
-    host: /blackcatpix\.com/,
-  },
+  rule: 'http://blackcatpix.com/v.php?*',
   ready: function () {
     'use strict';
 

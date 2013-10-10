@@ -1,14 +1,10 @@
-// ==UserScript==
-// @match          http://image18.org/show/*
-// @match          http://screenlist.ru/details.php?image_id=*
-// @match          http://www.imagenetz.de/*/*.html
-// ==/UserScript==
-
 // I don't think these sites are same
 $.register({
-  rule: {
-    host: /^image18\.org|screenlist\.ru|www\.imagenetz\.de$/,
-  },
+  rule: [
+    'http://image18.org/show/*',
+    'http://screenlist.ru/details.php?image_id=*',
+    'http://www.imagenetz.de/*/*.html',
+  ],
   ready: function () {
     'use strict';
 

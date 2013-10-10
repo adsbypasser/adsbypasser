@@ -1,88 +1,9 @@
-// ==UserScript==
-// @match          http://*.4owl.info/*
-// @match          http://*.alabout.com/*
-// @match          http://*.adv.li/*
-// @match          http://*.alafs.com/*
-// @match          http://*.directupload.net/file/*.htm
-// @match          http://*.imagebam.com/image/*
-// @match          http://*.yfrog.com/*
-// @match          http://1be.biz/s.php?*
-// @match          http://3ra.be/*
-// @match          http://4fun.tw/*
-// @match          http://anonpic.com/?v=*
-// @match          http://adfoc.us/*
-// @match          http://adfoc.us/serve/?id=*
-// @match          http://adlock.in/*
-// @match          http://adv.li/*
-// @match          http://bayimg.com/*
-// @match          http://bildr.no/view/*
-// @match          http://bilurl.com/*
-// @match          http://cf.ly/*
-// @match          http://cl.my/*
-// @match          http://goimagehost.com/xxx/*
-// @match          http://ibunker.us/*
-// @match          http://ichan.org/*
-// @match          http://iiiii.in/*
-// @match          http://imagearn.com/image.php?id=*
-// @match          http://imagehosting.gr/*.html
-// @match          http://imagescream.com/?v=*
-// @match          http://imagescream.com/img/soft/*
-// @match          http://imgah.com/*
-// @match          http://imgbar.net/*
-// @match          http://imgpony.com/viewer3.php?img=*
-// @match          http://ity.im/*
-// @match          http://javelite.tk/viewer.php?id=*
-// @match          http://madlink.sk/*
-// @match          http://p.pw/*
-// @match          http://pics-money.ru/*
-// @match          http://picshare.geenza.com/pics/*
-// @match          http://pixhub.eu/*
-// @match          http://qrrro.com/images/*.html
-// @include        /http://riurl\.com/.+/
-// @match          http://robo.us/*
-// @match          http://seomafia.net/*
-// @match          http://stash-coins.com/*
-// @match          http://tinyarrows.com/preview.php?page=*
-// @match          http://tinypic.com/view.php?pic=*
-// @match          http://ulmt.in/*
-// @match          http://urlz.so/l/*
-// @match          http://www.adultf.ly/*
-// @match          http://www.bild.me/bild.php?file=*
-// @match          http://www.bilder-hochladen.net/files/*.html
-// @match          http://www.bilder-upload.eu/show.php?file=*
-// @match          http://www.cyberpics.net/pm/*.html
-// @match          http://www.dumppix.com/viewer.php?*
-// @match          http://www.fotolink.su/v.php?id=*
-// @match          http://www.hotimg.com/image/*
-// @match          http://www.imgbabes.com/*
-// @include        /http://(www\.)?imgnip\.com/viewer.*\.php\?file=.*/
-// @match          http://www.lienscash.com/l/*
-// @match          http://www.pic-upload.de/view-*.html
-// @match          http://www.pics-money.ru/*
-// @match          http://www.pixhost.org/show/*
-// @match          http://www.sexyimg.com/*
-// @match          http://www.subirimagenes.com/*.html
-// @match          http://www.turboimagehost.com/*
-// @match          http://www.viidii.com/*
-// @include        /http://x\.pixfarm\.net/sexy/\d+/\d+/.+\.html/
-// @match          http://xip.ir/*
-// @match          http://zo.mu/redirector/process?link=*
-// @match          http://zpag.es/*
-// @exclude        http://javelite.tk/
-// @exclude        http://madlink.sk/
-// @exclude        http://madlink.sk/*.html
-// @exclude        http://pics-money.ru/allpicfree/*
-// @exclude        http://www.pics-money.ru/allimage/*
-// ==/UserScript==
-
 (function () {
   'use strict';
 
   // picshare
   $.register({
-    rule: {
-      host: /^picshare\.geenza\.com$/,
-    },
+    rule: 'http://picshare.geenza.com/pics/*',
     ready: function () {
       var i = $('#picShare_image_container');
       $.openImage(i.src);
@@ -106,7 +27,7 @@
   // turboimagehost
   $.register({
     rule: {
-      host: /turboimagehost\.com$/,
+      host: /^www\.turboimagehost\.com$/,
     },
     ready: function () {
       var i = $('#imageid');
@@ -117,7 +38,7 @@
   // zpag
   $.register({
     rule: {
-      host: /zpag\.es$/,
+      host: /^zpag\.es$/,
     },
     ready: function () {
       var matches = document.head.innerHTML;
@@ -157,7 +78,7 @@
   // viidii
   $.register({
     rule: {
-      host: /www\.viidii\.com$/,
+      host: /^www\.viidii\.com$/,
     },
     ready: function () {
       var o = $('#directlink');
@@ -167,9 +88,7 @@
 
   // adfoc
   $.register({
-    rule: {
-      host: /adfoc\.us/,
-    },
+    rule: 'http://adfoc.us/serve/?id=*',
     ready: function () {
       // FIXME mutation events has been deprecated, consider rewrite with
       // mutation observer
@@ -185,9 +104,11 @@
 
   // madlink
   $.register({
-    rule: {
-      host: /madlink\.sk/,
-      path: /\/(.+)/,
+    rule: function (uri_1, uri_3, uri_6) {
+      if (!/^madlink\.sk$/.test(uri_6.host) || /\.html$/.test(uri_6.path)) {
+        return null;
+      }
+      return uri_6.path.match(/^\/(.+)/);
     },
     start: function (m) {
       $.removeNodes('iframe');
@@ -202,7 +123,7 @@
   // stash-coins.com
   $.register({
     rule: {
-      host: /stash-coins\.com/,
+      host: /^stash-coins\.com$/,
     },
     start: function () {
       var url = window.location.toString();
@@ -214,9 +135,10 @@
 
   // chevereto
   $.register({
-    rule: {
-      host: /www\.4owl\.info|javelite\.tk/,
-    },
+    rule: [
+      'http://www.4owl.info/*',
+      'http://javelite.tk/viewer.php?id=*',
+    ],
     ready: function () {
       var i = $('table img');
       $.openImage(i.src);
@@ -225,9 +147,7 @@
 
   // directupload.net
   $.register({
-    rule: {
-      host: /.+\.directupload\.net/,
-    },
+    rule: 'http://*.directupload.net/file/*.htm',
     ready: function () {
       var i = $('#showimage');
       $.openImage(i.src);
@@ -237,7 +157,7 @@
   // pixhub.eu
   $.register({
     rule: {
-      host: /pixhub\.eu/,
+      host: /^pixhub\.eu$/,
     },
     ready: function () {
       $.removeNodes('.adultpage, #FFN_Banner_Holder');
@@ -248,7 +168,7 @@
   // imgah.com
   $.register({
     rule: {
-      host: /imgah\.com/,
+      host: /^imgah\.com$/,
     },
     ready: function () {
       // first stage
@@ -266,9 +186,7 @@
 
   // imagebam.com
   $.register({
-    rule: {
-      host: /www\.imagebam\.com/,
-    },
+    rule: 'http://www.imagebam.com/image/*',
     ready: function () {
       var o = $('#imageContainer img[id]');
       // somehow the server send image as an attachment
@@ -281,8 +199,9 @@
   // second stage
   $.register({
     rule: {
-      host: /imgbar\.net/,
-      path: /\/img_show\.php/,
+      host: /^imgbar\.net$/,
+      path: /^\/img_show\.php$/,
+      query: /^\?view_id=/,
     },
     ready: function () {
       var i = $('center img');
@@ -294,7 +213,7 @@
   // first stage
   $.register({
     rule: {
-      host: /imgbar\.net/,
+      host: /^imgbar\.net$/,
     },
     ready: function () {
       var i = $('div.panel.top form input[name=sid]');
@@ -313,8 +232,6 @@
       $.openLink(f.action);
     },
   });
-
-  // www.sexyimg.com
   $.register({
     rule: {
       host: /www\.sexyimg\.com/,
@@ -328,9 +245,11 @@
 
   // pics-money.ru
   $.register({
-    rule: {
-      host: /pics-money\.ru$/,
-      path: /^\/v\.php/,
+    rule: function (uri_1, uri_3, uri_6) {
+      if (!/^pics-money\.ru$/.test(uri_6.host) || /^\/allpicfree\//.test(uri_6.path)) {
+        return null;
+      }
+      return /^\/v\.php$/.test(uri_6.path);
     },
     ready: function () {
       $.removeNodes('iframe');
@@ -342,8 +261,11 @@
 
   // www.pics-money.ru
   $.register({
-    rule: {
-      host: /\.pics-money\.ru$/,
+    rule: function (uri_1, uri_3, uri_6) {
+      if (!/^www\.pics-money\.ru$/.test(uri_6.host) || /^\/allimage\//.test(uri_6.path)) {
+        return null;
+      }
+      return true;
     },
     ready: function () {
       $.removeNodes('iframe');
@@ -379,7 +301,7 @@
   // imagescream.com
   $.register({
     rule: {
-      host: /imagescream\.com/,
+      host: /^imagescream\.com$/,
       path: /^\/img\/soft\//,
     },
     ready: function () {
@@ -389,7 +311,7 @@
   });
   $.register({
     rule: {
-      host: /imagescream\.com/,
+      host: /^imagescream\.com$/,
       query: /^\?v=/,
     },
     ready: function () {
@@ -401,7 +323,9 @@
   // imgnip.com
   $.register({
     rule: {
-      host: /imgnip\.com$/,
+      host: /^(www\.)?imgnip\.com$/,
+      path: /^\/viewer.*\.php$/,
+      query: /^\?file=.*/,
     },
     ready: function () {
       var i = $('#main_image');
@@ -412,8 +336,9 @@
   // 1be.biz
   $.register({
     rule: {
-      host: /1be\.biz/,
-      query: /\?(.+)/,
+      host: /^1be\.biz$/,
+      path: /^\/s\.php$/,
+      query: /^\?(.+)/,
     },
     start: function (m) {
       $.openLink(m.query[1]);
@@ -423,7 +348,7 @@
   // qrrro.com
   $.register({
     rule: {
-      host: /qrrro\.com/,
+      host: /^qrrro\.com$/,
       path: /^(\/images\/.+)\.html$/,
     },
     start: function (m) {
@@ -433,9 +358,7 @@
 
   // pic-upload.de
   $.register({
-    rule: {
-      host: /www\.pic-upload\.de/,
-    },
+    rule: 'http://www.pic-upload.de/view-*.html',
     ready: function () {
       var i = $('#content + img');
       $.openImage(i.src);
@@ -446,9 +369,10 @@
   // imagehosting.gr
   // this two are not homogeneous but do have same action
   $.register({
-    rule: {
-      host: /www\.bilder-hochladen\.net|imagehosting\.gr/,
-    },
+    rule: [
+      'http://imagehosting.gr/*.html',
+      'http://www.bilder-hochladen.net/files/*.html',
+    ],
     ready: function () {
       var i = $('td > img');
       $.openImage(i.src);
@@ -468,9 +392,7 @@
 
   // www.bild.me
   $.register({
-    rule: {
-      host: /^www\.bild\.me$/,
-    },
+    rule: 'http://www.bild.me/bild.php?file=*',
     ready: function () {
       var i = $('#Bild');
       $.openLink(i.src);
@@ -479,9 +401,7 @@
 
   // www.bilder-upload.eu
   $.register({
-    rule: {
-      host: /^www\.bilder-upload\.eu$/,
-    },
+    rule: 'http://www.bilder-upload.eu/show.php?file=*',
     ready: function () {
       var i = $('input[type=image]');
       $.openImage(i.src);
@@ -490,9 +410,7 @@
 
   // bildr.no
   $.register({
-    rule: {
-      host: /^bildr\.no$/,
-    },
+    rule: 'http://bildr.no/view/*',
     ready: function () {
       var i = $('img.bilde');
       $.openLink(i.src);
@@ -501,9 +419,7 @@
 
   // imagearn.com
   $.register({
-    rule: {
-      host: /^imagearn\.com$/,
-    },
+    rule: 'http://imagearn.com/image.php?id=*',
     ready: function () {
       var i = $('#img');
       $.openImage(i.src);
@@ -512,9 +428,7 @@
 
   // tinypic.com
   $.register({
-    rule: {
-      host: /^tinypic\.com$/,
-    },
+    rule: 'http://tinypic.com/view.php?pic=*',
     ready: function () {
       var i = $('#imgElement');
       $.openImage(i.src);
@@ -642,7 +556,7 @@
   // imgbabes.com
   $.register({
     rule: {
-      host: /\.imgbabes\.com$/,
+      host: /^www\.imgbabes\.com$/,
     },
     ready: function () {
       var i = $('#this_image');
@@ -713,9 +627,7 @@
 
   // dumppix
   $.register({
-    rule: {
-      host: /^www\.dumppix\.com$/,
-    },
+    rule: 'http://www.dumppix.com/viewer.php?*',
     ready: function () {
       var i = $.$('#boring');
       if (i) {
@@ -729,9 +641,7 @@
 
   // subirimagenes
   $.register({
-    rule: {
-      host: /^www\.subirimagenes\.com$/,
-    },
+    rule: 'http://www.subirimagenes.com/*.html',
     ready: function () {
       var i = $('#ImagenVisualizada');
       $.openImage(i.src);
@@ -763,9 +673,7 @@
 
   // lienscash
   $.register({
-    rule: {
-      host: /^www\.lienscash\.com$/,
-    },
+    rule: 'http://www.lienscash.com/l/*',
     ready: function () {
       $.removeNodes('iframe');
 
@@ -776,9 +684,7 @@
 
   // urlz.so
   $.register({
-    rule: {
-      host: /^urlz\.so$/,
-    },
+    rule: 'http://urlz.so/l/*',
     ready: function () {
       var i = $.$('td > a');
       if (i) {
@@ -836,8 +742,9 @@
   // imgpony.com
   $.register({
     rule: {
-      host: /imgpony\.com/,
-      query: /\?img=(.+)/,
+      host: /^imgpony\.com$/,
+      path: /^\/viewer3\.php$/,
+      query: /^\?img=(.+)/,
     },
     start: function (m) {
       $.openImage('/images/' + m.query[1]);
@@ -846,9 +753,7 @@
 
   // www.fotolink.su
   $.register({
-    rule: {
-      host: /www\.fotolink\.su/,
-    },
+    rule: 'http://www.fotolink.su/v.php?id=*',
     ready: function () {
       var i = $('#content img');
       $.openImage(i.src);
@@ -858,7 +763,8 @@
   // x.pixfarm.net
   $.register({
     rule: {
-      host: /x\.pixfarm\.net/,
+      host: /^x\.pixfarm\.net$/,
+      path: /^\/sexy\/\d+\/\d+\/.+\.html$/,
     },
     ready: function () {
       var i = $('img');
@@ -870,6 +776,7 @@
   $.register({
     rule: {
       host: /^riurl\.com$/,
+      path: /^\/.+/,
     },
     ready: function () {
       var s = $.$('body script');
@@ -891,7 +798,8 @@
   $.register({
     rule: {
       host: /^tinyarrows\.com$/,
-      query: /page=([^&]+)/,
+      path: /^\/preview\.php$/,
+      query: /^\?page=([^&]+)/,
     },
     start: function (m) {
       $.openLink(decodeURIComponent(m.query[1]));
@@ -959,9 +867,7 @@
 
   // zo.mu
   $.register({
-    rule: {
-      host: /^zo\.mu$/,
-    },
+    rule: 'http://zo.mu/redirector/process?link=*',
     ready: function () {
       $.removeNodes('iframe');
       window.location.reload();
@@ -970,9 +876,7 @@
 
   // anonpic.com
   $.register({
-    rule: {
-      host: /^anonpic\.com$/,
-    },
+    rule: 'http://anonpic.com/?v=*',
     ready: function () {
       var i = $('#imagen img');
       $.openImage(i.src);
@@ -981,9 +885,7 @@
 
   // cyberpics.net
   $.register({
-    rule: {
-      host: /^www\.cyberpics\.net$/,
-    },
+    rule: 'http://www.cyberpics.net/pm/*.html',
     ready: function () {
       var a = $('#content a.lightbox');
       $.openImage(a.href);

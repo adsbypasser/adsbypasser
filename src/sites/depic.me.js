@@ -1,7 +1,3 @@
-// ==UserScript==
-// @match          http://depic.me/*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^depic\.me$/,

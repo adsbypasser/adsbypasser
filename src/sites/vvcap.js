@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://vvcap.net/db/*.htp
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /vvcap\.net/,
-  },
+  rule: 'http://vvcap.net/db/*.htp',
   ready: function () {
     'use strict';
 

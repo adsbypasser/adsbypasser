@@ -1,12 +1,8 @@
-// ==UserScript==
-// @match          http://funkyimg.com/viewer.php?img=*
-// @match          http://funkyimg.com/view/*
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /^funkyimg\.com$/,
-  },
+  rule: [
+    'http://funkyimg.com/viewer.php?img=*',
+    'http://funkyimg.com/view/*',
+  ],
   ready: function () {
     'use strict';
 

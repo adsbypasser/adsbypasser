@@ -1,29 +1,9 @@
-// ==UserScript==
-// @include        /http://hostpornpics\.net/viewer\.php?.*file=.+/
-// @match          http://bilder.nixhelp.de/viewer.php?*
-// @match          http://dwimg.com/viewer.php?file=*
-// @match          http://freeuploadimages.org/viewer.php?file=*
-// @match          http://funextra.hostzi.com/viewer.php?file=*
-// @match          http://gallery.jpavgod.com/viewer.php?file=*
-// @match          http://hentai-hosting.com/viewer.php?file=*
-// @match          http://howtohemorrhoidscure.com/viewer.php?file=*
-// @match          http://imagecurl.com/viewer.php?file=*
-// @match          http://imagecurl.org/viewer.php?file=*
-// @match          http://imagepremium.com/viewer.php?file=*
-// @match          http://imagevau.eu/viewer.php?file=*
-// @match          http://img.deli.sh/viewer.php?file=*
-// @match          http://javimage.us/viewer.php?file=*
-// @match          http://miragepics.com/viewer.php?file=*
-// @match          http://pornpicuploader.com/viewer.php?file=*
-// @match          http://preview.jpavgod.com/*.html
-// @match          http://shareimage.ro/viewer.php?file=*
-// ==/UserScript==
-
 // mihalism v1
 $.register({
   rule: {
     host: /^(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics|funextra\.hostzi)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de|imagecurl\.(com|org)|imagevau\.eu|img\.deli\.sh$/,
-    query: /file=([^&]+)/,
+    path: /^\/viewer\.php$/,
+    query: /^\?file=([^&]+)/,
   },
   start: function (m) {
     'use strict';
@@ -36,6 +16,8 @@ $.register({
 $.register({
   rule: {
     host: /howtohemorrhoidscure\.com|javimage\.us/,
+    path: /^\/viewer\.php$/,
+    query: /^\?file=([^&]+)/,
   },
   ready: function () {
     'use strict';
@@ -52,9 +34,10 @@ $.register({
 
 // preview.jpavgod.com
 $.register({
-  rule: {
-    host: /^preview\.jpavgod\.com|hostpornpics\.net$/,
-  },
+  rule: [
+    'http://hostpornpics.net/viewer.php?*file=*',
+    'http://preview.jpavgod.com/*.html',
+  ],
   ready: function () {
     'use strict';
 
@@ -66,8 +49,9 @@ $.register({
 // dwimg.com
 $.register({
   rule: {
-    host: /dwimg\.com/,
-    query: /file=([^&]+)/,
+    host: /^dwimg\.com$/,
+    path: /^\/viewer\.php$/,
+    query: /^\?file=([^&]+)/,
   },
   start: function (m) {
     'use strict';

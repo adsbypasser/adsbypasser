@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://reffbux.com/refflinx/view/*
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /^reffbux\.com$/,
-  },
+  rule: 'http://reffbux.com/refflinx/view/*',
   ready: function () {
     'use strict';
 

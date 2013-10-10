@@ -1,11 +1,7 @@
-// ==UserScript==
-// @match          http://imgchili.com/show/*
-// @match          http://imgchili.net/show/*
-// ==/UserScript==
-
 $.register({
   rule: {
-    host: /imgchili\.(com|net)|www\.pixhost\.org/,
+    host: /^imgchili\.(com|net)|www\.pixhost\.org$/,
+    path: /^\/show\//,
   },
   ready: function () {
     'use strict';

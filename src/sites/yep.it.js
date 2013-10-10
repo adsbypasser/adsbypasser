@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://yep.it/preview.php?p=*
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /yep\.it/,
-  },
+  rule: 'http://yep.it/preview.php?p=*',
   ready: function () {
     'use strict';
 

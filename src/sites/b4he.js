@@ -1,15 +1,7 @@
-// ==UserScript==
-// @match          http://b4he.com/?v=*
-// @match          http://fastpics.net/?v=*
-// @match          http://freeimgup.com/?v=*
-// @match          http://fullimg.com/?v=*
-// @match          http://ifap.co/?v=*
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^(b4he|freeimgup|fullimg)\.com|fastpics\.net|ifap\.co$/,
-    query: /v=([^&]+)/,
+    query: /^\?v=([^&]+)/,
   },
   start: function (m) {
     'use strict';

@@ -1,18 +1,7 @@
-// ==UserScript==
-// @match          http://comicalpic.net/img-*.html
-// @match          http://croftimage.com/img-*.html
-// @match          http://gallerycloud.net/img-*.html
-// @match          http://hotimages.eu/img-*.html
-// @match          http://imagedecode.com/img-*.html
-// @match          http://imageontime.com/img-*.html
-// @match          http://imgserve.net/img-*.html
-// @match          http://zeljeimage.com/img-*.html
-// @match          http://zonezeedimage.com/img-*.html
-// ==/UserScript==
-
 $.register({
   rule: {
     host: /^(image(decode|ontime)|(zonezeed|zelje|croft)image)\.com|(comicalpic|imgserve|gallerycloud)\.net|hotimages\.eu$/,
+    path: /^\/img-.*\.html$/,
   },
   ready: function () {
     'use strict';

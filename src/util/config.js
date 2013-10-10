@@ -1,12 +1,6 @@
-// ==UserScript==
-// @match          http://legnaleurc.github.io/nopicads/configure.html
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /^legnaleurc\.github\.io$/,
-  },
-  run: function () {
+  rule: 'http://legnaleurc.github.io/nopicads/configure.html',
+  ready: function () {
     'use strict';
 
     unsafeWindow.commit = function (data) {

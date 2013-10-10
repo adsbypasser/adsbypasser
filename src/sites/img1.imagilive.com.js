@@ -1,11 +1,5 @@
-// ==UserScript==
-// @match          http://img1.imagilive.com/*/*
-// ==/UserScript==
-
 $.register({
-  rule: {
-    host: /^img1\.imagilive\.com$/,
-  },
+  rule: 'http://img1.imagilive.com/*/*',
   ready: function () {
     'use strict';
 
