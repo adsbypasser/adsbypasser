@@ -37,7 +37,7 @@ describe('dom', function () {
   var browser;
 
   before(function (done) {
-    this.server = connect().use(connect.static('./test')).listen(SERVER_PORT, done);
+    this.server = connect().use(connect.static('./tests')).listen(SERVER_PORT, done);
     browser = new Browser();
   });
 
