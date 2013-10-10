@@ -10,13 +10,15 @@ Forked from [RedirectionHelper] writen by [SuYS].
 
 Stable version will upload to [here][1].
 
+[![Build Status][2]][3]
+
 
 ## Compatibility With Other Userscripts/Add-Ons/Extensions
 
 By disabling some features, you could resolve conflicts with
 other userscripts/add-ons/extentions ... etc.
 
-To doing this, you could open [this page][2] to adjust configurations.
+To doing this, you could open [this page][4] to adjust configurations.
 
 * Image Aligning (default: on)
 
@@ -397,7 +399,9 @@ For more information, please see [Wiki].
 
 
 [1]: http://userscripts.org/scripts/show/154858
-[2]: http://legnaleurc.github.io/nopicads/configure.html
+[2]: https://travis-ci.org/legnaleurc/nopicads.png?branch=master,develop
+[3]: https://travis-ci.org/legnaleurc/nopicads
+[4]: http://legnaleurc.github.io/nopicads/configure.html
 [Node.js]: http://nodejs.org/
 [npm]: https://npmjs.org/
 [RedirectionHelper]: http://userscripts.org/scripts/show/69797
