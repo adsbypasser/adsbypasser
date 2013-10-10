@@ -1,3 +1,12 @@
+## TBA
+
+* changed
+    * add a fancy configuration page
+    * split redirection stage to enhance speed
+    * split image and link redirection
+    * accept all url patterns
+    * add test cases to test dom module
+
 ## 3.26.0
 
 * added
