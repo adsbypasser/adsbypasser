@@ -1,17 +1,21 @@
 $.register({
-  rule: 'http://adfoc.us/serve/?id=*',
+  rule: 'http://adfoc.us/*',
   ready: function () {
     'use strict';
 
-    // FIXME mutation events has been deprecated, consider rewrite with
-    // mutation observer
-    document.addEventListener('DOMNodeInserted', function () {
+    var root = document.body;
+    var observer = new MutationObserver(function (mutations) {
       var o = $.$('#showSkip');
       if (o) {
+        observer.disconnect();
         o = o.querySelector('a');
         $.openLink(o.href);
       }
-    }, null);
+    });
+    observer.observe(root, {
+      childList: true,
+      subtree: true,
+    });
   },
 });
 
