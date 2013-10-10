@@ -15,7 +15,10 @@ module.exports = function (grunt) {
     },
     concat: {
       nopicads: {
-        src: ['src/util/metadata.js', 'dest/util/core.js', 'dest/util/dom.js', 'dest/sites/*.js', 'src/util/main.js'],
+        options: {
+          banner: '// ==UserScript==\n' + grunt.file.read('src/util/metadata.js') + '// ==/UserScript==\n',
+        },
+        src: ['dest/util/core.js', 'dest/util/dom.js', 'dest/sites/*.js', 'src/util/main.js'],
         dest: 'dest/nopicads.user.js',
       },
     },
