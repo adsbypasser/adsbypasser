@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var img = $('#full_image, #shortURL-content img');
-    $.redirect(img.src);
+    $.openImage(img.src);
   },
 });
 

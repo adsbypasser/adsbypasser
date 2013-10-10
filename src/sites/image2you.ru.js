@@ -16,7 +16,7 @@ $.register({
       });
       return;
     }
-    $.redirect(i.src);
+    $.openImage(i.src);
   },
 });
 

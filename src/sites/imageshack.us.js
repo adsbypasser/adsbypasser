@@ -14,7 +14,7 @@
       path: /^\/photo\/.+\/(.+)\/([^\/]+)/,
     },
     start: function (m) {
-      $.redirect(_.T('/f/{0}/{1}/')(m.path[1], m.path[2]));
+      $.openImage(_.T('/f/{0}/{1}/')(m.path[1], m.path[2]));
     },
   });
 
@@ -25,7 +25,7 @@
     },
     ready: function () {
       var i = $('#fullimg');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 

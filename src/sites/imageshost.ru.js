@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var a = $('#bphoto a');
-    $.redirect(a.href);
+    $.openImage(a.href);
   },
 });
 

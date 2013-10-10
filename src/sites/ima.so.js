@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var a = $('#image_block a');
-    $.redirect(a.href);
+    $.openImage(a.href);
   },
 });
 

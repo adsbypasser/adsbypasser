@@ -11,7 +11,7 @@ $.register({
 
     var frame = $('frame');
     var i = frame.src.lastIndexOf('http://');
-    $.redirect(frame.src.substr(i));
+    $.openLink(frame.src.substr(i));
   },
 });
 

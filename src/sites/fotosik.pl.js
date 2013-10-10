@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var i = $('a.noborder img');
-    $.redirect(i.src);
+    $.openImage(i.src);
   },
 });
 

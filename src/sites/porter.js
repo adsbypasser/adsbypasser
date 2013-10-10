@@ -29,7 +29,7 @@ $.register({
     'use strict';
 
     var o = $('center img[id]');
-    $.redirect(o.src);
+    $.openImage(o.src);
   },
 });
 

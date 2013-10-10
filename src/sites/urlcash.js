@@ -22,13 +22,13 @@ $.register({
     'use strict';
 
     if (unsafeWindow && unsafeWindow.linkDestUrl) {
-      $.redirect(unsafeWindow.linkDestUrl);
+      $.openLink(unsafeWindow.linkDestUrl);
       return;
     }
 
     var matches = document.body.innerHTML.match(/linkDestUrl = '(.+)'/);
     if (matches) {
-      $.redirect(matches[1]);
+      $.openLink(matches[1]);
       return;
     }
   },

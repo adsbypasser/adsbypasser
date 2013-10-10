@@ -17,14 +17,14 @@
     },
     ready: function () {
       var a = $('#tablewraper a:nth-child(2)');
-      $.redirect(a.href);
+      $.openImage(a.href);
     },
   });
 
   // second stage
   function run () {
     var i = $('#img_obj');
-    $.redirect(i.src);
+    $.openImage(i.src);
   }
   $.register({
     rule: {

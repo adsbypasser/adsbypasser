@@ -12,7 +12,7 @@ $.register({
     $.removeNodes('iframe');
 
     var a = $('#close');
-    $.redirect(a.href);
+    $.openLink(a.href);
   },
 });
 

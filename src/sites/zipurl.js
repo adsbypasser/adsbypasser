@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var a = $('#zip3 a');
-    $.redirect(a.href);
+    $.openLink(a.href);
   },
 });
 

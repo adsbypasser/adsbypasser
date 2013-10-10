@@ -13,7 +13,7 @@ $.register({
     'use strict';
 
     var i = $('img.pic');
-    $.replace(i.src);
+    $.openImage(i.src);
   },
 });
 

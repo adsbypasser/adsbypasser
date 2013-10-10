@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var a = $('#divRedirectText a');
-    $.redirect(a.innerHTML);
+    $.openLink(a.innerHTML);
   },
 });
 

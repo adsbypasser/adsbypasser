@@ -159,13 +159,13 @@ describe('dom', function () {
   });
 
 
-  describe('$.redirect', function () {
+  describe('$.openLink', function () {
 
     it('should not accept invalid URL', function (done) {
       browser.visit(SERVER_PAGE_1).then(function () {
         var $ = wrap(browser);
 
-        $.redirect(null);
+        $.openLink(null);
         browser.window.location.toString().should.equals(SERVER_PAGE_1);
 
         done();
@@ -178,7 +178,7 @@ describe('dom', function () {
       browser.visit(SERVER_PAGE_1).then(function () {
         var $ = wrap(browser);
 
-        $.redirect(SERVER_PAGE_2);
+        $.openLink(SERVER_PAGE_2);
         browser.window.location.toString().should.equals(SERVER_PAGE_2);
 
         done();

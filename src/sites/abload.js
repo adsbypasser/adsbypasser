@@ -14,7 +14,7 @@ $.register({
     'use strict';
 
     var i = $('#image');
-    $.redirect(i.src);
+    $.openImage(i.src);
   },
 });
 

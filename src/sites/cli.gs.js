@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var a = $('a.RedirectLink');
-    $.redirect(a.href);
+    $.openLink(a.href);
   },
 });
 

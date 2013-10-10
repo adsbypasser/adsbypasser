@@ -35,7 +35,7 @@ $.register({
       if (!m) {
         throw new _.NoPicAdsError('pattern changed');
       }
-      $.redirect(m[1]);
+      $.openLink(m[1]);
     });
   },
 });

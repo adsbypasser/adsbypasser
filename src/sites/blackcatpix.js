@@ -10,7 +10,7 @@ $.register({
     'use strict';
 
     var img = $('td center img');
-    $.redirect(img.src);
+    $.openImage(img.src);
   },
 });
 

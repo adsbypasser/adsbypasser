@@ -28,7 +28,7 @@ $.register({
   start: function (m) {
     'use strict';
 
-    $.redirect('/images/' + m.query[1]);
+    $.openImage('/images/' + m.query[1]);
   },
 });
 
@@ -45,7 +45,7 @@ $.register({
     // the real link is diffirent from original host
     a = s.lastIndexOf('http://');
     if (a >= 0) {
-      $.redirect(s.substr(a));
+      $.openLink(s.substr(a));
     }
   },
 });
@@ -59,7 +59,7 @@ $.register({
     'use strict';
 
     var i = $('#page_body div.text_align_center img');
-    $.redirect(i.src);
+    $.openImage(i.src);
   },
 });
 
@@ -72,7 +72,7 @@ $.register({
   start: function (m) {
     'use strict';
 
-    $.redirect('/files/' + m.query[1]);
+    $.openImage('/files/' + m.query[1]);
   },
 });
 

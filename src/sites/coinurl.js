@@ -11,7 +11,7 @@ $.register({
     'use strict';
 
     var a = $('#skip-ad');
-    $.redirect(a.href);
+    $.openLink(a.href);
   },
 });
 

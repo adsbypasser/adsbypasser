@@ -64,18 +64,18 @@ $.register({
     $.resetCookies();
 
     if (window.location.pathname.indexOf('verify') >= 0) {
-      $.redirect('/');
+      $.openLink('/');
       return;
     }
 
     if (unsafeWindow && unsafeWindow.Lbjs && unsafeWindow.Lbjs.TargetUrl) {
-      $.redirect(unsafeWindow.Lbjs.TargetUrl);
+      $.openLink(unsafeWindow.Lbjs.TargetUrl);
       return;
     }
 
     var matches = document.body.innerHTML.match(/TargetUrl\s*=\s*['"]([^'"]+)['"]/);
     if (matches) {
-      $.redirect(matches[1]);
+      $.openLink(matches[1]);
     }
   },
 });

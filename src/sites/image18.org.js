@@ -13,7 +13,7 @@ $.register({
     'use strict';
 
     var img = $('#picture');
-    $.redirect(img.src);
+    $.openImage(img.src);
   },
 });
 

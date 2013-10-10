@@ -15,7 +15,7 @@
     },
     ready: function () {
       var i = $('#container-home img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 
@@ -30,7 +30,7 @@
         return;
       }
       var i = $('#container-home img');
-      $.redirect(i.src);
+      $.openImage(i.src);
     },
   });
 })();

@@ -26,7 +26,7 @@
       query: /^.+(https?:\/\/.+)/,
     },
     start: function (m) {
-      $.redirect(m.query[1]);
+      $.openLink(m.query[1]);
     },
   });
 
@@ -38,7 +38,7 @@
       path: /^.+(https?:\/\/.+)$/,
     },
     start: function (m) {
-      $.redirect(m.path[1]);
+      $.openLink(m.path[1]);
     },
   });
 
@@ -59,7 +59,7 @@
         var jj = JSON.parse(text);
         if (jj.message) {
           clearInterval(i);
-          $.redirect(jj.message.url);
+          $.openLink(jj.message.url);
         }
       });
     }, 1000);

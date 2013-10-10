@@ -19,7 +19,7 @@ $.register({
       f = $('frame[name=site]');
       f = f.src;
     }
-    $.redirect(f);
+    $.openLink(f);
   },
 });
 
