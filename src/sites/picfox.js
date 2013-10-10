@@ -1,13 +1,3 @@
-// ==UserScript==
-// @match          http://amateurfreak.org/share-*.html
-// @match          http://amateurfreak.org/share.php?id=*
-// @match          http://images.maxigame.by/share-*.html
-// @match          http://picfox.org/*
-// @match          http://www.euro-pic.eu/share.php?id=*
-// @match          http://www.gratisimage.dk/share-*.html
-// @match          http://xxx.freeimage.us/share.php?id=*
-// ==/UserScript==
-
 $.register({
   rule: [
     'http://amateurfreak.org/share-*.html',
