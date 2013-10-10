@@ -466,27 +466,24 @@ var $;
 
     $.main = function () {
       if (window.parent !== window.self) {
-        return -1;
+        return;
       }
 
-      return setTimeout(function () {
-        // <scheme>//<host>:<port><path><query><hash>
-        var handler = dispatch();
-        if (!handler) {
-          return;
-        }
+      var handler = dispatch();
+      if (!handler) {
+        return;
+      }
 
-        $.config = load();
+      $.config = load();
 
-        disableWindowOpen();
+      disableWindowOpen();
 
-        handler.start();
+      handler.start();
 
-        document.addEventListener('DOMContentLoaded', function () {
-          disableLeavePrompt();
-          handler.ready();
-        });
-      }, 0);
+      document.addEventListener('DOMContentLoaded', function () {
+        disableLeavePrompt();
+        handler.ready();
+      });
     };
 
 
@@ -511,8 +508,6 @@ var $;
         getResourceURL: GM_getResourceURL,
       },
     });
-
-    $.main();
   }
 
 })();
