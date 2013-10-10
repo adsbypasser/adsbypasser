@@ -389,7 +389,7 @@ var $;
         }
         return '\\' + c;
       })));
-      if (!uri_3.path.test(path)) {
+      if (!path.test(uri_3.path)) {
         return null;
       }
 
