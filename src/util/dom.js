@@ -507,7 +507,9 @@ var $;
       }
     }
 
-    $.main = function (isNodeJS) {
+    $._main = function (isNodeJS) {
+      delete $._main;
+
       if (isNodeJS) {
         config = load();
         return;

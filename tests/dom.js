@@ -41,7 +41,7 @@ function wrap (browser, config) {
       registerMenuCommand: _.nop,
     },
   });
-  tmp.main(true);
+  tmp._main(true);
 
   return tmp;
 }
