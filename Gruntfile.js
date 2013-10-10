@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     strip: {
       util: {
-        src: ['src/util/core.js', 'src/util/dom.js', 'src/util/config.js'],
+        src: ['src/util/core.js', 'src/util/dom.js'],
         dest: 'dest/util',
       },
       sites: {
@@ -15,7 +15,7 @@ module.exports = function (grunt) {
     },
     concat: {
       nopicads: {
-        src: ['src/util/metadata.js', 'dest/util/core.js', 'dest/util/dom.js', 'dest/util/config.js', 'dest/sites/*.js', 'src/util/main.js'],
+        src: ['src/util/metadata.js', 'dest/util/core.js', 'dest/util/dom.js', 'dest/sites/*.js', 'src/util/main.js'],
         dest: 'dest/nopicads.user.js',
       },
     },

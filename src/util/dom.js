@@ -145,7 +145,7 @@ var $;
     };
 
     $.openImage = function (imgSrc) {
-      if ($.config.redirectImage) {
+      if (config.redirectImage) {
         $.openLink(imgSrc);
       }
     };
@@ -230,7 +230,7 @@ var $;
       i.src = imgSrc;
       d.appendChild(i);
 
-      if ($.config.alignCenter) {
+      if (config.alignCenter) {
         alignCenter(d, i);
       }
     };
@@ -277,29 +277,68 @@ var $;
     };
 
 
+    var patterns = [];
+
+    $.register = function (pattern) {
+      patterns.push(pattern);
+    };
+
+
     function load () {
       var tmp = {
         version: GM.getValue('version', 0),
         alignCenter: GM.getValue('align_center', true),
         redirectImage: GM.getValue('redirect_image', true),
       };
-      $.save(tmp);
+      save(tmp);
       _.info('loaded config:', tmp);
       return tmp;
     }
 
-    $.save = function (c) {
+    function save (c) {
       GM.setValue('version', c.version);
       GM.setValue('align_center', c.alignCenter);
       GM.setValue('redirect_image', c.redirectImage);
     };
 
+    var config = null;
 
-    var patterns = [];
+    $.register({
+      rule: 'http://legnaleurc.github.io/nopicads/configure.html',
+      ready: function () {
 
-    $.register = function (pattern) {
-      patterns.push(pattern);
-    };
+        unsafeWindow.commit = function (data) {
+          data.version = config.version;
+          _.C(data).each(function (v, k) {
+            config[k] = v;
+          });
+          // protection hack
+          setTimeout(function () {
+            save(data);
+          }, 0);
+        };
+
+        unsafeWindow.render({
+          version: config.version,
+          options: {
+            alignCenter: {
+              type: 'checkbox',
+              value: config.alignCenter,
+              label: 'Align Image',
+              help: 'If this is enabled, NoPicAds will align image to the center and change background color if possible. (default: enabled)',
+            },
+            redirectImage: {
+              type: 'checkbox',
+              value: config.redirectImage,
+              label: 'Redirect Image',
+              help: 'If this is enabled, NoPicAds will open target image if possible. (default: enabled)',
+            },
+          },
+        });
+
+      },
+    });
+
 
     function dispatchByObject (uri, rule) {
       var matched = {};
@@ -474,7 +513,7 @@ var $;
         return;
       }
 
-      $.config = load();
+      config = load();
 
       disableWindowOpen();
 
