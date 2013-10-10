@@ -2,7 +2,6 @@ var $;
 (function () {
   'use strict';
 
-
   function bootstrap (context) {
 
     var _ = context._;
@@ -17,38 +16,6 @@ var $;
       constructor: function (selector) {
         DomNotFoundError.super.constructor.call(this, _.T('`{0}` not found')(selector));
       },
-    });
-
-
-    function load () {
-      var tmp = {
-        version: GM.getValue('version', 0),
-        alignCenter: GM.getValue('align_center', true),
-        redirectImage: GM.getValue('redirect_image', true),
-      };
-      save(tmp);
-      _.info('loaded config:', tmp);
-      return tmp;
-    }
-
-    function save (c) {
-      GM.setValue('version', c.version);
-      GM.setValue('align_center', c.alignCenter);
-      GM.setValue('redirect_image', c.redirectImage);
-    }
-
-    var config = load();
-
-    GM.registerMenuCommand(_.T('Turn {0} Image Center Aligning (will reload page)')(config.alignCenter ? 'Off' : 'On'), function () {
-      config.alignCenter = !config.alignCenter;
-      save(_onfig);
-      window.location.reload();
-    });
-
-    GM.registerMenuCommand(_.T('Turn {0} Image Redirecting (will reload page)')(config.redirectImage ? 'Off' : 'On'), function () {
-      config.redirectImage = !config.redirectImage;
-      save(config);
-      window.location.reload();
     });
 
 
@@ -183,7 +150,7 @@ var $;
     }
 
     $.redirect = function (to) {
-      if (config.redirectImage) {
+      if ($.config.redirectImage) {
         redirect(to);
         return;
       }
@@ -273,7 +240,7 @@ var $;
       i.src = imgSrc;
       d.appendChild(i);
 
-      if (config.alignCenter) {
+      if ($.config.alignCenter) {
         alignCenter(d, i);
       }
     };
@@ -318,6 +285,26 @@ var $;
         }, cb);
       };
     };
+
+
+    function load () {
+      var tmp = {
+        version: GM.getValue('version', 0),
+        alignCenter: GM.getValue('align_center', true),
+        redirectImage: GM.getValue('redirect_image', true),
+      };
+      $.save(tmp);
+      _.info('loaded config:', tmp);
+      return tmp;
+    }
+
+    $.save = function (c) {
+      GM.setValue('version', c.version);
+      GM.setValue('align_center', c.alignCenter);
+      GM.setValue('redirect_image', c.redirectImage);
+    };
+
+    $.config = load();
 
 
     var patterns = [];

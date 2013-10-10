@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     sites: {
       split: {
-        src: ['src/sites/*.js'],
+        src: ['src/util/config.js', 'src/sites/*.js'],
         dest: 'dest/sites',
       },
       strip: {
