@@ -1,4 +1,4 @@
-## TBA
+## 4.0.0
 
 * changed
     * add a fancy configuration page
