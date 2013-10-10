@@ -347,6 +347,7 @@ For more information, please see [Wiki].
     * imagevau.eu
     * imagezilla.net
     * imagik.fr
+    * img.3ezy.net
     * img.acianetmedia.com
     * img.deli.sh
     * img1.imagilive.com
@@ -364,6 +365,7 @@ For more information, please see [Wiki].
     * nutshellurl.com
     * p.pw
     * pic-upload.de
+    * picmoe.net
     * pics-money.ru
     * picshare.geenza.com
     * pixhost.org

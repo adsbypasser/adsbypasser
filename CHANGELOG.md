@@ -1,3 +1,9 @@
+## TBA
+
+* added
+    * picmoe.net
+    * img.3ezy.net
+
 ## 4.0.0
 
 * changed
