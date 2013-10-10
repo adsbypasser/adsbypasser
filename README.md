@@ -18,7 +18,7 @@ Stable version will upload to [here][1].
 By disabling some features, you could resolve conflicts with
 other userscripts/add-ons/extentions ... etc.
 
-To doing this, you could open [this page][4] to adjust configurations.
+To do this, you could open [this page][4] to adjust configurations.
 
 * Image Aligning (default: on)
 
