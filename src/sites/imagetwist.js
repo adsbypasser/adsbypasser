@@ -9,7 +9,7 @@ $.register({
   rule: {
     host: /^image(twist|cherry|npic)\.com|imgpo\.st$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('img.pic');

@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^www\.hostingpics\.net$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#img_viewer');

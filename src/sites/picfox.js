@@ -12,7 +12,7 @@ $.register({
   rule: {
     host: /^(picfox|amateurfreak)\.org|www\.euro-pic\.eu|xxx\.freeimage\.us|www\.gratisimage\.dk|images\.maxigame\.by$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var o = $('#iimg');

@@ -7,7 +7,7 @@ $.register({
   rule: {
     host: /img(dino|tiger)\.com/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var o = $('#cursor_lupa');

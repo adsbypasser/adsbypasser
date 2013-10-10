@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^nsfw\.in$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('#long_url a');

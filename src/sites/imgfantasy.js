@@ -13,7 +13,7 @@
       host: host,
       query: /^\?p=/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#container-home img');
       $.redirect(i.src);
     },
@@ -24,7 +24,7 @@
       host: host,
       query: /^\?v=/,
     },
-    run: function () {
+    ready: function () {
       if (unsafeWindow.confirmAge) {
         unsafeWindow.confirmAge(1);
         return;

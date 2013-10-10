@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^ifotos\.pl$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var m = $('meta[property="og:image"]');

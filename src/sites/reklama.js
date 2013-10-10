@@ -14,7 +14,7 @@ $.register({
   rule: {
     host: /^(image(decode|ontime)|(zonezeed|zelje|croft)image)\.com|(comicalpic|imgserve|gallerycloud)\.net|hotimages\.eu$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var o = $('img[class^=centred]');

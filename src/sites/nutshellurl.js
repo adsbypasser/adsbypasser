@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^nutshellurl\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var iframe = $('iframe');

@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /vvcap\.net/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('img');

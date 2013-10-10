@@ -10,7 +10,7 @@ $.register({
   rule: {
     host: /^(.+\.)?abload\.de|fastpic\.ru|www\.imagebanana\.com|www\.imageup\.ru$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#image');

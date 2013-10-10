@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^urlgator\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('#nifty a');

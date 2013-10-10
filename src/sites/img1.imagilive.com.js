@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^img1\.imagilive\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $.$('#page a.button');

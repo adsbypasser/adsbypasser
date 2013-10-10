@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /blackcatpix\.com/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var img = $('td center img');

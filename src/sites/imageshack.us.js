@@ -13,7 +13,7 @@
       host: host,
       path: /^\/photo\/.+\/(.+)\/([^\/]+)/,
     },
-    run: function (m) {
+    start: function (m) {
       $.redirect(_.T('/f/{0}/{1}/')(m.path[1], m.path[2]));
     },
   });
@@ -23,7 +23,7 @@
       host: host,
       path: /^\/f\/.+\/[^\/]+/,
     },
-    run: function () {
+    ready: function () {
       var i = $('#fullimg');
       $.redirect(i.src);
     },

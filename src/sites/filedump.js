@@ -7,7 +7,7 @@ $.register({
     host: /filedump\.net$/,
     query: /pic=([^&]+)/,
   },
-  run: function (m) {
+  start: function (m) {
     'use strict';
 
     $.redirect('/dumped/' + m.query[1]);

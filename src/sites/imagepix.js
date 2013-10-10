@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^imagepix\.org$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('img[border="0"]');

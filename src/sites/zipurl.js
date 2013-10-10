@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^ah-informatique\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('#zip3 a');

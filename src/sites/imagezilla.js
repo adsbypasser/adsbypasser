@@ -7,7 +7,7 @@ $.register({
     host: /^imagezilla\.net$/,
     path: /^\/show\/(.+)$/,
   },
-  run: function (m) {
+  start: function (m) {
     'use strict';
 
     $.redirect('/images/' + m.path[1]);

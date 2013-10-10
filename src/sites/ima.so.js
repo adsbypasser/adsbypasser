@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^ima\.so$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var a = $('#image_block a');

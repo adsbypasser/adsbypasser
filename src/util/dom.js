@@ -328,7 +328,10 @@ var $;
       if (!pattern) {
         return null;
       }
-      return _.P(pattern.run, matched);
+      return {
+        start: pattern.start ? _.P(pattern.start, matched) : _.nop,
+        ready: pattern.ready ? _.P(pattern.ready, matched) : _.nop,
+      };
     }
 
     function disableWindowOpen () {
@@ -345,30 +348,36 @@ var $;
     }
 
     $.main = function () {
-      disableLeavePrompt();
+      return setTimeout(function () {
+        disableWindowOpen();
 
-      // <scheme>//<host>:<port><path><query><hash>
-      var handler = find({
-        scheme: window.location.protocol,
-        host: window.location.hostname,
-        port: window.location.port,
-        path: window.location.pathname,
-        query: window.location.search,
-        hash: window.location.hash,
-      });
+        // <scheme>//<host>:<port><path><query><hash>
+        var handler = find({
+          scheme: window.location.protocol,
+          host: window.location.hostname,
+          port: window.location.port,
+          path: window.location.pathname,
+          query: window.location.search,
+          hash: window.location.hash,
+        });
 
-      if (handler) {
-        handler();
-      }
+        if (!handler) {
+          return;
+        }
+
+        handler.start();
+
+        document.addEventListener('DOMContentLoaded', function () {
+          disableLeavePrompt();
+          handler.ready();
+        });
+      }, 0);
     };
-
-    disableWindowOpen();
 
 
     return $;
 
   }
-
 
   if (typeof module !== 'undefined') {
     module.exports = bootstrap;
@@ -388,7 +397,7 @@ var $;
       },
     });
 
-    document.addEventListener('DOMContentLoaded', $.main);
+    $.main();
   }
 
 })();

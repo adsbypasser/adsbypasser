@@ -11,7 +11,7 @@ $.register({
     host: /^(b4he|freeimgup|fullimg)\.com|fastpics\.net|ifap\.co$/,
     query: /v=([^&]+)/,
   },
-  run: function (m) {
+  start: function (m) {
     'use strict';
 
     $.redirect('/images/' + m.query[1]);

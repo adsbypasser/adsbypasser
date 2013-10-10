@@ -17,7 +17,7 @@ $.register({
   rule: {
     host: /^(img(onion|rill|money|corn|next)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var node = $.$('#continuetoimage > form input');

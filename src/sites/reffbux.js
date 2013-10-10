@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^reffbux\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     $.removeNodes('iframe');

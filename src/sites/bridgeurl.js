@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /bridgeurl\.com/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var url = unsafeWindow.urls[1];

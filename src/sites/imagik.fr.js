@@ -7,7 +7,7 @@ $.register({
     host: /^imagik\.fr$/,
     path: /^\/view(-rl)?\/(.+)/,
   },
-  run: function (m) {
+  start: function (m) {
     'use strict';
 
     // mimetype is text/plain

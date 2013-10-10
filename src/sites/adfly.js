@@ -21,7 +21,7 @@
       path: /\/locked$/,
       query: /url=([^&]+)/,
     },
-    run: function (m) {
+    start: function (m) {
       $.resetCookies();
       $.redirect(m.query[1]);
     },
@@ -31,7 +31,7 @@
     rule: {
       host: hostRule,
     },
-    run: function () {
+    ready: function () {
       $.removeNodes('iframe');
       $.resetCookies();
 

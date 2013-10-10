@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^gkurl\.us$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var iframe = $('#gkurl-frame');

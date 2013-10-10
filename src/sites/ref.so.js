@@ -7,7 +7,7 @@ $.register({
   rule: {
     host: /^ref\.so$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     $.removeNodes('iframe');

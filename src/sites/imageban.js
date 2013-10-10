@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^imageban\.(ru|net)$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#img_obj');

@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^depic\.me$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#pic');

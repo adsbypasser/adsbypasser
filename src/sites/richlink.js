@@ -7,7 +7,7 @@ $.register({
   rule: {
     host: /^richlink\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var f = $('frameset');

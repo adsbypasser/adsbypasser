@@ -6,7 +6,7 @@ $.register({
   rule: {
     host: /^image2you\.ru$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $.$('div.t_tips2 div > img');

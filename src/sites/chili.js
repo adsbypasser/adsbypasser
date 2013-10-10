@@ -7,7 +7,7 @@ $.register({
   rule: {
     host: /imgchili\.(com|net)|www\.pixhost\.org/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var o = $('#show_image');

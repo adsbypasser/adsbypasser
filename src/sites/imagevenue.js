@@ -10,7 +10,7 @@ $.register({
   rule: {
     host: /(hostingfailov|freeporndumpster|imagevenue|hotchyx)\.com$/,
   },
-  run: function () {
+  ready: function () {
     'use strict';
 
     var i = $('#thepic');
