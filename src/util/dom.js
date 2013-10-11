@@ -344,47 +344,31 @@ var $;
     });
 
 
-    function dispatchByObject (uri, rule) {
+    function dispatchByObject (rule, url_6) {
       var matched = {};
 
       var passed = _.C(rule).all(function (pattern, part) {
-        matched[part] = uri[part].match(pattern);
+        matched[part] = url_6[part].match(pattern);
         return !!matched[part];
       });
 
       return passed ? matched : null;
     }
 
-    function dispatchByRegExp (uri_1, rule) {
-      var matched = uri_1.match(rule);
-      return matched;
+    function dispatchByRegExp (rule, url_1) {
+      return url_1.match(rule);
     }
 
-    function dispatchByArray (uri_1, uri_3, uri_6, rules) {
+    function dispatchByArray (rules, url_1, url_3, url_6) {
       var matched = null;
       _.C(rules).find(function (rule) {
-        if (rule instanceof RegExp) {
-          // regexp
-          matched = dispatchByRegExp(uri_1, rule);
-        } else if (rule instanceof Array) {
-          // array
-          matched = dispatchByArray(uri_1, uri_3, uri_6, rule);
-        } else if (typeof rule === 'function') {
-          // function
-          matched = dispatchByFunction(uri_1, uri_3, uri_6, rule);
-        } else if (typeof rule === 'string' || rule instanceof String) {
-          // string
-          matched = dispatchByString(uri_3, rule);
-        } else {
-          // object
-          matched = dispatchByObject(uri_6, rule);
-        }
+        matched = dispatch(rule, url_1, url_3, url_6);
         return !!matched;
       });
       return matched;
     }
 
-    function dispatchByString (uri_3, rule) {
+    function dispatchByString (rule, url_3) {
       // <scheme> := '*' | 'http' | 'https' | 'file' | 'ftp' | 'chrome-extension'
       var scheme = /\*|https?|file|ftp|chrome-extension/;
       // <host> := '*' | '*.' <any char except '/' and '*'>+
@@ -409,19 +393,19 @@ var $;
       var sd = matched[4];
       path = matched[5];
 
-      if (scheme === '*' && !/https?/.test(uri_3.scheme)) {
+      if (scheme === '*' && !/https?/.test(url_3.scheme)) {
         return null;
-      } else if (scheme !== uri_3.scheme) {
+      } else if (scheme !== url_3.scheme) {
         return null;
       }
 
       if (scheme !== 'file' && host !== '*') {
         if (wc) {
-          up = uri_3.host.indexOf(sd);
-          if (up < 0 || up + sd.length === uri_3.host.length) {
+          up = url_3.host.indexOf(sd);
+          if (up < 0 || up + sd.length === url_3.host.length) {
             return null;
           }
-        } else if (host !== uri_3.host) {
+        } else if (host !== url_3.host) {
           return null;
         }
       }
@@ -432,27 +416,43 @@ var $;
         }
         return '\\' + c;
       })));
-      if (!path.test(uri_3.path)) {
+      if (!path.test(url_3.path)) {
         return null;
       }
 
-      return uri_3;
+      return url_3;
     }
 
-    function dispatchByFunction (uri_1, uri_3, uri_6, rule) {
-      return rule(uri_1, uri_3, uri_6);
+    function dispatchByFunction (rule, url_1, url_3, url_6) {
+      return rule(url_1, url_3, url_6);
     }
 
-    function dispatch () {
-      var uri_1 = window.location.toString();
+    function dispatch (rule, url_1, url_3, url_6) {
+      if (rule instanceof RegExp) {
+        return dispatchByRegExp(rule, url_1);
+      }
+      if (rule instanceof Array) {
+        return dispatchByArray(rule, url_1, url_3, url_6);
+      }
+      if (typeof rule === 'function') {
+        return dispatchByFunction(rule, url_1, url_3, url_6);
+      }
+      if (typeof rule === 'string' || rule instanceof String) {
+        return dispatchByString(rule, url_3);
+      }
+      return dispatchByObject(rule, url_6);
+    }
+
+    function findHandler () {
+      var url_1 = window.location.toString();
       // <scheme>://<host><path>
-      var uri_3 = {
+      var url_3 = {
         scheme: window.location.protocol.slice(0, -1),
         host: window.location.host,
         path: window.location.pathname + window.location.search + window.location.hash,
       };
       // <scheme>//<host>:<port><path><query><hash>
-      var uri_6 = {
+      var url_6 = {
         scheme: window.location.protocol,
         host: window.location.hostname,
         port: window.location.port,
@@ -463,24 +463,7 @@ var $;
 
       var matched = null;
       var pattern = _.C(patterns).find(function (pattern) {
-        var rule = pattern.rule;
-        if (rule instanceof RegExp) {
-          // regex
-          matched = dispatchByRegExp(uri_1, rule);
-        } else if (rule instanceof Array) {
-          // array
-          matched = dispatchByArray(uri_1, uri_3, uri_6, rule);
-        } else if (typeof rule === 'function') {
-          // function
-          matched = dispatchByFunction(uri_1, uri_3, uri_6, rule);
-        } else if (typeof rule === 'string' || rule instanceof String) {
-          // string
-          matched = dispatchByString(uri_3, rule);
-        } else {
-          // object
-          matched = dispatchByObject(uri_6, rule);
-        }
-
+        matched = dispatch(pattern.rule, url_1, url_3, url_6);
         return !!matched;
       });
 
@@ -519,7 +502,7 @@ var $;
         return;
       }
 
-      var handler = dispatch();
+      var handler = findHandler();
       if (!handler) {
         return;
       }
