@@ -1,5 +1,9 @@
 ## TBA
 
+* fixed
+    * urlcash
+    * $.replace
+    * coinurl.com
 * added
     * picmoe.net
     * img.3ezy.net
