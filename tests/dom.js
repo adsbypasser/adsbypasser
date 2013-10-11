@@ -227,6 +227,22 @@ describe('dom', function () {
       });
     });
 
+    it('should not replace body if redirect_image is disabled', function (done) {
+      browser.visit(SERVER_PAGE_1).then(function () {
+        var $ = wrap(browser, {
+          redirect_image: false,
+        });
+
+        var b = browser.window.document.body;
+        $.replace('does_not_exist');
+        browser.window.document.body.should.be.equals(b);
+
+        done();
+      }).done(null, function (error) {
+        done(error);
+      });
+    });
+
   });
 
 });
