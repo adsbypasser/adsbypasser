@@ -290,6 +290,8 @@ describe('dom', function () {
       });
     });
 
+    it('should replace document.body');
+
   });
 
 });
