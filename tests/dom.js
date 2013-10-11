@@ -211,6 +211,39 @@ describe('dom', function () {
   });
 
 
+  describe('$.openImage', function () {
+
+    it('should not accept invalid URL', function (done) {
+      browser.visit(SERVER_PAGE_1).then(function () {
+        var $ = wrap(browser);
+
+        $.openImage(null);
+        browser.window.location.toString().should.equals(SERVER_PAGE_1);
+
+        done();
+      }).done(null, function (error) {
+        done(error);
+      });
+    });
+
+    it('should not open image if redirect_image is disabled', function (done) {
+      browser.visit(SERVER_PAGE_1).then(function () {
+        var $ = wrap(browser, {
+          redirect_image: false,
+        });
+
+        $.openImage('does_not_exist');
+        browser.window.location.toString().should.equals(SERVER_PAGE_1);
+
+        done();
+      }).done(null, function (error) {
+        done(error);
+      });
+    });
+
+  });
+
+
   describe('$.replace', function () {
 
     it('should not accept invalid URL', function (done) {
