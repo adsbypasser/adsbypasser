@@ -10,19 +10,40 @@ _.info = _.nop;
 _.warn = _.nop;
 
 
-function wrap (browser) {
-  return npa({
+var defaultConfig = {
+  version: 1,
+  redirect_image: true,
+  align_image: true,
+};
+
+function wrap (browser, config) {
+  config = config || {};
+  _.C(defaultConfig).each(function (v, k) {
+    if (!config.hasOwnProperty(k)) {
+      config[k] = v;
+    }
+  });
+
+  var tmp = npa({
     _: _,
     window: browser.window,
     unsafeWindow: browser.window,
     GM: {
       getValue: function (key, default_) {
+        if (config.hasOwnProperty(key)) {
+          return config[key];
+        }
         return default_;
       },
-      setValue: _.nop,
+      setValue: function (key, value) {
+        config[key] = value;
+      },
       registerMenuCommand: _.nop,
     },
   });
+  tmp.main(true);
+
+  return tmp;
 }
 
 var SERVER_PORT = 1234;

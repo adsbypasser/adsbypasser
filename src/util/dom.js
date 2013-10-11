@@ -507,7 +507,12 @@ var $;
       }
     }
 
-    $.main = function () {
+    $.main = function (isNodeJS) {
+      if (isNodeJS) {
+        config = load();
+        return;
+      }
+
       if (window.parent !== window.self) {
         return;
       }
