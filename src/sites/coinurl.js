@@ -5,8 +5,13 @@ $.register({
   ready: function () {
     'use strict';
 
-    var a = $('#skip-ad');
-    $.openLink(a.href);
+    var d = window.frames[0];
+    d.addEventListener('DOMContentLoaded', function () {
+      var a = $.$('#skip-ad', d.document);
+      if (a) {
+        $.openLink(a.href);
+      }
+    });
   },
 });
 
