@@ -1,7 +1,6 @@
 $.register({
   rule: {
     host: /urlcash\.(com|net|org)|(bat5|detonating|celebclk|eightteen|smilinglinks|peekatmygirlfriend|pornyhost|clb1|urlgalleries)\.com|looble\.net|xxxs\.org$/,
-    path: /^\/.+/,
   },
   ready: function () {
     'use strict';
