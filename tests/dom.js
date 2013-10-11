@@ -241,6 +241,20 @@ describe('dom', function () {
       });
     });
 
+    it('should open image by default', function (done) {
+      browser.visit(SERVER_PAGE_1).then(function () {
+        var $ = wrap(browser);
+
+        var path = '/does_not_exist';
+        $.openImage(path);
+        browser.window.location.pathname.should.equals(path);
+
+        done();
+      }).done(null, function (error) {
+        done(error);
+      });
+    });
+
   });
 
 
