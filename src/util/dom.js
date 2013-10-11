@@ -211,6 +211,10 @@ var $;
     }
 
     $.replace = function (imgSrc) {
+      if (!config.redirectImage) {
+        return;
+      }
+
       if (!imgSrc) {
         _.warn('false url');
         return;
