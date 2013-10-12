@@ -50,6 +50,21 @@
     },
   });
 
+  $.register({
+    rule: 'http://ad7.biz/*',
+    ready: function () {
+      $.removeNodes('iframe');
+      $.resetCookies();
+
+      var script = $.$$('script').find(function (v) {
+        return v.innerHTML.indexOf('var r_url') >= 0;
+      });
+      var url = script.innerHTML.match(/&url=([^&]+)/);
+      url = url[1];
+      $.openLink(url);
+    },
+  });
+
 })();
 
 
