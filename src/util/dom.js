@@ -100,6 +100,12 @@ var $;
       return controller;
     }
 
+    $.get = function (url, data, callback) {
+      data = toQuery(data);
+      return ajax('GET', url, data, {
+      }, callback);
+    };
+
     $.post = function (url, data, callback) {
       data = toQuery(data);
       return ajax('POST', url, data, {
