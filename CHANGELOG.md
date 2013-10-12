@@ -1,3 +1,13 @@
+## TBA
+
+* added
+    * adlot.us
+    * 1to4.me
+    * yooclick.com
+    * ad7.biz
+    * lix.in
+    * link2you.ru
+
 ## 4.1.0
 
 * fixed

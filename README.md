@@ -54,6 +54,7 @@ For more information, please see [Wiki].
 ## Supported Sites
 
 * adfly
+    * ad7.biz
     * adf.ly
     * chathu.apkmania.co
     * go.phpnulledscripts.com
@@ -278,6 +279,7 @@ For more information, please see [Wiki].
 * else
     * 1be.biz
     * 1pics.ru
+    * 1to4.me
     * 2i.sk
     * 2imgs.com
     * 3ra.be
@@ -285,6 +287,7 @@ For more information, please see [Wiki].
     * 4owl.info
     * adfoc.us
     * adlock.in
+    * adlot.us
     * adultf.ly
     * adv.li
     * ah-informatique.com
@@ -359,6 +362,8 @@ For more information, please see [Wiki].
     * ity.im
     * javelite.tk
     * lienscash.com
+    * link2you.ru
+    * lix.in
     * lnk.in
     * madlink.sk
     * nsfw.in
@@ -396,6 +401,7 @@ For more information, please see [Wiki].
     * x.pixfarm.net
     * yep.it
     * yfrog.com
+    * yooclick.com
     * zo.mu
     * zpag.es
 
