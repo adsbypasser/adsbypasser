@@ -31,13 +31,17 @@
       return content.innerHTML;
   }
 
-  function knockServer (script) {
+  function knockServer (script, dirtyFix) {
     var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
     var make_url = matches[1];
     var make_opts = eval('(' + matches[2] + ')');
 
     var i = setInterval(function () {
       $.post(make_url, make_opts, function (text) {
+        if (dirtyFix) {
+          // dirty fix for tr5.in
+          text = text.match(/\{.+\}/)[0];
+        }
         var jj = JSON.parse(text);
         if (jj.message) {
           clearInterval(i);
@@ -85,10 +89,27 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(youlinking|fly2url|raksoyun)\.com|(zpoz|ultry)\.net|tr5\.in|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru$/,
+      host: /^adcrun\.ch|(youlinking|fly2url|raksoyun)\.com|(zpoz|ultry)\.net|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru$/,
       path: /^\/.+/,
     },
     ready: run,
+  });
+
+  $.register({
+    rule: {
+      host: /^tr5\.in$/,
+      path: /^\/.+/,
+    },
+    ready: function () {
+      $.removeNodes('iframe');
+
+      var content = searchScript();
+      var matches = content.match(/eval(.*)/);
+      matches = matches[1];
+      content = eval(matches);
+
+      knockServer(content, true);
+    },
   });
 
 })();
