@@ -10,7 +10,7 @@ $.register({
 
     $.removeNodes('iframe');
     $.post('/ajax/check_redirect.php', {
-      link: m.path[1],
+      link: m[1],
     }, function (text) {
       $.openLink(text);
     });
