@@ -1,3 +1,12 @@
+## TBA
+
+* fixed
+    * lix.in
+    * link2you.ru
+    * madlink.sk
+    * coinurl.com
+    * tr5.in
+
 ## 4.2.0
 
 * added
