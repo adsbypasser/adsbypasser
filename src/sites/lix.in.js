@@ -8,8 +8,13 @@ $.register({
       // captcha, do nothing
       return;
     }
-    i = $('form');
-    i.submit();
+    i = $.$('form');
+    if (i) {
+      i.submit();
+      return;
+    }
+    i = $('iframe');
+    $.openLink(i.src);
   },
 });
 
