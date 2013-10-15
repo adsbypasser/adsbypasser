@@ -510,6 +510,7 @@ var $;
 
       var handler = findHandler();
       if (!handler) {
+        _.info('does not match');
         return;
       }
 
