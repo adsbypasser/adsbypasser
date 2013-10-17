@@ -89,7 +89,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(youlinking|fly2url|raksoyun)\.com|(zpoz|ultry)\.net|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru$/,
+      host: /^adcrun\.ch|(youlinking|fly2url|raksoyun)\.com|(zpoz|ultry)\.net|wwy\.me|ssl\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru|juuh\.de$/,
       path: /^\/.+/,
     },
     ready: run,
