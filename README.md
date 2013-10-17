@@ -60,7 +60,6 @@ For more information, please see [Wiki].
     * go.phpnulledscripts.com
     * j.gs
     * q.gs
-    * u.bb
 * linkbucks
     * allanalpass.com
     * amy.gs
@@ -196,13 +195,19 @@ For more information, please see [Wiki].
     * imagebanana.com
     * imageup.ru
 * bc.vc
+    * 1y.lt
+    * adb.ug
     * adcrun.ch
+    * adfro.gs
+    * adjet.eu
     * adli.pw
     * bc.vc
     * biaiai.com
     * bih.cc
     * budurl.ru
     * fly2url.com
+    * hit.us
+    * juuh.de
     * link.tl
     * raksoyun.com
     * short.pk
@@ -210,6 +215,7 @@ For more information, please see [Wiki].
     * ssl.gs
     * tr5.in
     * ultry.net
+    * urlwiz.com
     * wwy.me
     * xip.ir
     * youlinking.com
@@ -311,6 +317,7 @@ For more information, please see [Wiki].
     * comyonet.com
     * cubeupload.com
     * cyberpics.net
+    * ddp.net
     * depic.me
     * digitalfrenzy.net
     * directupload.net

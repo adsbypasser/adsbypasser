@@ -2,6 +2,16 @@
 
 * added
     * rijaliti.info
+    * juuh.de
+    * adjet.eu
+    * adfro.gs
+    * adb.ug
+    * 1y.lt
+    * ddp.net
+    * hit.us
+    * urlwiz.com
+* removed
+    * u.bb
 
 ## 4.2.1
 
