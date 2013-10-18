@@ -90,7 +90,7 @@ describe('dom', function () {
       });
     });
 
-    it('shoud throw exception if not found', function (done) {
+    it('should throw exception if not found', function (done) {
       browser.visit(SERVER_PAGE_1).then(function () {
         var $ = wrap(browser);
 
@@ -126,7 +126,7 @@ describe('dom', function () {
       });
     });
 
-    it('shoud return null if not found', function (done) {
+    it('should return null if not found', function (done) {
       browser.visit(SERVER_PAGE_1).then(function () {
         var $ = wrap(browser);
 
