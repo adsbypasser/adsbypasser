@@ -47,7 +47,7 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
     if (c.some) {
       return c.some(fn);
     }
-    if (c instanceof NodeList) {
+    if (typeof c.length === 'number') {
       return Array.prototype.some.call(c, fn);
     }
     return Object.keys(c).some(function (k) {
