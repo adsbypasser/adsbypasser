@@ -129,6 +129,7 @@ For more information, please see [Wiki].
     * nixhelp.de
     * pornpicuploader.com
     * preview.jpavgod.com
+    * sangjkay.biz
     * shareimage.ro
 * reklama
     * comicalpic.net
@@ -309,7 +310,6 @@ For more information, please see [Wiki].
     * bildr.no
     * bilurl.com
     * blackcatpix.com
-    * bridgeurl.com
     * casimages.com
     * cf.ly
     * cl.my
