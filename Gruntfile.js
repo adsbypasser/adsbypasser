@@ -27,6 +27,15 @@ module.exports = function (grunt) {
       test: {
         options: {
           reporter: 'spec',
+          require: 'tests/misc/coverage',
+        },
+        src: ['tests/*.js'],
+      },
+      coverage: {
+        options: {
+          reporter: 'html-cov',
+          quiet: true,
+          captureFile: 'dest/coverage.html',
         },
         src: ['tests/*.js'],
       },

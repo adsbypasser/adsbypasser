@@ -11,6 +11,7 @@
     "grunt-contrib-concat": "",
     "grunt-contrib-clean": "",
     "grunt-mocha-test": "",
+    "blanket": "",
     "chai": "",
     "connect": "",
     "zombie": ""
