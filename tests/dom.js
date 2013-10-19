@@ -48,8 +48,8 @@ function wrap (browser, config) {
 
 var SERVER_PORT = 1234;
 var SERVER_HREF = _.T('http://localhost:{0}')(SERVER_PORT);
-var SERVER_PAGE_1 = SERVER_HREF + '/one.html';
-var SERVER_PAGE_2 = SERVER_HREF + '/two.html';
+var SERVER_PAGE_1 = SERVER_HREF + '/misc/one.html';
+var SERVER_PAGE_2 = SERVER_HREF + '/misc/two.html';
 
 
 describe('dom', function () {
