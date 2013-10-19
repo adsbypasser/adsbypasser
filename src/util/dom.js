@@ -541,7 +541,6 @@ var $;
       GM: {
         getValue: GM_getValue,
         setValue: GM_setValue,
-        registerMenuCommand: GM_registerMenuCommand,
         xmlhttpRequest: GM_xmlhttpRequest,
         getResourceText: GM_getResourceText,
         addStyle: GM_addStyle,
