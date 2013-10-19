@@ -116,25 +116,25 @@ describe('core', function () {
 
   describe('collection', function () {
 
-    it('should be true', function () {
+    it('all [1, 2, 3] are numbers should be true', function () {
       _.C([1, 2, 3]).all(function (v) {
         return typeof v === 'number';
       }).should.be.true;
     });
 
-    it('should be false', function () {
+    it('all [1, 2, 3] are odd numbers should be false', function () {
       _.C([1, 2, 3]).all(function (v) {
         return v % 2 === 1;
       }).should.be.false;
     });
 
-    it('should found the target', function () {
+    it('the first even number in [1, 2, 3] should be 2', function () {
       _.C([1, 2, 3]).find(function (v) {
         return v % 2 === 0;
       }).should.equals(2);
     });
 
-    it('should not found anything', function () {
+    it('0 should not be found in [1, 2, 3]', function () {
       expect(_.C([1, 2, 3]).find(function (v) {
         return v === 0;
       })).to.be.undefined;
