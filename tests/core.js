@@ -68,7 +68,29 @@ describe('core', function () {
 
     it('should takes exactly one string', function () {
       _.T.should.throw(_.NoPicAdsError);
-      _.P(_.T, 0).should.throw(_.NoPicAdsError);
+
+      (function (){
+        _.T(0);
+      }).should.throw(_.NoPicAdsError);
+
+      (function (){
+        _.T('');
+      }).should.not.throw(_.NoPicAdsError);
+
+      (function (){
+        var s = new String();
+        _.T(s);
+      }).should.not.throw(_.NoPicAdsError);
+    });
+
+    it('should return original string if no keyword', function () {
+      var s = 'input';
+      _.T(s)('dummy', 'parameter').should.equals(s);
+    });
+
+    it('should escape double brackets', function () {
+      var s = '{{}}';
+      _.T(s)().should.equals('{}');
     });
 
     it('should works with index', function () {
