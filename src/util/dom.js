@@ -477,6 +477,11 @@ var $;
         return null;
       }
 
+      // exclude rule
+      if (!pattern.start && !pattern.ready) {
+        return null;
+      }
+
       return {
         start: pattern.start ? _.P(pattern.start, matched) : _.nop,
         ready: pattern.ready ? _.P(pattern.ready, matched) : _.nop,
