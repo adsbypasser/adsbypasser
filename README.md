@@ -209,11 +209,14 @@ For more information, please see [Wiki].
     * fly2url.com
     * hit.us
     * juuh.de
+    * kly.so
     * link.tl
+    * myam.me
     * raksoyun.com
     * short.pk
     * shortit.in
     * ssl.gs
+    * tc.gg
     * tr5.in
     * ultry.net
     * urlwiz.com

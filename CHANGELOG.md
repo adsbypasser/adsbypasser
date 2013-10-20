@@ -1,3 +1,12 @@
+## TBA
+
+* fixed
+    * normal links on adf.ly
+* added
+    * myam.me
+    * kly.so
+    * tc.gg
+
 ## 4.4.0
 
 * removed
