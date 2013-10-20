@@ -6,6 +6,13 @@
   $.register({
     rule: {
       host: hostRule,
+      path: /^\/([a-z]+)?$/,
+    },
+  });
+
+  $.register({
+    rule: {
+      host: hostRule,
       path: /\/locked$/,
       query: /url=([^&]+)/,
     },
