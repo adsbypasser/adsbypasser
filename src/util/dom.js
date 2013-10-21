@@ -251,6 +251,28 @@ var $;
       });
     };
 
+    $.setCookie = function (key, value) {
+      var now = new Date();
+      now.setTime(now.getTime() + 3600 * 1000);
+      var tpl = _.T('{0}={1};path=/;');
+      document.cookie = tpl(key, value, now.toUTCString());
+    };
+
+    $.getCookie = function (key) {
+      var c = _.C(document.cookie.split(';')).find(function (v) {
+        var k = v.replace(/^\s*(\w+)=.+$/, '$1');
+        return k === key;
+      });
+      if (!c) {
+        return null;
+      }
+      c = c.replace(/^\s*\w+=([^;]+).+$/, '$1');
+      if (!c) {
+        return null;
+      }
+      return c;
+    };
+
     $.resetCookies = function () {
       var a = document.domain;
       var b = document.domain.replace(/^www\./, '');
