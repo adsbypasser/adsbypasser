@@ -6,7 +6,7 @@
   $.register({
     rule: {
       host: hostRule,
-      path: /^\/([a-z]+)?$/,
+      path: /^\/([a-z\/]+)?$/,
     },
   });
 
