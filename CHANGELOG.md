@@ -2,6 +2,7 @@
 
 * fixed
     * more normal links on adf.ly
+    * wildcard matching rule
 * added
     * imgadult.com
 
