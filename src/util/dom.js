@@ -230,7 +230,6 @@ var $;
       $.removeAllTimer();
       $.enableScrolling();
 
-      console.info(document.createElement('body'));
       document.body = document.createElement('body');
 
       var d = document.createElement('div');
