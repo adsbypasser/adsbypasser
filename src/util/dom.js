@@ -428,7 +428,7 @@ var $;
       if (scheme !== 'file' && host !== '*') {
         if (wc) {
           up = url_3.host.indexOf(sd);
-          if (up < 0 || up + sd.length === url_3.host.length) {
+          if (up < 0 || up + sd.length !== url_3.host.length) {
             return null;
           }
         } else if (host !== url_3.host) {
