@@ -185,7 +185,11 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
 
   function log (method, args) {
     args = Array.prototype.slice.call(args);
-    args.unshift('NoPicAds:');
+    if (typeof args[0] === 'string' || args[0] instanceof String) {
+      args[0] = 'NoPicAds: ' + args[0];
+    } else {
+      args.unshift('NoPicAds:');
+    }
     console[method].apply(console, args);
   }
 
