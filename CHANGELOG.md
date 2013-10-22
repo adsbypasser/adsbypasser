@@ -1,4 +1,4 @@
-## TBA
+## 4.6.0
 
 * fixed
     * more normal links on adf.ly
