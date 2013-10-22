@@ -322,7 +322,6 @@ var $;
         redirectImage: GM.getValue('redirect_image', true),
       };
       save(tmp);
-      _.info('loaded config:', tmp);
       return tmp;
     }
 
@@ -536,11 +535,12 @@ var $;
 
       var handler = findHandler();
       if (!handler) {
-        _.info('does not match');
+        _.info('does not match on `%s`', window.location);
         return;
       }
 
       config = load();
+      _.info('working on\n%s \nwith\n%o', window.location, config);
 
       disableWindowOpen();
 
