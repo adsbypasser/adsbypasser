@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * more normal links on adf.ly
 * added
     * imgadult.com
 
