@@ -14,6 +14,7 @@
 // @grant          GM_getValue
 // @grant          GM_setValue
 // @run-at         document-start
-// @resource       imageStyle https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/css/image.css
+// @resource       alignCenter https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/css/align_center.css
+// @resource       scaleImage https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/css/scale_image.css
 // @resource       bgImage https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/img/imagedoc-darknoise.png
 // @include        /^https?://.+$/

@@ -192,6 +192,9 @@ var $;
     }
 
     function scaleImage (i) {
+      var style = GM.getResourceText('scaleImage');
+      GM.addStyle(style);
+
       if (i.naturalWidth && i.naturalHeight) {
         checkScaling.call(i);
       } else {
@@ -211,16 +214,16 @@ var $;
       document.body.style.backgroundImage = _.T('url(\'{0}\')')(bgImage);
     }
 
-    function alignCenter (d, i) {
-      d.id = 'nopicads-wrapper';
-      i.id = 'nopicads-image';
+    function alignCenter () {
+      var style = GM.getResourceText('alignCenter');
+      GM.addStyle(style);
     }
 
-    function injectStyle () {
+    function injectStyle (d, i) {
       $.removeNodes('style, link[rel=stylesheet]');
 
-      var imageStyle = GM.getResourceText('imageStyle');
-      GM.addStyle(imageStyle);
+      d.id = 'nopicads-wrapper';
+      i.id = 'nopicads-image';
     }
 
     $.replace = function (imgSrc) {
@@ -247,10 +250,10 @@ var $;
       d.appendChild(i);
 
       if (config.alignCenter || config.scaleImage) {
-        injectStyle();
+        injectStyle(d, i);
       }
       if (config.alignCenter) {
-        alignCenter(d, i);
+        alignCenter();
       }
       if (config.changeBackground) {
         changeBackground();
