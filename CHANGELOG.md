@@ -1,4 +1,4 @@
-## TBA
+## 4.7.0
 
 * changed
     * add config: change_background, scale_image
