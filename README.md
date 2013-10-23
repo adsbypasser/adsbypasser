@@ -125,6 +125,7 @@ For more information, please see [Wiki].
     * imagecurl.org
     * imagepremium.com
     * javimage.us
+    * love69.org
     * miragepics.com
     * nixhelp.de
     * pornpicuploader.com
@@ -346,7 +347,6 @@ For more information, please see [Wiki].
     * image18.org
     * image2you.ru
     * imagearn.com
-    * imagebam.com
     * imageban.net
     * imageban.ru
     * imagehosting.gr

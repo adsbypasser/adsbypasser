@@ -1,3 +1,12 @@
+## TBA
+
+* fixed
+    * goimagehost.com
+* remove
+    * imagebam.com
+* added
+    * love69.org
+
 ## 4.6.0
 
 * fixed
