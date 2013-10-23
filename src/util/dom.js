@@ -318,9 +318,12 @@ var $;
     function load () {
       var tmp = {
         version: GM.getValue('version', 0),
-        alignCenter: GM.getValue('align_center', true),
-        redirectImage: GM.getValue('redirect_image', true),
+        alignCenter: GM.getValue('align_center'),
+        changeBackground: GM.getValue('change_background'),
+        redirectImage: GM.getValue('redirect_image'),
+        scaleImage: GM.getValue('scale_image'),
       };
+      fixup(tmp);
       save(tmp);
       return tmp;
     }
@@ -328,8 +331,34 @@ var $;
     function save (c) {
       GM.setValue('version', c.version);
       GM.setValue('align_center', c.alignCenter);
+      GM.setValue('change_background', c.changeBackground);
       GM.setValue('redirect_image', c.redirectImage);
+      GM.setValue('scale_image', c.scaleImage);
     };
+
+    function fixup (c) {
+      var fixtures = [
+        function (c) {
+          var ac = typeof c.alignCenter !== 'undefined';
+          if (typeof c.changeBackground === 'undefined') {
+            c.changeBackground = ac ? c.alignCenter : true;
+          }
+          if (typeof c.scaleImage === 'undefined') {
+            c.scaleImage = ac ? c.alignCenter : true;
+          }
+          if (!ac) {
+            c.alignCenter = true;
+          }
+          if (typeof c.redirectImage === 'undefined') {
+            c.redirectImage = true;
+          }
+        },
+      ];
+      while (c.version < fixtures.length) {
+        fixtures[c.version](c);
+        ++c.version;
+      }
+    }
 
     var config = null;
 
@@ -354,14 +383,26 @@ var $;
             alignCenter: {
               type: 'checkbox',
               value: config.alignCenter,
-              label: 'Align Image',
-              help: 'If this is enabled, NoPicAds will align image to the center and change background color if possible. (default: enabled)',
+              label: 'Align Center',
+              help: 'Align image to the center if possible. (default: enabled)',
+            },
+            changeBackground: {
+              type: 'checkbox',
+              value: config.changeBackground,
+              label: 'Change Background',
+              help: 'Change background color if possible. (default: enabled)',
             },
             redirectImage: {
               type: 'checkbox',
               value: config.redirectImage,
               label: 'Redirect Image',
-              help: 'If this is enabled, NoPicAds will open target image if possible. (default: enabled)',
+              help: 'Directly open image URL if possible. (default: enabled)',
+            },
+            scaleImage: {
+              type: 'checkbox',
+              value: config.scaleImage,
+              label: 'Scale Image',
+              help: 'Scale image to fit screen if possible. (default: enabled)',
             },
           },
         });
