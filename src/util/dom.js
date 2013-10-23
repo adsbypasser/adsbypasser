@@ -191,18 +191,7 @@ var $;
       }
     }
 
-    function alignCenter (d, i) {
-      $.removeNodes('style, link[rel=stylesheet]');
-
-      var imageStyle = GM.getResourceText('imageStyle');
-      GM.addStyle(imageStyle);
-
-      var bgImage = GM.getResourceURL('bgImage');
-      document.body.style.backgroundImage = _.T('url(\'{0}\')')(bgImage);
-
-      d.id = 'nopicads-wrapper';
-      i.id = 'nopicads-image';
-
+    function scaleImage (i) {
       if (i.naturalWidth && i.naturalHeight) {
         checkScaling.call(i);
       } else {
@@ -214,6 +203,24 @@ var $;
         window.clearTimeout(h);
         h = window.setTimeout(checkScaling.bind(i), 100);
       });
+    }
+
+    function changeBackground () {
+      var bgImage = GM.getResourceURL('bgImage');
+      document.body.style.backgroundColor = '#222222';
+      document.body.style.backgroundImage = _.T('url(\'{0}\')')(bgImage);
+    }
+
+    function alignCenter (d, i) {
+      d.id = 'nopicads-wrapper';
+      i.id = 'nopicads-image';
+    }
+
+    function injectStyle () {
+      $.removeNodes('style, link[rel=stylesheet]');
+
+      var imageStyle = GM.getResourceText('imageStyle');
+      GM.addStyle(imageStyle);
     }
 
     $.replace = function (imgSrc) {
@@ -239,8 +246,17 @@ var $;
       i.src = imgSrc;
       d.appendChild(i);
 
+      if (config.alignCenter || config.scaleImage) {
+        injectStyle();
+      }
       if (config.alignCenter) {
         alignCenter(d, i);
+      }
+      if (config.changeBackground) {
+        changeBackground();
+      }
+      if (config.scaleImage) {
+        scaleImage(i);
       }
     };
 
