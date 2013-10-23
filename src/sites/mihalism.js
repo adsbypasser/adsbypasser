@@ -1,64 +1,73 @@
-// mihalism v1
-$.register({
-  rule: {
-    host: /^(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics|funextra\.hostzi)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de|imagecurl\.(com|org)|imagevau\.eu|img\.deli\.sh|sangjkay\.biz$/,
-    path: /^\/viewer\.php$/,
-    query: /^\?file=([^&]+)/,
-  },
-  start: function (m) {
-    'use strict';
+(function () {
+  'use strict';
 
-    $.openImage('/images/' + m.query[1]);
-  },
-});
+  // mihalism v1
+  $.register({
+    rule: {
+      host: /^(pornpicuploader|imagepremium|hentai-hosting|gallery\.jpavgod|miragepics|funextra\.hostzi)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de|imagecurl\.(com|org)|imagevau\.eu|img\.deli\.sh|sangjkay\.biz$/,
+      path: /^\/viewer\.php$/,
+      query: /^\?file=([^&]+)/,
+    },
+    start: function (m) {
+      $.openLink('/images/' + m.query[1]);
+    },
+  });
 
-// mihalism v2
-$.register({
-  rule: {
-    host: /howtohemorrhoidscure\.com|javimage\.us/,
-    path: /^\/viewer\.php$/,
-    query: /^\?file=([^&]+)/,
-  },
-  ready: function () {
-    'use strict';
+  // mihalism v2
+  $.register({
+    rule: {
+      host: /^love69\.org$/,
+      path: /^\/i\/viewer\.php$/,
+      query: /^\?file=([^&]+)/,
+    },
+    start: function (m) {
+      $.openLink('/i/images/' + m.query[1]);
+    },
+  });
 
-    var a = $('#page_body a');
-    var s = a.href;
-    // the real link is diffirent from original host
-    a = s.lastIndexOf('http://');
-    if (a >= 0) {
-      $.openLink(s.substr(a));
-    }
-  },
-});
+  // mihalism v3
+  $.register({
+    rule: {
+      host: /howtohemorrhoidscure\.com|javimage\.us/,
+      path: /^\/viewer\.php$/,
+      query: /^\?file=([^&]+)/,
+    },
+    ready: function () {
+      var a = $('#page_body a');
+      var s = a.href;
+      // the real link is diffirent from original host
+      a = s.lastIndexOf('http://');
+      if (a >= 0) {
+        $.openLink(s.substr(a));
+      }
+    },
+  });
 
-// preview.jpavgod.com
-$.register({
-  rule: [
-    'http://hostpornpics.net/viewer.php?*file=*',
-    'http://preview.jpavgod.com/*.html',
-  ],
-  ready: function () {
-    'use strict';
+  // preview.jpavgod.com
+  $.register({
+    rule: [
+      'http://hostpornpics.net/viewer.php?*file=*',
+      'http://preview.jpavgod.com/*.html',
+    ],
+    ready: function () {
+      var i = $('#page_body div.text_align_center img');
+      $.openImage(i.src);
+    },
+  });
 
-    var i = $('#page_body div.text_align_center img');
-    $.openImage(i.src);
-  },
-});
+  // dwimg.com
+  $.register({
+    rule: {
+      host: /^dwimg\.com$/,
+      path: /^\/viewer\.php$/,
+      query: /^\?file=([^&]+)/,
+    },
+    start: function (m) {
+      $.openImage('/files/' + m.query[1]);
+    },
+  });
 
-// dwimg.com
-$.register({
-  rule: {
-    host: /^dwimg\.com$/,
-    path: /^\/viewer\.php$/,
-    query: /^\?file=([^&]+)/,
-  },
-  start: function (m) {
-    'use strict';
-
-    $.openImage('/files/' + m.query[1]);
-  },
-});
+})();
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
