@@ -1,5 +1,7 @@
 ## TBA
 
+* changed
+    * add config: change_background, scale_image
 * fixed
     * goimagehost.com
 * remove
