@@ -344,6 +344,7 @@ For more information, please see [Wiki].
     * ifotos.pl
     * iiiii.in
     * ima.so
+    * imadul.com
     * image18.org
     * image2you.ru
     * imagearn.com
@@ -368,6 +369,9 @@ For more information, please see [Wiki].
     * imgah.com
     * imgbabes.com
     * imgbar.net
+    * imgbin.me
+    * imgbox.com
+    * imgcarry.com
     * imgnip.com
     * imgpony.com
     * ity.im
