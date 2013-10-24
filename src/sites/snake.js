@@ -21,7 +21,7 @@
   }
   $.register({
     rule: {
-      host: /^www\.(imagesnake|freebunker)\.com$/,
+      host: /^www\.(imagesnake|freebunker|imgcarry)\.com$/,
       path: /^\/show\//,
     },
     ready: run,
