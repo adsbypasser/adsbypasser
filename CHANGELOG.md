@@ -1,4 +1,4 @@
-## TBA
+## 4.8.0
 
 * added
     * imgbin.me
