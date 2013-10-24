@@ -9,7 +9,7 @@
       query: /^\?file=([^&]+)/,
     },
     start: function (m) {
-      $.openLink('/images/' + m.query[1]);
+      $.openImage('/images/' + m.query[1]);
     },
   });
 
@@ -21,7 +21,7 @@
       query: /^\?file=([^&]+)/,
     },
     start: function (m) {
-      $.openLink('/i/images/' + m.query[1]);
+      $.openImage('/i/images/' + m.query[1]);
     },
   });
 

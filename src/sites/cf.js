@@ -6,7 +6,7 @@ $.register({
   start: function (m) {
     'use strict';
 
-    $.openLink('/?di=' + m.query[1]);
+    $.openImage('/?di=' + m.query[1]);
   },
 });
 

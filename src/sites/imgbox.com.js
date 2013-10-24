@@ -9,7 +9,7 @@ $.register({
     $.removeNodes('iframe');
 
     var i = $('#img');
-    $.openLink(i.src);
+    $.openImage(i.src);
   },
 });
 

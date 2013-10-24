@@ -8,7 +8,7 @@ $.register({
 
     // always jpg
     var tpl = _.T('/image/{0}.jpg');
-    $.openLink(tpl(m.path[1]));
+    $.openImage(tpl(m.path[1]));
   },
 });
 
