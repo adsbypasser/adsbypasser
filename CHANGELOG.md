@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * redirect policy on some sites
+
 ## 4.8.0
 
 * added
