@@ -1,3 +1,8 @@
+## TBA
+
+* added
+    * imgsavvy.com
+
 ## 4.8.0
 
 * added

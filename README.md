@@ -174,6 +174,7 @@ For more information, please see [Wiki].
     * imgnext.com
     * imgonion.com
     * imgrill.com
+    * imgsavvy.com
     * imgtube.net
     * pixup.us
 * picfox
