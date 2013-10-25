@@ -2,6 +2,7 @@
 
 * added
     * imgsavvy.com
+    * imgsin.com
 
 ## 4.8.0
 

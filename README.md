@@ -124,6 +124,7 @@ For more information, please see [Wiki].
     * imagecurl.com
     * imagecurl.org
     * imagepremium.com
+    * imgsin.com
     * javimage.us
     * love69.org
     * miragepics.com
