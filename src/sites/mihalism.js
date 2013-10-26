@@ -58,7 +58,7 @@
   // dwimg.com
   $.register({
     rule: {
-      host: /^dwimg\.com$/,
+      host: /^(dwimg|imgsin)\.com$/,
       path: /^\/viewer\.php$/,
       query: /^\?file=([^&]+)/,
     },

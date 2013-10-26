@@ -1,3 +1,10 @@
+## TBA
+
+* added
+    * imgsavvy.com
+    * imgsin.com
+    * sh.st
+
 ## 4.8.1
 
 * fixed

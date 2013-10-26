@@ -124,6 +124,7 @@ For more information, please see [Wiki].
     * imagecurl.com
     * imagecurl.org
     * imagepremium.com
+    * imgsin.com
     * javimage.us
     * love69.org
     * miragepics.com
@@ -174,6 +175,7 @@ For more information, please see [Wiki].
     * imgnext.com
     * imgonion.com
     * imgrill.com
+    * imgsavvy.com
     * imgtube.net
     * pixup.us
 * picfox
@@ -400,6 +402,7 @@ For more information, please see [Wiki].
     * screenlist.ru
     * seomafia.net
     * sexyimg.com
+    * sh.st
     * stash-coins.com
     * subirimagenes.com
     * thinfi.com

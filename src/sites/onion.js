@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^(img(onion|rill|money|corn|next)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us$/,
+    host: /^(img(onion|rill|money|corn|next|savvy)|image(corn|picsa)|www\.imagefolks)\.com|img(candy|tube)\.net|imgcloud\.co|pixup\.us$/,
     path: /^\/img-.*\.html$/,
   },
   ready: function () {
