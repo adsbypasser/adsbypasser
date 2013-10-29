@@ -6,6 +6,14 @@ $.register({
   ready: function () {
     'use strict';
 
+    $.removeNodes('iframe, #ad');
+
+    try {
+      $('#all').style.display = '';
+    } catch (e) {
+      // do nothing
+    }
+
     var o = $('#show_image');
     $.openImage(o.src);
   },
