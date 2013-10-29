@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * imgchili with deleted content
+
 ## 4.9.0
 
 * added
