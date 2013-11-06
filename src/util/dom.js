@@ -595,12 +595,12 @@ var $;
 
       var handler = findHandler();
       if (!handler) {
-        _.info('does not match on `%s`', window.location);
+        _.info('does not match on `%s`', window.location.toString());
         return;
       }
 
       config = load();
-      _.info('working on\n%s \nwith\n%o', window.location, config);
+      _.info('working on\n%s \nwith\n%o', window.location.toString(), config);
 
       disableWindowOpen();
 
