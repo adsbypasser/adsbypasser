@@ -2,6 +2,11 @@
 
 * fixed
     * imgchili with deleted content
+* added
+    * ksn.mx
+    * imgtheif.com
+    * ipic.su
+    * itmages.ru
 
 ## 4.9.0
 

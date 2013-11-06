@@ -59,6 +59,7 @@ For more information, please see [Wiki].
     * chathu.apkmania.co
     * go.phpnulledscripts.com
     * j.gs
+    * ksn.mx
     * q.gs
 * linkbucks
     * allanalpass.com
@@ -199,6 +200,7 @@ For more information, please see [Wiki].
     * fastpic.ru
     * imagebanana.com
     * imageup.ru
+    * itmages.ru
 * bc.vc
     * 1y.lt
     * adb.ug
@@ -376,6 +378,8 @@ For more information, please see [Wiki].
     * imgcarry.com
     * imgnip.com
     * imgpony.com
+    * imgtheif.com
+    * ipic.su
     * ity.im
     * javelite.tk
     * lienscash.com
