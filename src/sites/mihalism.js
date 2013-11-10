@@ -17,11 +17,12 @@
   $.register({
     rule: {
       host: /^love69\.org$/,
-      path: /^\/i\/viewer\.php$/,
+      path: /^\/(i|eu)\/viewer\.php$/,
       query: /^\?file=([^&]+)/,
     },
     start: function (m) {
-      $.openImage('/i/images/' + m.query[1]);
+      var url = _.T('/{0}/images/{1}');
+      $.openImage(url(m.path[1], m.query[1]));
     },
   });
 
