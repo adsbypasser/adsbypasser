@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var hostRule = /^adf\.(ly|acb\.im)|[jq]\.gs|go\.phpnulledscripts\.com|chathu\.apkmania\.co|ksn\.mx$/;
+  var hostRule = /^adf\.(ly|acb\.im|sazlina\.com)|[jq]\.gs|go\.phpnulledscripts\.com|chathu\.apkmania\.co|ksn\.mx$/;
 
   $.register({
     rule: {
