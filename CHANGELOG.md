@@ -1,3 +1,15 @@
+## TBA
+
+* fixed
+    * love69.org
+* added
+    * adf.acb.im
+    * adf.sazlina.com
+    * alien.apkmania.co
+    * goto.adflytutor.com
+    * dl.apkpro.net
+    * adfly.itsrinaldo.net
+
 ## 4.10.0
 
 * fixed

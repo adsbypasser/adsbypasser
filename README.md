@@ -55,9 +55,15 @@ For more information, please see [Wiki].
 
 * adfly
     * ad7.biz
+    * adf.acb.im
     * adf.ly
+    * adf.sazlina.com
+    * adfly.itsrinaldo.net
+    * alien.apkmania.co
     * chathu.apkmania.co
+    * dl.apkpro.net
     * go.phpnulledscripts.com
+    * goto.adflytutor.com
     * j.gs
     * ksn.mx
     * q.gs
