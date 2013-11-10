@@ -1,12 +1,13 @@
 (function () {
   'use strict';
 
-  var hostRule = /^adf\.(ly|acb\.im|sazlina\.com)|[jq]\.gs|go\.phpnulledscripts\.com|chathu\.apkmania\.co|ksn\.mx$/;
+  var hostRule = /^adf\.(ly|acb\.im|sazlina\.com)|[jq]\.gs|go\.phpnulledscripts\.com|(chathu|alien)\.apkmania\.co|ksn\.mx$/;
 
   $.register({
     rule: {
       host: hostRule,
-      path: /^\/([a-z\/]+)?$/,
+      // FIXME this pattern is not stable
+      path: /^\/([a-z\/]{2,})?$/,
     },
   });
 
