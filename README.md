@@ -136,6 +136,7 @@ For more information, please see [Wiki].
     * love69.org
     * miragepics.com
     * nixhelp.de
+    * picup.in
     * pornpicuploader.com
     * preview.jpavgod.com
     * sangjkay.biz
@@ -388,10 +389,12 @@ For more information, please see [Wiki].
     * ipic.su
     * ity.im
     * javelite.tk
+    * keptarolo.hu
     * lienscash.com
     * link2you.ru
     * lix.in
     * lnk.in
+    * lostpic.net
     * madlink.sk
     * nsfw.in
     * nutshellurl.com

@@ -1,3 +1,10 @@
+## TBA
+
+* added
+    * picup.in
+    * keptarolo.hu
+    * lostpic.net
+
 ## 4.11.0
 
 * fixed
