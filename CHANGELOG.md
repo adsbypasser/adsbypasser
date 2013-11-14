@@ -1,3 +1,8 @@
+## TBA
+
+* added
+    * xlocker.net
+
 ## 4.12.0
 
 * added

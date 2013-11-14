@@ -272,6 +272,7 @@ For more information, please see [Wiki].
     * imagenpic.com
     * imagetwist.com
     * imgpo.st
+    * xlocker.net
 * b4he
     * b4he.com
     * fastpics.net
