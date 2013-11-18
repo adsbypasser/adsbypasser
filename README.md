@@ -179,6 +179,7 @@ For more information, please see [Wiki].
     * imgcandy.net
     * imgcloud.co
     * imgcorn.com
+    * imgmaster.net
     * imgmoney.com
     * imgnext.com
     * imgonion.com

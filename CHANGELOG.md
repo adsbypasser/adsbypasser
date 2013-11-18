@@ -2,6 +2,7 @@
 
 * added
     * xlocker.net
+    * imgmaster.net
 
 ## 4.12.0
 
