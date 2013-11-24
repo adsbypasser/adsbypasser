@@ -137,12 +137,8 @@ For more information, please see [Wiki].
     * miragepics.com
     * nixhelp.de
     * picup.in
-    * pornpicuploader.com
-    * preview.jpavgod.com
-    * sangjkay.biz
     * shareimage.ro
 * reklama
-    * comicalpic.net
     * croftimage.com
     * gallerycloud.net
     * hotimages.eu
@@ -170,7 +166,6 @@ For more information, please see [Wiki].
     * imgjav.tk
     * imgurban.info
     * imgwiev.tk
-    * thasnasty.com
     * x45x.info
 * imgonion
     * imagecorn.com
@@ -223,20 +218,16 @@ For more information, please see [Wiki].
     * fly2url.com
     * hit.us
     * juuh.de
-    * kly.so
     * link.tl
     * myam.me
-    * raksoyun.com
     * short.pk
     * shortit.in
     * ssl.gs
-    * tc.gg
     * tr5.in
     * ultry.net
     * urlwiz.com
     * wwy.me
     * xip.ir
-    * youlinking.com
     * zpoz.net
 * coinurl
     * coinurl.com
@@ -289,14 +280,12 @@ For more information, please see [Wiki].
     * fotoszok.pl
     * hornyimage.com
     * imagestime.com
-* eropix
-    * eropix.me
+* freakimage
     * freakimage.com
     * hostpic.org
 * imagevenue
     * imagevenue.com
     * hotchyx.com
-    * freeporndumpster.com
     * hostingfailov.com
 * imgfantasy
     * imgfantasy.com
@@ -326,11 +315,9 @@ For more information, please see [Wiki].
     * bilder-space.de
     * bilder-upload.eu
     * bildr.no
-    * bilurl.com
     * blackcatpix.com
     * casimages.com
     * cf.ly
-    * cl.my
     * cli.gs
     * comyonet.com
     * cubeupload.com
@@ -379,14 +366,12 @@ For more information, please see [Wiki].
     * img.acianetmedia.com
     * img.deli.sh
     * img1.imagilive.com
-    * imgah.com
     * imgbabes.com
     * imgbar.net
     * imgbin.me
     * imgbox.com
     * imgcarry.com
     * imgnip.com
-    * imgpony.com
     * imgtheif.com
     * ipic.su
     * ity.im
@@ -416,7 +401,6 @@ For more information, please see [Wiki].
     * robo.us
     * screenlist.ru
     * seomafia.net
-    * sexyimg.com
     * sh.st
     * stash-coins.com
     * subirimagenes.com

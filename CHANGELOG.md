@@ -3,6 +3,23 @@
 * added
     * xlocker.net
     * imgmaster.net
+* removed
+    * pornpicuploader.com
+    * preview.jpavgod.com
+    * sangjkay.biz
+    * comicalpic.net
+    * imagehost.thasnasty.com
+    * kly.so
+    * raksoyun.com
+    * youlinking.com
+    * tc.gg
+    * eropix.me
+    * freeporndumpster.com
+    * bilurl.com
+    * cl.my
+    * imgah.com
+    * imgpony.com
+    * sexyimg.com
 
 ## 4.12.0
 
