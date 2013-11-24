@@ -9,7 +9,7 @@ module.exports = function (grunt) {
         dest: 'dest/util',
       },
       sites: {
-        src: ['src/sites/*.js'],
+        src: ['src/sites/*/*.js'],
         dest: 'dest/sites',
       },
     },
