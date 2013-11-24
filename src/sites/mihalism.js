@@ -44,11 +44,10 @@
     },
   });
 
-  // preview.jpavgod.com
+  // hostpornpics.net
   $.register({
     rule: [
       'http://hostpornpics.net/viewer.php?*file=*',
-      'http://preview.jpavgod.com/*.html',
     ],
     ready: function () {
       var i = $('#page_body div.text_align_center img');
