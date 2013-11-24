@@ -287,8 +287,9 @@ For more information, please see [Wiki].
     * hotchyx.com
     * hostingfailov.com
 * imgfantasy
-    * imgfantasy.com
     * imagedomino.com
+    * imgfantasy.com
+    * imgsure.com
 * else
     * 1be.biz
     * 1pics.ru

@@ -1,3 +1,8 @@
+## TBA
+
+* added
+    * imgsure.com
+
 ## 4.13.0
 
 * added
