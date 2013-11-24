@@ -133,6 +133,7 @@ For more information, please see [Wiki].
     * imagecurl.org
     * imagepremium.com
     * imageview.me
+    * imgnip.com
     * imgsin.com
     * javimage.us
     * love69.org
@@ -370,7 +371,6 @@ For more information, please see [Wiki].
     * imgbin.me
     * imgbox.com
     * imgcarry.com
-    * imgnip.com
     * imgtheif.com
     * ipic.su
     * ity.im
