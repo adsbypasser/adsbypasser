@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var host = /^(imgfantasy|imagedomino)\.com$/;
+  var host = /^(img(fantasy|sure)|imagedomino)\.com$/;
 
   $.register({
     rule: {
