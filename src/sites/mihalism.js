@@ -1,6 +1,10 @@
 (function () {
   'use strict';
 
+  function helper (m) {
+    $.openImage('/images/' + m.query[1]);
+  }
+
   // mihalism v1
   $.register({
     rule: {
@@ -8,9 +12,7 @@
       path: /^\/viewer\.php$/,
       query: /^\?file=([^&]+)/,
     },
-    start: function (m) {
-      $.openImage('/images/' + m.query[1]);
-    },
+    start: helper,
   });
 
   // mihalism v2
@@ -82,6 +84,16 @@
         $.openImage(s.substr(a));
       }
     },
+  });
+
+  // imageview.me
+  $.register({
+    rule: {
+      host: /imageview\.me$/,
+      path: /^\/viewerr\.php$/,
+      query: /^\?file=([^&]+)/,
+    },
+    start: helper,
   });
 
 })();
