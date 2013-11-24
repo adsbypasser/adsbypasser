@@ -3,7 +3,6 @@ $.register({
   rule: [
     'http://*.imagevenue.com/img.php?*',
     'http://hotchyx.com/d/adult-image-hosting-view-08.php?id=*',
-    'http://www.freeporndumpster.com/show.php?*',
     'http://www.hostingfailov.com/photo/*',
   ],
   ready: function () {
