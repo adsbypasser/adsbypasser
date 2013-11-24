@@ -121,6 +121,7 @@ For more information, please see [Wiki].
     * zff.co
     * zxxo.net
 * Mihalism Multi Host
+    * 244pix.com
     * dwimg.com
     * freeuploadimages.org
     * gallery.jpavgod.com
@@ -131,6 +132,7 @@ For more information, please see [Wiki].
     * imagecurl.com
     * imagecurl.org
     * imagepremium.com
+    * imageview.me
     * imgsin.com
     * javimage.us
     * love69.org
@@ -315,6 +317,7 @@ For more information, please see [Wiki].
     * casimages.com
     * cf.ly
     * cli.gs
+    * cliquesbr.com.br
     * comyonet.com
     * cubeupload.com
     * cyberpics.net

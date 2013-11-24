@@ -3,6 +3,9 @@
 * added
     * xlocker.net
     * imgmaster.net
+    * cliquesbr.com.br
+    * imageview.me
+    * 244pix.com
 * removed
     * pornpicuploader.com
     * preview.jpavgod.com
