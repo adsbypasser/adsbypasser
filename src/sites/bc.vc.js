@@ -89,7 +89,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(fly2url|urlwiz)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|(ssl|adfro)\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru|juuh\.de|www\.adjet\.eu|1y\.lt|hit\.us|shortit\.in$/,
+      host: /^adcrun\.ch|(fly2url|urlwiz)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|(ssl|adfro)\.gs|link\.tl|bih\.cc|xip\.ir|www\.budurl\.ru|juuh\.de|www\.adjet\.eu|hit\.us|shortit\.in$/,
       path: /^\/.+/,
     },
     ready: run,
