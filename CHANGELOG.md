@@ -2,6 +2,8 @@
 
 * added
     * imgsure.com
+* changed
+    * re-organize source files
 
 ## 4.13.0
 
