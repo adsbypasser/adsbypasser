@@ -205,16 +205,12 @@ For more information, please see [Wiki].
     * imageup.ru
     * itmages.ru
 * bc.vc
-    * 1y.lt
     * adb.ug
     * adcrun.ch
     * adfro.gs
     * adjet.eu
     * adli.pw
     * bc.vc
-    * biaiai.com
-    * bih.cc
-    * budurl.ru
     * fly2url.com
     * hit.us
     * juuh.de

@@ -20,6 +20,10 @@
     * imgah.com
     * imgpony.com
     * sexyimg.com
+    * 1y.lt
+    * biaiai.com
+    * bih.cc
+    * budurl.ru
 
 ## 4.12.0
 
