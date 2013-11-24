@@ -89,8 +89,8 @@
   // imageview.me
   $.register({
     rule: {
-      host: /imageview\.me|244pix\.com$/,
-      path: /^\/viewerr\.php$/,
+      host: /imageview\.me|244pix\.com|imgnip\.com$/,
+      path: /^\/viewerr.*\.php$/,
       query: /^\?file=([^&]+)/,
     },
     start: helper,
