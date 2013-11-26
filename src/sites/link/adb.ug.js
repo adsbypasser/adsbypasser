@@ -9,7 +9,7 @@
       var script = $.$$('script').find(function (v) {
         return v.innerHTML.indexOf('_args') >= 0;
       });
-      var m = script.innerHTML.match('\{_args.+\}\}');
+      var m = script.innerHTML.match(/\{_args.+\}\}/);
       if (!m) {
         throw new _.NoPicAdsError('script content changed');
       }

@@ -353,7 +353,7 @@ var $;
       GM.setValue('change_background', c.changeBackground);
       GM.setValue('redirect_image', c.redirectImage);
       GM.setValue('scale_image', c.scaleImage);
-    };
+    }
 
     function fixup (c) {
       var fixtures = [

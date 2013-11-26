@@ -1,6 +1,6 @@
 $.register({
   rule: {
-  	host: /^link2you\.ru$/,
+    host: /^link2you\.ru$/,
     path: /^\/\d+\/(.+)$/,
   },
   start: function (m) {
