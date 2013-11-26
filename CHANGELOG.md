@@ -2,6 +2,10 @@
 
 * added
     * imgsure.com
+    * imgdollar.com
+    * mrjh.org
+    * myhotimage.com
+    * mypixxx.lonestarnaughtygirls.com
 * changed
     * re-organize source files
 

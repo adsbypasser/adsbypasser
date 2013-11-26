@@ -149,6 +149,7 @@ For more information, please see [Wiki].
     * imageontime.com
     * imgadult.com
     * imgserve.net
+    * myhotimage.com
     * zeljeimage.com
     * zonezeedimage.com
 * imageporter
@@ -169,6 +170,7 @@ For more information, please see [Wiki].
     * imgjav.tk
     * imgurban.info
     * imgwiev.tk
+    * mypixxx.lonestarnaughtygirls.com
     * x45x.info
 * imgonion
     * imagecorn.com
@@ -370,6 +372,7 @@ For more information, please see [Wiki].
     * imgbabes.com
     * imgbar.net
     * imgbin.me
+    * imgdollar.com
     * imgbox.com
     * imgcarry.com
     * imgtheif.com
@@ -383,6 +386,7 @@ For more information, please see [Wiki].
     * lnk.in
     * lostpic.net
     * madlink.sk
+    * mrjh.org
     * nsfw.in
     * nutshellurl.com
     * p.pw
