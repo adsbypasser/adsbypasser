@@ -139,6 +139,7 @@ For more information, please see [Wiki].
     * love69.org
     * miragepics.com
     * nixhelp.de
+    * overpic.net
     * picup.in
     * shareimage.ro
 * reklama
@@ -193,6 +194,7 @@ For more information, please see [Wiki].
     * freeimage.us
     * gratisimage.dk
     * images.maxigame.by
+    * npicture.net
     * picfox.org
 * imgchili
     * imgchili.com
@@ -276,6 +278,7 @@ For more information, please see [Wiki].
     * emptypix.com
     * flickimg.com
     * fotohosting.net
+    * overdream.cz
 * fotoo
     * fotoo.pl
     * fotoszok.pl
@@ -390,6 +393,7 @@ For more information, please see [Wiki].
     * nsfw.in
     * nutshellurl.com
     * p.pw
+    * pic-money.ru
     * pic-upload.de
     * picmoe.net
     * pics-money.ru

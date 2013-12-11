@@ -2,6 +2,10 @@
 
 * added
     * shr77.com
+    * npicture.net
+    * overdream.cz
+    * overpic.net
+    * pic-money.ru
 
 ## 4.14.0
 
