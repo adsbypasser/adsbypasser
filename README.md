@@ -406,6 +406,7 @@ For more information, please see [Wiki].
     * screenlist.ru
     * seomafia.net
     * sh.st
+    * shr77.com
     * stash-coins.com
     * subirimagenes.com
     * thinfi.com

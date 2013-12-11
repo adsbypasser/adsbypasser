@@ -1,3 +1,8 @@
+## TBA
+
+* added
+    * shr77.com
+
 ## 4.14.0
 
 * added
