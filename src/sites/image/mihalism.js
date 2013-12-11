@@ -96,6 +96,17 @@
     start: helper,
   });
 
+  // overpic.net
+  $.register({
+    rule: [
+      'http://www.overpic.net/viewer.php?file=*',
+    ],
+    ready: function () {
+      var i = $('#main_img');
+      $.openImage(i.src);
+    },
+  });
+
 })();
 
 // ex: ts=2 sts=2 sw=2 et
