@@ -122,6 +122,7 @@ For more information, please see [Wiki].
     * zxxo.net
 * Mihalism Multi Host
     * 244pix.com
+    * catpic.biz
     * dwimg.com
     * freeuploadimages.org
     * gallery.jpavgod.com
@@ -144,6 +145,7 @@ For more information, please see [Wiki].
     * shareimage.ro
 * reklama
     * croftimage.com
+    * damimage.com
     * gallerycloud.net
     * hotimages.eu
     * imagedecode.com
@@ -187,6 +189,7 @@ For more information, please see [Wiki].
     * imgrill.com
     * imgsavvy.com
     * imgtube.net
+    * imgult.com
     * pixup.us
 * picfox
     * amateurfreak.org
@@ -325,6 +328,7 @@ For more information, please see [Wiki].
     * cf.ly
     * cli.gs
     * cliquesbr.com.br
+    * cloudimg.net
     * comyonet.com
     * cubeupload.com
     * cyberpics.net

@@ -1,3 +1,11 @@
+## TBA
+
+* added
+    * damimage.com
+    * cloudimg.net
+    * catpic.biz
+    * imgult.com
+
 ## 4.15.0
 
 * added
