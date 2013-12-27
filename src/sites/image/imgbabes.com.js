@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.imgbabes\.com$/,
+    host: /^www\.img(babes|flare)\.com$/,
   },
   ready: function () {
     'use strict';
