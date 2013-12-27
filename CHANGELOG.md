@@ -5,6 +5,9 @@
     * cloudimg.net
     * catpic.biz
     * imgult.com
+    * javpicture.us
+    * imgflare.com
+    * img3x.net
 
 ## 4.15.0
 

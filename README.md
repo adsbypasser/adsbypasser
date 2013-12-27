@@ -137,6 +137,7 @@ For more information, please see [Wiki].
     * imgnip.com
     * imgsin.com
     * javimage.us
+    * javpicture.us
     * love69.org
     * miragepics.com
     * nixhelp.de
@@ -298,6 +299,9 @@ For more information, please see [Wiki].
     * imagedomino.com
     * imgfantasy.com
     * imgsure.com
+* imgbabes
+    * imgbabes.com
+    * imgflare.com
 * else
     * 1be.biz
     * 1pics.ru
@@ -376,12 +380,12 @@ For more information, please see [Wiki].
     * img.acianetmedia.com
     * img.deli.sh
     * img1.imagilive.com
-    * imgbabes.com
+    * img3x.net
     * imgbar.net
     * imgbin.me
-    * imgdollar.com
     * imgbox.com
     * imgcarry.com
+    * imgdollar.com
     * imgtheif.com
     * ipic.su
     * ity.im
