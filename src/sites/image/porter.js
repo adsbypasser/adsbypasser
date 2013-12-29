@@ -2,7 +2,7 @@
   'use strict';
 
   function run () {
-    var o = $('center img[id]');
+    var o = $('#download_box img');
     $.openImage(o.src);
   }
 
