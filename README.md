@@ -136,6 +136,7 @@ For more information, please see [Wiki].
     * imageview.me
     * imgnip.com
     * imgsin.com
+    * javblog.biz
     * javimage.us
     * javpicture.us
     * love69.org
@@ -161,6 +162,7 @@ For more information, please see [Wiki].
     * imagedunk.com
     * imageporter.com
     * imageswitch.com
+    * imgspice.com
     * piclambo.net
     * picleet.com
     * picturedip.com

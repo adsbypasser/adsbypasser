@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * imageporter.com
+* added
+    * javblog.biz
+    * imgspice.com
+
 ## 4.16.0
 
 * added
