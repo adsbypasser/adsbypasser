@@ -96,6 +96,18 @@
     start: helper,
   });
 
+  // javblog.biz
+  $.register({
+    rule: {
+      host: /javblog\.biz$/,
+      path: /^\/image\/viewer\.php$/,
+      query: /^\?file=([^&]+)/,
+    },
+    start: function (m) {
+      $.openImage('/image/images/' + m.query[1]);
+    },
+  });
+
   // catpic.biz
   $.register({
     rule: {
