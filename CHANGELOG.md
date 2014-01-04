@@ -1,3 +1,12 @@
+# TBA
+
+* added
+    * imgvault.pw
+    * imagepong.info
+    * imageback.info
+    * imagebam.com
+    * img.spicyzilla.com
+
 ## 4.17.0
 
 * fixed

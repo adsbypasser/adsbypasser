@@ -130,8 +130,10 @@ For more information, please see [Wiki].
     * hostpornpics.net
     * hostzi.com
     * howtohemorrhoidscure.com
+    * imageback.info
     * imagecurl.com
     * imagecurl.org
+    * imagepong.info
     * imagepremium.com
     * imageview.me
     * imgnip.com
@@ -182,6 +184,7 @@ For more information, please see [Wiki].
     * imagecorn.com
     * imagefolks.com
     * imagepicsa.com
+    * img.spicyzilla.com
     * imgcandy.net
     * imgcloud.co
     * imgcorn.com
@@ -364,6 +367,7 @@ For more information, please see [Wiki].
     * image18.org
     * image2you.ru
     * imagearn.com
+    * imagebam.com
     * imageban.net
     * imageban.ru
     * imagehosting.gr
@@ -389,6 +393,7 @@ For more information, please see [Wiki].
     * imgcarry.com
     * imgdollar.com
     * imgtheif.com
+    * imgvault.pw
     * ipic.su
     * ity.im
     * javelite.tk
