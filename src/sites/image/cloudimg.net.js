@@ -1,5 +1,8 @@
 $.register({
-  rule: 'http://cloudimg.net/img-*.jpeg',
+  rule: {
+    host: /^cloudimg\.net|imageheli\.com$/,
+    path: /^\/img-.*\.jpeg$/,
+  },
   ready: function () {
     'use strict';
 
