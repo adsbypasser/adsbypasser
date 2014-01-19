@@ -145,6 +145,7 @@ For more information, please see [Wiki].
     * miragepics.com
     * nixhelp.de
     * overpic.net
+    * photoup.biz
     * picup.in
     * shareimage.ro
 * reklama
@@ -154,6 +155,7 @@ For more information, please see [Wiki].
     * hotimages.eu
     * imagedecode.com
     * imageontime.com
+    * img-zone.com
     * imgadult.com
     * imgserve.net
     * myhotimage.com
@@ -181,6 +183,7 @@ For more information, please see [Wiki].
     * mypixxx.lonestarnaughtygirls.com
     * x45x.info
 * imgonion
+    * hosturimage.com
     * imagecorn.com
     * imagefolks.com
     * imagepicsa.com
@@ -307,6 +310,9 @@ For more information, please see [Wiki].
 * imgbabes
     * imgbabes.com
     * imgflare.com
+* cloudimg
+    * cloudimg.net
+    * imageheli.com
 * else
     * 1be.biz
     * 1pics.ru
@@ -337,7 +343,6 @@ For more information, please see [Wiki].
     * cf.ly
     * cli.gs
     * cliquesbr.com.br
-    * cloudimg.net
     * comyonet.com
     * cubeupload.com
     * cyberpics.net

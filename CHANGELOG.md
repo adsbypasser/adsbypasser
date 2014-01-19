@@ -1,3 +1,11 @@
+## TBA
+
+* added
+    * hosturimage.com
+    * imageheli.com
+    * photoup.biz
+    * img-zone.com
+
 ## 4.18.0
 
 * added
