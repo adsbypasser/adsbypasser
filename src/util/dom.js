@@ -310,6 +310,10 @@ var $;
     };
 
     $.captcha = function (imgSrc, cb) {
+      if (!config.externalServerSupport) {
+        return;
+      }
+
       var a = document.createElement('canvas');
       var b = a.getContext('2d');
       var c = new Image();
