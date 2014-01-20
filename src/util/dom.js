@@ -339,6 +339,7 @@ var $;
         version: GM.getValue('version', 0),
         alignCenter: GM.getValue('align_center'),
         changeBackground: GM.getValue('change_background'),
+        externalServerSupport: GM.getValue('external_server_support'),
         redirectImage: GM.getValue('redirect_image'),
         scaleImage: GM.getValue('scale_image'),
       };
@@ -351,6 +352,7 @@ var $;
       GM.setValue('version', c.version);
       GM.setValue('align_center', c.alignCenter);
       GM.setValue('change_background', c.changeBackground);
+      GM.setValue('external_server_support', c.externalServerSupport);
       GM.setValue('redirect_image', c.redirectImage);
       GM.setValue('scale_image', c.scaleImage);
     }
@@ -370,6 +372,11 @@ var $;
           }
           if (typeof c.redirectImage === 'undefined') {
             c.redirectImage = true;
+          }
+        },
+        function (c) {
+          if (typeof c.externalServerSupport === 'undefined') {
+            c.externalServerSupport = false;
           }
         },
       ];
@@ -422,6 +429,16 @@ var $;
               value: config.scaleImage,
               label: 'Scale Image',
               help: 'Scale image to fit screen if possible. (default: enabled)',
+            },
+            externalServerSupport: {
+              type: 'checkbox',
+              value: config.externalServerSupport,
+              label: 'External Server Support',
+              help: [
+                'Send URL information to external server to enhance features. (default: disabled)',
+                'Effected sites:',
+                'url.so',
+              ].join('<br/>\n'),
             },
           },
         });
