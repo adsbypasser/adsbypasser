@@ -5,6 +5,9 @@
     * imageheli.com
     * photoup.biz
     * img-zone.com
+* changed
+    * add "external server support" option
+    * disable captcha support if above option disabled
 
 ## 4.18.0
 
