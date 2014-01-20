@@ -439,9 +439,9 @@ var $;
               value: config.externalServerSupport,
               label: 'External Server Support',
               help: [
-                'Send URL information to external server to enhance features. (default: disabled)',
+                'Send URL information to external server to enhance features (e.g.: captcha resolving). (default: disabled)',
                 'Effected sites:',
-                'url.so',
+                'url.so (captcha will not function)',
               ].join('<br/>\n'),
             },
           },
