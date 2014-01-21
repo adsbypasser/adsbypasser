@@ -420,19 +420,22 @@ var $;
               type: 'checkbox',
               value: config.changeBackground,
               label: 'Change Background',
-              help: 'Change background color if possible. (default: enabled)',
+              help: 'Use Firefox-like image background if possible. (default: enabled)',
             },
             redirectImage: {
               type: 'checkbox',
               value: config.redirectImage,
               label: 'Redirect Image',
-              help: 'Directly open image URL if possible. (default: enabled)',
+              help: [
+                'Directly open image link if possible. (default: enabled)',
+                'If disabled, redirection will only works on link shortener sites.',
+              ].join('<br/>\n'),
             },
             scaleImage: {
               type: 'checkbox',
               value: config.scaleImage,
               label: 'Scale Image',
-              help: 'Scale image to fit screen if possible. (default: enabled)',
+              help: 'When image loaded, scale it to fit window if possible. (default: enabled)',
             },
             externalServerSupport: {
               type: 'checkbox',
@@ -440,8 +443,8 @@ var $;
               label: 'External Server Support',
               help: [
                 'Send URL information to external server to enhance features (e.g.: captcha resolving). (default: disabled)',
-                'Effected sites:',
-                'url.so (captcha will not function)',
+                'Affected sites:',
+                'urlz.so (captcha)',
               ].join('<br/>\n'),
             },
           },
