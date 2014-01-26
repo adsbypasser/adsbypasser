@@ -128,7 +128,7 @@ For more information, please see [Wiki].
     * gallery.jpavgod.com
     * hentai-hosting.com
     * hostpornpics.net
-    * hostzi.com
+    * funextra.hostzi.com
     * howtohemorrhoidscure.com
     * imageback.info
     * imagecurl.com
