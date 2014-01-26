@@ -69,23 +69,6 @@
     },
   });
 
-  // picup.in
-  $.register({
-    rule: {
-      host: /^picup\.in$/,
-      path: /\.jpg\.html$/,
-    },
-    ready: function () {
-      var a = $('#page_body br+a');
-      var s = a.href;
-      // the real link is diffirent from original host
-      a = s.lastIndexOf('http://');
-      if (a >= 0) {
-        $.openImage(s.substr(a));
-      }
-    },
-  });
-
   // imageview.me
   $.register({
     rule: {
