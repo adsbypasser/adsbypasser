@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^urlcow\.com$/,
+    host: /^(urlcow|miniurl)\.com$/,
   },
   ready: function () {
     'use strict';
