@@ -8,7 +8,7 @@
   // mihalism v1
   $.register({
     rule: {
-      host: /^(imagepremium|hentai-hosting|gallery\.jpavgod|miragepics|funextra\.hostzi)\.com|freeuploadimages\.org|shareimage\.ro|bilder\.nixhelp\.de|imagecurl\.(com|org)|imagevau\.eu|img\.deli\.sh|javpicture\.us|image(pong|back)\.info|photoup\.biz$/,
+      host: /^(imagepremium|hentai-hosting|gallery\.jpavgod|miragepics|funextra\.hostzi)\.com|bilder\.nixhelp\.de|imagecurl\.(com|org)|imagevau\.eu|img\.deli\.sh|imgking\.us|image(pong|back)\.info|photoup\.biz$/,
       path: /^\/viewer\.php$/,
       query: /^\?file=([^&]+)/,
     },
@@ -25,24 +25,6 @@
     start: function (m) {
       var url = _.T('/{0}/images/{1}');
       $.openImage(url(m.path[1], m.query[1]));
-    },
-  });
-
-  // mihalism v3
-  $.register({
-    rule: {
-      host: /howtohemorrhoidscure\.com|javimage\.us/,
-      path: /^\/viewer\.php$/,
-      query: /^\?file=([^&]+)/,
-    },
-    ready: function () {
-      var a = $('#page_body a');
-      var s = a.href;
-      // the real link is diffirent from original host
-      a = s.lastIndexOf('http://');
-      if (a >= 0) {
-        $.openLink(s.substr(a));
-      }
     },
   });
 
@@ -69,23 +51,6 @@
     },
   });
 
-  // picup.in
-  $.register({
-    rule: {
-      host: /^picup\.in$/,
-      path: /\.jpg\.html$/,
-    },
-    ready: function () {
-      var a = $('#page_body br+a');
-      var s = a.href;
-      // the real link is diffirent from original host
-      a = s.lastIndexOf('http://');
-      if (a >= 0) {
-        $.openImage(s.substr(a));
-      }
-    },
-  });
-
   // imageview.me
   $.register({
     rule: {
@@ -94,18 +59,6 @@
       query: /^\?file=([^&]+)/,
     },
     start: helper,
-  });
-
-  // javblog.biz
-  $.register({
-    rule: {
-      host: /javblog\.biz$/,
-      path: /^\/image\/viewer\.php$/,
-      query: /^\?file=([^&]+)/,
-    },
-    start: function (m) {
-      $.openImage('/image/images/' + m.query[1]);
-    },
   });
 
   // catpic.biz

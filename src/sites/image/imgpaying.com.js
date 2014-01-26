@@ -1,12 +1,18 @@
 $.register({
   rule: {
-    host: /^www\.viidii\.com$/,
+    host: /^imgpaying\.com$/,
   },
   ready: function () {
     'use strict';
 
-    var o = $('#directlink');
-    $.openLink(o.href);
+    var i = $.$('img.pic');
+    if (!i) {
+      // first stage
+      i = $('form');
+      i.submit();
+      return;
+    }
+    $.openImage(i.src);
   },
 });
 

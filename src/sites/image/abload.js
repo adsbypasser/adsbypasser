@@ -2,7 +2,6 @@ $.register({
   rule: [
     'http://*.abload.de/image.php?img=*',
     'http://fastpic.ru/view/*.html',
-    'http://www.imagebanana.com/view/*',
     'http://www.imageup.ru/*/*/*.html',
     'http://itmages.ru/image/view/*/*',  // different layout same handler
   ],

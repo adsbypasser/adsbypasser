@@ -2,6 +2,8 @@
   'use strict';
 
   function run () {
+    // dirty hack
+    unsafeWindow.$ = undefined;
     var i = $('img.pic');
     $.replace(i.src);
   }
@@ -16,7 +18,7 @@
 
   $.register({
     rule: {
-      host: /^image(twist|cherry)\.com|imgpo\.st|xlocker\.net$/,
+      host: /^image(twist|cherry)\.com|xlocker\.net$/,
     },
     ready: run,
   });
