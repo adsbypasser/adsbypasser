@@ -31,7 +31,7 @@
   // mihalism v3
   $.register({
     rule: {
-      host: /howtohemorrhoidscure\.com|javimage\.us/,
+      host: /howtohemorrhoidscure\.com/,
       path: /^\/viewer\.php$/,
       query: /^\?file=([^&]+)/,
     },
