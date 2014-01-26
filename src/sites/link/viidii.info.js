@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.viidii\.com$/,
+    host: /^www\.viidii\.info$/,
   },
   ready: function () {
     'use strict';
