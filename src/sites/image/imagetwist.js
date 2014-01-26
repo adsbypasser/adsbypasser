@@ -2,6 +2,8 @@
   'use strict';
 
   function run () {
+    // dirty hack
+    unsafeWindow.$ = undefined;
     var i = $('img.pic');
     $.replace(i.src);
   }
