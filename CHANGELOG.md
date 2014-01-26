@@ -1,3 +1,13 @@
+## TBA
+
+* fixed
+    * allanalpass.com
+    * xlocker.net
+* added
+    * imgking.us
+    * bulkimg.info
+    * imgpaying.com
+
 ## 4.19.0
 
 * added

@@ -136,6 +136,7 @@ For more information, please see [Wiki].
     * imagepong.info
     * imagepremium.com
     * imageview.me
+    * imgking.us
     * imgnip.com
     * imgsin.com
     * javblog.biz
@@ -149,6 +150,7 @@ For more information, please see [Wiki].
     * picup.in
     * shareimage.ro
 * reklama
+    * bulkimg.info
     * croftimage.com
     * damimage.com
     * gallerycloud.net
@@ -397,6 +399,7 @@ For more information, please see [Wiki].
     * imgbox.com
     * imgcarry.com
     * imgdollar.com
+    * imgpaying.com
     * imgtheif.com
     * imgvault.pw
     * ipic.su
