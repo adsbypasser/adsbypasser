@@ -2,11 +2,29 @@
 
 * fixed
     * allanalpass.com
+    * some linkbucks issue
     * xlocker.net
 * added
     * imgking.us
     * bulkimg.info
     * imgpaying.com
+    * viidii.info
+    * urlcow.com
+    * miniurl.com
+* removed
+    * imagebanana.com
+    * adfro.gs
+    * juuh.de
+    * javimage.us
+    * javpicture.us
+    * imgpo.st
+    * imgurban.info
+    * picup.in
+    * shareimage.ro
+    * javblog.biz
+    * howtohemorrhoidscure.com
+    * freeuploadimages.org
+    * viidii.com
 
 ## 4.19.0
 

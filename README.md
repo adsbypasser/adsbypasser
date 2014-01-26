@@ -124,12 +124,10 @@ For more information, please see [Wiki].
     * 244pix.com
     * catpic.biz
     * dwimg.com
-    * freeuploadimages.org
     * gallery.jpavgod.com
     * hentai-hosting.com
     * hostpornpics.net
     * funextra.hostzi.com
-    * howtohemorrhoidscure.com
     * imageback.info
     * imagecurl.com
     * imagecurl.org
@@ -139,16 +137,11 @@ For more information, please see [Wiki].
     * imgking.us
     * imgnip.com
     * imgsin.com
-    * javblog.biz
-    * javimage.us
-    * javpicture.us
     * love69.org
     * miragepics.com
     * nixhelp.de
     * overpic.net
     * photoup.biz
-    * picup.in
-    * shareimage.ro
 * reklama
     * bulkimg.info
     * croftimage.com
@@ -180,7 +173,6 @@ For more information, please see [Wiki].
     * ghanaimages.co
     * images.woh.to
     * imgjav.tk
-    * imgurban.info
     * imgwiev.tk
     * mypixxx.lonestarnaughtygirls.com
     * x45x.info
@@ -222,19 +214,16 @@ For more information, please see [Wiki].
 * abload
     * abload.de
     * fastpic.ru
-    * imagebanana.com
     * imageup.ru
     * itmages.ru
 * bc.vc
     * adb.ug
     * adcrun.ch
-    * adfro.gs
     * adjet.eu
     * adli.pw
     * bc.vc
     * fly2url.com
     * hit.us
-    * juuh.de
     * link.tl
     * myam.me
     * short.pk
@@ -280,7 +269,6 @@ For more information, please see [Wiki].
     * imagecherry.com
     * imagenpic.com
     * imagetwist.com
-    * imgpo.st
     * xlocker.net
 * b4he
     * b4he.com
@@ -315,6 +303,9 @@ For more information, please see [Wiki].
 * cloudimg
     * cloudimg.net
     * imageheli.com
+* urlcow
+    * miniurl.com
+    * urlcow.com
 * else
     * 1be.biz
     * 1pics.ru
@@ -446,7 +437,7 @@ For more information, please see [Wiki].
     * urlgator.com
     * urlms.com
     * urlz.so
-    * viidii.com
+    * viidii.info
     * vvcap.net
     * x.pixfarm.net
     * yep.it
