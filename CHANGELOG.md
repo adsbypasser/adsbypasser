@@ -4,6 +4,7 @@
     * allanalpass.com
     * some linkbucks issue
     * xlocker.net
+    * help text in configuration page
 * added
     * imgking.us
     * bulkimg.info
