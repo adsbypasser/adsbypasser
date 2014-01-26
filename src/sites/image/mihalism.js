@@ -28,24 +28,6 @@
     },
   });
 
-  // mihalism v3
-  $.register({
-    rule: {
-      host: /howtohemorrhoidscure\.com/,
-      path: /^\/viewer\.php$/,
-      query: /^\?file=([^&]+)/,
-    },
-    ready: function () {
-      var a = $('#page_body a');
-      var s = a.href;
-      // the real link is diffirent from original host
-      a = s.lastIndexOf('http://');
-      if (a >= 0) {
-        $.openLink(s.substr(a));
-      }
-    },
-  });
-
   // hostpornpics.net
   $.register({
     rule: [
