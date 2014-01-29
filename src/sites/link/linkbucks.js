@@ -13,15 +13,30 @@ $.register({
       return;
     }
 
-    if (unsafeWindow && unsafeWindow.Lbjs && unsafeWindow.Lbjs.TargetUrl) {
-      $.openLink(unsafeWindow.Lbjs.TargetUrl);
+    var token = null;
+    $.$$('script').find(function (n) {
+      var m = n.innerHTML.match(/Token : '([\w\d]+)'/);
+      if (m) {
+        token = m[1];
+      }
+      return !!m;
+    });
+    if (!token) {
+      _.warn('pattern changed');
       return;
     }
 
-    var matches = document.body.innerHTML.match(/TargetUrl\s*=\s*['"]([^'"]+)['"]/);
-    if (matches) {
-      $.openLink(matches[1]);
-    }
+    var i = setInterval(function () {
+      $.get('/intermission/loadTargetUrl', {
+        t: token,
+      }, function (text) {
+        var data = JSON.parse(text);
+        if (data.Success && !data.AdBlockSpotted && data.Url) {
+          clearInterval(i);
+          $.openLink(data.Url);
+        }
+      });
+    }, 1000);
   },
 });
 
