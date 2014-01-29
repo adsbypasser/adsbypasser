@@ -102,7 +102,7 @@ var $;
 
     $.get = function (url, data, callback) {
       data = toQuery(data);
-      return ajax('GET', url, data, {
+      return ajax('GET', url + '?' + data, '', {
       }, callback);
     };
 
