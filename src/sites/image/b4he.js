@@ -1,5 +1,18 @@
 $.register({
   rule: {
+    host: /^freeimgup\.com$/,
+    path: /^\/xxx/,
+    query: /^\?v=([^&]+)/,
+  },
+  start: function (m) {
+    'use strict';
+
+    $.openImage('/xxx/images/' + m.query[1]);
+  },
+});
+
+$.register({
+  rule: {
     host: /^(b4he|freeimgup|fullimg)\.com|fastpics\.net|ifap\.co$/,
     query: /^\?v=([^&]+)/,
   },
