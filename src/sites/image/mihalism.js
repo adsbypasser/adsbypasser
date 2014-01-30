@@ -28,17 +28,6 @@
     },
   });
 
-  // hostpornpics.net
-  $.register({
-    rule: [
-      'http://hostpornpics.net/viewer.php?*file=*',
-    ],
-    ready: function () {
-      var i = $('#page_body div.text_align_center img');
-      $.openImage(i.src);
-    },
-  });
-
   // dwimg.com
   $.register({
     rule: {
