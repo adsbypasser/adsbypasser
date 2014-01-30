@@ -1,3 +1,10 @@
+## TBA
+
+* fixed
+    * some linkbucks issue
+    * freeimgup.com
+    * some adf.ly issue
+
 ## 4.20.0
 
 * fixed
