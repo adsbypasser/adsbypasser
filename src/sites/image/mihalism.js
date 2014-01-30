@@ -15,19 +15,6 @@
     start: helper,
   });
 
-  // mihalism v2
-  $.register({
-    rule: {
-      host: /^love69\.org$/,
-      path: /^\/(i|eu)\/viewer\.php$/,
-      query: /^\?file=([^&]+)/,
-    },
-    start: function (m) {
-      var url = _.T('/{0}/images/{1}');
-      $.openImage(url(m.path[1], m.query[1]));
-    },
-  });
-
   // dwimg.com
   $.register({
     rule: {
