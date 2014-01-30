@@ -1,7 +1,5 @@
-// this two are not homogeneous but do have same action
 $.register({
   rule: [
-    'http://imagehosting.gr/*.html',
     'http://www.bilder-hochladen.net/files/*.html',
   ],
   ready: function () {
