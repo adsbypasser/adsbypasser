@@ -15,7 +15,7 @@ $.register({
 
     var token = null;
     $.$$('script').find(function (n) {
-      var m = n.innerHTML.match(/Token : '([\w\d]+)'/);
+      var m = n.innerHTML.match(/AdPopUrl : '.+\?ref=([\w\d]+)'/);
       if (m) {
         token = m[1];
       }
