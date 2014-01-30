@@ -1,3 +1,19 @@
+## TBA
+
+* added
+    * onlinepic.net
+    * imgstudio.org
+    * coin-ads.com
+* removed
+    * flickimg.com
+    * hotimg.com
+    * imgonion.com
+    * imgmoney.com
+    * hostpornpics.net
+    * love69.org
+    * imagehosting.gr
+    * alafs.com
+
 ## 4.20.0
 
 * fixed

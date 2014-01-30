@@ -126,7 +126,6 @@ For more information, please see [Wiki].
     * dwimg.com
     * gallery.jpavgod.com
     * hentai-hosting.com
-    * hostpornpics.net
     * funextra.hostzi.com
     * imageback.info
     * imagecurl.com
@@ -137,7 +136,6 @@ For more information, please see [Wiki].
     * imgking.us
     * imgnip.com
     * imgsin.com
-    * love69.org
     * miragepics.com
     * nixhelp.de
     * overpic.net
@@ -153,6 +151,7 @@ For more information, please see [Wiki].
     * img-zone.com
     * imgadult.com
     * imgserve.net
+    * imgstudio.org
     * myhotimage.com
     * zeljeimage.com
     * zonezeedimage.com
@@ -176,7 +175,7 @@ For more information, please see [Wiki].
     * imgwiev.tk
     * mypixxx.lonestarnaughtygirls.com
     * x45x.info
-* imgonion
+* imgrill.com
     * hosturimage.com
     * imagecorn.com
     * imagefolks.com
@@ -186,9 +185,7 @@ For more information, please see [Wiki].
     * imgcloud.co
     * imgcorn.com
     * imgmaster.net
-    * imgmoney.com
     * imgnext.com
-    * imgonion.com
     * imgrill.com
     * imgsavvy.com
     * imgtube.net
@@ -201,6 +198,7 @@ For more information, please see [Wiki].
     * gratisimage.dk
     * images.maxigame.by
     * npicture.net
+    * onlinepic.net
     * picfox.org
 * imgchili
     * imgchili.com
@@ -278,7 +276,6 @@ For more information, please see [Wiki].
     * ifap.co
 * emptypix
     * emptypix.com
-    * flickimg.com
     * fotohosting.net
     * overdream.cz
 * fotoo
@@ -322,7 +319,6 @@ For more information, please see [Wiki].
     * adv.li
     * ah-informatique.com
     * alabout.com
-    * alafs.com
     * anonpic.com
     * bayimg.com
     * beeimg.com
@@ -336,6 +332,7 @@ For more information, please see [Wiki].
     * cf.ly
     * cli.gs
     * cliquesbr.com.br
+    * coin-ads.com
     * comyonet.com
     * cubeupload.com
     * cyberpics.net
@@ -354,7 +351,6 @@ For more information, please see [Wiki].
     * go2.me
     * goimagehost.com
     * hostingpics.net
-    * hotimg.com
     * hotshorturl.com
     * ibunker.us
     * ichan.org
@@ -368,7 +364,6 @@ For more information, please see [Wiki].
     * imagebam.com
     * imageban.net
     * imageban.ru
-    * imagehosting.gr
     * imagehousing.com
     * imagenetz.de
     * imageno.com
