@@ -1,12 +1,12 @@
 $.register({
   rule: {
-    host: /(alabout|alafs)\.com$/,
+    host: /alabout\.com$/,
   },
   ready: function () {
     'use strict';
 
     $.$$('a').each(function (a) {
-      if (/http:\/\/(www\.)?(alabout|alafs)\.com\/j\.phtml\?url=/.test(a.href)) {
+      if (/http:\/\/(www\.)?alabout\.com\/j\.phtml\?url=/.test(a.href)) {
         a.href = a.textContent;
       }
     });
