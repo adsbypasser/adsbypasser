@@ -9,7 +9,8 @@ $.register({
     $.resetCookies();
 
     if (window.location.pathname.indexOf('verify') >= 0) {
-      $.openLink('/');
+      // NOTE dirty fix
+      $.openLink('../');
       return;
     }
 
