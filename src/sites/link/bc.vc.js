@@ -51,6 +51,31 @@
     }, 1000);
   }
 
+  function knockServer2 (script) {
+    unsafeWindow.$ = undefined;
+
+    var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
+    var make_url = matches[1];
+    var make_opts = eval('(' + matches[2] + ')');
+
+    make_opts.opt = 'checks_log';
+    $.post(make_url, make_opts, function () {
+      make_opts.opt = 'check_log';
+      $.post(make_url, make_opts, function (text) {
+        var data = JSON.parse(text);
+        if (data.message) {
+          make_opts.opt = 'make_log';
+          $.post(make_url, make_opts, function (text) {
+            var data = JSON.parse(text);
+            if (data.message) {
+              $.openLink(data.message.url);
+            }
+          });
+        }
+      });
+    });
+  }
+
   // bc.vc
   $.register({
     rule: {
@@ -62,7 +87,7 @@
 
       var content = searchScript();
 
-      knockServer(content);
+      knockServer2(content);
     },
   });
 
