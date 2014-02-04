@@ -7,6 +7,7 @@ $.register({
 
     $.removeAllTimer();
     $.resetCookies();
+    $.removeNodes('iframe');
 
     if (window.location.pathname.indexOf('verify') >= 0) {
       // NOTE dirty fix
@@ -14,22 +15,36 @@ $.register({
       return;
     }
 
-    var token = null;
-    $.$$('script').find(function (n) {
-      var m = n.innerHTML.match(/AdPopUrl : '.+\?ref=([\w\d]+)'/);
-      if (m) {
-        token = m[1];
-      }
-      return !!m;
+    var script = $.$$('script').find(function (n) {
+      return n.innerHTML.indexOf('AdPopUrl') >= 0;
     });
-    if (!token) {
+    if (!script) {
       _.warn('pattern changed');
       return;
     }
+    script = script.innerHTML;
+
+    var m = script.match(/AdPopUrl\s*:\s*'.+\?ref=([\w\d]+)'/);
+    var token = m[1];
+    m = script.match(/=\s*(\d+);/);
+    var ak = parseInt(m[1], 10);
+    var re = /\+\s*(\d+);/g;
+    var tmp = null;
+    // get second (i.e. the real) salt
+    while((m = re.exec(script)) !== null) {
+      tmp = m[1];
+    }
+    ak += parseInt(tmp, 10);
+
+    _.info({
+      t: token,
+      aK: ak,
+    });
 
     var i = setInterval(function () {
       $.get('/intermission/loadTargetUrl', {
         t: token,
+        aK: ak,
       }, function (text) {
         var data = JSON.parse(text);
         if (data.Success && !data.AdBlockSpotted && data.Url) {
