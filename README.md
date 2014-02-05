@@ -426,10 +426,8 @@ For more information, please see [Wiki].
     * tinyarrows.com
     * tinypic.com
     * turboimagehost.com
-    * ulmt.in
     * unfake.it
     * url.ie
-    * urlgator.com
     * urlms.com
     * urlz.so
     * viidii.info
