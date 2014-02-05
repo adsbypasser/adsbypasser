@@ -52,6 +52,11 @@ $.register({
         aK: ak,
       }, function (text) {
         var data = JSON.parse(text);
+        if (!data.Success && data.Errors[0] === 'Invalid token') {
+          // somehow this token is invalid, reload to get new one
+          window.location.reload();
+          return;
+        }
         if (data.Success && !data.AdBlockSpotted && data.Url) {
           clearInterval(i);
           $.openLink(data.Url);
