@@ -597,12 +597,13 @@ var $;
     }
 
     function disableLeavePrompt () {
-      if (unsafeWindow.onbeforeunload) {
-        unsafeWindow.onbeforeunload = _.nop;
-      }
-      if (unsafeWindow.document.body.onbeforeunload) {
-        unsafeWindow.document.body.onbeforeunload = _.nop;
-      }
+      var seal = {
+        set: function () {
+          _.info('blocked onbeforeunload');
+        },
+      };
+      Object.defineProperty(unsafeWindow, 'onbeforeunload', seal);
+      Object.defineProperty(unsafeWindow.document.body, 'onbeforeunload', seal);
     }
 
     $._main = function (isNodeJS) {
