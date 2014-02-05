@@ -605,7 +605,7 @@ var $;
       _.C([unsafeWindow, unsafeWindow.document.body]).each(function (o) {
         // release existing events
         o.onbeforeunload = undefined;
-        // prevent them bind event again
+        // prevent they bind event again
         Object.defineProperty(o, 'onbeforeunload', seal);;
       });
     }
