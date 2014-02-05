@@ -6,20 +6,20 @@
   $.register({
     rule: {
       host: hostRule,
-      // FIXME this pattern is not stable
-      path: /^\/([a-z\/]{2,})?$/,
-    },
-  });
-
-  $.register({
-    rule: {
-      host: hostRule,
       path: /\/locked$/,
       query: /url=([^&]+)/,
     },
     start: function (m) {
       $.resetCookies();
       $.openLink(m.query[1]);
+    },
+  });
+
+  $.register({
+    rule: {
+      host: hostRule,
+      // FIXME this pattern is not stable
+      path: /^\/([a-z\/]{2,})?$/,
     },
   });
 
