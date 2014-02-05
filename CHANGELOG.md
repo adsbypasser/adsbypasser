@@ -2,6 +2,8 @@
 
 * fixed
     * some adf.ly issues
+    * yyv.co
+    * shr77.com
 
 ## 4.21.2
 
