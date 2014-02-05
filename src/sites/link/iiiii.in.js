@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^iiiii\.in$/,
+    host: /^adjet\.biz$/,
   },
   ready: function () {
     'use strict';
