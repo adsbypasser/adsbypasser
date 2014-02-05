@@ -602,8 +602,12 @@ var $;
           _.info('blocked onbeforeunload');
         },
       };
-      Object.defineProperty(unsafeWindow, 'onbeforeunload', seal);
-      Object.defineProperty(unsafeWindow.document.body, 'onbeforeunload', seal);
+      _.C([unsafeWindow, unsafeWindow.document.body]).each(function (o) {
+        // release existing events
+        o.onbeforeunload = undefined;
+        // prevent them bind event again
+        Object.defineProperty(o, 'onbeforeunload', seal);;
+      });
     }
 
     $._main = function (isNodeJS) {
