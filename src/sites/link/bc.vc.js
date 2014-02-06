@@ -58,22 +58,43 @@
     var make_url = matches[1];
     var make_opts = eval('(' + matches[2] + ')');
 
-    make_opts.opt = 'checks_log';
-    $.post(make_url, make_opts, function () {
+    function makeLog () {
+        make_opts.opt = 'make_log';
+        $.post(make_url, make_opts, function (text) {
+          var data = JSON.parse(text);
+          _.info('make_log', data);
+          if (!data.message) {
+            checksLog();
+            return;
+          }
+
+          $.openLink(data.message.url);
+        });
+    }
+
+    function checkLog () {
       make_opts.opt = 'check_log';
       $.post(make_url, make_opts, function (text) {
         var data = JSON.parse(text);
-        if (data.message) {
-          make_opts.opt = 'make_log';
-          $.post(make_url, make_opts, function (text) {
-            var data = JSON.parse(text);
-            if (data.message) {
-              $.openLink(data.message.url);
-            }
-          });
+        _.info('check_log', data);
+        if (!data.message) {
+          checkLog();
+          return;
         }
+
+        makeLog();
       });
-    });
+    }
+
+    function checksLog () {
+      make_opts.opt = 'checks_log';
+      $.post(make_url, make_opts, function () {
+        _.info('checks_log', data);
+        checkLog();
+      });
+    }
+
+    checksLog();
   }
 
   // bc.vc
