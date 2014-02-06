@@ -21,7 +21,7 @@ $.register({
     }
 
     var script = $.$$('script').find(function (n) {
-      return n.innerHTML.indexOf('AdPopUrl') >= 0;
+      return n.innerHTML.indexOf('window[\'init\' + \'Lb\' + \'js\' + \'\']') >= 0;
     });
     if (!script) {
       _.warn('pattern changed');
@@ -52,6 +52,7 @@ $.register({
         aK: ak,
       }, function (text) {
         var data = JSON.parse(text);
+        _.info(data);
         if (!data.Success && data.Errors[0] === 'Invalid token') {
           // somehow this token is invalid, reload to get new one
           window.location.reload();
