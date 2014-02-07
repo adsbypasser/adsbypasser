@@ -13,26 +13,38 @@ Stable version will upload to [here][1].
 [![Build Status][2]][3]
 
 
-## Compatibility With Other Userscripts/Add-Ons/Extensions
+## Run-time Configurations
 
-By disabling some features, you could resolve conflicts with
-other userscripts/add-ons/extentions ... etc.
+Please see [this page][4] to adjust configurations.
 
-To do this, you could open [this page][4] to adjust configurations.
+* Align To Center (default: on)
 
-* Image Aligning (default: on)
+    Image will align to the center of screen.
+    If you turn it off, NoPicAds will not adjust that for you.
 
-    With this option on, image will align to screen center and have a dark
-    background, just like the theme used in Mozilla Firefox.
+* Change Background (default: on)
+
+    Image page will have a dark background, just like the theme used in
+    Mozilla Firefox.
+    If you turn it off, NoPicAds will not adjust that for you.
+
+* Scale Image (default: on)
+
+    Image will scale to fit your screen size.
+    You can still toggle the image size by click on the image.
     If you turn this off, NoPicAds will not adjust that for you.
 
-* Image Redirect (default: on)
+* Redirect Image (default: on)
 
-    With this option on, NoPicAds will directly open the image by browser if
+    NoPicAds will directly open the image by browser if
     current site is a image hosting site.
     If you turn this off, NoPicAds will only works on link shortener sites.
 
-If you still have problem, you could adjust userscripts' execution order.
+* External Server Support (default: off)
+
+    NoPicAds will send request to a external server, because browser-side
+    JavaScript can not solve some problem (e.g.: captcha)
+    This is not enabled by default because of privacy concern.
 
 
 ## How To Build
