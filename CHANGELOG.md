@@ -1,3 +1,31 @@
+## TBA
+
+* added
+    * imgcoco.com
+    * ay.gy
+    * adjet.biz
+* removed
+    * iiiii.in
+    * ulmt.in
+    * urlgator.com
+    * linkgalleries.net
+    * linkseer.net
+    * picturesetc.net
+    * qvvo.com
+    * realfiles.net
+    * seriousfiles.com
+    * seriousurls.com
+    * thesefiles.com
+    * thesegalleries.com
+    * thosegalleries.com
+    * tinybucks.net
+    * uberpicz.com
+    * ubervidz.com
+    * ubucks.net
+    * ugalleries.net
+    * urlpulse.net
+    * zxxo.net
+
 ## 4.21.1
 
 * fixed

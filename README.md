@@ -84,42 +84,25 @@ For more information, please see [Wiki].
     * hornywood.tv
     * linkbabes.com
     * linkbucks.com
-    * linkgalleries.net
-    * linkseer.net
     * megaline.co
     * miniurls.co
     * picbucks.com
-    * picturesetc.net
     * poontown.net
     * qqc.co
-    * qvvo.com
-    * realfiles.net
     * rqq.co
     * seriousdeals.net
-    * seriousfiles.com
-    * seriousurls.com
     * sexpalace.gs
     * theseblogs.com
-    * thesefiles.com
     * theseforums.com
-    * thesegalleries.com
-    * thosegalleries.com
-    * tinybucks.net
     * tinylinks.co
     * tnabucks.com
     * tubeviral.com
-    * uberpicz.com
-    * ubervidz.com
-    * ubucks.net
-    * ugalleries.net
     * ultrafiles.net
     * urlbeat.net
-    * urlpulse.net
     * whackyvidz.com
     * youfap.me
     * yyv.co
     * zff.co
-    * zxxo.net
 * Mihalism Multi Host
     * 244pix.com
     * catpic.biz
