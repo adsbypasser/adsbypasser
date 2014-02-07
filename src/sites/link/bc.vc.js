@@ -52,8 +52,6 @@
   }
 
   function knockServer2 (script) {
-    unsafeWindow.$ = undefined;
-
     var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
     var make_url = matches[1];
     var make_opts = eval('(' + matches[2] + ')');
@@ -89,7 +87,7 @@
     function checksLog () {
       make_opts.opt = 'checks_log';
       $.post(make_url, make_opts, function () {
-        _.info('checks_log', data);
+        _.info('checks_log');
         checkLog();
       });
     }
