@@ -52,13 +52,30 @@
   }
 
   function knockServer2 (script) {
+    // somehow I must use jQuery AJAX
+    var post = unsafeWindow.$.post;
+    // mock a fake AJAX function
+    unsafeWindow.$.post = function (a, b, c) {
+      if (typeof c === 'function') {
+        setTimeout(function () {
+          var data = {
+            error: false,
+            message: {
+              url: '#',
+            },
+          };
+          c(JSON.stringify(data));
+        }, 1000);
+      }
+    };
+
     var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
     var make_url = matches[1];
     var make_opts = eval('(' + matches[2] + ')');
 
     function makeLog () {
         make_opts.opt = 'make_log';
-        $.post(make_url, make_opts, function (text) {
+        post(make_url, make_opts, function (text) {
           var data = JSON.parse(text);
           _.info('make_log', data);
           if (!data.message) {
@@ -72,7 +89,7 @@
 
     function checkLog () {
       make_opts.opt = 'check_log';
-      $.post(make_url, make_opts, function (text) {
+      post(make_url, make_opts, function (text) {
         var data = JSON.parse(text);
         _.info('check_log', data);
         if (!data.message) {
@@ -86,7 +103,7 @@
 
     function checksLog () {
       make_opts.opt = 'checks_log';
-      $.post(make_url, make_opts, function () {
+      post(make_url, make_opts, function () {
         _.info('checks_log');
         checkLog();
       });
