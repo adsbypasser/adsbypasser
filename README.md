@@ -60,6 +60,7 @@ For more information, please see [Wiki].
     * adf.sazlina.com
     * adfly.itsrinaldo.net
     * alien.apkmania.co
+    * ay.gy
     * chathu.apkmania.co
     * dl.apkpro.net
     * go.phpnulledscripts.com
@@ -84,6 +85,7 @@ For more information, please see [Wiki].
     * hornywood.tv
     * linkbabes.com
     * linkbucks.com
+    * linkbucksmedia.com
     * megaline.co
     * miniurls.co
     * picbucks.com
@@ -186,6 +188,7 @@ For more information, please see [Wiki].
 * imgchili
     * imgchili.com
     * imgchili.net
+    * imgcoco.com
 * imgdino
     * imgdino.com
     * imgtiger.com
@@ -296,6 +299,7 @@ For more information, please see [Wiki].
     * 4fun.tw
     * 4owl.info
     * adfoc.us
+    * adjet.biz
     * adlock.in
     * adlot.us
     * adultf.ly
@@ -338,7 +342,6 @@ For more information, please see [Wiki].
     * ibunker.us
     * ichan.org
     * ifotos.pl
-    * iiiii.in
     * ima.so
     * imadul.com
     * image18.org
