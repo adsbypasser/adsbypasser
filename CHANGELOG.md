@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * shr77.com
 * added
     * imgcoco.com
     * ay.gy
@@ -26,15 +28,40 @@
     * urlpulse.net
     * zxxo.net
 
+## 4.21.5
+
+* fixed
+    * bc.vc
+
+## 4.21.4
+
+* fixed
+    * some linkbucks issues
+    * bc.vc
+
+## 4.21.3
+
+* fixed
+    * some adf.ly issues
+    * yyv.co
+    * shr77.com
+
+## 4.21.2
+
+* fixed
+    * some linkbucks issues
+    * adultf.ly
+    * bc.vc
+
 ## 4.21.1
 
 * fixed
-    * some linkbucks issue
+    * some linkbucks issues
 
 ## 4.21.0
 
 * fixed
-    * some linkbucks issue
+    * some linkbucks issues
     * freeimgup.com
     * some adf.ly issue
 * added

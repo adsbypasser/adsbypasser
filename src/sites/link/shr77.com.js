@@ -3,9 +3,14 @@ $.register({
   ready: function () {
     'use strict';
 
-    $.removeNodes('iframe');
-    var a = $('#loading');
-    $.openLink(a.href);
+    var a = $.$('#loading');
+    if (a) {
+      $.removeNodes('iframe');
+      $.openLink(a.href);
+      return;;
+    }
+    a = $('div.frame > iframe');
+    $.openLink(a.src);
   },
 });
 

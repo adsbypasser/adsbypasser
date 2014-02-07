@@ -51,6 +51,50 @@
     }, 1000);
   }
 
+  function knockServer2 (script) {
+    var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
+    var make_url = matches[1];
+    var make_opts = eval('(' + matches[2] + ')');
+
+    function makeLog () {
+        make_opts.opt = 'make_log';
+        $.post(make_url, make_opts, function (text) {
+          var data = JSON.parse(text);
+          _.info('make_log', data);
+          if (!data.message) {
+            checksLog();
+            return;
+          }
+
+          $.openLink(data.message.url);
+        });
+    }
+
+    function checkLog () {
+      make_opts.opt = 'check_log';
+      $.post(make_url, make_opts, function (text) {
+        var data = JSON.parse(text);
+        _.info('check_log', data);
+        if (!data.message) {
+          checkLog();
+          return;
+        }
+
+        makeLog();
+      });
+    }
+
+    function checksLog () {
+      make_opts.opt = 'checks_log';
+      $.post(make_url, make_opts, function () {
+        _.info('checks_log');
+        checkLog();
+      });
+    }
+
+    checksLog();
+  }
+
   // bc.vc
   $.register({
     rule: {
@@ -62,7 +106,7 @@
 
       var content = searchScript();
 
-      knockServer(content);
+      knockServer2(content);
     },
   });
 

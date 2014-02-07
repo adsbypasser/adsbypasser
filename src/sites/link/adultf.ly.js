@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.adultf\.ly$/,
+    host: /^(www\.)?adultf\.ly$/,
     path: /\/(.+)/,
   },
   ready: function (m) {
