@@ -72,8 +72,6 @@ TamperMonkey ... etc.)
 
     e.g.: It should redirect properly.
 
-The more information you give, the more easier to address the issue.
-
 
 ## Feature Request
 

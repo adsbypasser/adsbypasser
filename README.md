@@ -6,7 +6,7 @@ This user script helps you
 * remove overlays over pictures
 * prevent windows pop up
 
-Forked from [RedirectionHelper] writen by [SuYS].
+Forked from [RedirectionHelper] written by [SuYS].
 
 Stable version will upload to [here][1].
 
@@ -37,12 +37,12 @@ Please see [this page][4] to adjust configurations.
 * Redirect Image (default: on)
 
     NoPicAds will directly open the image by browser if
-    current site is a image hosting site.
+    current site is an image hosting site.
     If you turn this off, NoPicAds will only works on link shortener sites.
 
 * External Server Support (default: off)
 
-    NoPicAds will send request to a external server, because browser-side
+    NoPicAds will send request to an external server, because browser-side
     JavaScript can not solve some problem (e.g.: captcha)
     This is not enabled by default because of privacy concern.
 
