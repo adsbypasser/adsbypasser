@@ -4,7 +4,7 @@ Before you create any issue or pull request, please read this guide carefully:
 
 * **Please search existing issues first.**
 
-    Avoid to create a duplicate issue. If the existing issue has been closed,
+    Avoid creating a duplicate issue. If the existing issue has been closed,
     you could reopen it.
 
 * **One site, one issue.**
@@ -40,7 +40,7 @@ at all.
 
 ### Opening an issue to report a bug
 
-Please describe your situation as detial as possible, such as:
+Please describe your situation as detail as possible, such as:
 
 1. What operating system are you using?
 
@@ -108,7 +108,7 @@ There is something you should keep in mind:
 
     Such as *adf.ly*, *linkbucks.com*, *bc.vc* ... etc.
     If you can find an existing site which is homogeneous to your new site,
-    simply update the url rule instead of add a new file.
+    simply update the URL rule instead of add a new file.
 
 * do not add multiple feature in one commit
 
