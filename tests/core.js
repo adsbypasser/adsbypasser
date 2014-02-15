@@ -129,14 +129,20 @@ describe('core', function () {
     });
 
     it('the first even number in [1, 2, 3] should be 2', function () {
-      _.C([1, 2, 3]).find(function (v) {
-        return v % 2 === 0;
-      }).should.equals(2);
+      var tmp = _.C([1, 2, 3]).find(function (v) {
+        if (v % 2 !== 0) {
+          return _.nop;
+        }
+      })
+      tmp.key.should.equals(1);
+      tmp.value.should.equals(2);
     });
 
     it('0 should not be found in [1, 2, 3]', function () {
       expect(_.C([1, 2, 3]).find(function (v) {
-        return v === 0;
+        if (v !== 0) {
+          return _.nop;
+        }
       })).to.be.undefined;
     });
 
