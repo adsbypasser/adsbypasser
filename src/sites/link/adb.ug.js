@@ -1,34 +1,34 @@
-(function () {
-  'use strict';
+$.register({
+  rule: 'http://adb.ug/*',
+  ready: function () {
+    'use strict';
 
-  $.register({
-    rule: 'http://adb.ug/*',
-    ready: function () {
-      $.removeNodes('iframe');
+    $.removeNodes('iframe');
 
-      var script = $.$$('script').find(function (v) {
-        return v.innerHTML.indexOf('_args') >= 0;
-      });
+    var script = $.$$('script').find(function (v) {
       var m = script.innerHTML.match(/\{_args.+\}\}/);
       if (!m) {
-        throw new _.NoPicAdsError('script content changed');
+        return _.nop;
       }
-      m = eval('(' + m[0] + ')');
-      script = window.location.pathname + '/skip_timer';
+      return m;
+    });
+    if (!script) {
+      throw new _.NoPicAdsError('script content changed');
+    }
+    script = eval('(' + script.payload[0] + ')');
+    var url = window.location.pathname + '/skip_timer';
 
-      var i = setInterval(function () {
-        $.post(script, m, function (text) {
-          var jj = JSON.parse(text);
-          if (!jj.errors && jj.messages) {
-            clearInterval(i);
-            $.openLink(jj.messages.url);
-          }
-        });
-      }, 1000);
-    },
-  });
-
-})();
+    var i = setInterval(function () {
+      $.post(url, script, function (text) {
+        var jj = JSON.parse(text);
+        if (!jj.errors && jj.messages) {
+          clearInterval(i);
+          $.openLink(jj.messages.url);
+        }
+      });
+    }, 1000);
+  },
+});
 
 
 // ex: ts=2 sts=2 sw=2 et

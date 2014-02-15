@@ -6,14 +6,17 @@ $.register({
     $.removeNodes('iframe');
 
     var script = $.$$('script').find(function (v) {
-      return v.innerHTML.indexOf('form') >= 0;
+      if (v.innerHTML.indexOf('form') < 0) {
+        return _.nop;
+      }
+      return v.innerHTML;
     });
     var p = /name='([^']+)' value='([^']+)'/g;
     var opt = {
       image: ' ',
     };
     var tmp = null;
-    while (tmp = p.exec(script.innerHTML)) {
+    while (tmp = p.exec(script.payload)) {
       opt[tmp[1]] = tmp[2];
     }
     $.postAndGo('', opt);

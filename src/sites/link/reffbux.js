@@ -5,22 +5,22 @@ $.register({
 
     $.removeNodes('iframe');
 
-    var id = null, share = null;
-    $.$$('script').find(function (script) {
+    var d = $.$$('script').find(function (script) {
       var m = script.innerHTML.match(/skip_this_ad_(\d+)_(\d+)/);
-      if (m) {
-        id = m[1];
-        share = m[2];
-        return true;
+      if (!m) {
+        return _.nop;
       }
-      return false;
+      return {
+        id: m[1],
+        share: m[2],
+      };
     });
     var fp = 0;
     var location = window.location;
 
     $.post('http://reffbux.com/refflinx/register', {
-      id: id,
-      share: share,
+      id: d.id,
+      share: d.share,
       fp: 0,
       location: location,
       referer: '',

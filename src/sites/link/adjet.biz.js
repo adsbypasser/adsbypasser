@@ -6,10 +6,13 @@ $.register({
     'use strict';
 
     var script = $.$$('script').find(function (v) {
-      return v.innerHTML.indexOf('href=') >= 0;
+      var m = v.innerHTML.match(/href=(\S+)/);
+      if (!m) {
+        return _.nop;
+      }
+      return m;
     });
-    script = script.innerHTML.match(/href=(\S+)/);
-    script = script[1];
+    script = script.payload[1];
     $.openLink(script);
   },
 });

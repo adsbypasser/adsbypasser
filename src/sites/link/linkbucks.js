@@ -21,13 +21,16 @@ $.register({
     }
 
     var script = $.$$('script').find(function (n) {
-      return n.innerHTML.indexOf('window[\'init\' + \'Lb\' + \'js\' + \'\']') >= 0;
+      if (n.innerHTML.indexOf('window[\'init\' + \'Lb\' + \'js\' + \'\']') < 0) {
+        return _.nop;
+      }
+      return n.innerHTML;
     });
     if (!script) {
       _.warn('pattern changed');
       return;
     }
-    script = script.innerHTML;
+    script = script.payload;
 
     var m = script.match(/AdPopUrl\s*:\s*'.+\?ref=([\w\d]+)'/);
     var token = m[1];

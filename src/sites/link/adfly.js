@@ -65,9 +65,12 @@
       $.resetCookies();
 
       var script = $.$$('script').find(function (v) {
-        return v.innerHTML.indexOf('var r_url') >= 0;
+        if (v.innerHTML.indexOf('var r_url') < 0) {
+          return _.nop;
+        }
+        return v.innerHTML;
       });
-      var url = script.innerHTML.match(/&url=([^&]+)/);
+      var url = script.payload.match(/&url=([^&]+)/);
       url = url[1];
       $.openLink(url);
     },

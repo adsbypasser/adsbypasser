@@ -5,19 +5,18 @@ $.register({
   ready: function () {
     'use strict';
 
-    var url = null;
-    $.$$('script').find(function (n) {
+    var url = $.$$('script').find(function (n) {
       var m = n.innerHTML.match(/window\.location = "([^"]+)"/);
-      if (!!m) {
-        url = m[1];
+      if (!m) {
+        return _.nop;
       }
-      return !!m;
+      return m[1];
     });
     if (!url) {
       _.warn('rule changed');
       return;
     }
-    $.openLink(url);
+    $.openLink(url.payload);
   },
 });
 
