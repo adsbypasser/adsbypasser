@@ -1,3 +1,14 @@
+## TBA
+
+* fixed
+    * pic-upload.de
+    * theseforums.com
+    * ay.gy
+    * adf.ly
+* added
+    * imgskull.info
+    * imgcoin.net
+
 ## 4.22.1
 
 * fixed
