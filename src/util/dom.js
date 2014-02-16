@@ -606,7 +606,7 @@ var $;
         // release existing events
         o.onbeforeunload = undefined;
         // prevent they bind event again
-        Object.defineProperty(o, 'onbeforeunload', seal);;
+        Object.defineProperty(o, 'onbeforeunload', seal);
       });
     }
 
