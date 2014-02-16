@@ -8,7 +8,9 @@ $.register({
 
     var s = $.$$('script').find(function (n) {
       var m = n.innerHTML.match(/window\.location\.replace/);
-      return m : m : _.nop;
+      if (!m) {
+        return _.nop;
+      }
     });
     if (s) {
       // second stage
