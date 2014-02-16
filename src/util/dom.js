@@ -279,12 +279,14 @@ var $;
     $.getCookie = function (key) {
       var c = _.C(document.cookie.split(';')).find(function (v) {
         var k = v.replace(/^\s*(\w+)=.+$/, '$1');
-        return k === key;
+        if (k !== key) {
+          return _.nop;
+        }
       });
       if (!c) {
         return null;
       }
-      c = c.replace(/^\s*\w+=([^;]+).+$/, '$1');
+      c = c.value.replace(/^\s*\w+=([^;]+).+$/, '$1');
       if (!c) {
         return null;
       }
@@ -470,12 +472,13 @@ var $;
     }
 
     function dispatchByArray (rules, url_1, url_3, url_6) {
-      var matched = null;
-      _.C(rules).find(function (rule) {
-        matched = dispatch(rule, url_1, url_3, url_6);
-        return !!matched;
+      return _.C(rules).find(function (rule) {
+        var m = dispatch(rule, url_1, url_3, url_6);
+        if (!m) {
+          return _.nop;
+        }
+        return m;
       });
-      return matched;
     }
 
     function dispatchByString (rule, url_3) {
@@ -571,15 +574,19 @@ var $;
         hash: window.location.hash,
       };
 
-      var matched = null;
       var pattern = _.C(patterns).find(function (pattern) {
-        matched = dispatch(pattern.rule, url_1, url_3, url_6);
-        return !!matched;
+        var m = dispatch(pattern.rule, url_1, url_3, url_6);
+        if (!m) {
+          return _.nop;
+        }
+        return m;
       });
-
       if (!pattern) {
         return null;
       }
+
+      var matched = pattern.payload;
+      pattern = pattern.value;
 
       // exclude rule
       if (!pattern.start && !pattern.ready) {
