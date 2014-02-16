@@ -19,7 +19,7 @@ Before you create any issue or pull request, please read this guide carefully:
 
 ## TL; DR
 
-Basically you could submit anything as you like. But I'll be very glad if you
+Welcome to submit any issue that you have, but it would be glad if you
 have read sections below:
 
 * [Bug Report](#bug-report)
@@ -29,18 +29,17 @@ have read sections below:
 
 ## Bug Report
 
-Please note that it's very hard to guarantee the compatibility to other
+Please note that it is very hard to guarantee the compatibility to other
 userscripts or browser extensions.
 
 If other people can not reproduce your problem, you could create a new profile
 and try again.
 
-**Any new site request is not a bug.** I can't fix a bug which does not exist
-at all.
+**Any new site request is not a bug.**
 
 ### Opening an issue to report a bug
 
-Please describe your situation as detail as possible, such as:
+Please describe your environment as detial as possible, such as:
 
 1. What operating system are you using?
 
@@ -68,14 +67,15 @@ TamperMonkey ... etc.)
 
     e.g.: It does not redirect.
 
-7. What were you expected instead?
+7. What did you originally expected?
 
     e.g.: It should redirect properly.
 
+The more information you provide, the easier the issue could be addressed.
 
 ## Feature Request
 
-Any feature request is welcome, but won't always be accepted.
+Any feature request is welcome but won't always be accepted.
 
 ### Opening an issue to request a feature
 
@@ -99,15 +99,15 @@ There is something you should keep in mind:
 
 * coding style
 
-    Especially indention, I suggest you use an editor which supports vim's
+    Especially indention, you should use an editor which supports vim's
     modeline feature.
 
-* some sites are using same system
+* some sites use same system
 
     Such as *adf.ly*, *linkbucks.com*, *bc.vc* ... etc.
     If you can find an existing site which is homogeneous to your new site,
-    simply update the URL rule instead of add a new file.
+    simply update the URL rule instead of adding a new file.
 
-* do not add multiple feature in one commit
+* do not add multiple features in one commit
 
-    I'll reject such pull request. Please split them into different commits.
+    Such pull request would be rejected. Please split them into different commits.
