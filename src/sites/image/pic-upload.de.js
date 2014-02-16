@@ -3,6 +3,7 @@ $.register({
   ready: function () {
     'use strict';
 
+    $.removeNodes('.advert');
     var i = $('#content + img');
     $.openImage(i.src);
   },

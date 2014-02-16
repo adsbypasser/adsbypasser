@@ -10,24 +10,30 @@ $.register({
       $.openLink(f.src);
     }
     f = $.$$('frame').find(function (frame) {
-      return frame.src.indexOf('interheader.php') >= 0;
+      if (frame.src.indexOf('interheader.php') < 0) {
+        return _.nop;
+      }
+      return frame.src;
     });
     if (f) {
-      $.openLink(f.src);
-    }
-
-    var data = null;
-    $.$$('script').find(function (script) {
-      data = script.innerHTML.match(/krypted=([^&]+)/);
-      return !!data;
-    });
-    if (!data) {
+      $.openLink(f.payload);
       return;
     }
-    data = data[1];
-    f = unsafeWindow.des('ksnslmtmk0v4Pdviusajqu', unsafeWindow.hexToString(data), 0, 0);
-    if (f) {
-      $.openLink('http://ity.im/1104_21_50846_' + f);
+
+    f = $.$$('script').find(function (script) {
+      var m = script.innerHTML.match(/krypted=([^&]+)/);
+      if (!m) {
+        return _.nop;
+      }
+      return m[1];
+    });
+    if (!f) {
+      return;
+    }
+    f = f.payload;
+    var data = unsafeWindow.des('ksnslmtmk0v4Pdviusajqu', unsafeWindow.hexToString(f), 0, 0);
+    if (data) {
+      $.openLink('http://ity.im/1104_21_50846_' + data);
     }
   },
 });

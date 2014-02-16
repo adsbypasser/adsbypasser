@@ -147,7 +147,9 @@ For more information, please see [Wiki].
     * imageontime.com
     * img-zone.com
     * imgadult.com
+    * imgcoin.net
     * imgserve.net
+    * imgskull.info
     * imgstudio.org
     * myhotimage.com
     * zeljeimage.com

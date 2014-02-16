@@ -26,9 +26,12 @@
 
   function searchScript () {
       var content = $.$$('script').find(function (script) {
-        return script.innerHTML.indexOf('make_log') >= 0;
+        if (script.innerHTML.indexOf('make_log') < 0) {
+          return _.nop;
+        }
+        return script.innerHTML;
       });
-      return content.innerHTML;
+      return content.payload;
   }
 
   function knockServer (script, dirtyFix) {

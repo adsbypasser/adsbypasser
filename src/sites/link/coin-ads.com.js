@@ -8,20 +8,21 @@ $.register({
 
     var s = $.$$('script').find(function (n) {
       var m = n.innerHTML.match(/window\.location\.replace/);
-      return !!m;
+      if (!m) {
+        return _.nop;
+      }
     });
     if (s) {
       // second stage
       return;
     }
 
-    var f = null;
-    $.$$('script').find(function (n) {
+    var f = $.$$('script').find(function (n) {
       var m = n.innerHTML.match(/countdownArea\.innerHTML = "([^"]+)"/);
       if (m) {
-        f = m[1];
+        return m[1];
       }
-      return !!m;
+      return _.nop;
     });
     if (!f) {
       _.warn('pattern changed');
@@ -29,7 +30,7 @@ $.register({
     }
 
     var d = $('#area');
-    d.innerHTML = f;
+    d.innerHTML = f.payload;
     // NOTE should not use submit, must click input
     d = $('.skip', d);
     d.click();

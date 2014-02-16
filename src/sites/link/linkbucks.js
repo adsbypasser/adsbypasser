@@ -1,7 +1,7 @@
 $.register({
   rule: [
     {
-      host: /^(([\w]{8}|www)\.)?(allanalpass|a[mn]y|cash4files|deb|drstickyfingers|dyo|fapoff|filesonthe|free(an|gaysitepass)|galleries|goneviral|hornywood|link(babes|bucks(media)?)|megaline|miniurls|picbucks|poontown|qqc|rqq|seriousdeals|sexpalace|theseblogs|tinylinks|tnabucks|tubeviral|ultrafiles|urlbeat|whackyvidz|youfap|yyv|zff)\.(com?|net|gs|me|tv|bz|us)/,
+      host: /^(([\w]{8}|www)\.)?(allanalpass|a[mn]y|cash4files|deb|drstickyfingers|dyo|fapoff|filesonthe|free(an|gaysitepass)|galleries|goneviral|hornywood|link(babes|bucks(media)?)|megaline|miniurls|picbucks|poontown|qqc|rqq|seriousdeals|sexpalace|these(blog|forum)s|tinylinks|tnabucks|tubeviral|ultrafiles|urlbeat|whackyvidz|youfap|yyv|zff)\.(com?|net|gs|me|tv|bz|us)/,
     },
     {
       host: /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
@@ -21,13 +21,16 @@ $.register({
     }
 
     var script = $.$$('script').find(function (n) {
-      return n.innerHTML.indexOf('window[\'init\' + \'Lb\' + \'js\' + \'\']') >= 0;
+      if (n.innerHTML.indexOf('window[\'init\' + \'Lb\' + \'js\' + \'\']') < 0) {
+        return _.nop;
+      }
+      return n.innerHTML;
     });
     if (!script) {
       _.warn('pattern changed');
       return;
     }
-    script = script.innerHTML;
+    script = script.payload;
 
     var m = script.match(/AdPopUrl\s*:\s*'.+\?ref=([\w\d]+)'/);
     var token = m[1];

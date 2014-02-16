@@ -115,10 +115,16 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
   CollectionProxy.prototype.find = function (fn) {
     var result;
     any(this._c, function (value, index, self) {
-      if (fn(value, index, self)) {
-        result = value;
+      var tmp = fn(value, index, self);
+      if (tmp !== _.nop) {
+        result = {
+          key: index,
+          value: value,
+          payload: tmp,
+        };
         return true;
       }
+      return false;
     });
     return result;
   };

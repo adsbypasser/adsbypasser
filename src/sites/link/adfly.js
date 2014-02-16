@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var hostRule = /^(www\.)?adf\.(ly|acb\.im|ay\.gy|sazlina\.com)|[jq]\.gs|go\.phpnulledscripts\.com|(chathu|alien)\.apkmania\.co|ksn\.mx|goto\.adflytutor\.com|dl\.apkpro\.net|adfly\.itsrinaldo\.net$/;
+  var hostRule = /^(www\.)?adf\.(ly|acb\.im|sazlina\.com)|[jq]\.gs|go\.phpnulledscripts\.com|ay\.gy|(chathu|alien)\.apkmania\.co|ksn\.mx|goto\.adflytutor\.com|dl\.apkpro\.net|adfly\.itsrinaldo\.net$/;
 
   $.register({
     rule: {
@@ -29,7 +29,6 @@
     },
     ready: function () {
       $.removeNodes('iframe');
-      $.resetCookies();
 
       var h = unsafeWindow.eu, b64 = unsafeWindow.Base64;
       if (!h) {
@@ -65,9 +64,12 @@
       $.resetCookies();
 
       var script = $.$$('script').find(function (v) {
-        return v.innerHTML.indexOf('var r_url') >= 0;
+        if (v.innerHTML.indexOf('var r_url') < 0) {
+          return _.nop;
+        }
+        return v.innerHTML;
       });
-      var url = script.innerHTML.match(/&url=([^&]+)/);
+      var url = script.payload.match(/&url=([^&]+)/);
       url = url[1];
       $.openLink(url);
     },

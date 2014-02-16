@@ -7,7 +7,7 @@ $.register({
     if (a) {
       $.removeNodes('iframe');
       $.openLink(a.href);
-      return;;
+      return;
     }
     a = $('div.frame > iframe');
     $.openLink(a.src);
