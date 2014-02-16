@@ -17,33 +17,33 @@ Stable version will upload to [here][1].
 
 Please see [this page][4] to adjust configurations.
 
-* Align To Center (default: on)
+* Align to center (default: on)
 
     Image will align to the center of screen.
-    If you turn it off, NoPicAds will not adjust that for you.
+    If you turn it off, **NoPicAds** will not adjust that for you.
 
-* Change Background (default: on)
+* Change background (default: on)
 
     Image page will have a dark background, just like the theme used in
     Mozilla Firefox.
-    If you turn it off, NoPicAds will not adjust that for you.
+    If you turn it off, **NoPicAds** will not adjust that for you.
 
-* Scale Image (default: on)
+* Scale image (default: on)
 
     Image will scale to fit your screen size.
-    You can still toggle the image size by click on the image.
-    If you turn this off, NoPicAds will not adjust that for you.
+    You can still toggle the image size by clicking on the image.
+    If you turn this off, **NoPicAds** will not adjust that for you.
 
-* Redirect Image (default: on)
+* Redirect image (default: on)
 
-    NoPicAds will directly open the image by browser if
+    **NoPicAds** will directly open the image by browser if the
     current site is an image hosting site.
-    If you turn this off, NoPicAds will only works on link shortener sites.
+    If you turn this off, **NoPicAds** will only work on sites that shorten links.
 
-* External Server Support (default: off)
+* External server support (default: off)
 
-    NoPicAds will send request to an external server, because browser-side
-    JavaScript can not solve some problem (e.g.: captcha)
+    **NoPicAds** will send requests to an external server, because browser-side
+    JavaScript can not solve some problems (e.g.: captcha).
     This is not enabled by default because of privacy concern.
 
 
