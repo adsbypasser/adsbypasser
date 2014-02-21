@@ -18,10 +18,10 @@ $.register({
     if (!script) {
       throw new _.NoPicAdsError('script content changed');
     }
-	script = script.payload;
-	
-	var data = "sessionId=" + script + "&browserToken=" + Math.round(new Date().getTime() / 1000);
-	
+    script = script.payload;
+
+    var data = "sessionId=" + script + "&browserToken=" + Math.round(new Date().getTime() / 1000);
+
     var i = setInterval(function () {
       $.post('/adSession/callback', data, function (text) {
         var r = JSON.parse(text);
