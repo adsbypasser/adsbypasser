@@ -8,8 +8,29 @@ $.register({
 
     $.removeNodes('iframe');
 
-    var a = $('#skip_button');
-    $.openLink(a.href);
+    var script = $.$$('script').find(function (script) {
+      var m = script.innerHTML.match(/sessionId: "([\d\w]+)",/);
+      if (m) {
+        return m[1];
+      }
+      return _.nop;
+    });
+    if (!script) {
+      throw new _.NoPicAdsError('script content changed');
+    }
+	script = script.payload;
+	
+	var data = "sessionId=" + script + "&browserToken=" + Math.round(new Date().getTime() / 1000);
+	
+    var i = setInterval(function () {
+      $.post('/adSession/callback', data, function (text) {
+        var r = JSON.parse(text);
+        if (r.status == "ok" && r.destinationUrl) {
+          clearInterval(i);
+          $.openLink(r.destinationUrl);
+        }
+      });
+    }, 1000);
   },
 });
 
