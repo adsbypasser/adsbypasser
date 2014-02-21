@@ -11,7 +11,7 @@
     },
     start: function (m) {
       $.resetCookies();
-      $.openLink(m.query[1]);
+      $.openLink('/' + m.query[1]);
     },
   });
 
