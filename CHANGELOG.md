@@ -1,3 +1,15 @@
+## TBA
+
+* fixed
+    * sh.st
+    * adf.ly
+* added
+    * rapeit.net
+    * dd.ma
+    * go.nicoblog-games.com
+    * gamecopyworld.com
+    * imgleech.com
+
 ## 4.23.0
 
 * fixed

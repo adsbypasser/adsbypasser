@@ -75,6 +75,8 @@ For more information, please see [Wiki].
     * ay.gy
     * chathu.apkmania.co
     * dl.apkpro.net
+    * gamecopyworld.com
+    * go.nicoblog-games.com
     * go.phpnulledscripts.com
     * goto.adflytutor.com
     * j.gs
@@ -293,6 +295,7 @@ For more information, please see [Wiki].
 * imgfantasy
     * imagedomino.com
     * imgfantasy.com
+    * imgleech.com
     * imgsure.com
 * imgbabes
     * imgbabes.com
@@ -337,6 +340,7 @@ For more information, please see [Wiki].
     * comyonet.com
     * cubeupload.com
     * cyberpics.net
+    * dd.ma
     * ddp.net
     * depic.me
     * digitalfrenzy.net
@@ -410,6 +414,7 @@ For more information, please see [Wiki].
     * pixhost.org
     * pixhub.eu
     * qrrro.com
+    * rapeit.net
     * ref.so
     * reffbux.com
     * richlink.com
