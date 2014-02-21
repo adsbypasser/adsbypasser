@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * bulkimg.info
+
 ## 4.24.0
 
 * fixed
