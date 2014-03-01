@@ -1,4 +1,4 @@
-## TBA
+## 4.25.0
 
 * fixed
     * bulkimg.info
