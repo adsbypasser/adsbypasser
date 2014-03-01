@@ -4,6 +4,7 @@
     * bulkimg.info
     * coin-ads.com
     * dd.ma
+    * compability with userChrome.js + UserScriptLoader
 * added
     * 08lkk.com
     * cf2.me
