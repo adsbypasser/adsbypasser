@@ -153,7 +153,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(fly2url|urlwiz)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|www\.adjet\.eu|hit\.us|shortit\.in$/,
+      host: /^adcrun\.ch|(fly2url|urlwiz)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|www\.adjet\.eu|hit\.us|shortit\.in|adbla\.us$/,
       path: /^\/.+/,
     },
     ready: run,
