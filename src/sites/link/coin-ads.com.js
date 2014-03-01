@@ -6,6 +6,12 @@ $.register({
   ready: function () {
     'use strict';
 
+    var i = $.$('#site');
+    if (i) {
+      $.openLink(i.src);
+      return;
+    }
+
     var s = $.$$('script').find(function (n) {
       var m = n.innerHTML.match(/window\.location\.replace/);
       if (!m) {
