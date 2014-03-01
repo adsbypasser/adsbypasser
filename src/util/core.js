@@ -196,7 +196,10 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
     } else {
       args.unshift('NoPicAds:');
     }
-    console[method].apply(console, args);
+    var f = console[method];
+    if (typeof f === 'function') {
+      console[method].apply(console, args);
+    }
   }
 
   _.info = function () {
