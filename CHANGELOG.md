@@ -2,6 +2,8 @@
 
 * fixed
     * bulkimg.info
+    * coin-ads.com
+    * dd.ma
 * added
     * 08lkk.com
     * cf2.me
@@ -11,6 +13,7 @@
     * cf7.co
     * ex9.co
     * xt3.me
+    * adbla.us
 
 ## 4.24.0
 
