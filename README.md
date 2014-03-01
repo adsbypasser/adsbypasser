@@ -307,6 +307,14 @@ For more information, please see [Wiki].
 * urlcow
     * miniurl.com
     * urlcow.com
+* cashfly
+    * cf2.me
+    * cf3.me
+    * cf5.me
+    * cf6.co
+    * cf7.co
+    * ex9.co
+    * xt3.me
 * else
     * 1be.biz
     * 1pics.ru

@@ -2,7 +2,15 @@
 
 * fixed
     * bulkimg.info
+* added
     * 08lkk.com
+    * cf2.me
+    * cf3.me
+    * cf5.me
+    * cf6.co
+    * cf7.co
+    * ex9.co
+    * xt3.me
 
 ## 4.24.0
 
