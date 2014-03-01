@@ -2,6 +2,7 @@
 
 * fixed
     * bulkimg.info
+    * 08lkk.com
 
 ## 4.24.0
 
