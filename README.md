@@ -156,7 +156,7 @@ For more information, please see [Wiki].
     * myhotimage.com
     * zeljeimage.com
     * zonezeedimage.com
-* imageporter
+* imgspice
     * imagecarry.com
     * imagedunk.com
     * imageporter.com
