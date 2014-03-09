@@ -5,8 +5,23 @@ $.register({
 
     $.removeNodes('iframe');
 
+    // pattern 1
+    var k = $.$$('script').find(function (script) {
+      script = script.innerHTML;
+      var m = script.match(/top\.location\.href="([^"]+)"/);
+      if (!m) {
+        return _.nop;
+      }
+      return m[1];
+    });
+    if (k) {
+      $.openLink(k.payload);
+      return;;
+    }
+
+    // pattern 2
     var script = $.$$('script').find(function (v) {
-      var m = script.innerHTML.match(/\{_args.+\}\}/);
+      var m = v.innerHTML.match(/\{_args.+\}\}/);
       if (!m) {
         return _.nop;
       }
