@@ -31,7 +31,7 @@
         }
         return script.innerHTML;
       });
-      return content.payload;
+      return content ? content.payload : undefined;
   }
 
   function knockServer (script, dirtyFix) {
@@ -153,7 +153,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(fly2url|urlwiz)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|www\.adjet\.eu|hit\.us|shortit\.in|adbla\.us$/,
+      host: /^adcrun\.ch|(fly2url|urlwiz)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|www\.adjet\.eu|hit\.us|shortit\.in$/,
       path: /^\/.+/,
     },
     ready: run,
@@ -173,6 +173,44 @@
       content = eval(matches);
 
       knockServer(content, true);
+    },
+  });
+
+  $.register({
+    rule: {
+      host: /^adbla\.us$/,
+      path: /^\/.+/,
+    },
+    ready: function () {
+      $.removeNodes('iframe');
+
+      var content = searchScript();
+      if (content) {
+        // bc.vc style
+        var matches = content.match(/eval(.*)/);
+        matches = matches[1];
+        content = eval(matches);
+        knockServer(content, true);
+        return;
+      }
+
+      // unique style
+      content = $.$$('script').find(function (script) {
+        if (script.innerHTML.indexOf('click_log') < 0) {
+          return _.nop;
+        }
+        return script.innerHTML;
+      });
+      content = content.payload;
+      var matches = content.match(/eval(.*)/);
+      matches = matches[1];
+      content = eval(matches);
+      matches = content.match(/top\.location\.href='([^']+)'/);
+      if (!matches) {
+        throw new _.NoPicAdsError('script changed');
+      }
+      content = matches[1];
+      $.openLink(content);
     },
   });
 
