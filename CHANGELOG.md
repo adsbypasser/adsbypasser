@@ -2,6 +2,7 @@
 
 * fixed
     * directupload.net
+    * cur.lv
 
 ## 4.25.0
 
