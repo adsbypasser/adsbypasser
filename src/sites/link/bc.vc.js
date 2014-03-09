@@ -24,14 +24,42 @@
     },
   });
 
-  function searchScript () {
-      var content = $.$$('script').find(function (script) {
-        if (script.innerHTML.indexOf('make_log') < 0) {
-          return _.nop;
-        }
-        return script.innerHTML;
-      });
-      return content ? content.payload : undefined;
+  function decompress (script, unzip) {
+    if (!unzip) {
+      return script;
+    }
+    var matches = script.match(/eval(.*)/);
+    matches = matches[1];
+    script = eval(matches);
+    return script;
+  }
+
+  function searchScript (unzip) {
+    var content = $.$$('script').find(function (script) {
+      if (script.innerHTML.indexOf('make_log') < 0) {
+        return _.nop;
+      }
+      return script.innerHTML;
+    });
+    if (content) {
+      return {
+        direct: false,
+        script: decompress(content.payload, unzip),
+      };
+    }
+    content = $.$$('script').find(function (script) {
+      if (script.innerHTML.indexOf('click_log') < 0) {
+        return _.nop;
+      }
+      return script.innerHTML;
+    });
+    if (content) {
+      return {
+        direct: true,
+        script: decompress(content.payload, unzip),
+      };
+    }
+    throw _.NoPicAdsError('script changed');
   }
 
   function knockServer (script, dirtyFix) {
@@ -124,9 +152,17 @@
     ready: function () {
       $.removeNodes('iframe');
 
-      var content = searchScript();
-
-      knockServer2(content);
+      var result = searchScript(false);
+      if (!result.direct) {
+        knockServer2(result.script);
+      } else {
+        result = result.script.match(/top\.location\.href = '([^']+)'/);
+        if (!result) {
+          throw new _.NoPicAdsError('script changed');
+        }
+        result = result[1];
+        $.openLink(result);
+      }
     },
   });
 
@@ -134,12 +170,17 @@
     // prevent redirection by iframe
     $.removeNodes('iframe');
 
-    var content = searchScript();
-    var matches = content.match(/eval(.*)/);
-    matches = matches[1];
-    content = eval(matches);
-
-    knockServer(content);
+    var result = searchScript(true);
+    if (!result.direct) {
+      knockServer(result.script);
+    } else {
+      result = result.script.match(/top\.location\.href='([^']+)'/);
+      if (!result) {
+        throw new _.NoPicAdsError('script changed');
+      }
+      result = result[1];
+      $.openLink(result);
+    }
   }
 
   // adli.pw
@@ -153,7 +194,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(fly2url|urlwiz)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in$/,
+      host: /^adcrun\.ch|(fly2url|urlwiz)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|adbla\.us|www\.adjet\.eu$/,
       path: /^\/.+/,
     },
     ready: run,
@@ -173,44 +214,6 @@
       content = eval(matches);
 
       knockServer(content, true);
-    },
-  });
-
-  $.register({
-    rule: {
-      host: /^adbla\.us|www\.adjet\.eu$/,
-      path: /^\/.+/,
-    },
-    ready: function () {
-      $.removeNodes('iframe');
-
-      var content = searchScript();
-      if (content) {
-        // bc.vc style
-        var matches = content.match(/eval(.*)/);
-        matches = matches[1];
-        content = eval(matches);
-        knockServer(content, true);
-        return;
-      }
-
-      // unique style
-      content = $.$$('script').find(function (script) {
-        if (script.innerHTML.indexOf('click_log') < 0) {
-          return _.nop;
-        }
-        return script.innerHTML;
-      });
-      content = content.payload;
-      var matches = content.match(/eval(.*)/);
-      matches = matches[1];
-      content = eval(matches);
-      matches = content.match(/top\.location\.href='([^']+)'/);
-      if (!matches) {
-        throw new _.NoPicAdsError('script changed');
-      }
-      content = matches[1];
-      $.openLink(content);
     },
   });
 
