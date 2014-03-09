@@ -3,7 +3,7 @@ $.register({
   ready: function () {
     'use strict';
 
-    var i = $('#showimage');
+    var i = $('#ImgFrame');
     $.openImage(i.src);
   },
 });
