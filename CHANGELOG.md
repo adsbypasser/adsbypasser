@@ -3,6 +3,17 @@
 * fixed
     * directupload.net
     * cur.lv
+    * ad7.us
+    * adb.ug
+    * adbla.us
+    * adjet.eu
+    * bc.vc
+    * imgtube.net
+    * hit.us
+    * shortit.in
+    * ssl.gs
+    * urlwiz.com
+    * wwy.me
 
 ## 4.25.0
 
