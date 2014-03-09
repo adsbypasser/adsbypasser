@@ -58,6 +58,10 @@
   });
 
   $.register({
+    rule: 'http://ad7.biz/*.php',
+  });
+
+  $.register({
     rule: 'http://ad7.biz/*',
     ready: function () {
       $.removeNodes('iframe');
