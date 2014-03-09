@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * directupload.net
+
 ## 4.25.0
 
 * fixed
