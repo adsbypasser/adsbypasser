@@ -15,14 +15,14 @@
       host: /^coinurl\.com|cur\.lv$/,
     },
     ready: function () {
-      var d = window.frames[0];
+      var d = unsafeWindow.frames[0];
       if (d) {
         deep(d);
         return;
       }
       var o = new MutationObserver(function (mutations) {
         o.disconnect();
-        var d = window.frames[0];
+        var d = unsafeWindow.frames[0];
         d.addEventListener('DOMContentLoaded', function () {
           d = d.frames[0];
           deep(d);
