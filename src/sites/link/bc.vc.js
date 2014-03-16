@@ -217,6 +217,14 @@
     },
   });
 
+  // shrink.gs
+    $.register({
+    rule: {
+      host: /^srk\.gs$/
+    },
+    ready: run,
+  });
+
 })();
 
 
