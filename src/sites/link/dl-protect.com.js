@@ -10,7 +10,7 @@ $.register({
 
       // The pwd input is here only when we must input a password
       try {
-        $('form[name=ccerure] > input[name=pwd]');
+        $('form[name=ccerure] input[name=pwd]');
         return;
       }
       catch (e) {
