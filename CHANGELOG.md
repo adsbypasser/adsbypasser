@@ -1,3 +1,26 @@
+## TBA
+
+* changed
+    * add configuration menu back
+    * add server-side script source into repository
+* fixed
+    * imgskull.info
+    * shr77.com
+    * yooclick.com
+* added
+    * dragimage.org
+    * imgfap.net
+    * setlinks.us
+    * 2i.cz
+    * noelshack.com
+    * xlink.me
+    * prntscr.com
+    * shrink.gs
+    * aka.gr
+    * tl7.us
+    * buzurl.com
+    * filoops.info
+
 ## 4.25.1
 
 * fixed
