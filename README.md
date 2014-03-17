@@ -143,6 +143,7 @@ For more information, please see [Wiki].
     * bulkimg.info
     * croftimage.com
     * damimage.com
+    * dragimage.org
     * gallerycloud.net
     * hotimages.eu
     * imagedecode.com
@@ -150,8 +151,8 @@ For more information, please see [Wiki].
     * img-zone.com
     * imgadult.com
     * imgcoin.net
+    * imgfap.net
     * imgserve.net
-    * imgskull.info
     * imgstudio.org
     * myhotimage.com
     * zeljeimage.com
@@ -190,6 +191,7 @@ For more information, please see [Wiki].
     * imgnext.com
     * imgrill.com
     * imgsavvy.com
+    * imgskull.info
     * imgtube.net
     * imgult.com
     * pixup.us
@@ -230,7 +232,9 @@ For more information, please see [Wiki].
     * myam.me
     * short.pk
     * shortit.in
+    * shrink.gs
     * ssl.gs
+    * tl7.us
     * tr5.in
     * ultry.net
     * urlwiz.com
@@ -316,12 +320,14 @@ For more information, please see [Wiki].
     * cf7.co
     * ex9.co
     * xt3.me
+* 2i.cz
+    * 2i.cz
+    * 2i.sk
+    * 2imgs.com
 * else
     * 1be.biz
     * 1pics.ru
     * 1to4.me
-    * 2i.sk
-    * 2imgs.com
     * 3ra.be
     * 4fun.tw
     * 4owl.info
@@ -332,6 +338,7 @@ For more information, please see [Wiki].
     * adultf.ly
     * adv.li
     * ah-informatique.com
+    * aka.gr
     * alabout.com
     * anonpic.com
     * bayimg.com
@@ -342,6 +349,7 @@ For more information, please see [Wiki].
     * bilder-upload.eu
     * bildr.no
     * blackcatpix.com
+    * buzurl.com
     * casimages.com
     * cf.ly
     * cli.gs
@@ -358,6 +366,7 @@ For more information, please see [Wiki].
     * dumppix.com
     * durl.me
     * filedump.net
+    * filoops.info
     * fotolink.su
     * fotosik.pl
     * freeimagehosting.net
@@ -413,6 +422,7 @@ For more information, please see [Wiki].
     * lostpic.net
     * madlink.sk
     * mrjh.org
+    * noelshack.com
     * nsfw.in
     * nutshellurl.com
     * p.pw
@@ -423,6 +433,7 @@ For more information, please see [Wiki].
     * picshare.geenza.com
     * pixhost.org
     * pixhub.eu
+    * prntscr.com
     * qrrro.com
     * rapeit.net
     * ref.so
@@ -433,6 +444,7 @@ For more information, please see [Wiki].
     * robo.us
     * screenlist.ru
     * seomafia.net
+    * setlinks.us
     * sh.st
     * shr77.com
     * stash-coins.com
@@ -450,6 +462,7 @@ For more information, please see [Wiki].
     * viidii.info
     * vvcap.net
     * x.pixfarm.net
+    * xlink.me
     * yep.it
     * yfrog.com
     * yooclick.com
