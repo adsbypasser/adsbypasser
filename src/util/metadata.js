@@ -12,6 +12,8 @@
 // @grant          GM_getResourceText
 // @grant          GM_getResourceURL
 // @grant          GM_getValue
+// @grant          GM_openInTab
+// @grant          GM_registerMenuCommand
 // @grant          GM_setValue
 // @run-at         document-start
 // @resource       alignCenter https://raw.github.com/legnaleurc/nopicads/v<%= pkg.version %>/css/align_center.css
