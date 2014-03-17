@@ -8,7 +8,7 @@
 
   $.register({
     rule: {
-      host: /^(image(decode|ontime)|(zonezeed|zelje|croft|myhot|dam)image|img-zone)\.com|(img(serve|coin|fap)|gallerycloud)\.net|hotimages\.eu|imgskull\.info|(imgstudio|dragimage)\.org$/,
+      host: /^(image(decode|ontime)|(zonezeed|zelje|croft|myhot|dam)image|img-zone)\.com|(img(serve|coin|fap)|gallerycloud)\.net|hotimages\.eu|(imgstudio|dragimage)\.org$/,
       path: /^\/img-.*\.html$/,
     },
     ready: ready,
