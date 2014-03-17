@@ -1,4 +1,4 @@
-## TBA
+## 4.26.0
 
 * changed
     * add configuration menu back
