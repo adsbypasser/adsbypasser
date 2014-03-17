@@ -11,7 +11,7 @@ $.register({
     // this site doesn't really parse the query string
     // the order of param matters
     var url = _.T('{0}?ajax=true&adblock=false&old=false&framed=false&uniq={1}')(path, uniq);
-    
+
     var getURL = function() {
       $.get(url, {
       }, function (text) {
