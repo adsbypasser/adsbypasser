@@ -38,6 +38,7 @@ function wrap (browser, config) {
       setValue: function (key, value) {
         config[key] = value;
       },
+      registerMenuCommand: _.nop,
     },
   });
   tmp._main(true);

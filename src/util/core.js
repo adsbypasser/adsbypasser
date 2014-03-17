@@ -2,8 +2,6 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
 (function () {
   'use strict';
 
-  GM_registerMenuCommand('NoPicAds - Configure', function() {GM_openInTab('http://legnaleurc.github.io/nopicads/configure.html')});
-
   function setupStack () {
     if (Error.captureStackTrace) {
       // V8-like
