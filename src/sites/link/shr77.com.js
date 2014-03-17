@@ -3,14 +3,12 @@ $.register({
   ready: function () {
     'use strict';
 
-    var a = $.$('#loading');
-    if (a) {
-      $.removeNodes('iframe');
-      $.openLink(a.href);
-      return;
+    // Interstitial and iframed pages
+    var l = document.head.innerHTML.match(/\$\('a#loading'\)\.attr\('href',"([^"]+)"\);/);
+
+    if (typeof l[1] != 'undefined') {
+      $.openLink(l[1]);
     }
-    a = $('div.frame > iframe');
-    $.openLink(a.src);
   },
 });
 
