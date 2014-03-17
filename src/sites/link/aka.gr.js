@@ -1,12 +1,12 @@
 $.register({
   rule: {
-    host: /^www\.(2i\.(sk|cz)|2imgs\.com)$/,
+    host: /^aka\.gr$/
   },
   ready: function () {
     'use strict';
 
-    var img = $('#wrap3 img');
-    $.openImage(img.src);
+    var l = $('iframe#yourls-frame');
+    $.openLink(l.src);
   },
 });
 

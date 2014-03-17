@@ -1,12 +1,13 @@
 $.register({
   rule: {
-    host: /^www\.(2i\.(sk|cz)|2imgs\.com)$/,
+    host: /^xlink.me$/
   },
   ready: function () {
     'use strict';
+    var a = $('#main_form > center > a');
+    if (!a) {return;}
 
-    var img = $('#wrap3 img');
-    $.openImage(img.src);
+    $.openLink(a.href);
   },
 });
 
