@@ -1,12 +1,12 @@
 $.register({
   rule: {
-    host: /^www\.(2i\.(sk|cz)|2imgs\.com)$/,
+    host: /^prntscr\.com$/
   },
   ready: function () {
     'use strict';
 
-    var img = $('#wrap3 img');
-    $.openImage(img.src);
+    var i = $('#screenshot-image');
+    $.openImage(i.src);
   },
 });
 

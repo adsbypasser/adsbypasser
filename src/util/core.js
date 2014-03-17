@@ -2,7 +2,6 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
 (function () {
   'use strict';
 
-
   function setupStack () {
     if (Error.captureStackTrace) {
       // V8-like

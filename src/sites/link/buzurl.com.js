@@ -1,12 +1,12 @@
 $.register({
   rule: {
-    host: /^www\.(2i\.(sk|cz)|2imgs\.com)$/,
+    host: /^buzurl\.com$/,
   },
   ready: function () {
     'use strict';
 
-    var img = $('#wrap3 img');
-    $.openImage(img.src);
+    var frame = $('frame[scrolling=yes]');
+    $.openLink(frame.src);
   },
 });
 

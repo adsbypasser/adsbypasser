@@ -1,12 +1,10 @@
 $.register({
   rule: {
-    host: /^www\.(2i\.(sk|cz)|2imgs\.com)$/,
+    host: /^www.noelshack\.com$/
   },
   ready: function () {
-    'use strict';
-
-    var img = $('#wrap3 img');
-    $.openImage(img.src);
+    var i = $('#elt_to_aff');
+    $.openImage(i.src);
   },
 });
 

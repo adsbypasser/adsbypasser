@@ -648,6 +648,9 @@ var $;
       });
     };
 
+    GM.registerMenuCommand('NoPicAds - Configure', function () {
+      GM.openInTab('http://legnaleurc.github.io/nopicads/configure.html');
+    });
 
     return $;
 
@@ -667,6 +670,8 @@ var $;
         getResourceText: GM_getResourceText,
         addStyle: GM_addStyle,
         getResourceURL: GM_getResourceURL,
+        openInTab: GM_openInTab,
+        registerMenuCommand: GM_registerMenuCommand,
       },
     });
   }
