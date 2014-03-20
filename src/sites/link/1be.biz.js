@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^1be\.biz$/,
+    host: /^(www\.)?1be\.biz$/,
     path: /^\/s\.php$/,
     query: /^\?(.+)/,
   },
