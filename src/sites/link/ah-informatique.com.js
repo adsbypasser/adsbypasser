@@ -1,5 +1,8 @@
 $.register({
-  rule: 'http://ah-informatique.com/ZipUrl/*',
+  rule: {
+    host: /^(www\.)?ah-informatique\.com$/,
+    path: /^\/ZipUrl/,
+  },
   ready: function () {
     'use strict';
 
