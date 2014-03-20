@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^cli\.gs$/,
+    host: /^(www\.)?cli\.gs$/,
   },
   ready: function () {
     'use strict';
