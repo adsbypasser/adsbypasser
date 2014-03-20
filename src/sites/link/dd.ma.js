@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^dd\.ma$/,
+    host: /^(www\.)?dd\.ma$/,
   },
   ready: function (m) {
     'use strict';
