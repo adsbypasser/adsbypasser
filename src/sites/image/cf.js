@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.imgjav\.tk|www\.x45x\.info|(imadul|mypixxx\.lonestarnaughtygirls)\.com|ghanaimages\.co|d69\.in|www\.images\.woh\.to$/,
+    host: /^www\.x45x\.info|(imadul|mypixxx\.lonestarnaughtygirls)\.com|ghanaimages\.co|d69\.in|www\.images\.woh\.to$/,
     query: /\?p[mt]=(.+)/,
   },
   start: function (m) {
