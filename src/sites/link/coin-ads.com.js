@@ -1,29 +1,23 @@
 $.register({
   rule: {
-    host: /^coin-ads\.com$/,
+    host: /^(www\.)?coin-ads\.com$/,
     path: /^\/.+/,
   },
   ready: function () {
     'use strict';
 
-    var i = $.$('#site');
-    if (i) {
-      $.openLink(i.src);
-      return;
-    }
-
-    var s = $.$$('script').find(function (n) {
+    var f = $.$$('script').find(function (n) {
       var m = n.innerHTML.match(/window\.location\.replace/);
       if (!m) {
         return _.nop;
       }
     });
-    if (s) {
+    if (f) {
       // second stage
       return;
     }
 
-    var f = $.$$('script').find(function (n) {
+    f = $.$$('script').find(function (n) {
       var m = n.innerHTML.match(/countdownArea\.innerHTML = "([^"]+)"/);
       if (m) {
         return m[1];
@@ -35,11 +29,18 @@ $.register({
       return;
     }
 
-    var d = $('#area');
-    d.innerHTML = f.payload;
-    // NOTE should not use submit, must click input
-    d = $('.skip', d);
-    d.click();
+    var d = $.$('#area');
+    if (d) {
+      d.innerHTML = f.payload;
+      // NOTE should not use submit, must click input
+      d = $('.skip', d);
+      d.click();
+      return;
+    }
+
+    // for iframe type
+    d = $('#site');
+    $.openLink(d.src);
   },
 });
 
