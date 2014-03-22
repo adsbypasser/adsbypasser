@@ -1,4 +1,4 @@
-## TBA
+## 4.27.0
 
 * fixed
     * 1be.biz
