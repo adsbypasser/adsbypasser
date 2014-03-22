@@ -70,6 +70,7 @@ For more information, please see [Wiki].
     * adf.acb.im
     * adf.ly
     * adf.sazlina.com
+    * adf.tuhoctoan.net
     * adfly.itsrinaldo.net
     * alien.apkmania.co
     * ay.gy
@@ -138,7 +139,6 @@ For more information, please see [Wiki].
     * miragepics.com
     * nixhelp.de
     * overpic.net
-    * photoup.biz
 * reklama
     * bulkimg.info
     * croftimage.com
@@ -155,6 +155,7 @@ For more information, please see [Wiki].
     * imgserve.net
     * imgstudio.org
     * myhotimage.com
+    * pic.apollon-fervor.com
     * zeljeimage.com
     * zonezeedimage.com
 * imageporter
@@ -173,8 +174,7 @@ For more information, please see [Wiki].
     * d69.in
     * ghanaimages.co
     * images.woh.to
-    * imgjav.tk
-    * imgwiev.tk
+    * imgurban.info
     * mypixxx.lonestarnaughtygirls.com
     * x45x.info
 * imgrill.com
@@ -207,7 +207,6 @@ For more information, please see [Wiki].
 * imgchili
     * imgchili.com
     * imgchili.net
-    * imgcoco.com
 * imgdino
     * imgdino.com
     * imgtiger.com
@@ -335,7 +334,6 @@ For more information, please see [Wiki].
     * adjet.biz
     * adlock.in
     * adlot.us
-    * adultf.ly
     * adv.li
     * ah-informatique.com
     * aka.gr
@@ -353,13 +351,11 @@ For more information, please see [Wiki].
     * casimages.com
     * cf.ly
     * cli.gs
-    * cliquesbr.com.br
     * coin-ads.com
     * comyonet.com
     * cubeupload.com
     * cyberpics.net
     * dd.ma
-    * ddp.net
     * depic.me
     * digitalfrenzy.net
     * directupload.net
@@ -422,17 +418,20 @@ For more information, please see [Wiki].
     * lostpic.net
     * madlink.sk
     * mrjh.org
+    * my-link.pro
     * noelshack.com
     * nsfw.in
     * nutshellurl.com
     * p.pw
     * pic-money.ru
     * pic-upload.de
+    * pic2profit.com
     * picmoe.net
     * pics-money.ru
     * picshare.geenza.com
     * pixhost.org
     * pixhub.eu
+    * pixpal.net
     * prntscr.com
     * qrrro.com
     * rapeit.net
@@ -467,7 +466,6 @@ For more information, please see [Wiki].
     * yfrog.com
     * yooclick.com
     * zo.mu
-    * zpag.es
 
 
 [1]: http://userscripts.org/scripts/show/154858
