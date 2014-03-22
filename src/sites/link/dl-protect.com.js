@@ -3,41 +3,29 @@ $.register({
   ready: function () {
     'use strict';
     // Button access to links
-    try {
-      var f = $('form[name=ccerure]');
+    var f = $.$('form[name=ccerure]');
+    if (f) {
       // The onsubmit function is here only when  there is a captcha
-      if (f.onsubmit != null) {return;}
-
-      // The pwd input is here only when we must input a password
-      try {
-        $('form[name=ccerure] input[name=pwd]');
+      if (f.onsubmit !== null) {
         return;
       }
-      catch (e) {
+
+      // The pwd input is here only when we must input a password
+      var p = $.$('form[name=ccerure] input[name=pwd]');
+      if (p) {
+        return;
       }
 
       f.submit();
-
-    }
-    catch (e) {
+      return;
     }
 
     // If the list contains only one link
-    try {
-      var l = $.$$('#slinks > a');
+    var l = $.$$('#slinks > a');
 
-      // Convert to JS Object so we can count the number of links
-      var aLinks = l.map(function (value) {
-        return value;
-      });
-
-      // If only one link, we redirect to it
-      if (aLinks.length == 1) {
-        $.openLink(aLinks[0].href);
-        return;
-      }
-    }
-    catch (e) {
+    // If only one link, we redirect to it
+    if (l.size() === 1) {
+      $.openLink(l.at(0).href);
     }
   },
 });
