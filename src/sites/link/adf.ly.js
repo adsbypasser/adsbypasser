@@ -1,27 +1,8 @@
 (function () {
   'use strict';
 
-  var hostRule = [
-    /^(www\.)?adf\.(ly|acb\.im|sazlina\.com|animechiby\.com)$/,
-    /^[jq]\.gs$/,
-    /^go\.(phpnulledscripts|nicoblog-games)\.com$/,
-    /^ay\.gy$/,
-    /^(chathu|alien)\.apkmania\.co$/,
-    /^ksn\.mx$/,
-    /^goto\.adflytutor\.com$/,
-    /^dl\.apkpro\.net$/,
-    /^adf(ly\.itsrinaldo|\.tuhoctoan)\.net$/,
-    /^.*\.gamecopyworld\.com$/,
-    /^adv\.coder143\.com$/,
-    /^(dl|david)\.nhachot\.info$/,
-    /^file\.tamteo\.com$/,
-    /^(n|u)\.shareme\.in$/,
-    /^d?dl\.animesave\.(com|tk)$/,
-  ];
-
   $.register({
     rule: {
-      host: hostRule,
       path: /\/locked$/,
       query: /url=([^&]+)/,
     },
@@ -32,8 +13,14 @@
   });
 
   $.register({
-    rule: {
-      host: hostRule,
+    rule: function () {
+      var h = $.$('html[id="adfly_html"]');
+      var b = $.$('body[id="home"]');
+      if (h && b) {
+        return true;
+      } else {
+        return null;
+      }
     },
     ready: function () {
       // check if this is ad page
@@ -74,6 +61,24 @@
       }
       // some sites need Referer header
       $.openLinkWithReferer(h);
+    },
+  });
+
+  $.register({
+    rule: 'http://ad7.biz/*',
+    ready: function () {
+      $.removeNodes('iframe');
+      $.resetCookies();
+
+      var script = $.$$('script').find(function (v) {
+        if (v.innerHTML.indexOf('var r_url') < 0) {
+          return _.nop;
+        }
+        return v.innerHTML;
+      });
+      var url = script.payload.match(/&url=([^&]+)/);
+      url = url[1];
+      $.openLink(url);
     },
   });
 
