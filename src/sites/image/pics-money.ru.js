@@ -1,9 +1,14 @@
 $.register({
-  rule: function (uri_1, uri_3, uri_6) {
-    if (!/^pics-money\.ru$/.test(uri_6.host) || /^\/allpicfree\//.test(uri_6.path)) {
-      return null;
-    }
-    return /^\/v\.php$/.test(uri_6.path);
+  rule: [
+    'http://pics-money.ru/allpicfree/*',
+    'http://www.pics-money.ru/allimage/*',
+  ],
+});
+
+$.register({
+  rule: {
+    host: /^pics-money\.ru$/,
+    path: /^\/v\.php$/,
   },
   ready: function () {
     'use strict';
@@ -16,11 +21,8 @@ $.register({
 });
 
 $.register({
-  rule: function (uri_1, uri_3, uri_6) {
-    if (!/^www\.pics-money\.ru$/.test(uri_6.host) || /^\/allimage\//.test(uri_6.path)) {
-      return null;
-    }
-    return true;
+  rule: {
+    host: /^www\.pics-money\.ru$/,
   },
   ready: function () {
     'use strict';
