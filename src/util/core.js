@@ -113,6 +113,10 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
     return Object.keys(c).length;
   };
 
+  CollectionProxy.prototype.at = function (k) {
+    return this._c[k];
+  };
+
   CollectionProxy.prototype.each = function (fn) {
     each(this._c, fn);
     return this;
