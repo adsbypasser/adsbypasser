@@ -1,5 +1,7 @@
 $.register({
-  rule: 'http://adlot.us/*',
+  rule: {
+    host: /^(www\.)?adlot\.us$/,
+  },
   ready: function () {
     'use strict';
 

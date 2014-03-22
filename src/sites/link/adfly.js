@@ -30,7 +30,7 @@
     ready: function () {
       $.removeNodes('iframe');
 
-      var h = unsafeWindow.eu, b64 = unsafeWindow.Base64;
+      var h = unsafeWindow.eu;
       if (!h) {
         h = $('#adfly_bar');
         unsafeWindow.close_bar();
@@ -48,7 +48,7 @@
           b = h.charAt(i) + b;
         }
       }
-      h = b64.decode(a + b);
+      h = atob(a + b);
       h = h.substr(2);
       if (location.hash) {
         h += location.hash;

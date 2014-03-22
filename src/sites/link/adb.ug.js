@@ -1,5 +1,7 @@
 $.register({
-  rule: 'http://adb.ug/*',
+  rule: {
+    host: /^(www\.)?adb\.ug$/,
+  },
   ready: function () {
     'use strict';
 
