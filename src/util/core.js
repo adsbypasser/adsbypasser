@@ -106,6 +106,13 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
     this._c = collection;
   }
 
+  CollectionProxy.prototype.size = function () {
+    if (typeof this._c.length === 'number') {
+      return this._c.length;
+    }
+    return Object.keys(c).length;
+  };
+
   CollectionProxy.prototype.each = function (fn) {
     each(this._c, fn);
     return this;
