@@ -1,3 +1,37 @@
+## TBA
+
+* fixed
+    * 1be.biz
+    * 1to4.me
+    * 3ra.be
+    * 4fun.tw
+    * adjet.biz
+    * adlot.us
+    * ah-informatique.com
+    * buzurl.com
+    * urlcow.com
+    * cli.gs
+    * coin-ads.com
+    * dd.ma
+    * adb.ug
+    * adf.ly
+* added
+    * pic2profit.com
+    * imgurban.info
+    * pixpal.net
+    * my-link.pro
+    * pic.apollon-fervor.com
+    * adf.tuhoctoan.net
+* removed
+    * zpag.es
+    * adultf.ly
+    * cliquesbr.com.br
+    * ddp.net
+    * photoup.biz
+    * imgwiev.tk
+    * imgjav.tk
+    * imgcoco.com
+
 ## 4.26.0
 
 * changed
