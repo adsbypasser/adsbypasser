@@ -605,7 +605,7 @@ var $;
       return url_1.match(rule);
     }
 
-    function dispatchByArray (rules, url_1, url_3, url_6) {
+    function dispatchByArray (byLocation, rules, url_1, url_3, url_6) {
       var tmp = _.C(rules).find(function (rule) {
         var m = dispatch(rule, url_1, url_3, url_6);
         if (!m) {
@@ -675,23 +675,34 @@ var $;
       return rule(url_1, url_3, url_6);
     }
 
-    function dispatch (rule, url_1, url_3, url_6) {
+    function dispatch (byLocation, rule, url_1, url_3, url_6) {
+      // recursively dispatching
+      if (rule instanceof Array) {
+        return dispatchByArray(byLocation, rule, url_1, url_3, url_6);
+      }
+
+      // dispatch by HTML content
+      if (!byLocation) {
+        if (typeof rule !== 'function') {
+          return null;
+        }
+        return dispatchByFunction(rule, url_1, url_3, url_6);
+      }
+
+      // dispatch by URL
       if (rule instanceof RegExp) {
         return dispatchByRegExp(rule, url_1);
-      }
-      if (rule instanceof Array) {
-        return dispatchByArray(rule, url_1, url_3, url_6);
-      }
-      if (typeof rule === 'function') {
-        return dispatchByFunction(rule, url_1, url_3, url_6);
       }
       if (typeof rule === 'string' || rule instanceof String) {
         return dispatchByString(rule, url_3);
       }
+      if (typeof rule === 'function') {
+        return null;
+      }
       return dispatchByObject(rule, url_6);
     }
 
-    function findHandler () {
+    function findHandler (byLocation) {
       var url_1 = window.location.toString();
       // <scheme>://<host><path>
       var url_3 = {
@@ -710,7 +721,7 @@ var $;
       };
 
       var pattern = _.C(patterns).find(function (pattern) {
-        var m = dispatch(pattern.rule, url_1, url_3, url_6);
+        var m = dispatch(byLocation, pattern.rule, url_1, url_3, url_6);
         if (!m) {
           return _.nop;
         }
@@ -769,23 +780,39 @@ var $;
         return;
       }
 
-      var handler = findHandler();
-      if (!handler) {
-        _.info('does not match on `%s`', window.location.toString());
-        return;
+      var handler = findHandler(true);
+      if (handler) {
+        config = load();
+        _.info('working on\n%s \nwith\n%o', window.location.toString(), config);
+
+        disableWindowOpen();
+
+        handler.start();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            disableLeavePrompt();
+            handler.ready();
+        });
+      } else {
+        _.info('does not match location on `%s`, will try HTML content', window.location.toString());
+
+        document.addEventListener('DOMContentLoaded', function () {
+          handler = findHandler(false);
+
+          if (!handler) {
+            _.info('does not match HTML content on `%s`', window.location.toString());
+            return;
+          }
+
+          config = load();
+          _.info('working on\n%s \nwith\n%o', window.location.toString(), config);
+
+          disableWindowOpen();
+          disableLeavePrompt();
+
+          handler.ready();
+        });
       }
-
-      config = load();
-      _.info('working on\n%s \nwith\n%o', window.location.toString(), config);
-
-      disableWindowOpen();
-
-      handler.start();
-
-      document.addEventListener('DOMContentLoaded', function () {
-        disableLeavePrompt();
-        handler.ready();
-      });
     };
 
     GM.registerMenuCommand('NoPicAds - Configure', function () {
