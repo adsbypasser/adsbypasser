@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var hostRule = /^(www\.)?adf\.(ly|acb\.im|sazlina\.com)|[jq]\.gs|go\.(phpnulledscripts|nicoblog-games)\.com|ay\.gy|(chathu|alien)\.apkmania\.co|ksn\.mx|goto\.adflytutor\.com|dl\.apkpro\.net|adf(ly\.itsrinaldo|\.tuhoctoan)\.net|.*\.gamecopyworld\.com$/;
+  var hostRule = /^(www\.)?adf\.(ly|acb\.im|sazlina\.com)|[jq]\.gs|go\.(phpnulledscripts|nicoblog-games)\.com|ay\.gy|(chathu|alien)\.apkmania\.co|ksn\.mx|goto\.adflytutor\.com|dl\.apkpro\.net|adf(ly\.itsrinaldo|\.tuhoctoan)\.net|.*\.gamecopyworld\.com|n\.shareme\.in$/;
 
   $.register({
     rule: {
