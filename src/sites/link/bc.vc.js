@@ -223,6 +223,7 @@
       // Wrap the form into a useless div
       var d = document.createElement('div');
       d.setAttribute('id','NoPicAdsFTW');
+      d.setAttribute('style', 'display:none;');
 
       // Feed with the right form
       d.innerHTML = m;
