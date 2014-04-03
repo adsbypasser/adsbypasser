@@ -18,7 +18,7 @@ $.register({
     if (!l) {return;}
 
     var interLink = '/go/' + l.payload + '?a=' + window.location.hash.substr(1);
-    //alert(interLink);
+
     setTimeout(function() {$.openLink(interLink)}, 6000);
   },
 });
