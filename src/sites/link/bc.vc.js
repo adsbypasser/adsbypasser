@@ -217,8 +217,8 @@
       m = m[1];
 
       // Set the correct timezone
-      var tz = new Date().getTimezoneOffset();
-      m = m.replace('+timezone+',tz);
+      var tz = -(new Date().getTimezoneOffset()/60);
+      m = m.replace("'+timezone+'",tz);
 
       // Wrap the form into a useless div
       var d = document.createElement('div');
