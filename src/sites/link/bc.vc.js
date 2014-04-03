@@ -212,12 +212,20 @@
       // Find the form
       var m = s.script.match(/(<form name="form1"method="post".*(?!<\\form>)<\/form>)/);
 
-      // Wrap it into a useless div
+      if (!m) {return;}
+
+      m = m[1];
+
+      // Set the correct timezone
+      var tz = new Date().getTimezoneOffset();
+      m = m.replace('+timezone+',tz);
+
+      // Wrap the form into a useless div
       var d = document.createElement('div');
       d.setAttribute('id','NoPicAdsFTW');
 
       // Feed with the right form
-      d.innerHTML = m[1];
+      d.innerHTML = m;
       document.body.appendChild(d);
 
       // Redirect to next page
