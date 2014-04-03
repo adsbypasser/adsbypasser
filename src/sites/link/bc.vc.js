@@ -200,6 +200,31 @@
     ready: run,
   });
 
+    $.register({
+    rule: {
+      host: /^ad5\.eu$/,
+      path: /^\/[^.]+$/,
+    },
+    ready: function() {
+      $.removeNodes('iframe');
+      var s = searchScript(true);
+
+      // Find the form
+      var m = s.script.match(/(<form name="form1"method="post".*(?!<\\form>)<\/form>)/);
+
+      // Wrap it into a useless div
+      var d = document.createElement('div');
+      d.setAttribute('id','NoPicAdsFTW');
+
+      // Feed with the right form
+      d.innerHTML = m[1];
+      document.body.appendChild(d);
+
+      // Redirect to next page
+      $('#NoPicAdsFTW > form[name=form1]').submit();
+    },
+  });
+
   $.register({
     rule: {
       host: /^tr5\.in$/,
