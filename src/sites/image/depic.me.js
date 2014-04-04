@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^depic\.me$/,
+    host: /^(depic\.me|(www\.)?picamatic\.com)$/,
   },
   ready: function () {
     'use strict';
