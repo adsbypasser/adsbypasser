@@ -72,17 +72,24 @@ For more information, please see [Wiki].
     * adf.sazlina.com
     * adf.tuhoctoan.net
     * adfly.itsrinaldo.net
+    * adv.coder143.com
     * alien.apkmania.co
     * ay.gy
     * chathu.apkmania.co
+    * david.nhachot.info
+    * ddl.animesave.com
     * dl.apkpro.net
+    * dl.nhachot.info
+    * file.tamteo.com
     * gamecopyworld.com
     * go.nicoblog-games.com
     * go.phpnulledscripts.com
     * goto.adflytutor.com
     * j.gs
     * ksn.mx
+    * n.shareme.in
     * q.gs
+    * u.shareme.in
 * linkbucks
     * allanalpass.com
     * amy.gs
@@ -156,6 +163,7 @@ For more information, please see [Wiki].
     * imgstudio.org
     * myhotimage.com
     * pic.apollon-fervor.com
+    * picstwist.com
     * zeljeimage.com
     * zonezeedimage.com
 * imageporter
@@ -219,17 +227,19 @@ For more information, please see [Wiki].
     * imageup.ru
     * itmages.ru
 * bc.vc
+    * ad5.eu
     * adb.ug
     * adbla.us
     * adcrun.ch
     * adjet.eu
     * adli.pw
+    * adtr.im
     * bc.vc
+    * cun.bz
     * fly2url.com
     * hit.us
     * link.tl
     * myam.me
-    * short.pk
     * shortit.in
     * shrink.gs
     * ssl.gs
@@ -238,7 +248,9 @@ For more information, please see [Wiki].
     * ultry.net
     * urlwiz.com
     * wwy.me
+    * xafox.com
     * xip.ir
+    * ysear.ch
     * zpoz.net
 * coinurl
     * coinurl.com
@@ -323,7 +335,33 @@ For more information, please see [Wiki].
     * 2i.cz
     * 2i.sk
     * 2imgs.com
+* pic2profit.com
+    * pic2profit.com
+    * picp2.com
+* depic.me
+    * depic.me
+    * picamatic.com
+* pic4you.ru
+    * pic4you.ru
+    * pic5you.ru
+* buzurl.com
+    * buzurl.com
+    * vzturl.com
+* easyurl.net
+    * atu.ca
+    * clickthru.ca
+    * easyurl.net
+    * goshrink.com
+    * readthis.ca
+    * redirects.ca
+* short.pk
+    * 2ty.cc
+    * short.pk
+* sh.st
+    * sh.st
+    * dh10thbvu.com
 * else
+    * 01.nl
     * 1be.biz
     * 1pics.ru
     * 1to4.me
@@ -347,7 +385,6 @@ For more information, please see [Wiki].
     * bilder-upload.eu
     * bildr.no
     * blackcatpix.com
-    * buzurl.com
     * casimages.com
     * cf.ly
     * cli.gs
@@ -355,16 +392,18 @@ For more information, please see [Wiki].
     * comyonet.com
     * cubeupload.com
     * cyberpics.net
+    * dapat.in
     * dd.ma
-    * depic.me
     * digitalfrenzy.net
     * directupload.net
     * dumppix.com
     * durl.me
     * filedump.net
     * filoops.info
+    * fit.sh
     * fotolink.su
     * fotosik.pl
+    * free.link2dollar.com
     * freeimagehosting.net
     * funkyimg.com
     * gkurl.us
@@ -411,6 +450,7 @@ For more information, please see [Wiki].
     * ity.im
     * javelite.tk
     * keptarolo.hu
+    * kingofshrink.com
     * lienscash.com
     * link2you.ru
     * lix.in
@@ -422,16 +462,18 @@ For more information, please see [Wiki].
     * noelshack.com
     * nsfw.in
     * nutshellurl.com
+    * oxyl.me
     * p.pw
     * pic-money.ru
     * pic-upload.de
-    * pic2profit.com
+    * piccash.net
     * picmoe.net
     * pics-money.ru
     * picshare.geenza.com
     * pixhost.org
     * pixhub.eu
     * pixpal.net
+    * preview.rlu.ru
     * prntscr.com
     * qrrro.com
     * rapeit.net
@@ -446,19 +488,23 @@ For more information, please see [Wiki].
     * setlinks.us
     * sh.st
     * shr77.com
+    * similarsites.com
     * stash-coins.com
     * subirimagenes.com
     * thinfi.com
     * tinyarrows.com
     * tinypic.com
     * turboimagehost.com
+    * typ.me
     * ulmt.in
     * unfake.it
     * url.ie
     * urlgator.com
+    * urlinn.com
     * urlms.com
     * urlz.so
     * viidii.info
+    * vir.al
     * vvcap.net
     * x.pixfarm.net
     * xlink.me
@@ -466,6 +512,7 @@ For more information, please see [Wiki].
     * yfrog.com
     * yooclick.com
     * zo.mu
+    * zzz.gl
 
 
 [1]: http://userscripts.org/scripts/show/154858
