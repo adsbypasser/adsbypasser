@@ -1,3 +1,50 @@
+## TBA
+
+* fixed
+    * noelshack.com
+    * sh.st
+    * pic-upload.de
+* added
+    * ysear.ch
+    * picamatic.com
+    * pic4you.ru
+    * pic5you.ru
+    * piccash.net
+    * picp2.com
+    * free.link2dollar.com
+    * vzturl.com
+    * adv.coder143.com
+    * david.nhachot.info
+    * dl.nhachot.info
+    * fit.sh
+    * zzz.gl
+    * easyurl.net
+    * atu.ca
+    * clickthru.ca
+    * goshrink.com
+    * redirects.ca
+    * readthis.ca
+    * preview.rlu.ru
+    * dapat.in
+    * file.tamteo.com
+    * n.shareme.in
+    * typ.me
+    * 01.nl
+    * cun.bz
+    * 2ty.cc
+    * urlinn.com
+    * adtr.im
+    * xafox.com
+    * vir.al
+    * similarsites.com
+    * oxyl.me
+    * ad5.eu
+    * kingofshrink.com
+    * picstwist.com
+    * ddl.animesave.com
+    * u.shareme.in
+    * dh10thbvu.com
+
 ## 4.27.0
 
 * fixed
