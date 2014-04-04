@@ -25,6 +25,7 @@
     /(dl|david)\.nhachot\.info/,
     /file\.tamteo\.com/,
     /n\.shareme\.in/,
+    /ddl\.animesave\.com/,
   ];
   hostRule = combineRegExp(hostRule);
 
