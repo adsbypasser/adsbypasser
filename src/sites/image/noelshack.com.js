@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www.noelshack\.com$/
+    host: /^www\.noelshack\.com$/
   },
   ready: function () {
     var i = $('#elt_to_aff');
