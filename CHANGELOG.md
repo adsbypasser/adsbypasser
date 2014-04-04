@@ -44,6 +44,8 @@
     * ddl.animesave.com
     * u.shareme.in
     * dh10thbvu.com
+* removed
+    * rapeit.net
 
 ## 4.27.0
 

@@ -476,7 +476,6 @@ For more information, please see [Wiki].
     * preview.rlu.ru
     * prntscr.com
     * qrrro.com
-    * rapeit.net
     * ref.so
     * reffbux.com
     * richlink.com
