@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^pic2profit\.com$/,
+    host: /^pic(2profit|p2)\.com$/,
   },
   ready: function () {
     'use strict';
