@@ -18,17 +18,32 @@ $.register({
     if (!script) {
       throw new _.NoPicAdsError('script content changed');
     }
-    script = script.payload;
+    var sessionId = script.payload;
 
-    var data = "sessionId=" + script + "&browserToken=" + Math.round(new Date().getTime() / 1000);
+    script = $.$$('script').find(function (script) {
+      var m = script.innerHTML.match(/xpid:"([^"]+)"/);
+      if (m) {
+        return m[1];
+      }
+      return _.nop;
+    });
+    // somehow this token may not exists
+    var X_NewRelic_ID = script ? script.payload : '';
+
+    var Fingerprint = unsafeWindow.Fingerprint;
+    var data = "sessionId=" + sessionId + "&browserToken=" + (new Fingerprint({canvas: !0})).get();
+    var param = '?url=' + encodeURIComponent(window.location.href);
 
     var i = setInterval(function () {
-      $.post('/adSession/callback', data, function (text) {
+      $.post('/adSession/callback' + param, data, function (text) {
         var r = JSON.parse(text);
         if (r.status == "ok" && r.destinationUrl) {
           clearInterval(i);
           $.openLink(r.destinationUrl);
         }
+      }, {
+        Accept: 'application/json, text/javascript',
+        'X-NewRelic-ID': X_NewRelic_ID,
       });
     }, 1000);
   },
