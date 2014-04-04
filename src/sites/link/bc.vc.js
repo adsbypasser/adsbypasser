@@ -200,6 +200,40 @@
     ready: run,
   });
 
+    $.register({
+    rule: {
+      host: /^ad5\.eu$/,
+      path: /^\/[^.]+$/,
+    },
+    ready: function() {
+      $.removeNodes('iframe');
+      var s = searchScript(true);
+
+      // Find the form
+      var m = s.script.match(/(<form name="form1"method="post".*(?!<\\form>)<\/form>)/);
+
+      if (!m) {return;}
+
+      m = m[1];
+
+      // Set the correct timezone
+      var tz = -(new Date().getTimezoneOffset()/60);
+      m = m.replace("'+timezone+'",tz);
+
+      // Wrap the form into a useless div
+      var d = document.createElement('div');
+      d.setAttribute('id','NoPicAdsFTW');
+      d.setAttribute('style', 'display:none;');
+
+      // Feed with the right form
+      d.innerHTML = m;
+      document.body.appendChild(d);
+
+      // Redirect to next page
+      $('#NoPicAdsFTW > form[name=form1]').submit();
+    },
+  });
+
   $.register({
     rule: {
       host: /^tr5\.in$/,
