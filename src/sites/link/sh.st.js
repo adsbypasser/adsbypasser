@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^sh\.st$/,
+    host: /^sh\.st|dh10thbvu\.com$/,
     path: /^\/[\d\w]+/,
   },
   ready: function () {
@@ -31,7 +31,13 @@ $.register({
     var X_NewRelic_ID = script ? script.payload : '';
 
     var Fingerprint = unsafeWindow.Fingerprint;
-    var data = "sessionId=" + sessionId + "&browserToken=" + (new Fingerprint({canvas: !0})).get();
+    var browserToken = null;
+    if (Fingerprint) {
+      browserToken = (new Fingerprint({canvas: !0})).get();
+    } else {
+      browserToken = Math.round((new Date()).getTime() / 1000);
+    }
+    var data = "sessionId=" + sessionId + "&browserToken=" + browserToken;
     var param = '?url=' + encodeURIComponent(window.location.href);
 
     var i = setInterval(function () {
