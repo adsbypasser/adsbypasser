@@ -4,7 +4,7 @@ $.register({
     'use strict';
 
     $.removeNodes('.advert');
-    var i = $('#content + img');
+    var i = $('img.preview_picture_2b, img.original_picture_2b');
     $.openImage(i.src);
   },
 });
