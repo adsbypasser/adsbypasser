@@ -74,6 +74,9 @@ var $;
     }
 
     function ajax (method, url, data, headers, callback) {
+      headers['Host'] = window.location.host;
+      headers['Origin'] = window.location.origin;
+      headers['Referer'] = window.location.href;
       headers['X-Requested-With'] = 'XMLHttpRequest';
       var controller = GM.xmlhttpRequest({
         method: method,
