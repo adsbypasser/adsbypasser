@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^(www\.)?buzurl\.com$/,
+    host: /^(www\.)?(buz|vzt)url\.com$/,
   },
   ready: function () {
     'use strict';
