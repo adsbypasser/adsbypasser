@@ -6,22 +6,13 @@ $.register({
     'use strict';
 
     // If the list contains only one link
-    try {
-      var l = $.$$('.links-container.result-form > a.result-a');
+    var l = $.$$('.links-container.result-form > a.result-a');
 
-      // Convert to JS Object so we can count the number of links
-      var aLinks = l.map(function (value) {
-        return value;
-      });
-
-      // If only one link, we redirect to it
-      if (aLinks.length == 1) {
-        $.openLink(aLinks[0].href);
-        return;
-      }
+    // If only one link, we redirect to it
+    if (l.size() > 1) {
+      return;
     }
-    catch (e) {
-    }
+    $.openLink(l.at(0).href);
   },
 });
 
