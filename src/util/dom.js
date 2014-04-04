@@ -103,18 +103,24 @@ var $;
       return controller;
     }
 
-    $.get = function (url, data, callback) {
+    $.get = function (url, data, callback, headers) {
       data = toQuery(data);
-      return ajax('GET', url + '?' + data, '', {
-      }, callback);
+      headers = headers || {};
+      return ajax('GET', url + '?' + data, '', headers, callback);
     };
 
-    $.post = function (url, data, callback) {
+    $.post = function (url, data, callback, headers) {
       data = toQuery(data);
-      return ajax('POST', url, data, {
+      var h = {
         'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
         'Content-Length': data.length,
-      }, callback);
+      };
+      if (headers) {
+        _.C(headers).each(function (v, k) {
+          h[k] = v;
+        });
+      }
+      return ajax('POST', url, data, h, callback);
     };
 
     function go (path, params, method) {
