@@ -74,7 +74,11 @@ var $;
     }
 
     function ajax (method, url, data, headers, callback) {
-      headers['Host'] = window.location.host;
+      // Host is not alway the same as window.location.host, for example foo.example.org can perform a request to example.org
+      var l = document.createElement('a');
+      l.href = url;
+      var reqHost = l.hostname;
+      headers['Host'] = reqHost || window.location.host;
       headers['Origin'] = window.location.origin;
       headers['Referer'] = window.location.href;
       headers['X-Requested-With'] = 'XMLHttpRequest';
