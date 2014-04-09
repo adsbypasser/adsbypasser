@@ -108,9 +108,11 @@ var $;
     }
 
     $.get = function (url, data, callback, headers) {
-      data = toQuery(data);
+      var data = toQuery(data);
+      // Don't request with '?' if there is no data
+      data = data!==''? '?' + data : '';
       headers = headers || {};
-      return ajax('GET', url + '?' + data, '', headers, callback);
+      return ajax('GET', url + data, '', headers, callback);
     };
 
     $.post = function (url, data, callback, headers) {
