@@ -107,6 +107,16 @@ var $;
       return controller;
     }
 
+    $.toDOM = function(rawHTML) {
+      try {
+        var parser = new DOMParser();
+        var DOMHTML = parser.parseFromString(rawHTML, "text/html");
+        return DOMHTML;
+      } catch (e) {
+        throw new _.NoPicAdsError('could not parse HTML to DOM');
+      }
+    }
+
     $.get = function (url, data, callback, headers) {
       var data = toQuery(data);
       // Don't request with '?' if there is no data
