@@ -74,7 +74,11 @@ var $;
     }
 
     function ajax (method, url, data, headers, callback) {
-      headers['Host'] = window.location.host;
+      // Host is not alway the same as window.location.host, for example foo.example.org can perform a request to example.org
+      var l = document.createElement('a');
+      l.href = url;
+      var reqHost = l.hostname;
+      headers['Host'] = reqHost || window.location.host;
       headers['Origin'] = window.location.origin;
       headers['Referer'] = window.location.href;
       headers['X-Requested-With'] = 'XMLHttpRequest';
@@ -103,10 +107,22 @@ var $;
       return controller;
     }
 
+    $.toDOM = function(rawHTML) {
+      try {
+        var parser = new DOMParser();
+        var DOMHTML = parser.parseFromString(rawHTML, "text/html");
+        return DOMHTML;
+      } catch (e) {
+        throw new _.NoPicAdsError('could not parse HTML to DOM');
+      }
+    }
+
     $.get = function (url, data, callback, headers) {
-      data = toQuery(data);
+      var data = toQuery(data);
+      // Don't request with '?' if there is no data
+      data = data!==''? '?' + data : '';
       headers = headers || {};
-      return ajax('GET', url + '?' + data, '', headers, callback);
+      return ajax('GET', url + data, '', headers, callback);
     };
 
     $.post = function (url, data, callback, headers) {

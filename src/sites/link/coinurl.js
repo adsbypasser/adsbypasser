@@ -1,36 +1,56 @@
 (function () {
   'use strict';
 
-  function deep (d) {
-    d.addEventListener('DOMContentLoaded', function () {
-      var a = $.$('#skip-ad', d.document);
-      if (a) {
-        $.openLink(a.href);
-      }
-    });
-  }
-
   $.register({
     rule: {
-      host: /^coinurl\.com|cur\.lv$/,
+      host: /^(?:(\w+)\.)?(coinurl\.com|cur\.lv)$/,
+      path: /^\/[-\w]+$/
     },
-    ready: function () {
-      var d = unsafeWindow.frames[0];
-      if (d) {
-        deep(d);
-        return;
+    ready: function (m) {
+      $.removeNodes('iframe');
+      if (m.host[1] == null) {
+        var mainFrame = 'http://cur.lv/redirect_curlv.php?code=' + escape(document.location.pathname.substring(1));
+      } else {
+        var mainFrame = 'http://cur.lv/redirect_curlv.php?zone=' + m.host[1] + '&name=' + escape(document.location.pathname.substring(1));
       }
-      var o = new MutationObserver(function (mutations) {
-        o.disconnect();
-        var d = unsafeWindow.frames[0];
-        d.addEventListener('DOMContentLoaded', function () {
-          d = d.frames[0];
-          deep(d);
-        });
-      });
-      o.observe(document.body, {
-        childList: true,
-      });
+      // Retrieve the main frame
+      $.get(mainFrame, {}, 
+        function(mainFrameContent) {
+          try {
+            // Convert it to HTML nodes
+            var docMainFrame = $.toDOM(mainFrameContent);
+          } catch (e) {
+            throw new _.NoPicAdsError('main frame changed');
+          }
+
+          // Regex allowing to extract the link from a subframe
+          var rExtractLink = /onclick="open_url\('([^']+)',\s*'go'\)/;
+
+          // Iterate each frame
+          var innerFrames = $.$$('frameset > frame', docMainFrame).each(
+            function(currFrame) {
+
+              // Fix the host of the frame
+              var currFrameAddr = currFrame.src.replace(location.hostname,m.host[2]);
+
+              // Get the content of the current frame
+              $.get(currFrameAddr, {},
+                function(currFrameContent) {
+
+                  // Try to find the link in the current frame
+                  var aRealLink = rExtractLink.exec(currFrameContent);
+
+                  // Could not find it? Try to find it in the next frame
+                  if (aRealLink == null || aRealLink[1] == null) {return;}
+
+                  // Otherwise redirect to the link
+                  var realLink = aRealLink[1];
+                  $.openLink(realLink);
+                }
+              );
+          });
+        }
+      );
     },
   });
 
