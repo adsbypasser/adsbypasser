@@ -635,6 +635,7 @@ var $;
         },
       };
       _.C([unsafeWindow, unsafeWindow.document.body]).each(function (o) {
+        if (o == null) {return;}
         // release existing events
         o.onbeforeunload = undefined;
         // prevent they bind event again
