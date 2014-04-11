@@ -194,10 +194,25 @@
 
   $.register({
     rule: {
-      host: /^(adcrun|ysear)\.ch|(fly2url|urlwiz|xafox)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|(adbla|tl7)\.us|www\.adjet\.eu|srk\.gs|cun\.bz|adtr\.im$/,
+      host: /^(adcrun|ysear)\.ch|(fly2url|urlwiz|xafox)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|(adbla|tl7)\.us|www\.adjet\.eu|srk\.gs|cun\.bz$/,
       path: /^\/.+/,
     },
     ready: run,
+  });
+
+  $.register({
+    rule: {
+      host: /^adtr\.im$/,
+      path: /^\/.+/,
+    },
+    ready: function(){
+      var f = $.$('iframe.fly_frame');
+      if (f) {
+        $.openLink(f.src);
+      } else {
+        run();
+      }
+    }
   });
 
     $.register({
