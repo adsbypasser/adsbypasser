@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * ad7.biz
+    * cur.lv
+    * some issues on linkbucks
+    * img-zone.com
+
 ## 4.28.0
 
 * fixed
