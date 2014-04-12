@@ -192,7 +192,7 @@
     ready: function() {
       // Try to bypass the survey
       $.removeNodes('.user_content');
-      var rSurveyLink = /http\.open\("GET", "api_ajax\.php\?sid=\d*&ip=[^&]*&longurl=([^"]+)" \+ first_time, (?:true|false)\);/
+      var rSurveyLink = /http\.open\("GET", "api_ajax\.php\?sid=\d*&ip=[^&]*&longurl=([^"]+)" \+ first_time, (?:true|false)\);/;
 
       var l = $.$$('script').find(function (n) {
         var m = n.innerHTML.match(rSurveyLink);
