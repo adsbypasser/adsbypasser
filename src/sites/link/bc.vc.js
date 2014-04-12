@@ -166,13 +166,13 @@
     },
   });
 
-  function run () {
+  function run (dirtyFix) {
     // prevent redirection by iframe
     $.removeNodes('iframe');
 
     var result = searchScript(true);
     if (!result.direct) {
-      knockServer(result.script);
+      knockServer(result.script,dirtyFix);
     } else {
       result = result.script.match(/top\.location\.href='([^']+)'/);
       if (!result) {
@@ -182,6 +182,33 @@
       $.openLink(result);
     }
   }
+
+  // adcrun.ch
+  $.register({
+    rule: {
+      host: /^adcrun\.ch$/,
+      path: /\/\w+/
+    },
+    ready: function() {
+      // Try to bypass the survey
+      $.removeNodes('.user_content');
+      var rSurveyLink = /http\.open\("GET", "api_ajax\.php\?sid=\d*&ip=[^&]*&longurl=([^"]+)" \+ first_time, (?:true|false)\);/
+
+      var l = $.$$('script').find(function (n) {
+        var m = n.innerHTML.match(rSurveyLink);
+        if (m) {
+          return m[1];
+        }
+        return _.nop;
+      });
+      // Redirect to the target link if we found it
+      if(l) {$.openLink(l.payload);}
+
+      // Otherwise it's most likely a simple bc.vc-like link
+      // Malformed JSON
+      run(true);
+    }
+  });
 
   // adli.pw
   $.register({
@@ -194,7 +221,7 @@
 
   $.register({
     rule: {
-      host: /^(adcrun|ysear)\.ch|(fly2url|urlwiz|xafox)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|(adbla|tl7)\.us|www\.adjet\.eu|srk\.gs|cun\.bz|adtr\.im$/,
+      host: /^ysear\.ch|(fly2url|urlwiz|xafox)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|(adbla|tl7)\.us|www\.adjet\.eu|srk\.gs|cun\.bz|adtr\.im$/,
       path: /^\/.+/,
     },
     ready: run,
@@ -240,14 +267,8 @@
       path: /^\/.+/,
     },
     ready: function () {
-      $.removeNodes('iframe');
-
-      var content = searchScript();
-      var matches = content.match(/eval(.*)/);
-      matches = matches[1];
-      content = eval(matches);
-
-      knockServer(content, true);
+      // Malformed JSON
+      run(true);
     },
   });
 
