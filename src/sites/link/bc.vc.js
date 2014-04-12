@@ -210,15 +210,6 @@
     }
   });
 
-  // adli.pw
-  $.register({
-    rule: {
-      host: /^adli\.pw$/,
-      path: /^\/[^.]+$/,
-    },
-    ready: run,
-  });
-
   $.register({
     rule: {
       host: /^ysear\.ch|(fly2url|urlwiz|xafox)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|(adbla|tl7)\.us|www\.adjet\.eu|srk\.gs|cun\.bz|adtr\.im$/,
