@@ -1,17 +1,14 @@
 #! /usr/bin/env python
 
+
 from PIL import Image, ImageOps, ImageDraw
 from cStringIO import StringIO
 import base64
 import subprocess
 import cgi
 import tempfile
-import os
 import sys
-
-k, l = tempfile.mkstemp()
-k = open(l, 'w')
-vs = {}
+import logging
 
 
 def ubucks_net(a):
@@ -29,27 +26,43 @@ def ubucks_net(a):
     e = a.copy()
     e.paste(b, (0, 0), c)
     return e
-vs['ubucks.net'] = ubucks_net
 
 
 def get_args():
     form = cgi.FieldStorage()
+
     if 'i' not in form:
-        raise Exception()
+        raise Exception(u'Image not specified.')
+
     if 'v' not in form:
         v = None
     else:
         v = form['v'].value
-    return (
-        form['i'].value,
-        v,
-    )
+
+    return {
+        'image': form['i'].value,
+        'variant': v,
+    }
+
 
 def img_from_b64(b64):
     a = base64.b64decode(b64)
     b = StringIO(a)
     c = Image.open(b)
     return c
+
+
+def preprocess_image(img, variant):
+    # strip alpha channel if possible
+    if img.mode == 'RGBA':
+        img = strip_alpha(img)
+
+    # post-process by variant
+    if variant in VARIANTS:
+        img = VARIANTS[variant](img)
+
+    return img
+
 
 def strip_alpha(img):
     bg = Image.new('RGBA', img.size, 'white')
@@ -58,44 +71,66 @@ def strip_alpha(img):
     bg = bg.convert('RGBA')
     return bg
 
-def main():
-    i, v = get_args()
-    k.write(i + '\n')
-    k.write(repr(v) + '\n')
 
-    b = img_from_b64(i)
-    f = b.format
+def do_OCR(img):
+    NTF = tempfile.NamedTemporaryFile
+    # create a temporary image file for Tesseract OCR
+    with NTF() as in_file, NTF() as out_file:
+        img.save(in_file, img.format)
 
-    if b.mode == 'RGBA':
-        b = strip_alpha(b)
+        r = subprocess.call(['tesseract', in_file.name, out_file.name])
+        result_file_name = out_file.name + '.txt'
 
-    if v in vs:
-        b = vs[v](b)
-
-    a, o = tempfile.mkstemp()
-
-    b.save(o, f)
-
-    a, r = tempfile.mkstemp()
-
-    b = subprocess.call(['tesseract', o, r])
-    r = r + '.txt'
-
-    f = open(r, 'r')
-    a = f.read().strip()
-    f.close()
-    k.write(a + '\n')
-
-    os.remove(o)
-    os.remove(r)
-
-    print a
+        with open(result_file_name, 'r') as result_file:
+            result = result_file.read().strip()
+            logging.info(result)
+            return result
 
 
-print 'Content-Type: text/plain'
-print
+# TODO extract to factory
+VARIANTS = {
+    'ubucks.net': ubucks_net,
+}
 
-try:
-    main()
-except Exception:
-    k.write('exception\n')
+
+def main(args=None):
+    if args is None:
+        args = sys.argv
+
+    logging.basicConfig(filename='captcha.log')
+
+    # retrieve GET
+    p = get_args()
+    image = p['image']
+    variant = p['variant']
+    logging.info(image)
+    logging.info(repr(variant))
+
+    # convert base64 to image object
+    image = img_from_b64(image)
+
+    # preprocess image
+    image = preprocess_image(image, variant)
+
+    # do OCR
+    result = do_OCR(image)
+
+    print 'Content-Type: text/plain'
+    print
+    print result
+
+    return 0
+
+
+if __name__ == '__main__':
+    try:
+        exit_code = main()
+    except Exception as e:
+        exit_code = 1
+
+    sys.exit(exit_code)
+
+
+# ex: ts=4 sts=4 sw=4 et
+# sublime: tab_size 4; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
+# kate: space-indent on; indent-width 4;
