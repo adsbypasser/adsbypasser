@@ -115,8 +115,7 @@ def main(args=None):
     # do OCR
     result = do_OCR(image)
 
-    print 'Content-Type: text/plain'
-    print
+    sys.stdout.write('Content-Type: text/plain\r\n\r\n')
     print result
 
     return 0
