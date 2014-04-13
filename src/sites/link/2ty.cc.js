@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^short\.pk|2ty\.cc$/,
+    host: /^2ty\.cc$/,
     path: /^\/.+/,
   },
   ready: function () {
