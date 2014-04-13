@@ -14,7 +14,7 @@ $.register({
         return;
       }
     }
-    $.postAndGo('', {
+    $.openLinkByPost('', {
       hidden: '1',
       image: ' ',
     });

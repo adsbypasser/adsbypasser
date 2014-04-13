@@ -161,7 +161,7 @@ var $;
       form.submit();
     }
 
-    $.postAndGo = function (url, data) {
+    $.openLinkByPost = function (url, data) {
       go(url, data, 'post');
     };
 

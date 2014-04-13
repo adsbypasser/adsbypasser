@@ -8,7 +8,7 @@ $.register({
 
     var i = $.$('div.t_tips2 div > img');
     if (!i) {
-      $.postAndGo('', {
+      $.openLinkByPost('', {
         _confirm: '',
       });
       return;
