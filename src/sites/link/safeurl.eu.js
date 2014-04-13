@@ -1,27 +1,18 @@
 $.register({
   rule: {
     host: /^(www\.)?safeurl\.eu$/,
-    path: /\/\w+/
+    path: /\/\w+/,
   },
   ready: function () {
     'use strict';
 
-    var rUrl = /window\.open\("([^"]+)"\);/;
-
-    var directUrl = $.$$('script').find(function (script) {
-     var m = rUrl.exec(script.innerHTML);
-      if (!m) {
-       return _.nop;
-      }
-      return m[1];
-    });
-
+    var directUrl = $.searchScripts(/window\.open\("([^"]+)"\);/);
     if (!directUrl) {
       throw new _.NoPicAdsError('script content changed');
     }
-
-    $.openLink(directUrl.payload);
-  }
+    directUrl = directUrl[1];
+    $.openLink(directUrl);
+  },
 });
 
 // ex: ts=2 sts=2 sw=2 et

@@ -7,19 +7,17 @@ $.register({
 
     $.removeNodes('.container-body');
 
-    var l = $.$$('script').find(function (script) {
-      var m = script.innerHTML.match(/token="([^"]+)"/);
-      if (!m) {
-        return _.nop;
-      }
-      return m[1];
-    });
+    var m = $.searchScripts(/token="([^"]+)"/);
+    if (!m) {
+      throw new _.NoPicAdsError('site changed');
+    }
+    m = m[1];
 
-    if (!l) {return;}
+    var interLink = '/go/' + m + '?a=' + window.location.hash.substr(1);
 
-    var interLink = '/go/' + l.payload + '?a=' + window.location.hash.substr(1);
-
-    setTimeout(function() {$.openLink(interLink)}, 6000);
+    setTimeout(function () {
+      $.openLink(interLink);
+    }, 6000);
   },
 });
 

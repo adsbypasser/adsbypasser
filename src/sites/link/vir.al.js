@@ -5,17 +5,11 @@ $.register({
   ready: function () {
     'use strict';
 
-    var l = $.$$('script').find(function (script) {
-      var m = script.innerHTML.match(/var target_url = '([^']+)';/);
-      if (!m) {
-        return _.nop;
-      }
-      return m[1];
-    });
-
-    if (!l) {return;}
-
-    $.openLink(l.payload);
+    var m = $.searchScripts(/var target_url = '([^']+)';/);
+    if (!m) {
+      throw new _.NoPicAdsError('site changed');
+    }
+    $.openLink(m[1]);
   },
 });
 

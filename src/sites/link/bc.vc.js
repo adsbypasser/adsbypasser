@@ -192,17 +192,14 @@
     ready: function() {
       // Try to bypass the survey
       $.removeNodes('.user_content');
-      var rSurveyLink = /http\.open\("GET", "api_ajax\.php\?sid=\d*&ip=[^&]*&longurl=([^"]+)" \+ first_time, (?:true|false)\);/;
 
-      var l = $.$$('script').find(function (n) {
-        var m = n.innerHTML.match(rSurveyLink);
-        if (m) {
-          return m[1];
-        }
-        return _.nop;
-      });
+      var rSurveyLink = /http\.open\("GET", "api_ajax\.php\?sid=\d*&ip=[^&]*&longurl=([^"]+)" \+ first_time, (?:true|false)\);/;
+      var l = $.searchScripts(rSurveyLink);
       // Redirect to the target link if we found it
-      if(l) {$.openLink(l.payload);}
+      if(l) {
+        $.openLink(l[1]);
+        return;
+      }
 
       // Otherwise it's most likely a simple bc.vc-like link
       // Malformed JSON

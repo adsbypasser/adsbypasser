@@ -8,27 +8,15 @@ $.register({
 
     $.removeNodes('iframe');
 
-    var script = $.$$('script').find(function (script) {
-      var m = script.innerHTML.match(/sessionId: "([\d\w]+)",/);
-      if (m) {
-        return m[1];
-      }
-      return _.nop;
-    });
-    if (!script) {
+    var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
+    if (!m) {
       throw new _.NoPicAdsError('script content changed');
     }
-    var sessionId = script.payload;
+    var sessionId = m[1];
 
-    script = $.$$('script').find(function (script) {
-      var m = script.innerHTML.match(/xpid:"([^"]+)"/);
-      if (m) {
-        return m[1];
-      }
-      return _.nop;
-    });
+    m = $.searchScripts(/xpid:"([^"]+)"/);
     // somehow this token may not exists
-    var X_NewRelic_ID = script ? script.payload : '';
+    var X_NewRelic_ID = m ? m[1] : '';
 
     var Fingerprint = unsafeWindow.Fingerprint;
     var browserToken = null;

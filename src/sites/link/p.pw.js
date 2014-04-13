@@ -7,15 +7,9 @@ $.register({
 
     $.removeNodes('iframe');
 
-    var url = $.$$('script').find(function (script) {
-      var m = script.innerHTML.match(/window\.location = "(.*)";/);
-      if (m) {
-        return m[1];
-      }
-      return _.nop;
-    });
-
-    $.openLink(url.payload);
+    var m = $.searchScripts(/window\.location = "(.*)";/);
+    m = m[1];
+    $.openLink(m);
   },
 });
 

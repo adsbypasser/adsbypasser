@@ -4,44 +4,30 @@ $.register({
     'use strict';
 
     // Redirect links d
-    var k = $.$$('script').find(function (script) {
-      script = script.innerHTML;
-      var m = script.match(/window\.location='([^']+)'/);
-      if (!m) {
-        return _.nop;
-      }
-      return m[1];
-    });
+    var k = $.searchScripts(/window\.location='([^']+)'/);
     if (k) {
-      $.openLink(k.payload);
+      $.openLink(k[1]);
       return;
     }
 
     // One link container p
-    var i = $.$$('div.links-container.result-form:not(.p-links-container) > span.dlinks > a');
-
-    // Convert to JS Object so we can count the number of links
-    var aLinks = i.map(function (value) {
-      return value;
-    });
+    var aLinks = $.$$('div.links-container.result-form:not(.p-links-container) > span.dlinks > a');
 
     // If only one link, we redirect to it
-    if (aLinks.length == 1) {
-      $.openLink(aLinks[0].href);
+    if (aLinks.size() === 1) {
+      $.openLink(aLinks.at(0).href);
       return;
     }
 
     // Captcha links p,t
-    i = $('img[alt=captcha]');
+    k = $('img[alt=captcha]');
 
-    if (typeof i != 'undefined') {
-      $.captcha(i.src, function (a) {
-        var b = $('#captcha');
-        var c = $('input[name=Submit]');
-        b.value = a;
-        c.click();
-      });
-  }
+    $.captcha(k.src, function (a) {
+      var b = $('#captcha');
+      var c = $('input[name=Submit]');
+      b.value = a;
+      c.click();
+    });
   },
 });
 

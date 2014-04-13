@@ -6,32 +6,21 @@ $.register({
   ready: function () {
     'use strict';
 
-    var f = $.$$('script').find(function (n) {
-      var m = n.innerHTML.match(/window\.location\.replace/);
-      if (!m) {
-        return _.nop;
-      }
-    });
-    if (f) {
+    var m = $.searchScripts(/window\.location\.replace/);
+    if (m) {
       // second stage
       return;
     }
 
-    f = $.$$('script').find(function (n) {
-      var m = n.innerHTML.match(/countdownArea\.innerHTML = "([^"]+)"/);
-      if (m) {
-        return m[1];
-      }
-      return _.nop;
-    });
-    if (!f) {
-      _.warn('pattern changed');
-      return;
+    m = $.searchScripts(/countdownArea\.innerHTML = "([^"]+)"/);
+    if (!m) {
+      throw new _.NoPicAdsError('pattern changed');
     }
+    m = m[1];
 
     var d = $.$('#area');
     if (d) {
-      d.innerHTML = f.payload;
+      d.innerHTML = m;
       // NOTE should not use submit, must click input
       d = $('.skip', d);
       d.click();
