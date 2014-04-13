@@ -294,6 +294,17 @@ var $;
       });
     };
 
+    $.searchScripts = function (pattern) {
+      var m = $.$$('script').find(function (s) {
+        var m = s.innerHTML.match(pattern);
+        if (!m) {
+          return _.nop;
+        }
+        return m;
+      });
+      return m.payload;
+    };
+
     $.setCookie = function (key, value) {
       var now = new Date();
       now.setTime(now.getTime() + 3600 * 1000);
