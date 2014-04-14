@@ -194,7 +194,7 @@
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(fly2url|urlwiz|xafox)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|(adbla|tl7)\.us|www\.adjet\.eu|srk\.gs|cun\.bz$/,
+      host: /^adcrun\.ch|(fly2url|urlwiz|xafox)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|(adbla|tl7)\.us|www\.adjet\.eu|srk\.gs|cun\.bz|miniurl\.tk$/,
       path: /^\/.+/,
     },
     ready: run,
