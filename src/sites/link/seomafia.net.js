@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^seomafia\.net$/,
+    host: /^(www\.)?(apploadz\.ru|seomafia\.net)$/
   },
   ready: function () {
     'use strict';
