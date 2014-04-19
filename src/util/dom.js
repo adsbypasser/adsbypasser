@@ -294,8 +294,8 @@ var $;
       });
     };
 
-    $.searchScripts = function (pattern) {
-      var m = $.$$('script').find(function (s) {
+    $.searchScripts = function (pattern, context) {
+      var m = $.$$('script', context).find(function (s) {
         var m = s.innerHTML.match(pattern);
         if (!m) {
           return _.nop;
