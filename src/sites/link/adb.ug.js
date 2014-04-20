@@ -1,6 +1,8 @@
 $.register({
   rule: {
     host: /^(www\.)?adb\.ug$/,
+    // Match everything but empty, privacy, terms, contact, contact/whatever or path beginning with #
+    path: /^(?!\/(?:privacy|terms|contact(\/.*)?|#.*)?$).*$/
   },
   ready: function () {
     'use strict';
@@ -18,7 +20,7 @@ $.register({
     });
     if (k) {
       $.openLink(k.payload);
-      return;;
+      return;
     }
 
     // pattern 2
