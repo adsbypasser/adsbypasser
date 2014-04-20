@@ -1,9 +1,11 @@
 $.register({
-  rule: 'http://anonpic.com/?v=*',
+  rule: {
+    host: /^postimg\.org$/,
+  },
   ready: function () {
     'use strict';
 
-    var i = $('#imagen img');
+    var i = $('body > center > img');
     $.openImage(i.src);
   },
 });

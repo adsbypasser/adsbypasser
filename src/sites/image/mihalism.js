@@ -18,7 +18,7 @@
   // dwimg.com
   $.register({
     rule: {
-      host: /^(dwimg|imgsin)\.com$/,
+      host: /^(dwimg|imgsin|www\.pictureshoster)\.com$/,
       path: /^\/viewer\.php$/,
       query: /^\?file=([^&]+)/,
     },
@@ -30,7 +30,7 @@
   // imageview.me
   $.register({
     rule: {
-      host: /imageview\.me|244pix\.com|imgnip\.com$/,
+      host: /imageview\.me|244pix\.com|imgnip\.com|postimg\.net$/,
       path: /^\/viewerr.*\.php$/,
       query: /^\?file=([^&]+)/,
     },
