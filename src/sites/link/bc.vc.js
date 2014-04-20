@@ -207,9 +207,37 @@
     }
   });
 
+  function combineRegExp (res) {
+    var re = res.map(function (re) {
+      return re.source;
+    }).join('|');
+    re = new RegExp('^' + re + '$');
+    return re;
+  }
+
+  // split url patterns for the god's sake
+  var hostRules = [
+    /gx\.si/,
+    /adwat\.ch/,
+    /(fly2url|urlwiz|xafox)\.com/,
+    /(zpoz|ultry)\.net/,
+    /(wwy|myam)\.me/,
+    /ssl\.gs/,
+    /link\.tl/,
+    /xip\.ir/,
+    /hit\.us/,
+    /shortit\.in/,
+    /(adbla|tl7)\.us/,
+    /www\.adjet\.eu/,
+    /srk\.gs/,
+    /cun\.bz/,
+    /miniurl\.tk/,
+  ];
+  hostRules = combineRegExp(hostRules);
+
   $.register({
     rule: {
-      host: /^gx\.si|adwat\.ch|(fly2url|urlwiz|xafox)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|(adbla|tl7)\.us|www\.adjet\.eu|srk\.gs|cun\.bz|miniurl\.tk$/,
+      host: hostRules,
       path: /^\/.+/,
     },
     ready: run,
