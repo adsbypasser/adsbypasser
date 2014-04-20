@@ -9,6 +9,7 @@ $.register({
     'http://xxx.freeimage.us/share.php?id=*',
     'http://npicture.net/share-*.html',
     'http://www.onlinepic.net/share.php?id=*',
+    'http://www.pixsor.com/share.php?id=*',
   ],
   ready: function () {
     'use strict';
