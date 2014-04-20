@@ -1,3 +1,32 @@
+## TBA
+
+* fixed
+    * some issues on bc.vc
+    * survey for adcrun.ch
+    * adtr.im
+    * ysear.ch
+    * adb.ug
+    * some issues on adf.ly
+    * pixhub.eu
+* added
+    * ilix.in
+    * safeurl.eu
+    * 1tiny.net
+    * miniurl.tk
+    * apploadz.ru
+    * adwat.ch
+    * gx.si
+    * ultshare.com
+    * fundurl.com
+    * pictureshoster.com
+    * picturevip.com
+    * pixsor.com
+    * postimg.org
+    * postimg.net
+* removed
+    * adli.pw
+    * short.pk
+
 ## 4.28.1
 
 * fixed

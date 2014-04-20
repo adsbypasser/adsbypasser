@@ -131,9 +131,9 @@ For more information, please see [Wiki].
     * 244pix.com
     * catpic.biz
     * dwimg.com
+    * funextra.hostzi.com
     * gallery.jpavgod.com
     * hentai-hosting.com
-    * funextra.hostzi.com
     * imageback.info
     * imagecurl.com
     * imagecurl.org
@@ -146,6 +146,8 @@ For more information, please see [Wiki].
     * miragepics.com
     * nixhelp.de
     * overpic.net
+    * pictureshoster.com
+    * postimg.net
 * reklama
     * bulkimg.info
     * croftimage.com
@@ -212,6 +214,7 @@ For more information, please see [Wiki].
     * npicture.net
     * onlinepic.net
     * picfox.org
+    * pixsor.com
 * imgchili
     * imgchili.com
     * imgchili.net
@@ -232,13 +235,15 @@ For more information, please see [Wiki].
     * adbla.us
     * adcrun.ch
     * adjet.eu
-    * adli.pw
     * adtr.im
+    * adwat.ch
     * bc.vc
     * cun.bz
     * fly2url.com
+    * gx.si
     * hit.us
     * link.tl
+    * miniurl.tk
     * myam.me
     * shortit.in
     * shrink.gs
@@ -354,17 +359,23 @@ For more information, please see [Wiki].
     * goshrink.com
     * readthis.ca
     * redirects.ca
-* short.pk
-    * 2ty.cc
-    * short.pk
 * sh.st
     * sh.st
     * dh10thbvu.com
+* seomafia.net
+    * apploadz.ru
+    * seomafia.net
+* imagescream.com
+    * anonpic.com
+    * imagescream.com
+    * picturevip.com
 * else
     * 01.nl
     * 1be.biz
     * 1pics.ru
+    * 1tiny.net
     * 1to4.me
+    * 2ty.cc
     * 3ra.be
     * 4fun.tw
     * 4owl.info
@@ -376,7 +387,6 @@ For more information, please see [Wiki].
     * ah-informatique.com
     * aka.gr
     * alabout.com
-    * anonpic.com
     * bayimg.com
     * beeimg.com
     * bild.me
@@ -405,6 +415,7 @@ For more information, please see [Wiki].
     * fotosik.pl
     * free.link2dollar.com
     * freeimagehosting.net
+    * fundurl.com
     * funkyimg.com
     * gkurl.us
     * go2.me
@@ -414,6 +425,7 @@ For more information, please see [Wiki].
     * ibunker.us
     * ichan.org
     * ifotos.pl
+    * ilix.in
     * ima.so
     * imadul.com
     * image18.org
@@ -426,7 +438,6 @@ For more information, please see [Wiki].
     * imagenetz.de
     * imageno.com
     * imagepix.org
-    * imagescream.com
     * imageshack.us
     * imageshost.ru
     * imageupper.com
@@ -473,6 +484,7 @@ For more information, please see [Wiki].
     * pixhost.org
     * pixhub.eu
     * pixpal.net
+    * postimg.org
     * preview.rlu.ru
     * prntscr.com
     * qrrro.com
@@ -482,8 +494,8 @@ For more information, please see [Wiki].
     * rijaliti.info
     * riurl.com
     * robo.us
+    * safeurl.eu
     * screenlist.ru
-    * seomafia.net
     * setlinks.us
     * sh.st
     * shr77.com
@@ -496,6 +508,7 @@ For more information, please see [Wiki].
     * turboimagehost.com
     * typ.me
     * ulmt.in
+    * ultshare.com
     * unfake.it
     * url.ie
     * urlgator.com
