@@ -44,19 +44,18 @@
   $.register({
     rule: {
       host: hostRule,
-      // FIXME this pattern is not stable
-      path: /^\/([a-z\/]{2,})?$/,
-    },
-  });
-
-  $.register({
-    rule: {
-      host: hostRule,
     },
     ready: function () {
+      // check if this is ad page
+      var h = $.$('#adfly_html'), b = $.$('#home');
+      if (!h || !b || h.nodeName !== 'HTML' || b.nodeName !== 'BODY') {
+        // this is not a ad page
+        return;
+      }
+
       $.removeNodes('iframe');
 
-      var h = unsafeWindow.eu;
+      h = unsafeWindow.eu;
       if (!h) {
         h = $('#adfly_bar');
         unsafeWindow.close_bar();
