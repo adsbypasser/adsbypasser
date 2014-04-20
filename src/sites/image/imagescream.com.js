@@ -13,7 +13,7 @@ $.register({
 
 $.register({
   rule: {
-    host: /^(imagescream|anonpic)\.com$/,
+    host: /^(imagescream|anonpic|picturevip)\.com$/,
     query: /^\?v=/,
   },
   ready: function () {
