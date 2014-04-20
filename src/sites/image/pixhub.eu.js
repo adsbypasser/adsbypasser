@@ -5,8 +5,9 @@ $.register({
   ready: function () {
     'use strict';
 
-    $.removeNodes('.adultpage, #FFN_Banner_Holder');
-    $.enableScrolling();
+    $.removeNodes('iframe, .adultpage, #FFN_Banner_Holder');
+    var i = $('.image-show img');
+    $.openImage(i.src);
   },
 });
 
