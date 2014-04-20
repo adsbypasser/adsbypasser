@@ -8,7 +8,9 @@ $.register({
     var f = $.$('#main');
     if (f) {
       $.openLink(f.src);
+      return;
     }
+
     f = $.$$('frame').find(function (frame) {
       if (frame.src.indexOf('interheader.php') < 0) {
         return _.nop;
@@ -20,17 +22,11 @@ $.register({
       return;
     }
 
-    f = $.$$('script').find(function (script) {
-      var m = script.innerHTML.match(/krypted=([^&]+)/);
-      if (!m) {
-        return _.nop;
-      }
-      return m[1];
-    });
+    f = $.searchScripts(/krypted=([^&]+)/);
     if (!f) {
-      return;
+      throw new _.NoPicAdsError('site changed');
     }
-    f = f.payload;
+    f = f[1];
     var data = unsafeWindow.des('ksnslmtmk0v4Pdviusajqu', unsafeWindow.hexToString(f), 0, 0);
     if (data) {
       $.openLink('http://ity.im/1104_21_50846_' + data);

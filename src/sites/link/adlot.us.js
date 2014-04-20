@@ -21,7 +21,7 @@ $.register({
     while (tmp = p.exec(script.payload)) {
       opt[tmp[1]] = tmp[2];
     }
-    $.postAndGo('', opt);
+    $.openLinkByPost('', opt);
   },
 });
 

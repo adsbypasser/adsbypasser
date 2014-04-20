@@ -161,7 +161,7 @@ var $;
       form.submit();
     }
 
-    $.postAndGo = function (url, data) {
+    $.openLinkByPost = function (url, data) {
       go(url, data, 'post');
     };
 
@@ -292,6 +292,17 @@ var $;
       $.$$(selector, context).each(function (e) {
         e.parentNode.removeChild(e);
       });
+    };
+
+    $.searchScripts = function (pattern, context) {
+      var m = $.$$('script', context).find(function (s) {
+        var m = s.innerHTML.match(pattern);
+        if (!m) {
+          return _.nop;
+        }
+        return m;
+      });
+      return m.payload;
     };
 
     $.setCookie = function (key, value) {

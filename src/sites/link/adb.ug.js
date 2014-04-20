@@ -10,35 +10,22 @@ $.register({
     $.removeNodes('iframe');
 
     // pattern 1
-    var k = $.$$('script').find(function (script) {
-      script = script.innerHTML;
-      var m = script.match(/top\.location\.href="([^"]+)"/);
-      if (!m) {
-        return _.nop;
-      }
-      return m[1];
-    });
-    if (k) {
-      $.openLink(k.payload);
+    var m = $.searchScripts(/top\.location\.href="([^"]+)"/);
+    if (m) {
+      $.openLink(m[1]);
       return;
     }
 
     // pattern 2
-    var script = $.$$('script').find(function (v) {
-      var m = v.innerHTML.match(/\{_args.+\}\}/);
-      if (!m) {
-        return _.nop;
-      }
-      return m;
-    });
-    if (!script) {
+    m = $.searchScripts(/\{_args.+\}\}/);
+    if (!m) {
       throw new _.NoPicAdsError('script content changed');
     }
-    script = eval('(' + script.payload[0] + ')');
+    m = eval('(' + m[0] + ')');
     var url = window.location.pathname + '/skip_timer';
 
     var i = setInterval(function () {
-      $.post(url, script, function (text) {
+      $.post(url, m, function (text) {
         var jj = JSON.parse(text);
         if (!jj.errors && jj.messages) {
           clearInterval(i);

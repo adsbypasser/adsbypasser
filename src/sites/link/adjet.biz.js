@@ -5,15 +5,11 @@ $.register({
   ready: function () {
     'use strict';
 
-    var script = $.$$('script').find(function (v) {
-      var m = v.innerHTML.match(/href=(\S+)/);
-      if (!m) {
-        return _.nop;
-      }
-      return m;
-    });
-    script = script.payload[1];
-    $.openLink(script);
+    var m = $.searchScripts(/href=(\S+)/);
+    if (!m) {
+      throw new _.NoPicAdsError('site changed');
+    }
+    $.openLink(m[1]);
   },
 });
 

@@ -166,13 +166,13 @@
     },
   });
 
-  function run () {
+  function run (dirtyFix) {
     // prevent redirection by iframe
     $.removeNodes('iframe');
 
     var result = searchScript(true);
     if (!result.direct) {
-      knockServer(result.script);
+      knockServer(result.script,dirtyFix);
     } else {
       result = result.script.match(/top\.location\.href='([^']+)'/);
       if (!result) {
@@ -183,18 +183,33 @@
     }
   }
 
-  // adli.pw
+  // adcrun.ch
   $.register({
     rule: {
-      host: /^adli\.pw$/,
-      path: /^\/[^.]+$/,
+      host: /^adcrun\.ch$/,
+      path: /\/\w+/
     },
-    ready: run,
+    ready: function() {
+      // Try to bypass the survey
+      $.removeNodes('.user_content');
+
+      var rSurveyLink = /http\.open\("GET", "api_ajax\.php\?sid=\d*&ip=[^&]*&longurl=([^"]+)" \+ first_time, (?:true|false)\);/;
+      var l = $.searchScripts(rSurveyLink);
+      // Redirect to the target link if we found it
+      if(l) {
+        $.openLink(l[1]);
+        return;
+      }
+
+      // Otherwise it's most likely a simple bc.vc-like link
+      // Malformed JSON
+      run(true);
+    }
   });
 
   $.register({
     rule: {
-      host: /^adcrun\.ch|(fly2url|urlwiz|xafox)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|(adbla|tl7)\.us|www\.adjet\.eu|srk\.gs|cun\.bz|miniurl\.tk$/,
+      host: /^gx\.si|adwat\.ch|(fly2url|urlwiz|xafox)\.com|(zpoz|ultry)\.net|(wwy|myam)\.me|ssl\.gs|link\.tl|xip\.ir|hit\.us|shortit\.in|(adbla|tl7)\.us|www\.adjet\.eu|srk\.gs|cun\.bz|miniurl\.tk$/,
       path: /^\/.+/,
     },
     ready: run,
@@ -255,14 +270,8 @@
       path: /^\/.+/,
     },
     ready: function () {
-      $.removeNodes('iframe');
-
-      var content = searchScript();
-      var matches = content.match(/eval(.*)/);
-      matches = matches[1];
-      content = eval(matches);
-
-      knockServer(content, true);
+      // Malformed JSON
+      run(true);
     },
   });
 
