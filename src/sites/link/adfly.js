@@ -11,7 +11,7 @@
 
   // too long, split them
   var hostRule = [
-    /(www\.)?adf\.(ly|acb\.im|sazlina\.com)/,
+    /(www\.)?adf\.(ly|acb\.im|sazlina\.com|animechiby\.com)/,
     /[jq]\.gs/,
     /go\.(phpnulledscripts|nicoblog-games)\.com/,
     /ay\.gy/,
