@@ -1,5 +1,7 @@
 $.register({
-  rule: 'http://shr77.com/*',
+  rule: {
+  	host: /^shr(44|55|77)\.com|cpv\.(bz|li)|cpv\.acb\.im$/
+  },
   ready: function () {
     'use strict';
 
