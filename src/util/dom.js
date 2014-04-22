@@ -407,7 +407,7 @@ var $;
           _.warn('server answered: "' + jsonAnswer.error + '"');
         } else {
           var error = jsonAnswer.error;
-          var direct = decodeURIComponent(jsonAnswer.direct);
+          var direct = jsonAnswer.direct;
 
           _.info('server found the direct link');
           $.openLink(direct, true);
