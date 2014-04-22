@@ -14,10 +14,7 @@ $.register({
     }
     var sessionId = m[1];
 
-    m = $.searchScripts(/xpid:"([^"]+)"/);
-    // somehow this token may not exists
-    var X_NewRelic_ID = m ? m[1] : '';
-
+    var X_NewRelic_ID = $.searchScripts(/xpid:"([^"]+)"/);
     var Fingerprint = unsafeWindow.Fingerprint;
     var browserToken = null;
     if (Fingerprint) {
@@ -27,6 +24,12 @@ $.register({
     }
     var data = "sessionId=" + sessionId + "&browserToken=" + browserToken;
     var param = '?url=' + encodeURIComponent(window.location.href);
+    var header = {
+      Accept: 'application/json, text/javascript',
+    };
+    if (X_NewRelic_ID) {
+      header['X-NewRelic-ID'] = X_NewRelic_ID;
+    }
 
     var i = setInterval(function () {
       $.post('/adSession/callback' + param, data, function (text) {
@@ -35,10 +38,7 @@ $.register({
           clearInterval(i);
           $.openLink(r.destinationUrl);
         }
-      }, {
-        Accept: 'application/json, text/javascript',
-        'X-NewRelic-ID': X_NewRelic_ID,
-      });
+      }, header);
     }, 1000);
   },
 });
