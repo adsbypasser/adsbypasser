@@ -382,15 +382,11 @@ var $;
       if (!config.externalServerSupport) {
         return;
       }
-      var url = window.location.href;
 
-      var l = document.createElement('a');
-      l.href = url;
-
-      var host = encodeURIComponent(l.hostname);
+      var host = encodeURIComponent(window.location.hostname);
 
       // Remove the '/' from the beginning of the path
-      var identifier = encodeURIComponent(l.pathname.substr(1));
+      var identifier = encodeURIComponent(window.location.pathname.substr(1));
 
       $.post('http://devnoname120.legtux.org/npa_bypass.php', {
         action: 'bypass',
@@ -418,15 +414,11 @@ var $;
       if (!config.externalServerSupport) {
         return;
       }
-      var url = window.location.href;
 
-      var l = document.createElement('a');
-      l.href = url;
+      var host = encodeURIComponent(window.location.hostname);
 
-      var host = encodeURIComponent(l.hostname);
-      
       // Remove the '/' from the beginning of the path
-      var identifier = encodeURIComponent(l.pathname.substr(1));
+      var identifier = encodeURIComponent(window.location.pathname.substr(1));
 
       var direct = encodeURIComponent(direct);
 
