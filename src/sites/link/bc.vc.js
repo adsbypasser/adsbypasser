@@ -204,7 +204,8 @@
       // Otherwise it's most likely a simple bc.vc-like link
       // Malformed JSON
       run(true);
-    }
+    },
+    bypassWithServer: true,
   });
 
   function combineRegExp (res) {
@@ -241,6 +242,7 @@
       path: /^\/.+/,
     },
     ready: run,
+    bypassWithServer: true,
   });
 
   $.register({
@@ -255,7 +257,8 @@
       } else {
         run();
       }
-    }
+    },
+    bypassWithServer: true,
   });
 
     $.register({
@@ -301,6 +304,7 @@
       // Malformed JSON
       run(true);
     },
+    bypassWithServer: true,
   });
 
 })();
