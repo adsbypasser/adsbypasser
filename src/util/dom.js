@@ -302,6 +302,9 @@ var $;
         }
         return m;
       });
+      if (!m) {
+        return null;
+      }
       return m.payload;
     };
 
