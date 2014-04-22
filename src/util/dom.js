@@ -395,8 +395,8 @@ var $;
       }, cb);
 
       function cb(answer){
-        // Convert answer to Javascript
-        var jsonAnswer = eval('(' + answer + ')');
+        // Convert answer to Json
+        var jsonAnswer = JSON.parse(answer);
 
         if (jsonAnswer.error != 0) {
           _.warn('server answered: "' + jsonAnswer.error + '"');
