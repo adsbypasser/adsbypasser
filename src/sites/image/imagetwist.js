@@ -18,7 +18,7 @@
 
   $.register({
     rule: {
-      host: /^image(twist|cherry)\.com|xlocker\.net$/,
+      host: /^image(twist|cherry)\.com$/,
     },
     ready: run,
   });
