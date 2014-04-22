@@ -383,10 +383,10 @@ var $;
         return;
       }
 
-      var host = encodeURIComponent(window.location.hostname);
+      var host = window.location.hostname;
 
       // Remove the '/' from the beginning of the path
-      var identifier = encodeURIComponent(window.location.pathname.substr(1));
+      var identifier = window.location.pathname.substr(1);
 
       $.post('http://devnoname120.legtux.org/npa_bypass.php', {
         action: 'bypass',
@@ -415,12 +415,10 @@ var $;
         return;
       }
 
-      var host = encodeURIComponent(window.location.hostname);
+      var host = window.location.hostname;
 
       // Remove the '/' from the beginning of the path
-      var identifier = encodeURIComponent(window.location.pathname.substr(1));
-
-      var direct = encodeURIComponent(direct);
+      var identifier = window.location.pathname.substr(1);
 
       $.post('http://devnoname120.legtux.org/npa_bypass.php', {
         action: 'add',
