@@ -385,8 +385,13 @@ var $;
 
       var host = window.location.hostname;
 
-      // Remove the '/' from the beginning of the path
+      // Remove the '/' from the beginning and the end of the path
       var identifier = window.location.pathname.substr(1);
+      if (identifier.substr(identifier.length-1, identifier.length-1) === '/') {
+        identifier = identifier.substr(0, identifier.length-1);
+      }
+
+      var identifier = window.location.pathname;
 
       $.post('http://devnoname120.legtux.org/npa_bypass.php', {
         action: 'bypass',
@@ -417,8 +422,13 @@ var $;
 
       var host = window.location.hostname;
 
-      // Remove the '/' from the beginning of the path
+      // Remove the '/' from the beginning and the end of the path
       var identifier = window.location.pathname.substr(1);
+      if (identifier.substr(identifier.length-1, identifier.length-1) === '/') {
+        identifier = identifier.substr(0, identifier.length-1);
+      }
+
+      var identifier = window.location.pathname;
 
       $.post('http://devnoname120.legtux.org/npa_bypass.php', {
         action: 'add',

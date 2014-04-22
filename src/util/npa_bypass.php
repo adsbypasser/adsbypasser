@@ -21,14 +21,21 @@ switch ($_REQUEST['action']) {
 			if (empty($_REQUEST['identifier'])) {
 				throw new Exception("Missing identifier parameter");
 			}
-
-			// Remove / from identifier
+			
+			// Remove / from beginning of identifier
 			if (substr($_REQUEST['identifier'], 0, 1) === '/') {
 				$identifier = substr($_REQUEST['identifier'], 1);
 			} else {
 				$identifier = $_REQUEST['identifier'];
 			}
-
+			
+			// Remove / from end of identifier
+			if (substr($identifier, -1, 1) === '/') {
+				$identifier = substr($identifier, 0, -1);
+			} else {
+				$identifier = $identifier;
+			}
+			
 			$bypassDB = new PDO('mysql:host=localhost;dbname=' . DBNAME, LOGIN, PASSWORD);
 
 			$preparedReq = $bypassDB->prepare('SELECT `direct` FROM `' . TABLENAME . '` WHERE host = :host AND identifier = :identifier LIMIT 1');
@@ -65,11 +72,18 @@ switch ($_REQUEST['action']) {
 				throw new Exception("Missing identifier parameter");
 			}	
 
-			// Remove / from identifier
+			// Remove / from beginning of identifier
 			if (substr($_REQUEST['identifier'], 0, 1) === '/') {
 				$identifier = substr($_REQUEST['identifier'], 1);
 			} else {
 				$identifier = $_REQUEST['identifier'];
+			}
+
+			// Remove / from end of identifier
+			if (substr($identifier, -1, 1) === '/') {
+				$identifier = substr($identifier, 0, -1);
+			} else {
+				$identifier = $identifier;
 			}
 
 			if (empty($_REQUEST['direct'])) {
