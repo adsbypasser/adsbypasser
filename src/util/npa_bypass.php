@@ -17,10 +17,6 @@ switch ($_REQUEST['action']) {
 			} else {
 				$host = $_REQUEST['host'];
 			}
-
-			if (empty($_REQUEST['identifier'])) {
-				throw new Exception("Missing identifier parameter");
-			}
 			
 			// Remove / from beginning of identifier
 			if (substr($_REQUEST['identifier'], 0, 1) === '/') {
@@ -67,10 +63,6 @@ switch ($_REQUEST['action']) {
 			} else {
 				$host = $_REQUEST['host'];
 			}
-
-			if (empty($_REQUEST['identifier'])) {
-				throw new Exception("Missing identifier parameter");
-			}	
 
 			// Remove / from beginning of identifier
 			if (substr($_REQUEST['identifier'], 0, 1) === '/') {
