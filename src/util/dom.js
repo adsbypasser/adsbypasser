@@ -420,6 +420,10 @@ var $;
         return;
       }
 
+      if (!cb) {
+        var cb = _.nop;
+      }
+
       var host = window.location.hostname;
 
       // Remove the '/' from the beginning and the end of the path
