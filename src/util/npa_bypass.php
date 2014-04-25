@@ -4,6 +4,23 @@ define('TABLENAME', 'npa_bypass', true);
 define('LOGIN', '', true);
 define('PASSWORD', '', true);
 
+// Used to validate the URL
+define('URL_FORMAT', 
+'/^((https?):\/\/)?(?!:)'.                                 // protocol, or no protocol (javascript:, and others things forbidden)
+'(([a-z0-9$_\.\+!\*\'\(\),;\?&=-]|%[0-9a-f]{2})+'.         // username
+'(:([a-z0-9$_\.\+!\*\'\(\),;\?&=-]|%[0-9a-f]{2})+)?'.      // password
+'@)?(?#'.                                                  // auth requires @
+')((([a-z0-9]\.|[a-z0-9][a-z0-9-]*[a-z0-9]\.)*'.           // domain segments AND
+'[a-z][a-z0-9-]*[a-z0-9]'.                                 // top level domain  OR
+'|((\d|[1-9]\d|1\d{2}|2[0-4][0-9]|25[0-5])\.){3}'.
+'(\d|[1-9]\d|1\d{2}|2[0-4][0-9]|25[0-5])'.                 // IP address
+')(:\d+)?'.                                                // port
+')(((\/+([a-z0-9$_\.\+!\*\'\(\),;:@&=-~]|%[0-9a-f]{2})*)*'.// path
+'(\?([a-z0-9$_\.\+!\*\'\(\),;:@&=-]|%[0-9a-f]{2})*)'.      // query string
+'?)?)?'.                                                   // path and query string optional
+'(#([a-z0-9$_\.\+!\*\'\(\),;:@&=-]|%[0-9a-f]{2})*)?'.      // fragment
+'$/i');
+
 switch ($_REQUEST['action']) {
 	case 'bypass':
 		try {
@@ -80,7 +97,12 @@ switch ($_REQUEST['action']) {
 
 			if (empty($_REQUEST['direct'])) {
 				throw new Exception("Missing direct parameter");
-			}			
+			}
+
+			if (!preg_match(URL_FORMAT, $_REQUEST['direct'])) {
+				throw new Exception("Error invalid direct URL");
+			}
+
 			$direct = $_REQUEST['direct'];			
 
 			// TODO: use UPDATE if exists, INSERT if it doesn't exist because two instances can possibly do the INSERT of the same link at the same time (duplicated entry)
