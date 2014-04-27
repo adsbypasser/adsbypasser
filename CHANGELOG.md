@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * sh.st
 * added
     * cpv.bz
     * shr44.com
