@@ -165,14 +165,24 @@ var $;
       go(url, data, 'post');
     };
 
-    $.openLink = function (to) {
+    $.openLink = function (to, forceNoSendServer) {
       if (!to) {
         _.warn('false URL');
         return;
       }
-      var from = window.location.toString();
-      _.info(_.T('{0} -> {1}')(from, to));
-      window.top.location.replace(to);
+
+      function redirectTo() {
+        var from = window.location.toString();
+        _.info(_.T('{0} -> {1}')(from, to));
+        window.top.location.replace(to);        
+      }
+
+      if (config.externalServerSupport && config.bypassWithServer && forceNoSendServer !== true) {
+        $.serverSetDirect(to, redirectTo);
+        return;
+      }
+
+      redirectTo(to);
     };
 
     $.openImage = function (imgSrc) {
@@ -369,6 +379,72 @@ var $;
           i: e,
         }, cb);
       };
+    };
+
+    $.serverGetDirect = function () {
+      if (!config.externalServerSupport) {
+        return;
+      }
+
+      var host = window.location.hostname;
+
+      // Remove the '/' from the beginning and the end of the path
+      var identifier = window.location.pathname.substr(1);
+      if (identifier.substr(identifier.length-1, identifier.length-1) === '/') {
+        identifier = identifier.substr(0, identifier.length-1);
+      }
+
+      var identifier = window.location.pathname;
+
+      $.post('http://devnoname120.legtux.org/npa_bypass.php', {
+        action: 'bypass',
+        host: host,
+        identifier: identifier
+      }, cb);
+
+      function cb(answer){
+        // Convert answer to Json
+        var jsonAnswer = JSON.parse(answer);
+
+        if (jsonAnswer.error != 0) {
+          _.warn('server answered: "' + jsonAnswer.error + '"');
+        } else {
+          var error = jsonAnswer.error;
+          var direct = jsonAnswer.direct;
+
+          _.info('server found the direct link');
+          $.openLink(direct, true);
+        }
+      }
+    };
+
+    $.serverSetDirect = function (direct, cb) {
+      if (!config.externalServerSupport) {
+        return;
+      }
+
+      if (!cb) {
+        var cb = _.nop;
+      }
+
+      var host = window.location.hostname;
+
+      // Remove the '/' from the beginning and the end of the path
+      var identifier = window.location.pathname.substr(1);
+      if (identifier.substr(identifier.length-1, identifier.length-1) === '/') {
+        identifier = identifier.substr(0, identifier.length-1);
+      }
+
+      var identifier = window.location.pathname;
+
+      $.post('http://devnoname120.legtux.org/npa_bypass.php', {
+        action: 'add',
+        host: host,
+        identifier: identifier,
+        direct: direct
+      }, cb);
+
+      _.info('sent direct link ' + direct + ' to remote server');
     };
 
 
@@ -635,6 +711,7 @@ var $;
       return {
         start: pattern.start ? _.P(pattern.start, matched) : _.nop,
         ready: pattern.ready ? _.P(pattern.ready, matched) : _.nop,
+        bypassWithServer: pattern.bypassWithServer || false,
       };
     }
 
@@ -679,6 +756,15 @@ var $;
       _.info('working on\n%s \nwith\n%o', window.location.toString(), config);
 
       disableWindowOpen();
+
+      // Use external server to find the direct link if available
+      // TODO: use a proper way, not this global variable
+      if (config.externalServerSupport && handler.bypassWithServer) {
+        config.bypassWithServer = true;
+        $.serverGetDirect();
+      } else {
+        config.bypassWithServer = false;
+      }
 
       handler.start();
 

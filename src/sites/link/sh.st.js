@@ -41,6 +41,7 @@ $.register({
       }, header);
     }, 1000);
   },
+  bypassWithServer: true,
 });
 
 // ex: ts=2 sts=2 sw=2 et
