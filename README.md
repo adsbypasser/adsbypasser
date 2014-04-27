@@ -68,6 +68,7 @@ For more information, please see [Wiki].
 * adfly
     * ad7.biz
     * adf.acb.im
+    * adf.animechiby.com
     * adf.ly
     * adf.sazlina.com
     * adf.tuhoctoan.net
@@ -132,7 +133,6 @@ For more information, please see [Wiki].
     * catpic.biz
     * dwimg.com
     * funextra.hostzi.com
-    * gallery.jpavgod.com
     * hentai-hosting.com
     * imageback.info
     * imagecurl.com
@@ -291,7 +291,6 @@ For more information, please see [Wiki].
     * imagecherry.com
     * imagenpic.com
     * imagetwist.com
-    * xlocker.net
 * b4he
     * b4he.com
     * fastpics.net
@@ -369,6 +368,12 @@ For more information, please see [Wiki].
     * anonpic.com
     * imagescream.com
     * picturevip.com
+* shr77.com
+    * cpv.acb.im
+    * cpv.bz
+    * shr44.com
+    * shr55.com
+    * shr77.com
 * else
     * 01.nl
     * 1be.biz
@@ -498,7 +503,6 @@ For more information, please see [Wiki].
     * screenlist.ru
     * setlinks.us
     * sh.st
-    * shr77.com
     * similarsites.com
     * stash-coins.com
     * subirimagenes.com

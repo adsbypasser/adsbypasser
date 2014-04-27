@@ -1,3 +1,15 @@
+## TBA
+
+* added
+    * cpv.bz
+    * shr44.com
+    * shr55.com
+    * cpv.acb.im
+    * adf.animechiby.com
+* removed
+    * xlocker.net
+    * gallery.jpavgod.com
+
 ## 4.29.0
 
 * fixed

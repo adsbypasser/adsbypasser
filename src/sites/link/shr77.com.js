@@ -1,14 +1,17 @@
 $.register({
-  rule: 'http://shr77.com/*',
+  rule: {
+  	host: /^shr(44|55|77)\.com|cpv\.(bz|li)|cpv\.acb\.im$/
+  },
   ready: function () {
     'use strict';
 
     // Interstitial and iframed pages
-    var l = document.head.innerHTML.match(/\$\('a#loading'\)\.attr\('href',"([^"]+)"\);/);
-
-    if (typeof l[1] != 'undefined') {
-      $.openLink(l[1]);
+    var l = $.searchScripts(/\$\('a#loading'\)\.attr\('href',"([^"]+)"\);/);
+    if (!l) {
+      throw new _.NoPicAdsError('site changed');
     }
+
+     $.openLink(l[1]);
   },
 });
 

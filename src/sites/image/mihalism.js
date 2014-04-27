@@ -8,7 +8,7 @@
   // mihalism v1
   $.register({
     rule: {
-      host: /^(imagepremium|hentai-hosting|gallery\.jpavgod|miragepics|funextra\.hostzi)\.com|bilder\.nixhelp\.de|imagecurl\.(com|org)|imagevau\.eu|img\.deli\.sh|imgking\.us|image(pong|back)\.info$/,
+      host: /^(imagepremium|hentai-hosting|miragepics|funextra\.hostzi)\.com|bilder\.nixhelp\.de|imagecurl\.(com|org)|imagevau\.eu|img\.deli\.sh|imgking\.us|image(pong|back)\.info$/,
       path: /^\/viewer\.php$/,
       query: /^\?file=([^&]+)/,
     },
