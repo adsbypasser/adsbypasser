@@ -224,7 +224,6 @@
     /(wwy|myam)\.me/,
     /ssl\.gs/,
     /link\.tl/,
-    /xip\.ir/,
     /hit\.us/,
     /shortit\.in/,
     /(adbla|tl7)\.us/,
@@ -245,7 +244,7 @@
 
   $.register({
     rule: {
-      host: /^adtr\.im|ysear\.ch$/,
+      host: /^adtr\.im|ysear\.ch|xip\.ir$/,
       path: /^\/.+/,
     },
     ready: function () {
