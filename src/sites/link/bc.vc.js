@@ -248,14 +248,17 @@
       host: /^adtr\.im|ysear\.ch$/,
       path: /^\/.+/,
     },
-    ready: function(){
+    ready: function () {
+      var a = $.$('div.fly_head a.close');
       var f = $.$('iframe.fly_frame');
-      if (f) {
+      // the iframe may be an ad link
+      // so also check the close button
+      if (a && f) {
         $.openLink(f.src);
       } else {
         run();
       }
-    }
+    },
   });
 
     $.register({
