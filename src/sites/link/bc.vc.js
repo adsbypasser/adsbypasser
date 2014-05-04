@@ -187,16 +187,16 @@
   $.register({
     rule: {
       host: /^adcrun\.ch$/,
-      path: /\/\w+/
+      path: /^\/\w+$/,
     },
-    ready: function() {
+    ready: function () {
       // Try to bypass the survey
       $.removeNodes('.user_content');
 
       var rSurveyLink = /http\.open\("GET", "api_ajax\.php\?sid=\d*&ip=[^&]*&longurl=([^"]+)" \+ first_time, (?:true|false)\);/;
       var l = $.searchScripts(rSurveyLink);
       // Redirect to the target link if we found it
-      if(l) {
+      if (l) {
         $.openLink(l[1]);
         return;
       }
@@ -204,7 +204,7 @@
       // Otherwise it's most likely a simple bc.vc-like link
       // Malformed JSON
       run(true);
-    }
+    },
   });
 
   function combineRegExp (res) {
