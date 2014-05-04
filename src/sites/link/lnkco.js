@@ -6,6 +6,12 @@ $.register({
   ready: function () {
     'use strict';
 
+    var f = $.$('iframe#dest');
+    if (f) {
+      $.openLink(f.src);
+      return;
+    }
+
     $.removeNodes('iframe');
 
     var o = $.$('#urlholder');

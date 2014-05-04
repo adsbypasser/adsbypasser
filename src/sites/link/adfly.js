@@ -78,7 +78,8 @@
       if (location.hash) {
         h += location.hash;
       }
-      $.openLink(h);
+      // some sites need Referer header
+      $.openLinkWithReferer(h);
     },
   });
 

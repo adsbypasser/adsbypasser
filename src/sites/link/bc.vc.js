@@ -187,16 +187,16 @@
   $.register({
     rule: {
       host: /^adcrun\.ch$/,
-      path: /\/\w+/
+      path: /^\/\w+$/,
     },
-    ready: function() {
+    ready: function () {
       // Try to bypass the survey
       $.removeNodes('.user_content');
 
       var rSurveyLink = /http\.open\("GET", "api_ajax\.php\?sid=\d*&ip=[^&]*&longurl=([^"]+)" \+ first_time, (?:true|false)\);/;
       var l = $.searchScripts(rSurveyLink);
       // Redirect to the target link if we found it
-      if(l) {
+      if (l) {
         $.openLink(l[1]);
         return;
       }
@@ -204,7 +204,7 @@
       // Otherwise it's most likely a simple bc.vc-like link
       // Malformed JSON
       run(true);
-    }
+    },
   });
 
   function combineRegExp (res) {
@@ -224,7 +224,6 @@
     /(wwy|myam)\.me/,
     /ssl\.gs/,
     /link\.tl/,
-    /xip\.ir/,
     /hit\.us/,
     /shortit\.in/,
     /(adbla|tl7)\.us/,
@@ -245,20 +244,23 @@
 
   $.register({
     rule: {
-      host: /^adtr\.im|ysear\.ch$/,
+      host: /^adtr\.im|ysear\.ch|xip\.ir$/,
       path: /^\/.+/,
     },
-    ready: function(){
+    ready: function () {
+      var a = $.$('div.fly_head a.close');
       var f = $.$('iframe.fly_frame');
-      if (f) {
+      // the iframe may be an ad link
+      // so also check the close button
+      if (a && f) {
         $.openLink(f.src);
       } else {
         run();
       }
-    }
+    },
   });
 
-    $.register({
+  $.register({
     rule: {
       host: /^ad5\.eu$/,
       path: /^\/[^.]+$/,
