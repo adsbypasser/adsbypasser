@@ -1,3 +1,16 @@
+## TBA
+
+* fixed
+    * rdlnk.co
+    * some issue on linkbucks
+    * ysear.ch
+    * adtr.im
+    * xip.ir
+    * adcrun.ch
+    * some issue on adf.ly
+* added
+    * u2ks.com
+
 ## 4.30.0
 
 * fixed

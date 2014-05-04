@@ -359,8 +359,9 @@ For more information, please see [Wiki].
     * readthis.ca
     * redirects.ca
 * sh.st
-    * sh.st
     * dh10thbvu.com
+    * sh.st
+    * u2ks.com
 * seomafia.net
     * apploadz.ru
     * seomafia.net
