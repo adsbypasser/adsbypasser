@@ -261,7 +261,7 @@
     },
   });
 
-    $.register({
+  $.register({
     rule: {
       host: /^ad5\.eu$/,
       path: /^\/[^.]+$/,
