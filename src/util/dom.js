@@ -175,6 +175,20 @@ var $;
       window.top.location.replace(to);
     };
 
+    $.openLinkWithReferer = function (to) {
+      if (!to) {
+        _.warn('false URL');
+        return;
+      }
+      var from = window.location.toString();
+      _.info(_.T('{0} -> {1}')(from, to));
+
+      var a = document.createElement('a');
+      a.href = to;
+      document.body.appendChild(a);
+      a.click();
+    };
+
     $.openImage = function (imgSrc) {
       if (config.redirectImage) {
         $.openLink(imgSrc);
