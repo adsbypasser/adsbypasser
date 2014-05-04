@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^sh\.st|dh10thbvu\.com$/,
+    host: /^sh\.st|dh10thbvu\.com|u2ks\.com$/,
     path: /^\/[\d\w]+/,
   },
   ready: function () {
