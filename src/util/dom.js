@@ -176,7 +176,7 @@ var $;
         open_();
       }, open_, to);
 
-      if (config.externalServerSupport) {
+      if (config.directBypass) {
         serverSetDirect(to, opener);
         return;
       }
@@ -365,7 +365,7 @@ var $;
     };
 
     $.captcha = function (imgSrc, cb) {
-      if (!config.externalServerSupport) {
+      if (!config.captchaSupport) {
         return;
       }
 
@@ -389,7 +389,7 @@ var $;
     var currHandler = {};
 
     function serverGetDirect () {
-      if (!config.externalServerSupport || !currHandler.bypassWithServer) {
+      if (!config.directBypass || !currHandler.bypassWithServer) {
         return;
       }
 
@@ -421,7 +421,7 @@ var $;
     }
 
     function serverSetDirect (direct, cb) {
-      if (!config.externalServerSupport || !currHandler.bypassWithServer) {
+      if (!config.directBypass || !currHandler.bypassWithServer) {
         return;
       }
 
@@ -455,8 +455,9 @@ var $;
       var tmp = {
         version: GM.getValue('version', 0),
         alignCenter: GM.getValue('align_center'),
+        captchaSupport: GM.getValue('captcha_support'),
         changeBackground: GM.getValue('change_background'),
-        externalServerSupport: GM.getValue('external_server_support'),
+        directBypass: GM.getValue('direct_bypass'),
         redirectImage: GM.getValue('redirect_image'),
         scaleImage: GM.getValue('scale_image'),
       };
@@ -468,8 +469,9 @@ var $;
     function save (c) {
       GM.setValue('version', c.version);
       GM.setValue('align_center', c.alignCenter);
+      GM.setValue('captcha_support', c.captchaSupport);
       GM.setValue('change_background', c.changeBackground);
-      GM.setValue('external_server_support', c.externalServerSupport);
+      GM.setValue('direct_bypass', c.directBypass);
       GM.setValue('redirect_image', c.redirectImage);
       GM.setValue('scale_image', c.scaleImage);
     }
@@ -490,10 +492,13 @@ var $;
           if (typeof c.redirectImage === 'undefined') {
             c.redirectImage = true;
           }
+          if (typeof c.directBypass === 'undefined') {
+            c.directBypass = true;
+          }
         },
         function (c) {
-          if (typeof c.externalServerSupport === 'undefined') {
-            c.externalServerSupport = false;
+          if (typeof c.captchaSupport === 'undefined') {
+            c.captchaSupport = false;
           }
         },
       ];
@@ -550,15 +555,22 @@ var $;
               label: 'Scale Image',
               help: 'When image loaded, scale it to fit window if possible. (default: enabled)',
             },
-            externalServerSupport: {
+            captchaSupport: {
               type: 'checkbox',
-              value: config.externalServerSupport,
-              label: 'External Server Support',
+              value: config.captchaSupport,
+              label: 'Captcha Resolving Support',
               help: [
-                'Send URL information to external server to enhance features (e.g.: captcha resolving). (default: disabled)',
+                'Send the content of captchas to a server that will resolve them. (default: disabled)',
                 'Affected sites:',
-                'urlz.so (captcha)',
+                'urlz.so',
+                'setlinks.us (not very well)',
               ].join('<br/>\n'),
+            },
+            directBypass: {
+              type: 'checkbox',
+              value: config.directBypass,
+              label: 'Direct Redirecting Support',
+              help: 'Use an external server to maintain a list of direct links (retrieve and send direct links). Allows instant redirecting for unskippable timers when link is available on the server (default: enabled)',
             },
           },
         });
