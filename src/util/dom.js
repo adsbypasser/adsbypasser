@@ -161,35 +161,42 @@ var $;
       form.submit();
     }
 
-    $.openLinkByPost = function (url, data) {
-      go(url, data, 'post');
-    };
-
-    $.openLink = function (to) {
+    function doOpen (open_, to) {
       if (!to) {
         _.warn('false URL');
         return;
       }
 
-      function redirectTo() {
+      // the real open function, bind all arguments together
+      open_ = _.P.apply(this, arguments);
+      // a shell function to print log
+      var opener = _.P(function (open_, to) {
         var from = window.location.toString();
         _.info(_.T('{0} -> {1}')(from, to));
-        window.top.location.replace(to);
-      }
+        open_();
+      }, open_, to);
 
       if (config.externalServerSupport) {
-        serverSetDirect(to, redirectTo);
+        serverSetDirect(to, opener);
         return;
       }
 
-      redirectTo(to);
-    };
+      opener();
+    }
 
-    $.openImage = function (imgSrc) {
+    $.openLinkByPost = _.P(doOpen, function (url, data) {
+      go(url, data, 'post');
+    });
+
+    $.openLink = _.P(doOpen, function (to) {
+      window.top.location.replace(to);
+    });
+
+    $.openImage = _.P(doOpen, function (imgSrc) {
       if (config.redirectImage) {
         $.openLink(imgSrc);
       }
-    };
+    });
 
 
     $.removeAllTimer = function () {
