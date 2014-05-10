@@ -161,35 +161,42 @@ var $;
       form.submit();
     }
 
-    $.openLinkByPost = function (url, data) {
-      go(url, data, 'post');
-    };
-
-    $.openLink = function (to, forceNoSendServer) {
+    function doOpen (open_, to) {
       if (!to) {
         _.warn('false URL');
         return;
       }
 
-      function redirectTo() {
+      // the real open function, bind all arguments together
+      open_ = _.P.apply(this, arguments);
+      // a shell function to print log
+      var opener = _.P(function (open_, to) {
         var from = window.location.toString();
         _.info(_.T('{0} -> {1}')(from, to));
-        window.top.location.replace(to);        
-      }
+        open_();
+      }, open_, to);
 
-      if (config.externalServerSupport && config.bypassWithServer && forceNoSendServer !== true) {
-        $.serverSetDirect(to, redirectTo);
+      if (config.externalServerSupport) {
+        serverSetDirect(to, opener);
         return;
       }
 
-      redirectTo(to);
-    };
+      opener();
+    }
 
-    $.openImage = function (imgSrc) {
+    $.openLinkByPost = _.P(doOpen, function (url, data) {
+      go(url, data, 'post');
+    });
+
+    $.openLink = _.P(doOpen, function (to) {
+      window.top.location.replace(to);
+    });
+
+    $.openImage = _.P(doOpen, function (imgSrc) {
       if (config.redirectImage) {
         $.openLink(imgSrc);
       }
-    };
+    });
 
 
     $.removeAllTimer = function () {
@@ -378,20 +385,17 @@ var $;
       };
     };
 
-    $.serverGetDirect = function () {
-      if (!config.externalServerSupport) {
+    // holding some global state
+    var dirty = {};
+
+    function serverGetDirect () {
+      if (!config.externalServerSupport || !dirty.bypassWithServer) {
         return;
       }
 
       var host = window.location.hostname;
-
-      // Remove the '/' from the beginning and the end of the path
-      var identifier = window.location.pathname.substr(1);
-      if (identifier.substr(identifier.length-1, identifier.length-1) === '/') {
-        identifier = identifier.substr(0, identifier.length-1);
-      }
-
-      var identifier = window.location.pathname;
+      // strip trailing slashes
+      var identifier = window.location.pathname.replace(/\/*$/, '');
 
       $.post('http://devnoname120.legtux.org/npa_bypass.php', {
         action: 'bypass',
@@ -399,24 +403,25 @@ var $;
         identifier: identifier
       }, cb);
 
-      function cb(answer){
+      function cb (answer) {
         // Convert answer to Json
         var jsonAnswer = JSON.parse(answer);
+        var error = jsonAnswer.error;
 
-        if (jsonAnswer.error != 0) {
-          _.warn('server answered: "' + jsonAnswer.error + '"');
-        } else {
-          var error = jsonAnswer.error;
-          var direct = jsonAnswer.direct;
-
-          _.info('server found the direct link');
-          $.openLink(direct, true);
+        if (error !== 0) {
+          _.warn('server answered: "' + error + '"');
+          return;
         }
-      }
-    };
 
-    $.serverSetDirect = function (direct, cb) {
-      if (!config.externalServerSupport) {
+        var direct = jsonAnswer.direct;
+
+        _.info('server found the direct link');
+        dirty.bypassWithServer(direct);
+      }
+    }
+
+    function serverSetDirect (direct, cb) {
+      if (!config.externalServerSupport || !dirty.bypassWithServer) {
         return;
       }
 
@@ -425,14 +430,8 @@ var $;
       }
 
       var host = window.location.hostname;
-
-      // Remove the '/' from the beginning and the end of the path
-      var identifier = window.location.pathname.substr(1);
-      if (identifier.substr(identifier.length-1, identifier.length-1) === '/') {
-        identifier = identifier.substr(0, identifier.length-1);
-      }
-
-      var identifier = window.location.pathname;
+      // strip trailing slashes
+      var identifier = window.location.pathname.replace(/\/*$/, '');
 
       $.post('http://devnoname120.legtux.org/npa_bypass.php', {
         action: 'add',
@@ -442,7 +441,7 @@ var $;
       }, cb);
 
       _.info('sent direct link ' + direct + ' to remote server');
-    };
+    }
 
 
     var patterns = [];
@@ -708,7 +707,7 @@ var $;
       return {
         start: pattern.start ? _.P(pattern.start, matched) : _.nop,
         ready: pattern.ready ? _.P(pattern.ready, matched) : _.nop,
-        bypassWithServer: pattern.bypassWithServer || false,
+        bypassWithServer: pattern.bypassWithServer,
       };
     }
 
@@ -755,13 +754,8 @@ var $;
       disableWindowOpen();
 
       // Use external server to find the direct link if available
-      // TODO: use a proper way, not this global variable
-      if (config.externalServerSupport && handler.bypassWithServer) {
-        config.bypassWithServer = true;
-        $.serverGetDirect();
-      } else {
-        config.bypassWithServer = false;
-      }
+      dirty.bypassWithServer = handler.bypassWithServer;
+      serverGetDirect();
 
       handler.start();
 
