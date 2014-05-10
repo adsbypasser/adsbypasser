@@ -395,7 +395,7 @@ var $;
 
       var host = window.location.hostname;
       // strip trailing slashes
-      var identifier = window.location.pathname.replace(/\/*$/, '');
+      var identifier = window.location.pathname.replace(/^\/*|\/*$/g, '');
 
       $.post('http://devnoname120.legtux.org/npa_bypass.php', {
         action: 'bypass',
