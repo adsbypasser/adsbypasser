@@ -178,7 +178,7 @@ var $;
       }
 
       if (config.externalServerSupport) {
-        $.serverSetDirect(to, redirectTo);
+        serverSetDirect(to, redirectTo);
         return;
       }
 
@@ -381,7 +381,7 @@ var $;
     // holding some global state
     var dirty = {};
 
-    $.serverGetDirect = function () {
+    function serverGetDirect () {
       if (!config.externalServerSupport || !dirty.bypassWithServer) {
         return;
       }
@@ -411,9 +411,9 @@ var $;
         _.info('server found the direct link');
         dirty.bypassWithServer(direct);
       }
-    };
+    }
 
-    $.serverSetDirect = function (direct, cb) {
+    function serverSetDirect (direct, cb) {
       if (!config.externalServerSupport || !dirty.bypassWithServer) {
         return;
       }
@@ -434,7 +434,7 @@ var $;
       }, cb);
 
       _.info('sent direct link ' + direct + ' to remote server');
-    };
+    }
 
 
     var patterns = [];
@@ -748,7 +748,7 @@ var $;
 
       // Use external server to find the direct link if available
       dirty.bypassWithServer = handler.bypassWithServer;
-      $.serverGetDirect();
+      serverGetDirect();
 
       handler.start();
 
