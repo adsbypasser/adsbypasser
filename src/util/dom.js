@@ -115,7 +115,7 @@ var $;
       } catch (e) {
         throw new _.NoPicAdsError('could not parse HTML to DOM');
       }
-    }
+    };
 
     $.get = function (url, data, callback, headers) {
       var data = toQuery(data);
