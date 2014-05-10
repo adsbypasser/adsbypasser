@@ -68,7 +68,7 @@ $.register({
       });
     }, 1000);
   },
-  bypassWithServer: true,
+  bypassWithServer: $.openLink,
 });
 
 // ex: ts=2 sts=2 sw=2 et

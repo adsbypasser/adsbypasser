@@ -205,7 +205,7 @@
       // Malformed JSON
       run(true);
     },
-    bypassWithServer: true,
+    bypassWithServer: $.openLink,
   });
 
   function combineRegExp (res) {
@@ -242,7 +242,7 @@
       path: /^\/.+/,
     },
     ready: run,
-    bypassWithServer: true,
+    bypassWithServer: $.openLink,
   });
 
   $.register({
@@ -258,7 +258,7 @@
         run();
       }
     },
-    bypassWithServer: true,
+    bypassWithServer: $.openLink,
   });
 
     $.register({
@@ -304,7 +304,7 @@
       // Malformed JSON
       run(true);
     },
-    bypassWithServer: true,
+    bypassWithServer: $.openLink,
   });
 
 })();
