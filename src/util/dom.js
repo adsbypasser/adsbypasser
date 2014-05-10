@@ -385,11 +385,11 @@ var $;
       };
     };
 
-    // holding some global state
-    var dirty = {};
+    // Holds the current handler
+    var currHandler = {};
 
     function serverGetDirect () {
-      if (!config.externalServerSupport || !dirty.bypassWithServer) {
+      if (!config.externalServerSupport || !currHandler.bypassWithServer) {
         return;
       }
 
@@ -416,12 +416,12 @@ var $;
         var direct = jsonAnswer.direct;
 
         _.info('server found the direct link');
-        dirty.bypassWithServer(direct);
+        currHandler.bypassWithServer(direct);
       }
     }
 
     function serverSetDirect (direct, cb) {
-      if (!config.externalServerSupport || !dirty.bypassWithServer) {
+      if (!config.externalServerSupport || !currHandler.bypassWithServer) {
         return;
       }
 
@@ -753,8 +753,7 @@ var $;
 
       disableWindowOpen();
 
-      // Use external server to find the direct link if available
-      dirty.bypassWithServer = handler.bypassWithServer;
+      currHandler = handler;
       serverGetDirect();
 
       handler.start();
