@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^adlock\.in$/,
+    host: /^adlock\.org$/,
   },
   ready: function () {
     'use strict';
