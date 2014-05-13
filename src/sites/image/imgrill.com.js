@@ -16,7 +16,7 @@
 
   $.register({
     rule: {
-      host: /^(img(rill|corn|next|savvy|\.spicyzilla)|image(corn|picsa)|www\.imagefolks|hosturimage|img-zone)\.com|img(candy|master)\.net|imgcloud\.co|pixup\.us|(www\.)?\.imgult\.com|(bulkimg|imgskull)\.info$/,
+      host: /^(img(rill|next|savvy|\.spicyzilla)|image(corn|picsa)|www\.imagefolks|hosturimage|img-zone)\.com|img(candy|master)\.net|imgcloud\.co|pixup\.us|(www\.)?\.imgult\.com|(bulkimg|imgskull)\.info|image\.adlock\.org$/,
       path: /^\/img-.*\.html$/,
     },
     ready: handler,
