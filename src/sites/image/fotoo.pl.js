@@ -13,7 +13,7 @@
 
   $.register({
     rule: {
-      host: /^www\.(fotoszok\.pl|hornyimage|imagestime)\.com$/,
+      host: /^www\.(fotoszok\.pl|imagestime)\.com$/,
       path: /^\/show\.php\/.*\.html$/,
     },
     ready: run,
