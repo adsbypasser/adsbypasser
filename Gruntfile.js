@@ -14,11 +14,17 @@ module.exports = function (grunt) {
       },
     },
     concat: {
-      nopicads: {
+      meta: {
         options: {
-          banner: '// ==UserScript==\n' + grunt.file.read('src/util/metadata.js') + '// ==/UserScript==\n',
+          banner: '// ==UserScript==\n',
+          footer: '// ==/UserScript==\n',
+          process: true,
         },
-        src: ['dest/util/core.js', 'dest/util/dom.js', 'dest/sites/*.js', 'src/util/main.js'],
+        src: ['src/util/metadata.js'],
+        dest: 'dest/nopicads.meta.js',
+      },
+      user: {
+        src: ['dest/nopicads.meta.js', 'dest/util/core.js', 'dest/util/dom.js', 'dest/sites/*.js', 'src/util/main.js'],
         dest: 'dest/nopicads.user.js',
       },
     },
