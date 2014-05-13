@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^emptypix\.com|fotohosting\.net|overdream\.cz$/,
+    host: /^emptypix\.com|overdream\.cz$/,
     path: /^\/image\//,
   },
   ready: function () {
