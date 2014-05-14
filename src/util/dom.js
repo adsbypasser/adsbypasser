@@ -448,7 +448,10 @@ var $;
     var config = null;
 
     $.register({
-      rule: 'http://legnaleurc.github.io/nopicads/configure.html',
+      rule: {
+        host: /^legnaleurc\.github\.io$/,
+        path: /^\/nopicads\/configure\.html$/,
+      },
       ready: function () {
 
         unsafeWindow.commit = function (data) {
