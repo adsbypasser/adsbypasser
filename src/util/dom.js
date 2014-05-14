@@ -706,7 +706,7 @@ var $;
     };
 
     GM.registerMenuCommand('NoPicAds - Configure', function () {
-      GM.openInTab('http://legnaleurc.github.io/nopicads/configure.html');
+      GM.openInTab('https://legnaleurc.github.io/nopicads/configure.html');
     });
 
     return $;
