@@ -1,6 +1,10 @@
 module.exports = function (grunt) {
   'use strict';
 
+  var wintersmith = require('wintersmith');
+  var os = require('os');
+  var path = require('path');
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     strip: {
@@ -46,6 +50,15 @@ module.exports = function (grunt) {
         src: ['tests/*.js'],
       },
     },
+    pages: {
+      options: {
+        config: 'pages/config.json',
+        changelog: 'CHANGELOG.md',
+        readme: 'README.md',
+        userjs: 'dest/nopicads.user.js',
+        metajs: 'dest/nopicads.meta.js',
+      },
+    },
   });
 
   grunt.registerMultiTask('strip', function () {
@@ -66,12 +79,43 @@ module.exports = function (grunt) {
     });
   });
 
+  grunt.registerTask('pages', function () {
+    var options = this.options();
+    var rootPath = 'pages/contents';
+    var releasePath = path.join(rootPath, 'releases');
+    var outPath = path.join(os.tmpdir(), 'nopicads_pages');
+    var done = this.async();
+
+    // copy changelog and readme
+    grunt.file.copy(options.changelog, path.join(rootPath, path.basename(options.changelog)));
+    grunt.file.copy(options.readme, path.join(rootPath, path.basename(options.readme)));
+    // copy compiled files
+    grunt.file.copy(options.userjs, path.join(releasePath, path.basename(options.userjs)));
+    grunt.file.copy(options.metajs, path.join(releasePath, path.basename(options.metajs)));
+
+    var env = wintersmith(options.config);
+    env.build(outPath, function (error) {
+      if (error) {
+        throw error;
+      }
+
+      // clear files
+      grunt.file.delete(path.join(rootPath, path.basename(options.changelog)));
+      grunt.file.delete(path.join(rootPath, path.basename(options.readme)));
+      grunt.file.delete(path.join(releasePath, path.basename(options.userjs)));
+      grunt.file.delete(path.join(releasePath, path.basename(options.metajs)));
+
+      done();
+    });
+  });
+
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-mocha-test');
 
   grunt.registerTask('default', ['clean', 'strip', 'concat']);
   grunt.registerTask('test', 'mochaTest');
+  grunt.registerTask('deploy', ['default', 'pages']);
 
   function removeModelines (s) {
     return s.replace(/^\/\/\s*.+:.*[\r\n]+/gm, '');
