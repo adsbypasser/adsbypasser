@@ -1,8 +1,5 @@
 $.register({
-  rule: [
-    'http://www.4owl.info/*',
-    'http://javelite.tk/viewer.php?id=*',
-  ],
+  rule: 'http://javelite.tk/viewer.php?id=*',
   ready: function () {
     'use strict';
 
