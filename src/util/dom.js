@@ -183,10 +183,7 @@ var $;
       var from = window.location.toString();
       _.info(_.T('{0} -> {1}')(from, to));
 
-      var a = document.createElement('a');
-      a.href = to;
-      document.body.appendChild(a);
-      a.click();
+      window.location.href = to;
     };
 
     $.openImage = function (imgSrc) {
