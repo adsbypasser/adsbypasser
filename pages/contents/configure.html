@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8" />
+    <title>Configure NoPicAds</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" media="screen" href="css/theme.css" />
+
+    <script type="text/plain" id="tpl-cb">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="<%= key %>" value="" <% if (checked) { %>checked<% } %> /><%= label %>
+          </label>
+          <span class="help-block"><%= help %></span>
+        </div>
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div id="msg" class="alert alert-success text-center"><strong>Configuration Updated</strong></div>
+
+      <div id="panel" role="form">
+        <div id="options" class="form-group">
+        </div>
+        <div class="form-group">
+          <button id="save" class="btn btn-primary pull-right" type="submit">Save</button>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.2.1/lodash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="js/render.js"></script>
+
+  </body>
+
+</html>
+<!-- ex: set ts=2 sts=2 sw=2 et : -->
+<!-- sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true; -->
+<!-- kate: space-indent on; indent-width 2; -->

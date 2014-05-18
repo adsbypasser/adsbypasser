@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='chrome=1')
+    title= locals.title
+
+    link(rel='stylesheet' href='css/styles.css')
+    meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=no')
+  body
+    .wrapper
+      header
+        p.view
+          a(href='https://github.com/legnaleurc/nopicads') View the Project on GitHub
+            small legnaleurc/nopicads
+
+        ul.links
+          li
+            a(href='https://legnaleurc.github.io/nopicads/releases/nopicads.user.js') #[strong Install] Latest
+          li
+            a(href='https://github.com/legnaleurc/nopicads/issues') #[strong Request] Feature
+          li
+            a(href='https://github.com/legnaleurc/nopicads/issues') #[strong Report] Bug
+
+        .change-log
+          != contents['CHANGELOG.md'].html
+      section
+        != contents['README.md'].html
+      footer
+        p
+          |This project is maintained by&nbsp;
+          a(href='https://github.com/legnaleurc') legnaleurc
+        p
+          small Hosted on GitHub Pages
+            br
+            |&mdash; Theme by&nbsp;
+            a(href='https://github.com/orderedlist') orderedlist
+            br
+            |&mdash; powered by&nbsp;
+            a(href='https://github.com/jnordberg/wintersmith') Wintersmith
+
+    script(src='js/scale.fix.js')
