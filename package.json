@@ -14,7 +14,8 @@
     "blanket": "",
     "chai": "",
     "connect": "",
-    "zombie": ""
+    "zombie": "",
+    "wintersmith": ""
   },
   "scripts": {
     "test": "grunt test"
