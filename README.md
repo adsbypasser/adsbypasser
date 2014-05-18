@@ -532,7 +532,7 @@ For more information, please see [Wiki].
 
 [2]: https://travis-ci.org/legnaleurc/nopicads.png?branch=master,develop
 [3]: https://travis-ci.org/legnaleurc/nopicads
-[4]: http://legnaleurc.github.io/nopicads/configure.html
+[4]: https://legnaleurc.github.io/nopicads/configure.html
 [Node.js]: http://nodejs.org/
 [npm]: https://npmjs.org/
 [RedirectionHelper]: http://userscripts.org/scripts/show/69797

@@ -115,7 +115,7 @@ var $;
       } catch (e) {
         throw new _.NoPicAdsError('could not parse HTML to DOM');
       }
-    }
+    };
 
     $.get = function (url, data, callback, headers) {
       var data = toQuery(data);
@@ -183,10 +183,7 @@ var $;
       var from = window.location.toString();
       _.info(_.T('{0} -> {1}')(from, to));
 
-      var a = document.createElement('a');
-      a.href = to;
-      document.body.appendChild(a);
-      a.click();
+      window.location.href = to;
     };
 
     $.openImage = function (imgSrc) {
@@ -448,7 +445,10 @@ var $;
     var config = null;
 
     $.register({
-      rule: 'http://legnaleurc.github.io/nopicads/configure.html',
+      rule: {
+        host: /^legnaleurc\.github\.io$/,
+        path: /^\/nopicads\/configure\.html$/,
+      },
       ready: function () {
 
         unsafeWindow.commit = function (data) {
@@ -703,7 +703,7 @@ var $;
     };
 
     GM.registerMenuCommand('NoPicAds - Configure', function () {
-      GM.openInTab('http://legnaleurc.github.io/nopicads/configure.html');
+      GM.openInTab('https://legnaleurc.github.io/nopicads/configure.html');
     });
 
     return $;

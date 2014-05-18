@@ -41,7 +41,7 @@
   $.register({
     rule: {
       host: /^catpic\.biz$/,
-      path: /^(\/x)?\/viewer\.php$/,
+      path: /^(\/\w)?\/viewer\.php$/,
       query: /^\?file=([^&]+)/,
     },
     start: function (m) {
