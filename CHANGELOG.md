@@ -1,4 +1,4 @@
-## TBA
+## 4.32.0
 
 * changed
     * configuration page uses HTTPS by default
