@@ -417,7 +417,7 @@ var $;
     }
 
     function fixup (c) {
-      var fixtures = [
+      var patches = [
         function (c) {
           var ac = typeof c.alignCenter !== 'undefined';
           if (typeof c.changeBackground === 'undefined') {
@@ -439,8 +439,8 @@ var $;
           }
         },
       ];
-      while (c.version < fixtures.length) {
-        fixtures[c.version](c);
+      while (c.version < patches.length) {
+        patches[c.version](c);
         ++c.version;
       }
     }
