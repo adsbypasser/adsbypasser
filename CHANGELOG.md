@@ -1,3 +1,31 @@
+## TBA
+
+* changed
+    * configuration page uses HTTPS by default
+    * move to GitHub Pages
+* fixed
+    * imgsure.com
+    * adlock.in -> adlock.org
+    * catpic.biz
+* added
+    * imglocker.com
+    * imgrex.com
+* removed
+    * imgcorn.com
+    * hornyimage.com
+    * fotohosting.net
+    * 1to4.me
+    * imagepremium.com
+    * urlink.at
+    * 4owl.info
+    * adv.li
+    * bilder-hochladen.net
+    * cyberpics.net
+    * digitalfrenzy.net
+    * filedump.net
+    * freeimagehosting.net
+    * ibunker.us
+
 ## 4.31.0
 
 * fixed
