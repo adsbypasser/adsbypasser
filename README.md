@@ -136,7 +136,6 @@ For more information, please see [Wiki].
     * imagecurl.com
     * imagecurl.org
     * imagepong.info
-    * imagepremium.com
     * imageview.me
     * imgking.us
     * imgnip.com
@@ -194,7 +193,6 @@ For more information, please see [Wiki].
     * img.spicyzilla.com
     * imgcandy.net
     * imgcloud.co
-    * imgcorn.com
     * imgmaster.net
     * imgnext.com
     * imgrill.com
@@ -297,12 +295,10 @@ For more information, please see [Wiki].
     * ifap.co
 * emptypix
     * emptypix.com
-    * fotohosting.net
     * overdream.cz
 * fotoo
     * fotoo.pl
     * fotoszok.pl
-    * hornyimage.com
     * imagestime.com
 * freakimage
     * freakimage.com
@@ -378,23 +374,19 @@ For more information, please see [Wiki].
     * 1be.biz
     * 1pics.ru
     * 1tiny.net
-    * 1to4.me
     * 2ty.cc
     * 3ra.be
     * 4fun.tw
-    * 4owl.info
     * adfoc.us
     * adjet.biz
-    * adlock.in
+    * adlock.org
     * adlot.us
-    * adv.li
     * ah-informatique.com
     * aka.gr
     * alabout.com
     * bayimg.com
     * beeimg.com
     * bild.me
-    * bilder-hochladen.net
     * bilder-space.de
     * bilder-upload.eu
     * bildr.no
@@ -405,20 +397,16 @@ For more information, please see [Wiki].
     * coin-ads.com
     * comyonet.com
     * cubeupload.com
-    * cyberpics.net
     * dapat.in
     * dd.ma
-    * digitalfrenzy.net
     * directupload.net
     * dumppix.com
     * durl.me
-    * filedump.net
     * filoops.info
     * fit.sh
     * fotolink.su
     * fotosik.pl
     * free.link2dollar.com
-    * freeimagehosting.net
     * fundurl.com
     * funkyimg.com
     * gkurl.us
@@ -426,7 +414,6 @@ For more information, please see [Wiki].
     * goimagehost.com
     * hostingpics.net
     * hotshorturl.com
-    * ibunker.us
     * ichan.org
     * ifotos.pl
     * ilix.in
