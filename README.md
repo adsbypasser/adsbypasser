@@ -8,8 +8,6 @@ This user script helps you
 
 Forked from [RedirectionHelper] written by [SuYS].
 
-Stable version will upload to [here][1].
-
 [![Build Status][2]][3]
 
 
@@ -532,7 +530,6 @@ For more information, please see [Wiki].
     * zzz.gl
 
 
-[1]: http://userscripts.org/scripts/show/154858
 [2]: https://travis-ci.org/legnaleurc/nopicads.png?branch=master,develop
 [3]: https://travis-ci.org/legnaleurc/nopicads
 [4]: http://legnaleurc.github.io/nopicads/configure.html
