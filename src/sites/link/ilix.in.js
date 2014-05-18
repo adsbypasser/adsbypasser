@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^(www\.)?(ilix\.in|priva\.us|urlink\.at)$/,
+    host: /^(www\.)?(ilix\.in|priva\.us)$/,
     path: /\/(\w+)/,
   },
   ready: function (m) {
