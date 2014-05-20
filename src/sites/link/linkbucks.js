@@ -1,4 +1,5 @@
 (function() {
+  'use strict';
 
   var hostRules = [
     /^(([\w]{8}|www)\.)?(allanalpass|a[mn]y|cash4files|deb|drstickyfingers|dyo|fapoff|filesonthe|free(an|gaysitepass)|galleries|goneviral|hornywood|link(babes|bucks(media)?)|megaline|miniurls|picbucks|poontown|qqc|rqq|seriousdeals|sexpalace|these(blog|forum)s|tinylinks|tnabucks|tubeviral|ultrafiles|urlbeat|whackyvidz|youfap|yyv|zff)\.(com?|net|gs|me|tv|bz|us)$/,
@@ -15,7 +16,7 @@
       $.resetCookies();
       $.removeNodes('iframe');
 
-      if (m.path[1] != null) {
+      if (m.path[1] !== null) {
         $.openLink(m.path[1]);
       }
     }
