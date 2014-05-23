@@ -8,12 +8,20 @@ This user script helps you
 
 Forked from [RedirectionHelper] written by [SuYS].
 
-[![Build Status][2]][3]
+Please install from [home page][1].
+
+Mirrors:
+
+* [Greasy Fork][2]
+* [OpenUserJS.org][3]
+* [MonkeyGuts][4]
+
+[![Build Status][5]][6]
 
 
 ## Run-time Configurations
 
-Please see [this page][4] to adjust configurations.
+Please see [this page][7] to adjust configurations.
 
 * Align to center (default: on)
 
@@ -517,9 +525,13 @@ For more information, please see [Wiki].
     * zzz.gl
 
 
-[2]: https://travis-ci.org/legnaleurc/nopicads.png?branch=master,develop
-[3]: https://travis-ci.org/legnaleurc/nopicads
-[4]: https://legnaleurc.github.io/nopicads/configure.html
+[1]: https://legnaleurc.github.io/nopicads/
+[2]: https://greasyfork.org/scripts/1209-nopicads
+[3]: https://openuserjs.org/scripts/legnaleurc/FoolproofProject/NoPicAds
+[4]: https://monkeyguts.com/code.php?id=124
+[5]: https://travis-ci.org/legnaleurc/nopicads.png?branch=master,develop
+[6]: https://travis-ci.org/legnaleurc/nopicads
+[7]: https://legnaleurc.github.io/nopicads/configure.html
 [Node.js]: http://nodejs.org/
 [npm]: https://npmjs.org/
 [RedirectionHelper]: http://userscripts.org/scripts/show/69797
