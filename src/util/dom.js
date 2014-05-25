@@ -78,9 +78,9 @@ var $;
       var l = document.createElement('a');
       l.href = url;
       var reqHost = l.hostname;
-      headers['Host'] = reqHost || window.location.host;
-      headers['Origin'] = window.location.origin;
-      headers['Referer'] = window.location.href;
+      headers.Host = reqHost || window.location.host;
+      headers.Origin = window.location.origin;
+      headers.Referer = window.location.href;
       headers['X-Requested-With'] = 'XMLHttpRequest';
       var controller = GM.xmlhttpRequest({
         method: method,
@@ -118,7 +118,7 @@ var $;
     };
 
     $.get = function (url, data, callback, headers) {
-      var data = toQuery(data);
+      data = toQuery(data);
       // Don't request with '?' if there is no data
       data = data!==''? '?' + data : '';
       headers = headers || {};
@@ -663,7 +663,9 @@ var $;
         },
       };
       _.C([unsafeWindow, unsafeWindow.document.body]).each(function (o) {
-        if (o == null) {return;}
+        if (!o) {
+          return;
+        }
         // release existing events
         o.onbeforeunload = undefined;
         // prevent they bind event again
