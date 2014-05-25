@@ -1,19 +1,7 @@
-$.register({
-  rule: {
-    host: /^sh\.st|dh10thbvu\.com|u2ks\.com$/,
-    path: /^\/[\d\w]+/,
-  },
-  ready: function () {
-    'use strict';
+(function () {
+  'use strict';
 
-    $.removeNodes('iframe');
-
-    var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
-    if (!m) {
-      throw new _.NoPicAdsError('script content changed');
-    }
-    var sessionId = m[1];
-
+  function afterGotSessionId (sessionId) {
     var X_NewRelic_ID = $.searchScripts(/xpid:"([^"]+)"/);
     var Fingerprint = unsafeWindow.Fingerprint;
     var browserToken = null;
@@ -40,8 +28,39 @@ $.register({
         }
       }, header);
     }, 1000);
-  },
-});
+  }
+
+  $.register({
+    rule: {
+      host: /^sh\.st|dh10thbvu\.com|u2ks\.com$/,
+      path: /^\/[\d\w]+/,
+    },
+    ready: function () {
+      $.removeNodes('iframe');
+
+      var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
+      if (m) {
+        afterGotSessionId(m[1]);
+        return;
+      }
+
+      // script not loaded yet, wait until it appears
+      var o = MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
+          if (m) {
+            o.disconnect();
+            afterGotSessionId(m[1]);
+          }
+        });
+      });
+      o.observe(document.body, {
+        childList: true,
+      });
+    },
+  });
+
+})();
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
