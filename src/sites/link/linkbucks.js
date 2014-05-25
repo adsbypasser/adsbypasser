@@ -8,7 +8,7 @@
     /^(([\w]{8}|www)\.)?freean\.us$/,
     /^(([\w]{8}|www)\.)?galleries\.bz$/,
     /^(([\w]{8}|www)\.)?hornywood\.tv$/,
-    /^(([\w]{8}|www)\.)?link(babes|bucks(media)?)\.com$/,
+    /^(([\w]{8}|www)\.)?link(babes|bucks)\.com$/,
     /^(([\w]{8}|www)\.)?(megaline|miniurls|qqc|rqq|tinylinks|yyv|zff)\.co$/,
     /^(([\w]{8}|www)\.)?(these(blog|forum)s)\.com$/,
     /^(([\w]{8}|www)\.)?youfap\.me$/,
