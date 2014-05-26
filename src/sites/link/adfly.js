@@ -1,33 +1,23 @@
 (function () {
   'use strict';
 
-  function combineRegExp (res) {
-    var re = res.map(function (re) {
-      return re.source;
-    }).join('|');
-    re = new RegExp('^' + re + '$');
-    return re;
-  }
-
-  // too long, split them
   var hostRule = [
-    /(www\.)?adf\.(ly|acb\.im|sazlina\.com|animechiby\.com)/,
-    /[jq]\.gs/,
-    /go\.(phpnulledscripts|nicoblog-games)\.com/,
-    /ay\.gy/,
-    /(chathu|alien)\.apkmania\.co/,
-    /ksn\.mx/,
-    /goto\.adflytutor\.com/,
-    /dl\.apkpro\.net/,
-    /adf(ly\.itsrinaldo|\.tuhoctoan)\.net/,
-    /.*\.gamecopyworld\.com/,
-    /adv\.coder143\.com/,
-    /(dl|david)\.nhachot\.info/,
-    /file\.tamteo\.com/,
-    /(n|u)\.shareme\.in/,
-    /ddl\.animesave\.com/,
+    /^(www\.)?adf\.(ly|acb\.im|sazlina\.com|animechiby\.com)$/,
+    /^[jq]\.gs$/,
+    /^go\.(phpnulledscripts|nicoblog-games)\.com$/,
+    /^ay\.gy$/,
+    /^(chathu|alien)\.apkmania\.co$/,
+    /^ksn\.mx$/,
+    /^goto\.adflytutor\.com$/,
+    /^dl\.apkpro\.net$/,
+    /^adf(ly\.itsrinaldo|\.tuhoctoan)\.net$/,
+    /^.*\.gamecopyworld\.com$/,
+    /^adv\.coder143\.com$/,
+    /^(dl|david)\.nhachot\.info$/,
+    /^file\.tamteo\.com$/,
+    /^(n|u)\.shareme\.in$/,
+    /^ddl\.animesave\.com$/,
   ];
-  hostRule = combineRegExp(hostRule);
 
   $.register({
     rule: {

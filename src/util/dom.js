@@ -513,7 +513,17 @@ var $;
       var matched = {};
 
       var passed = _.C(rule).all(function (pattern, part) {
-        matched[part] = url_6[part].match(pattern);
+        if (pattern instanceof RegExp) {
+          matched[part] = url_6[part].match(pattern);
+        } else if (pattern instanceof Array) {
+          // may be an array of regexp
+          var r = _.C(pattern).find(function (p) {
+            var m = url_6[part].match(p);
+            return m || _.nop;
+          });
+          matched[part] = r ? r.payload : null;
+        }
+
         return !!matched[part];
       });
 

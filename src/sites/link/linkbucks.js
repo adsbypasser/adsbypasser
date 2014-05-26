@@ -1,17 +1,19 @@
 (function() {
-  // TODO implement this directly in the NoPicAds Engine
-  function combineRegExp (res) {
-    var re = res.map(function (re) {
-      return re.source;
-    }).join('|');
-    re = new RegExp('^' + re + '$');
-    return re;
-  }
+  'use strict';
+
   var hostRules = [
-    /^(([\w]{8}|www)\.)?(allanalpass|a[mn]y|cash4files|deb|drstickyfingers|dyo|fapoff|filesonthe|free(an|gaysitepass)|galleries|goneviral|hornywood|link(babes|bucks(media)?)|megaline|miniurls|picbucks|poontown|qqc|rqq|seriousdeals|sexpalace|these(blog|forum)s|tinylinks|tnabucks|tubeviral|ultrafiles|urlbeat|whackyvidz|youfap|yyv|zff)\.(com?|net|gs|me|tv|bz|us)/,
+    /^(([\w]{8}|www)\.)?(allanalpass|cash4files|drstickyfingers|fapoff|freegaysitepass|(gone|tube)viral|(pic|tna)bucks|whackyvidz)\.com$/,
+    /^(([\w]{8}|www)\.)?(a[mn]y|deb|dyo|sexpalace)\.gs$/,
+    /^(([\w]{8}|www)\.)?(filesonthe|poontown|seriousdeals|ultrafiles|urlbeat)\.net$/,
+    /^(([\w]{8}|www)\.)?freean\.us$/,
+    /^(([\w]{8}|www)\.)?galleries\.bz$/,
+    /^(([\w]{8}|www)\.)?hornywood\.tv$/,
+    /^(([\w]{8}|www)\.)?link(babes|bucks)\.com$/,
+    /^(([\w]{8}|www)\.)?(megaline|miniurls|qqc|rqq|tinylinks|yyv|zff)\.co$/,
+    /^(([\w]{8}|www)\.)?(these(blog|forum)s)\.com$/,
+    /^(([\w]{8}|www)\.)?youfap\.me$/,
     /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
   ];
-  hostRules = combineRegExp(hostRules);
 
   $.register({
     rule: {
@@ -23,7 +25,7 @@
       $.resetCookies();
       $.removeNodes('iframe');
 
-      if (m.path[1] != null) {
+      if (m.path[1] !== null) {
         $.openLink(m.path[1]);
       }
     }
