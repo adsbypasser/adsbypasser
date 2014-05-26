@@ -1,3 +1,14 @@
+## TBA
+
+* fixed
+    * fundurl.com
+    * dh10thbvu.com
+* added
+    * theholycross.link2dollar.com
+* removed
+    * linkbucksmedia.com
+    * shr77.com
+
 ## 4.32.0
 
 * changed

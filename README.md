@@ -114,7 +114,6 @@ For more information, please see [Wiki].
     * hornywood.tv
     * linkbabes.com
     * linkbucks.com
-    * linkbucksmedia.com
     * megaline.co
     * miniurls.co
     * picbucks.com
@@ -371,12 +370,6 @@ For more information, please see [Wiki].
     * anonpic.com
     * imagescream.com
     * picturevip.com
-* shr77.com
-    * cpv.acb.im
-    * cpv.bz
-    * shr44.com
-    * shr55.com
-    * shr77.com
 * else
     * 01.nl
     * 1be.biz
@@ -500,6 +493,7 @@ For more information, please see [Wiki].
     * similarsites.com
     * stash-coins.com
     * subirimagenes.com
+    * theholycross.link2dollar.com
     * thinfi.com
     * tinyarrows.com
     * tinypic.com
