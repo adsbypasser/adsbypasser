@@ -1,6 +1,7 @@
 $.register({
   rule: {
-    host: /^free\.link2dollar\.com$/,
+    host: /\.link2dollar\.com$/,
+    path: /^\/\d+$/,
   },
   ready: function () {
     'use strict';
