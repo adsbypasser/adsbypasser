@@ -407,7 +407,7 @@ For more information, please see [Wiki].
     * fit.sh
     * fotolink.su
     * fotosik.pl
-    * free.link2dollar.com
+    * link2dollar.com
     * fundurl.com
     * funkyimg.com
     * gkurl.us
@@ -493,7 +493,6 @@ For more information, please see [Wiki].
     * similarsites.com
     * stash-coins.com
     * subirimagenes.com
-    * theholycross.link2dollar.com
     * thinfi.com
     * tinyarrows.com
     * tinypic.com

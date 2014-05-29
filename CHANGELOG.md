@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * cur.lv
+    * link2dollar.com
+
 ## 4.33.0
 
 * fixed
