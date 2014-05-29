@@ -3,6 +3,8 @@
 * fixed
     * cur.lv
     * link2dollar.com
+* added
+    * imgdream.net
 
 ## 4.33.0
 

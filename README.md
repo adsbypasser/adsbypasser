@@ -144,6 +144,7 @@ For more information, please see [Wiki].
     * imagecurl.org
     * imagepong.info
     * imageview.me
+    * imgdream.net
     * imgking.us
     * imgnip.com
     * imgsin.com
