@@ -8,9 +8,18 @@
   // mihalism v1
   $.register({
     rule: {
-      host: /^(hentai-hosting|miragepics|funextra\.hostzi|imgrex)\.com|bilder\.nixhelp\.de|imagecurl\.(com|org)|imagevau\.eu|img\.deli\.sh|imgking\.us|image(pong|back)\.info$/,
+      host: [
+        /^(hentai-hosting|miragepics|funextra\.hostzi|imgrex)\.com$/,
+        /^bilder\.nixhelp\.de$/,
+        /^imagecurl\.(com|org)$/,
+        /^imagevau\.eu$/,
+        /^img\.deli\.sh$/,
+        /^imgking\.us$/,
+        /^image(pong|back)\.info$/,
+        /^imgdream\.net$/,
+      ],
       path: /^\/viewer\.php$/,
-      query: /^\?file=([^&]+)/,
+      query: /file=([^&]+)/,
     },
     start: helper,
   });
@@ -20,7 +29,7 @@
     rule: {
       host: /^(dwimg|imgsin|www\.pictureshoster)\.com$/,
       path: /^\/viewer\.php$/,
-      query: /^\?file=([^&]+)/,
+      query: /file=([^&]+)/,
     },
     start: function (m) {
       $.openImage('/files/' + m.query[1]);
@@ -32,7 +41,7 @@
     rule: {
       host: /imageview\.me|244pix\.com|imgnip\.com|postimg\.net$/,
       path: /^\/viewerr.*\.php$/,
-      query: /^\?file=([^&]+)/,
+      query: /file=([^&]+)/,
     },
     start: helper,
   });
@@ -42,7 +51,7 @@
     rule: {
       host: /^catpic\.biz$/,
       path: /^(\/\w)?\/viewer\.php$/,
-      query: /^\?file=([^&]+)/,
+      query: /file=([^&]+)/,
     },
     start: function (m) {
       var url = _.T('{0}/images/{1}');
