@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^cloudimg\.net|imageheli\.com|imgtube\.net$/,
+    host: /^imageheli\.com|imgtube\.net$/,
     path: /^\/img-([a-zA-Z0-9]+)\..+$/,
   },
   ready: function () {
