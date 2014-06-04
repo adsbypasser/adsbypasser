@@ -118,11 +118,11 @@ module.exports = function (grunt) {
   grunt.registerTask('deploy', ['default', 'pages']);
 
   function removeModelines (s) {
-    return s.replace(/^\/\/\s*.+:.*[\r\n]+/gm, '');
+    return s.replace(/^\/\/\s*.+:.*[\r\n]*/gm, '');
   }
 
   function removeSingleLineComments (s) {
-    return s.replace(/^\s*\/\/.*[\r\n]+/gm, '');
+    return s.replace(/^\s*\/\/.*[\r\n]*/gm, '');
   }
 
   function removeEmptyLines (s) {
