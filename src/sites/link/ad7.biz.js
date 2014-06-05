@@ -1,20 +1,29 @@
 $.register({
   rule: {
     host: /^ad7.biz$/,
-    path: /^\/\w+$/
+    path: /^\/\w+$|\/\d+\/(.*)$/
   },
-  ready: function () {
+  ready: function (m) {
     $.removeNodes('iframe');
 
-    var script = $.$$('script').find(function (v) {
-      if (v.innerHTML.indexOf('var r_url') < 0) {
-        return _.nop;
-      }
-      return v.innerHTML;
-    });
-    var url = script.payload.match(/&url=([^&]+)/);
-    url = url[1];
-    $.openLink(url);
+    // Redirection URL contained in URL
+    if (m.path[1]) {
+    	var redirectLink = m.path[1];
+    	if (redirectLink.substring(0,7) != "http://" && redirectLink.substring(0,8) != "https://") {
+    		redirectLink = "http://" + redirectLink;
+    	}
+    	$.openLink(redirectLink);
+    } else {
+	    var script = $.$$('script').find(function (v) {
+	      if (v.innerHTML.indexOf('var r_url') < 0) {
+	        return _.nop;
+	      }
+	      return v.innerHTML;
+	    });
+	    var url = script.payload.match(/&url=([^&]+)/);
+	    url = url[1];
+	    $.openLink(url);
+	}
   },
 });
 
