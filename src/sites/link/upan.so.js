@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^(www\.)?upan\.so$/,
+    host: /^(www\.)?(upan|gxp)\.so$/,
     path: /^\/\w+$/,
   },
   ready: function () {
