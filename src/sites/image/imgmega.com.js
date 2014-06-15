@@ -1,16 +1,26 @@
 $.register({
-  rule: {
-    host: /^imgmega\.com$/,
-    path: /^\/[^\/]+\/.+\.jpg\.html$/,
-  },
-  ready: function () {
+  rule: [
+    {
+      host: /^imgmega\.com$/,
+      path: /^\/([^\/]+)\/.+\.jpg\.html$/,
+    },
+    {
+      host: /^pic\.re$/,
+      path: /^\/([^\/]+)$/,
+    },
+  ],
+  ready: function (m) {
     'use strict';
 
     var i = $.$('img.pic');
     if (!i) {
       // first stage
-      var f = document.forms[0];
-      f.submit();
+      $.openLinkByPost('', {
+        id: m.path[1],
+        next: '',
+        op: 'view',
+        pre: 1,
+      });
       return;
     }
     $.openImage(i.src);
