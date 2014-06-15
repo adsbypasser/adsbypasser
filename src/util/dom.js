@@ -477,7 +477,8 @@ var $;
     }
 
     function fixup (c) {
-      var fixtures = [
+      // Upgrade settings if the user ran an old version without some of them
+      var settingsPatches = [
         function (c) {
           var ac = typeof c.alignCenter !== 'undefined';
           if (typeof c.changeBackground === 'undefined') {
@@ -492,18 +493,20 @@ var $;
           if (typeof c.redirectImage === 'undefined') {
             c.redirectImage = true;
           }
-          if (typeof c.directBypass === 'undefined') {
-            c.directBypass = true;
-          }
         },
         function (c) {
           if (typeof c.captchaSupport === 'undefined') {
             c.captchaSupport = false;
           }
         },
+        function (c) {
+          if (typeof c.directBypass === 'undefined') {
+            c.directBypass = true;
+          }
+        }
       ];
-      while (c.version < fixtures.length) {
-        fixtures[c.version](c);
+      while (c.version < settingsPatches.length) {
+        settingsPatches[c.version](c);
         ++c.version;
       }
     }
