@@ -535,13 +535,14 @@ var $;
     }
 
     function dispatchByArray (rules, url_1, url_3, url_6) {
-      return _.C(rules).find(function (rule) {
+      var tmp = _.C(rules).find(function (rule) {
         var m = dispatch(rule, url_1, url_3, url_6);
         if (!m) {
           return _.nop;
         }
         return m;
       });
+      return tmp ? tmp.payload : null;
     }
 
     function dispatchByString (rule, url_3) {
