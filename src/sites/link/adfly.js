@@ -16,7 +16,7 @@
     /^(dl|david)\.nhachot\.info$/,
     /^file\.tamteo\.com$/,
     /^(n|u)\.shareme\.in$/,
-    /^ddl\.animesave\.com$/,
+    /^d?dl\.animesave\.(com|tk)$/,
   ];
 
   $.register({
