@@ -1,6 +1,7 @@
 var chai = require('chai');
 var expect = chai.expect;
 var connect = require('connect');
+var serveStatic = require('serve-static');
 var Browser = require('zombie');
 
 var _ = require('../src/util/core.js');
@@ -58,7 +59,7 @@ describe('dom', function () {
   var browser;
 
   before(function (done) {
-    this.server = connect().use(connect.static('./tests')).listen(SERVER_PORT, done);
+    this.server = connect().use(serveStatic('./tests')).listen(SERVER_PORT, done);
     browser = new Browser();
   });
 
