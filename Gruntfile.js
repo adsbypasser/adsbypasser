@@ -65,7 +65,7 @@ module.exports = function (grunt) {
       grunt.file.mkdir(f.dest);
 
       f.src.forEach(function (filepath) {
-        var script_file = f.dest + '/' + path.basename(filepath) + '.js';
+        var script_file = f.dest + '/' + path.basename(filepath);
 
         var source = grunt.file.read(filepath);
         var script = removeModelines(source);
