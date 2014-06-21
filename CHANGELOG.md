@@ -1,3 +1,21 @@
+## TBA
+
+* fixed
+    * ad7.biz
+    * strip comments in production code
+    * resource loading issue
+* removed
+    * cloudimg.net
+* added
+    * imgmega.com
+    * wzzq.me
+    * upan.so
+    * gxp.so
+    * 08lkk.com
+    * pic.re
+    * pixliv.com
+    * dl.animesave.tk
+
 ## 4.34.0
 
 * fixed

@@ -12,6 +12,7 @@
     * chathu.apkmania.co
     * david.nhachot.info
     * ddl.animesave.com
+    * dl.animesave.tk
     * dl.apkpro.net
     * dl.nhachot.info
     * file.tamteo.com
@@ -133,7 +134,6 @@
     * imgrill.com
     * imgsavvy.com
     * imgskull.info
-    * imgtube.net
     * imgult.com
     * pixup.us
 * picfox
@@ -250,9 +250,10 @@
 * imgbabes
     * imgbabes.com
     * imgflare.com
-* cloudimg
-    * cloudimg.net
+* imageheli.com
     * imageheli.com
+    * imgtube.net
+    * pixliv.com
 * urlcow
     * miniurl.com
     * urlcow.com
@@ -298,8 +299,15 @@
     * anonpic.com
     * imagescream.com
     * picturevip.com
+* upan.so
+    * upan.so
+    * gxp.so
+* imgmega.com
+    * imgmega.com
+    * pic.re
 * else
     * 01.nl
+    * 08lkk.com
     * 1be.biz
     * 1pics.ru
     * 1tiny.net
@@ -437,6 +445,7 @@
     * viidii.info
     * vir.al
     * vvcap.net
+    * wzzq.me
     * x.pixfarm.net
     * xlink.me
     * yep.it
