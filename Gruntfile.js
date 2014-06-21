@@ -53,8 +53,7 @@ module.exports = function (grunt) {
     pages: {
       options: {
         config: 'pages/config.json',
-        changelog: 'CHANGELOG.md',
-        readme: 'README.md',
+        summary: 'dest/summary.md',
         userjs: 'dest/nopicads.user.js',
         metajs: 'dest/nopicads.meta.js',
       },
@@ -79,16 +78,28 @@ module.exports = function (grunt) {
     });
   });
 
+  grunt.registerTask('summary', function () {
+    var done = this.async();
+
+    grunt.util.spawn({
+      cmd: 'deploy/summary.py',
+    }, function (error, result, code) {
+      if (error) {
+        throw error;
+      }
+      done();
+    });
+  });
+
   grunt.registerTask('pages', function () {
     var options = this.options();
     var rootPath = 'pages/contents';
     var releasePath = path.join(rootPath, 'releases');
-    var outPath = path.join(os.tmpdir(), 'nopicads_pages');
+    var outPath = path.join(os.tmpdir(), 'nopicads');
     var done = this.async();
 
-    // copy changelog and readme
-    grunt.file.copy(options.changelog, path.join(rootPath, path.basename(options.changelog)));
-    grunt.file.copy(options.readme, path.join(rootPath, path.basename(options.readme)));
+    // copy summary
+    grunt.file.copy(options.summary, path.join(rootPath, path.basename(options.summary)));
     // copy compiled files
     grunt.file.copy(options.userjs, path.join(releasePath, path.basename(options.userjs)));
     grunt.file.copy(options.metajs, path.join(releasePath, path.basename(options.metajs)));
@@ -99,9 +110,8 @@ module.exports = function (grunt) {
         throw error;
       }
 
-      // clear files
-      grunt.file.delete(path.join(rootPath, path.basename(options.changelog)));
-      grunt.file.delete(path.join(rootPath, path.basename(options.readme)));
+      // clean files
+      grunt.file.delete(path.join(rootPath, path.basename(options.summary)));
       grunt.file.delete(path.join(releasePath, path.basename(options.userjs)));
       grunt.file.delete(path.join(releasePath, path.basename(options.metajs)));
 
@@ -115,7 +125,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', ['clean', 'strip', 'concat']);
   grunt.registerTask('test', 'mochaTest');
-  grunt.registerTask('deploy', ['default', 'pages']);
+  grunt.registerTask('deploy', ['default', 'summary', 'pages']);
 
   function removeModelines (s) {
     return s.replace(/^\/\/\s*.+:.*[\r\n]+/gm, '');
