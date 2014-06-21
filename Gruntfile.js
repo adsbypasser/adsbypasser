@@ -91,6 +91,39 @@ module.exports = function (grunt) {
     });
   });
 
+  grunt.registerTask('clone', function () {
+    var done = this.async();
+    var data = grunt.file.readJSON('.deploy.json');
+
+    if (grunt.file.exists('dest/nopicads')) {
+      done();
+      return;
+    }
+
+    grunt.util.spawn({
+      cmd: 'git',
+      args: ['clone', data.ghpages.REPO, 'dest/nopicads'],
+    }, function (error, result, code) {
+      if (error) {
+        throw error;
+      }
+
+      grunt.util.spawn({
+        cmd: 'git',
+        args: ['checkout', 'gh-pages'],
+        opts: {
+          cwd: 'dest/nopicads',
+        },
+      }, function (error, result, code) {
+        if (error) {
+          throw error;
+        }
+
+        done();
+      });
+    });
+  });
+
   grunt.registerTask('ghpages', function () {
     var options = this.options();
     var rootPath = 'deploy/ghpages/contents';
@@ -125,7 +158,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', ['clean', 'strip', 'concat']);
   grunt.registerTask('test', 'mochaTest');
-  grunt.registerTask('deploy', ['default', 'summary', 'ghpages']);
+  grunt.registerTask('deploy', ['default', 'summary', 'clone', 'ghpages']);
 
   function removeModelines (s) {
     return s.replace(/^\/\/\s*.+:.*[\r\n]+/gm, '');
