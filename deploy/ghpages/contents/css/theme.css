@@ -11,6 +11,9 @@
 #msg {
   margin: 3em;
   opacity: 0;
+}
+
+.animated {
   -webkit-transition-property: opacity;
   transition-property: opacity;
   -webkit-transition-duration: 1s;
@@ -19,10 +22,20 @@
   transition-timing-function: linear;
 }
 
-#msg.dismissed {
+.dismissed {
   opacity: 1;
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
+}
+
+#noscript-hint {
+  margin: 3em;
+}
+
+#install-hint {
+  margin: 3em;
+  opacity: 0;
+  display: none;
 }
 
 /* ex: set ts=2 sts=2 sw=2 et : */

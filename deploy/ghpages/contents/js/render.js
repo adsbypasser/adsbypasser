@@ -8,6 +8,7 @@ function commit () {}
     options: $('#options'),
     save: $('#save'),
     msg: $('#msg'),
+    installHint: $('#install-hint'),
   };
   var tpl = {
     cb: $('#tpl-cb').text(),
@@ -26,6 +27,10 @@ function commit () {}
 
 
   render = function (data) {
+    clearTimeout(detection);
+
+    view.msg.addClass('animated');
+
     _.each(data.options, function (v, k) {
       var type = v.type;
 
@@ -58,6 +63,15 @@ function commit () {}
       view.msg.addClass('dismissed');
     });
   };
+
+
+  var detection = setTimeout(function () {
+    view.installHint.addClass('animated');
+    view.installHint.css({
+      'opacity': 1,
+      'display': 'block',
+    });
+  }, 1000);
 
 })();
 // ex: ts=2 sts=2 sw=2 et
