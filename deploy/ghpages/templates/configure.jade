@@ -1,0 +1,45 @@
+doctype html
+html(lang='en')
+
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='chrome=1')
+    title= locals.title
+
+    link(rel='stylesheet' media='screen' href='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css')
+    link(rel='stylesheet' media='screen' href='css/configure.css')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+    script#tpl-cb(type='text/plain').
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="<%= key %>" value="" <% if (checked) { %>checked<% } %> /><%= label %>
+        </label>
+        <span class="help-block"><%= help %></span>
+      </div>
+
+  body
+    .container
+
+      noscript
+        #noscript-hint.alert.alert-warning.text-center
+          strong JavaScript is disabled, please check your browser or extension setting.
+
+      #msg.alert.alert-success.text-center
+        strong Configuration Updated
+
+      #install-hint.alert.alert-warning.text-center
+        strong
+          |It seems that NoPicAds is not installed or active,&nbsp;
+          a(href='https://legnaleurc.github.io/nopicads/') see here for installation instructions
+          |.
+      #panel(role='form')
+        #options.form-group
+        .form-group
+          button#save.btn.btn-primary.pull-right(type='submit') Save
+          .clearfix
+
+    script(src='//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/js/bootstrap.min.js')
+    script(src='js/render.js')
