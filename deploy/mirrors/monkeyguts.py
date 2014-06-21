@@ -1,5 +1,4 @@
 from mechanize import Browser, ParseString
-from bs4 import BeautifulSoup
 
 
 def exec_(config, summary, script):
@@ -21,17 +20,10 @@ def exec_(config, summary, script):
 
     # edit source
     b.open(EDIT_URL)
-    # fixes parse error
-    soup = BeautifulSoup(b.response().read())
-    forms = soup.find_all('form')
-    form = forms[1]
-    t = form.find('textarea', id='code')
-    t.string = ''
-    forms = ParseString(form.prettify().encode('utf-8'), EDIT_URL)
-    form = forms[1]
-    form['descr'] = summary.encode('utf-8')
-    form['code'] = script.encode('utf-8')
-    form.submit()
+    b.select_form(nr=1)
+    b['descr'] = summary.encode('utf-8')
+    b['code'] = script.encode('utf-8')
+    b.submit()
 
 
 # ex: ts=4 sts=4 sw=4 et
