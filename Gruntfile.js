@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         dest: 'dest/nopicads.user.js',
       },
     },
-    clean: ['dest'],
+    clean: ['dest/sites', 'dest/util'],
     mochaTest: {
       test: {
         options: {
