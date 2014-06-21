@@ -1,4 +1,6 @@
 import mechanize
+import requests
+import urllib
 
 
 def exec_(config, summary, script):
@@ -6,12 +8,13 @@ def exec_(config, summary, script):
     NAMESPACE = config['NAMESPACE']
     SCRIPTNAME = config['SCRIPTNAME']
     GITHUB_USERNAME = config['GITHUB_USERNAME']
-    GITHUB_PASSWORD = config['GITHUB_USERNAME']
+    GITHUB_PASSWORD = config['GITHUB_PASSWORD']
 
     HOME_URL = 'https://openuserjs.org'
     LOGIN_URL = '{0}/register'.format(HOME_URL)
-    SCRIPT_URL = '{0}/scripts/{1}/{2}/{3}/source'.format(HOME_URL, USERNAME, NAMESPACE, SCRIPTNAME)
+    SCRIPT_URL = '{0}/user/add/scripts/new'.format(HOME_URL)
     ABOUT_URL = '{0}/script/{1}/{2}/edit'.format(HOME_URL, NAMESPACE, SCRIPTNAME)
+    URL_PARAM = '/scripts/{0}/{1}/{2}/source'.format(USERNAME, NAMESPACE, SCRIPTNAME)
 
     b = mechanize.Browser()
     b.set_handle_robots(False)
@@ -29,11 +32,17 @@ def exec_(config, summary, script):
     b.submit()
 
     # edit source
-    b.open(SCRIPT_URL)
-    b.select_form(nr=0)
-    b.find_control('source').readonly = False
-    b['source'] = script.encode('utf-8')
-    b.submit()
+    # can not simply use mechanize because the form is generate by javascript
+    jar = b._ua_handlers['_cookies'].cookiejar
+    cookies = {c.name: c.value for c in jar}
+    cookies = {
+        'connect.sid': urllib.unquote(cookies['connect.sid']),
+    }
+    # somehow the SSL verification will fail
+    r = requests.post(SCRIPT_URL, cookies=cookies, verify=False, data={
+        'source': script.encode('utf-8'),
+        'url': URL_PARAM,
+    })
 
     # edit metadata
     b.open(ABOUT_URL)

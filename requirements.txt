@@ -1,2 +1,3 @@
 Markdown
 mechanize
+requests
