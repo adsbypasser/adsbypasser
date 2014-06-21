@@ -22,7 +22,7 @@ def exec_(config, summary, script):
     b.open(EDIT_URL)
     b.select_form(nr=1)
     b['script_version[additional_info]'] = summary.encode('utf-8')
-    b.submit()
+    b.submit(name='commit')
 
 
 # ex: ts=4 sts=4 sw=4 et
