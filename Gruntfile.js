@@ -32,7 +32,7 @@ module.exports = function (grunt) {
         dest: 'dest/nopicads.user.js',
       },
     },
-    clean: ['dest'],
+    clean: ['dest/sites', 'dest/util'],
     mochaTest: {
       test: {
         options: {
@@ -50,11 +50,10 @@ module.exports = function (grunt) {
         src: ['tests/*.js'],
       },
     },
-    pages: {
+    ghpages: {
       options: {
-        config: 'pages/config.json',
-        changelog: 'CHANGELOG.md',
-        readme: 'README.md',
+        config: 'deploy/ghpages/config.json',
+        summary: 'dest/summary.md',
         userjs: 'dest/nopicads.user.js',
         metajs: 'dest/nopicads.meta.js',
       },
@@ -66,7 +65,7 @@ module.exports = function (grunt) {
       grunt.file.mkdir(f.dest);
 
       f.src.forEach(function (filepath) {
-        var script_file = f.dest + '/' + baseName(filepath) + '.js';
+        var script_file = f.dest + '/' + path.basename(filepath) + '.js';
 
         var source = grunt.file.read(filepath);
         var script = removeModelines(source);
@@ -79,16 +78,61 @@ module.exports = function (grunt) {
     });
   });
 
-  grunt.registerTask('pages', function () {
-    var options = this.options();
-    var rootPath = 'pages/contents';
-    var releasePath = path.join(rootPath, 'releases');
-    var outPath = path.join(os.tmpdir(), 'nopicads_pages');
+  grunt.registerTask('summary', function () {
     var done = this.async();
 
-    // copy changelog and readme
-    grunt.file.copy(options.changelog, path.join(rootPath, path.basename(options.changelog)));
-    grunt.file.copy(options.readme, path.join(rootPath, path.basename(options.readme)));
+    grunt.util.spawn({
+      cmd: 'deploy/summary.py',
+    }, function (error, result, code) {
+      if (error) {
+        throw error;
+      }
+      done();
+    });
+  });
+
+  grunt.registerTask('clone', function () {
+    var done = this.async();
+    var data = grunt.file.readJSON('.deploy.json');
+
+    if (grunt.file.exists('dest/nopicads')) {
+      done();
+      return;
+    }
+
+    grunt.util.spawn({
+      cmd: 'git',
+      args: ['clone', data.ghpages.REPO, 'dest/nopicads'],
+    }, function (error, result, code) {
+      if (error) {
+        throw error;
+      }
+
+      grunt.util.spawn({
+        cmd: 'git',
+        args: ['checkout', 'gh-pages'],
+        opts: {
+          cwd: 'dest/nopicads',
+        },
+      }, function (error, result, code) {
+        if (error) {
+          throw error;
+        }
+
+        done();
+      });
+    });
+  });
+
+  grunt.registerTask('ghpages', function () {
+    var options = this.options();
+    var rootPath = 'deploy/ghpages/contents';
+    var releasePath = path.join(rootPath, 'releases');
+    var outPath = 'dest/nopicads';
+    var done = this.async();
+
+    // copy summary
+    grunt.file.copy(options.summary, path.join(rootPath, path.basename(options.summary)));
     // copy compiled files
     grunt.file.copy(options.userjs, path.join(releasePath, path.basename(options.userjs)));
     grunt.file.copy(options.metajs, path.join(releasePath, path.basename(options.metajs)));
@@ -99,12 +143,28 @@ module.exports = function (grunt) {
         throw error;
       }
 
-      // clear files
-      grunt.file.delete(path.join(rootPath, path.basename(options.changelog)));
-      grunt.file.delete(path.join(rootPath, path.basename(options.readme)));
+      // clean files
+      grunt.file.delete(path.join(rootPath, path.basename(options.summary)));
       grunt.file.delete(path.join(releasePath, path.basename(options.userjs)));
       grunt.file.delete(path.join(releasePath, path.basename(options.metajs)));
 
+      done();
+    });
+  });
+
+  grunt.registerTask('mirrors', function () {
+    var done = this.async();
+
+    grunt.util.spawn({
+      cmd: 'python2',
+      args: ['-m', 'mirrors'],
+      opts: {
+        cwd: 'deploy',
+      },
+    }, function (error, result, code) {
+      if (error) {
+        throw error;
+      }
       done();
     });
   });
@@ -115,7 +175,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', ['clean', 'strip', 'concat']);
   grunt.registerTask('test', 'mochaTest');
-  grunt.registerTask('deploy', ['default', 'pages']);
+  grunt.registerTask('deploy', ['default', 'summary', 'clone', 'ghpages']);
+  grunt.registerTask('mirror', ['default', 'summary', 'mirrors']);
 
   function removeModelines (s) {
     return s.replace(/^\/\/\s*.+:.*[\r\n]*/gm, '');
@@ -127,11 +188,6 @@ module.exports = function (grunt) {
 
   function removeEmptyLines (s) {
     return s.replace(/^\s*[\r\n]+/gm, '');
-  }
-
-  function baseName (s) {
-    var m = s.match(/([^\/]+)\.js$/);
-    return m[1];
   }
 
 };

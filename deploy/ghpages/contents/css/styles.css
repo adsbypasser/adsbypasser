@@ -159,11 +159,6 @@ header ul.links a strong {
   color:#222;
 }
 
-header .change-log {
-  overflow: auto;
-  height: 300px;
-}
-
 section {
   width:500px;
   float:right;

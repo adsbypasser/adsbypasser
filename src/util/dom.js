@@ -305,7 +305,7 @@ var $;
       });
     };
 
-    $.searchScripts = function (pattern, context) {
+    function searchScriptsByRegExp (pattern, context) {
       var m = $.$$('script', context).find(function (s) {
         var m = s.innerHTML.match(pattern);
         if (!m) {
@@ -317,6 +317,30 @@ var $;
         return null;
       }
       return m.payload;
+    }
+
+    function searchScriptsByString (pattern, context) {
+      var m = $.$$('script', context).find(function (s) {
+        var m = s.innerHTML.indexOf(pattern);
+        if (m < 0) {
+          return _.nop;
+        }
+        return m;
+      });
+      if (!m) {
+        return null;
+      }
+      return m.value.innerHTML;
+    }
+
+    $.searchScripts = function (pattern, context) {
+      if (pattern instanceof RegExp) {
+        return searchScriptsByRegExp(pattern, context);
+      } else if (typeof pattern === 'string') {
+        return searchScriptsByString(pattern, context);
+      } else {
+        return null;
+      }
     };
 
     $.setCookie = function (key, value) {
