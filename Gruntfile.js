@@ -152,6 +152,23 @@ module.exports = function (grunt) {
     });
   });
 
+  grunt.registerTask('mirrors', function () {
+    var done = this.async();
+
+    grunt.util.spawn({
+      cmd: 'python2',
+      args: ['-m', 'mirrors'],
+      opts: {
+        cwd: 'deploy',
+      },
+    }, function (error, result, code) {
+      if (error) {
+        throw error;
+      }
+      done();
+    });
+  });
+
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-mocha-test');
@@ -159,6 +176,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['clean', 'strip', 'concat']);
   grunt.registerTask('test', 'mochaTest');
   grunt.registerTask('deploy', ['default', 'summary', 'clone', 'ghpages']);
+  grunt.registerTask('mirror', ['default', 'summary', 'mirrors']);
 
   function removeModelines (s) {
     return s.replace(/^\/\/\s*.+:.*[\r\n]+/gm, '');
