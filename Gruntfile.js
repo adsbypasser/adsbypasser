@@ -50,9 +50,9 @@ module.exports = function (grunt) {
         src: ['tests/*.js'],
       },
     },
-    pages: {
+    ghpages: {
       options: {
-        config: 'pages/config.json',
+        config: 'deploy/ghpages/config.json',
         summary: 'dest/summary.md',
         userjs: 'dest/nopicads.user.js',
         metajs: 'dest/nopicads.meta.js',
@@ -91,9 +91,9 @@ module.exports = function (grunt) {
     });
   });
 
-  grunt.registerTask('pages', function () {
+  grunt.registerTask('ghpages', function () {
     var options = this.options();
-    var rootPath = 'pages/contents';
+    var rootPath = 'deploy/ghpages/contents';
     var releasePath = path.join(rootPath, 'releases');
     var outPath = path.join(os.tmpdir(), 'nopicads');
     var done = this.async();
@@ -125,7 +125,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', ['clean', 'strip', 'concat']);
   grunt.registerTask('test', 'mochaTest');
-  grunt.registerTask('deploy', ['default', 'summary', 'pages']);
+  grunt.registerTask('deploy', ['default', 'summary', 'ghpages']);
 
   function removeModelines (s) {
     return s.replace(/^\/\/\s*.+:.*[\r\n]+/gm, '');
