@@ -95,7 +95,7 @@ module.exports = function (grunt) {
     var options = this.options();
     var rootPath = 'deploy/ghpages/contents';
     var releasePath = path.join(rootPath, 'releases');
-    var outPath = path.join(os.tmpdir(), 'nopicads');
+    var outPath = 'dest/nopicads';
     var done = this.async();
 
     // copy summary
