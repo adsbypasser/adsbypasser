@@ -23,6 +23,7 @@
         /^(www\.)?\.imgult\.com$/,
         /^(bulkimg|imgskull)\.info$/,
         /^image\.adlock\.org$/,
+        /^img\.yt$/,
       ],
       path: /^\/img-.*\.html$/,
     },
