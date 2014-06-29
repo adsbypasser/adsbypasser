@@ -1,3 +1,12 @@
+## TBA
+
+* fixed
+    * pixliv.com
+    * imglocker.com
+* added
+    * img.yt
+    * moe.god.jp
+
 ## 4.35.1
 
 * fixed

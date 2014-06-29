@@ -127,6 +127,7 @@
     * imagefolks.com
     * imagepicsa.com
     * img.spicyzilla.com
+    * img.yt
     * imgcandy.net
     * imgcloud.co
     * imgmaster.net
@@ -396,6 +397,7 @@
     * lnk.in
     * lostpic.net
     * madlink.sk
+    * moe.god.jp
     * mrjh.org
     * my-link.pro
     * noelshack.com
