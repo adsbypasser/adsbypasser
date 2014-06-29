@@ -13,15 +13,16 @@ def exec_(config, summary, script):
 
     # login
     b.open(LOGIN_URL)
-    b.select_form(nr=1)
+    b.select_form(nr=2)
     b['user[email]'] = USERNAME
     b['user[password]'] = PASSWORD
     b.submit()
 
     # edit source
     b.open(EDIT_URL)
-    b.select_form(nr=1)
+    b.select_form(nr=2)
     b['script_version[additional_info]'] = summary.encode('utf-8')
+    b['script_version[code]'] = script.encode('utf-8')
     b.submit(name='commit')
 
 
