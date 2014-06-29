@@ -1,4 +1,4 @@
-## TBA
+## 4.36.0
 
 * fixed
     * pixliv.com
