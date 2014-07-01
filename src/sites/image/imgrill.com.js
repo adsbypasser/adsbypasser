@@ -22,7 +22,7 @@
         /^imgcloud\.co|pixup\.us$/,
         /^(www\.)?\.imgult\.com$/,
         /^(bulkimg|imgskull)\.info$/,
-        /^image\.adlock\.org$/,
+        /^(image\.adlock|imgspot)\.org$/,
         /^img\.yt$/,
         /^vava\.in$/,
       ],
