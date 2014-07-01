@@ -24,6 +24,7 @@
         /^(bulkimg|imgskull)\.info$/,
         /^image\.adlock\.org$/,
         /^img\.yt$/,
+        /^vava\.in$/,
       ],
       path: /^\/img-.*\.html$/,
     },
