@@ -45,7 +45,7 @@
       }
 
       // script not loaded yet, wait until it appears
-      var o = MutationObserver(function (mutations) {
+      var o = new MutationObserver(function (mutations) {
         mutations.forEach(function (mutation) {
           var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
           if (m) {
