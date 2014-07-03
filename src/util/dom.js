@@ -407,6 +407,51 @@ var $;
     };
 
 
+    function injectClone (vaccine) {
+      var injected;
+      if (typeof cloneInto !== 'function') {
+        injected = vaccine;
+      } else {
+        injected = cloneInto(vaccine, unsafeWindow);
+      }
+      return injected;
+    }
+
+    function injectFunction (vaccine) {
+      var injected;
+      if (typeof exportFunction !== 'function') {
+        injected = vaccine;
+      } else {
+        try {
+          injected = exportFunction(vaccine, unsafeWindow);
+        } catch(e) {
+          console.error(e);
+        }
+      }
+      return injected;
+    }
+
+    function injectReference () {
+      var injected;
+      if (typeof createObjectIn !== 'function') {
+        injected = {};
+      } else {
+        injected = createObjectIn(unsafeWindow);
+      }
+      return injected;
+    }
+
+    $.inject = function (vaccine) {
+      if (typeof vaccine === 'function') {
+        return injectFunction(vaccine);
+      } else if (typeof vaccine === 'undefined') {
+        return injectReference();
+      } else {
+        return injectClone(vaccine);
+      }
+    };
+
+
     var patterns = [];
 
     $.register = function (pattern) {
