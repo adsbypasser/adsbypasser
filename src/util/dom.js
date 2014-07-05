@@ -407,6 +407,51 @@ var $;
     };
 
 
+    function injectClone (vaccine) {
+      var injected;
+      if (typeof cloneInto !== 'function') {
+        injected = vaccine;
+      } else {
+        injected = cloneInto(vaccine, unsafeWindow);
+      }
+      return injected;
+    }
+
+    function injectFunction (vaccine) {
+      var injected;
+      if (typeof exportFunction !== 'function') {
+        injected = vaccine;
+      } else {
+        try {
+          injected = exportFunction(vaccine, unsafeWindow);
+        } catch(e) {
+          console.error(e);
+        }
+      }
+      return injected;
+    }
+
+    function injectReference () {
+      var injected;
+      if (typeof createObjectIn !== 'function') {
+        injected = {};
+      } else {
+        injected = createObjectIn(unsafeWindow);
+      }
+      return injected;
+    }
+
+    $.inject = function (vaccine) {
+      if (typeof vaccine === 'function') {
+        return injectFunction(vaccine);
+      } else if (typeof vaccine === 'undefined') {
+        return injectReference();
+      } else {
+        return injectClone(vaccine);
+      }
+    };
+
+
     var patterns = [];
 
     $.register = function (pattern) {
@@ -475,7 +520,7 @@ var $;
       },
       ready: function () {
 
-        unsafeWindow.commit = function (data) {
+        unsafeWindow.commit = $.inject(function (data) {
           data.version = config.version;
           _.C(data).each(function (v, k) {
             config[k] = v;
@@ -484,9 +529,9 @@ var $;
           setTimeout(function () {
             save(data);
           }, 0);
-        };
+        });
 
-        unsafeWindow.render({
+        unsafeWindow.render($.inject({
           version: config.version,
           options: {
             alignCenter: {
@@ -527,7 +572,7 @@ var $;
               ].join('<br/>\n'),
             },
           },
-        });
+        }));
 
       },
     });
@@ -697,6 +742,7 @@ var $;
           _.info('blocked onbeforeunload');
         },
       };
+      // NOTE maybe break in future Firefox release
       _.C([unsafeWindow, unsafeWindow.document.body]).each(function (o) {
         if (!o) {
           return;
