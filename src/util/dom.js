@@ -520,7 +520,7 @@ var $;
       },
       ready: function () {
 
-        unsafeWindow.commit = function (data) {
+        unsafeWindow.commit = $.inject(function (data) {
           data.version = config.version;
           _.C(data).each(function (v, k) {
             config[k] = v;
@@ -529,9 +529,9 @@ var $;
           setTimeout(function () {
             save(data);
           }, 0);
-        };
+        });
 
-        unsafeWindow.render({
+        unsafeWindow.render($.inject({
           version: config.version,
           options: {
             alignCenter: {
@@ -572,7 +572,7 @@ var $;
               ].join('<br/>\n'),
             },
           },
-        });
+        }));
 
       },
     });
@@ -742,6 +742,7 @@ var $;
           _.info('blocked onbeforeunload');
         },
       };
+      // NOTE maybe break in future Firefox release
       _.C([unsafeWindow, unsafeWindow.document.body]).each(function (o) {
         if (!o) {
           return;

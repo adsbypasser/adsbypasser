@@ -86,19 +86,20 @@
     // somehow I must use jQuery AJAX
     var post = unsafeWindow.$.post;
     // mock a fake AJAX function
-    unsafeWindow.$.post = function (a, b, c) {
-      if (typeof c === 'function') {
-        setTimeout(function () {
-          var data = {
-            error: false,
-            message: {
-              url: '#',
-            },
-          };
-          c(JSON.stringify(data));
-        }, 1000);
+    unsafeWindow.$.post = $.inject(function (a, b, c) {
+      if (typeof c !== 'function') {
+        return;
       }
-    };
+      setTimeout(function () {
+        var data = {
+          error: false,
+          message: {
+            url: '#',
+          },
+        };
+        c(JSON.stringify(data));
+      }, 1000);
+    });
 
     var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
     var make_url = matches[1];
