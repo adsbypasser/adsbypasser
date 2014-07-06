@@ -3,10 +3,11 @@
 
   function afterGotSessionId (sessionId) {
     var X_NewRelic_ID = $.searchScripts(/xpid:"([^"]+)"/);
+    // this is an unsafe function
     var Fingerprint = unsafeWindow.Fingerprint;
     var browserToken = null;
     if (Fingerprint) {
-      browserToken = (new Fingerprint({canvas: !0})).get();
+      browserToken = (new Fingerprint($.inject({canvas: !0}))).get();
     } else {
       browserToken = Math.round((new Date()).getTime() / 1000);
     }
