@@ -1,4 +1,4 @@
-## TBA
+## 4.37.0
 
 * fixed
     * imgspice.com
