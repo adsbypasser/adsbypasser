@@ -135,8 +135,10 @@
     * imgrill.com
     * imgsavvy.com
     * imgskull.info
+    * imgspot.org
     * imgult.com
     * pixup.us
+    * vava.in
 * picfox
     * amateurfreak.org
     * euro-pic.eu
@@ -344,7 +346,6 @@
     * fit.sh
     * fotolink.su
     * fotosik.pl
-    * link2dollar.com
     * fundurl.com
     * funkyimg.com
     * gkurl.us
@@ -392,6 +393,8 @@
     * keptarolo.hu
     * kingofshrink.com
     * lienscash.com
+    * link-protector.com
+    * link2dollar.com
     * link2you.ru
     * lix.in
     * lnk.in

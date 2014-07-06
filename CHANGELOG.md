@@ -1,3 +1,16 @@
+## TBA
+
+* fixed
+    * imgspice.com
+    * dh10thbvu.com
+    * add an API to deal with Firefox 30+ (a.k.a. the release of content script breaker)
+    * trying to avoid reloading on linkbucks.com
+    * sh.st
+* added
+    * vava.in
+    * imgspot.org
+    * link-protector.com
+
 ## 4.36.0
 
 * fixed
