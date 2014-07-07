@@ -107,7 +107,7 @@
 
     function makeLog () {
         make_opts.opt = 'make_log';
-        post(make_url, make_opts, function (text) {
+        post(make_url, $.inject(make_opts), $.inject(function (text) {
           var data = JSON.parse(text);
           _.info('make_log', data);
           if (!data.message) {
@@ -116,12 +116,12 @@
           }
 
           $.openLink(data.message.url);
-        });
+        }));
     }
 
     function checkLog () {
       make_opts.opt = 'check_log';
-      post(make_url, make_opts, function (text) {
+      post(make_url, $.inject(make_opts), $.inject(function (text) {
         var data = JSON.parse(text);
         _.info('check_log', data);
         if (!data.message) {
@@ -130,15 +130,15 @@
         }
 
         makeLog();
-      });
+      }));
     }
 
     function checksLog () {
       make_opts.opt = 'checks_log';
-      post(make_url, make_opts, function () {
+      post(make_url, $.inject(make_opts), $.inject(function () {
         _.info('checks_log');
         checkLog();
-      });
+      }));
     }
 
     checksLog();
