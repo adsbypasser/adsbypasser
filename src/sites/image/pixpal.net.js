@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^pixpal\.net|imgsure\.com$/,
+    host: /^pixpal\.net|(imgsure|picexposed)\.com$/,
   },
   ready: function () {
     'use strict';
