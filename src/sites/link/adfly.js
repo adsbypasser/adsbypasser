@@ -45,6 +45,9 @@
 
       $.removeNodes('iframe');
 
+      // disable cookie check
+      unsafeWindow.cookieCheck = $.inject(_.nop);
+
       h = unsafeWindow.eu;
       if (!h) {
         h = $('#adfly_bar');
