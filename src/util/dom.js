@@ -762,7 +762,8 @@ var $;
         return;
       }
 
-      if (window.parent !== window.self) {
+      if (window.frameElement) {
+        // skip frames
         return;
       }
 
