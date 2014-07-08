@@ -762,7 +762,7 @@ var $;
         return;
       }
 
-      if (window.frameElement) {
+      if (window.top !== window.self) {
         // skip frames
         return;
       }
