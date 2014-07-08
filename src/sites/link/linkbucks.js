@@ -57,7 +57,6 @@
 
         if (!data.Success && data.Errors[0] === 'Invalid token') {
           // somehow this token is invalid, reload to get new one
-          // window.location.reload();
           _.info('got invalid token');
           clearInterval(i);
           $.get(window.location.toString(), {}, function (text) {
