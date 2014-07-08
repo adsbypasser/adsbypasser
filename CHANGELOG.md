@@ -1,4 +1,4 @@
-## TBA
+## 4.37.2
 
 * fixed
     * adf.ly issue with Ghostery
