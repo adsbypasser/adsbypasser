@@ -54,11 +54,12 @@
         unsafeWindow.close_bar();
         return;
       }
-      var a = h.indexOf('!HiTommy'), b = '';
+      var a = h.indexOf('!HiTommy');
       if (a >= 0) {
         h = h.substring(0, a);
       }
       a = '';
+      b = '';
       for (var i = 0; i < h.length; ++i) {
         if (i % 2 === 0) {
           a = a + h.charAt(i);
