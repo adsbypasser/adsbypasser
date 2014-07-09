@@ -7,13 +7,10 @@
   }
 
   $.register({
-    rule: [
-      {
-        host: /^(image(decode|ontime)|(zonezeed|zelje|croft|myhot|dam)image|pic(\.apollon-fervor|stwist))\.com|(img(serve|coin|fap)|gallerycloud)\.net|hotimages\.eu|(imgstudio|dragimage)\.org$/,
-        path: /^\/img-.*\.html$/,
-      },
-      'http://08lkk.com/Photo/img-*.html',
-    ],
+    rule: {
+      host: /^(image(decode|ontime)|(zonezeed|zelje|croft|myhot|dam)image|pic(\.apollon-fervor|stwist))\.com|(img(serve|coin|fap)|gallerycloud)\.net|hotimages\.eu|(imgstudio|dragimage)\.org$/,
+      path: /^\/img-.*\.html$/,
+    },
     ready: ready,
   });
 
@@ -28,6 +25,22 @@
       window.location.reload();
     },
     ready: ready,
+  });
+
+  $.register({
+    rule: {
+      host: /^08lkk\.com$/,
+      path: /^\/Photo\/img-.+\.html$/,
+    },
+    start: function () {
+      // this site checks cookie that caculate from session
+      // do an AJAX to skip checking
+      $.get(window.location.toString(), {}, function (data) {
+        var a = $.toDOM(data);
+        var i = $('img[class^=centred]', a);
+        $.openImage(i.src);
+      });
+    },
   });
 
 })();
