@@ -86,7 +86,7 @@
       $.removeNodes('iframe');
 
       if (m.path[1] !== null) {
-        $.openLink(m.path[1]);
+        $.openLink(m.path[1] + window.location.search);
       }
     }
   });
