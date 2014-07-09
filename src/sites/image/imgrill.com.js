@@ -36,7 +36,20 @@
       host: /^08lkk\.com$/,
       path: /^\/\d+\/img-.*\.html$/,
     },
-    ready: handler,
+    start: function () {
+      // this site checks cookie that caculate from session
+      // do an AJAX to skip checking
+      $.get(window.location.toString(), {}, function (data) {
+        var a = $.toDOM(data);
+
+        var bbcode = $.$('#imagecodes input', a);
+        bbcode = bbcode.value.match(/.+\[IMG\]([^\[]+)\[\/IMG\].+/);
+        bbcode = bbcode[1];
+        bbcode = bbcode.replace('small', 'big');
+
+        $.openImage(bbcode);
+      });
+    },
   });
 
 })();
