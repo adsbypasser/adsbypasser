@@ -1,3 +1,15 @@
+## TBA
+
+* fixed
+    * some issue on linkbucks.com
+    * 08lkk.com
+* added
+    * picexposed.com
+    * imglemon.com
+    * pronpic.org
+    * imgseeds.com
+    * imagebucks.biz
+
 ## 4.37.2
 
 * fixed
