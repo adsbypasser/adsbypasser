@@ -8,6 +8,10 @@ $.register({
       host: /^pic\.re$/,
       path: /^\/([^\/]+)$/,
     },
+    {
+      host: /^imagebucks\.biz$/,
+      path: /^\/([^\/]+)\/.+\.jpg$/,
+    },
   ],
   ready: function (m) {
     'use strict';

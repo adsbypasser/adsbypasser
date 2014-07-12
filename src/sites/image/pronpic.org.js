@@ -1,12 +1,13 @@
 $.register({
   rule: {
-    host: /^pixpal\.net|(imgsure|picexposed)\.com$/,
+    host: /^pronpic\.org$/,
   },
   ready: function () {
     'use strict';
 
-    var i = $('img.pic');
-    $.openImage(i.src);
+    var img = $('table.new_table2:nth-child(2) img.link');
+    var url = img.src.replace('th_', '');
+    $.openImage(url);
   },
 });
 
