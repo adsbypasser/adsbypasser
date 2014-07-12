@@ -82,6 +82,7 @@
     * pictureshoster.com
     * postimg.net
 * reklama
+    * 08lkk.com (Photo)
     * bulkimg.info
     * croftimage.com
     * damimage.com
@@ -94,6 +95,7 @@
     * imgadult.com
     * imgcoin.net
     * imgfap.net
+    * imglemon.com
     * imgserve.net
     * imgstudio.org
     * myhotimage.com
@@ -249,7 +251,6 @@
     * imagedomino.com
     * imgfantasy.com
     * imgleech.com
-    * imgsure.com
 * imgbabes
     * imgbabes.com
     * imgflare.com
@@ -306,11 +307,15 @@
     * upan.so
     * gxp.so
 * imgmega.com
+    * imagebucks.biz
     * imgmega.com
     * pic.re
+* pixpal.net
+    * imgsure.com
+    * picexposed.com
+    * pixpal.net
 * else
     * 01.nl
-    * 08lkk.com
     * 1be.biz
     * 1pics.ru
     * 1tiny.net
@@ -385,6 +390,7 @@
     * imgcarry.com
     * imgdollar.com
     * imgpaying.com
+    * imgseeds.com
     * imgtheif.com
     * imgvault.pw
     * ipic.su
@@ -416,10 +422,10 @@
     * picshare.geenza.com
     * pixhost.org
     * pixhub.eu
-    * pixpal.net
     * postimg.org
     * preview.rlu.ru
     * prntscr.com
+    * pronpic.org
     * qrrro.com
     * ref.so
     * reffbux.com
