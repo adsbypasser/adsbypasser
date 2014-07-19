@@ -2,6 +2,8 @@
   'use strict';
 
   function handler () {
+    $.removeNodes('iframe');
+
     var node = $.$('#continuetoimage > form input');
     if (node) {
       // first pass
