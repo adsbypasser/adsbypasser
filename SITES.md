@@ -118,7 +118,6 @@
 * CF Image Host
     * d69.in
     * ghanaimages.co
-    * images.woh.to
     * imgurban.info
     * mypixxx.lonestarnaughtygirls.com
     * x45x.info
@@ -128,6 +127,7 @@
     * imagecorn.com
     * imagefolks.com
     * imagepicsa.com
+    * img-view.net
     * img.spicyzilla.com
     * img.yt
     * imgcandy.net
@@ -310,10 +310,9 @@
     * imagebucks.biz
     * imgmega.com
     * pic.re
-* pixpal.net
+* imgsure.com
     * imgsure.com
     * picexposed.com
-    * pixpal.net
 * else
     * 01.nl
     * 1be.biz
@@ -408,6 +407,7 @@
     * madlink.sk
     * moe.god.jp
     * mrjh.org
+    * mt0.org
     * my-link.pro
     * noelshack.com
     * nsfw.in
