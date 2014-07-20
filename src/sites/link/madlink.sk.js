@@ -1,10 +1,12 @@
 $.register({
-  rule: function (uri_1, uri_3, uri_6) {
-    if (!/^madlink\.sk$/.test(uri_6.host) || /\.html$/.test(uri_6.path)) {
-      return null;
-    }
-    return uri_6.path.match(/^\/(.+)/);
-  },
+  rule: [
+    'http://madlink.sk/',
+    'http://madlink.sk/*.html',
+  ],
+});
+
+$.register({
+  rule: 'http://madlink.sk/*',
   start: function (m) {
     'use strict';
 
