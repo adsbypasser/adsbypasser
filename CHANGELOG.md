@@ -1,3 +1,14 @@
+## TBA
+
+* fixed
+    * imgmaster.net
+* added
+    * img-view.net
+    * mt0.org
+* removed
+    * pixpal.net
+    * images.woh.to
+
 ## 4.38.0
 
 * fixed
