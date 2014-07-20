@@ -1,4 +1,4 @@
-## TBA
+## 4.39.0
 
 * fixed
     * imgmaster.net
