@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^(www\.)?coin-ads\.com$/,
+    host: /^(www\.)?(coin-ads\.com|shortin\.tk)$/,
     path: /^\/.+/,
   },
   ready: function () {
