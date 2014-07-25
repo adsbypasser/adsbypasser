@@ -16,8 +16,8 @@ $.register({
   ready: function (m) {
     'use strict';
 
-    var i = $.$('img.pic');
-    if (!i) {
+    var i = $.$('form');
+    if (i) {
       // first stage
       $.openLinkByPost('', {
         id: m.path[1],
@@ -27,6 +27,7 @@ $.register({
       });
       return;
     }
+    i = $('img.pic');
     $.openImage(i.src);
   },
 });
