@@ -313,6 +313,9 @@
 * imgsure.com
     * imgsure.com
     * picexposed.com
+* coin-ads
+    * coin-ads.com
+    * shortin.tk
 * else
     * 01.nl
     * 1be.biz
@@ -338,7 +341,6 @@
     * casimages.com
     * cf.ly
     * cli.gs
-    * coin-ads.com
     * comyonet.com
     * cubeupload.com
     * dapat.in

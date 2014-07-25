@@ -1,3 +1,10 @@
+## TBA
+
+* fixed
+    * imagebucks.biz
+* added
+    * shortin.tk
+
 ## 4.39.0
 
 * fixed
