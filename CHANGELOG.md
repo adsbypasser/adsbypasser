@@ -1,4 +1,4 @@
-## TBA
+## 4.40.0
 
 * fixed
     * imagebucks.biz
