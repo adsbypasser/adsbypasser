@@ -16,7 +16,7 @@ $.register({
   ready: function (m) {
     'use strict';
 
-    var i = $.$('form');
+    var i = $.$('form[action=""]');
     if (i) {
       // first stage
       $.openLinkByPost('', {
