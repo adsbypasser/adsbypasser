@@ -1,4 +1,4 @@
-## TBA
+## 4.40.2
 
 * fixed
     * Some problem with GreaseMonkey 2.0 on Firefox 29
