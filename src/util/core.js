@@ -208,7 +208,9 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
     }
     var f = console[method];
     if (typeof f === 'function') {
-      console[method].apply(console, args);
+      // GreaseMonkey 2.0 doesn't like Function.apply
+      // see greasemonkey/greasemonkey#1949
+      f.apply(console, $.inject(args));
     }
   }
 
