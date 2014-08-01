@@ -3,10 +3,8 @@ $.register({
   ready: function () {
     'use strict';
 
-    $.removeNodes('iframe');
-
-    var a = $('#time a');
-    $.openLink(a.id);
+    var a = $('#redir_btn');
+    $.openLink(a.href);
   },
 });
 
