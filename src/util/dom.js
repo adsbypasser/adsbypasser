@@ -412,7 +412,9 @@ var $;
       if (typeof cloneInto !== 'function') {
         injected = vaccine;
       } else {
-        injected = cloneInto(vaccine, unsafeWindow);
+        injected = cloneInto(vaccine, unsafeWindow, {
+          cloneFunctions: true,
+        });
       }
       return injected;
     }
