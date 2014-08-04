@@ -28,6 +28,7 @@ Forked from [RedirectionHelper] writen by [SuYS], and here are our nice
 contributors. (sort by GitHub account)
 
 * [U BLESS](https://github.com/annlabv3)
+* [bitst0rm](https://github.com/bitst0rm)
 * [noname120](https://github.com/devnoname120)
 * [ofyxp](https://github.com/ofyxp)
 * [RickyChen](https://github.com/RickyChien)
