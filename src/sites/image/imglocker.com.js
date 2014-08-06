@@ -1,7 +1,10 @@
 $.register({
   rule: {
     host: /^imglocker\.com$/,
-    path: /^(\/\w+)\/([^.]+\.\w+)(\.html)?$/,
+    path: [
+      /^(\/\w+)\/(.+)\.html$/,
+      /^(\/\w+)\/(.+)$/,
+    ],
   },
   start: function (m) {
     'use strict';
