@@ -19,12 +19,7 @@ $.register({
     var i = $.$('form[action=""]');
     if (i) {
       // first stage
-      $.openLinkByPost('', {
-        id: m.path[1],
-        next: '',
-        op: 'view',
-        pre: 1,
-      });
+      i.submit();
       return;
     }
     i = $('img.pic');
