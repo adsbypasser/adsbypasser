@@ -10,7 +10,7 @@ $.register({
     },
     {
       host: /^imagebucks\.biz$/,
-      path: /^\/([^\/]+)\/.+\.jpg$/,
+      path: /^\/([^\/]+)\/[^\/]+\.[^\/]{3,4}$/,
     },
   ],
   ready: function (m) {
