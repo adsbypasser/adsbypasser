@@ -9,6 +9,7 @@ var $;
     var unsafeWindow = context.unsafeWindow;
     var GM = context.GM;
     var document = window.document;
+    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
 
     var DomNotFoundError = _.AdsBypasserError.extend({
@@ -769,7 +770,12 @@ var $;
         // release existing events
         o.onbeforeunload = undefined;
         // prevent they bind event again
-        Object.defineProperty(o, 'onbeforeunload', seal);
+        if (!isSafari) {
+          // Safiri must use old-style method
+          o.__defineSetter__('onbeforeunload', seal.set);
+        } else {
+          Object.defineProperty(o, 'onbeforeunload', seal);
+        }
       });
     }
 
