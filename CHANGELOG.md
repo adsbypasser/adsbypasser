@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * pic.re
+    * imglocker.com
+    * imagebucks.biz
+    * imagezilla.net
+
 ## 4.40.3
 
 * fixed
