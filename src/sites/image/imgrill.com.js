@@ -19,7 +19,7 @@
   $.register({
     rule: {
       host: [
-        /^(img(rill|next|savvy|\.spicyzilla)|image(corn|picsa)|www\.imagefolks|hosturimage|img-zone)\.com$/,
+        /^(img(rill|next|savvy|\.spicyzilla)|image(corn|picsa)|www\.(imagefolks|imgblow)|hosturimage|img-zone)\.com$/,
         /^img(candy|master|-view)\.net$/,
         /^imgcloud\.co|pixup\.us$/,
         /^(www\.)?\.imgult\.com$/,

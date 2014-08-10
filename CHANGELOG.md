@@ -5,6 +5,8 @@
     * imglocker.com
     * imagebucks.biz
     * imagezilla.net
+* added
+    * imgblow.com
 
 ## 4.40.3
 
