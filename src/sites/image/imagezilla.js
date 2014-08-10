@@ -6,7 +6,7 @@ $.register({
   start: function (m) {
     'use strict';
 
-    $.openImage('/images/' + m.path[1]);
+    $.openImage('/images2/' + m.path[1]);
   },
 });
 
