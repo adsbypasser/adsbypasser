@@ -23,7 +23,7 @@
         /^img(candy|master|-view)\.net$/,
         /^imgcloud\.co|pixup\.us$/,
         /^(www\.)?\.imgult\.com$/,
-        /^(bulkimg|imgskull)\.info$/,
+        /^bulkimg\.info$/,
         /^(image\.adlock|imgspot)\.org$/,
         /^img\.yt$/,
         /^vava\.in$/,
