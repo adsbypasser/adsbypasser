@@ -5,7 +5,7 @@ $.register({
   ready: function () {
     'use strict';
 
-    var img = $('img[alt="Бесплатный фотохостинг 1Pics.Ru"]');
+    var img = $('img[alt$="1Pics.Ru"]');
     $.openImage(img.src);
   },
 });
