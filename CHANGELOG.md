@@ -1,3 +1,13 @@
+## TBA
+
+* added
+    * photoup.biz
+    * 1dl.biz
+    * anonymbucks.com
+    * mantap.in
+* removed
+    * imgskull.info
+
 ## 4.41.0
 
 * fixed

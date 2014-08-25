@@ -79,6 +79,7 @@
     * miragepics.com
     * nixhelp.de
     * overpic.net
+    * photoup.biz
     * pictureshoster.com
     * postimg.net
 * reklama
@@ -137,7 +138,6 @@
     * imgnext.com
     * imgrill.com
     * imgsavvy.com
-    * imgskull.info
     * imgspot.org
     * imgult.com
     * pixup.us
@@ -320,6 +320,7 @@
 * else
     * 01.nl
     * 1be.biz
+    * 1dl.biz
     * 1pics.ru
     * 1tiny.net
     * 2ty.cc
@@ -332,6 +333,7 @@
     * ah-informatique.com
     * aka.gr
     * alabout.com
+    * anonymbucks.com
     * bayimg.com
     * beeimg.com
     * bild.me
@@ -408,6 +410,7 @@
     * lnk.in
     * lostpic.net
     * madlink.sk
+    * mantap.in
     * moe.god.jp
     * mrjh.org
     * mt0.org
