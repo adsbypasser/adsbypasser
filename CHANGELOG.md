@@ -1,5 +1,8 @@
 ## TBA
 
+* fixed
+    * 1pics.ru
+    * 08lkk.com
 * added
     * photoup.biz
     * 1dl.biz
