@@ -1,4 +1,4 @@
-## TBA
+## 4.42.0
 
 * fixed
     * 1pics.ru
