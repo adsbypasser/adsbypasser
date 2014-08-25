@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * 1pics.ru
+    * 08lkk.com
+
 ## 4.41.0
 
 * fixed
