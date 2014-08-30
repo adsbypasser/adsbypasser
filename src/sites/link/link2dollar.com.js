@@ -8,7 +8,7 @@ $.register({
 
     var m = $.searchScripts(/var rlink = '([^']+)';/);
     if (!m) {
-      throw new _.NoPicAdsError('site changed');
+      throw new _.AdsBypasserError('site changed');
     }
     m = m[1];
 

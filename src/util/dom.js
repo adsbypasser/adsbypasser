@@ -11,7 +11,7 @@ var $;
     var document = window.document;
 
 
-    var DomNotFoundError = _.NoPicAdsError.extend({
+    var DomNotFoundError = _.AdsBypasserError.extend({
       name: 'DomNotFoundError',
       constructor: function (selector) {
         DomNotFoundError.super.constructor.call(this, _.T('`{0}` not found')(selector));
@@ -113,7 +113,7 @@ var $;
         var DOMHTML = parser.parseFromString(rawHTML, "text/html");
         return DOMHTML;
       } catch (e) {
-        throw new _.NoPicAdsError('could not parse HTML to DOM');
+        throw new _.AdsBypasserError('could not parse HTML to DOM');
       }
     };
 
@@ -815,7 +815,7 @@ var $;
       }
     };
 
-    GM.registerMenuCommand('NoPicAds - Configure', function () {
+    GM.registerMenuCommand('AdsBypasser - Configure', function () {
       GM.openInTab('https://legnaleurc.github.io/nopicads/configure.html');
     });
 

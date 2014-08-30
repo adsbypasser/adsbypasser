@@ -1,15 +1,24 @@
-#! /usr/bin/env python2
-
-
 import re
 import sys
-import os
 
 from markdown.blockprocessors import BlockProcessor
 from markdown.preprocessors import Preprocessor
 from markdown.preprocessors import ReferencePreprocessor
 from markdown.extensions import Extension
 from markdown import markdown
+
+from util import to_abs_path
+
+
+_CHANGELOG_PATH = to_abs_path('../../CHANGELOG.md')
+_SITES_PATH = to_abs_path('../../SITES.md')
+_TEMPLATE_PATH = to_abs_path('./summary.template.md')
+
+_MESSAGE = {
+    'both': '',
+    'full': 'If you do not need image-hosting site support, please see [Lite version]({url}).',
+    'lite': 'Lite version does not support image-hosting sites. If you want full-featured version, please see [here]({url}).',
+}
 
 
 class _ChangeLogProcessor(BlockProcessor):
@@ -85,13 +94,19 @@ class _SitesExtension(Extension):
 class _Pack(object):
 
     def __init__(self, cl, ss, tpl):
-        self._cl = cl
-        self._ss = ss
-        self._tpl = tpl
         self._cl_head = None
         self._cl_body = None
         self._ss_group = None
         self._ss_count = None
+        self._tpl = tpl
+
+        cle = _ChangeLogExtension(self)
+        unused = markdown(cl, [cle])
+
+        sse = _SitesExtension(self)
+        unused = markdown(ss, [sse])
+
+        self._cl = '{0}\n\n{1}'.format(self._cl_head, self._cl_body)
 
     def setChangeLog(self, head, body):
         self._cl_head = head
@@ -101,54 +116,44 @@ class _Pack(object):
         self._ss_group = group
         self._ss_count = count
 
-    def getResult(self):
-        cle = _ChangeLogExtension(self)
-        unused = markdown(self._cl, [cle])
-        sse = _SitesExtension(self)
-        unused = markdown(self._ss, [sse])
-
-        cl = '{0}\n\n{1}'.format(self._cl_head, self._cl_body)
-        summary = self._tpl.format(changelog=cl, sites=self._ss_group, count=self._ss_count)
-
+    def getResult(self, edition, url):
+        args = {
+            'changelog': self._cl,
+            'sites': self._ss_group,
+            'count': self._ss_count,
+            'edition': _MESSAGE[edition].format(url),
+        }
+        summary = self._tpl.format(**args)
         return summary
 
 
-def _to_abs(relative_path):
-    abs_path = os.path.abspath(__file__)
-    csd = os.path.dirname(abs_path)
-    path = os.path.join(csd, relative_path)
-    return path
-
-
-def make_summary(changelog_path, sites_path, template_path):
-    fin = open(changelog_path, 'r')
+def make_summary():
+    fin = open(_CHANGELOG_PATH, 'r')
     cl = fin.read()
     fin.close()
 
-    fin = open(sites_path, 'r')
+    fin = open(_SITES_PATH, 'r')
     ss = fin.read()
     fin.close()
 
-    fin = open(template_path, 'r')
+    fin = open(_TEMPLATE_PATH, 'r')
     tpl = fin.read()
     tpl = tpl.decode('utf-8')
     fin.close()
 
     pack = _Pack(cl, ss, tpl)
-    return pack.getResult()
+    return pack
 
 
 def main(args=None):
     if args is None:
         args = sys.argv
 
-    changelog_path = _to_abs('../CHANGELOG.md')
-    sites_path = _to_abs('../SITES.md')
-    template_path = _to_abs('./summary.template.md')
-    summary = make_summary(changelog_path, sites_path, template_path)
-    summary_path = _to_abs('../dest/summary.md')
+    summary = make_summary()
+    result = summary.getResult('both', '')
+    summary_path = to_abs_path('../../dest/summary.md')
     with open(summary_path, 'w') as fout:
-        fout.write(summary.encode('utf-8'))
+        fout.write(result.encode('utf-8'))
 
     return 0
 

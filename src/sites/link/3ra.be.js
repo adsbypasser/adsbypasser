@@ -9,12 +9,12 @@ $.register({
 
     var f = unsafeWindow.fc;
     if (!f) {
-      throw new _.NoPicAdsError('window.fc is undefined');
+      throw new _.AdsBypasserError('window.fc is undefined');
     }
     f = f.toString();
     f = f.match(/href="([^"]*)/);
     if (!f) {
-      throw new _.NoPicAdsError('url pattern outdated');
+      throw new _.AdsBypasserError('url pattern outdated');
     }
     $.openLink(f[1]);
   },

@@ -19,7 +19,7 @@ $.register({
     // pattern 2
     m = $.searchScripts(/\{_args.+\}\}/);
     if (!m) {
-      throw new _.NoPicAdsError('script content changed');
+      throw new _.AdsBypasserError('script content changed');
     }
     m = eval('(' + m[0] + ')');
     var url = window.location.pathname + '/skip_timer';

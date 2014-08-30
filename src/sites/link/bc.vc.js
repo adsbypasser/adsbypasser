@@ -59,7 +59,7 @@
         script: decompress(content.payload, unzip),
       };
     }
-    throw _.NoPicAdsError('script changed');
+    throw _.AdsBypasserError('script changed');
   }
 
   function knockServer (script, dirtyFix) {
@@ -159,7 +159,7 @@
       } else {
         result = result.script.match(/top\.location\.href = '([^']+)'/);
         if (!result) {
-          throw new _.NoPicAdsError('script changed');
+          throw new _.AdsBypasserError('script changed');
         }
         result = result[1];
         $.openLink(result);
@@ -177,7 +177,7 @@
     } else {
       result = result.script.match(/top\.location\.href='([^']+)'/);
       if (!result) {
-        throw new _.NoPicAdsError('script changed');
+        throw new _.AdsBypasserError('script changed');
       }
       result = result[1];
       $.openLink(result);
@@ -271,7 +271,7 @@
 
       // Wrap the form into a useless div
       var d = document.createElement('div');
-      d.setAttribute('id','NoPicAdsFTW');
+      d.setAttribute('id','AdsBypasserFTW');
       d.setAttribute('style', 'display:none;');
 
       // Feed with the right form
@@ -279,7 +279,7 @@
       document.body.appendChild(d);
 
       // Redirect to next page
-      $('#NoPicAdsFTW > form[name=form1]').submit();
+      $('#AdsBypasserFTW > form[name=form1]').submit();
     },
   });
 

@@ -19,7 +19,7 @@ $.register({
     }, function (text) {
       var m = text.match(/'([^']+)'/);
       if (!m) {
-        throw new _.NoPicAdsError('pattern changed');
+        throw new _.AdsBypasserError('pattern changed');
       }
       $.openLink(m[1]);
     });

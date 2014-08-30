@@ -1,9 +1,8 @@
-# NoPicAds
+# AdsBypasser
 
 This user script helps you
 
-* skip ads' count down page
-* remove overlays over pictures
+* skip ads' count-down or continue page
 * prevent windows pop up
 
 Forked from [RedirectionHelper] written by [SuYS].
@@ -12,11 +11,11 @@ Please install from [home page][1].
 
 Mirrors:
 
-* [Greasy Fork][2]
-* [OpenUserJS.org][3]
-* [MonkeyGuts][4]
+* Greasy Fork [full][2], [lite][3]
+* OpenUserJS.org [full][4], [lite][5]
+* MonkeyGuts [full][6], [lite][7]
 
-[![Build Status][5]][6]
+[![Build Status][8]][9]
 
 
 ## Supported Sites
@@ -26,34 +25,34 @@ See [SITES.md](SITES.md)
 
 ## Run-time Configurations
 
-Please see [this page][7] to adjust configurations.
+Please see [this page][10] to adjust configurations.
 
 * Align to center (default: on)
 
     Image will align to the center of screen.
-    If you turn it off, **NoPicAds** will not adjust that for you.
+    If you turn it off, **AdsBypasser** will not adjust that for you.
 
 * Change background (default: on)
 
     Image page will have a dark background, just like the theme used in
     Mozilla Firefox.
-    If you turn it off, **NoPicAds** will not adjust that for you.
+    If you turn it off, **AdsBypasser** will not adjust that for you.
 
 * Scale image (default: on)
 
     Image will scale to fit your screen size.
     You can still toggle the image size by clicking on the image.
-    If you turn this off, **NoPicAds** will not adjust that for you.
+    If you turn this off, **AdsBypasser** will not adjust that for you.
 
 * Redirect image (default: on)
 
-    **NoPicAds** will directly open the image by browser if the
+    **AdsBypasser** will directly open the image by browser if the
     current site is an image hosting site.
-    If you turn this off, **NoPicAds** will only work on sites that shorten links.
+    If you turn this off, **AdsBypasser** will only work on sites that shorten links.
 
 * External server support (default: off)
 
-    **NoPicAds** will send requests to an external server, because browser-side
+    **AdsBypasser** will send requests to an external server, because browser-side
     JavaScript can not solve some problems (e.g.: captcha).
     This is not enabled by default because of privacy concern.
 
@@ -68,21 +67,24 @@ npm install
 grunt
 ```
 
-Combined userscript will be `dest/nopicads.user.js`, which could install on
+Combined userscript will be `dest/adsbypasser.user.js`, which could install on
 browser.
 
 For more information, please see [Wiki].
 
 
-[1]: https://legnaleurc.github.io/nopicads/
-[2]: https://greasyfork.org/scripts/1209-nopicads
-[3]: https://openuserjs.org/scripts/legnaleurc/FoolproofProject/NoPicAds
-[4]: https://monkeyguts.com/code.php?id=124
-[5]: https://travis-ci.org/legnaleurc/nopicads.png?branch=master,develop
-[6]: https://travis-ci.org/legnaleurc/nopicads
-[7]: https://legnaleurc.github.io/nopicads/configure.html
+[1]: https://adsbypasser.github.io/
+[2]: https://greasyfork.org/scripts/4881-adsbypasser
+[3]: https://greasyfork.org/scripts/4882-adsbypasserlite
+[4]: https://openuserjs.org/scripts/legnaleurc/AdsBypasser
+[5]: https://openuserjs.org/scripts/legnaleurc/AdsBypasserLite
+[6]: https://monkeyguts.com/code.php?id=439
+[7]: https://monkeyguts.com/code.php?id=440
+[8]: https://travis-ci.org/adsbypasser/adsbypasser.png?branch=master,develop
+[9]: https://travis-ci.org/adsbypasser/adsbypasser
+[10]: https://adsbypasser.github.io/configure.html
 [Node.js]: http://nodejs.org/
 [npm]: https://npmjs.org/
 [RedirectionHelper]: http://userscripts.org/scripts/show/69797
 [SuYS]: http://userscripts.org/users/SuYS
-[Wiki]: https://github.com/legnaleurc/nopicads/wiki
+[Wiki]: https://github.com/adsbypasser/adsbypasser/wiki

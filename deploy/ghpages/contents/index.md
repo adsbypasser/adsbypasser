@@ -1,4 +1,4 @@
 ---
-title: NoPicAds
+title: AdsBypasser
 template: index.jade
 ---

@@ -16,14 +16,14 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
     }
   }
 
-  function NoPicAdsError (message) {
+  function AdsBypasserError (message) {
     setupStack.call(this);
     this.message = message;
   }
-  NoPicAdsError.prototype = Object.create(Error.prototype);
-  NoPicAdsError.prototype.constructor = NoPicAdsError;
-  NoPicAdsError.prototype.name = 'NoPicAdsError';
-  NoPicAdsError.extend = function (protoProps, staticProps) {
+  AdsBypasserError.prototype = Object.create(Error.prototype);
+  AdsBypasserError.prototype.constructor = AdsBypasserError;
+  AdsBypasserError.prototype.name = 'AdsBypasserError';
+  AdsBypasserError.extend = function (protoProps, staticProps) {
     var parent = this, child = function () {
       setupStack.call(this);
       protoProps.constructor.apply(this, arguments);
@@ -38,8 +38,8 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
 
     return child;
   };
-  NoPicAdsError.super = null;
-  _.NoPicAdsError = NoPicAdsError;
+  AdsBypasserError.super = null;
+  _.AdsBypasserError = AdsBypasserError;
 
 
   function any (c, fn) {
@@ -157,7 +157,7 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
     } else if (s instanceof String) {
       s = s.toString();
     } else {
-      throw new NoPicAdsError('template must be a string');
+      throw new AdsBypasserError('template must be a string');
     }
     var T = {
       '{{': '{',
@@ -185,7 +185,7 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
 
   _.P = function (fn) {
     if (typeof fn !== 'function') {
-      throw new _.NoPicAdsError('must give a function');
+      throw new _.AdsBypasserError('must give a function');
     }
     var slice = Array.prototype.slice;
     var args = slice.call(arguments, 1);
@@ -202,9 +202,9 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
   function log (method, args) {
     args = Array.prototype.slice.call(args);
     if (typeof args[0] === 'string' || args[0] instanceof String) {
-      args[0] = 'NoPicAds: ' + args[0];
+      args[0] = 'AdsBypasser: ' + args[0];
     } else {
-      args.unshift('NoPicAds:');
+      args.unshift('AdsBypasser:');
     }
     var f = console[method];
     if (typeof f === 'function') {

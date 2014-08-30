@@ -1,4 +1,4 @@
 ---
-title: NoPicAds Configuration
+title: AdsBypasser Configuration
 template: configure.jade
 ---

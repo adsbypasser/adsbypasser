@@ -1,10 +1,10 @@
 {
-  "name": "nopicads",
+  "name": "adsbypasser",
   "version": "4.42.0",
   "license": "BSD",
   "repository": {
     "type": "git",
-    "url": "https://github.com/legnaleurc/nopicads.git"
+    "url": "https://github.com/adsbypasser/adsbypasser.git"
   },
   "devDependencies": {
     "grunt": "",
@@ -16,7 +16,8 @@
     "connect": "",
     "serve-static": "",
     "zombie": "",
-    "wintersmith": ""
+    "wintersmith": "",
+    "wintersmith-less": ""
   },
   "scripts": {
     "test": "grunt test"
