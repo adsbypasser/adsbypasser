@@ -1,3 +1,14 @@
+## TBA
+
+* changed
+    * rename project
+    * detect adf.ly if possible
+    * add lite version
+* added
+    * dl-protect.com
+    * mirrorupload.net
+    * firedrive.com
+
 ## 4.42.0
 
 * fixed
