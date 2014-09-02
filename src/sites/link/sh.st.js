@@ -12,7 +12,6 @@
       browserToken = Math.round((new Date()).getTime() / 1000);
     }
     var data = "sessionId=" + sessionId + "&browserToken=" + browserToken;
-    var param = '?url=' + encodeURIComponent(window.location.href);
     var header = {
       Accept: 'application/json, text/javascript',
     };
@@ -21,7 +20,7 @@
     }
 
     var i = setInterval(function () {
-      $.post('/adSession/callback' + param, data, function (text) {
+      $.get('/adSession/callback', data, function (text) {
         var r = JSON.parse(text);
         if (r.status == "ok" && r.destinationUrl) {
           clearInterval(i);
