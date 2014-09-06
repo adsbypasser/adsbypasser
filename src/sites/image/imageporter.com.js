@@ -16,7 +16,7 @@
 
   $.register({
     rule: {
-      host: /^(www\.)?(image(carry|dunk|porter|switch)|pic(leet|turedip|tureturn)|pixroute|imgspice)\.com|(piclambo|yankoimages)\.net$/,
+      host: /^(www\.)?(image(carry|dunk|porter|switch)|pic(leet|turedip|tureturn)|imgspice)\.com|(piclambo|yankoimages)\.net$/,
     },
     ready: run,
   });
