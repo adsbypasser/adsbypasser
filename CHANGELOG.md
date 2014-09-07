@@ -1,4 +1,4 @@
-## TBA
+## 5.0.0
 
 * changed
     * rename project
