@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * sh.st
+    * pixroute.com
+
 ## 4.42.0
 
 * fixed
