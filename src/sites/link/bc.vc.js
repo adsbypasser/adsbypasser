@@ -211,6 +211,7 @@
   $.register({
     rule: {
       host: [
+        /^1tk\.us$/,
         /^gx\.si$/,
         /^adwat\.ch$/,
         /^(fly2url|urlwiz|xafox)\.com$/,
