@@ -1,7 +1,7 @@
 # IMPORTANT
 
 This project has been renamed to [AdsBypasser](https://github.com/adsbypasser/adsbypasser).
-No more new features will add in this script.
+No more new features will be added in this script.
 There are only bug fixes, **until the end of 2014**.
 
 [New home page](https://adsbypasser.github.io/)
@@ -15,11 +15,11 @@ New mirrors:
 
 # NoPicAds
 
-This user script helps you
+This user script helps you to
 
-* skip ads' count down page
+* skip ads' count down pages
 * remove overlays over pictures
-* prevent windows pop up
+* prevent windows popup
 
 Forked from [RedirectionHelper] written by [SuYS].
 
