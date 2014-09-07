@@ -4,8 +4,8 @@
 // @copyright      2012+, legnaleurc (https://github.com/legnaleurc/nopicads)
 // @version        <%= pkg.version %>
 // @license        BSD
-// @updateURL      https://legnaleurc.github.io/nopicads/releases/nopicads.meta.js
-// @downloadURL    https://legnaleurc.github.io/nopicads/releases/nopicads.user.js
+// @updateURL      https://adsbypasser.github.io/releases/adsbypasser.meta.js
+// @downloadURL    https://adsbypasser.github.io/releases/adsbypasser.user.js
 // @grant          unsafeWindow
 // @grant          GM_xmlhttpRequest
 // @grant          GM_addStyle
