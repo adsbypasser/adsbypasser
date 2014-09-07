@@ -4,6 +4,9 @@
     * rename project
     * detect adf.ly if possible
     * add lite version
+* fixed
+    * sh.st
+    * pixroute.com
 * added
     * dl-protect.com
     * mirrorupload.net
@@ -13,6 +16,12 @@
     * mirrorcreator.com
     * sylnk.net
     * 1tk.us
+
+## 4.42.1
+
+* fixed
+    * sh.st
+    * pixroute.com
 
 ## 4.42.0
 

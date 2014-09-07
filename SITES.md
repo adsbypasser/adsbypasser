@@ -114,7 +114,6 @@
     * picleet.com
     * picturedip.com
     * pictureturn.com
-    * pixroute.com
     * yankoimages.net
 * CF Image Host
     * d69.in
@@ -435,6 +434,7 @@
     * picshare.geenza.com
     * pixhost.org
     * pixhub.eu
+    * pixroute.com
     * postimg.org
     * preview.rlu.ru
     * prntscr.com
