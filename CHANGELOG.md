@@ -8,6 +8,9 @@
     * dl-protect.com
     * mirrorupload.net
     * firedrive.com
+    * imgsee.me
+    * ethi.in
+    * mirrorcreator.com
 
 ## 4.42.0
 
