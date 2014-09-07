@@ -349,9 +349,12 @@
     * dapat.in
     * dd.ma
     * directupload.net
+    * dl-protect.com
     * dumppix.com
     * durl.me
+    * ethi.in
     * filoops.info
+    * firedrive.com
     * fit.sh
     * fotolink.su
     * fotosik.pl
@@ -394,6 +397,7 @@
     * imgcarry.com
     * imgdollar.com
     * imgpaying.com
+    * imgsee.me
     * imgseeds.com
     * imgtheif.com
     * imgvault.pw
@@ -411,6 +415,8 @@
     * lostpic.net
     * madlink.sk
     * mantap.in
+    * mirrorcreator.com
+    * mirrorupload.net
     * moe.god.jp
     * mrjh.org
     * mt0.org
