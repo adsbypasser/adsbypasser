@@ -11,6 +11,8 @@
     * imgsee.me
     * ethi.in
     * mirrorcreator.com
+    * sylnk.net
+    * 1tk.us
 
 ## 4.42.0
 

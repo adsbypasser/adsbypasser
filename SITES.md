@@ -167,6 +167,7 @@
     * imageup.ru
     * itmages.ru
 * bc.vc
+    * 1tk.us
     * ad5.eu
     * adb.ug
     * adbla.us
@@ -452,6 +453,7 @@
     * similarsites.com
     * stash-coins.com
     * subirimagenes.com
+    * sylnk.net
     * thinfi.com
     * tinyarrows.com
     * tinypic.com
