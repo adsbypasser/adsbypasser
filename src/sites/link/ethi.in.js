@@ -1,6 +1,7 @@
 $.register({
   rule: {
     host: /^ethi\.in$/,
+    path: /^\/i\/\d+$/,
   },
   ready: function () {
     'use strict';
