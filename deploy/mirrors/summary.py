@@ -123,7 +123,7 @@ class _Pack(object):
             'changelog': self._cl,
             'sites': self._ss_group,
             'count': self._ss_count,
-            'edition': _MESSAGE[edition].format(url),
+            'edition': _MESSAGE[edition].format(url=url),
         }
         summary = self._tpl.format(**args)
         return summary

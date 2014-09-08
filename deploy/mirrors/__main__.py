@@ -3,7 +3,7 @@ from __future__ import absolute_import
 
 import sys
 
-from util import to_abs_path, read_config
+from .util import to_abs_path, read_config
 
 
 def read_file(path):
