@@ -1,9 +1,9 @@
 # AdsBypasser
 
-This user script helps you
+This user script helps you to
 
-* skip ads' count-down or continue page
-* prevent windows pop up
+* skip ads' count-down or continue pages
+* prevent windows popup
 
 Forked from [RedirectionHelper] written by [SuYS].
 
