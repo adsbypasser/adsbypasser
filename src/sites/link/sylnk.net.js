@@ -1,12 +1,12 @@
 $.register({
   rule: {
     host: /^(www\.)?sylnk\.net$/,
-    query: /(?:^|\?|&)link=(\w+)(?:&|$)/
+    query: /link=([^&]+)/
   },
   ready: function (m) {
     'use strict';
     var rawLink = atob(m.query[1]);
-    
+
     $.openLink(rawLink);
   },
 });
