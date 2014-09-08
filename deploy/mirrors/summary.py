@@ -15,9 +15,11 @@ _SITES_PATH = to_abs_path('../../SITES.md')
 _TEMPLATE_PATH = to_abs_path('./summary.template.md')
 
 _MESSAGE = {
-    'both': '',
-    'full': 'If you do not need image-hosting site support, please see [Lite version]({url}).',
-    'lite': 'Lite version does not support image-hosting sites. If you want full-featured version, please see [here]({url}).',
+    'both': '''**Lite edition** removes image-hosting site support from **Full edition**.
+If you prefer to use other userscripts to deal with image-hosting sites, you can use the Lite edition.
+''',
+    'full': 'If you do not need image-hosting site support, please see [Lite edition]({url}).',
+    'lite': 'Lite edition does not support image-hosting sites. If you want full-featured edition, please see [here]({url}).',
 }
 
 
