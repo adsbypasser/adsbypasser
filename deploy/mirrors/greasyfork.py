@@ -13,7 +13,7 @@ def exec_(config, summary, script):
 
     # login
     b.open(LOGIN_URL)
-    b.select_form(nr=2)
+    b.select_form(nr=3)
     b['user[email]'] = USERNAME
     b['user[password]'] = PASSWORD
     b.submit()
