@@ -8,9 +8,9 @@ There are only bug fixes, **until the end of 2014**.
 
 New mirrors:
 
-* Greasy Fork {[full](https://greasyfork.org/scripts/4881-adsbypasser), [lite](https://greasyfork.org/scripts/4882-adsbypasserlite)}
-* OpenUserJS.org {[full](https://openuserjs.org/scripts/legnaleurc/AdsBypasser), [lite](https://openuserjs.org/scripts/legnaleurc/AdsBypasserLite)}
-* MonkeyGuts {[full](https://monkeyguts.com/code.php?id=439), [lite](https://monkeyguts.com/code.php?id=440)}
+* Greasy Fork {{[full](https://greasyfork.org/scripts/4881-adsbypasser), [lite](https://greasyfork.org/scripts/4882-adsbypasserlite)}}
+* OpenUserJS.org {{[full](https://openuserjs.org/scripts/legnaleurc/AdsBypasser), [lite](https://openuserjs.org/scripts/legnaleurc/AdsBypasserLite)}}
+* MonkeyGuts {{[full](https://monkeyguts.com/code.php?id=439), [lite](https://monkeyguts.com/code.php?id=440)}}
 
 # Feature
 
