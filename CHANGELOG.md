@@ -1,3 +1,8 @@
+## 4.42.2
+
+* fixed
+    * some typo
+
 ## 4.42.1
 
 * fixed
