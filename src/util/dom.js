@@ -517,8 +517,8 @@ var $;
 
     $.register({
       rule: {
-        host: /^legnaleurc\.github\.io$/,
-        path: /^\/nopicads\/configure\.html$/,
+        host: /^adsbypasser\.github\.io$/,
+        path: /^\/configure\.html$/,
       },
       ready: function () {
 
