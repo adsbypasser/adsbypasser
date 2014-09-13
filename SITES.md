@@ -326,6 +326,7 @@
     * 2ty.cc
     * 3ra.be
     * 4fun.tw
+    * 4shared.com
     * adfoc.us
     * adjet.biz
     * adlock.org
@@ -410,6 +411,7 @@
     * link-protector.com
     * link2dollar.com
     * link2you.ru
+    * linkshrink.net
     * lix.in
     * lnk.in
     * lostpic.net
