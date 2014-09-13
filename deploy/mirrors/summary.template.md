@@ -28,9 +28,11 @@ send pull requests, if you have an account.
 Forked from [RedirectionHelper] writen by [SuYS], and here are our nice
 contributors. (sort by GitHub account)
 
+* [a123b](https://github.com/a123b)
 * [U BLESS](https://github.com/annlabv3)
 * [bitst0rm](https://github.com/bitst0rm)
-* [noname120](https://github.com/devnoname120)
+* [noname120](https://github.com/devnoname120), the author of [AntiAdware](https://github.com/handyuserscripts/antiadware#readme)
+* [MNB](https://github.com/MNBuyskih)
 * [ofyxp](https://github.com/ofyxp)
 * [RickyChen](https://github.com/RickyChien)
 
