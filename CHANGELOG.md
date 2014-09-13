@@ -1,3 +1,8 @@
+## 4.42.3
+
+* fixed
+    * update some metadata
+
 ## 4.42.2
 
 * fixed
