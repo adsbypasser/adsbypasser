@@ -1,30 +1,3 @@
-* adfly
-    * ad7.biz
-    * adf.acb.im
-    * adf.animechiby.com
-    * adf.ly
-    * adf.sazlina.com
-    * adf.tuhoctoan.net
-    * adfly.itsrinaldo.net
-    * adv.coder143.com
-    * alien.apkmania.co
-    * ay.gy
-    * chathu.apkmania.co
-    * david.nhachot.info
-    * ddl.animesave.com
-    * dl.animesave.tk
-    * dl.apkpro.net
-    * dl.nhachot.info
-    * file.tamteo.com
-    * gamecopyworld.com
-    * go.nicoblog-games.com
-    * go.phpnulledscripts.com
-    * goto.adflytutor.com
-    * j.gs
-    * ksn.mx
-    * n.shareme.in
-    * q.gs
-    * u.shareme.in
 * linkbucks
     * allanalpass.com
     * amy.gs
@@ -327,6 +300,7 @@
     * 3ra.be
     * 4fun.tw
     * 4shared.com
+    * adf.ly
     * adfoc.us
     * adjet.biz
     * adlock.org
