@@ -1,3 +1,12 @@
+## TBA
+
+* fixed
+    * configuration page error
+    * sylnk.net
+* added
+    * 4shared.com
+    * linkshrink.net
+
 ## 5.0.0
 
 * changed
