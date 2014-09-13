@@ -1,4 +1,4 @@
-## TBA
+## 5.1.0
 
 * fixed
     * configuration page error
