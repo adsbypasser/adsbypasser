@@ -12,16 +12,13 @@
     rule: {
       host: /^(www\.)?binbox\.io$/,
       path: /\/([a-zA-Z0-9]+)/,
-      hash: /#?([a-zA-Z0-9]*)/,
+      hash: /#([a-zA-Z0-9]+)/,
     },
     ready: function (m) {
       // If the hash is not here, it should ask the user for the password.
       // In fact, there is a security issue: if the user is not connected,
       // then it'll ask to fill a captcha, and the user will be able to access
       // the paste by only typing the captcha.
-      if (!m.hash || !m.hash[1]) {
-        return;
-      }
 
       var sjcl = unsafeWindow.sjcl;
 
