@@ -607,7 +607,7 @@ var $;
 
     function dispatchByArray (byLocation, rules, url_1, url_3, url_6) {
       var tmp = _.C(rules).find(function (rule) {
-        var m = dispatch(rule, url_1, url_3, url_6);
+        var m = dispatch(byLocation, rule, url_1, url_3, url_6);
         if (!m) {
           return _.nop;
         }
