@@ -7,15 +7,21 @@
   }
 
   $.register({
-    rule: {
-      host: [
-        /^(image(decode|ontime)|(zonezeed|zelje|croft|myhot|dam)image|pic(\.apollon-fervor|stwist)|www\.imglemon)\.com$/,
-        /^(img(serve|coin|fap)|gallerycloud)\.net$/,
-        /^hotimages\.eu$/,
-        /^(imgstudio|dragimage)\.org$/,
-      ],
-      path: /^\/img-.*\.html$/,
-    },
+    rule: [
+      {
+        host: [
+          /^(image(decode|ontime)|(zonezeed|zelje|croft|myhot|dam)image|pic(\.apollon-fervor|stwist)|www\.imglemon)\.com$/,
+          /^(img(serve|coin|fap)|gallerycloud)\.net$/,
+          /^hotimages\.eu$/,
+          /^(imgstudio|dragimage)\.org$/,
+        ],
+        path: /^\/img-.*\.html$/,
+      },
+      {
+        host: /^imgrun\.net$/,
+        path: /^\/t\/img-.*\.html$/,
+      },
+    ],
     ready: ready,
   });
 
