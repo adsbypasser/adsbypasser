@@ -4,3 +4,4 @@ dest
 .deploy.json
 *.pyc
 .idea/
+*.log
