@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * dl-protect.com
+* added
+    * binbox.io
+    * imgrun.net
+
 ## 5.1.0
 
 * fixed

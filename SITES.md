@@ -1,3 +1,4 @@
+* adf.ly
 * linkbucks
     * allanalpass.com
     * amy.gs
@@ -300,7 +301,6 @@
     * 3ra.be
     * 4fun.tw
     * 4shared.com
-    * adf.ly
     * adfoc.us
     * adjet.biz
     * adlock.org
@@ -315,6 +315,7 @@
     * bilder-space.de
     * bilder-upload.eu
     * bildr.no
+    * binbox.io
     * blackcatpix.com
     * casimages.com
     * cf.ly
@@ -372,6 +373,7 @@
     * imgcarry.com
     * imgdollar.com
     * imgpaying.com
+    * imgrun.net
     * imgsee.me
     * imgseeds.com
     * imgtheif.com
