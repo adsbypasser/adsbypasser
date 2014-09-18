@@ -2,10 +2,9 @@ $.register({
   rule: [
     {
       host: [
-        /^imgpaying\.com$/,
+        /^img(paying|mega)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imagebucks\.biz$/,
-        /^imgmega\.com$/,
       ],
       path: /^\/([^\/]+)\/[^\/]+\.[^\/]{3,4}$/,
     },
