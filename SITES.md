@@ -281,9 +281,11 @@
 * upan.so
     * upan.so
     * gxp.so
-* imgmega.com
+* imgpaying.com
     * imagebucks.biz
     * imgmega.com
+    * imgpaying.com
+    * imgsee.me
     * pic.re
 * imgsure.com
     * imgsure.com
@@ -372,9 +374,7 @@
     * imgbox.com
     * imgcarry.com
     * imgdollar.com
-    * imgpaying.com
     * imgrun.net
-    * imgsee.me
     * imgseeds.com
     * imgtheif.com
     * imgvault.pw
