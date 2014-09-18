@@ -8,10 +8,6 @@ $.register({
       ],
       path: /^\/([^\/]+)\/[^\/]+\.[^\/]{3,4}$/,
     },
-    {
-      host: /^pic\.re$/,
-      path: /^\/([^\/]+)$/,
-    },
   ],
   ready: function () {
     'use strict';
