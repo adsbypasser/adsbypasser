@@ -282,11 +282,10 @@
     * upan.so
     * gxp.so
 * imgpaying.com
-    * imagebucks.biz
+    * imgclick.net
     * imgmega.com
     * imgpaying.com
     * imgsee.me
-    * pic.re
 * imgsure.com
     * imgsure.com
     * picexposed.com

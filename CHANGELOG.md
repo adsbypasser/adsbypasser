@@ -1,3 +1,12 @@
+## TBA
+
+* added
+    * imgclick.net
+* removed
+    * imgdollar.com
+    * pic.re
+    * imagebucks.com
+
 ## 5.2.0
 
 * fixed
