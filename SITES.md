@@ -62,6 +62,7 @@
     * croftimage.com
     * damimage.com
     * dragimage.org
+    * ericsony.com
     * gallerycloud.net
     * hotimages.eu
     * imagedecode.com

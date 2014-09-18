@@ -2,6 +2,7 @@
 
 * added
     * imgclick.net
+    * ericsony.com
 * removed
     * imgdollar.com
     * pic.re
