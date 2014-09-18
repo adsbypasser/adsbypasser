@@ -4,6 +4,7 @@ $.register({
       host: [
         /^img(paying|mega)\.com$/,
         /^(www\.)?imgsee\.me$/,
+        /^imgclick\.net$/,
       ],
       path: /^\/([^\/]+)\/[^\/]+\.[^\/]{3,4}$/,
     },
