@@ -8,6 +8,8 @@
     if (node) {
       // first pass
       node.click();
+      // somehow imgrun.net need to click twice
+      node.click();
       return;
     }
 
@@ -20,7 +22,7 @@
     rule: {
       host: [
         /^(img(rill|next|savvy|\.spicyzilla)|image(corn|picsa)|www\.(imagefolks|imgblow)|hosturimage|img-zone)\.com$/,
-        /^img(candy|master|-view)\.net$/,
+        /^img(candy|master|-view|run)\.net$/,
         /^imgcloud\.co|pixup\.us$/,
         /^(www\.)?\.imgult\.com$/,
         /^bulkimg\.info$/,
