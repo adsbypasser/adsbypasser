@@ -43,7 +43,7 @@
         elm.innerHTML = linkify(raw_paste);
 
         // Replace captcha with paste
-        var frame = $('#paste-frame');
+        var frame = $('#paste-frame, #captcha-page');
         frame.parentNode.replaceChild(elm, frame);
       });
     },
