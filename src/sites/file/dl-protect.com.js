@@ -4,7 +4,7 @@
   $.register({
     rule: {
       host: /^(www\.)?dl-protect\.com$/,
-      path: /\/[A-Z1-9]+/,
+      path: /\/[A-Z0-9]+/,
     },
     ready: function () {
       // Button access to links
