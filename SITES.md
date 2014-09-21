@@ -46,6 +46,7 @@
     * imagecurl.org
     * imagepong.info
     * imageview.me
+    * imgbanana.com
     * imgdream.net
     * imgking.us
     * imgnip.com
@@ -72,6 +73,7 @@
     * imgcoin.net
     * imgfap.net
     * imglemon.com
+    * imgrun.net (t)
     * imgserve.net
     * imgstudio.org
     * myhotimage.com
@@ -111,8 +113,10 @@
     * imgmaster.net
     * imgnext.com
     * imgrill.com
+    * imgrun.net
     * imgsavvy.com
     * imgspot.org
+    * imgtwyti.com
     * imgult.com
     * pixup.us
     * vava.in
@@ -374,7 +378,6 @@
     * imgbox.com
     * imgcarry.com
     * imgdollar.com
-    * imgrun.net
     * imgseeds.com
     * imgtheif.com
     * imgvault.pw
