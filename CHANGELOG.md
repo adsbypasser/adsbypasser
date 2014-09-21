@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * dl-protect.com
+    * binbox.io
+
 ## 5.2.0
 
 * fixed
