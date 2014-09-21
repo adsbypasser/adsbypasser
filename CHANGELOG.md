@@ -3,6 +3,15 @@
 * fixed
     * dl-protect.com
     * binbox.io
+* added
+    * imgclick.net
+    * ericsony.com
+    * imgbanana.com
+    * imgtwyti.com
+* removed
+    * imgdollar.com
+    * pic.re
+    * imagebucks.com
 
 ## 5.2.0
 

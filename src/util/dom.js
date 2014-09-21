@@ -34,7 +34,6 @@ var $;
       try {
         return $(selector, context);
       } catch (e) {
-        _.info(e.message);
         return null;
       }
     };

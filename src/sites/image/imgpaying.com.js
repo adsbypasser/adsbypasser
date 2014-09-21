@@ -4,13 +4,9 @@ $.register({
       host: [
         /^img(paying|mega)\.com$/,
         /^(www\.)?imgsee\.me$/,
-        /^imagebucks\.biz$/,
+        /^imgclick\.net$/,
       ],
       path: /^\/([^\/]+)\/[^\/]+\.[^\/]{3,4}$/,
-    },
-    {
-      host: /^pic\.re$/,
-      path: /^\/([^\/]+)$/,
     },
   ],
   ready: function () {
