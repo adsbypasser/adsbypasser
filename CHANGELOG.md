@@ -1,4 +1,4 @@
-## TBA
+## 5.3.0
 
 * fixed
     * dl-protect.com
