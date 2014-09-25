@@ -41,18 +41,16 @@ and try again.
 
 Please describe your environment as detial as possible, such as:
 
-1. What operating system are you using?
-
-    e.g.: Mac OS 10.7
-
-2. What browser are you using?
+1. What browser are you using?
 
     e.g.: Mozilla Firefox 23.0.1
 
-3. What userscript extension are you using? (e.g.: GreaseMonkey,
+2. What userscript extension are you using? (e.g.: GreaseMonkey,
 TamperMonkey ... etc.)
 
     e.g.: GreaseMonkey 1.11
+
+3. What extensions are you using? (notably NoScript or Ghostery)
 
 4. What site are you browsing?
 
@@ -67,7 +65,7 @@ TamperMonkey ... etc.)
 
     e.g.: It does not redirect.
 
-7. What did you originally expected?
+7. What are you expected?
 
     e.g.: It should redirect properly.
 
