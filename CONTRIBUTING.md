@@ -50,7 +50,8 @@ TamperMonkey ... etc.)
 
     e.g.: GreaseMonkey 1.11
 
-3. What extensions or userscripts are you using? (notably NoScript or Ghostery)
+3. What extensions or userscripts are you using?
+(notably NoScript or Ghostery or similar userscripts)
 
 4. What site are you browsing?
 
