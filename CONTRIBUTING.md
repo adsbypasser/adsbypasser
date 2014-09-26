@@ -66,7 +66,7 @@ TamperMonkey ... etc.)
 
     e.g.: It does not redirect.
 
-7. What are you expected?
+7. What did you expect?
 
     e.g.: It should redirect properly.
 
