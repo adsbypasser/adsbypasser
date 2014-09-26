@@ -45,28 +45,28 @@ Please describe your environment as detial as possible, such as:
 
     e.g.: Mozilla Firefox 23.0.1
 
-2. What userscript extension are you using? (e.g.: GreaseMonkey,
-TamperMonkey ... etc.)
+2. What is your userscript manager?
 
     e.g.: GreaseMonkey 1.11
 
-3. What extensions or userscripts are you using?
-(notably NoScript or Ghostery or similar userscripts)
+3. Are you using other similar userscripts to bypass ads as well?
 
-4. What site are you browsing?
+4. What other extensions are you using? (notably NoScript or Ghostery)
+
+5. What site are you browsing?
 
     e.g.: https://www.google.com/
 
-5. How to reproduce this bug?
+6. How to reproduce this bug?
 
     e.g.: Visit the above site with other userscript installed
     (http://us.o/script/xxxxxx).
 
-6. What went wrong?
+7. What went wrong?
 
     e.g.: It does not redirect.
 
-7. What did you expect?
+8. What did you expect?
 
     e.g.: It should redirect properly.
 
