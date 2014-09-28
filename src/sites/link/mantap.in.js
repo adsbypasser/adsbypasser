@@ -5,7 +5,7 @@ $.register({
   ready: function () {
     'use strict';
 
-    var a = $('a.redirect');
+    var a = $('a.redirect, a[target=_blank][rel=nofollow]');
     $.openLink(a.href);
   },
 });
