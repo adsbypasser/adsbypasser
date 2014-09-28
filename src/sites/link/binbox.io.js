@@ -8,6 +8,7 @@
     });
   }
 
+  // Binbox pastes
   $.register({
     rule: {
       host: /^(www\.)?([a-zA-Z0-9]+\.)?binbox\.io$/,
@@ -48,6 +49,19 @@
       });
     },
   });
+
+  // Binbox links
+  $.register({
+    rule: {
+      host: /^(www\.)?([a-zA-Z0-9]+\.)?binbox\.io$/,
+      path: /\/o\/([a-zA-Z0-9]+)/,
+    },
+    ready: function (m) {
+      var direct_link = window.atob(m.path[1]);
+      $.openLink(direct_link);
+    },
+  });
+
 })();
 
 // ex: ts=2 sts=2 sw=2 et
