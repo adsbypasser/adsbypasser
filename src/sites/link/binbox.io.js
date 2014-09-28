@@ -10,7 +10,7 @@
 
   $.register({
     rule: {
-      host: /^(www\.)?binbox\.io$/,
+      host: /^(www\.)?([a-zA-Z0-9]+\.)?binbox\.io$/,
       path: /\/([a-zA-Z0-9]+)/,
       hash: /#([a-zA-Z0-9]+)/,
     },
