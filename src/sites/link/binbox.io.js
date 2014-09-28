@@ -1,8 +1,15 @@
 (function () {
   'use strict';
-
+  
+  var sUrl = '(\\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])';
+  
+  function isLink (text) {
+    var rUrl = new RegExp(_.T('^{0}$')(sUrl), 'i');
+    return rUrl.test(text);
+  }
+  
   function linkify (text) {
-    var rUrl = /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
+    var rUrl = new RegExp(sUrl, 'ig');
     return text.replace(rUrl, function(match) {
       return _.T("<a href='{0}'>{0}</a>")(match);
     });
@@ -37,7 +44,11 @@
 
         // Decrypt paste
         var raw_paste = sjcl.decrypt(paste_salt, pasteInfo.paste.text);
-
+        if (isLink(raw_paste)) {
+          $.openLink(raw_paste);
+          return;
+        }
+        
         // Create paste
         var elm = document.createElement('pre');
         elm.id = 'paste-text';
