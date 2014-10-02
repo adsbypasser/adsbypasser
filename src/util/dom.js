@@ -815,7 +815,7 @@ var $;
     };
 
     GM.registerMenuCommand('AdsBypasser - Configure', function () {
-      GM.openInTab('https://legnaleurc.github.io/nopicads/configure.html');
+      GM.openInTab('https://adsbypasser.github.io/configure.html');
     });
 
     return $;
