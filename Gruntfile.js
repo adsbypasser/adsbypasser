@@ -24,6 +24,10 @@ module.exports = function (grunt) {
         src: ['src/sites/file/*.js'],
         dest: 'dest/sites/file',
       },
+      paste_sites: {
+        src: ['src/sites/paste/*.js'],
+        dest: 'dest/sites/paste',
+      },
     },
     concat: {
       meta: {
@@ -71,6 +75,7 @@ module.exports = function (grunt) {
           'dest/util/dom.js',
           'dest/sites/link/*.js',
           'dest/sites/file/*.js',
+          'dest/sites/paste/*.js',
           'src/util/main.js',
         ],
         dest: 'dest/adsbypasserlite.user.js',
