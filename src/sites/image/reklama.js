@@ -27,9 +27,7 @@
 
   $.register({
     rule: {
-      host: [
-        /^www.img(adult|taxi).com$/,
-      ],
+      host: /^www.img(adult|taxi).com$/,
       path: /^\/img-.*\.html$/,
     },
     start: function () {
