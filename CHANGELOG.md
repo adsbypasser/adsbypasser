@@ -1,3 +1,10 @@
+## TBA
+
+* fixed
+    * configuraion menu
+    * mantap.in
+    * binbox.io
+
 ## 5.3.0
 
 * fixed
