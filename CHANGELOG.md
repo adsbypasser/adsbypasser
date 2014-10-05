@@ -1,4 +1,4 @@
-## TBA
+## 5.4.0
 
 * fixed
     * configuraion menu
