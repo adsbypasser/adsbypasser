@@ -26,7 +26,12 @@
   });
 
   $.register({
-    rule: 'http://www.imgadult.com/img-*.html',
+    rule: {
+      host: [
+        /^www.img(adult|taxi).com$/,
+      ],
+      path: /^\/img-.*\.html$/,
+    },
     start: function () {
       var c = $.getCookie('user');
       if (c) {
