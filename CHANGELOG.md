@@ -1,3 +1,11 @@
+## TBA
+
+* added
+    * imagelook.org
+    * putlocker.com
+    * imgtaxi.com
+    * pornimagex.com
+
 ## 5.3.0
 
 * fixed
