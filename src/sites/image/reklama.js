@@ -13,7 +13,7 @@
           /^(image(decode|ontime)|(zonezeed|zelje|croft|myhot|dam)image|pic(\.apollon-fervor|stwist)|www\.imglemon|ericsony)\.com$/,
           /^(img(serve|coin|fap)|gallerycloud)\.net$/,
           /^hotimages\.eu$/,
-          /^(imgstudio|dragimage)\.org$/,
+          /^(imgstudio|dragimage|imagelook)\.org$/,
         ],
         path: /^\/img-.*\.html$/,
       },
@@ -26,7 +26,10 @@
   });
 
   $.register({
-    rule: 'http://www.imgadult.com/img-*.html',
+    rule: {
+      host: /^www.img(adult|taxi).com$/,
+      path: /^\/img-.*\.html$/,
+    },
     start: function () {
       var c = $.getCookie('user');
       if (c) {

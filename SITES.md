@@ -67,6 +67,7 @@
     * gallerycloud.net
     * hotimages.eu
     * imagedecode.com
+    * imagelook.org
     * imageontime.com
     * img-zone.com
     * imgadult.com
@@ -76,6 +77,7 @@
     * imgrun.net (t)
     * imgserve.net
     * imgstudio.org
+    * imgtaxi.com
     * myhotimage.com
     * pic.apollon-fervor.com
     * picstwist.com
@@ -297,6 +299,9 @@
 * coin-ads
     * coin-ads.com
     * shortin.tk
+* firedrive.com
+    * firedrive.com
+    * putlocker.com
 * else
     * 01.nl
     * 1be.biz
@@ -336,7 +341,6 @@
     * durl.me
     * ethi.in
     * filoops.info
-    * firedrive.com
     * fit.sh
     * fotolink.su
     * fotosik.pl
@@ -416,6 +420,7 @@
     * pixhost.org
     * pixhub.eu
     * pixroute.com
+    * pornimagex.com
     * postimg.org
     * preview.rlu.ru
     * prntscr.com

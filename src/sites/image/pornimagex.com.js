@@ -1,12 +1,13 @@
 $.register({
   rule: {
-    host: /^(www\.)?(firedrive|putlocker)\.com$/,
-    path: /^\/file\/[0-9A-F]+$/,
+    host: /^www\.pornimagex\.com$/,
+    path: /^\/image\/.*$/,
   },
   ready: function () {
     'use strict';
-    var c = $('#confirm_form');
-    c.submit();
+
+    var img = $('#fixed img.border2px');
+    $.openImage(img.src);
   },
 });
 

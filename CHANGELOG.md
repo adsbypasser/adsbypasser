@@ -4,6 +4,11 @@
     * configuraion menu
     * mantap.in
     * binbox.io
+* added
+    * imagelook.org
+    * putlocker.com
+    * imgtaxi.com
+    * pornimagex.com
 
 ## 5.3.0
 
