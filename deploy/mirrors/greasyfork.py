@@ -28,7 +28,7 @@ def exec_(config, edition, another_edition, script):
     # edit source
     b.open(EDIT_URL)
     b.select_form(nr=2)
-    b['script_version[additional_info]'] = summary.encode('utf-8')
+    b['script_version[additional_info][0][attribute_value]'] = summary.encode('utf-8')
     b['script_version[code]'] = script.encode('utf-8')
     b.submit(name='commit')
 
