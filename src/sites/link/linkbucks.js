@@ -110,6 +110,19 @@
       sendRequest(token);
     },
   });
+
+  // for entry script
+  // this is stupid, but inpecting script on every page is too heavy
+  $.register({
+    rule: {
+      query: /^\?_lbGate=\d+$/,
+    },
+    start: function () {
+      $.setCookie('_lbGatePassed', 'true');
+      $.openLink(window.location.pathname);
+    },
+  });
+
 })();
 
 // ex: ts=2 sts=2 sw=2 et
