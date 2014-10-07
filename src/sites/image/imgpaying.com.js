@@ -2,7 +2,7 @@ $.register({
   rule: [
     {
       host: [
-        /^img(paying|mega)\.com$/,
+        /^((img(paying|mega))|imzdrop)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
       ],
