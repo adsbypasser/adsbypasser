@@ -1,3 +1,8 @@
+## TBA
+
+* added
+    * safelinkconverter2.com
+
 ## 5.4.0
 
 * fixed
