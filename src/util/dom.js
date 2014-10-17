@@ -182,7 +182,14 @@ var $;
       var from = window.location.toString();
       _.info(_.T('{0} -> {1}')(from, to));
 
-      window.location.href = to;
+      // Create a link on the page
+      var a = document.createElement('a');
+      a.href = to;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+
+      // Simulate a click on this link (so that the referer is sent)
+      a.click();
     };
 
     $.openImage = function (imgSrc) {
