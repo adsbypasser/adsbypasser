@@ -7,7 +7,7 @@ $.register({
   ready: function (m) {
     'use strict';
     
-    $.openLink(window.atob(m.query[1]))
+    $.openLink(window.atob(m.query[1]));
   },
 });
 
