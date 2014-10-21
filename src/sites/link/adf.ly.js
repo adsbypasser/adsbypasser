@@ -78,7 +78,7 @@
       });
       var url = script.payload.match(/&url=([^&]+)/);
       url = url[1];
-      $.openLink(url);
+      $.openLinkWithReferer(url);
     },
   });
 

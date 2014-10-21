@@ -68,7 +68,7 @@
         }
         if (data.Success && !data.AdBlockSpotted && data.Url) {
           clearInterval(i);
-          $.openLink(data.Url);
+          $.openLinkWithReferer(data.Url);
           return;
         }
       });
@@ -86,7 +86,7 @@
       $.removeNodes('iframe');
 
       if (m.path[1] !== null) {
-        $.openLink(m.path[1] + window.location.search);
+        $.openLinkWithReferer(m.path[1] + window.location.search);
       }
     }
   });
