@@ -1,7 +1,7 @@
 $.register({
   rule: {
-    host: /^(www\.)?shorturl\.rapeit\.net$/,
-    path: /^\/go\/[a-f0-9]+$/,
+    host: /^(www\.)?\w+\.rapeit\.net$/,
+    path: /^\/(go|prepair|request|collect|analyze)\/[a-f0-9]+$/,
   },
   ready: function (m) {
     'use strict';
