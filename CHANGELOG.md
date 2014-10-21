@@ -1,3 +1,9 @@
+## TBA
+
+* added
+    * embedupload.com
+    * safelinkconverter2.com
+
 ## 5.4.0
 
 * fixed
