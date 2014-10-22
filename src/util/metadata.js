@@ -4,6 +4,8 @@
 // @copyright      2012+, Wei-Cheng Pan (legnaleurc)
 // @version        <%= pkg.version %>
 // @license        BSD
+// @homepageURL    https://adsbypasser.github.io/
+// @supportURL     https://github.com/adsbypasser/adsbypasser/issues
 // @updateURL      https://adsbypasser.github.io/releases/adsbypasser<%= lite ? 'lite' : '' %>.meta.js
 // @downloadURL    https://adsbypasser.github.io/releases/adsbypasser<%= lite ? 'lite' : '' %>.user.js
 // @grant          unsafeWindow
