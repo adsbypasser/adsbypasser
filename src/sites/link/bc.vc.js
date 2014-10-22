@@ -1,26 +1,14 @@
 (function () {
   'use strict';
 
-  // bc.vc, shortcut, dirty hack
-  $.register({
-    rule: {
-      host: /^bc\.vc$/,
-      query: /^.+(https?:\/\/.+)/,
-    },
-    start: function (m) {
-      $.openLink(m.query[1]);
-    },
-  });
-
   // bc.vc, shortcut
-  // FIXME may cut hash or query string
   $.register({
     rule: {
       host: /^bc\.vc$/,
       path: /^.+(https?:\/\/.+)$/,
     },
     start: function (m) {
-      $.openLink(m.path[1]);
+      $.openLink(m.path[1] + document.location.search + document.location.hash);
     },
   });
 
