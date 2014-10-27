@@ -74,6 +74,7 @@
     * imgcoin.net
     * imgfap.net
     * imglemon.com
+    * imgpu.com
     * imgrun.net (t)
     * imgserve.net
     * imgstudio.org
@@ -81,6 +82,7 @@
     * myhotimage.com
     * pic.apollon-fervor.com
     * picstwist.com
+    * wpc8.com
     * zeljeimage.com
     * zonezeedimage.com
 * imageporter
@@ -293,6 +295,7 @@
     * imgmega.com
     * imgpaying.com
     * imgsee.me
+    * imzdrop.com
 * imgsure.com
     * imgsure.com
     * picexposed.com
@@ -339,6 +342,7 @@
     * dl-protect.com
     * dumppix.com
     * durl.me
+    * embedupload.com
     * ethi.in
     * filoops.info
     * fit.sh
@@ -432,12 +436,15 @@
     * rijaliti.info
     * riurl.com
     * robo.us
+    * safelinkconverter2.com
     * safeurl.eu
     * screenlist.ru
     * setlinks.us
     * sh.st
+    * shorturl.rapeit.net
     * similarsites.com
     * stash-coins.com
+    * steamcommunity.com
     * subirimagenes.com
     * sylnk.net
     * thinfi.com
