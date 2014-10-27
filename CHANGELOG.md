@@ -1,8 +1,18 @@
 ## TBA
 
+* fixed
+    * entry scripts for linkbucks.com
+    * bc.vc
 * added
+    * imzdrop.com
+    * steamcommunity.com
     * embedupload.com
     * safelinkconverter2.com
+    * shorturl.rapeit.net
+    * imgpu.com
+    * wpc8.com
+* changed
+    * we have logo now, thanks to [Josh Axey](https://twitter.com/Josh_Axey)
 
 ## 5.4.0
 
