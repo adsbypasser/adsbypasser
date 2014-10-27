@@ -8,6 +8,7 @@
 // @supportURL     https://github.com/adsbypasser/adsbypasser/issues
 // @updateURL      https://adsbypasser.github.io/releases/adsbypasser<%= lite ? 'lite' : '' %>.meta.js
 // @downloadURL    https://adsbypasser.github.io/releases/adsbypasser<%= lite ? 'lite' : '' %>.user.js
+// @icon           https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= pkg.version %>/img/logo.png
 // @grant          unsafeWindow
 // @grant          GM_xmlhttpRequest
 // @grant          GM_addStyle
