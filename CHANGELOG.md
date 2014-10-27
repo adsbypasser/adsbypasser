@@ -1,4 +1,4 @@
-## TBA
+## 5.5.0
 
 * fixed
     * entry scripts for linkbucks.com
