@@ -26,7 +26,7 @@
         /^imgcloud\.co|pixup\.us$/,
         /^(www\.)?\.imgult\.com$/,
         /^bulkimg\.info$/,
-        /^(image\.adlock|imgspot)\.org$/,
+        /^(image\.adlock|imgspot|teenshot)\.org$/,
         /^img\.yt$/,
         /^vava\.in$/,
       ],
