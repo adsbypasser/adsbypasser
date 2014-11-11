@@ -3,6 +3,7 @@ $.register({
     host: [
       /^moe\.god\.jp$/,
       /^moesubs\.akurapopo\.pro$/,
+      /^dl\.nsfk\.in$/,
     ]
   },
   ready: function () {
