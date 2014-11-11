@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^moe\.god\.jp$/,
+    host: [
+      /^moe\.god\.jp$/,
+      /^moesubs\.akurapopo\.pro$/,
+    ]
   },
   ready: function () {
     'use strict';
