@@ -25,7 +25,7 @@ $.register({
 
     $.post('/get/link/', {'slug': slug, 'hoster': hoster}, function(response) {
       var respJSON = JSON.parse(response);
-      $.openLink(respJSON.url)
+      $.openLink(respJSON.url);
     });
   },
 });
