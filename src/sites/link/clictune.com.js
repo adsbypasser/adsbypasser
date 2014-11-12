@@ -6,6 +6,8 @@ $.register({
   ready: function () {
     'use strict';
 
+    $.removeNodes('iframe');
+
     var linkHolder = $('#compteur');
     var matches = linkHolder.innerHTML.match(/<a href=".*url=([^&"]+).*>/);
     var url = decodeURIComponent(matches[1]);
