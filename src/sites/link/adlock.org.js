@@ -5,7 +5,7 @@ $.register({
   ready: function () {
     'use strict';
 
-    var a = $.$('#xre a.xxr');
+    var a = $.$('#xre a.xxr, #downloadButton1');
     if (a) {
       $.openLink(a.href);
       return;
