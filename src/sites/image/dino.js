@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^img(dino|tiger)\.com$/,
+    host: /^img(dino|tiger|zap)\.com$/,
     path: /^\/viewer\.php$/,
     query: /^\?file=/,
   },

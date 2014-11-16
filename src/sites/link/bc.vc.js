@@ -214,6 +214,8 @@
         /^srk\.gs$/,
         /^cun\.bz$/,
         /^miniurl\.tk$/,
+        /^vizzy\.es$/,
+        /^kazan\.vc$/,
       ],
       path: /^\/.+/,
     },

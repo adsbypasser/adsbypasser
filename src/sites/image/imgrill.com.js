@@ -21,12 +21,12 @@
   $.register({
     rule: {
       host: [
-        /^(img(rill|next|savvy|\.spicyzilla|twyti)|image(corn|picsa)|www\.(imagefolks|imgblow)|hosturimage|img-zone)\.com$/,
+        /^(img(rill|next|savvy|\.spicyzilla|twyti)|image(corn|picsa)|www\.(imagefolks|imgblow)|hosturimage|img-zone|08lkk)\.com$/,
         /^img(candy|master|-view|run)\.net$/,
         /^imgcloud\.co|pixup\.us$/,
         /^(www\.)?\.imgult\.com$/,
         /^bulkimg\.info$/,
-        /^(image\.adlock|imgspot)\.org$/,
+        /^(image\.adlock|imgspot|teenshot)\.org$/,
         /^img\.yt$/,
         /^vava\.in$/,
       ],

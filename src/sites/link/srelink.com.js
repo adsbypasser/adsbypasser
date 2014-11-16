@@ -1,16 +1,15 @@
 $.register({
   rule: {
-    host: [
-      /^moe\.god\.jp$/,
-      /^moesubs\.akurapopo\.pro$/,
-      /^dl\.nsfk\.in$/,
-    ]
+    host: /^(www\.)?srelink\.com$/,
+    path: /^\/i\/\w+$/,
   },
-  ready: function () {
+  ready: function (m) {
     'use strict';
 
-    var a = $('div div center a');
-    $.openLink(a.href);
+    $.removeNodes('iframe');
+
+    var matches = $.searchScripts(/href="([^"]+)">SKIP AD<\/a>/);
+    $.openLink(matches[1]);
   },
 });
 

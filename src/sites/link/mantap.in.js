@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^mantap\.in$/,
+    host: [
+      /^mant(a|e)p\.in$/,
+      /^st\.oploverz\.net$/,
+    ],
   },
   ready: function () {
     'use strict';
