@@ -1,3 +1,23 @@
+## TBA
+
+* fixed
+    * 08lkk.com
+    * adlock.org
+* added
+    * mantep.in
+    * srelink.com
+    * teenshot.org
+    * vizzy.es
+    * st.oploverz.net
+    * moesubs.akurapopo.pro
+    * dl.nsfk.in
+    * gallerynova.se
+    * jheberg.net
+    * clictune.com
+    * 55888.eu
+    * imgzap.com
+    * kazan.vc
+
 ## 5.5.0
 
 * fixed
