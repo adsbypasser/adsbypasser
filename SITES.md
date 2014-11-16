@@ -105,6 +105,7 @@
 * imgrill.com
     * 08lkk.com
     * hosturimage.com
+    * image.adlock.org
     * imagecorn.com
     * imagefolks.com
     * imagepicsa.com
@@ -123,6 +124,7 @@
     * imgtwyti.com
     * imgult.com
     * pixup.us
+    * teenshot.org
     * vava.in
 * picfox
     * amateurfreak.org
@@ -140,6 +142,7 @@
 * imgdino
     * imgdino.com
     * imgtiger.com
+    * imgzap.com
 * hanimes
     * adultmove.info
     * h-animes.info
@@ -162,6 +165,7 @@
     * fly2url.com
     * gx.si
     * hit.us
+    * kazan.vc
     * link.tl
     * miniurl.tk
     * myam.me
@@ -172,6 +176,7 @@
     * tr5.in
     * ultry.net
     * urlwiz.com
+    * vizzy.es
     * wwy.me
     * xafox.com
     * xip.ir
@@ -305,6 +310,14 @@
 * firedrive.com
     * firedrive.com
     * putlocker.com
+* mantap.in
+    * mantap.in
+    * mantep.in
+    * st.oploverz.net
+* moe.god.jp
+    * dl.nsfk.in
+    * moe.god.jp
+    * moesubs.akurapopo.pro
 * else
     * 01.nl
     * 1be.biz
@@ -334,6 +347,7 @@
     * casimages.com
     * cf.ly
     * cli.gs
+    * clictune.com
     * comyonet.com
     * cubeupload.com
     * dapat.in
@@ -350,6 +364,7 @@
     * fotosik.pl
     * fundurl.com
     * funkyimg.com
+    * gallerynova.se
     * gkurl.us
     * go2.me
     * goimagehost.com
@@ -392,6 +407,7 @@
     * ipic.su
     * ity.im
     * javelite.tk
+    * jheberg.net
     * keptarolo.hu
     * kingofshrink.com
     * lienscash.com
@@ -403,10 +419,8 @@
     * lnk.in
     * lostpic.net
     * madlink.sk
-    * mantap.in
     * mirrorcreator.com
     * mirrorupload.net
-    * moe.god.jp
     * mrjh.org
     * mt0.org
     * my-link.pro
@@ -443,6 +457,7 @@
     * sh.st
     * shorturl.rapeit.net
     * similarsites.com
+    * srelink.com
     * stash-coins.com
     * steamcommunity.com
     * subirimagenes.com
