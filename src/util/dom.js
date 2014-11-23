@@ -757,9 +757,9 @@ var $;
 
     function disableLeavePrompt () {
       var seal = {
-        set: function () {
+        set: $.inject(function () {
           _.info('blocked onbeforeunload');
-        },
+        }),
       };
       // NOTE maybe break in future Firefox release
       _.C([unsafeWindow, unsafeWindow.document.body]).each(function (o) {
@@ -769,7 +769,17 @@ var $;
         // release existing events
         o.onbeforeunload = undefined;
         // prevent they bind event again
-        Object.defineProperty(o, 'onbeforeunload', seal);
+        Object.defineProperty(o, 'onbeforeunload', $.inject(seal));
+        // block addEventListener
+        var oael = o.addEventListener;
+        var nael = function (type) {
+          if (type === 'beforeunload') {
+            _.info('blocked addEventListener onbeforeunload');
+            return;
+          }
+          return oael.apply(this, arguments);
+        };
+        o.addEventListener = $.inject(addEventListener);
       });
     }
 
