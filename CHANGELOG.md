@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * Safiri support with TamperMonkey
+    * onbeforeunload event blocking
+* added
+    * oni.vn
+
 ## 5.6.0
 
 * fixed
