@@ -1,4 +1,4 @@
-## TBA
+## 5.7.0
 
 * fixed
     * Safiri support with TamperMonkey
