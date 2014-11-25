@@ -1,6 +1,6 @@
 (function() {
 
-  // copy from Lbjs, can not retrive by unsafeWindow
+  // copy from Lbjs, can not get from unsafeWindow
   function ConvertFromHex (str) {
     var result = [];
     while (str.length >= 2) {
@@ -164,7 +164,7 @@
     });
 
     // for entry script
-    // this is stupid, but inpecting script on every page is too heavy
+    // this is stupid, but inspecting script on every page is too heavy
     $.register({
       rule: {
         query: /^\?_lbGate=\d+$/,
