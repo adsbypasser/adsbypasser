@@ -148,7 +148,8 @@
 
         if (window.location.pathname.indexOf('verify') >= 0) {
           // NOTE dirty fix
-          $.openLink('../');
+          var path = window.location.pathname.replace('/verify', '');
+          $.openLink(path);
           return;
         }
 
