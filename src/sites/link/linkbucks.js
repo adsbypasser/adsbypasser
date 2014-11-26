@@ -123,21 +123,15 @@
         $.removeNodes('iframe');
 
         if (!m.path[1]) {
-          throw _.AdsBypasserError('wrong url pattern');
+          throw new _.AdsBypasserError('wrong url pattern');
         }
         var url = m.path[1] + window.location.search;
 
         var match = $.searchScripts(/UrlEncoded: ([^,]+)/);
-        _.info(match);
         if (match && match[1] === 'true') {
           // encrypted url
-          _.info('??');
-          try {
           url = Encode(ConvertFromHex(url));
-          _.info('!!');
-        } catch (e) {_.info(e);}
         }
-        _.info(url);
 
         $.openLinkWithReferer(url);
       }
