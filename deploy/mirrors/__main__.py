@@ -2,22 +2,8 @@ from __future__ import unicode_literals
 from __future__ import absolute_import
 
 import sys
-import os
-import json
 
-
-def to_abs_path(relative_path):
-    csd = os.path.dirname(__file__)
-    path = os.path.join(csd, relative_path)
-    abs_path = os.path.abspath(path)
-    return path
-
-
-def read_config():
-    path = to_abs_path('../../.deploy.json')
-    with open(path, 'r') as fin:
-        data = json.load(fin)
-    return data
+from .util import to_abs_path, read_config
 
 
 def read_file(path):
@@ -32,17 +18,20 @@ def main(args=None):
         args = sys.argv
 
     config = read_config()
-    summary = read_file('../../dest/summary.md')
-    script = read_file('../../dest/nopicads.user.js')
+    script_full = read_file('../../dest/adsbypasser.user.js')
+    script_lite = read_file('../../dest/adsbypasserlite.user.js')
 
     from mirrors.greasyfork import exec_ as greasyfork
-    greasyfork(config['greasyfork'], summary, script)
+    greasyfork(config['mirrors']['greasyfork'], 'full', 'lite', script_full)
+    greasyfork(config['mirrors']['greasyfork'], 'lite', 'full', script_lite)
 
     from mirrors.monkeyguts import exec_ as monkeyguts
-    monkeyguts(config['monkeyguts'], summary, script)
+    monkeyguts(config['mirrors']['monkeyguts'], 'full', 'lite', script_full)
+    monkeyguts(config['mirrors']['monkeyguts'], 'lite', 'full', script_lite)
 
     from mirrors.openuserjs import exec_ as openuserjs
-    openuserjs(config['openuserjs'], summary, script)
+    openuserjs(config['mirrors']['openuserjs'], 'full', 'lite', script_full)
+    openuserjs(config['mirrors']['openuserjs'], 'lite', 'full', script_lite)
 
     return 0
 

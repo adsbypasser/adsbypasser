@@ -7,7 +7,7 @@ $.register({
 
     var m = $.searchScripts(/var target_url = '([^']+)';/);
     if (!m) {
-      throw new _.NoPicAdsError('site changed');
+      throw new _.AdsBypasserError('site changed');
     }
     $.openLink(m[1]);
   },

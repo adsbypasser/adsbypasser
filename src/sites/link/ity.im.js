@@ -24,7 +24,7 @@ $.register({
 
     f = $.searchScripts(/krypted=([^&]+)/);
     if (!f) {
-      throw new _.NoPicAdsError('site changed');
+      throw new _.AdsBypasserError('site changed');
     }
     f = f[1];
     var data = unsafeWindow.des('ksnslmtmk0v4Pdviusajqu', unsafeWindow.hexToString(f), 0, 0);

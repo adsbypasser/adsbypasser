@@ -2,11 +2,13 @@ import mechanize
 import requests
 import urllib
 
+from summary import make_summary
 
-def exec_(config, summary, script):
+
+def exec_(config, edition, another_edition, script):
     USERNAME = config['USERNAME']
     NAMESPACE = config['NAMESPACE']
-    SCRIPTNAME = config['SCRIPTNAME']
+    SCRIPTNAME = config[edition]['SCRIPTNAME']
     GITHUB_USERNAME = config['GITHUB_USERNAME']
     GITHUB_PASSWORD = config['GITHUB_PASSWORD']
 
@@ -15,6 +17,11 @@ def exec_(config, summary, script):
     SCRIPT_URL = '{0}/user/add/scripts/new'.format(HOME_URL)
     ABOUT_URL = '{0}/script/{1}/{2}/edit'.format(HOME_URL, NAMESPACE, SCRIPTNAME)
     URL_PARAM = '/scripts/{0}/{1}/{2}/source'.format(USERNAME, NAMESPACE, SCRIPTNAME)
+
+    summary = make_summary()
+    another_edition = config[another_edition]
+    another_edition = 'https://openuserjs.org/scripts/{0}/{1}'.format(USERNAME, another_edition['SCRIPTNAME'])
+    summary = summary.getResult(edition, another_edition)
 
     b = mechanize.Browser()
     b.set_handle_robots(False)

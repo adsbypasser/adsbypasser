@@ -1,11 +1,14 @@
 $.register({
   rule: {
-    host: /^mantap\.in$/,
+    host: [
+      /^mant(a|e)p\.in$/,
+      /^st\.oploverz\.net$/,
+    ],
   },
   ready: function () {
     'use strict';
 
-    var a = $('a.redirect');
+    var a = $('a.redirect, a[target=_blank][rel=nofollow]');
     $.openLink(a.href);
   },
 });

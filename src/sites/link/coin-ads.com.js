@@ -14,7 +14,7 @@ $.register({
 
     m = $.searchScripts(/countdownArea\.innerHTML = "([^"]+)"/);
     if (!m) {
-      throw new _.NoPicAdsError('pattern changed');
+      throw new _.AdsBypasserError('pattern changed');
     }
     m = m[1];
 

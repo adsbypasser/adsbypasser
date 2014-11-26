@@ -7,13 +7,13 @@ body {
   margin: 0;
 }
 
-#nopicads-wrapper {
+#adsbypasser-wrapper {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-#nopicads-image {
+#adsbypasser-image {
   position: absolute;
   margin: auto;
   top: 0;

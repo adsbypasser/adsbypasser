@@ -1,13 +1,20 @@
 from mechanize import Browser, ParseString
 
+from summary import make_summary
 
-def exec_(config, summary, script):
+
+def exec_(config, edition, another_edition, script):
     USERNAME = config['USERNAME']
     PASSWORD = config['PASSWORD']
-    SCRIPT_ID = config['SCRIPT_ID']
+    SCRIPT_ID = config[edition]['SCRIPT_ID']
 
     LOGIN_URL = 'https://monkeyguts.com/login/'
     EDIT_URL = 'https://monkeyguts.com/submit.php?id={0}'.format(SCRIPT_ID)
+
+    summary = make_summary()
+    another_edition = config[another_edition]
+    another_edition = 'https://monkeyguts.com/code.php?id={0}'.format(another_edition['SCRIPT_ID'])
+    summary = summary.getResult(edition, another_edition)
 
     b = Browser()
 

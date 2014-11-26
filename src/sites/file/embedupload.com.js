@@ -1,10 +1,14 @@
 $.register({
-  rule: 'http://imgdollar.com/*/*.jpg.html',
+  rule: {
+    host: /^(www\.)?embedupload\.com$/,
+    path: /^\/$/,
+    query: /^\?\w{2}=\w+$/
+  },
   ready: function () {
     'use strict';
 
-    var f = $('form[name="F1"]');
-    f.submit();
+    var downloadPage = $('.categories a[target=_blank]');
+    $.openLink(downloadPage);
   },
 });
 

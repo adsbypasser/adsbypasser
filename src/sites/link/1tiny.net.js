@@ -17,7 +17,7 @@ $.register({
     });
 
     if (!directUrl) {
-      throw new _.NoPicAdsError('script content changed');
+      throw new _.AdsBypasserError('script content changed');
     }
 
     $.openLink(directUrl.payload);

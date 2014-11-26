@@ -1,30 +1,4 @@
-* adfly
-    * ad7.biz
-    * adf.acb.im
-    * adf.animechiby.com
-    * adf.ly
-    * adf.sazlina.com
-    * adf.tuhoctoan.net
-    * adfly.itsrinaldo.net
-    * adv.coder143.com
-    * alien.apkmania.co
-    * ay.gy
-    * chathu.apkmania.co
-    * david.nhachot.info
-    * ddl.animesave.com
-    * dl.animesave.tk
-    * dl.apkpro.net
-    * dl.nhachot.info
-    * file.tamteo.com
-    * gamecopyworld.com
-    * go.nicoblog-games.com
-    * go.phpnulledscripts.com
-    * goto.adflytutor.com
-    * j.gs
-    * ksn.mx
-    * n.shareme.in
-    * q.gs
-    * u.shareme.in
+* adf.ly
 * linkbucks
     * allanalpass.com
     * amy.gs
@@ -72,6 +46,7 @@
     * imagecurl.org
     * imagepong.info
     * imageview.me
+    * imgbanana.com
     * imgdream.net
     * imgking.us
     * imgnip.com
@@ -88,20 +63,26 @@
     * croftimage.com
     * damimage.com
     * dragimage.org
+    * ericsony.com
     * gallerycloud.net
     * hotimages.eu
     * imagedecode.com
+    * imagelook.org
     * imageontime.com
     * img-zone.com
     * imgadult.com
     * imgcoin.net
     * imgfap.net
     * imglemon.com
+    * imgpu.com
+    * imgrun.net (t)
     * imgserve.net
     * imgstudio.org
+    * imgtaxi.com
     * myhotimage.com
     * pic.apollon-fervor.com
     * picstwist.com
+    * wpc8.com
     * zeljeimage.com
     * zonezeedimage.com
 * imageporter
@@ -124,6 +105,7 @@
 * imgrill.com
     * 08lkk.com
     * hosturimage.com
+    * image.adlock.org
     * imagecorn.com
     * imagefolks.com
     * imagepicsa.com
@@ -136,10 +118,13 @@
     * imgmaster.net
     * imgnext.com
     * imgrill.com
+    * imgrun.net
     * imgsavvy.com
     * imgspot.org
+    * imgtwyti.com
     * imgult.com
     * pixup.us
+    * teenshot.org
     * vava.in
 * picfox
     * amateurfreak.org
@@ -157,6 +142,7 @@
 * imgdino
     * imgdino.com
     * imgtiger.com
+    * imgzap.com
 * hanimes
     * adultmove.info
     * h-animes.info
@@ -166,6 +152,7 @@
     * imageup.ru
     * itmages.ru
 * bc.vc
+    * 1tk.us
     * ad5.eu
     * adb.ug
     * adbla.us
@@ -178,6 +165,7 @@
     * fly2url.com
     * gx.si
     * hit.us
+    * kazan.vc
     * link.tl
     * miniurl.tk
     * myam.me
@@ -188,6 +176,7 @@
     * tr5.in
     * ultry.net
     * urlwiz.com
+    * vizzy.es
     * wwy.me
     * xafox.com
     * xip.ir
@@ -306,16 +295,29 @@
 * upan.so
     * upan.so
     * gxp.so
-* imgmega.com
-    * imagebucks.biz
+* imgpaying.com
+    * imgclick.net
     * imgmega.com
-    * pic.re
+    * imgpaying.com
+    * imgsee.me
+    * imzdrop.com
 * imgsure.com
     * imgsure.com
     * picexposed.com
 * coin-ads
     * coin-ads.com
     * shortin.tk
+* firedrive.com
+    * firedrive.com
+    * putlocker.com
+* mantap.in
+    * mantap.in
+    * mantep.in
+    * st.oploverz.net
+* moe.god.jp
+    * dl.nsfk.in
+    * moe.god.jp
+    * moesubs.akurapopo.pro
 * else
     * 01.nl
     * 1be.biz
@@ -325,6 +327,7 @@
     * 2ty.cc
     * 3ra.be
     * 4fun.tw
+    * 4shared.com
     * adfoc.us
     * adjet.biz
     * adlock.org
@@ -339,23 +342,29 @@
     * bilder-space.de
     * bilder-upload.eu
     * bildr.no
+    * binbox.io
     * blackcatpix.com
     * casimages.com
     * cf.ly
     * cli.gs
+    * clictune.com
     * comyonet.com
     * cubeupload.com
     * dapat.in
     * dd.ma
     * directupload.net
+    * dl-protect.com
     * dumppix.com
     * durl.me
+    * embedupload.com
+    * ethi.in
     * filoops.info
     * fit.sh
     * fotolink.su
     * fotosik.pl
     * fundurl.com
     * funkyimg.com
+    * gallerynova.se
     * gkurl.us
     * go2.me
     * goimagehost.com
@@ -392,31 +401,33 @@
     * imgbox.com
     * imgcarry.com
     * imgdollar.com
-    * imgpaying.com
     * imgseeds.com
     * imgtheif.com
     * imgvault.pw
     * ipic.su
     * ity.im
     * javelite.tk
+    * jheberg.net
     * keptarolo.hu
     * kingofshrink.com
     * lienscash.com
     * link-protector.com
     * link2dollar.com
     * link2you.ru
+    * linkshrink.net
     * lix.in
     * lnk.in
     * lostpic.net
     * madlink.sk
-    * mantap.in
-    * moe.god.jp
+    * mirrorcreator.com
+    * mirrorupload.net
     * mrjh.org
     * mt0.org
     * my-link.pro
     * noelshack.com
     * nsfw.in
     * nutshellurl.com
+    * oni.vn
     * oxyl.me
     * p.pw
     * pic-money.ru
@@ -428,6 +439,7 @@
     * pixhost.org
     * pixhub.eu
     * pixroute.com
+    * pornimagex.com
     * postimg.org
     * preview.rlu.ru
     * prntscr.com
@@ -439,13 +451,18 @@
     * rijaliti.info
     * riurl.com
     * robo.us
+    * safelinkconverter2.com
     * safeurl.eu
     * screenlist.ru
     * setlinks.us
     * sh.st
+    * shorturl.rapeit.net
     * similarsites.com
+    * srelink.com
     * stash-coins.com
+    * steamcommunity.com
     * subirimagenes.com
+    * sylnk.net
     * thinfi.com
     * tinyarrows.com
     * tinypic.com

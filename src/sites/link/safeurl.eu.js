@@ -8,7 +8,7 @@ $.register({
 
     var directUrl = $.searchScripts(/window\.open\("([^"]+)"\);/);
     if (!directUrl) {
-      throw new _.NoPicAdsError('script content changed');
+      throw new _.AdsBypasserError('script content changed');
     }
     directUrl = directUrl[1];
     $.openLink(directUrl);

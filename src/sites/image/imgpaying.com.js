@@ -1,7 +1,14 @@
 $.register({
-  rule: {
-    host: /^imgpaying\.com$/,
-  },
+  rule: [
+    {
+      host: [
+        /^((img(paying|mega))|imzdrop)\.com$/,
+        /^(www\.)?imgsee\.me$/,
+        /^imgclick\.net$/,
+      ],
+      path: /^\/([^\/]+)\/[^\/]+\.[^\/]{3,4}$/,
+    },
+  ],
   ready: function () {
     'use strict';
 

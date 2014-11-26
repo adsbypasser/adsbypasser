@@ -41,33 +41,32 @@ and try again.
 
 Please describe your environment as detial as possible, such as:
 
-1. What operating system are you using?
-
-    e.g.: Mac OS 10.7
-
-2. What browser are you using?
+1. What browser are you using?
 
     e.g.: Mozilla Firefox 23.0.1
 
-3. What userscript extension are you using? (e.g.: GreaseMonkey,
-TamperMonkey ... etc.)
+2. What is your userscript manager?
 
     e.g.: GreaseMonkey 1.11
 
-4. What site are you browsing?
+3. Are you using other similar userscripts to bypass ads as well?
+
+4. What other extensions are you using? (notably NoScript or Ghostery)
+
+5. What site are you browsing?
 
     e.g.: https://www.google.com/
 
-5. How to reproduce this bug?
+6. How to reproduce this bug?
 
     e.g.: Visit the above site with other userscript installed
     (http://us.o/script/xxxxxx).
 
-6. What went wrong?
+7. What went wrong?
 
     e.g.: It does not redirect.
 
-7. What did you originally expected?
+8. What did you expect?
 
     e.g.: It should redirect properly.
 

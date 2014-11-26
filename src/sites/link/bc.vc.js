@@ -1,26 +1,14 @@
 (function () {
   'use strict';
 
-  // bc.vc, shortcut, dirty hack
-  $.register({
-    rule: {
-      host: /^bc\.vc$/,
-      query: /^.+(https?:\/\/.+)/,
-    },
-    start: function (m) {
-      $.openLink(m.query[1]);
-    },
-  });
-
   // bc.vc, shortcut
-  // FIXME may cut hash or query string
   $.register({
     rule: {
       host: /^bc\.vc$/,
       path: /^.+(https?:\/\/.+)$/,
     },
     start: function (m) {
-      $.openLink(m.path[1]);
+      $.openLink(m.path[1] + document.location.search + document.location.hash);
     },
   });
 
@@ -59,7 +47,7 @@
         script: decompress(content.payload, unzip),
       };
     }
-    throw _.NoPicAdsError('script changed');
+    throw _.AdsBypasserError('script changed');
   }
 
   function knockServer (script, dirtyFix) {
@@ -159,7 +147,7 @@
       } else {
         result = result.script.match(/top\.location\.href = '([^']+)'/);
         if (!result) {
-          throw new _.NoPicAdsError('script changed');
+          throw new _.AdsBypasserError('script changed');
         }
         result = result[1];
         $.openLink(result);
@@ -177,7 +165,7 @@
     } else {
       result = result.script.match(/top\.location\.href='([^']+)'/);
       if (!result) {
-        throw new _.NoPicAdsError('script changed');
+        throw new _.AdsBypasserError('script changed');
       }
       result = result[1];
       $.openLink(result);
@@ -211,6 +199,7 @@
   $.register({
     rule: {
       host: [
+        /^1tk\.us$/,
         /^gx\.si$/,
         /^adwat\.ch$/,
         /^(fly2url|urlwiz|xafox)\.com$/,
@@ -225,6 +214,8 @@
         /^srk\.gs$/,
         /^cun\.bz$/,
         /^miniurl\.tk$/,
+        /^vizzy\.es$/,
+        /^kazan\.vc$/,
       ],
       path: /^\/.+/,
     },
@@ -271,7 +262,7 @@
 
       // Wrap the form into a useless div
       var d = document.createElement('div');
-      d.setAttribute('id','NoPicAdsFTW');
+      d.setAttribute('id','AdsBypasserFTW');
       d.setAttribute('style', 'display:none;');
 
       // Feed with the right form
@@ -279,7 +270,7 @@
       document.body.appendChild(d);
 
       // Redirect to next page
-      $('#NoPicAdsFTW > form[name=form1]').submit();
+      $('#AdsBypasserFTW > form[name=form1]').submit();
     },
   });
 

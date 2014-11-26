@@ -19,7 +19,7 @@
           // Convert it to HTML nodes
           var docMainFrame = $.toDOM(mainFrameContent);
         } catch (e) {
-          throw new _.NoPicAdsError('main frame changed');
+          throw new _.AdsBypasserError('main frame changed');
         }
 
         // Regex allowing to extract the link from a subframe

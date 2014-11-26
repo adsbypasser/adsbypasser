@@ -9,9 +9,10 @@ var $;
     var unsafeWindow = context.unsafeWindow;
     var GM = context.GM;
     var document = window.document;
+    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
 
-    var DomNotFoundError = _.NoPicAdsError.extend({
+    var DomNotFoundError = _.AdsBypasserError.extend({
       name: 'DomNotFoundError',
       constructor: function (selector) {
         DomNotFoundError.super.constructor.call(this, _.T('`{0}` not found')(selector));
@@ -34,7 +35,6 @@ var $;
       try {
         return $(selector, context);
       } catch (e) {
-        _.info(e.message);
         return null;
       }
     };
@@ -113,7 +113,7 @@ var $;
         var DOMHTML = parser.parseFromString(rawHTML, "text/html");
         return DOMHTML;
       } catch (e) {
-        throw new _.NoPicAdsError('could not parse HTML to DOM');
+        throw new _.AdsBypasserError('could not parse HTML to DOM');
       }
     };
 
@@ -183,7 +183,14 @@ var $;
       var from = window.location.toString();
       _.info(_.T('{0} -> {1}')(from, to));
 
-      window.location.href = to;
+      // Create a link on the page
+      var a = document.createElement('a');
+      a.href = to;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+
+      // Simulate a click on this link (so that the referer is sent)
+      a.click();
     };
 
     $.openImage = function (imgSrc) {
@@ -206,7 +213,7 @@ var $;
     };
 
     function toggleShrinking () {
-      this.classList.toggle('nopicads-shrinked');
+      this.classList.toggle('adsbypasser-shrinked');
     }
 
     function checkScaling () {
@@ -214,16 +221,16 @@ var $;
       var nh = this.naturalHeight;
       var cw = document.documentElement.clientWidth;
       var ch = document.documentElement.clientHeight;
-      if ((nw > cw || nh > ch) && !this.classList.contains('nopicads-resizable')) {
-        this.classList.add('nopicads-resizable');
-        this.classList.add('nopicads-shrinked');
+      if ((nw > cw || nh > ch) && !this.classList.contains('adsbypasser-resizable')) {
+        this.classList.add('adsbypasser-resizable');
+        this.classList.add('adsbypasser-shrinked');
 
         this.addEventListener('click', toggleShrinking);
       } else {
         this.removeEventListener('click', toggleShrinking);
 
-        this.classList.remove('nopicads-shrinked');
-        this.classList.remove('nopicads-resizable');
+        this.classList.remove('adsbypasser-shrinked');
+        this.classList.remove('adsbypasser-resizable');
       }
     }
 
@@ -258,8 +265,8 @@ var $;
     function injectStyle (d, i) {
       $.removeNodes('style, link[rel=stylesheet]');
 
-      d.id = 'nopicads-wrapper';
-      i.id = 'nopicads-image';
+      d.id = 'adsbypasser-wrapper';
+      i.id = 'adsbypasser-image';
     }
 
     $.replace = function (imgSrc) {
@@ -517,8 +524,8 @@ var $;
 
     $.register({
       rule: {
-        host: /^legnaleurc\.github\.io$/,
-        path: /^\/nopicads\/configure\.html$/,
+        host: /^adsbypasser\.github\.io$/,
+        path: /^\/configure\.html$/,
       },
       ready: function () {
 
@@ -605,9 +612,9 @@ var $;
       return url_1.match(rule);
     }
 
-    function dispatchByArray (rules, url_1, url_3, url_6) {
+    function dispatchByArray (byLocation, rules, url_1, url_3, url_6) {
       var tmp = _.C(rules).find(function (rule) {
-        var m = dispatch(rule, url_1, url_3, url_6);
+        var m = dispatch(byLocation, rule, url_1, url_3, url_6);
         if (!m) {
           return _.nop;
         }
@@ -675,23 +682,34 @@ var $;
       return rule(url_1, url_3, url_6);
     }
 
-    function dispatch (rule, url_1, url_3, url_6) {
+    function dispatch (byLocation, rule, url_1, url_3, url_6) {
+      // recursively dispatching
+      if (rule instanceof Array) {
+        return dispatchByArray(byLocation, rule, url_1, url_3, url_6);
+      }
+
+      // dispatch by HTML content
+      if (!byLocation) {
+        if (typeof rule !== 'function') {
+          return null;
+        }
+        return dispatchByFunction(rule, url_1, url_3, url_6);
+      }
+
+      // dispatch by URL
       if (rule instanceof RegExp) {
         return dispatchByRegExp(rule, url_1);
-      }
-      if (rule instanceof Array) {
-        return dispatchByArray(rule, url_1, url_3, url_6);
-      }
-      if (typeof rule === 'function') {
-        return dispatchByFunction(rule, url_1, url_3, url_6);
       }
       if (typeof rule === 'string' || rule instanceof String) {
         return dispatchByString(rule, url_3);
       }
+      if (typeof rule === 'function') {
+        return null;
+      }
       return dispatchByObject(rule, url_6);
     }
 
-    function findHandler () {
+    function findHandler (byLocation) {
       var url_1 = window.location.toString();
       // <scheme>://<host><path>
       var url_3 = {
@@ -710,7 +728,7 @@ var $;
       };
 
       var pattern = _.C(patterns).find(function (pattern) {
-        var m = dispatch(pattern.rule, url_1, url_3, url_6);
+        var m = dispatch(byLocation, pattern.rule, url_1, url_3, url_6);
         if (!m) {
           return _.nop;
         }
@@ -740,19 +758,37 @@ var $;
 
     function disableLeavePrompt () {
       var seal = {
-        set: function () {
+        set: $.inject(function () {
           _.info('blocked onbeforeunload');
-        },
+        }),
       };
       // NOTE maybe break in future Firefox release
       _.C([unsafeWindow, unsafeWindow.document.body]).each(function (o) {
         if (!o) {
           return;
         }
+
         // release existing events
         o.onbeforeunload = undefined;
+
         // prevent they bind event again
-        Object.defineProperty(o, 'onbeforeunload', seal);
+        if (isSafari) {
+          // Safiri must use old-style method
+          o.__defineSetter__('onbeforeunload', seal.set);
+        } else {
+          Object.defineProperty(o, 'onbeforeunload', $.inject(seal));
+        }
+
+        // block addEventListener
+        var oael = o.addEventListener;
+        var nael = function (type) {
+          if (type === 'beforeunload') {
+            _.info('blocked addEventListener onbeforeunload');
+            return;
+          }
+          return oael.apply(this, arguments);
+        };
+        o.addEventListener = $.inject(addEventListener);
       });
     }
 
@@ -769,27 +805,43 @@ var $;
         return;
       }
 
-      var handler = findHandler();
-      if (!handler) {
-        _.info('does not match on `%s`', window.location.toString());
-        return;
+      var handler = findHandler(true);
+      if (handler) {
+        config = load();
+        _.info('working on\n%s \nwith\n%o', window.location.toString(), config);
+
+        disableWindowOpen();
+
+        handler.start();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            disableLeavePrompt();
+            handler.ready();
+        });
+      } else {
+        _.info('does not match location on `%s`, will try HTML content', window.location.toString());
+
+        document.addEventListener('DOMContentLoaded', function () {
+          handler = findHandler(false);
+
+          if (!handler) {
+            _.info('does not match HTML content on `%s`', window.location.toString());
+            return;
+          }
+
+          config = load();
+          _.info('working on\n%s \nwith\n%o', window.location.toString(), config);
+
+          disableWindowOpen();
+          disableLeavePrompt();
+
+          handler.ready();
+        });
       }
-
-      config = load();
-      _.info('working on\n%s \nwith\n%o', window.location.toString(), config);
-
-      disableWindowOpen();
-
-      handler.start();
-
-      document.addEventListener('DOMContentLoaded', function () {
-        disableLeavePrompt();
-        handler.ready();
-      });
     };
 
-    GM.registerMenuCommand('NoPicAds - Configure', function () {
-      GM.openInTab('https://legnaleurc.github.io/nopicads/configure.html');
+    GM.registerMenuCommand('AdsBypasser - Configure', function () {
+      GM.openInTab('https://adsbypasser.github.io/configure.html');
     });
 
     return $;

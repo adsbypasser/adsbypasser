@@ -10,7 +10,7 @@ describe('core', function () {
   describe('exception', function () {
 
     it('should be inheritable', function () {
-      var TestError = _.NoPicAdsError.extend({
+      var TestError = _.AdsBypasserError.extend({
         name: 'TestError',
         constructor: function (msg) {
           TestError.super.constructor.apply(this, arguments);
@@ -21,8 +21,8 @@ describe('core', function () {
       e.message.should.equals('test');
       Object.getPrototypeOf(e).should.equals(TestError.prototype);
       e.constructor.should.equals(TestError);
-      TestError.super.should.equals(_.NoPicAdsError.prototype);
-      TestError.super.constructor.should.equals(_.NoPicAdsError);
+      TestError.super.should.equals(_.AdsBypasserError.prototype);
+      TestError.super.constructor.should.equals(_.AdsBypasserError);
     });
 
   });
@@ -30,10 +30,10 @@ describe('core', function () {
   describe('partial', function () {
 
     it('should takes function as first parameter', function () {
-      _.P.should.throw(_.NoPicAdsError);
+      _.P.should.throw(_.AdsBypasserError);
       (function () {
         _.P(0);
-      }).should.throw(_.NoPicAdsError);
+      }).should.throw(_.AdsBypasserError);
     });
 
     it('should returns a function', function () {

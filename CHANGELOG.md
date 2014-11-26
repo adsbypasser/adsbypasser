@@ -1,3 +1,110 @@
+## 5.7.0
+
+* fixed
+    * Safiri support with TamperMonkey
+    * onbeforeunload event blocking
+* added
+    * oni.vn
+
+## 5.6.0
+
+* fixed
+    * 08lkk.com
+    * adlock.org
+* added
+    * mantep.in
+    * srelink.com
+    * teenshot.org
+    * vizzy.es
+    * st.oploverz.net
+    * moesubs.akurapopo.pro
+    * dl.nsfk.in
+    * gallerynova.se
+    * jheberg.net
+    * clictune.com
+    * 55888.eu
+    * imgzap.com
+    * kazan.vc
+
+## 5.5.0
+
+* fixed
+    * entry scripts for linkbucks.com
+    * bc.vc
+* added
+    * imzdrop.com
+    * steamcommunity.com
+    * embedupload.com
+    * safelinkconverter2.com
+    * shorturl.rapeit.net
+    * imgpu.com
+    * wpc8.com
+* changed
+    * we have logo now, thanks to [Josh Axey](https://twitter.com/Josh_Axey)
+
+## 5.4.0
+
+* fixed
+    * configuraion menu
+    * mantap.in
+    * binbox.io
+* added
+    * imagelook.org
+    * putlocker.com
+    * imgtaxi.com
+    * pornimagex.com
+
+## 5.3.0
+
+* fixed
+    * dl-protect.com
+    * binbox.io
+* added
+    * imgclick.net
+    * ericsony.com
+    * imgbanana.com
+    * imgtwyti.com
+* removed
+    * imgdollar.com
+    * pic.re
+    * imagebucks.com
+
+## 5.2.0
+
+* fixed
+    * dl-protect.com
+* added
+    * binbox.io
+    * imgrun.net
+
+## 5.1.0
+
+* fixed
+    * configuration page error
+    * sylnk.net
+* added
+    * 4shared.com
+    * linkshrink.net
+
+## 5.0.0
+
+* changed
+    * rename project
+    * detect adf.ly if possible
+    * add lite version
+* fixed
+    * sh.st
+    * pixroute.com
+* added
+    * dl-protect.com
+    * mirrorupload.net
+    * firedrive.com
+    * imgsee.me
+    * ethi.in
+    * mirrorcreator.com
+    * sylnk.net
+    * 1tk.us
+
 ## 4.42.3
 
 * fixed

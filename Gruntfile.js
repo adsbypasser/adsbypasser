@@ -12,9 +12,21 @@ module.exports = function (grunt) {
         src: ['src/util/core.js', 'src/util/dom.js'],
         dest: 'dest/util',
       },
-      sites: {
-        src: ['src/sites/*/*.js'],
-        dest: 'dest/sites',
+      link_sites: {
+        src: ['src/sites/link/*.js'],
+        dest: 'dest/sites/link',
+      },
+      image_sites: {
+        src: ['src/sites/image/*.js'],
+        dest: 'dest/sites/image',
+      },
+      file_sites: {
+        src: ['src/sites/file/*.js'],
+        dest: 'dest/sites/file',
+      },
+      paste_sites: {
+        src: ['src/sites/paste/*.js'],
+        dest: 'dest/sites/paste',
       },
     },
     concat: {
@@ -22,14 +34,51 @@ module.exports = function (grunt) {
         options: {
           banner: '// ==UserScript==\n',
           footer: '// ==/UserScript==\n',
-          process: true,
+          process: {
+            data: {
+              pkg: grunt.file.readJSON('package.json'),
+              lite: false,
+            },
+          },
         },
         src: ['src/util/metadata.js'],
-        dest: 'dest/nopicads.meta.js',
+        dest: 'dest/adsbypasser.meta.js',
+      },
+      lite_meta: {
+        options: {
+          banner: '// ==UserScript==\n',
+          footer: '// ==/UserScript==\n',
+          process: {
+            data: {
+              pkg: grunt.file.readJSON('package.json'),
+              lite: true,
+            },
+          },
+        },
+        src: ['src/util/metadata.js'],
+        dest: 'dest/adsbypasserlite.meta.js',
       },
       user: {
-        src: ['dest/nopicads.meta.js', 'dest/util/core.js', 'dest/util/dom.js', 'dest/sites/*.js', 'src/util/main.js'],
-        dest: 'dest/nopicads.user.js',
+        src: [
+          'dest/adsbypasser.meta.js',
+          'dest/util/core.js',
+          'dest/util/dom.js',
+          'dest/sites/*/*.js',
+          'src/util/main.js',
+        ],
+        dest: 'dest/adsbypasser.user.js',
+      },
+      lite_user: {
+        src: [
+          'dest/adsbypasserlite.meta.js',
+          'dest/util/core.js',
+          'dest/util/dom.js',
+          'dest/sites/link/*.js',
+          'dest/sites/file/*.js',
+          'dest/sites/paste/*.js',
+          'src/util/main.js',
+        ],
+        dest: 'dest/adsbypasserlite.user.js',
       },
     },
     clean: ['dest/sites', 'dest/util'],
@@ -54,8 +103,10 @@ module.exports = function (grunt) {
       options: {
         config: 'deploy/ghpages/config.json',
         summary: 'dest/summary.md',
-        userjs: 'dest/nopicads.user.js',
-        metajs: 'dest/nopicads.meta.js',
+        userjs: 'dest/adsbypasser.user.js',
+        metajs: 'dest/adsbypasser.meta.js',
+        lite_userjs: 'dest/adsbypasserlite.user.js',
+        lite_metajs: 'dest/adsbypasserlite.meta.js',
       },
     },
   });
@@ -81,8 +132,13 @@ module.exports = function (grunt) {
   grunt.registerTask('summary', function () {
     var done = this.async();
 
+
     grunt.util.spawn({
-      cmd: 'deploy/summary.py',
+      cmd: 'python2',
+      args: ['-m', 'mirrors.summary'],
+      opts: {
+        cwd: 'deploy',
+      },
     }, function (error, result, code) {
       if (error) {
         throw error;
@@ -95,14 +151,14 @@ module.exports = function (grunt) {
     var done = this.async();
     var data = grunt.file.readJSON('.deploy.json');
 
-    if (grunt.file.exists('dest/nopicads')) {
+    if (grunt.file.exists('dest/adsbypasser')) {
       done();
       return;
     }
 
     grunt.util.spawn({
       cmd: 'git',
-      args: ['clone', data.ghpages.REPO, 'dest/nopicads'],
+      args: ['clone', data.ghpages.REPO, 'dest/adsbypasser'],
     }, function (error, result, code) {
       if (error) {
         throw error;
@@ -110,9 +166,9 @@ module.exports = function (grunt) {
 
       grunt.util.spawn({
         cmd: 'git',
-        args: ['checkout', 'gh-pages'],
+        args: ['checkout', 'master'],
         opts: {
-          cwd: 'dest/nopicads',
+          cwd: 'dest/adsbypasser',
         },
       }, function (error, result, code) {
         if (error) {
@@ -128,7 +184,7 @@ module.exports = function (grunt) {
     var options = this.options();
     var rootPath = 'deploy/ghpages/contents';
     var releasePath = path.join(rootPath, 'releases');
-    var outPath = 'dest/nopicads';
+    var outPath = 'dest/adsbypasser';
     var done = this.async();
 
     // copy summary
@@ -136,6 +192,8 @@ module.exports = function (grunt) {
     // copy compiled files
     grunt.file.copy(options.userjs, path.join(releasePath, path.basename(options.userjs)));
     grunt.file.copy(options.metajs, path.join(releasePath, path.basename(options.metajs)));
+    grunt.file.copy(options.lite_userjs, path.join(releasePath, path.basename(options.lite_userjs)));
+    grunt.file.copy(options.lite_metajs, path.join(releasePath, path.basename(options.lite_metajs)));
 
     var env = wintersmith(options.config);
     env.build(outPath, function (error) {
@@ -147,6 +205,8 @@ module.exports = function (grunt) {
       grunt.file.delete(path.join(rootPath, path.basename(options.summary)));
       grunt.file.delete(path.join(releasePath, path.basename(options.userjs)));
       grunt.file.delete(path.join(releasePath, path.basename(options.metajs)));
+      grunt.file.delete(path.join(releasePath, path.basename(options.lite_userjs)));
+      grunt.file.delete(path.join(releasePath, path.basename(options.lite_metajs)));
 
       done();
     });
