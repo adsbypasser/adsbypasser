@@ -18,6 +18,9 @@ $.register({
   ready: function () {
     'use strict';
 
+    // If the target is a direct link, then our script opens it, and afterwards the script of the website opens it too if the timer is not stopped
+    $.removeAllTimer();
+
     var matches = $.searchScripts(/'slug':\s*'([^']+)',\s*'hoster':\s*'([^']+)'/);
 
     var slug = matches[1];

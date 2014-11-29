@@ -201,9 +201,13 @@ var $;
 
 
     $.removeAllTimer = function () {
-      var intervalID = window.setInterval(_.nop, 10);
-      while (intervalID > 0) {
-        window.clearInterval(intervalID--);
+      var handle = window.setInterval(_.nop, 10);
+      while (handle > 0) {
+        window.clearInterval(handle--);
+      }
+      handle = window.setTimeout(_.nop, 10);
+      while (handle > 0) {
+        window.clearTimeout(handle--);
       }
     };
 
