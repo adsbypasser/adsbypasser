@@ -1,4 +1,4 @@
-## TBA
+## 5.8.0
 
 * fixed
     * jheberg.net
