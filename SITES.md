@@ -299,6 +299,7 @@
     * imgclick.net
     * imgmega.com
     * imgpaying.com
+    * imgrock.net
     * imgsee.me
     * imzdrop.com
 * imgsure.com
