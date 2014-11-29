@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * jheberg.net
+    * linkbucks.com
+* added
+    * imgrock.net
+
 ## 5.7.0
 
 * fixed
