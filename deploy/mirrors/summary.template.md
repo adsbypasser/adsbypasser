@@ -29,9 +29,9 @@ Forked from [RedirectionHelper] writen by [SuYS], and here are our nice
 contributors. (sort by GitHub account)
 
 * [a123b](https://github.com/a123b)
-* [U BLESS](https://github.com/ebenerer21)
 * [bitst0rm](https://github.com/bitst0rm)
 * [noname120](https://github.com/devnoname120), the author of [AntiAdware](https://github.com/handyuserscripts/antiadware#readme)
+* [U BLESS](https://github.com/ebenerer21)
 * [MNB](https://github.com/MNBuyskih)
 * [ofyxp](https://github.com/ofyxp)
 * [RickyChen](https://github.com/RickyChien)
