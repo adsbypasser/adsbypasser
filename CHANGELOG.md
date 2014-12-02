@@ -1,3 +1,19 @@
+## 5.8.0
+
+* fixed
+    * jheberg.net
+    * linkbucks.com
+* added
+    * imgrock.net
+
+## 5.7.0
+
+* fixed
+    * Safiri support with TamperMonkey
+    * onbeforeunload event blocking
+* added
+    * oni.vn
+
 ## 5.6.0
 
 * fixed

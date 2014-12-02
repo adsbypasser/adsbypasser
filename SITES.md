@@ -299,6 +299,7 @@
     * imgclick.net
     * imgmega.com
     * imgpaying.com
+    * imgrock.net
     * imgsee.me
     * imzdrop.com
 * imgsure.com
@@ -427,6 +428,7 @@
     * noelshack.com
     * nsfw.in
     * nutshellurl.com
+    * oni.vn
     * oxyl.me
     * p.pw
     * pic-money.ru
