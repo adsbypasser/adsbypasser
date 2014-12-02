@@ -1,12 +1,15 @@
 $.register({
   rule: {
-    host: /^ethi\.in$/,
+    host: [
+    	/^ethi\.in$/,
+    	/^st\.wardhanime\.net$/,
+    ],
     path: /^\/i\/\d+$/,
   },
   ready: function () {
     'use strict';
 
-    var a = $('#wrapper > .tombol > a[target="_blank"]');
+    var a = $('#wrapper > [class^="tombo"] > a[target="_blank"]');
     $.openLink(a.href);
   },
 });
