@@ -436,7 +436,9 @@ var $;
         injected = vaccine;
       } else {
         try {
-          injected = exportFunction(vaccine, unsafeWindow);
+          injected = exportFunction(vaccine, unsafeWindow, {
+            allowCrossOriginArguments: true,
+          });
         } catch(e) {
           console.error(e);
         }
