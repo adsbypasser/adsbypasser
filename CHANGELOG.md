@@ -1,3 +1,11 @@
+## TBA
+
+* added
+    * shortenurl.tk
+    * st.wardhanime.net
+    * imgxyz.net
+    * hentaimg.com
+
 ## 5.8.0
 
 * fixed
