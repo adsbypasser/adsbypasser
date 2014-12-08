@@ -123,6 +123,7 @@
     * imgspot.org
     * imgtwyti.com
     * imgult.com
+    * imgxyz.net
     * pixup.us
     * teenshot.org
     * vava.in
@@ -319,6 +320,9 @@
     * dl.nsfk.in
     * moe.god.jp
     * moesubs.akurapopo.pro
+* ethi.in
+    * ethi.in
+    * st.wardhanime.net
 * else
     * 01.nl
     * 1be.biz
@@ -358,7 +362,6 @@
     * dumppix.com
     * durl.me
     * embedupload.com
-    * ethi.in
     * filoops.info
     * fit.sh
     * fotolink.su
@@ -369,6 +372,7 @@
     * gkurl.us
     * go2.me
     * goimagehost.com
+    * hentaimg.com
     * hostingpics.net
     * hotshorturl.com
     * ichan.org
@@ -456,7 +460,7 @@
     * safeurl.eu
     * screenlist.ru
     * setlinks.us
-    * sh.st
+    * shortenurl.tk
     * shorturl.rapeit.net
     * similarsites.com
     * srelink.com
