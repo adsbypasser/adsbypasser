@@ -794,7 +794,7 @@ var $;
           }
           return oael.apply(this, arguments);
         };
-        o.addEventListener = $.inject(addEventListener);
+        o.addEventListener = $.inject(nael);
       });
     }
 
