@@ -425,6 +425,7 @@ var $;
       } else {
         injected = cloneInto(vaccine, unsafeWindow, {
           cloneFunctions: true,
+          wrapReflectors: true,
         });
       }
       return injected;
@@ -764,9 +765,9 @@ var $;
 
     function disableLeavePrompt () {
       var seal = {
-        set: $.inject(function () {
+        set: function () {
           _.info('blocked onbeforeunload');
-        }),
+        },
       };
       // NOTE maybe break in future Firefox release
       _.C([unsafeWindow, unsafeWindow.document.body]).each(function (o) {
@@ -782,7 +783,11 @@ var $;
           // Safiri must use old-style method
           o.__defineSetter__('onbeforeunload', seal.set);
         } else {
-          Object.defineProperty(o, 'onbeforeunload', $.inject(seal));
+          var opd = Object.getOwnPropertyDescriptor(o, 'onbeforeunload');
+          if (opd) {
+            opd.set = $.inject(seal.set);
+            Object.defineProperty(o, 'onbeforeunload', opd);
+          }
         }
 
         // block addEventListener
