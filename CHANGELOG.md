@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * properly disable leave prompts
+
 ## 5.9.0
 
 * added
