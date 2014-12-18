@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * error on webkit-based browsers
+
 ## 5.9.1
 
 * fixed
