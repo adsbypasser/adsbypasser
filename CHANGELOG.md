@@ -1,4 +1,4 @@
-## TBA
+## 5.9.2
 
 * fixed
     * error on webkit-based browsers
