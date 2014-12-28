@@ -45,6 +45,27 @@
     },
   });
 
+  $.register({
+    rule: {
+      host: /^uploadrr\.com$/,
+      path: /^\/([^\/]+)$/,
+    },
+    ready: function (m) {
+      var i = $.$('img.pic');
+      if (!i) {
+        // first stage
+        $.openLinkByPost('', {
+          op: 'view',
+          id: m.path[1],
+          pre: 1,
+          next: 'Continue to image...',
+        });
+        return;
+      }
+      $.openImage(i.src);
+    },
+  });
+
 })();
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
