@@ -1,7 +1,7 @@
 $.register({
   rule: {
     host: [
-      /^mant(a|e)p\.in$/,
+      /^mant[ae][pb]\.in$/,
       /^st\.oploverz\.net$/,
     ],
   },
