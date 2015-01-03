@@ -39,6 +39,7 @@
     * 244pix.com
     * catpic.biz
     * dwimg.com
+    * empireload.com
     * funextra.hostzi.com
     * hentai-hosting.com
     * imageback.info
@@ -303,6 +304,7 @@
     * imgrock.net
     * imgsee.me
     * imzdrop.com
+    * uploadrr.com
 * imgsure.com
     * imgsure.com
     * picexposed.com
@@ -315,6 +317,7 @@
 * mantap.in
     * mantap.in
     * mantep.in
+    * manteb.in
     * st.oploverz.net
 * moe.god.jp
     * dl.nsfk.in
@@ -369,6 +372,7 @@
     * fundurl.com
     * funkyimg.com
     * gallerynova.se
+    * gca.sh (manual captcha)
     * gkurl.us
     * go2.me
     * goimagehost.com
