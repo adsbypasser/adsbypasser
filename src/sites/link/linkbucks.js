@@ -162,11 +162,11 @@
     // this is stupid, but inspecting script on every page is too heavy
     $.register({
       rule: {
-        query: /^\?_lbGate=\d+$/,
+        query: /^(.*)[?&]_lbGate=\d+$/,
       },
-      start: function () {
+      start: function (m) {
         $.setCookie('_lbGatePassed', 'true');
-        $.openLink(window.location.pathname);
+        $.openLink(window.location.pathname + m.query[1]);
       },
     });
 
