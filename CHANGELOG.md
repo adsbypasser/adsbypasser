@@ -1,3 +1,10 @@
+## TBA
+
+* fixed
+    * safelinkconverter2.com
+    * 55888.eu
+    * entry script of linkbucks.com
+
 ## 5.9.2
 
 * fixed
