@@ -32,7 +32,7 @@
 
   $.register({
     rule: {
-      host: /^sh\.st|dh10thbvu\.com|u2ks\.com$/,
+      host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com$/,
       path: /^\/[\d\w]+/,
     },
     ready: function () {
