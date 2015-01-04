@@ -1,5 +1,9 @@
 ## TBA
 
+* fixed
+    * safelinkconverter2.com
+    * 55888.eu
+    * entry script of linkbucks.com
 * added
     * uploadrr.com
     * manteb.in

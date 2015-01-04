@@ -2,12 +2,19 @@ $.register({
   rule: {
     host: /^(www\.)?safelinkconverter2\.com$/,
     path: /^\/decrypt-\d\/$/,
-    query: /id=(\w+==)/,
+    query: /id=(\w+=+)/,
   },
-  ready: function (m) {
+  start: function (m) {
     'use strict';
-    
-    $.openLink(window.atob(m.query[1]));
+
+    $.get('https://decrypt.safelinkconverter.com/index.php' + window.location.search, {}, function (html) {
+      var m = html.match(/3;URL=([^"]+)/);
+      if (!m) {
+        _.warn('pattern changed');
+        return;
+      }
+      $.openLink(m[1]);
+    });
   },
 });
 

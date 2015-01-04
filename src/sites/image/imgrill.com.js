@@ -29,6 +29,7 @@
         /^(image\.adlock|imgspot|teenshot)\.org$/,
         /^img\.yt$/,
         /^vava\.in$/,
+        /^55888\.eu$/,
       ],
       path: /^\/img-.*\.html$/,
     },
