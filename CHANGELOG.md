@@ -1,3 +1,12 @@
+## TBA
+
+* added
+    * uploadrr.com
+    * manteb.in
+    * empireload.com
+    * gca.sh (manual captcha)
+    * jnw0.com
+
 ## 5.9.2
 
 * fixed
