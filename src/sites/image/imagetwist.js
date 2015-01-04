@@ -2,8 +2,8 @@
   'use strict';
 
   function run () {
-    // dirty hack
-    unsafeWindow.$ = undefined;
+    // dirty hack, prevent scripts appending elements
+    unsafeWindow.jQuery.prototype.append = undefined;
     var i = $('img.pic');
     $.replace(i.src);
   }
