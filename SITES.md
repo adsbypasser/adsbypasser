@@ -285,6 +285,7 @@
     * redirects.ca
 * sh.st
     * dh10thbvu.com
+    * jnw0.com
     * sh.st
     * u2ks.com
 * seomafia.net
