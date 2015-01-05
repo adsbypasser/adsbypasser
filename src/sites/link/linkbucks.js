@@ -115,7 +115,7 @@
     $.register({
       rule: {
         host: hostRules,
-        path: /^\/\w+\/url\/(.*)$/,
+        path: /^\/\w+\/url\/(.+)$/,
       },
       ready: function(m) {
         $.removeAllTimer();
