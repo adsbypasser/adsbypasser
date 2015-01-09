@@ -7,7 +7,7 @@ var bluebird = require('bluebird');
 
 var _ = require('../src/util/core.js');
 _ = _(this, bluebird.Promise);
-var npa = require('../src/util/dom.js');
+var dom = require('../src/util/dom.js');
 
 _.info = _.nop;
 _.warn = _.nop;
@@ -27,22 +27,20 @@ function wrap (browser, config) {
     }
   });
 
-  var tmp = npa({
-    _: _,
-    window: browser.window,
-    unsafeWindow: browser.window,
-    GM: {
-      getValue: function (key, default_) {
-        if (config.hasOwnProperty(key)) {
-          return config[key];
-        }
-        return default_;
-      },
-      setValue: function (key, value) {
-        config[key] = value;
-      },
-      registerMenuCommand: _.nop,
+  // FIXME need a sandbox
+  browser.window.unsafeWindow = browser.window;
+  browser.window._ = _;
+  var tmp = dom(browser.window, {
+    getValue: function (key, default_) {
+      if (config.hasOwnProperty(key)) {
+        return config[key];
+      }
+      return default_;
     },
+    setValue: function (key, value) {
+      config[key] = value;
+    },
+    registerMenuCommand: _.nop,
   });
   tmp._main(true);
 
