@@ -15,7 +15,7 @@
     "chai": "",
     "connect": "",
     "serve-static": "",
-    "zombie": "2.0.0-alpha31",
+    "zombie": "",
     "wintersmith": "",
     "wintersmith-less": ""
   },

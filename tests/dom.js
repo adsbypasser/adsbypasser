@@ -60,7 +60,7 @@ describe('dom', function () {
 
   before(function (done) {
     this.server = connect().use(serveStatic('./tests')).listen(SERVER_PORT, done);
-    browser = new Browser();
+    browser = Browser.create();
   });
 
   after(function () {
@@ -86,7 +86,7 @@ describe('dom', function () {
         s.textContent.should.equal('text 2');
 
         done();
-      }).done(null, function (error) {
+      }).catch(function (error) {
         done(error);
       });
     });
@@ -100,7 +100,7 @@ describe('dom', function () {
         }).should.throw(_.NoPicAdsError);
 
         done();
-      }).done(null, function (error) {
+      }).catch(function (error) {
         done(error);
       });
     });
@@ -122,7 +122,7 @@ describe('dom', function () {
         s.textContent.should.equal('text 2');
 
         done();
-      }).done(null, function (error) {
+      }).catch(function (error) {
         done(error);
       });
     });
@@ -135,7 +135,7 @@ describe('dom', function () {
         expect(d).to.be.null;
 
         done();
-      }).done(null, function (error) {
+      }).catch(function (error) {
         done(error);
       });
     });
@@ -155,7 +155,7 @@ describe('dom', function () {
         });
 
         done();
-      }).done(null, function (error) {
+      }).catch(function (error) {
         done(error);
       });
     });
@@ -173,7 +173,7 @@ describe('dom', function () {
         expect($.$('.label')).to.be.not.found;
 
         done();
-      }).done(null, function (error) {
+      }).catch(function (error) {
         done(error);
       });
     });
@@ -184,28 +184,34 @@ describe('dom', function () {
   describe('$.openLink', function () {
 
     it('should not accept invalid URL', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
+      browser.visit(SERVER_PAGE_1).catch(function (error) {
+        done(error);
+      }).then(function () {
         var $ = wrap(browser);
 
         $.openLink(null);
+
+        return browser.wait();
+      }).then(function () {
         browser.window.location.toString().should.equals(SERVER_PAGE_1);
 
         done();
-      }).done(null, function (error) {
-        done(error);
       });
     });
 
     it('should redirect to a valid URL', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
+      var self = this;
+      browser.visit(SERVER_PAGE_1).catch(function (error) {
+        done(error);
+      }).then(function () {
         var $ = wrap(browser);
 
         $.openLink(SERVER_PAGE_2);
-        browser.window.location.toString().should.equals(SERVER_PAGE_2);
 
+        return browser.wait();
+      }).then(function () {
+        browser.window.location.toString().should.equals(SERVER_PAGE_2);
         done();
-      }).done(null, function (error) {
-        done(error);
       });
     });
 
@@ -215,44 +221,52 @@ describe('dom', function () {
   describe('$.openImage', function () {
 
     it('should not accept invalid URL', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
+      browser.visit(SERVER_PAGE_1).catch(function (error) {
+        done(error);
+      }).then(function () {
         var $ = wrap(browser);
 
         $.openImage(null);
-        browser.window.location.toString().should.equals(SERVER_PAGE_1);
 
+        return browser.wait();
+      }).then(function () {
+        browser.window.location.toString().should.equals(SERVER_PAGE_1);
         done();
-      }).done(null, function (error) {
-        done(error);
       });
     });
 
     it('should not open image if redirect_image is disabled', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
+      browser.visit(SERVER_PAGE_1).catch(function (error) {
+        done(error);
+      }).then(function () {
         var $ = wrap(browser, {
           redirect_image: false,
         });
 
         $.openImage('does_not_exist');
-        browser.window.location.toString().should.equals(SERVER_PAGE_1);
 
+        return browser.wait();
+      }).then(function () {
+        browser.window.location.toString().should.equals(SERVER_PAGE_1);
         done();
-      }).done(null, function (error) {
-        done(error);
       });
     });
 
     it('should open image by default', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
+      var path = '/does_not_exist';
+
+      browser.visit(SERVER_PAGE_1).catch(function (error) {
+        done(error);
+      }).then(function () {
         var $ = wrap(browser);
 
-        var path = '/does_not_exist';
         $.openImage(path);
-        browser.window.location.pathname.should.equals(path);
 
+        return browser.wait();
+      }).catch(function () {
+        // excepted 404
+        browser.window.location.pathname.should.equals(path);
         done();
-      }).done(null, function (error) {
-        done(error);
       });
     });
 
