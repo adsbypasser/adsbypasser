@@ -3,8 +3,10 @@ var expect = chai.expect;
 var connect = require('connect');
 var serveStatic = require('serve-static');
 var Browser = require('zombie');
+var bluebird = require('bluebird');
 
 var _ = require('../src/util/core.js');
+_ = _(this, bluebird.Promise);
 var npa = require('../src/util/dom.js');
 
 _.info = _.nop;

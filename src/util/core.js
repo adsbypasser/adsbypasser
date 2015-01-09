@@ -1,6 +1,13 @@
-var _ = typeof module !== 'undefined' ? module.exports : {};
-(function () {
+(function (global, factory) {
+  if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = factory;
+  } else {
+    factory(global, Promise);
+  }
+}(this, function (global, Promise) {
   'use strict';
+
+  var _ = global._ = {};
 
   function setupStack () {
     if (Error.captureStackTrace) {
@@ -195,6 +202,10 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
   };
 
 
+  _.D = function (fn) {
+    return new Promise(fn);
+  };
+
   _.nop = function () {
   };
 
@@ -223,7 +234,9 @@ var _ = typeof module !== 'undefined' ? module.exports : {};
   };
 
 
-})();
+  return _;
+
+}));
 
 
 // ex: ts=2 sts=2 sw=2 et

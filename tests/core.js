@@ -1,9 +1,10 @@
 var chai = require('chai');
 var expect = chai.expect;
 var should = chai.should();
+var bluebird = require('bluebird');
 
 var _ = require('../src/util/core.js');
-
+_ = _(this, bluebird.Promise);
 
 describe('core', function () {
 
@@ -158,6 +159,53 @@ describe('core', function () {
       _.C([1, 2, 3]).map(function (v) {
         return v % 2 === 0;
       }).should.be.deep.equals([false, true, false]);
+    });
+
+  });
+
+  describe('deferred', function () {
+
+    it('should be resolvable', function (done) {
+      var d = _.D(function (resolve, reject) {
+        setTimeout(function () {
+          resolve(42);
+        }, 10);
+      });
+      d.then(function (answer) {
+        answer.should.equals(42);
+        done();
+      });
+    });
+
+    it('should be rejectable', function (done) {
+      var d = _.D(function (resolve, reject) {
+        setTimeout(function () {
+          reject(42);
+        }, 10);
+      });
+      d.catch(function (answer) {
+        answer.should.equals(42);
+        done();
+      });
+    });
+
+    it('should be chainable', function (done) {
+      var d = _.D(function (resolve, reject) {
+        setTimeout(function () {
+          resolve(1);
+        }, 10);
+      });
+      d.then(function (answer) {
+        answer.should.equals(1);
+        return _.D(function (resolve, reject) {
+          setTimeout(function () {
+            reject(2);
+          }, 10);
+        });
+      }).catch(function (answer) {
+        answer.should.equals(2);
+        done();
+      });
     });
 
   });
