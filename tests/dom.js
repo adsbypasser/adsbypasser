@@ -13,36 +13,10 @@ _.info = _.nop;
 _.warn = _.nop;
 
 
-var defaultConfig = {
-  version: 1,
-  redirect_image: true,
-  align_image: true,
-};
-
-function wrap (browser, config) {
-  config = config || {};
-  _.C(defaultConfig).each(function (v, k) {
-    if (!config.hasOwnProperty(k)) {
-      config[k] = v;
-    }
-  });
-
+function wrap (browser) {
   // FIXME need a sandbox
   browser.window.unsafeWindow = browser.window;
-  browser.window._ = _;
-  var tmp = dom(browser.window, {
-    getValue: function (key, default_) {
-      if (config.hasOwnProperty(key)) {
-        return config[key];
-      }
-      return default_;
-    },
-    setValue: function (key, value) {
-      config[key] = value;
-    },
-    registerMenuCommand: _.nop,
-  });
-  tmp._main(true);
+  var tmp = dom(browser.window, _);
 
   return tmp;
 }
@@ -177,135 +151,6 @@ describe('dom', function () {
         done(error);
       });
     });
-
-  });
-
-
-  describe('$.openLink', function () {
-
-    it('should not accept invalid URL', function (done) {
-      browser.visit(SERVER_PAGE_1).catch(function (error) {
-        done(error);
-      }).then(function () {
-        var $ = wrap(browser);
-
-        $.openLink(null);
-
-        return browser.wait();
-      }).then(function () {
-        browser.window.location.toString().should.equals(SERVER_PAGE_1);
-
-        done();
-      });
-    });
-
-    it('should redirect to a valid URL', function (done) {
-      var self = this;
-      browser.visit(SERVER_PAGE_1).catch(function (error) {
-        done(error);
-      }).then(function () {
-        var $ = wrap(browser);
-
-        $.openLink(SERVER_PAGE_2);
-
-        return browser.wait();
-      }).then(function () {
-        browser.window.location.toString().should.equals(SERVER_PAGE_2);
-        done();
-      });
-    });
-
-  });
-
-
-  describe('$.openImage', function () {
-
-    it('should not accept invalid URL', function (done) {
-      browser.visit(SERVER_PAGE_1).catch(function (error) {
-        done(error);
-      }).then(function () {
-        var $ = wrap(browser);
-
-        $.openImage(null);
-
-        return browser.wait();
-      }).then(function () {
-        browser.window.location.toString().should.equals(SERVER_PAGE_1);
-        done();
-      });
-    });
-
-    it('should not open image if redirect_image is disabled', function (done) {
-      browser.visit(SERVER_PAGE_1).catch(function (error) {
-        done(error);
-      }).then(function () {
-        var $ = wrap(browser, {
-          redirect_image: false,
-        });
-
-        $.openImage('does_not_exist');
-
-        return browser.wait();
-      }).then(function () {
-        browser.window.location.toString().should.equals(SERVER_PAGE_1);
-        done();
-      });
-    });
-
-    it('should open image by default', function (done) {
-      var path = '/does_not_exist';
-
-      browser.visit(SERVER_PAGE_1).catch(function (error) {
-        done(error);
-      }).then(function () {
-        var $ = wrap(browser);
-
-        $.openImage(path);
-
-        return browser.wait();
-      }).catch(function () {
-        // excepted 404
-        browser.window.location.pathname.should.equals(path);
-        done();
-      });
-    });
-
-  });
-
-
-  describe('$.replace', function () {
-
-    it('should not accept invalid URL', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
-        var $ = wrap(browser);
-
-        var b = browser.window.document.body;
-        $.replace(null);
-        browser.window.document.body.should.be.equals(b);
-
-        done();
-      }).done(null, function (error) {
-        done(error);
-      });
-    });
-
-    it('should not replace body if redirect_image is disabled', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
-        var $ = wrap(browser, {
-          redirect_image: false,
-        });
-
-        var b = browser.window.document.body;
-        $.replace('does_not_exist');
-        browser.window.document.body.should.be.equals(b);
-
-        done();
-      }).done(null, function (error) {
-        done(error);
-      });
-    });
-
-    it('should replace document.body');
 
   });
 

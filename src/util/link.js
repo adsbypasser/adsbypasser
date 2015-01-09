@@ -2,18 +2,9 @@
   if (typeof module === 'object' && typeof module.exports === 'object') {
     module.exports = factory;
   } else {
-    factory(global, {
-      getValue: GM_getValue,
-      setValue: GM_setValue,
-      xmlhttpRequest: GM_xmlhttpRequest,
-      getResourceText: GM_getResourceText,
-      addStyle: GM_addStyle,
-      getResourceURL: GM_getResourceURL,
-      openInTab: GM_openInTab,
-      registerMenuCommand: GM_registerMenuCommand,
-    }, global._, global.$);
+    factory(global, global._, global.$);
   }
-}(this, function (global, GM, _, $) {
+}(this, function (global, _, $) {
   'use strict';
 
   var window = global.window;
