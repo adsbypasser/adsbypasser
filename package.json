@@ -16,6 +16,7 @@
     "connect": "",
     "serve-static": "",
     "zombie": "",
+    "bluebird": "",
     "wintersmith": "",
     "wintersmith-less": ""
   },
