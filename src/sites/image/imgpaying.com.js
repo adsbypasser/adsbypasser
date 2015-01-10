@@ -47,22 +47,22 @@
 
   $.register({
     rule: {
-      host: /^uploadrr\.com$/,
+      host: /^(uploadrr|imageeer)\.com$/,
       path: /^\/([^\/]+)$/,
     },
     ready: function (m) {
       var i = $.$('img.pic');
-      if (!i) {
-        // first stage
-        $.openLinkByPost('', {
-          op: 'view',
-          id: m.path[1],
-          pre: 1,
-          next: 'Continue to image...',
-        });
+      if (i) {
+        $.openImage(i.src);
         return;
       }
-      $.openImage(i.src);
+      // first stage
+      $.openLinkByPost('', {
+        op: 'view',
+        id: m.path[1],
+        pre: 1,
+        next: 'Continue to image...',
+      });
     },
   });
 
