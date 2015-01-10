@@ -38,6 +38,14 @@
 
   $.register({
     rule: {
+      host: /^imgking\.co$/,
+      path: /^\/img-.*\.htmls$/,
+    },
+    ready: handler,
+  });
+
+  $.register({
+    rule: {
       host: /^08lkk\.com$/,
       path: /^\/\d+\/img-.*\.html$/,
     },
