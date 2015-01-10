@@ -13,7 +13,7 @@ $.register({
     $.removeNodes('iframe');
     $.post('/ajax/check_redirect.php', {
       link: m[1],
-    }, function (text) {
+    }).then(function (text) {
       $.openLink(text);
     });
   },

@@ -26,7 +26,10 @@ $.register({
     var slug = matches[1];
     var hoster = matches[2];
 
-    $.post('/get/link/', {'slug': slug, 'hoster': hoster}, function(response) {
+    $.post('/get/link/', {
+      'slug': slug,
+      'hoster': hoster
+    }).then(function(response) {
       var respJSON = JSON.parse(response);
       $.openLink(respJSON.url);
     });

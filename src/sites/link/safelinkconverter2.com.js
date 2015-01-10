@@ -7,7 +7,7 @@ $.register({
   start: function (m) {
     'use strict';
 
-    $.get('https://decrypt.safelinkconverter.com/index.php' + window.location.search, {}, function (html) {
+    $.get('https://decrypt.safelinkconverter.com/index.php' + window.location.search).then(function (html) {
       var m = html.match(/3;URL=([^"]+)/);
       if (!m) {
         _.warn('pattern changed');

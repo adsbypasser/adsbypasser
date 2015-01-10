@@ -22,7 +22,9 @@ $.register({
     // Confirm value, seems to always be '0' yet, but we anyways get it in case it changes in the future.
     var confirm = $.searchScripts(/\$\("#confirmImage"\).val\("([^"]+)"\)/)[1];
 
-    $.post('/site/viewConfirmCode/' + m.path[1], {confirm: confirm}, function (rawJson) {
+    $.post('/site/viewConfirmCode/' + m.path[1], {
+      confirm: confirm
+    }).then(function (rawJson) {
     	// Good to know: the image is already present in the JSON as base64
     	var json = JSON.parse(rawJson);
 

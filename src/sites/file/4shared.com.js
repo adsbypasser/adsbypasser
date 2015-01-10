@@ -8,7 +8,7 @@ $.register({
 
     $.get('http://www.4server.info/find.php', {
       data: window.location.href,
-    }, function (data) {
+    }).then(function (data) {
       var d = $.toDOM(data);
       var c = $('meta[http-equiv=refresh]', d);
       var b = c.content.match(/URL=(.+)$/);

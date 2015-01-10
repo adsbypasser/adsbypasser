@@ -87,7 +87,7 @@
       _.info('sending token: %o', token);
 
       var i = setInterval(function () {
-        $.get('/intermission/loadTargetUrl', token, function (text) {
+        $.get('/intermission/loadTargetUrl', token).then(function (text) {
           var data = JSON.parse(text);
 
           _.info('response: %o', data);
@@ -96,7 +96,7 @@
             // somehow this token is invalid, reload to get new one
             _.info('got invalid token');
             clearInterval(i);
-            $.get(window.location.toString(), {}, function (text) {
+            $.get(window.location.toString()).then(function (text) {
               var d = $.toDOM(text);
               var t = findToken(d);
               sendRequest(t);

@@ -56,7 +56,7 @@
     var make_opts = eval('(' + matches[2] + ')');
 
     var i = setInterval(function () {
-      $.post(make_url, make_opts, function (text) {
+      $.post(make_url, make_opts).then(function (text) {
         if (dirtyFix) {
           // dirty fix for tr5.in
           text = text.match(/\{.+\}/)[0];

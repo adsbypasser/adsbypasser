@@ -1,13 +1,13 @@
 (function () {
   'use strict';
-  
+
   var sUrl = '(\\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])';
-  
+
   function isLink (text) {
     var rUrl = new RegExp(_.T('^{0}$')(sUrl), 'i');
     return rUrl.test(text);
   }
-  
+
   function linkify (text) {
     var rUrl = new RegExp(sUrl, 'ig');
     return text.replace(rUrl, function(match) {
@@ -36,7 +36,7 @@
       var fake_user = 'binbox';
       var API_URL = _.T('https://{0}.binbox.io/{1}.json')(fake_user, paste_id);
 
-      $.get(API_URL, "", function (pasteInfo) {
+      $.get(API_URL).then(function (pasteInfo) {
         pasteInfo = JSON.parse(pasteInfo);
         if (!pasteInfo.ok) {
           throw new _.AdsBypasserError("error when getting paste information");
@@ -48,7 +48,7 @@
           $.openLink(raw_paste);
           return;
         }
-        
+
         // Create paste
         var elm = document.createElement('pre');
         elm.id = 'paste-text';

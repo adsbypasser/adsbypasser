@@ -25,7 +25,7 @@ $.register({
     var url = window.location.pathname + '/skip_timer';
 
     var i = setInterval(function () {
-      $.post(url, m, function (text) {
+      $.post(url, m).then(function (text) {
         var jj = JSON.parse(text);
         if (!jj.errors && jj.messages) {
           clearInterval(i);

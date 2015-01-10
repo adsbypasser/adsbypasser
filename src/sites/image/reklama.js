@@ -52,7 +52,7 @@
 
       // this site checks cookie that caculate from session
       // do an AJAX to skip checking
-      $.get(window.location.toString(), {}, function (data) {
+      $.get(window.location.toString()).then(function (data) {
         var a = $.toDOM(data);
         var i = $('img[class^=centred]', a);
         $.openImage(i.src);

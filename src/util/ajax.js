@@ -4,13 +4,12 @@
   } else {
     factory(global, {
       xmlhttpRequest: GM_xmlhttpRequest,
-    }, global._, global.$);
+    }, Promise, global._, global.$);
   }
-}(this, function (global, GM, _, $) {
+}(this, function (global, GM, Promise, _, $) {
   'use strict';
 
   var window = global.window;
-  var unsafeWindow = global.unsafeWindow;
   var document = window.document;
 
 
@@ -25,6 +24,9 @@
   }
 
   function toQuery (data) {
+    if (typeof data === 'undefined') {
+      return '';
+    }
     if (typeof data === 'string') {
       return data;
     }
@@ -39,7 +41,7 @@
     }).join('&');
   }
 
-  function ajax (method, url, data, headers, callback) {
+  function ajax (method, url, data, headers) {
     // Host is not alway the same as window.location.host, for example foo.example.org can perform a request to example.org
     var l = document.createElement('a');
     l.href = url;
@@ -48,40 +50,40 @@
     headers.Origin = window.location.origin;
     headers.Referer = window.location.href;
     headers['X-Requested-With'] = 'XMLHttpRequest';
-    var controller = GM.xmlhttpRequest({
-      method: method,
-      url: url,
-      data: data,
-      headers: headers,
-      onload: function (response) {
-        var headers = {
-          get: function (key) {
-            return this[key.toLowerCase()];
-          },
-        };
-        response.responseHeaders.split(/[\r\n]+/g).filter(function (v) {
-          return v.length !== 0;
-        }).map(function (v) {
-          return v.split(/:\s+/);
-        }).forEach(function (v) {
-          headers[v[0].toLowerCase()] = v[1];
-        });
-        callback(response.responseText, headers);
-      },
-    });
 
-    return controller;
+    var xhr = null;
+    var promise = _.D(function (resolve, reject) {
+      xhr = GM.xmlhttpRequest({
+        method: method,
+        url: url,
+        data: data,
+        headers: headers,
+        onload: function (response) {
+          if (this.status !== 200) {
+            reject(this.responseText);
+          } else {
+            resolve(this.responseText);
+          }
+        },
+        onerror: function (response) {
+          reject(this.responseText);
+        },
+      });
+    });
+    promise.abort = xhr.abort.bind(xhr);
+
+    return promise;
   }
 
-  $.get = function (url, data, callback, headers) {
+  $.get = function (url, data, headers) {
     data = toQuery(data);
     // Don't request with '?' if there is no data
-    data = data!==''? '?' + data : '';
+    data = data ? '?' + data : '';
     headers = headers || {};
-    return ajax('GET', url + data, '', headers, callback);
+    return ajax('GET', url + data, '', headers);
   };
 
-  $.post = function (url, data, callback, headers) {
+  $.post = function (url, data, headers) {
     data = toQuery(data);
     var h = {
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
@@ -92,7 +94,7 @@
         h[k] = v;
       });
     }
-    return ajax('POST', url, data, h, callback);
+    return ajax('POST', url, data, h);
   };
 
 

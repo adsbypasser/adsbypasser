@@ -20,13 +20,13 @@
     }
 
     var i = setInterval(function () {
-      $.get('/adSession/callback', data, function (text) {
+      $.get('/adSession/callback', data, header).then(function (text) {
         var r = JSON.parse(text);
         if (r.status == "ok" && r.destinationUrl) {
           clearInterval(i);
           $.openLink(r.destinationUrl);
         }
-      }, header);
+      });
     }, 1000);
   }
 

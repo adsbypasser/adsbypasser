@@ -16,7 +16,7 @@ $.register({
       fp: 0,
       location: location,
       referer: '',
-    }, function (text) {
+    }).then(function (text) {
       var m = text.match(/'([^']+)'/);
       if (!m) {
         throw new _.AdsBypasserError('pattern changed');
