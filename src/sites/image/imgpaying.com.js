@@ -47,7 +47,7 @@
 
   $.register({
     rule: {
-      host: /^(uploadrr|imageeer)\.com$/,
+      host: /^(uploadrr|imageeer)\.com|imgsee\.me$/,
       path: /^\/([^\/]+)$/,
     },
     ready: function (m) {
