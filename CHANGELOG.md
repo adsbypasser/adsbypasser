@@ -1,4 +1,4 @@
-## TBA
+## 5.11.0
 
 * fixed
     * imagetwist.com
