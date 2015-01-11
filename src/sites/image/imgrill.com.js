@@ -30,6 +30,7 @@
         /^img\.yt$/,
         /^vava\.in$/,
         /^55888\.eu$/,
+        /^pixxx\.me$/,
       ],
       path: /^\/img-.*\.html$/,
     },
