@@ -116,6 +116,7 @@
     * imgblow.com
     * imgcandy.net
     * imgcloud.co
+    * imgking.co
     * imgmaster.net
     * imgnext.com
     * imgrill.com
@@ -126,6 +127,7 @@
     * imgult.com
     * imgxyz.net
     * pixup.us
+    * pixxx.me
     * teenshot.org
     * vava.in
 * picfox
@@ -299,6 +301,7 @@
     * upan.so
     * gxp.so
 * imgpaying.com
+    * imageeer.com
     * imgclick.net
     * imgmega.com
     * imgpaying.com
@@ -424,6 +427,7 @@
     * link-protector.com
     * link2dollar.com
     * link2you.ru
+    * linkdecode.com
     * linkshrink.net
     * lix.in
     * lnk.in
