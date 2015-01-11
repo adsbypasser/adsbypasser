@@ -33,7 +33,7 @@ function wrap (browser) {
       }
       return xhr;
     },
-  }, bluebird.Promise, _, {});
+  }, _, {});
 
   return tmp;
 }

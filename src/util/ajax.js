@@ -4,9 +4,9 @@
   } else {
     factory(global, {
       xmlhttpRequest: GM_xmlhttpRequest,
-    }, Promise, global._, global.$);
+    }, global._, global.$);
   }
-}(this, function (global, GM, Promise, _, $) {
+}(this, function (global, GM, _, $) {
   'use strict';
 
   var window = global.window;
