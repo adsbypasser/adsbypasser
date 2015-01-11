@@ -1,3 +1,15 @@
+## TBA
+
+* fixed
+    * imagetwist.com
+    * linkbucks.com
+    * imgsee.me
+* added
+    * imageeer.com
+    * imgking.co
+    * pixxx.me
+    * linkdecode.com
+
 ## 5.10.0
 
 * fixed
