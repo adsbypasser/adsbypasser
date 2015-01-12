@@ -7,7 +7,6 @@ from summary import make_summary
 
 def exec_(config, edition, another_edition, script):
     USERNAME = config['USERNAME']
-    NAMESPACE = config['NAMESPACE']
     SCRIPTNAME = config[edition]['SCRIPTNAME']
     GITHUB_USERNAME = config['GITHUB_USERNAME']
     GITHUB_PASSWORD = config['GITHUB_PASSWORD']
@@ -15,8 +14,8 @@ def exec_(config, edition, another_edition, script):
     HOME_URL = 'https://openuserjs.org'
     LOGIN_URL = '{0}/register'.format(HOME_URL)
     SCRIPT_URL = '{0}/user/add/scripts/new'.format(HOME_URL)
-    ABOUT_URL = '{0}/script/{1}/{2}/edit'.format(HOME_URL, NAMESPACE, SCRIPTNAME)
-    URL_PARAM = '/scripts/{0}/{1}/{2}/source'.format(USERNAME, NAMESPACE, SCRIPTNAME)
+    ABOUT_URL = '{0}/script/{1}/edit'.format(HOME_URL, SCRIPTNAME)
+    URL_PARAM = '/scripts/{0}/{1}/source'.format(USERNAME, SCRIPTNAME)
 
     summary = make_summary()
     another_edition = config[another_edition]
