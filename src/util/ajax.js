@@ -59,14 +59,17 @@
         data: data,
         headers: headers,
         onload: function (response) {
-          if (this.status !== 200) {
-            reject(this.responseText);
+          // NOTE GreaseMonkey and Webkit have different spec
+          response = (typeof this.responseText !== 'undefined') ? this : response;
+          if (response.status !== 200) {
+            reject(response.responseText);
           } else {
-            resolve(this.responseText);
+            resolve(response.responseText);
           }
         },
         onerror: function (response) {
-          reject(this.responseText);
+          response = (typeof this.responseText !== 'undefined') ? this : response;
+          reject(response.responseText);
         },
       });
     });
