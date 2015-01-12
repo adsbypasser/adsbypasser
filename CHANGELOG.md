@@ -1,4 +1,4 @@
-## TBA
+## 5.11.1
 
 * fixed
     * AJAX for GreaseMonkey
