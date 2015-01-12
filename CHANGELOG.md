@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * AJAX for GreaseMonkey
+
 ## 5.11.0
 
 * fixed
@@ -1587,7 +1592,7 @@
 ## 2.6.1
 
 * fixed
-    * Greasemonkey auto update problem
+    * GreaseMonkey auto update problem
 
 
 ## 2.6.0
