@@ -1,4 +1,4 @@
-## TBA
+## 5.11.2
 
 * fixed
     * cur.lv
