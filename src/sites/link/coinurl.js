@@ -9,7 +9,7 @@ $.register({
     $.removeNodes('iframe');
 
     var host = 'http://cur.lv/redirect_curlv.php';
-    var param = m.host[1] === null ? {
+    var param = m.host[1] === undefined ? {
       code: m.path[1],
     } : {
       zone: m.host[1],
@@ -40,7 +40,7 @@ $.register({
           var aRealLink = rExtractLink.exec(currFrameContent);
 
           // Could not find it? Try to find it in the next frame
-          if (aRealLink === null || aRealLink[1] === null) {
+          if (aRealLink === undefined || aRealLink[1] === undefined) {
             return;
           }
 
