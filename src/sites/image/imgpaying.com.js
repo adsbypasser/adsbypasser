@@ -1,7 +1,22 @@
 (function () {
   'use strict';
 
-  var pathRule = /^\/([^\/]+)\/[^\/]+\.[^\/]{3,4}$/;
+  var pathRule = /^\/([0-9a-z]+)(\/|$)/;
+
+  function helper (id, next) {
+    var i = $.$('img.pic');
+    if (i) {
+      $.openImage(i.src);
+      return;
+    }
+    // first stage
+    $.openLinkByPost('', {
+      op: 'view',
+      id: id,
+      pre: 1,
+      next: next,
+    });
+  }
 
   $.register({
     rule: {
@@ -9,18 +24,13 @@
         /^((img(paying|mega))|imzdrop)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
+        /^(uploadrr|imageeer)\.com$/,
       ],
       path: pathRule,
     },
-    ready: function () {
-      var i = $.$('img.pic');
-      if (!i) {
-        // first stage
-        i = $('form');
-        i.submit();
-        return;
-      }
-      $.openImage(i.src);
+    ready: function (m) {
+      var f = $.$('form > input[name="next"]');
+      helper(m.path[1], f && f.value);
     },
   });
 
@@ -30,39 +40,7 @@
       path: pathRule,
     },
     ready: function (m) {
-      var i = $.$('img.pic');
-      if (!i) {
-        // first stage
-        $.openLinkByPost('', {
-          op: 'view',
-          id: m.path[1],
-          pre: 1,
-          next: 'Continue to Image...',
-        });
-        return;
-      }
-      $.openImage(i.src);
-    },
-  });
-
-  $.register({
-    rule: {
-      host: /^(uploadrr|imageeer)\.com|imgsee\.me$/,
-      path: /^\/([^\/]+)$/,
-    },
-    ready: function (m) {
-      var i = $.$('img.pic');
-      if (i) {
-        $.openImage(i.src);
-        return;
-      }
-      // first stage
-      $.openLinkByPost('', {
-        op: 'view',
-        id: m.path[1],
-        pre: 1,
-        next: 'Continue to image...',
-      });
+      helper(m.path[1], 'Continue to Image...');
     },
   });
 
