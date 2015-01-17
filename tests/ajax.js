@@ -80,7 +80,7 @@ describe('ajax', function () {
       }).catch(function (error) {
         done(error);
       }).then(function (html) {
-        html.length.should.equals(183);
+        html.length.should.equals(290);
         done();
       });
     });
@@ -100,7 +100,7 @@ describe('ajax', function () {
       }).catch(function (error) {
         done(error);
       }).then(function (html) {
-        html.length.should.equals(183);
+        html.length.should.equals(290);
         done();
       });
     });

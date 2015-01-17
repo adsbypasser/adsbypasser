@@ -4,6 +4,7 @@ var connect = require('connect');
 var serveStatic = require('serve-static');
 var Browser = require('zombie');
 var bluebird = require('bluebird');
+var Proxy = require('harmony-proxy');
 
 var _ = require('../src/util/core.js');
 _ = _(this, bluebird.Promise);
@@ -15,8 +16,27 @@ _.warn = _.nop;
 
 function wrap (browser) {
   // FIXME need a sandbox
-  browser.window.unsafeWindow = browser.window;
-  var tmp = dom(browser.window, _);
+  // browser.window.unsafeWindow = browser.window;
+  var o = {};
+  var tmp = dom({
+    window: new Proxy(browser.window, {
+      set: function (target, key, value) {
+        if (key === '$' || key === '_') {
+          return o[key] = value;
+        } else {
+          return target[key] = value;
+        }
+      },
+      get: function (target, key) {
+        if (key === '$' || key === '_') {
+          return o[key];
+        } else {
+          return target[key];
+        }
+      },
+    }),
+    unsafeWindow: browser.window,
+  }, _);
 
   return tmp;
 }
