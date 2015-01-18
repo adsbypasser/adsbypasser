@@ -1,6 +1,16 @@
 (function (global, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory;
+    module.exports = function (global, GM) {
+      var _ = require('lodash');
+      var core = require('./core.js');
+      var misc = require('./misc.js');
+      var handler = require('./handler.js');
+      var modules = [misc, handler].map(function (v) {
+        return v.call(null, global, GM);
+      });
+      var $ = _.assign.apply(null, modules);
+      return factory(global, GM, core, $);
+    };
   } else {
     factory(global, {
       getValue: GM_getValue,
@@ -12,32 +22,47 @@
 
   var window = global.window;
   var unsafeWindow = global.unsafeWindow;
-  var document = window.document;
 
-
-  $._load = function () {
-    delete $._load;
-    var tmp = {
-      version: GM.getValue('version', 0),
-      alignCenter: GM.getValue('align_center'),
-      changeBackground: GM.getValue('change_background'),
-      externalServerSupport: GM.getValue('external_server_support'),
-      redirectImage: GM.getValue('redirect_image'),
-      scaleImage: GM.getValue('scale_image'),
-    };
-    fixup(tmp);
-    save(tmp);
-    $.config = tmp;
+  $.config = {
+    set version (value) {
+      GM.setValue('version', value);
+    },
+    get version () {
+      return GM.getValue('version', 0);
+    },
+    set alignCenter (value) {
+      GM.setValue('align_center', value);
+    },
+    get alignCenter () {
+      return GM.getValue('align_center');
+    },
+    set changeBackground (value) {
+      GM.setValue('change_background', value);
+    },
+    get changeBackground () {
+      return GM.getValue('change_background');
+    },
+    set externalServerSupport (value) {
+      GM.setValue('external_server_support', value);
+    },
+    get externalServerSupport () {
+      GM.getValue('external_server_support');
+    },
+    set redirectImage (value) {
+      GM.setValue('redirect_image', value);
+    },
+    get redirectImage () {
+      return GM.getValue('redirect_image');
+    },
+    set scaleImage (value) {
+      GM.setValue('scale_image', value);
+    },
+    get scaleImage () {
+      return GM.getValue('scale_image');
+    },
   };
 
-  function save (c) {
-    GM.setValue('version', c.version);
-    GM.setValue('align_center', c.alignCenter);
-    GM.setValue('change_background', c.changeBackground);
-    GM.setValue('external_server_support', c.externalServerSupport);
-    GM.setValue('redirect_image', c.redirectImage);
-    GM.setValue('scale_image', c.scaleImage);
-  }
+  fixup($.config);
 
   function fixup (c) {
     var patches = [

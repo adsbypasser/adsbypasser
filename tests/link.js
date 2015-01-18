@@ -1,43 +1,20 @@
 var chai = require('chai');
 var expect = chai.expect;
-var connect = require('connect');
-var serveStatic = require('serve-static');
 var Browser = require('zombie');
-var bluebird = require('bluebird');
 
-var _ = require('../src/util/core.js');
-_ = _(this, bluebird.Promise);
-var dom = require('../src/util/dom.js');
+var toolkit = require('./misc/toolkit.js');
+
 var link = require('../src/util/link.js');
 
-_.info = _.nop;
-_.warn = _.nop;
-
-
-function wrap (browser) {
-
-  // FIXME need a sandbox
-  browser.window.unsafeWindow = browser.window;
-  var tmp = dom(browser.window, _);
-  tmp = link(browser.window, _, tmp);
-
-  return tmp;
-}
-
-var SERVER_PORT = 1234;
-var SERVER_HREF = _.T('http://localhost:{0}')(SERVER_PORT);
-var SERVER_PAGE_1 = SERVER_HREF + '/misc/one.html';
-var SERVER_PAGE_2 = SERVER_HREF + '/misc/two.html';
+var factory = toolkit.createFactory(link);
 
 
 describe('link', function () {
   'use strict';
 
-  var browser;
-
   before(function (done) {
-    this.server = connect().use(serveStatic('./tests')).listen(SERVER_PORT, done);
-    browser = Browser.create();
+    this.browser = Browser.create();
+    this.server = toolkit.createServer(done);
   });
 
   after(function () {
@@ -45,23 +22,24 @@ describe('link', function () {
   });
 
   afterEach(function () {
-    browser.close();
+    this.browser.close();
   });
 
 
   describe('$.openLink', function () {
 
     it('should not accept invalid URL', function (done) {
-      browser.visit(SERVER_PAGE_1).catch(function (error) {
+      var self = this;
+      this.browser.visit(toolkit.page1).catch(function (error) {
         done(error);
       }).then(function () {
-        var $ = wrap(browser);
+        var $ = factory(self.browser);
 
         $.openLink(null);
 
-        return browser.wait();
+        return self.browser.wait();
       }).then(function () {
-        browser.window.location.toString().should.equals(SERVER_PAGE_1);
+        self.browser.window.location.toString().should.equals(toolkit.page1);
 
         done();
       });
@@ -69,16 +47,16 @@ describe('link', function () {
 
     it('should redirect to a valid URL', function (done) {
       var self = this;
-      browser.visit(SERVER_PAGE_1).catch(function (error) {
+      this.browser.visit(toolkit.page1).catch(function (error) {
         done(error);
       }).then(function () {
-        var $ = wrap(browser);
+        var $ = factory(self.browser);
 
-        $.openLink(SERVER_PAGE_2);
+        $.openLink(toolkit.page2);
 
-        return browser.wait();
+        return self.browser.wait();
       }).then(function () {
-        browser.window.location.toString().should.equals(SERVER_PAGE_2);
+        self.browser.window.location.toString().should.equals(toolkit.page2);
         done();
       });
     });

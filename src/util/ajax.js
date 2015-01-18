@@ -1,16 +1,20 @@
 (function (global, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory;
+    module.exports = function (global, GM) {
+      var core = require('./core.js');
+      return factory(global, GM, core);
+    };
   } else {
     factory(global, {
       xmlhttpRequest: GM_xmlhttpRequest,
-    }, global._, global.$);
+    }, global._);
   }
-}(this, function (global, GM, _, $) {
+}(this, function (global, GM, _) {
   'use strict';
 
   var window = global.window;
   var document = window.document;
+  var $ = global.$ || {};
 
 
   function deepJoin (prefix, object) {

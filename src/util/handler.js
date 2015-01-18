@@ -1,14 +1,18 @@
 (function (global, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory;
+    module.exports = function (global) {
+      var core = require('./core.js');
+      return factory(global, core);
+    };
   } else {
-    factory(global, global._, global.$);
+    factory(global, global._);
   }
-}(this, function (global, _, $) {
+}(this, function (global, _) {
   'use strict';
 
   var window = global.window;
   var document = window.document;
+  var $ = global.$ || {};
 
 
   var patterns = [];
