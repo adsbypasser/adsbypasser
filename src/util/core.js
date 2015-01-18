@@ -4,7 +4,7 @@
     module.exports = factory(global, bluebird.Promise);
   } else {
     // HACK: for Gecko 24, so far only Pale Moon
-    // need dom.promise.enabled = true
+    // need dom.future.enabled = true
     factory(global, global.Promise || function (fn) {
       return global.unsafeWindow.Future.call(this, function (fr) {
         fn(fr.resolve.bind(fr), fr.reject.bind(fr));
