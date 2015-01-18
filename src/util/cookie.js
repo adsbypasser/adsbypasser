@@ -1,15 +1,18 @@
 (function (global, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory;
+    module.exports = function (global) {
+      var core = require('./core.js');
+      return factory(global, core);
+    };
   } else {
-    factory(global, global._, global.$);
+    factory(global, global._);
   }
-}(this, function (global, _, $) {
+}(this, function (global, _) {
   'use strict';
 
   var window = global.window;
-  var unsafeWindow = global.unsafeWindow;
   var document = window.document;
+  var $ = global.$ || {};
 
 
   $.setCookie = function (key, value) {

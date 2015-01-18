@@ -1,6 +1,16 @@
 (function (global, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory;
+    module.exports = function (global, GM) {
+      var _ = require('lodash');
+      var core = require('./core.js');
+      var misc = require('./misc.js');
+      var handler = require('./handler.js');
+      var modules = [misc, handler].map(function (v) {
+        return v.call(null, global, GM);
+      });
+      var $ = _.assign.apply(_, modules);
+      return factory(global, GM, core, $);
+    };
   } else {
     factory(global, {
       openInTab: GM_openInTab,
