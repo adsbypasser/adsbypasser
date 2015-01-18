@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * imgclick.net
+* added
+    * imageteam.org
+    * imgdevil.com
+
 ## 5.11.2
 
 * fixed
