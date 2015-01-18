@@ -1,10 +1,8 @@
 var chai = require('chai');
 var expect = chai.expect;
 var should = chai.should();
-var bluebird = require('bluebird');
 
 var _ = require('../src/util/core.js');
-_ = _(this, bluebird.Promise);
 
 describe('core', function () {
 
@@ -68,20 +66,20 @@ describe('core', function () {
     });
 
     it('should takes exactly one string', function () {
-      _.T.should.throw(_.NoPicAdsError);
+      _.T.should.throw(_.AdsBypasserError);
 
       (function (){
         _.T(0);
-      }).should.throw(_.NoPicAdsError);
+      }).should.throw(_.AdsBypasserError);
 
       (function (){
         _.T('');
-      }).should.not.throw(_.NoPicAdsError);
+      }).should.not.throw(_.AdsBypasserError);
 
       (function (){
         var s = new String();
         _.T(s);
-      }).should.not.throw(_.NoPicAdsError);
+      }).should.not.throw(_.AdsBypasserError);
     });
 
     it('should return original string if no keyword', function () {

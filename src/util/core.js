@@ -1,6 +1,7 @@
 (function (global, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory;
+    var bluebird = require('bluebird');
+    module.exports = factory(global, bluebird.Promise);
   } else {
     factory(global, Promise);
   }
@@ -219,9 +220,7 @@
     }
     var f = console[method];
     if (typeof f === 'function') {
-      // GreaseMonkey 2.0 doesn't like Function.apply
-      // see greasemonkey/greasemonkey#1949
-      f.apply(console, $.inject(args));
+      f.apply(console, args);
     }
   }
 

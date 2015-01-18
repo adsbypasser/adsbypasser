@@ -1,6 +1,9 @@
 (function (global, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory;
+    module.exports = function (global) {
+      var core = require('./core.js');
+      return factory(global, core);
+    };
   } else {
     global.$ = factory(global, global._);
   }

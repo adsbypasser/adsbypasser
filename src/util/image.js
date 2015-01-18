@@ -1,6 +1,18 @@
 (function (global, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory;
+    module.exports = function (global, GM) {
+      var _ = require('lodash');
+      var core = require('./core.js');
+      var dom = require('./dom.js');
+      var config = require('./config.js');
+      var link = require('./link.js');
+      var misc = require('./misc.js');
+      var modules = [dom, config, link, misc].map(function (v) {
+        return v.call(null, global, GM);
+      });
+      var $ = _.assign.apply(_, modules);
+      return factory(global, GM, core, $);
+    };
   } else {
     factory(global, {
       getResourceText: GM_getResourceText,

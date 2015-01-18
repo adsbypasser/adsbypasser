@@ -1,40 +1,20 @@
 var chai = require('chai');
 var expect = chai.expect;
-var connect = require('connect');
-var serveStatic = require('serve-static');
 var Browser = require('zombie');
-var bluebird = require('bluebird');
 
-var _ = require('../src/util/core.js');
-_ = _(this, bluebird.Promise);
+var toolkit = require('./misc/toolkit.js');
+
 var dom = require('../src/util/dom.js');
 
-_.info = _.nop;
-_.warn = _.nop;
-
-
-function wrap (browser) {
-  // FIXME need a sandbox
-  browser.window.unsafeWindow = browser.window;
-  var tmp = dom(browser.window, _);
-
-  return tmp;
-}
-
-var SERVER_PORT = 1234;
-var SERVER_HREF = _.T('http://localhost:{0}')(SERVER_PORT);
-var SERVER_PAGE_1 = SERVER_HREF + '/misc/one.html';
-var SERVER_PAGE_2 = SERVER_HREF + '/misc/two.html';
+var factory = toolkit.createFactory(dom);
 
 
 describe('dom', function () {
   'use strict';
 
-  var browser;
-
   before(function (done) {
-    this.server = connect().use(serveStatic('./tests')).listen(SERVER_PORT, done);
-    browser = Browser.create();
+    this.browser = Browser.create();
+    this.server = toolkit.createServer(done);
   });
 
   after(function () {
@@ -42,15 +22,16 @@ describe('dom', function () {
   });
 
   afterEach(function () {
-    browser.close();
+    this.browser.close();
   });
 
 
   describe('$', function () {
 
     it('should find right element', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
-        var $ = wrap(browser);
+      var self = this;
+      this.browser.visit(toolkit.page1).then(function () {
+        var $ = factory(self.browser);
 
         var d = $('#div_1');
         expect(d).to.be.exist;
@@ -66,12 +47,15 @@ describe('dom', function () {
     });
 
     it('should throw exception if not found', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
-        var $ = wrap(browser);
+      var self = this;
+      this.browser.visit(toolkit.page1).then(function () {
+        var $ = factory(self.browser);
+        var _ = require('../src/util/core.js');
 
+        // $('does_not_exist');
         (function () {
           $('does_not_exist');
-        }).should.throw(_.NoPicAdsError);
+        }).should.throw(_.AdsBypasserError);
 
         done();
       }).catch(function (error) {
@@ -85,8 +69,9 @@ describe('dom', function () {
   describe('$.$', function () {
 
     it('should find right element', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
-        var $ = wrap(browser);
+      var self = this;
+      this.browser.visit(toolkit.page1).then(function () {
+        var $ = factory(self.browser);
 
         var d = $.$('#div_1');
         expect(d).to.be.exist;
@@ -102,8 +87,9 @@ describe('dom', function () {
     });
 
     it('should return null if not found', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
-        var $ = wrap(browser);
+      var self = this;
+      this.browser.visit(toolkit.page1).then(function () {
+        var $ = factory(self.browser);
 
         var d = $.$('does_not_exist');
         expect(d).to.be.null;
@@ -120,8 +106,9 @@ describe('dom', function () {
   describe('$.$$', function () {
 
     it('should return collection', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
-        var $ = wrap(browser);
+      var self = this;
+      this.browser.visit(toolkit.page1).then(function () {
+        var $ = factory(self.browser);
 
         $.$$('.label').each(function (v) {
           // jsdom does not support classList yet
@@ -140,8 +127,9 @@ describe('dom', function () {
   describe('$.removeNodes', function () {
 
     it('should return collection', function (done) {
-      browser.visit(SERVER_PAGE_1).then(function () {
-        var $ = wrap(browser);
+      var self = this;
+      this.browser.visit(toolkit.page1).then(function () {
+        var $ = factory(self.browser);
 
         $.removeNodes('.label');
         expect($.$('.label')).to.be.not.found;

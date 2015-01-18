@@ -8,6 +8,7 @@
   },
   "devDependencies": {
     "grunt": "",
+    "grunt-cli": "",
     "grunt-contrib-concat": "",
     "grunt-contrib-clean": "",
     "grunt-mocha-test": "",
@@ -17,10 +18,12 @@
     "serve-static": "",
     "zombie": "",
     "bluebird": "",
+    "harmony-proxy": "",
     "wintersmith": "",
     "wintersmith-less": ""
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "/usr/bin/env node --harmony-proxies ./node_modules/.bin/grunt test",
+    "build": "/usr/bin/env node --harmony-proxies ./node_modules/.bin/grunt"
   }
 }
