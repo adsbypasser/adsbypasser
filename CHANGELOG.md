@@ -1,4 +1,4 @@
-## TBA
+## 5.12.0
 
 * fixed
     * imgclick.net
