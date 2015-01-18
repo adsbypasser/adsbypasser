@@ -122,9 +122,6 @@
         $.resetCookies();
         $.removeNodes('iframe');
 
-        if (!m.path[1]) {
-          throw new _.AdsBypasserError('wrong url pattern');
-        }
         var url = m.path[1] + window.location.search;
 
         var match = $.searchScripts(/UrlEncoded: ([^,]+)/);
