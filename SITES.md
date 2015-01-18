@@ -70,6 +70,7 @@
     * imagedecode.com
     * imagelook.org
     * imageontime.com
+    * imageteam.org
     * img-zone.com
     * imgadult.com
     * imgcoin.net
@@ -116,6 +117,7 @@
     * imgblow.com
     * imgcandy.net
     * imgcloud.co
+    * imgdevil.com
     * imgking.co
     * imgmaster.net
     * imgnext.com
