@@ -3,7 +3,13 @@
     var bluebird = require('bluebird');
     module.exports = factory(global, bluebird.Promise);
   } else {
-    factory(global, Promise);
+    // HACK: for Gecko 24, so far only Pale Moon
+    // need dom.promise.enabled = true
+    factory(global, global.Promise || function (fn) {
+      return global.unsafeWindow.Future.call(this, function (fr) {
+        fn(fr.resolve.bind(fr), fr.reject.bind(fr));
+      });
+    });
   }
 }(this, function (global, Promise) {
   'use strict';
