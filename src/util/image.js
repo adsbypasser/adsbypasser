@@ -33,7 +33,7 @@
     }
   };
 
-  $.enableScrolling = function () {
+  function enableScrolling () {
     var o = document.compatMode === 'CSS1Compat' ? document.documentElement : document.body;
     o.style.overflow = '';
   };
@@ -107,7 +107,7 @@
     _.info(_.T('replacing body with `{0}` ...')(imgSrc));
 
     $.removeAllTimer();
-    $.enableScrolling();
+    enableScrolling();
 
     document.body = document.createElement('body');
 
