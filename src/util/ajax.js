@@ -77,7 +77,10 @@
         },
       });
     });
-    promise.abort = xhr.abort.bind(xhr);
+    // Firefox 36+ does not like Function.bind
+    promise.abort = function () {
+      xhr.abort();
+    };
 
     return promise;
   }
