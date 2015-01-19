@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * imgsee.me
+    * problem with Firefox 36
+
 ## 5.12.0
 
 * fixed
