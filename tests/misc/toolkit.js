@@ -7,7 +7,6 @@ var connect = require('connect');
 var serveStatic = require('serve-static');
 var bluebird = require('bluebird');
 
-var sandbox = {};
 var defaultConfig = {
   version: 1,
   redirect_image: true,
@@ -19,17 +18,14 @@ var SERVER_PAGE_1 = SERVER_HREF + '/misc/one.html';
 var SERVER_PAGE_2 = SERVER_HREF + '/misc/two.html';
 
 function createSandbox (window) {
+  var sandbox = {};
   return {
     window: new Proxy(window, {
       set: function (target, key, value) {
-        if (key === '$' || key === '_') {
-          return sandbox[key] = value;
-        } else {
-          return target[key] = value;
-        }
+        return sandbox[key] = value;
       },
       get: function (target, key) {
-        if (key === '$' || key === '_') {
+        if (sandbox.hasOwnProperty(key)) {
           return sandbox[key];
         } else {
           return target[key];
