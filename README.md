@@ -62,9 +62,8 @@ Please see [this page][10] to adjust configurations.
 Please install [Node.js] and [npm], then run:
 
 ```
-npm install -g grunt-cli
 npm install
-grunt
+npm run build
 ```
 
 Combined userscript will be `dest/adsbypasser.user.js`, which could install on
