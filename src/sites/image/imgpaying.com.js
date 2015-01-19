@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  var pathRule = /^\/([0-9a-z]+)(\/|$)/;
+  var pathRule = /^\/([0-9a-z]+)(\.|\/|$)/;
 
   function helper (id, next) {
     var i = $.$('img.pic');
