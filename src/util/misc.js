@@ -17,56 +17,6 @@
   var document = window.document;
 
 
-  function injectClone (vaccine) {
-    var injected;
-    if (typeof cloneInto !== 'function') {
-      injected = vaccine;
-    } else {
-      injected = cloneInto(vaccine, unsafeWindow, {
-        cloneFunctions: true,
-        wrapReflectors: true,
-      });
-    }
-    return injected;
-  }
-
-  function injectFunction (vaccine) {
-    var injected;
-    if (typeof exportFunction !== 'function') {
-      injected = vaccine;
-    } else {
-      try {
-        injected = exportFunction(vaccine, unsafeWindow, {
-          allowCrossOriginArguments: true,
-        });
-      } catch(e) {
-        console.error(e);
-      }
-    }
-    return injected;
-  }
-
-  function injectReference () {
-    var injected;
-    if (typeof createObjectIn !== 'function') {
-      injected = {};
-    } else {
-      injected = createObjectIn(unsafeWindow);
-    }
-    return injected;
-  }
-
-  $.inject = function (vaccine) {
-    if (typeof vaccine === 'function') {
-      return injectFunction(vaccine);
-    } else if (typeof vaccine === 'undefined') {
-      return injectReference();
-    } else {
-      return injectClone(vaccine);
-    }
-  };
-
-
   $.removeAllTimer = function () {
     var handle = window.setInterval(_.nop, 10);
     while (handle > 0) {
@@ -98,6 +48,78 @@
       }, cb);
     };
   };
+
+
+  // Firefox only
+  function injectClone (vaccine) {
+    return cloneInto(vaccine, unsafeWindow, {
+      cloneFunctions: true,
+      wrapReflectors: true,
+    });
+  }
+
+  // Firefox only
+  function injectFunction (vaccine) {
+    return exportFunction(vaccine, unsafeWindow, {
+      allowCrossOriginArguments: true,
+    });
+  }
+
+  // Firefox only
+  function injectReference () {
+    return new unsafeWindow.Object();
+  }
+
+  // Firefox only
+  function inject (vaccine) {
+    var type = typeof vaccine;
+    if (type === 'function') {
+      return injectFunction(vaccine);
+    } else if (type === 'undefined') {
+      return injectReference();
+    } else if (vaccine !== null && type === 'object') {
+      return injectClone(vaccine);
+    } else {
+      return vaccine;
+    }
+  };
+
+  var MAGIC_KEY = '__adsbypasser_metamagic__';
+
+  $.window = (function () {
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+    if (!isFirefox) {
+      return unsafeWindow;
+    }
+
+    var decorator = {
+      set: function (target, key, value) {
+        if (key === MAGIC_KEY) {
+          return;
+        }
+        target[key] = inject(value);
+      },
+      get: function (target, key) {
+        if (key === MAGIC_KEY) {
+          return target;
+        }
+        var value = target[key];
+        var type = typeof value;
+        if (value === null || (type !== 'function' && type !== 'object')) {
+          return value;
+        }
+        return new Proxy(value, decorator);
+      },
+      apply: function (target, self, args) {
+        if (self[MAGIC_KEY] === unsafeWindow.Object && target.name === 'defineProperty') {
+          args[0] = args[0][MAGIC_KEY];
+        }
+        return target.apply(self, inject(args));
+      },
+    };
+    return new Proxy(unsafeWindow, decorator);
+  })();
+
 
   return $;
 
