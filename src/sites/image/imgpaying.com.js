@@ -4,18 +4,23 @@
   var pathRule = /^\/([0-9a-z]+)(\.|\/|$)/;
 
   function helper (id, next) {
+    var f = $.$('form > input[name="next"]');
     var i = $.$('img.pic');
-    if (i) {
+    if (!(next || f) && !i) {
+      // other page
+      _.info('do nothing');
+    } else if (next || f) {
+      // first stage
+      $.openLinkByPost('', {
+        op: 'view',
+        id: id,
+        pre: 1,
+        next: next || f.value,
+      });
+    } else {
+      // second stage
       $.openImage(i.src);
-      return;
     }
-    // first stage
-    $.openLinkByPost('', {
-      op: 'view',
-      id: id,
-      pre: 1,
-      next: next,
-    });
   }
 
   $.register({
@@ -29,8 +34,7 @@
       path: pathRule,
     },
     ready: function (m) {
-      var f = $.$('form > input[name="next"]');
-      helper(m.path[1], f && f.value);
+      helper(m.path[1]);
     },
   });
 
@@ -40,7 +44,8 @@
       path: pathRule,
     },
     ready: function (m) {
-      helper(m.path[1], 'Continue to Image...');
+      var d = $.$('#imageviewir');
+      helper(m.path[1], d ? 'Continue to Image...' : null);
     },
   });
 
