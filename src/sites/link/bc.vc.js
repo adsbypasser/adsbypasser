@@ -72,9 +72,9 @@
 
   function knockServer2 (script) {
     // somehow I must use jQuery AJAX
-    var post = unsafeWindow.$.post;
+    var post = $.window.$.post;
     // mock a fake AJAX function
-    unsafeWindow.$.post = $.inject(function (a, b, c) {
+    $.window.$.post = function (a, b, c) {
       if (typeof c !== 'function') {
         return;
       }
@@ -87,7 +87,7 @@
         };
         c(JSON.stringify(data));
       }, 1000);
-    });
+    };
 
     var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
     var make_url = matches[1];
@@ -95,7 +95,7 @@
 
     function makeLog () {
         make_opts.opt = 'make_log';
-        post(make_url, $.inject(make_opts), $.inject(function (text) {
+        post(make_url, make_opts, function (text) {
           var data = JSON.parse(text);
           _.info('make_log', data);
           if (!data.message) {
@@ -104,12 +104,12 @@
           }
 
           $.openLink(data.message.url);
-        }));
+        });
     }
 
     function checkLog () {
       make_opts.opt = 'check_log';
-      post(make_url, $.inject(make_opts), $.inject(function (text) {
+      post(make_url, make_opts, function (text) {
         var data = JSON.parse(text);
         _.info('check_log', data);
         if (!data.message) {
@@ -118,15 +118,15 @@
         }
 
         makeLog();
-      }));
+      });
     }
 
     function checksLog () {
       make_opts.opt = 'checks_log';
-      post(make_url, $.inject(make_opts), $.inject(function () {
+      post(make_url, make_opts, function () {
         _.info('checks_log');
         checkLog();
-      }));
+      });
     }
 
     checksLog();

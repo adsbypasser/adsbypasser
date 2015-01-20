@@ -3,7 +3,7 @@
 
   function run () {
     // dirty hack, prevent scripts appending elements
-    unsafeWindow.jQuery.prototype.append = undefined;
+    $.window.jQuery.prototype.append = undefined;
     var i = $('img.pic');
     $.replace(i.src);
   }

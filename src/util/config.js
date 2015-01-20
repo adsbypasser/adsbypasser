@@ -21,7 +21,7 @@
   'use strict';
 
   var window = global.window;
-  var unsafeWindow = global.unsafeWindow;
+  // var unsafeWindow = global.unsafeWindow;
 
   $.config = {
     set version (value) {
@@ -100,7 +100,7 @@
     },
     ready: function () {
 
-      unsafeWindow.commit = $.inject(function (data) {
+      $.window.commit = function (data) {
         data.version = $.config.version;
         _.C(data).each(function (v, k) {
           $.config[k] = v;
@@ -109,9 +109,9 @@
         setTimeout(function () {
           save(data);
         }, 0);
-      });
+      };
 
-      unsafeWindow.render($.inject({
+      $.window.render({
         version: $.config.version,
         options: {
           alignCenter: {
@@ -152,7 +152,7 @@
             ].join('<br/>\n'),
           },
         },
-      }));
+      });
 
     },
   });

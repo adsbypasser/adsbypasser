@@ -52,7 +52,7 @@
     },
     start: function () {
       // crack the shitty qqc.co visitScript 5440
-      unsafeWindow.setTimeout = $.inject(_.nop);
+      $.window.setTimeout = _.nop;
 
       // this site checks cookie that caculate from session
       // do an AJAX to skip checking

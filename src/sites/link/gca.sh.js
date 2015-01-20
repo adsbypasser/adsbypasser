@@ -7,7 +7,7 @@ $.register({
 
     $.removeNodes('iframe');
 
-    var jQuery = unsafeWindow.$;
+    var jQuery = $.window.$;
     setTimeout(function () {
       jQuery("#captcha-dialog").dialog("open");
     }, 1000);

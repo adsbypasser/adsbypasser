@@ -21,12 +21,12 @@
   'use strict';
 
   var window = global.window;
-  var unsafeWindow = global.unsafeWindow;
   var document = window.document;
+  var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
 
   function disableWindowOpen () {
-    unsafeWindow.open = _.nop;
+    $.window.open = _.nop;
   }
 
   function disableLeavePrompt () {
@@ -36,7 +36,7 @@
       },
     };
     // NOTE maybe break in future Firefox release
-    _.C([unsafeWindow, unsafeWindow.document.body]).each(function (o) {
+    _.C([$.window, $.window.document.body]).each(function (o) {
       if (!o) {
         return;
       }
@@ -44,7 +44,18 @@
       // release existing events
       o.onbeforeunload = undefined;
       // prevent they bind event again
-      o.__defineSetter__('onbeforeunload', $.inject(seal.set));
+      if (isSafari) {
+        // Safiri must use old-style method
+        o.__defineSetter__('onbeforeunload', seal.set);
+      } else {
+        $.window.Object.defineProperty(o, 'onbeforeunload', {
+          configurable: false,
+          enumerable: false,
+          get: undefined,
+          // this will turn to undefined in Firefox, need upstream fix
+          set: seal.set,
+        });
+      }
 
       // block addEventListener
       var oael = o.addEventListener;
@@ -55,7 +66,7 @@
         }
         return oael.apply(this, arguments);
       };
-      o.addEventListener = $.inject(nael);
+      o.addEventListener = nael;
     });
   }
 

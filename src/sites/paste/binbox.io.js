@@ -28,7 +28,7 @@
       // then it'll ask to fill a captcha, and the user will be able to access
       // the paste by only typing the captcha.
 
-      var sjcl = unsafeWindow.sjcl;
+      var sjcl = $.window.sjcl;
 
       var paste_id = m.path[1];
       var paste_salt = m.hash[1];

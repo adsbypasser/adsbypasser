@@ -33,12 +33,12 @@
       $.removeNodes('iframe');
 
       // disable cookie check
-      unsafeWindow.cookieCheck = $.inject(_.nop);
+      $.window.cookieCheck = _.nop;
 
-      h = unsafeWindow.eu;
+      h = $.window.eu;
       if (!h) {
         h = $('#adfly_bar');
-        unsafeWindow.close_bar();
+        $.window.close_bar();
         return;
       }
       var a = h.indexOf('!HiTommy');
