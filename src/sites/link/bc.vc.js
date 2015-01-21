@@ -23,28 +23,18 @@
   }
 
   function searchScript (unzip) {
-    var content = $.$$('script').find(function (script) {
-      if (script.innerHTML.indexOf('make_log') < 0) {
-        return _.nop;
-      }
-      return script.innerHTML;
-    });
+    var content = $.searchScripts('make_log');
     if (content) {
       return {
         direct: false,
-        script: decompress(content.payload, unzip),
+        script: decompress(content, unzip),
       };
     }
-    content = $.$$('script').find(function (script) {
-      if (script.innerHTML.indexOf('click_log') < 0) {
-        return _.nop;
-      }
-      return script.innerHTML;
-    });
+    content = $.searchScripts('click_log');
     if (content) {
       return {
         direct: true,
-        script: decompress(content.payload, unzip),
+        script: decompress(content, unzip),
       };
     }
     throw _.AdsBypasserError('script changed');

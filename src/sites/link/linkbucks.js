@@ -53,17 +53,11 @@
     'use strict';
 
     function findToken (context) {
-      var script = $.$$('script', context).find(function (n) {
-        if (n.innerHTML.indexOf('window[\'init\' + \'Lb\' + \'js\' + \'\']') < 0) {
-          return _.nop;
-        }
-        return n.innerHTML;
-      });
+      var script = $.searchScripts('window[\'init\' + \'Lb\' + \'js\' + \'\']', context);
       if (!script) {
         _.warn('pattern changed');
         return null;
       }
-      script = script.payload;
 
       var m = script.match(/AdPopUrl\s*:\s*'.+\?ref=([\w\d]+)'/);
       var token = m[1];
