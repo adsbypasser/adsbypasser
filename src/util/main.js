@@ -81,7 +81,7 @@
 
     var handler = findHandler(true);
     if (handler) {
-      _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config.toString());
+      _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
 
       disableWindowOpen();
 
@@ -102,7 +102,7 @@
           return;
         }
 
-        _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config.toString());
+        _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
 
         disableWindowOpen();
         disableLeavePrompt();
