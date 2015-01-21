@@ -84,11 +84,13 @@
     }
   };
 
+  // magic property to get the proxy target
   var MAGIC_KEY = '__adsbypasser_metamagic__';
 
   $.window = (function () {
     var isFirefox = typeof InstallTrigger !== 'undefined';
     if (!isFirefox) {
+      // other browsers does not need this
       return unsafeWindow;
     }
 
@@ -106,11 +108,13 @@
         var value = target[key];
         var type = typeof value;
         if (value === null || (type !== 'function' && type !== 'object')) {
+          // primitive values does not need this
           return value;
         }
         return new Proxy(value, decorator);
       },
       apply: function (target, self, args) {
+        // special hack for Object.defineProperty
         if (self[MAGIC_KEY] === unsafeWindow.Object && target.name === 'defineProperty') {
           args[0] = args[0][MAGIC_KEY];
         }
