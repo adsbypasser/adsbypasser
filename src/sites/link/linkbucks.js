@@ -90,7 +90,9 @@
             // somehow this token is invalid, reload to get new one
             _.info('got invalid token');
             clearInterval(i);
-            $.get(window.location.toString()).then(function (text) {
+            $.get(window.location.toString(), {}, {
+              'X-Forwarded-For': '255.255.255.255',
+            }).then(function (text) {
               var d = $.toDOM(text);
               var t = findToken(d);
               sendRequest(t);
