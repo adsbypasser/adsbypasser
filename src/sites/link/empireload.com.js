@@ -5,7 +5,6 @@ $.register({
     query: /^\?id=linkout&url=([^&]+)$/,
   },
   start: function (m) {
-    // _.info(m.query[1]);
     $.openLink(m.query[1]);
   },
 });
