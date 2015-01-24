@@ -66,7 +66,6 @@
     delete $._findHandler;
 
     if (isNodeJS) {
-      config = load();
       return;
     }
 
