@@ -49,6 +49,12 @@
     /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
   ];
 
+  function generateRandomIP () {
+    return [0,0,0,0].map(function () {
+      return Math.floor(Math.random() * 256);
+    }).join('.');
+  }
+
   (function () {
     'use strict';
 
@@ -90,13 +96,7 @@
             // somehow this token is invalid, reload to get new one
             _.info('got invalid token');
             clearInterval(i);
-            $.get(window.location.toString(), {}, {
-              'X-Forwarded-For': '255.255.255.255',
-            }).then(function (text) {
-              var d = $.toDOM(text);
-              var t = findToken(d);
-              sendRequest(t);
-            });
+            retry();
             return;
           }
           if (data.Success && !data.AdBlockSpotted && data.Url) {
@@ -106,6 +106,23 @@
           }
         });
       }, 1000);
+    }
+
+    function retry () {
+      $.get(window.location.toString(), {}, {
+        // trick the server to avoid possible survey page
+        'X-Forwarded-For': generateRandomIP(),
+      }).then(function (text) {
+        var d = $.toDOM(text);
+        var t = findToken(d);
+        if (!t) {
+          // if still fail, request again.
+          // wait a second to avoid flooding detection
+          var i = setTimeout(retry, 1000);
+          return;
+        }
+        sendRequest(t);
+      });
     }
 
     $.register({
