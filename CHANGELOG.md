@@ -1,3 +1,12 @@
+## TBA
+
+* fixed
+    * empireload.com
+    * imgseeds.com
+    * linkbucks.com survey page
+* changed
+    * sandbox API
+
 ## 5.12.1
 
 * fixed
