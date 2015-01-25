@@ -6,7 +6,7 @@ $.register({
     'use strict';
 
     $.removeNodes('iframe');
-    var url = atob(unsafeWindow.fl);
+    var url = atob($.window.fl);
     $.openLink(url);
   },
 });

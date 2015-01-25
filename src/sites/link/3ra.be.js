@@ -7,7 +7,7 @@ $.register({
 
     $.removeNodes('iframe');
 
-    var f = unsafeWindow.fc;
+    var f = $.window.fc;
     if (!f) {
       throw new _.AdsBypasserError('window.fc is undefined');
     }

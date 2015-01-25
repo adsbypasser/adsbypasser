@@ -5,7 +5,7 @@ $.register({
 
     $.removeNodes('iframe');
 
-    var uniq = unsafeWindow.uniq || unsafeWindow.uniqi;
+    var uniq = $.window.uniq || $.window.uniqi;
     if (!uniq) {return;}
     var path = window.location.pathname;
     // this site doesn't really parse the query string

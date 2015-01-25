@@ -20,8 +20,8 @@
       query: /^\?v=/,
     },
     ready: function () {
-      if (unsafeWindow.confirmAge) {
-        unsafeWindow.confirmAge(1);
+      if ($.window.confirmAge) {
+        $.window.confirmAge(1);
         return;
       }
       var i = $('#container-home img');

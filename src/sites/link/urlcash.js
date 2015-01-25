@@ -5,8 +5,8 @@ $.register({
   ready: function () {
     'use strict';
 
-    if (unsafeWindow && unsafeWindow.linkDestUrl) {
-      $.openLink(unsafeWindow.linkDestUrl);
+    if ($.window && $.window.linkDestUrl) {
+      $.openLink($.window.linkDestUrl);
       return;
     }
 

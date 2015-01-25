@@ -11,7 +11,7 @@ $.register({
       return;
     }
 
-    a = unsafeWindow.fileLocation;
+    a = $.window.fileLocation;
     if (a) {
       $.openLink(a);
     }

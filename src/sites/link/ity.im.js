@@ -27,7 +27,7 @@ $.register({
       throw new _.AdsBypasserError('site changed');
     }
     f = f[1];
-    var data = unsafeWindow.des('ksnslmtmk0v4Pdviusajqu', unsafeWindow.hexToString(f), 0, 0);
+    var data = $.window.des('ksnslmtmk0v4Pdviusajqu', $.window.hexToString(f), 0, 0);
     if (data) {
       $.openLink('http://ity.im/1104_21_50846_' + data);
     }
