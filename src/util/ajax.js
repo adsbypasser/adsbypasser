@@ -28,10 +28,11 @@
   }
 
   function toQuery (data) {
-    if (typeof data === 'undefined') {
+    var type = typeof data;
+    if (data === null || (type !== 'string' && type !== 'object')) {
       return '';
     }
-    if (typeof data === 'string') {
+    if (type === 'string') {
       return data;
     }
     if (data instanceof String) {
@@ -46,7 +47,7 @@
   }
 
   function ajax (method, url, data, headers) {
-    // Host is not alway the same as window.location.host, for example foo.example.org can perform a request to example.org
+    // Host is not always the same as window.location.host, for example foo.example.org can perform a request to example.org
     var l = document.createElement('a');
     l.href = url;
     var reqHost = l.hostname;

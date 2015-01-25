@@ -7,18 +7,13 @@ $.register({
 
     $.removeNodes('iframe');
 
-    var script = $.$$('script').find(function (v) {
-      if (v.innerHTML.indexOf('form') < 0) {
-        return _.nop;
-      }
-      return v.innerHTML;
-    });
+    var script = $.searchScripts('form');
     var p = /name='([^']+)' value='([^']+)'/g;
     var opt = {
       image: ' ',
     };
     var tmp = null;
-    while (tmp = p.exec(script.payload)) {
+    while (tmp = p.exec(script)) {
       opt[tmp[1]] = tmp[2];
     }
     $.openLinkByPost('', opt);

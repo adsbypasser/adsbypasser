@@ -59,16 +59,11 @@
     });
   }
 
-  $._main = function (isNodeJS) {
+  $._main = function () {
     var findHandler = $._findHandler;
 
     delete $._main;
     delete $._findHandler;
-
-    if (isNodeJS) {
-      config = load();
-      return;
-    }
 
     if (window.top !== window.self) {
       // skip frames
@@ -81,7 +76,7 @@
 
     var handler = findHandler(true);
     if (handler) {
-      _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config.toString());
+      _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
 
       disableWindowOpen();
 
@@ -102,7 +97,7 @@
           return;
         }
 
-        _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config.toString());
+        _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
 
         disableWindowOpen();
         disableLeavePrompt();

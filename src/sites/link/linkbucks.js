@@ -49,125 +49,147 @@
     /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
   ];
 
-  (function () {
+  function generateRandomIP () {
     'use strict';
 
-    function findToken (context) {
-      var script = $.$$('script', context).find(function (n) {
-        if (n.innerHTML.indexOf('window[\'init\' + \'Lb\' + \'js\' + \'\']') < 0) {
-          return _.nop;
-        }
-        return n.innerHTML;
-      });
-      if (!script) {
-        _.warn('pattern changed');
-        return null;
-      }
-      script = script.payload;
+    return [0,0,0,0].map(function () {
+      return Math.floor(Math.random() * 256);
+    }).join('.');
+  }
 
-      var m = script.match(/AdPopUrl\s*:\s*'.+\?ref=([\w\d]+)'/);
-      var token = m[1];
-      m = script.match(/=\s*(\d+);/);
-      var ak = parseInt(m[1], 10);
-      var re = /\+\s*(\d+);/g;
-      var tmp = null;
-      // get second (i.e. the real) salt
-      while((m = re.exec(script)) !== null) {
-        tmp = m[1];
-      }
-      ak += parseInt(tmp, 10);
+  function findToken (context) {
+    'use strict';
 
-      return {
-        t: token,
-        aK: ak,
-      };
+    var script = $.searchScripts('window[\'init\' + \'Lb\' + \'js\' + \'\']', context);
+    if (!script) {
+      _.warn('pattern changed');
+      return null;
     }
 
-    function sendRequest (token) {
-      _.info('sending token: %o', token);
-
-      var i = setInterval(function () {
-        $.get('/intermission/loadTargetUrl', token).then(function (text) {
-          var data = JSON.parse(text);
-
-          _.info('response: %o', data);
-
-          if (!data.Success && data.Errors[0] === 'Invalid token') {
-            // somehow this token is invalid, reload to get new one
-            _.info('got invalid token');
-            clearInterval(i);
-            $.get(window.location.toString()).then(function (text) {
-              var d = $.toDOM(text);
-              var t = findToken(d);
-              sendRequest(t);
-            });
-            return;
-          }
-          if (data.Success && !data.AdBlockSpotted && data.Url) {
-            clearInterval(i);
-            $.openLinkWithReferer(data.Url);
-            return;
-          }
-        });
-      }, 1000);
+    var m = script.match(/AdPopUrl\s*:\s*'.+\?ref=([\w\d]+)'/);
+    var token = m[1];
+    m = script.match(/=\s*(\d+);/);
+    var ak = parseInt(m[1], 10);
+    var re = /\+\s*(\d+);/g;
+    var tmp = null;
+    // get second (i.e. the real) salt
+    while((m = re.exec(script)) !== null) {
+      tmp = m[1];
     }
+    ak += parseInt(tmp, 10);
 
-    $.register({
-      rule: {
-        host: hostRules,
-        path: /^\/\w+\/url\/(.+)$/,
-      },
-      ready: function(m) {
-        $.removeAllTimer();
-        $.resetCookies();
-        $.removeNodes('iframe');
+    return {
+      t: token,
+      aK: ak,
+    };
+  }
 
-        var url = m.path[1] + window.location.search;
+  function sendRequest (token) {
+    'use strict';
 
-        var match = $.searchScripts(/UrlEncoded: ([^,]+)/);
-        if (match && match[1] === 'true') {
-          // encrypted url
-          url = Encode(ConvertFromHex(url));
-        }
+    _.info('sending token: %o', token);
 
-        $.openLinkWithReferer(url);
-      }
-    });
+    var i = setInterval(function () {
+      $.get('/intermission/loadTargetUrl', token).then(function (text) {
+        var data = JSON.parse(text);
 
-    $.register({
-      rule: {
-        host: hostRules,
-      },
-      ready: function () {
-        $.removeAllTimer();
-        $.resetCookies();
-        $.removeNodes('iframe');
+        _.info('response: %o', data);
 
-        if (window.location.pathname.indexOf('verify') >= 0) {
-          // NOTE dirty fix
-          var path = window.location.pathname.replace('/verify', '');
-          $.openLink(path);
+        if (!data.Success && data.Errors[0] === 'Invalid token') {
+          // somehow this token is invalid, reload to get new one
+          _.info('got invalid token');
+          clearInterval(i);
+          retry();
           return;
         }
+        if (data.Success && !data.AdBlockSpotted && data.Url) {
+          clearInterval(i);
+          $.openLinkWithReferer(data.Url);
+          return;
+        }
+      });
+    }, 1000);
+  }
 
-        var token = findToken(document);
-        sendRequest(token);
-      },
+  function retry () {
+    'use strict';
+
+    $.get(window.location.toString(), {}, {
+      // trick the server to avoid possible survey page
+      'X-Forwarded-For': generateRandomIP(),
+    }).then(function (text) {
+      var d = $.toDOM(text);
+      var t = findToken(d);
+      if (!t) {
+        // if still fail, request again.
+        // wait a second to avoid flooding detection
+        var i = setTimeout(retry, 1000);
+        return;
+      }
+      sendRequest(t);
     });
+  }
 
-    // for entry script
-    // this is stupid, but inspecting script on every page is too heavy
-    $.register({
-      rule: {
-        query: /^(.*)[?&]_lbGate=\d+$/,
-      },
-      start: function (m) {
-        $.setCookie('_lbGatePassed', 'true');
-        $.openLink(window.location.pathname + m.query[1]);
-      },
-    });
+  $.register({
+    rule: {
+      host: hostRules,
+      path: /^\/\w+\/url\/(.+)$/,
+    },
+    ready: function(m) {
+      'use strict';
 
-  })();
+      $.removeAllTimer();
+      $.resetCookies();
+      $.removeNodes('iframe');
+
+      var url = m.path[1] + window.location.search;
+
+      var match = $.searchScripts(/UrlEncoded: ([^,]+)/);
+      if (match && match[1] === 'true') {
+        // encrypted url
+        url = Encode(ConvertFromHex(url));
+      }
+
+      $.openLinkWithReferer(url);
+    }
+  });
+
+  $.register({
+    rule: {
+      host: hostRules,
+    },
+    ready: function () {
+      'use strict';
+
+      $.removeAllTimer();
+      $.resetCookies();
+      $.removeNodes('iframe');
+
+      if (window.location.pathname.indexOf('verify') >= 0) {
+        // NOTE dirty fix
+        var path = window.location.pathname.replace('/verify', '');
+        $.openLink(path);
+        return;
+      }
+
+      var token = findToken(document);
+      sendRequest(token);
+    },
+  });
+
+  // for entry script
+  // this is stupid, but inspecting script on every page is too heavy
+  $.register({
+    rule: {
+      query: /^(.*)[?&]_lbGate=\d+$/,
+    },
+    start: function (m) {
+      'use strict';
+
+      $.setCookie('_lbGatePassed', 'true');
+      $.openLink(window.location.pathname + m.query[1]);
+    },
+  });
 
 })();
 

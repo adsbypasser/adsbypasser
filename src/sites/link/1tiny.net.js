@@ -6,21 +6,13 @@ $.register({
   ready: function () {
     'use strict';
 
-    var rUrl = /window\.location='([^']+)';/;
-
-    var directUrl = $.$$('script').find(function (script) {
-     var m = rUrl.exec(script.innerHTML);
-      if (!m) {
-       return _.nop;
-      }
-      return m[1];
-    });
+    var directUrl = $.searchScripts(/window\.location='([^']+)';/);
 
     if (!directUrl) {
       throw new _.AdsBypasserError('script content changed');
     }
 
-    $.openLink(directUrl.payload);
+    $.openLink(directUrl[1]);
   },
 });
 
