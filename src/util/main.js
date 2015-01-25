@@ -59,15 +59,11 @@
     });
   }
 
-  $._main = function (isNodeJS) {
+  $._main = function () {
     var findHandler = $._findHandler;
 
     delete $._main;
     delete $._findHandler;
-
-    if (isNodeJS) {
-      return;
-    }
 
     if (window.top !== window.self) {
       // skip frames
