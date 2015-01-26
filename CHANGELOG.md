@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * sh.sh
+    * bc.vc
+
 ## 5.13.0
 
 * fixed
