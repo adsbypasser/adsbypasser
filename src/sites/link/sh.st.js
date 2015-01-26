@@ -60,6 +60,19 @@
     },
   });
 
+  $.register({
+    rule: {
+      host: /^ouo\.io$/,
+      path: /^\/\w+/,
+    },
+    ready: function () {
+      $.removeNodes('iframe');
+
+      var m = $.searchScripts(/<a class="skip-btn" href="([^"]+)">/);
+      $.openLink(m[1]);
+    },
+  });
+
 })();
 
 // ex: ts=2 sts=2 sw=2 et
