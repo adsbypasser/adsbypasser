@@ -51,41 +51,36 @@
 
 
   // Firefox only
-  function injectClone (vaccine) {
-    return cloneInto(vaccine, unsafeWindow, {
-      cloneFunctions: true,
-      wrapReflectors: true,
-    });
-  }
-
-  // Firefox only
-  function injectFunction (vaccine) {
-    return exportFunction(vaccine, unsafeWindow, {
-      allowCrossOriginArguments: true,
-    });
-  }
-
-  // Firefox only
-  function injectReference () {
-    return new unsafeWindow.Object();
-  }
-
-  // Firefox only
-  function inject (vaccine) {
-    var type = typeof vaccine;
-    if (type === 'function') {
-      return injectFunction(vaccine);
-    } else if (type === 'undefined') {
-      return injectReference();
-    } else if (vaccine !== null && type === 'object') {
-      return injectClone(vaccine);
-    } else {
-      return vaccine;
+  // cloneInto is too buggy
+  // TODO Date, Regexp, subclasses
+  function clone (safe) {
+    if (safe === null || !(safe instanceof Object)) {
+      return safe;
     }
+    if (safe instanceof String) {
+      return safe.toString();
+    }
+    if (safe instanceof Function) {
+      return exportFunction(safe, unsafeWindow, {
+        allowCrossOriginArguments: true,
+      });
+    }
+    if (safe instanceof Array) {
+      var unsafe = new unsafeWindow.Array();
+      for (var i = 0; i < safe.length; ++i) {
+        unsafe.push(clone(safe[i]));
+      }
+      return unsafe;
+    }
+    var unsafe = new unsafeWindow.Object();
+    _.C(safe).each(function (v, k) {
+      unsafe[k] = clone(v);
+    });
+    return unsafe;
   }
 
-  // magic property to get the proxy target
-  var MAGIC_KEY = '__adsbypasser_metamagic__';
+  // magic property to get the original object
+  var MAGIC_KEY = '__adsbypasser_reverse_proxy__';
 
   $.window = (function () {
     var isFirefox = typeof InstallTrigger !== 'undefined';
@@ -99,7 +94,7 @@
         if (key === MAGIC_KEY) {
           return;
         }
-        target[key] = inject(value);
+        target[key] = clone(value);
       },
       get: function (target, key) {
         if (key === MAGIC_KEY) {
@@ -114,21 +109,29 @@
         return new Proxy(value, decorator);
       },
       apply: function (target, self, args) {
+        args = Array.prototype.slice.call(args);
+
         // special hack for Object.defineProperty
-        if (typeof self !== 'undefined' && self[MAGIC_KEY] === unsafeWindow.Object && target.name === 'defineProperty') {
+        if (target === unsafeWindow.Object.defineProperty) {
           args[0] = args[0][MAGIC_KEY];
         }
-        var usargs = new unsafeWindow.Array();
-        _.C(args).each(function (v, i) {
-          usargs.push(inject(v));
-        });
+        // special hack for Function.apply
+        if (target === unsafeWindow.Function.apply) {
+          self = self[MAGIC_KEY];
+          args[1] = Array.prototype.slice.call(args[1]);
+        }
+
+        var usargs = clone(args);
+
         return target.apply(self, usargs);
       },
       construct: function (target, args) {
         args = Array.prototype.slice.call(args);
+        // insert this argument
         args.unshift(undefined);
+        var usargs = clone(args);
         var bind = unsafeWindow.Function.prototype.bind;
-        return new (bind.apply(target, inject(args)));
+        return new (bind.apply(target, usargs));
       },
     };
     return new Proxy(unsafeWindow, decorator);
