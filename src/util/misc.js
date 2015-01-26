@@ -82,7 +82,7 @@
     } else {
       return vaccine;
     }
-  };
+  }
 
   // magic property to get the proxy target
   var MAGIC_KEY = '__adsbypasser_metamagic__';
@@ -115,10 +115,14 @@
       },
       apply: function (target, self, args) {
         // special hack for Object.defineProperty
-        if (self[MAGIC_KEY] === unsafeWindow.Object && target.name === 'defineProperty') {
+        if (typeof self !== 'undefined' && self[MAGIC_KEY] === unsafeWindow.Object && target.name === 'defineProperty') {
           args[0] = args[0][MAGIC_KEY];
         }
-        return target.apply(self, inject(args));
+        var usargs = new unsafeWindow.Array();
+        _.C(args).each(function (v, i) {
+          usargs.push(inject(v));
+        });
+        return target.apply(self, usargs);
       },
       construct: function (target, args) {
         args = Array.prototype.slice.call(args);
