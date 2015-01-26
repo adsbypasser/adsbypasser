@@ -120,6 +120,12 @@
         }
         return target.apply(self, inject(args));
       },
+      construct: function (target, args) {
+        args = Array.prototype.slice.call(args);
+        args.unshift(undefined);
+        var bind = unsafeWindow.Function.prototype.bind;
+        return new (bind.apply(target, inject(args)));
+      },
     };
     return new Proxy(unsafeWindow, decorator);
   })();
