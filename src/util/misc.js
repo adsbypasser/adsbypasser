@@ -1,19 +1,19 @@
-(function (global, factory) {
+(function (context, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = function (global) {
+    module.exports = function (context) {
       var core = require('./core.js');
       var ajax = require('./ajax.js');
-      var $ = ajax(global);
-      return factory(global, core, $);
+      var $ = ajax(context);
+      return factory(context, core, $);
     };
   } else {
-    factory(global, global._, global.$);
+    factory(context, context._, context.$);
   }
-}(this, function (global, _, $) {
+}(this, function (context, _, $) {
   'use strict';
 
-  var window = global.window;
-  var unsafeWindow = global.unsafeWindow || (0, eval)('this').window;
+  var window = context.window;
+  var unsafeWindow = context.unsafeWindow || (0, eval)('this').window;
   var document = window.document;
 
 

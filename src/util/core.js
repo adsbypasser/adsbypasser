@@ -1,20 +1,20 @@
-(function (global, factory) {
+(function (context, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
     var bluebird = require('bluebird');
-    module.exports = factory(global, bluebird.Promise);
+    module.exports = factory(context, bluebird.Promise);
   } else {
     // HACK: for Gecko 24, so far only Pale Moon
     // need dom.future.enabled = true
-    factory(global, global.Promise || function (fn) {
-      return global.unsafeWindow.Future.call(this, function (fr) {
+    factory(context, context.Promise || function (fn) {
+      return context.unsafeWindow.Future.call(this, function (fr) {
         fn(fr.resolve.bind(fr), fr.reject.bind(fr));
       });
     });
   }
-}(this, function (global, Promise) {
+}(this, function (context, Promise) {
   'use strict';
 
-  var _ = global._ = {};
+  var _ = context._ = {};
 
   function setupStack () {
     if (Error.captureStackTrace) {
