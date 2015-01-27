@@ -83,6 +83,7 @@
   var MAGIC_KEY = '__adsbypasser_reverse_proxy__';
 
   $.window = (function () {
+    // GreaseMonkey 1.15 won't pass this test
     var isFirefox = typeof InstallTrigger !== 'undefined';
     if (!isFirefox) {
       // other browsers does not need this
