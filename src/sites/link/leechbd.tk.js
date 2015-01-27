@@ -3,7 +3,7 @@ $.register({
     host: /^(www\.)?leechbd\.tk$/,
     path: /^\/Shortener\/(\w+)$/,
   },
-  ready: function (m) {
+  start: function (m) {
     'use strict';
 
     $.get('/Shortener/API/read/get', {id: m.path[1], type: 'json'}).then(function (text) {
