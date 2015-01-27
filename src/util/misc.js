@@ -13,7 +13,7 @@
   'use strict';
 
   var window = global.window;
-  var unsafeWindow = global.unsafeWindow;
+  var unsafeWindow = global.unsafeWindow || (0, eval)('this').window;
   var document = window.document;
 
 
