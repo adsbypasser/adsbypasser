@@ -13,6 +13,8 @@
   'use strict';
 
   var window = context.window;
+  // Violentmonkey passes unsafeWindow by closure/arguments
+  // need to break the sandbox to get unsafeWindow
   var unsafeWindow = context.unsafeWindow || (0, eval)('this').window;
   var document = window.document;
 
