@@ -4,7 +4,7 @@ $.register({
     path: /^\/linkfilter\/(.+)?$/,
     query: /^(?:\?url=(.+))?$/,
   },
-  ready: function (m) {
+  start: function (m) {
     'use strict';
 
     // Sometimes, the URL is directly appended after the path (but the query of this URL is indocument.location.search)

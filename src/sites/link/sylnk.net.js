@@ -3,7 +3,7 @@ $.register({
     host: /^(www\.)?sylnk\.net$/,
     query: /link=([^&]+)/
   },
-  ready: function (m) {
+  start: function (m) {
     'use strict';
     var rawLink = atob(m.query[1]);
 

@@ -4,7 +4,7 @@ $.register({
     path: /^\/(?:(?:\d-)?(\d+)|index\.php)$/,
     query: /^(?:\?a=\d&c=(\d+))?$/
   },
-  ready: function (m) {
+  start: function (m) {
     'use strict';
 
     // The id of the link is either in the path or in the query

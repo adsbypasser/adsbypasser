@@ -4,7 +4,7 @@ $.register({
     host: /^(www\.)?([a-zA-Z0-9]+\.)?binbox\.io$/,
     path: /\/o\/([a-zA-Z0-9]+)/,
   },
-  ready: function (m) {
+  start: function (m) {
     'use strict';
     var direct_link = window.atob(m.path[1]);
     $.openLink(direct_link);
