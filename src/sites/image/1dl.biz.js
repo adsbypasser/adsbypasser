@@ -7,7 +7,8 @@ $.register({
   ready: function () {
     'use strict';
 
-    var a = $('div.tor a');
+    // need referer
+    var a = $('div.tor a, div.i-h a');
     a.click();
   },
 });
