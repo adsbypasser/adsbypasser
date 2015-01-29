@@ -7,8 +7,12 @@ $.register({
   ready: function () {
     'use strict';
 
-    var a = $('body > a');
-    $.openImage(a.href);
+    var a = $.$('body > a');
+    if (a) {
+      $.openImage(a.href);
+      return;
+    }
+    $.removeNodes('#boxes, iframe');
   },
 });
 
