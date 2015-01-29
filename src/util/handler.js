@@ -124,8 +124,8 @@
     }
 
     // dispatch by HTML content
-    if (!byLocation) {
-      if (typeof rule !== 'function') {
+    if (typeof rule === 'function') {
+      if (byLocation) {
         return null;
       }
       return dispatchByFunction(rule, url_1, url_3, url_6);
@@ -137,9 +137,6 @@
     }
     if (typeof rule === 'string' || rule instanceof String) {
       return dispatchByString(rule, url_3);
-    }
-    if (typeof rule === 'function') {
-      return null;
     }
     return dispatchByObject(rule, url_6);
   }
