@@ -1,4 +1,3 @@
-http:///tpzvni.htm
 $.register({
   rule: {
     host: /^a\.pomf\.se$/,
