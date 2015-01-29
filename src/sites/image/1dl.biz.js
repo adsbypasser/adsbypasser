@@ -2,7 +2,7 @@ $.register({
   rule: {
     host: /^1dl\.biz$/,
     path: /^\/(\w)\.php$/,
-    query: /^\?(\d+)$/,
+    query: /^\?([\d\/]+)$/,
   },
   ready: function () {
     'use strict';
