@@ -9,6 +9,7 @@ $.register({
 
     // need referer
     var a = $('div.tor a, div.i-h a');
+    a.removeAttribute('target');
     a.click();
   },
 });
