@@ -2,12 +2,14 @@ $.register({
   rule: {
     host: /^1dl\.biz$/,
     path: /^\/(\w)\.php$/,
-    query: /^\?(\d+)$/,
+    query: /^\?([\d\/]+)$/,
   },
   ready: function () {
     'use strict';
 
-    var a = $('div.tor a');
+    // need referer
+    var a = $('div.tor a, div.i-h a');
+    a.removeAttribute('target');
     a.click();
   },
 });
