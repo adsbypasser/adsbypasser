@@ -126,6 +126,7 @@
     * imgsavvy.com
     * imgspot.org
     * imgtwyti.com
+    * imgtzar.com
     * imgult.com
     * imgxyz.net
     * pixup.us
@@ -290,6 +291,7 @@
 * sh.st
     * dh10thbvu.com
     * jnw0.com
+    * ouo.io
     * sh.st
     * u2ks.com
 * seomafia.net
@@ -342,6 +344,7 @@
     * 3ra.be
     * 4fun.tw
     * 4shared.com
+    * a.pomf.se
     * adfoc.us
     * adjet.biz
     * adlock.org
@@ -349,6 +352,7 @@
     * ah-informatique.com
     * aka.gr
     * alabout.com
+    * allkeyshop.com
     * anonymbucks.com
     * bayimg.com
     * beeimg.com
@@ -425,6 +429,7 @@
     * jheberg.net
     * keptarolo.hu
     * kingofshrink.com
+    * leechbd.tk
     * lienscash.com
     * link-protector.com
     * link2dollar.com
