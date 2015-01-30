@@ -1,3 +1,17 @@
+## TBA
+
+* fixed
+    * sandbox problems on Firefox
+    * 1dl.biz
+    * empireload.com
+* added
+    * support for Violentmonkey
+    * ouo.io
+    * leechbd.tk
+    * a.pomf.se
+    * allkeyshop.com
+    * imgtzar.com
+
 ## 5.13.1
 
 * fixed
