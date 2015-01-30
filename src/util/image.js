@@ -1,6 +1,6 @@
-(function (global, factory) {
+(function (context, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = function (global, GM) {
+    module.exports = function (context, GM) {
       var _ = require('lodash');
       var core = require('./core.js');
       var dom = require('./dom.js');
@@ -8,22 +8,22 @@
       var link = require('./link.js');
       var misc = require('./misc.js');
       var modules = [dom, config, link, misc].map(function (v) {
-        return v.call(null, global, GM);
+        return v.call(null, context, GM);
       });
       var $ = _.assign.apply(_, modules);
-      return factory(global, GM, core, $);
+      return factory(context, GM, core, $);
     };
   } else {
-    factory(global, {
+    factory(context, {
       getResourceText: GM_getResourceText,
       addStyle: GM_addStyle,
       getResourceURL: GM_getResourceURL,
-    }, global._, global.$);
+    }, context._, context.$);
   }
-}(this, function (global, GM, _, $) {
+}(this, function (context, GM, _, $) {
   'use strict';
 
-  var window = global.window;
+  var window = context.window;
   var document = window.document;
 
 

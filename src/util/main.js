@@ -1,26 +1,26 @@
-(function (global, factory) {
+(function (context, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = function (global, GM) {
+    module.exports = function (context, GM) {
       var _ = require('lodash');
       var core = require('./core.js');
       var misc = require('./misc.js');
       var handler = require('./handler.js');
       var modules = [misc, handler].map(function (v) {
-        return v.call(null, global, GM);
+        return v.call(null, context, GM);
       });
       var $ = _.assign.apply(_, modules);
-      return factory(global, GM, core, $);
+      return factory(context, GM, core, $);
     };
   } else {
-    factory(global, {
+    factory(context, {
       openInTab: GM_openInTab,
       registerMenuCommand: GM_registerMenuCommand,
-    }, global._, global.$);
+    }, context._, context.$);
   }
-}(this, function (global, GM, _, $) {
+}(this, function (context, GM, _, $) {
   'use strict';
 
-  var window = global.window;
+  var window = context.window;
   var document = window.document;
   var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 

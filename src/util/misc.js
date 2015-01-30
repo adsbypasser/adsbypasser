@@ -1,19 +1,21 @@
-(function (global, factory) {
+(function (context, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = function (global) {
+    module.exports = function (context) {
       var core = require('./core.js');
       var ajax = require('./ajax.js');
-      var $ = ajax(global);
-      return factory(global, core, $);
+      var $ = ajax(context);
+      return factory(context, core, $);
     };
   } else {
-    factory(global, global._, global.$);
+    factory(context, context._, context.$);
   }
-}(this, function (global, _, $) {
+}(this, function (context, _, $) {
   'use strict';
 
-  var window = global.window;
-  var unsafeWindow = global.unsafeWindow;
+  var window = context.window;
+  // Violentmonkey passes unsafeWindow by closure/arguments
+  // need to break the sandbox to get unsafeWindow
+  var unsafeWindow = context.unsafeWindow || (0, eval)('this').window;
   var document = window.document;
 
 
@@ -83,6 +85,7 @@
   var MAGIC_KEY = '__adsbypasser_reverse_proxy__';
 
   $.window = (function () {
+    // GreaseMonkey 1.15 won't pass this test
     var isFirefox = typeof InstallTrigger !== 'undefined';
     if (!isFirefox) {
       // other browsers does not need this

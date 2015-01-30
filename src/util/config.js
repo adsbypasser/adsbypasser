@@ -1,27 +1,26 @@
-(function (global, factory) {
+(function (context, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = function (global, GM) {
+    module.exports = function (context, GM) {
       var _ = require('lodash');
       var core = require('./core.js');
       var misc = require('./misc.js');
       var handler = require('./handler.js');
       var modules = [misc, handler].map(function (v) {
-        return v.call(null, global, GM);
+        return v.call(null, context, GM);
       });
       var $ = _.assign.apply(null, modules);
-      return factory(global, GM, core, $);
+      return factory(context, GM, core, $);
     };
   } else {
-    factory(global, {
+    factory(context, {
       getValue: GM_getValue,
       setValue: GM_setValue,
-    }, global._, global.$);
+    }, context._, context.$);
   }
-}(this, function (global, GM, _, $) {
+}(this, function (context, GM, _, $) {
   'use strict';
 
-  var window = global.window;
-  // var unsafeWindow = global.unsafeWindow;
+  var window = context.window;
 
   $.config = {
     set version (value) {
