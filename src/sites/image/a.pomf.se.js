@@ -1,8 +1,14 @@
 $.register({
-  rule: {
-    host: /^a\.pomf\.se$/,
-    path: /^\/.+\.htm$/,
-  },
+  rule: [
+    {
+      host: /^a\.pomf\.se$/,
+      path: /^\/.+\.htm$/,
+    },
+    {
+      host: /^empireload\.com$/,
+      path: /^\/sexy\/.+\.htm$/,
+    },
+  ],
   ready: function () {
     'use strict';
 
