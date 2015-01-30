@@ -1,4 +1,4 @@
-## TBA
+## 5.14.0
 
 * fixed
     * sandbox problems on Firefox
