@@ -21,7 +21,7 @@
   $.register({
     rule: {
       host: [
-        /^(img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|seeds)|image(corn|picsa)|www\.(imagefolks|imgblow)|hosturimage|img-zone|08lkk)\.com$/,
+        /^(img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|seeds|tzar)|image(corn|picsa)|www\.(imagefolks|imgblow)|hosturimage|img-zone|08lkk)\.com$/,
         /^img(candy|master|-view|run)\.net$/,
         /^imgcloud\.co|pixup\.us$/,
         /^(www\.)?\.imgult\.com$/,
