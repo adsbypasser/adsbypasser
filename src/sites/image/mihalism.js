@@ -9,7 +9,7 @@
   $.register({
     rule: {
       host: [
-        /^(hentai-hosting|miragepics|funextra\.hostzi|img(rex|banana))\.com$/,
+        /^(hentai-hosting|miragepics|funextra\.hostzi|imgrex)\.com$/,
         /^bilder\.nixhelp\.de$/,
         /^imagecurl\.(com|org)$/,
         /^imagevau\.eu$/,
