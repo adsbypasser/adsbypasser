@@ -47,19 +47,6 @@
     start: helper,
   });
 
-  // catpic.biz
-  $.register({
-    rule: {
-      host: /^catpic\.biz$/,
-      path: /^(\/\w)?\/viewer\.php$/,
-      query: /file=([^&]+)/,
-    },
-    start: function (m) {
-      var url = _.T('{0}/images/{1}');
-      $.openImage(url(m.path[1] || '', m.query[1]));
-    },
-  });
-
   // overpic.net
   $.register({
     rule: [
