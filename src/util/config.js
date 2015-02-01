@@ -4,8 +4,8 @@
       var _ = require('lodash');
       var core = require('./core.js');
       var misc = require('./misc.js');
-      var handler = require('./handler.js');
-      var modules = [misc, handler].map(function (v) {
+      var dispatcher = require('./dispatcher.js');
+      var modules = [misc, dispatcher].map(function (v) {
         return v.call(null, context, GM);
       });
       var $ = _.assign.apply(null, modules);
