@@ -6,10 +6,9 @@ $.register({
   ready: function (m) {
     'use strict';
 
-    var l = $('a.btn-block.redirect').href;
-    var b64 = l.match(/\?r=(\w+={2})/); 
+    var l = $('a.btn-block.redirect');
 
-    $.openLink(atob(b64[1]));
+    $.openLink(l.href);
   },
 });
 
