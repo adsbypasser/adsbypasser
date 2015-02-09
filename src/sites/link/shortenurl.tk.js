@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^(www\.)?shortenurl\.tk$/,
+    host: [
+      /^(www\.)?shortenurl\.tk$/,
+      /^(www\.)?pengaman\.link$/,
+    ],
     path: /^\/\w+$/,
   },
   ready: function (m) {
