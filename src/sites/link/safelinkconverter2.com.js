@@ -1,9 +1,13 @@
 $.register({
-  rule: {
+  rule: [{
     host: /^(www\.)?safelinkconverter2\.com$/,
     path: /^\/decrypt-\d\/$/,
     query: /id=(\w+=+)/,
   },
+  {
+  	host: /^(www\.)?safelinkreview\.com$/,
+  	query: /id=(\w+=+)/,
+  }],
   start: function (m) {
     'use strict';
 
