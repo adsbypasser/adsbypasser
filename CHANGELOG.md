@@ -1,3 +1,20 @@
+## TBA
+
+* fixed
+    * shortenurl.tk
+    * adf.ly
+* removed
+    * catpic.biz
+    * pic.apollon-fervor.com
+    * imgking.us
+    * imgbanana.com
+* added
+    * microtec.com.sg
+    * pengaman.link
+    * safelinkreview.com
+    * bokimage.com
+    * segmentnext.com
+
 ## 5.14.0
 
 * fixed
