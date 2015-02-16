@@ -37,7 +37,6 @@
     * zff.co
 * Mihalism Multi Host
     * 244pix.com
-    * catpic.biz
     * dwimg.com
     * empireload.com
     * funextra.hostzi.com
@@ -47,9 +46,7 @@
     * imagecurl.org
     * imagepong.info
     * imageview.me
-    * imgbanana.com
     * imgdream.net
-    * imgking.us
     * imgnip.com
     * imgsin.com
     * miragepics.com
@@ -60,6 +57,7 @@
     * postimg.net
 * reklama
     * 08lkk.com (Photo)
+    * bokimage.com
     * bulkimg.info
     * croftimage.com
     * damimage.com
@@ -82,7 +80,6 @@
     * imgstudio.org
     * imgtaxi.com
     * myhotimage.com
-    * pic.apollon-fervor.com
     * picstwist.com
     * wpc8.com
     * zeljeimage.com
@@ -334,6 +331,12 @@
 * ethi.in
     * ethi.in
     * st.wardhanime.net
+* shortenurl.tk
+    * pengaman.link
+    * shortenurl.tk
+* safelink
+    * safelinkconverter2.com
+    * safelinkreview.com
 * else
     * 01.nl
     * 1be.biz
@@ -440,6 +443,7 @@
     * lnk.in
     * lostpic.net
     * madlink.sk
+    * microtec.com.sg
     * mirrorcreator.com
     * mirrorupload.net
     * mrjh.org
@@ -472,11 +476,10 @@
     * rijaliti.info
     * riurl.com
     * robo.us
-    * safelinkconverter2.com
     * safeurl.eu
     * screenlist.ru
+    * segmentnext.com
     * setlinks.us
-    * shortenurl.tk
     * shorturl.rapeit.net
     * similarsites.com
     * srelink.com
