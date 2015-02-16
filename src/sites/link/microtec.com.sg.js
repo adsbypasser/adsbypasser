@@ -7,7 +7,7 @@ $.register({
     'use strict';
 
     var l = $('a.btn-block.redirect').href;
-    var b64 = l.match(/\?r=(\w+={0,2}?)/); 
+    var b64 = l.match(/\?r=(\w+={0,2}?)/);
 
     $.openLink(atob(b64[1]));
   },
