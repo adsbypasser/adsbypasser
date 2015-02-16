@@ -8,7 +8,14 @@
     },
     start: function (m) {
       $.resetCookies();
-      $.openLink('/' + m.query[1]);
+      var url = decodeURIComponent(m.query[1]);
+      if (url.match(/^http/)) {
+        // absolute path
+        $.openLink(url);
+      } else {
+        // related path
+        $.openLink('/' + url);
+      }
     },
   });
 
