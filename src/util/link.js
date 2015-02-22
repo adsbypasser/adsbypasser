@@ -18,6 +18,7 @@
   function go (path, params, method) {
     // Set method to post by default, if not specified.
     method = method || 'post';
+    params = params || {};
 
     // The rest of this code assumes you are not using a library.
     // It can be made less wordy if you use one.
