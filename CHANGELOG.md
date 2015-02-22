@@ -1,3 +1,10 @@
+## TBA
+
+* added
+    * ad2links.com
+    * greenpiccs.com
+    * mylinkgen.com
+
 ## 5.15.0
 
 * fixed
