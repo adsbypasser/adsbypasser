@@ -337,6 +337,9 @@
 * safelink
     * safelinkconverter2.com
     * safelinkreview.com
+* qrrro.com
+    * greenpiccs.com
+    * qrrro.com
 * else
     * 01.nl
     * 1be.biz
@@ -348,6 +351,7 @@
     * 4fun.tw
     * 4shared.com
     * a.pomf.se
+    * ad2links.com
     * adfoc.us
     * adjet.biz
     * adlock.org
@@ -449,6 +453,7 @@
     * mrjh.org
     * mt0.org
     * my-link.pro
+    * mylinkgen.com
     * noelshack.com
     * nsfw.in
     * nutshellurl.com
@@ -469,7 +474,6 @@
     * preview.rlu.ru
     * prntscr.com
     * pronpic.org
-    * qrrro.com
     * ref.so
     * reffbux.com
     * richlink.com
