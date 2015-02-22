@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^qrrro\.com$/,
+    host: /^(qrrro|greenpiccs)\.com$/,
     path: /^(\/images\/.+)\.html$/,
   },
   start: function (m) {
