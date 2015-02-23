@@ -60,8 +60,8 @@
   // empireload.com
   $.register({
     rule: {
-      host: /empireload\.com$/,
-      path: /^\/sexy\/Images\/links\.php$/,
+      host: /(empireload|loadsanook)\.com$/,
+      path: /\/links\.php$/,
       query: /file=([^&]+)/,
     },
     start: function (m) {
