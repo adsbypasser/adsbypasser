@@ -7,6 +7,8 @@ $.register({
     {
       host: /^empireload\.com$/,
       path: /^\/sexy\/.+\.htm$/,
+      // filter lbGate
+      query: /^$/,
     },
   ],
   ready: function () {
