@@ -13,7 +13,7 @@
           /^(image(decode|ontime)|(zonezeed|zelje|croft|myhot|dam|bok)image|picstwist|www\.imglemon|ericsony|imgpu|wpc8)\.com$/,
           /^(img(serve|coin|fap)|gallerycloud)\.net$/,
           /^hotimages\.eu$/,
-          /^(imgstudio|dragimage|image(look|team))\.org$/,
+          /^(imgstudio|dragimage|imageteam)\.org$/,
         ],
         path: /^\/img-.*\.html$/,
       },
