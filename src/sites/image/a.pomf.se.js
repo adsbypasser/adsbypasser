@@ -3,6 +3,8 @@ $.register({
     {
       host: /^a\.pomf\.se$/,
       path: /^\/.+\.htm$/,
+      // filter lbGate
+      query: /^$/,
     },
     {
       host: /^empireload\.com$/,
