@@ -1,8 +1,15 @@
 $.register({
-  rule: {
-    host: /^(www\.)?sylnk\.net$/,
-    query: /link=([^&]+)/
-  },
+  rule: [
+  	{
+	    host: /^(www\.)?sylnk\.net$/,
+	    query: /link=([^&]+)/,
+  	},
+  	{
+	    host: /^(www\.)?compul\.in$/,
+	    path: /^\/n\.php$/,
+	    query: /v=([^&]+)/,
+	},
+  ],
   start: function (m) {
     'use strict';
     var rawLink = atob(m.query[1]);
