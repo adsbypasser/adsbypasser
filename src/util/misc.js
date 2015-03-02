@@ -31,7 +31,7 @@
   };
 
   $.captcha = function (imgSrc, cb) {
-    if (!config.externalServerSupport) {
+    if (!$.config.externalServerSupport) {
       return;
     }
 
