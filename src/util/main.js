@@ -29,6 +29,7 @@
     $.window.open = _.nop;
   }
 
+
   function disableLeavePrompt () {
     var seal = {
       set: function () {
@@ -70,6 +71,36 @@
     });
   }
 
+
+  function beforeDOMReady (handler) {
+      _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
+      disableWindowOpen();
+      handler.start();
+  }
+
+
+  function afterDOMReady (handler) {
+    disableLeavePrompt();
+    handler.ready();
+  }
+
+
+  function waitDOM () {
+    return _.D(function (resolve, reject) {
+      // DOM is ready
+      if (document.readyState !== 'loading') {
+        // means 'interactive' or 'complete'
+        resolve();
+        return;
+      }
+      // DOM is not ready
+      document.addEventListener('DOMContentLoaded', function () {
+        resolve();
+      });
+    });
+  }
+
+
   $._main = function () {
     var findHandler = $._findHandler;
 
@@ -85,37 +116,30 @@
       GM.openInTab('https://adsbypasser.github.io/configure.html');
     });
 
+    // find by URL
     var handler = findHandler(true);
     if (handler) {
-      _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
+      beforeDOMReady(handler);
 
-      disableWindowOpen();
-
-      handler.start();
-
-      document.addEventListener('DOMContentLoaded', function () {
-          disableLeavePrompt();
-          handler.ready();
+      waitDOM().then(function () {
+        afterDOMReady(handler);
       });
-    } else {
-      _.info('does not match location on `%s`, will try HTML content', window.location.toString());
 
-      document.addEventListener('DOMContentLoaded', function () {
-        handler = findHandler(false);
-
-        if (!handler) {
-          _.info('does not match HTML content on `%s`', window.location.toString());
-          return;
-        }
-
-        _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
-
-        disableWindowOpen();
-        disableLeavePrompt();
-
-        handler.ready();
-      });
+      return;
     }
+
+    _.info('does not match location on `%s`, will try HTML content', window.location.toString());
+    waitDOM().then(function () {
+      // find again by HTML content
+      handler = findHandler(false);
+      if (!handler) {
+        _.info('does not match HTML content on `%s`', window.location.toString());
+        return;
+      }
+
+      beforeDOMReady(handler);
+      afterDOMReady(handler);
+    });
   };
 
   return $;

@@ -45,7 +45,7 @@
       GM.setValue('external_server_support', value);
     },
     get externalServerSupport () {
-      GM.getValue('external_server_support');
+      return GM.getValue('external_server_support');
     },
     set redirectImage (value) {
       GM.setValue('redirect_image', value);

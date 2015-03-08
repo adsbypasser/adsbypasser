@@ -64,8 +64,8 @@
         data: data,
         headers: headers,
         onload: function (response) {
-          // NOTE GreaseMonkey and Webkit have different spec
-          response = (typeof this.responseText !== 'undefined') ? this : response;
+          // HACK use this as fallback for zombie.js
+          response = (typeof response.responseText !== 'undefined') ? response : this;
           if (response.status !== 200) {
             reject(response.responseText);
           } else {
@@ -73,7 +73,8 @@
           }
         },
         onerror: function (response) {
-          response = (typeof this.responseText !== 'undefined') ? this : response;
+          // HACK use this as fallback for zombie.js
+          response = (typeof response.responseText !== 'undefined') ? response : this;
           reject(response.responseText);
         },
       });
