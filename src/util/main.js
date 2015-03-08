@@ -73,9 +73,9 @@
 
 
   function beforeDOMReady (handler) {
-      _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
-      disableWindowOpen();
-      handler.start();
+    _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
+    disableWindowOpen();
+    handler.start();
   }
 
 

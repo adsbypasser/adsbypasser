@@ -1,14 +1,14 @@
 $.register({
   rule: [
-  	{
-	    host: /^(www\.)?sylnk\.net$/,
-	    query: /link=([^&]+)/,
-  	},
-  	{
-	    host: /^(www\.)?compul\.in$/,
-	    path: /^\/n\.php$/,
-	    query: /v=([^&]+)/,
-	},
+    {
+      host: /^(www\.)?sylnk\.net$/,
+      query: /link=([^&]+)/,
+    },
+    {
+      host: /^(www\.)?compul\.in$/,
+      path: /^\/n\.php$/,
+      query: /v=([^&]+)/,
+    },
   ],
   start: function (m) {
     'use strict';
