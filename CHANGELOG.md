@@ -1,3 +1,18 @@
+## TBA
+
+* fixed
+    * empireload.com
+    * a.pomf.se
+* removed
+    * imagelook.org
+    * ouo.io
+    * ref.so
+* added
+    * loadsanook.com
+    * sa.ae
+    * compul.in
+    * dikit.in
+
 ## 5.16.0
 
 * added
