@@ -7,6 +7,10 @@
       path: /\/[A-Z0-9]+/,
     },
     ready: function () {
+      if ($.$('#captcha')) {
+      	return;
+      }
+
       // Button access to links
       var f = $.$('form[name=ccerure]');
       if (f) {
