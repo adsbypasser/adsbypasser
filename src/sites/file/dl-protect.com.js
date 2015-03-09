@@ -8,7 +8,7 @@
     },
     ready: function () {
       if ($.$('#captcha')) {
-      	return;
+        return;
       }
 
       // Button access to links
