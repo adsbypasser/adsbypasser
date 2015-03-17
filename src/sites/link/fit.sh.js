@@ -13,7 +13,7 @@ $.register({
     }
     m = m[1];
 
-    var interLink = '/go/' + m + '?a=' + window.location.hash.substr(1);
+    var interLink = '/go/' + m + '?fa=15466&a=' + window.location.hash.substr(1);
 
     setTimeout(function () {
       $.openLink(interLink);
