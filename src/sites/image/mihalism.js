@@ -61,7 +61,6 @@
   $.register({
     rule: {
       host: /(empireload|loadsanook)\.com$/,
-      path: /\/links\.php$/,
       query: /file=([^&]+)/,
     },
     start: function (m) {
