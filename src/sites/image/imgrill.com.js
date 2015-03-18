@@ -22,7 +22,7 @@
     rule: {
       host: [
         /^(img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|seeds|tzar)|image(corn|picsa)|www\.(imagefolks|imgblow)|hosturimage|img-(zone|planet)|08lkk)\.com$/,
-        /^img(candy|master|-view|run)\.net$/,
+        /^(img(candy|master|-view|run)|imagelaser)\.net$/,
         /^imgcloud\.co|pixup\.us$/,
         /^(www\.)?\.imgult\.com$/,
         /^bulkimg\.info$/,
