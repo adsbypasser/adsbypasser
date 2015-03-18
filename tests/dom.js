@@ -13,7 +13,7 @@ describe('dom', function () {
   'use strict';
 
   before(function (done) {
-    this.browser = Browser.create();
+    this.browser = new Browser();
     this.server = toolkit.createServer(done);
   });
 
