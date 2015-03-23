@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^gca\.sh$/,
+    host: /^gca\.sh|repla\.cr$/,
   },
   ready: function () {
     'use strict';
