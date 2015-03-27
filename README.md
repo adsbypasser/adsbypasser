@@ -84,6 +84,6 @@ For more information, please see [Wiki].
 [10]: https://adsbypasser.github.io/configure.html
 [Node.js]: http://nodejs.org/
 [npm]: https://npmjs.org/
-[RedirectionHelper]: http://userscripts.org/scripts/show/69797
-[SuYS]: http://userscripts.org/users/SuYS
+[RedirectionHelper]: http://userscripts-mirror.org/scripts/show/69797
+[SuYS]: http://userscripts-mirror.org/users/SuYS.html
 [Wiki]: https://github.com/adsbypasser/adsbypasser/wiki
