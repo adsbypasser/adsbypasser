@@ -107,7 +107,9 @@
     * image.adlock.org
     * imagecorn.com
     * imagefolks.com
+    * imagelaser.net
     * imagepicsa.com
+    * img-planet.com
     * img-view.net
     * img.spicyzilla.com
     * img.yt
@@ -294,6 +296,7 @@
     * apploadz.ru
     * seomafia.net
 * imagescream.com
+    * all-poster.ru
     * anonpic.com
     * imagescream.com
     * picturevip.com
@@ -342,6 +345,9 @@
 * sylnk.net
     * compul.in
     * sylnk.net
+* gca.sh (manual captcha)
+    * gca.sh
+    * repla.cr
 * else
     * 01.nl
     * 1be.biz
@@ -375,6 +381,7 @@
     * cf.ly
     * cli.gs
     * clictune.com
+    * clk.im
     * comyonet.com
     * cubeupload.com
     * dapat.in
@@ -389,10 +396,10 @@
     * fit.sh
     * fotolink.su
     * fotosik.pl
+    * free-tv-video-online.info
     * fundurl.com
     * funkyimg.com
     * gallerynova.se
-    * gca.sh (manual captcha)
     * gkurl.us
     * go2.me
     * goimagehost.com
@@ -505,6 +512,7 @@
     * urlgator.com
     * urlinn.com
     * urlms.com
+    * urlv2.com
     * urlz.so
     * viidii.info
     * vir.al
