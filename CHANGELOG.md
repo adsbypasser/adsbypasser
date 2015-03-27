@@ -1,3 +1,19 @@
+## TBA
+
+* fixed
+    * empireload.com
+    * clictune.com
+    * fit.sh
+    * error on Firefox 39
+* added
+    * img-planet.com
+    * imagelaser.net
+    * free-tv-video-online.info
+    * urlv2.com
+    * clk.im
+    * repla.cr
+    * all-poster.ru
+
 ## 5.17.1
 
 * fixed
