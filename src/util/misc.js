@@ -95,9 +95,10 @@
     var decorator = {
       set: function (target, key, value) {
         if (key === MAGIC_KEY) {
-          return;
+          return false;
         }
         target[key] = clone(value);
+        return true;
       },
       get: function (target, key) {
         if (key === MAGIC_KEY) {
