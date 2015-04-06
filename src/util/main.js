@@ -72,6 +72,11 @@
   }
 
 
+  function changeTitle () {
+    document.title += ' - AdsBypasser';
+  }
+
+
   function beforeDOMReady (handler) {
     _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
     disableWindowOpen();
@@ -81,6 +86,7 @@
 
   function afterDOMReady (handler) {
     disableLeavePrompt();
+    changeTitle();
     handler.ready();
   }
 
