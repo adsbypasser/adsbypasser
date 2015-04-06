@@ -77,6 +77,7 @@
     * imgpu.com
     * imgrun.net (t)
     * imgserve.net
+    * imgslip.com
     * imgstudio.org
     * imgtaxi.com
     * myhotimage.com
@@ -456,8 +457,10 @@
     * lix.in
     * lnk.in
     * lostpic.net
+    * lynk.my
     * madlink.sk
     * microtec.com.sg
+    * mije.net
     * mirrorcreator.com
     * mirrorupload.net
     * mrjh.org
@@ -514,6 +517,7 @@
     * urlms.com
     * urlv2.com
     * urlz.so
+    * vidto.me
     * viidii.info
     * vir.al
     * vvcap.net
