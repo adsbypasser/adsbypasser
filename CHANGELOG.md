@@ -1,3 +1,13 @@
+## TBA
+
+* fixed
+    * 1dl.biz
+* added
+    * vidto.me
+    * imgslip.com
+    * lynk.my
+    * mije.net
+
 ## 5.18.0
 
 * fixed
