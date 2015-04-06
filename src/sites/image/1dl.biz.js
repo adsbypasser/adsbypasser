@@ -1,9 +1,16 @@
 $.register({
-  rule: {
-    host: /^1dl\.biz$/,
-    path: /^\/(\w)\.php$/,
-    query: /^\?([\d\/]+)$/,
-  },
+  rule: [
+    {
+      host: /^1dl\.biz$/,
+      path: /^\/(\w)\.php$/,
+      query: /^\?([\d\/]+)$/,
+    },
+    {
+      host: /^img\.1dl\.biz$/,
+      path: /^\/(\w)\.php$/,
+      query: /^\?\w\/([\d\/]+)$/,
+    },
+  ],
   ready: function () {
     'use strict';
 
