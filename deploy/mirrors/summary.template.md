@@ -11,19 +11,27 @@ Any feature request or bug report is welcome. (either in English, 中文 or 日�
 The source repository is on [GitHub]. You could use GitHub to report issues or
 send pull requests, if you have an account.
 
+You can configure some function in [this page][1], please see [here] if you
+need more information.
+
+# Supported Platforms
+
+Please check [this page][2] to see if your browser/userscript manager is
+supported.
+
 # Changelog
 
 {changelog}
 
-[more ...][2]
+[more ...][3]
 
 # Supported Sites
 
 {sites}
 
-[more ... ({count} sites)][3]
+[more ... ({count} sites)][4]
 
-# Credits
+# Contributors
 
 Forked from [RedirectionHelper] writen by [SuYS], and here are our nice
 contributors. (sort by GitHub account)
@@ -38,8 +46,9 @@ contributors. (sort by GitHub account)
 
 
 [1]: https://adsbypasser.github.io/configure.html
-[2]: https://github.com/adsbypasser/adsbypasser/blob/master/CHANGELOG.md
-[3]: https://github.com/adsbypasser/adsbypasser/blob/master/SITES.md
-[RedirectionHelper]: http://userscripts.org/scripts/show/69797
-[SuYS]: http://userscripts.org/users/SuYS
+[2]: https://github.com/adsbypasser/adsbypasser/wiki/Supported-Platforms
+[3]: https://github.com/adsbypasser/adsbypasser/blob/master/CHANGELOG.md
+[4]: https://github.com/adsbypasser/adsbypasser/blob/master/SITES.md
+[RedirectionHelper]: http://userscripts-mirror.org/scripts/show/69797
+[SuYS]: http://userscripts-mirror.org/users/SuYS.html
 [GitHub]: https://github.com/adsbypasser/adsbypasser
