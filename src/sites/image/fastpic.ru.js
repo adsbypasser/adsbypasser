@@ -1,14 +1,13 @@
 $.register({
-  rule: [
-    'http://*.abload.de/image.php?img=*',
-    'http://www.imageup.ru/*/*/*.html',
-    'http://itmages.ru/image/view/*/*',  // different layout same handler
-  ],
+  rule: {
+    host: /^fastpic\.ru$/,
+    path: /^\/view\//,
+  },
   ready: function () {
     'use strict';
 
-    var i = $('#image');
-    $.openImage(i.src);
+    var img = $('#picContainer #image');
+    $.openImage(img.src);
   },
 });
 
