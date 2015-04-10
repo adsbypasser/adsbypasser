@@ -2,7 +2,7 @@ $.register({
   rule: {
     host: /^(www\.)?safelinkair\.com$/,
     path: /^\/code$/,
-    query: /(?:^|&)link=([a-zA-Z0-9=]+)(?:$|&)/,
+    query: /(?:\?|&)link=([a-zA-Z0-9=]+)(?:$|&)/,
   },
   start: function (m) {
     'use strict';
