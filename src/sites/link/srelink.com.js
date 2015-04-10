@@ -1,15 +1,14 @@
 $.register({
   rule: {
-    host: /^(www\.)?srelink\.com$/,
-    path: /^\/i\/\w+$/,
+    host: /^(www\.)?safelinkair\.com$/,
+    path: /^\/code$/,
+    query: /(?:^|&)link=([a-zA-Z0-9=]+)(?:$|&)/,
   },
-  ready: function (m) {
+  start: function (m) {
     'use strict';
 
-    $.removeNodes('iframe');
-
-    var matches = $.searchScripts(/href="([^"]+)">SKIP AD<\/a>/);
-    $.openLink(matches[1]);
+    var l = atob(m.query[1])
+    $.openLink(l);
   },
 });
 
