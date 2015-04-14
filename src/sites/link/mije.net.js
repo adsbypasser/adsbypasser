@@ -7,9 +7,7 @@ $.register({
     'use strict';
 
     var url = atob(m.path[1]);
-    if (!url.match(/^https?:\/\//)) {
-      return;
-    }
+    // assuming all url is valid
     $.openLink(url);
   },
 });
