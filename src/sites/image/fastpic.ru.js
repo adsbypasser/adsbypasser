@@ -1,14 +1,13 @@
 $.register({
   rule: {
-    host: /^(www\.)?safelinkair\.com$/,
-    path: /^\/code$/,
-    query: /(?:\?|&)link=([a-zA-Z0-9=]+)(?:$|&)/,
+    host: /^fastpic\.ru$/,
+    path: /^\/view\//,
   },
-  start: function (m) {
+  ready: function () {
     'use strict';
 
-    var l = atob(m.query[1])
-    $.openLink(l);
+    var img = $('#picContainer #image');
+    $.openImage(img.src);
   },
 });
 

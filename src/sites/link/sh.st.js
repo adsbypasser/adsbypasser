@@ -24,6 +24,7 @@
         var r = JSON.parse(text);
         if (r.status == "ok" && r.destinationUrl) {
           clearInterval(i);
+          $.removeAllTimer();
           $.openLink(r.destinationUrl);
         }
       });
