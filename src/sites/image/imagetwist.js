@@ -18,7 +18,10 @@
 
   $.register({
     rule: {
-      host: /^image(twist|cherry)\.com$/,
+      host: [
+        /^image(twist|cherry)\.com$/,
+        /^imgtrex\.com$/,
+      ],
     },
     ready: run,
   });
