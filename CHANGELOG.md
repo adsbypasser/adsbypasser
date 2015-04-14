@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * srelink.com
+    * fastpic.ru
+    * sh.st
+    * mije.net
+
 ## 5.19.0
 
 * fixed
