@@ -33,6 +33,7 @@
       var paste_id = m.path[1];
       var paste_salt = m.hash[1];
 
+      var API_URL = _.T('https://binbox.io/{0}.json')(paste_id);
 
       $.get(API_URL).then(function (pasteInfo) {
         pasteInfo = JSON.parse(pasteInfo);
