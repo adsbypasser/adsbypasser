@@ -9,7 +9,7 @@ $.register({
     var f = $('form[name=F1]');
     setTimeout(function() {
         f.submit();
-    }, 15000);
+    }, 20000);
   },
 });
 
