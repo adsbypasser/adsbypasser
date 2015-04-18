@@ -1,4 +1,4 @@
-## TBA
+## 5.20.0
 
 * fixed
     * binbox.io
