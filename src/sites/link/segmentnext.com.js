@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: [
+    host: /^segmentnext\.com$/,
     path: /^\/interstitial\.html$/,
     query: /return_url=([^&]+)/,
   },
