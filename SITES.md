@@ -223,6 +223,7 @@
     * imagecherry.com
     * imagenpic.com
     * imagetwist.com
+    * imgtrex.com
 * b4he
     * b4he.com
     * fastpics.net
@@ -370,8 +371,10 @@
     * alabout.com
     * allkeyshop.com
     * anonymbucks.com
+    * arab.sh
     * bayimg.com
     * beeimg.com
+    * biglistofwebsites.com
     * bild.me
     * bilder-space.de
     * bilder-upload.eu
@@ -456,6 +459,7 @@
     * linkshrink.net
     * lix.in
     * lnk.in
+    * loook.ga
     * lostpic.net
     * lynk.my
     * madlink.sk
@@ -503,6 +507,7 @@
     * stash-coins.com
     * steamcommunity.com
     * subirimagenes.com
+    * supercheats.com
     * thinfi.com
     * tinyarrows.com
     * tinypic.com
