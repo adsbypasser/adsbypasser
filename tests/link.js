@@ -22,7 +22,7 @@ describe('link', function () {
   });
 
   afterEach(function () {
-    this.browser.close();
+    this.browser.tabs.closeAll();
   });
 
 
