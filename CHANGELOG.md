@@ -1,3 +1,14 @@
+## TBA
+
+* fixed
+    * binbox.io
+* added
+    * supercheats.com
+    * imgtrex.com
+    * loook.ga
+    * biglistofwebsites.com
+    * arab.sh
+
 ## 5.19.1
 
 * fixed
