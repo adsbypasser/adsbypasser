@@ -26,10 +26,10 @@
   $.register({
     rule: {
       host: [
-        /^((img(paying|mega))|imzdrop)\.com$/,
+        /^img(paying|mega|zeus)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
-        /^(uploadrr|imageeer)\.com$/,
+        /^(uploadrr|imageeer|imzdrop)\.com$/,
       ],
       path: pathRule,
     },
