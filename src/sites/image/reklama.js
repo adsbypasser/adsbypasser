@@ -10,7 +10,7 @@
     rule: [
       {
         host: [
-          /^(image(decode|ontime)|(zonezeed|zelje|croft|myhot|dam|bok)image|picstwist|www\.imglemon|ericsony|img(pu|slip)|wpc8)\.com$/,
+          /^(image(decode|ontime)|(zonezeed|zelje|croft|myhot|dam|bok)image|picstwist|www\.imglemon|ericsony|img(pu|slip)|wpc8|uplimg)\.com$/,
           /^(img(serve|coin|fap)|gallerycloud)\.net$/,
           /^hotimages\.eu$/,
           /^(imgstudio|dragimage|imageteam)\.org$/,
