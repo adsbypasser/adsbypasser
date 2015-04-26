@@ -312,6 +312,7 @@
     * imgpaying.com
     * imgrock.net
     * imgsee.me
+    * imgzeus.com
     * imzdrop.com
     * uploadrr.com
 * imgsure.com
@@ -450,6 +451,7 @@
     * jheberg.net
     * keptarolo.hu
     * kingofshrink.com
+    * larashare.com
     * leechbd.tk
     * lienscash.com
     * link-protector.com
@@ -516,6 +518,7 @@
     * ulmt.in
     * ultshare.com
     * unfake.it
+    * uplimg.com
     * url.ie
     * urlgator.com
     * urlinn.com
