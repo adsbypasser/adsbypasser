@@ -30,6 +30,7 @@
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
         /^(uploadrr|imageeer|imzdrop)\.com$/,
+        /^chronos\.to$/,
       ],
       path: pathRule,
     },
