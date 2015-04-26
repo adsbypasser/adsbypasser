@@ -1,3 +1,10 @@
+## TBA
+
+* added
+    * imgzeus.com
+    * larashare.com
+    * uplimg.com
+
 ## 5.20.0
 
 * fixed
