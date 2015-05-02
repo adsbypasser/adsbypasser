@@ -51,27 +51,21 @@
     var l = document.createElement('a');
     l.href = url;
     var reqHost = l.hostname;
-    headers.Host = reqHost || window.location.host;
+    var overrideHeaders = {
+      Host: reqHost || window.location.host,
+      Origin: window.location.origin,
+      Referer: window.location.href,
+      'X-Requested-With': 'XMLHttpRequest',
+    };
 
-    // Allow to perform a request without certain parameters by passsing false
-    if (headers.Origin === false) {
-      delete headers.Origin;
-    } else {
-      headers.Origin = window.location.origin;
-    }
-
-    if (headers.Referer === false) {
-      delete headers.Referer;
-    } else {
-      headers.Referer = window.location.href;
-    }
-
-    if (headers['X-Requested-With'] === false) {
-      delete headers['X-Requested-With'];
-    } else {
-      headers['X-Requested-With'] = 'XMLHttpRequest';
-    }
-    
+    // Allow to perform a request without certain parameters by passsing _.nop
+    _.C(overrideHeaders).each(function (v, k, c) {
+      if (headers[k] === _.nop) {
+        delete headers[k];
+      } else {
+        headers[k] = v;
+      }
+    });
 
     var xhr = null;
     var promise = _.D(function (resolve, reject) {
