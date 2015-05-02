@@ -52,9 +52,26 @@
     l.href = url;
     var reqHost = l.hostname;
     headers.Host = reqHost || window.location.host;
-    headers.Origin = window.location.origin;
-    headers.Referer = window.location.href;
-    headers['X-Requested-With'] = 'XMLHttpRequest';
+
+    // Allow to perform a request without certain parameters by passsing false
+    if (headers.Origin === false) {
+      delete headers.Origin;
+    } else {
+      headers.Origin = window.location.origin;
+    }
+
+    if (headers.Referer === false) {
+      delete headers.Referer;
+    } else {
+      headers.Referer = window.location.href;
+    }
+
+    if (headers['X-Requested-With'] === false) {
+      delete headers['X-Requested-With'];
+    } else {
+      headers['X-Requested-With'] = 'XMLHttpRequest';
+    }
+    
 
     var xhr = null;
     var promise = _.D(function (resolve, reject) {
