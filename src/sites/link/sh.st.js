@@ -25,7 +25,8 @@
         if (r.status == "ok" && r.destinationUrl) {
           clearInterval(i);
           $.removeAllTimer();
-          $.openLink(r.destinationUrl);
+          // some sites need referer
+          $.openLinkWithReferer(r.destinationUrl);
         }
       });
     }, 1000);

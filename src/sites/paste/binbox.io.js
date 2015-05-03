@@ -35,7 +35,11 @@
 
       var API_URL = _.T('https://binbox.io/{0}.json')(paste_id);
 
-      $.get(API_URL).then(function (pasteInfo) {
+      $.get(API_URL, false, {
+        Origin: _.nop,
+        Referer: _.nop,
+        'X-Requested-With': _.nop,
+      }).then(function (pasteInfo) {
         pasteInfo = JSON.parse(pasteInfo);
         if (!pasteInfo.ok) {
           throw new _.AdsBypasserError("error when getting paste information");
