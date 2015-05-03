@@ -58,9 +58,9 @@
       'X-Requested-With': 'XMLHttpRequest',
     };
 
-    // Allow to perform a request without certain parameters by passsing _.nop
+    // Allow to perform a request without certain parameters by passsing _.none
     _.C(overrideHeaders).each(function (v, k, c) {
-      if (headers[k] === _.nop) {
+      if (headers[k] === _.none) {
         delete headers[k];
       } else {
         headers[k] = v;

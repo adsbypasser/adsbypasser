@@ -140,7 +140,7 @@
     var result;
     any(this._c, function (value, index, self) {
       var tmp = fn(value, index, self);
-      if (tmp !== _.nop) {
+      if (tmp !== _.none) {
         result = {
           key: index,
           value: value,
@@ -215,6 +215,7 @@
 
   _.nop = function () {
   };
+  _.none = _.nop;
 
 
   function log (method, args) {

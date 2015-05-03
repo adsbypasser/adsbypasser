@@ -26,7 +26,7 @@
     var c = _.C(document.cookie.split(';')).find(function (v) {
       var k = v.replace(/^\s*(\w+)=.+$/, '$1');
       if (k !== key) {
-        return _.nop;
+        return _.none;
       }
     });
     if (!c) {

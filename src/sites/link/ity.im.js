@@ -13,7 +13,7 @@ $.register({
 
     f = $.$$('frame').find(function (frame) {
       if (frame.src.indexOf('interheader.php') < 0) {
-        return _.nop;
+        return _.none;
       }
       return frame.src;
     });

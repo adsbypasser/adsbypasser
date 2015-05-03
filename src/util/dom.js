@@ -69,7 +69,7 @@
     var m = $.$$('script', context).find(function (s) {
       var m = s.innerHTML.match(pattern);
       if (!m) {
-        return _.nop;
+        return _.none;
       }
       return m;
     });
@@ -83,7 +83,7 @@
     var m = $.$$('script', context).find(function (s) {
       var m = s.innerHTML.indexOf(pattern);
       if (m < 0) {
-        return _.nop;
+        return _.none;
       }
       return m;
     });

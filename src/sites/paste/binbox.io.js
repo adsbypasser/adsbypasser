@@ -36,9 +36,9 @@
       var API_URL = _.T('https://binbox.io/{0}.json')(paste_id);
 
       $.get(API_URL, false, {
-        Origin: _.nop,
-        Referer: _.nop,
-        'X-Requested-With': _.nop,
+        Origin: _.none,
+        Referer: _.none,
+        'X-Requested-With': _.none,
       }).then(function (pasteInfo) {
         pasteInfo = JSON.parse(pasteInfo);
         if (!pasteInfo.ok) {

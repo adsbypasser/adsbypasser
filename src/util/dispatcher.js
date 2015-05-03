@@ -32,7 +32,7 @@
         // may be an array of regexp
         var r = _.C(pattern).find(function (p) {
           var m = url_6[part].match(p);
-          return m || _.nop;
+          return m || _.none;
         });
         matched[part] = r ? r.payload : null;
       }
@@ -51,7 +51,7 @@
     var tmp = _.C(rules).find(function (rule) {
       var m = dispatch(byLocation, rule, url_1, url_3, url_6);
       if (!m) {
-        return _.nop;
+        return _.none;
       }
       return m;
     });
@@ -162,7 +162,7 @@
     var pattern = _.C(patterns).find(function (pattern) {
       var m = dispatch(byLocation, pattern.rule, url_1, url_3, url_6);
       if (!m) {
-        return _.nop;
+        return _.none;
       }
       return m;
     });
