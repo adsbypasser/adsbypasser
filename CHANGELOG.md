@@ -1,4 +1,4 @@
-## TBA
+## 5.22.0
 
 * fixed
     * imgslip.com
