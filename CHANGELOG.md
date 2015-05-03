@@ -12,6 +12,8 @@
     * imgban.com
     * imgmonkey.com
     * goimge.com
+* removed
+    * microtec.com.sg
 
 ## 5.21.0
 
