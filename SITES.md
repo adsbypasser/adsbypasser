@@ -37,6 +37,7 @@
     * zff.co
 * Mihalism Multi Host
     * 244pix.com
+    * daily-img.com
     * dwimg.com
     * empireload.com
     * funextra.hostzi.com
@@ -65,6 +66,7 @@
     * dragimage.org
     * ericsony.com
     * gallerycloud.net
+    * goimge.com
     * hotimages.eu
     * imagedecode.com
     * imageontime.com
@@ -114,6 +116,7 @@
     * img-view.net
     * img.spicyzilla.com
     * img.yt
+    * imgban.com
     * imgblow.com
     * imgcandy.net
     * imgcloud.co
@@ -306,9 +309,11 @@
     * upan.so
     * gxp.so
 * imgpaying.com
+    * chronos.to
     * imageeer.com
     * imgclick.net
     * imgmega.com
+    * imgmonkey.com
     * imgpaying.com
     * imgrock.net
     * imgsee.me
@@ -351,6 +356,9 @@
 * gca.sh (manual captcha)
     * gca.sh
     * repla.cr
+* segmentnext.com
+    * segmentnext.com
+    * videogameblogger.com
 * else
     * 01.nl
     * 1be.biz
@@ -381,6 +389,7 @@
     * bilder-upload.eu
     * bildr.no
     * binbox.io
+    * bk-ddl.net
     * blackcatpix.com
     * casimages.com
     * cf.ly
@@ -465,7 +474,6 @@
     * lostpic.net
     * lynk.my
     * madlink.sk
-    * microtec.com.sg
     * mije.net
     * mirrorcreator.com
     * mirrorupload.net
@@ -501,7 +509,6 @@
     * sa.ae
     * safeurl.eu
     * screenlist.ru
-    * segmentnext.com
     * setlinks.us
     * shorturl.rapeit.net
     * similarsites.com
