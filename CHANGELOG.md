@@ -1,3 +1,18 @@
+## TBA
+
+* fixed
+    * imgslip.com
+    * binbox.io
+    * sh.st
+* added
+    * chronos.to
+    * daily-img.com
+    * videogameblogger.com
+    * bk-ddl.net
+    * imgban.com
+    * imgmonkey.com
+    * goimge.com
+
 ## 5.21.0
 
 * added
