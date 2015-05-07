@@ -59,6 +59,13 @@
     get scaleImage () {
       return GM.getValue('scale_image');
     },
+    set logLevel (value) {
+      // cast to int
+      GM.setValue('log_level', 1 * value);
+    },
+    get logLevel () {
+      return GM.getValue('log_level');
+    },
   };
 
   fixup($.config);
@@ -83,6 +90,11 @@
       function (c) {
         if (typeof c.externalServerSupport === 'undefined') {
           c.externalServerSupport = false;
+        }
+      },
+      function (c) {
+        if (typeof c.logLevel === 'undefined') {
+          c.logLevel = 1;
         }
       },
     ];
@@ -110,6 +122,7 @@
         }, 0);
       };
 
+      // TODO: i18n
       $.window.render({
         version: $.config.version,
         options: {
@@ -148,6 +161,22 @@
               'Send URL information to external server to enhance features (e.g.: captcha resolving). (default: disabled)',
               'Affected sites:',
               'urlz.so (captcha)',
+            ].join('<br/>\n'),
+          },
+          logLevel: {
+            type: 'select',
+            value: $.config.logLevel,
+            menu: [
+              [0, '0 (quiet)'],
+              [1, '1 (default)'],
+              [2, '2 (verbose)'],
+            ],
+            label: 'Log Level',
+            help: [
+              'Log level in developer console. (default: 1)',
+              '0 will not print anything in console.',
+              '1 will only print logs on affected sites.',
+              '2 will print on any sites.',
             ].join('<br/>\n'),
           },
         },
