@@ -125,6 +125,11 @@
     // find by URL
     var handler = findHandler(true);
     if (handler) {
+      // if log level is 0, disable console log
+      if ($.config.logLevel <= 0) {
+        _._quiet = true;
+      }
+
       beforeDOMReady(handler);
 
       waitDOM().then(function () {
@@ -132,6 +137,11 @@
       });
 
       return;
+    }
+
+    // if log level less than 2, disable console log
+    if ($.config.logLevel < 2) {
+      _._quiet = true;
     }
 
     _.info('does not match location on `%s`, will try HTML content', window.location.toString());

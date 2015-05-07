@@ -219,6 +219,9 @@
 
 
   function log (method, args) {
+    if (_._quiet) {
+      return;
+    }
     args = Array.prototype.slice.call(args);
     if (typeof args[0] === 'string' || args[0] instanceof String) {
       args[0] = 'AdsBypasser: ' + args[0];
@@ -230,6 +233,9 @@
       f.apply(console, args);
     }
   }
+
+  // HACK cyclic reference between $ and _
+  _._quiet = false;
 
   _.info = function () {
     log('info', arguments);
