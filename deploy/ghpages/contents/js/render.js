@@ -10,20 +10,34 @@ function commit () {}
     msg: $('#msg'),
     installHint: $('#install-hint'),
   };
-  var tpl = {
-    cb: $('#tpl-cb').text(),
+  var template = {
+    checkbox: _.template($('#template-checkbox').text()),
+    select: _.template($('#template-select').text()),
   };
+  var factory = {
 
+    checkbox: function (key, data) {
+      var html = template.checkbox({
+        key: key,
+        checked: data.value,
+        label: data.label,
+        help: data.help,
+      });
+      return $.parseHTML(html);
+    },
 
-  function createCheckbox (key, checked, labelText, helpText) {
-    var html = _.template(tpl.cb, {
-      key: key,
-      checked: checked,
-      label: labelText,
-      help: helpText,
-    });
-    return $.parseHTML(html);
-  }
+    select: function (key, data) {
+      var html = template.select({
+        key: key,
+        value: data.value,
+        menu: data.menu,
+        label: data.label,
+        help: data.help,
+      });
+      return $.parseHTML(html);
+    },
+
+  };
 
 
   render = function (data) {
@@ -32,13 +46,14 @@ function commit () {}
     view.msg.addClass('animated');
 
     _.each(data.options, function (v, k) {
-      var type = v.type;
+      var createUI = factory[v.type];
 
-      if (typeof type === 'string' && type === 'checkbox') {
-        // checkbox
-        var d = createCheckbox(k, v.value, v.label, v.help);
-        view.options.append(d);
+      if (!createUI) {
+        return;
       }
+
+      var d = createUI(k, v);
+      view.options.append(d);
     });
 
     view.panel.css('display', 'block');
@@ -55,6 +70,10 @@ function commit () {}
       // checkbox
       view.options.find('input[type="checkbox"]').each(function (k, v) {
         data[v.name] = v.checked;
+      });
+      // select
+      view.options.find('select').each(function (k, v) {
+        data[v.name] = v.value;
       });
 
       // commit changes

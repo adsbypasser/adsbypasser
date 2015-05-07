@@ -28,6 +28,11 @@
   transition-duration: 0.5s;
 }
 
+/* HACK selector priority */
+#msg.dismissed {
+  opacity: 1;
+}
+
 #noscript-hint {
   margin: 3em;
 }
