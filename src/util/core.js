@@ -3,13 +3,27 @@
     var bluebird = require('bluebird');
     module.exports = factory(context, bluebird.Promise);
   } else {
-    // HACK: for Gecko 24, so far only Pale Moon
-    // need dom.future.enabled = true
-    factory(context, context.Promise || function (fn) {
-      return context.unsafeWindow.Future.call(this, function (fr) {
-        fn(fr.resolve.bind(fr), fr.reject.bind(fr));
-      });
-    });
+    var P = null;
+    if (context.unsafeWindow.Future) {
+      // HACK: for Gecko 24, so far only Pale Moon
+      // need dom.future.enabled = true
+      P = function (fn) {
+        return context.unsafeWindow.Future.call(this, function (fr) {
+          fn(fr.resolve.bind(fr), fr.reject.bind(fr));
+        });
+      };
+    } else if (context.PromiseResolver) {
+      // HACK: for Gecko 25, so far only Pale Moon
+      // need dom.promise.enabled = true
+      P = function (fn) {
+        return new context.Promise(function (pr) {
+          fn(pr.resolve.bind(pr), pr.reject.bind(pr));
+        });
+      };
+    } else {
+      P = context.Promise;
+    }
+    factory(context, P);
   }
 }(this, function (context, Promise) {
   'use strict';
