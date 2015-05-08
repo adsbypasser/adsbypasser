@@ -1,4 +1,4 @@
-## TBA
+## 5.22.1
 
 * fixed
     * compatibility for Firefox 37 with GreaseMonkey 2.1
