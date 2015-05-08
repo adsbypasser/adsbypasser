@@ -97,7 +97,16 @@
         if (key === MAGIC_KEY) {
           return false;
         }
-        target[key] = clone(value);
+        // GreaseMonkey 2.1 has a bug
+        // unsafeWindow.open will become read-only after modifying
+        // so we have to explicitly assign property descriptor
+        if (target === unsafeWindow && key === 'open') {
+          var d = Object.getOwnPropertyDescriptor(target, key);
+          d.value = clone(value);
+          Object.defineProperty(target, key, d);
+        } else {
+          target[key] = clone(value);
+        }
         return true;
       },
       get: function (target, key) {
