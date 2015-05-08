@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * compatibility for Firefox 37 with GreaseMonkey 2.1
+    * compatibility for Firefox 25
+
 ## 5.22.0
 
 * fixed
