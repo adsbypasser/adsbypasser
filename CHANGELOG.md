@@ -1,3 +1,13 @@
+## TBA
+
+* changed
+    * new configuration to change log level
+* removed
+    * urlz.so
+* added
+    * awet.in
+    * sortir.in
+
 ## 5.22.1
 
 * fixed
