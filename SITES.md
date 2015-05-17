@@ -359,6 +359,9 @@
 * segmentnext.com
     * segmentnext.com
     * videogameblogger.com
+* awet.in
+    * awet.in
+    * sortir.in
 * else
     * 01.nl
     * 1be.biz
@@ -531,7 +534,6 @@
     * urlinn.com
     * urlms.com
     * urlv2.com
-    * urlz.so
     * vidto.me
     * viidii.info
     * vir.al
