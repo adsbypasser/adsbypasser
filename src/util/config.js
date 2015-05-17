@@ -160,7 +160,7 @@
             help: [
               'Send URL information to external server to enhance features (e.g.: captcha resolving). (default: disabled)',
               'Affected sites:',
-              'urlz.so (captcha)',
+              'setlinks.us (captcha)',
             ].join('<br/>\n'),
           },
           logLevel: {
