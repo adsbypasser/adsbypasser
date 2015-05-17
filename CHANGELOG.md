@@ -1,4 +1,4 @@
-## TBA
+## 5.23.0
 
 * changed
     * new configuration to change log level
