@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^awet\.in$/,
+    host: /^(awet|sortir)\.in$/,
   },
   ready: function () {
     'use strict';
