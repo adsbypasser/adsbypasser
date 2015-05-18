@@ -1,5 +1,20 @@
 $.register({
   rule: {
+    host: /^gca\.sh$/,
+    path: /^\/adv\/\w+\/(.*)$/,
+    query: /^(.*)$/,
+    hash: /^(.*)$/,
+  },
+  start: function (m) {
+    'use strict';
+
+    var l = m.path[1] + m.query[1] + m.hash[1];
+    $.openLink(l);
+  },
+});
+
+$.register({
+  rule: {
     host: /^gca\.sh|repla\.cr$/,
   },
   ready: function () {
