@@ -86,11 +86,17 @@
 
   // Anti-bypassing used
   $.register({
-    rule: {
+    rule: [
+      {
         host: /vnl\.tuhoctoan\.net/,
         path: /^\/id\/$/,
         query: /\?l=([a-zA-Z0-9=]+)/,
-    },
+      },{
+        host: /tavor-cooperation\.de/,
+        path: /^\/cheat\/$/,
+        query: /\?link=([a-zA-Z0-9=]+)/
+      },
+    ],
     start: function (m) {
       var l = atob(m.query[1]);
       $.openLink(l);
