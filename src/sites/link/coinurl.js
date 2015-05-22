@@ -29,10 +29,10 @@ $.register({
       var rExtractLink = /onclick="open_url\('([^']+)',\s*'go'\)/;
 
       // Iterate each frame
-      var innerFrames = $.$$('frameset > frame', docMainFrame).each(function (currFrame) {
+      var innerFrames = $.$$('iframe', docMainFrame).each(function (currFrame) {
         // Fix the host of the frame
         // NOTE Webkit does not strictly follow HTMLElement spec, can not use HTMLFrameElement.src
-        var currFrameAddr = window.location.origin + '/' + currFrame.getAttribute('src');
+        var currFrameAddr = currFrame.getAttribute('src');
 
         // Get the content of the current frame
         $.get(currFrameAddr).then(function(currFrameContent) {
