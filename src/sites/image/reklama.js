@@ -15,6 +15,7 @@
           /^hotimages\.eu$/,
           /^(imgstudio|dragimage|imageteam)\.org$/,
           /^(i\.)?imgslip\.com$/,
+          /^(i|xxx)\.hentaiyoutube\.com$/,
         ],
         path: /^\/img-.*\.html$/,
       },
