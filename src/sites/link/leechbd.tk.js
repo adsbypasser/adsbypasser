@@ -7,7 +7,7 @@ $.register({
     'use strict';
 
     $.get('/Shortener/API/read/get', {id: m.path[1], type: 'json'}).then(function (text) {
-      var r = JSON.parse(text);
+      var r = _.parseJSON(text);
       if (r.success == true && r.data.full) {
         $.openLink(r.data.full);
       } else {

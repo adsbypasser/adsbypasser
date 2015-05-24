@@ -227,6 +227,17 @@
     return new Promise(fn);
   };
 
+
+  _.parseJSON = function (json) {
+    try {
+      return JSON.parse(json);
+    } catch (e) {
+      _.warn(e);
+    }
+    return _.none;
+  };
+
+
   _.nop = function () {
   };
   _.none = _.nop;

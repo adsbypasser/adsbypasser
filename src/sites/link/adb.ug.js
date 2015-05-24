@@ -26,7 +26,7 @@ $.register({
 
     var i = setInterval(function () {
       $.post(url, m).then(function (text) {
-        var jj = JSON.parse(text);
+        var jj = _.parseJSON(text);
         if (!jj.errors && jj.messages) {
           clearInterval(i);
           $.openLink(jj.messages.url);
