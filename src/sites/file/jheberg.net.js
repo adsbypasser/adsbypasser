@@ -30,7 +30,7 @@ $.register({
       'slug': slug,
       'hoster': hoster
     }).then(function(response) {
-      var respJSON = JSON.parse(response);
+      var respJSON = _.parseJSON(response);
       $.openLink(respJSON.url);
     });
   },

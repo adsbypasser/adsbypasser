@@ -51,7 +51,7 @@
           // dirty fix for tr5.in
           text = text.match(/\{.+\}/)[0];
         }
-        var jj = JSON.parse(text);
+        var jj = _.parseJSON(text);
         if (jj.message) {
           clearInterval(i);
           $.openLink(jj.message.url);
@@ -86,7 +86,7 @@
     function makeLog () {
         make_opts.opt = 'make_log';
         post(make_url, make_opts, function (text) {
-          var data = JSON.parse(text);
+          var data = _.parseJSON(text);
           _.info('make_log', data);
           if (!data.message) {
             checksLog();
@@ -100,7 +100,7 @@
     function checkLog () {
       make_opts.opt = 'check_log';
       post(make_url, make_opts, function (text) {
-        var data = JSON.parse(text);
+        var data = _.parseJSON(text);
         _.info('check_log', data);
         if (!data.message) {
           checkLog();

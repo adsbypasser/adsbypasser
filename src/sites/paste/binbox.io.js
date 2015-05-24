@@ -40,7 +40,7 @@
         Referer: _.none,
         'X-Requested-With': _.none,
       }).then(function (pasteInfo) {
-        pasteInfo = JSON.parse(pasteInfo);
+        pasteInfo = _.parseJSON(pasteInfo);
         if (!pasteInfo.ok) {
           throw new _.AdsBypasserError("error when getting paste information");
         }

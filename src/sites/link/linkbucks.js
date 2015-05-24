@@ -91,7 +91,7 @@
 
     var i = setInterval(function () {
       $.get('/intermission/loadTargetUrl', token).then(function (text) {
-        var data = JSON.parse(text);
+        var data = _.parseJSON(text);
 
         _.info('response: %o', data);
 

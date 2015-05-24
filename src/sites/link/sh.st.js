@@ -21,7 +21,7 @@
 
     var i = setInterval(function () {
       $.get('/adSession/callback', data, header).then(function (text) {
-        var r = JSON.parse(text);
+        var r = _.parseJSON(text);
         if (r.status == "ok" && r.destinationUrl) {
           clearInterval(i);
           $.removeAllTimer();

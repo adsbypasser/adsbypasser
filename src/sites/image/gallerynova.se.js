@@ -25,14 +25,14 @@ $.register({
     $.post('/site/viewConfirmCode/' + m.path[1], {
       confirm: confirm
     }).then(function (rawJson) {
-    	// Good to know: the image is already present in the JSON as base64
-    	var json = JSON.parse(rawJson);
+      // Good to know: the image is already present in the JSON as base64
+      var json = _.parseJSON(rawJson);
 
-    	// Allows to decode \n \t \r and other characters like this
-    	var decodedHTML = document.createTextNode(json.content).data;
+      // Allows to decode \n \t \r and other characters like this
+      var decodedHTML = document.createTextNode(json.content).data;
 
-    	var imgURL = decodedHTML.match(/<a href="([^"]+)" target="_blank">/)[1];
-    	$.openImage(imgURL);
+      var imgURL = decodedHTML.match(/<a href="([^"]+)" target="_blank">/)[1];
+      $.openImage(imgURL);
     });
   },
 });
