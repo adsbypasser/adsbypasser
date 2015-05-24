@@ -1,3 +1,23 @@
+## TBA
+
+* removed
+    * steamcommunity.com
+* fixed
+    * gca.sh
+    * cur.lv
+    * imgslip.com
+    * 08lkk.com
+    * bc.vc
+* added
+    * vnl.tuhoctoan.net
+    * tavor-cooperation.de
+    * ouo.io
+    * totaldebrid.org
+    * shorti.ga
+    * hentaiyoutube.com
+    * fileproject.com.br
+    * st.benfile.com
+
 ## 5.23.0
 
 * changed
