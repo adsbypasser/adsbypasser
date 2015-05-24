@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^(awet|sortir)\.in$/,
+    host: [
+      /^(awet|sortir)\.in$/,
+      /^st\.benfile\.com$/,
+    ],
   },
   ready: function () {
     'use strict';
