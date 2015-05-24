@@ -1,4 +1,4 @@
-## TBA
+## 5.24.0
 
 * removed
     * steamcommunity.com
