@@ -6,7 +6,7 @@ $.register({
   ready: function () {
     'use strict';
 
-    unsafeWindow.startdl();
+    $.window.startdl();
   },
 });
 
