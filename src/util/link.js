@@ -64,6 +64,12 @@
     var a = document.createElement('a');
     a.href = to;
     a.style.display = 'none';
+
+    // start handlers
+    if (!document.body) {
+      document.body = document.createElement('body');
+    }
+
     document.body.appendChild(a);
 
     // Simulate a click on this link (so that the referer is sent)
