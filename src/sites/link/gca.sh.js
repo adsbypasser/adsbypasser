@@ -9,7 +9,7 @@ $.register({
     'use strict';
 
     var l = m.path[1] + m.query[1] + m.hash[1];
-    $.openLink(l);
+    $.openLinkWithReferer(l);
   },
 });
 
