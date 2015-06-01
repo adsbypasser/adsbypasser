@@ -19,30 +19,32 @@
   }
 
   $.register({
-    rule: {
-      host: [
-        /^(img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|seeds|tzar|ban)|image(corn|picsa)|www\.(imagefolks|imgblow)|hosturimage|img-(zone|planet))\.com$/,
-        /^(img(candy|master|-view|run)|imagelaser)\.net$/,
-        /^imgcloud\.co|pixup\.us$/,
-        /^(www\.)?\.imgult\.com$/,
-        /^bulkimg\.info$/,
-        /^(image\.adlock|imgspot|teenshot)\.org$/,
-        /^img\.yt$/,
-        /^vava\.in$/,
-        /^55888\.eu$/,
-        /^pixxx\.me$/,
-        /^(like\.)08lkk\.com$/,
-      ],
-      path: /^\/img-.*\.html$/,
-    },
-    ready: handler,
-  });
-
-  $.register({
-    rule: {
-      host: /^imgking\.co$/,
-      path: /^\/img-.*\.htmls$/,
-    },
+    rule: [
+      {
+        host: [
+          /^(img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|seeds|tzar|ban)|image(corn|picsa)|www\.(imagefolks|imgblow)|hosturimage|img-(zone|planet))\.com$/,
+          /^(img(candy|master|-view|run)|imagelaser)\.net$/,
+          /^imgcloud\.co|pixup\.us$/,
+          /^(www\.)?\.imgult\.com$/,
+          /^bulkimg\.info$/,
+          /^(image\.adlock|imgspot|teenshot)\.org$/,
+          /^img\.yt$/,
+          /^vava\.in$/,
+          /^55888\.eu$/,
+          /^pixxx\.me$/,
+          /^(like\.)08lkk\.com$/,
+        ],
+        path: /^\/img-.*\.html$/,
+      },
+      {
+        host: /^imgking\.co$/,
+        path: /^\/img-.*\.htmls$/,
+      },
+      {
+        host: /^imgtwyti\.com$/,
+        path: /^\/t\/img-.*\.html$/,
+      },
+    ],
     ready: handler,
   });
 
