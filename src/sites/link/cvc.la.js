@@ -3,16 +3,16 @@ $.register({
     host: /^(www\.)?cvc\.la$/,
     path: /^\/\w+$/,
   },
-  ready: function () {
+  start: function () {
     'use strict';
 
-    var matches = $.searchScripts(/<input type='hidden' name='hidden' value='(\d+)'>/);
-    setTimeout(function() {
-      $.openLinkByPost(document.location.href, {
-        hidden: matches[1],
-        image: ' ',
-      });
-    }, 100);
+    $.post(document.location.href, {
+      hidden: 24, // Either 24 or 276, but both seem to work anyway
+      image: ' ',
+    }).then(function (text) {
+      var matches = text.match(/window\.location\.replace\('([^']+)'\);/);
+      $.openLink(matches[1]);
+    });
   },
 });
 
