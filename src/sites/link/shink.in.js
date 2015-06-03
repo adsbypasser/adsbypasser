@@ -6,9 +6,9 @@ $.register({
   ready: function () {
     'use strict';
 
-      var f = $('#skip');
-      // Specifying a correct #id input value seems unecessary
-      f.submit();
+    var f = $('#skip');
+    // Specifying a correct #id input value seems unecessary
+    f.submit();
   },
 });
 
