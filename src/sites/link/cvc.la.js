@@ -6,13 +6,19 @@ $.register({
   ready: function () {
     'use strict';
 
-    var matches = $.searchScripts(/<input type='hidden' name='hidden' value='(\d+)'>/);
-    setTimeout(function() {
-      $.openLinkByPost(document.location.href, {
-        hidden: matches[1],
-        image: ' ',
-      });
-    }, 100);
+    // second stage
+    var matches = $.searchScripts(/window\.location\.replace\('([^']+)'\);/);
+    if (matches) {
+      $.openLink(matches[1]);
+      return;
+    }
+
+    // first stage
+    matches = $.searchScripts(/<input type='hidden' name='hidden' value='(\d+)'>/);
+    $.openLinkByPost(document.location.href, {
+      hidden: matches[1],
+      image: ' ',
+    });
   },
 });
 
