@@ -22,9 +22,14 @@
     rule: [
       {
         host: [
-          /^(img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|seeds|tzar|ban)|image(corn|picsa)|www\.(imagefolks|imgblow)|hosturimage|img-(zone|planet)|erimge)\.com$/,
+          /^img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|seeds|tzar|ban)\.com$/,
+          /^image(corn|picsa)\.com$/,
+          /^www\.(imagefolks|imgblow)\.com$/,
+          /^img-(zone|planet)\.com$/,
+          /^(hosturimage|erimge)\.com$/,
           /^(img(candy|master|-view|run)|imagelaser)\.net$/,
-          /^imgcloud\.co|pixup\.us$/,
+          /^imgcloud\.co$/,
+          /^pixup\.us$/,
           /^(www\.)?\.imgult\.com$/,
           /^bulkimg\.info$/,
           /^(image\.adlock|imgspot|teenshot)\.org$/,
