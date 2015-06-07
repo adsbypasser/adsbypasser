@@ -238,6 +238,11 @@
   };
 
 
+  _.isString = function (value) {
+    return (typeof value === 'string') || (value instanceof String);
+  };
+
+
   _.nop = function () {
   };
   _.none = _.nop;
@@ -248,7 +253,7 @@
       return;
     }
     args = Array.prototype.slice.call(args);
-    if (typeof args[0] === 'string' || args[0] instanceof String) {
+    if (_.isString(args[0])) {
       args[0] = 'AdsBypasser: ' + args[0];
     } else {
       args.unshift('AdsBypasser:');
