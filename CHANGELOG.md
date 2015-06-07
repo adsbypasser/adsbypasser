@@ -1,4 +1,4 @@
-## TBA
+## 5.25.0
 
 * changed
     * send `Referer` in the header by default
