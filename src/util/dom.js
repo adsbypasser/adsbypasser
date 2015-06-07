@@ -96,7 +96,7 @@
   $.searchScripts = function (pattern, context) {
     if (pattern instanceof RegExp) {
       return searchScriptsByRegExp(pattern, context);
-    } else if (typeof pattern === 'string') {
+    } else if (_.isString(pattern)) {
       return searchScriptsByString(pattern, context);
     } else {
       return null;

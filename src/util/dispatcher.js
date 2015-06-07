@@ -135,7 +135,7 @@
     if (rule instanceof RegExp) {
       return dispatchByRegExp(rule, url_1);
     }
-    if (typeof rule === 'string' || rule instanceof String) {
+    if (_.isString(rule)) {
       return dispatchByString(rule, url_3);
     }
     return dispatchByObject(rule, url_6);
