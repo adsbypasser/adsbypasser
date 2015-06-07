@@ -106,6 +106,7 @@
     * x45x.info
 * imgrill.com
     * 08lkk.com
+    * erimge.com
     * hosturimage.com
     * image.adlock.org
     * imagecorn.com
@@ -258,9 +259,6 @@
     * imageheli.com
     * imgtube.net
     * pixliv.com
-* urlcow
-    * miniurl.com
-    * urlcow.com
 * cashfly
     * cf2.me
     * cf3.me
@@ -400,7 +398,10 @@
     * clictune.com
     * clk.im
     * comyonet.com
+    * coolrom.com
     * cubeupload.com
+    * cvc.la
+    * dailyss.net
     * dapat.in
     * dd.ma
     * dikit.in
@@ -470,6 +471,7 @@
     * link2dollar.com
     * link2you.ru
     * linkdecode.com
+    * linkdrop.net
     * linkshrink.net
     * lix.in
     * lnk.in
@@ -477,6 +479,7 @@
     * lostpic.net
     * lynk.my
     * madlink.sk
+    * maxmirror.com
     * mije.net
     * mirrorcreator.com
     * mirrorupload.net
@@ -487,6 +490,7 @@
     * noelshack.com
     * nsfw.in
     * nutshellurl.com
+    * ohleech.com
     * oni.vn
     * oxyl.me
     * p.pw
@@ -496,6 +500,7 @@
     * picmoe.net
     * pics-money.ru
     * picshare.geenza.com
+    * pimpandhost.com
     * pixhost.org
     * pixhub.eu
     * pixroute.com
@@ -513,6 +518,7 @@
     * safeurl.eu
     * screenlist.ru
     * setlinks.us
+    * shink.in
     * shorturl.rapeit.net
     * similarsites.com
     * srelink.com
@@ -529,6 +535,7 @@
     * ultshare.com
     * unfake.it
     * uplimg.com
+    * upmirror.info
     * url.ie
     * urlgator.com
     * urlinn.com
