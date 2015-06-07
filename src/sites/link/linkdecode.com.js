@@ -36,7 +36,7 @@ $.register({
     }
 
     // Continue the decryption
-    $.openLink(b[1], {referer: false});
+    $.openLink(b[1]);
   },
 });
 
