@@ -34,48 +34,40 @@
         form.appendChild(input);
     });
 
+    // HACK create a body if called before DOMContentLoaded
+    if (!document.body) {
+      document.body = document.createElement('body');
+    }
     document.body.appendChild(form);
     form.submit();
   }
 
-  $.openLinkByPost = function (url, data) {
-    go(url, data, 'post');
-  };
 
-  $.openLink = function (to) {
+  // TODO erase history if possible
+  $.openLink = function (to, options) {
     if (!to) {
       _.warn('false URL');
       return;
     }
+    options = options || {};
+    var withReferer = typeof options.referer === 'undefined' ? true : options.referer;
+    var postData = options.post;
+
     var from = window.location.toString();
     _.info(_.T('{0} -> {1}')(from, to));
+
+    if (postData) {
+      go(to, postData, 'post');
+      return;
+    }
+
+    if (withReferer) {
+      go(to, null, 'get');
+      return;
+    }
+
     window.top.location.replace(to);
   };
-
-  $.openLinkWithReferer = function (to) {
-    if (!to) {
-      _.warn('false URL');
-      return;
-    }
-    var from = window.location.toString();
-    _.info(_.T('{0} -> {1}')(from, to));
-
-    // Create a link on the page
-    var a = document.createElement('a');
-    a.href = to;
-    a.style.display = 'none';
-
-    // start handlers
-    if (!document.body) {
-      document.body = document.createElement('body');
-    }
-
-    document.body.appendChild(a);
-
-    // Simulate a click on this link (so that the referer is sent)
-    a.click();
-  };
-
 
   return $;
 

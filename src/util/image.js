@@ -29,7 +29,9 @@
 
   $.openImage = function (imgSrc) {
     if ($.config.redirectImage) {
-      $.openLink(imgSrc);
+      $.openLink(imgSrc, {
+        referer: false,
+      });
     }
   };
 
