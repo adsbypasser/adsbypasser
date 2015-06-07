@@ -45,7 +45,7 @@
 
   // TODO erase history if possible
   $.openLink = function (to, options) {
-    if (!to) {
+    if (typeof to !== 'string' && !to) {
       _.warn('false URL');
       return;
     }
