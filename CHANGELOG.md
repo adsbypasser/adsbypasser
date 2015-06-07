@@ -1,3 +1,28 @@
+## TBA
+
+* changed
+    * send `Referer` in the header by default
+* fixed
+    * gca.sh
+    * imgtrex.com
+    * imgtwyti.com
+    * linkdecode.com
+    * empireload.com
+* removed
+    * urlcow.com
+    * miniurl.com
+* added
+    * ohleech.com
+    * upmirror.info
+    * pimpandhost.com
+    * maxmirror.com
+    * coolrom.com
+    * linkdrop.net
+    * cvc.la
+    * shink.in
+    * dailyss.net
+    * erimge.com
+
 ## 5.24.0
 
 * removed
