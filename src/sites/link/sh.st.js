@@ -26,7 +26,7 @@
           clearInterval(i);
           $.removeAllTimer();
           // some sites need referer
-          $.openLinkWithReferer(r.destinationUrl);
+          $.openLink(r.destinationUrl);
         }
       });
     }, 1000);

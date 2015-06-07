@@ -1,6 +1,7 @@
 (function () {
 
   var hosts = /^gca\.sh|repla\.cr$/;
+
   $.register({
     rule: {
       host: hosts,
@@ -12,7 +13,7 @@
       'use strict';
 
       var l = m.path[1] + m.query[1] + m.hash[1];
-      $.openLinkWithReferer(l);
+      $.openLink(l);
     },
   });
 

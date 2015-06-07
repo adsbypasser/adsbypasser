@@ -8,8 +8,10 @@ $.register({
 
     var i = $.$('div.t_tips2 div > img');
     if (!i) {
-      $.openLinkByPost('', {
-        _confirm: '',
+      $.openLink('', {
+        post: {
+          _confirm: '',
+        },
       });
       return;
     }

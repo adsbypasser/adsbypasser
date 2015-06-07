@@ -8,9 +8,11 @@ $.register({
 
     var a = $.$('a[rel="lightbox"]');
     if (!a) {
-      $.openLinkByPost('', {
-        browser_fingerprint: '',
-        ads: '0',
+      $.openLink('', {
+        post: {
+          browser_fingerprint: '',
+          ads: '0',
+        },
       });
       return;
     }

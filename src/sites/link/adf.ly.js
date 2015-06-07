@@ -67,7 +67,7 @@
         h += location.hash;
       }
       // some sites need Referer header
-      $.openLinkWithReferer(h);
+      $.openLink(h);
     },
   });
 
@@ -80,7 +80,7 @@
       var script = $.searchScripts('var r_url');
       var url = script.match(/&url=([^&]+)/);
       url = url[1];
-      $.openLinkWithReferer(url);
+      $.openLink(url);
     },
   });
 

@@ -14,9 +14,11 @@ $.register({
         return;
       }
     }
-    $.openLinkByPost('', {
-      hidden: '1',
-      image: ' ',
+    $.openLink('', {
+      path: {
+        hidden: '1',
+        image: ' ',
+      },
     });
   },
 });

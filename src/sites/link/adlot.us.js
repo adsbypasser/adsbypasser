@@ -16,7 +16,9 @@ $.register({
     while (tmp = p.exec(script)) {
       opt[tmp[1]] = tmp[2];
     }
-    $.openLinkByPost('', opt);
+    $.openLink('', {
+      path: opt,
+    });
   },
 });
 

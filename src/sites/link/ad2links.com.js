@@ -9,7 +9,9 @@ $.register({
     $.removeNodes('iframe');
 
     $.openLinkByPost(window.location.toString(), {
-      image: 'Skip Ad.',
+      post: {
+        image: 'Skip Ad.',
+      },
     });
   },
 });

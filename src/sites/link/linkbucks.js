@@ -104,7 +104,7 @@
         }
         if (data.Success && !data.AdBlockSpotted && data.Url) {
           clearInterval(i);
-          $.openLinkWithReferer(data.Url);
+          $.openLink(data.Url);
           return;
         }
       });
@@ -150,7 +150,7 @@
         url = Encode(ConvertFromHex(url));
       }
 
-      $.openLinkWithReferer(url);
+      $.openLink(url);
     }
   });
 

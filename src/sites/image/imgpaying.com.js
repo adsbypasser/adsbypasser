@@ -11,11 +11,13 @@
       _.info('do nothing');
     } else if (next || f) {
       // first stage
-      $.openLinkByPost('', {
-        op: 'view',
-        id: id,
-        pre: 1,
-        next: next || f.value,
+      $.openLink('', {
+        post: {
+          op: 'view',
+          id: id,
+          pre: 1,
+          next: next || f.value,
+        },
       });
     } else {
       // second stage
