@@ -1,4 +1,4 @@
-## TBA
+## 5.25.1
 
 * fixed
     * wrong redirection if link has query string
