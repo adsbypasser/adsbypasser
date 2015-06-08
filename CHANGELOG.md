@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * wrong redirection if link has query string
+    * error message on configuration page
+
 ## 5.25.0
 
 * changed
