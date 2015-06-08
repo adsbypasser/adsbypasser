@@ -116,10 +116,6 @@
         _.C(data).each(function (v, k) {
           $.config[k] = v;
         });
-        // protection hack
-        setTimeout(function () {
-          save(data);
-        }, 0);
       };
 
       // TODO: i18n
