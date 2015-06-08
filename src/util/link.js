@@ -15,15 +15,33 @@
   var $ = context.$ || {};
 
 
-  function go (path, params, method) {
-    // Set method to post by default, if not specified.
-    method = method || 'post';
+  function prepare (e) {
+    // HACK create a body if called before DOMContentLoaded
+    if (!document.body) {
+      document.body = document.createElement('body');
+    }
+    document.body.appendChild(e);
+  }
+
+
+  function get (url) {
+    // Create a link on the page
+    var a = document.createElement('a');
+    a.href = url;
+
+    // Simulate a click on this link (so that the referer is sent)
+    prepare(a);
+    a.click();
+  }
+
+
+  function post (path, params) {
     params = params || {};
 
     // The rest of this code assumes you are not using a library.
     // It can be made less wordy if you use one.
     var form = document.createElement('form');
-    form.method = method;
+    form.method = 'post';
     form.action = path;
 
     _.C(params).each(function (value, key) {
@@ -34,11 +52,7 @@
         form.appendChild(input);
     });
 
-    // HACK create a body if called before DOMContentLoaded
-    if (!document.body) {
-      document.body = document.createElement('body');
-    }
-    document.body.appendChild(form);
+    prepare(form);
     form.submit();
   }
 
@@ -57,12 +71,12 @@
     _.info(_.T('{0} -> {1}')(from, to));
 
     if (postData) {
-      go(to, postData, 'post');
+      post(to, postData);
       return;
     }
 
     if (withReferer) {
-      go(to, null, 'get');
+      get(to);
       return;
     }
 
