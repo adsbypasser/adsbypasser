@@ -22,7 +22,7 @@
     rule: [
       {
         host: [
-          /^img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|seeds|tzar|ban)\.com$/,
+          /^img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban)\.com$/,
           /^image(corn|picsa)\.com$/,
           /^www\.(imagefolks|imgblow)\.com$/,
           /^img-(zone|planet)\.com$/,
@@ -38,6 +38,7 @@
           /^55888\.eu$/,
           /^pixxx\.me$/,
           /^(like\.)08lkk\.com$/,
+          /imgseeds\.com$/,
         ],
         path: /^\/img-.*\.html$/,
       },
