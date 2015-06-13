@@ -47,8 +47,15 @@
       path: pathRule,
     },
     ready: function (m) {
-      var d = $.$('#imageviewir');
-      helper(m.path[1], d ? 'Continue to Image...' : null);
+      // they have random invalid forms here
+      var d = $.$('#imageviewir input[type=submit]:not([style])');
+      if (!d) {
+        helper(m.path[1]);
+        return;
+      }
+      // the form has a random field, directly use this form
+      d = d.parentNode;
+      d.submit();
     },
   });
 
