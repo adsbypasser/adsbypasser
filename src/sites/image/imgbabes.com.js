@@ -5,6 +5,12 @@ $.register({
   ready: function () {
     'use strict';
 
+    var i = $.$('input[onclick]');
+    if (i) {
+      $.window.Decode();
+      return;
+    }
+
     var i = $('#this_image');
     $.openImage(i.src);
   },
