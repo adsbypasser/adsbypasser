@@ -33,6 +33,7 @@
         /^imgclick\.net$/,
         /^(uploadrr|imageeer|imzdrop)\.com$/,
         /^chronos\.to$/,
+        /^imgdrive\.co$/,
       ],
       path: pathRule,
     },
