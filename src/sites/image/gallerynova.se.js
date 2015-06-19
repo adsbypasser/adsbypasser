@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^(www\.)?gallerynova\.se$/,
+    host: /^(www\.)?gallery(nova|sense)\.se$/,
     path: /^\/site\/v\//,
   },
   ready: function () {
