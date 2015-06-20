@@ -7,7 +7,7 @@ $.register({
 
     var a = $.$('body > center > a > img');
     if(a){
-    	$.openLink(a.parentNode.href);
+      $.openLink(a.parentNode.href);
     }
 
     var i = $('body > center > img');
