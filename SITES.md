@@ -310,6 +310,7 @@
     * chronos.to
     * imageeer.com
     * imgclick.net
+    * imgdrive.co
     * imgmega.com
     * imgmonkey.com
     * imgpaying.com
@@ -360,6 +361,9 @@
 * awet.in
     * awet.in
     * sortir.in
+* gallerynova.se
+    * gallerynova.se
+    * gallerysense.se
 * else
     * 01.nl
     * 1be.biz
@@ -404,6 +408,7 @@
     * dailyss.net
     * dapat.in
     * dd.ma
+    * dereferer.website
     * dikit.in
     * directupload.net
     * dl-protect.com
@@ -417,7 +422,6 @@
     * free-tv-video-online.info
     * fundurl.com
     * funkyimg.com
-    * gallerynova.se
     * gkurl.us
     * go2.me
     * goimagehost.com
