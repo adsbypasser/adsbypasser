@@ -1,3 +1,20 @@
+## TBA
+
+* fixed
+    * imgseeds.com
+    * imgrock.net
+    * empireload.com
+    * imgbabes.com
+    * binbox.io
+    * chronos.to
+    * imagebam.com
+    * postimg.org
+    * tavor-cooperation.de
+* added
+    * imgdrive.co
+    * dereferer.website
+    * gallerysense.se
+
 ## 5.25.1
 
 * fixed
