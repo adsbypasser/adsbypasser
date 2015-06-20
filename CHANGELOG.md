@@ -1,4 +1,4 @@
-## TBA
+## 5.26.0
 
 * fixed
     * imgseeds.com
