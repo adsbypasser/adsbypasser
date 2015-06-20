@@ -3,26 +3,49 @@
 
   var pathRule = /^\/([0-9a-z]+)(\.|\/|$)/;
 
-  function helper (id, next) {
-    var f = $.$('form > input[name="next"]');
-    var i = $.$('img.pic');
-    if (!(next || f) && !i) {
-      // other page
-      _.info('do nothing');
-    } else if (next || f) {
-      // first stage
-      $.openLink('', {
-        post: {
-          op: 'view',
-          id: id,
-          pre: 1,
-          next: next || f.value,
-        },
-      });
+  function go (id, pre, next) {
+    $.openLink('', {
+      post: {
+        op: 'view',
+        id: id,
+        pre: pre,
+        next: next,
+      },
+    });
+  }
+
+  function getNext1 (i) {
+    return i.value;
+  }
+
+  function getNext2 (i) {
+    var next = i.onclick && i.onclick.toString().match(/value='([^']+)'/);
+    if (next) {
+      next = next[1];
+      return next;
     } else {
+      return i.value;
+    }
+  }
+
+  function helper (id, getNext) {
+    var i = $.$('form > input[name="next"]');
+    if (i) {
+      // first stage
+      var next = getNext(i);
+      go(id, $('input[name="pre"]', i.parentNode).value, next);
+      return;
+    }
+
+    i = $.$('img.pic');
+    if (i) {
       // second stage
       $.openImage(i.src);
+      return;
     }
+
+    // other page
+    _.info('do nothing');
   }
 
   $.register({
@@ -32,12 +55,11 @@
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
         /^(uploadrr|imageeer|imzdrop)\.com$/,
-        /^chronos\.to$/,
       ],
       path: pathRule,
     },
     ready: function (m) {
-      helper(m.path[1]);
+      helper(m.path[1], getNext1);
     },
   });
 
@@ -50,12 +72,22 @@
       // they have random invalid forms here
       var d = $.$('#imageviewir input[type=submit]:not([style])');
       if (!d) {
-        helper(m.path[1]);
+        helper(m.path[1], getNext1);
         return;
       }
       // the form has a random field, directly use this form
       d = d.parentNode;
       d.submit();
+    },
+  });
+
+  $.register({
+    rule: {
+      host: /^chronos\.to$/,
+      path: pathRule,
+    },
+    ready: function (m) {
+      helper(m.path[1], getNext2);
     },
   });
 
