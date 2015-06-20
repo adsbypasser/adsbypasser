@@ -14,7 +14,7 @@ Mirrors:
 * Greasy Fork [full][2], [lite][3]
 * OpenUserJS.org [full][4], [lite][5]
 
-[![Build Status][8]][9]
+[![Build Status][6]][7]
 
 
 ## Supported Sites and Platforms
@@ -24,8 +24,8 @@ See [SITES.md](SITES.md) and [Supported Platforms].
 
 ## Run-time Configurations
 
-Please see [this page][10] to adjust configurations.
-For more information please see [here][11].
+Please see [this page][8] to adjust configurations.
+For more information please see [here][9].
 
 
 ## How To Build
@@ -48,10 +48,10 @@ For more information, please see [Wiki].
 [3]: https://greasyfork.org/scripts/4882-adsbypasserlite
 [4]: https://openuserjs.org/scripts/legnaleurc/AdsBypasser
 [5]: https://openuserjs.org/scripts/legnaleurc/AdsBypasserLite
-[8]: https://travis-ci.org/adsbypasser/adsbypasser.png?branch=master,develop
-[9]: https://travis-ci.org/adsbypasser/adsbypasser
-[10]: https://adsbypasser.github.io/configure.html
-[11]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
+[6]: https://travis-ci.org/adsbypasser/adsbypasser.png?branch=master,develop
+[7]: https://travis-ci.org/adsbypasser/adsbypasser
+[8]: https://adsbypasser.github.io/configure.html
+[9]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
 [Node.js]: http://nodejs.org/
 [npm]: https://npmjs.org/
 [RedirectionHelper]: http://userscripts-mirror.org/scripts/show/69797
