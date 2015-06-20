@@ -13,7 +13,6 @@ Mirrors:
 
 * Greasy Fork [full][2], [lite][3]
 * OpenUserJS.org [full][4], [lite][5]
-* MonkeyGuts [full][6], [lite][7]
 
 [![Build Status][8]][9]
 
@@ -49,8 +48,6 @@ For more information, please see [Wiki].
 [3]: https://greasyfork.org/scripts/4882-adsbypasserlite
 [4]: https://openuserjs.org/scripts/legnaleurc/AdsBypasser
 [5]: https://openuserjs.org/scripts/legnaleurc/AdsBypasserLite
-[6]: https://monkeyguts.com/code.php?id=439
-[7]: https://monkeyguts.com/code.php?id=440
 [8]: https://travis-ci.org/adsbypasser/adsbypasser.png?branch=master,develop
 [9]: https://travis-ci.org/adsbypasser/adsbypasser
 [10]: https://adsbypasser.github.io/configure.html

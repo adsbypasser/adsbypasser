@@ -25,10 +25,6 @@ def main(args=None):
     greasyfork(config['mirrors']['greasyfork'], 'full', 'lite', script_full)
     greasyfork(config['mirrors']['greasyfork'], 'lite', 'full', script_lite)
 
-    from mirrors.monkeyguts import exec_ as monkeyguts
-    monkeyguts(config['mirrors']['monkeyguts'], 'full', 'lite', script_full)
-    monkeyguts(config['mirrors']['monkeyguts'], 'lite', 'full', script_lite)
-
     from mirrors.openuserjs import exec_ as openuserjs
     openuserjs(config['mirrors']['openuserjs'], 'full', 'lite', script_full)
     openuserjs(config['mirrors']['openuserjs'], 'lite', 'full', script_lite)
