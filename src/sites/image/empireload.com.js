@@ -1,13 +1,13 @@
 $.register({
   rule: {
-    host: /^www\.empireload\.com$/,
-    path: /^\/images\/v\.php$/,
+    host: /^(www\.)?empireload\.com$/,
+    path: /^(\/images(\/files\/a)?)\/v\.php$/,
     query: /^\?link=(.+)$/,
   },
   start: function (m) {
     'use strict';
 
-    $.openImage('/images/link/' + m.query[1]);
+    $.openImage(m.path[1] + '/link/' + m.query[1]);
   },
 });
 

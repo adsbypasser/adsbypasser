@@ -16,7 +16,7 @@
     "chai": "",
     "connect": "",
     "serve-static": "",
-    "zombie": "",
+    "zombie": "4.0.10",
     "bluebird": "",
     "harmony-proxy": "",
     "lodash": "",
