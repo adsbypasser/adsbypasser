@@ -84,28 +84,6 @@
     },
   });
 
-  // Anti-bypassing used
-  $.register({
-    rule: [
-      {
-        host: /vnl\.tuhoctoan\.net/,
-        path: /^\/id\/$/,
-        query: /\?l=([a-zA-Z0-9=]+)/,
-      },{
-        host: /tavor-cooperation\.de/,
-        path: /^\/cheat\/$/,
-        query: /\?link=([a-zA-Z0-9=]+)/
-      },
-    ],
-    start: function (m) {
-      var l = atob(m.query[1]);
-      // they hide the real link in the result
-      l = l.match(/=([a-zA-Z0-9=]+)/);
-      l = atob(l[1]);
-      $.openLink(l);
-    },
-  });
-
 })();
 
 
