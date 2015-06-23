@@ -7,11 +7,15 @@ $.register({
 
     $.removeNodes('iframe');
 
-    var url = $.searchScripts(/window\.location='([^']+)'/);
-    if (!url) {
+    var data = $.searchScripts(/data:"([^"]+)"/);
+    if (!data) {
       throw new _.AdsBypasserError('pattern changed');
     }
-    $.openLink(url[1]);
+    data = data[1];
+
+    $.get('/click.html', data).then(function (url) {
+      $.openLink(url);
+    });
   },
 });
 

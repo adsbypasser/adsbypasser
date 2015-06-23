@@ -30,45 +30,44 @@
   }
 
 
-  function disableLeavePrompt () {
+  // NOTE maybe break in future Firefox release
+  function disableLeavePrompt (element) {
+    if (!element) {
+      return;
+    }
+
     var seal = {
       set: function () {
         _.info('blocked onbeforeunload');
       },
     };
-    // NOTE maybe break in future Firefox release
-    _.C([$.window, $.window.document.body]).each(function (o) {
-      if (!o) {
+
+    // release existing events
+    element.onbeforeunload = undefined;
+    // prevent they bind event again
+    if (isSafari) {
+      // Safiri must use old-style method
+      element.__defineSetter__('onbeforeunload', seal.set);
+    } else {
+      $.window.Object.defineProperty(element, 'onbeforeunload', {
+        configurable: false,
+        enumerable: false,
+        get: undefined,
+        // this will turn to undefined in Firefox, need upstream fix
+        set: seal.set,
+      });
+    }
+
+    // block addEventListener
+    var oael = element.addEventListener;
+    var nael = function (type) {
+      if (type === 'beforeunload') {
+        _.info('blocked addEventListener onbeforeunload');
         return;
       }
-
-      // release existing events
-      o.onbeforeunload = undefined;
-      // prevent they bind event again
-      if (isSafari) {
-        // Safiri must use old-style method
-        o.__defineSetter__('onbeforeunload', seal.set);
-      } else {
-        $.window.Object.defineProperty(o, 'onbeforeunload', {
-          configurable: false,
-          enumerable: false,
-          get: undefined,
-          // this will turn to undefined in Firefox, need upstream fix
-          set: seal.set,
-        });
-      }
-
-      // block addEventListener
-      var oael = o.addEventListener;
-      var nael = function (type) {
-        if (type === 'beforeunload') {
-          _.info('blocked addEventListener onbeforeunload');
-          return;
-        }
-        return oael.apply(this, arguments);
-      };
-      o.addEventListener = nael;
-    });
+      return oael.apply(this, arguments);
+    };
+    element.addEventListener = nael;
   }
 
 
@@ -79,13 +78,15 @@
 
   function beforeDOMReady (handler) {
     _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
+    disableLeavePrompt($.window);
     disableWindowOpen();
     handler.start();
   }
 
 
   function afterDOMReady (handler) {
-    disableLeavePrompt();
+    // some sites bind the event on body
+    disableLeavePrompt($.window.document.body);
     changeTitle();
     handler.ready();
   }
