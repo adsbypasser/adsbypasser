@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^(www\.)?adb\.ug$/,
+    host: /^(www\.)?adb\.ug|(www\.)?lynk\.my$/,
     // Match everything but empty, privacy, terms, contact, contact/whatever or path beginning with #
     path: /^(?!\/(?:privacy|terms|contact(\/.*)?|#.*)?$).*$/
   },
