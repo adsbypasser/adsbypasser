@@ -27,7 +27,15 @@
   var document = window.document;
 
 
-  $.openImage = function (imgSrc) {
+  $.openImage = function (imgSrc, options) {
+    options = options || {};
+    var replace = !!options.replace;
+
+    if (replace) {
+      replaceBody(imgSrc);
+      return;
+    }
+
     if ($.config.redirectImage) {
       $.openLink(imgSrc, {
         referer: false,
@@ -97,7 +105,7 @@
     i.id = 'adsbypasser-image';
   }
 
-  $.replace = function (imgSrc) {
+  function replaceBody (imgSrc) {
     if (!$.config.redirectImage) {
       return;
     }
