@@ -6,7 +6,9 @@ $.register({
     var o = $('.image-container img[id]');
     // somehow the server send image as an attachment
     // so I replace whole document.body with single img
-    $.replace(o.src);
+    $.openImage(o.src, {
+      replace: true,
+    });
   },
 });
 

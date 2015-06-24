@@ -5,7 +5,9 @@
     // dirty hack, prevent scripts appending elements
     $.window.jQuery.prototype.append = undefined;
     var i = $('img.pic');
-    $.replace(i.src);
+    $.openImage(i.src, {
+      replace: true,
+    });
   }
 
   $.register({

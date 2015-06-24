@@ -4,7 +4,9 @@ $.register({
     'use strict';
 
     var i = $('img');
-    $.replace(i.src);
+    $.openImage(i.src, {
+      replace: true,
+    });
   },
 });
 
