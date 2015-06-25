@@ -62,23 +62,31 @@ describe('image', function () {
       });
     });
 
-    it('should open image by default', function (done) {
-      var path = '/does_not_exist';
-      var self = this;
+    describe('redirect', function () {
+      it('should open image by default', function (done) {
+        var path = '/does_not_exist';
+        var self = this;
 
-      this.browser.visit(toolkit.page1).catch(function (error) {
-        done(error);
-      }).then(function () {
-        var $ = factory(self.browser);
+        this.browser.visit(toolkit.page1).catch(function (error) {
+          done(error);
+        }).then(function () {
+          var $ = factory(self.browser);
 
-        $.openImage(path);
+          $.openImage(path, {
+            replace: false,
+          });
 
-        return self.browser.wait();
-      }).catch(function () {
-        // excepted 404
-        self.browser.window.location.pathname.should.equals(path);
-        done();
-      });
+          return self.browser.wait();
+        }).catch(function () {
+          // excepted 404
+          self.browser.window.location.pathname.should.equals(path);
+          done();
+        });
+      });      
+    });
+
+    describe('replace', function () {
+      it('should replace document.body');
     });
 
   });
@@ -117,8 +125,6 @@ describe('image', function () {
         done(error);
       });
     });
-
-    it('should replace document.body');
 
   });
 
