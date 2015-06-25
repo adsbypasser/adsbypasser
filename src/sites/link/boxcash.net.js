@@ -16,7 +16,7 @@ $.register({
       t: m[3],
       r: m[4],
     }).then(function (response) {
-      var l = response.match(/window(?:.top.window).location="([^"]+)"/);
+      var l = response.match(/window(?:.top.window)\.location="([^"]+)"/);
       $.openLink(l[1]);
     });
   },
