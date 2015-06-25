@@ -91,43 +91,6 @@ describe('image', function () {
 
   });
 
-
-  describe('$.replace', function () {
-
-    it('should not accept invalid URL', function (done) {
-      var self = this;
-      this.browser.visit(toolkit.page1).then(function () {
-        var $ = factory(self.browser);
-
-        var b = self.browser.window.document.body;
-        $.replace(null);
-        self.browser.window.document.body.should.be.equals(b);
-
-        done();
-      }).done(null, function (error) {
-        done(error);
-      });
-    });
-
-    it('should not replace body if redirect_image is disabled', function (done) {
-      var self = this;
-      this.browser.visit(toolkit.page1).then(function () {
-        var $ = factory(self.browser, {
-          redirect_image: false,
-        });
-
-        var b = self.browser.window.document.body;
-        $.replace('does_not_exist');
-        self.browser.window.document.body.should.be.equals(b);
-
-        done();
-      }).done(null, function (error) {
-        done(error);
-      });
-    });
-
-  });
-
 });
 
 
