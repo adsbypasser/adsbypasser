@@ -66,7 +66,7 @@
       return null;
     }
 
-    var m = script.match(/AdPopUrl\s*:\s*'.+\?ref=([\w\d]+)'/);
+    var m = script.match(/AdPopUrl\s*:\s*'.+\?ref\d*=([\w\d]+)'/);
     var token = m[1];
     m = script.match(/=\s*(\d+);/);
     var ak = parseInt(m[1], 10);

@@ -35,6 +35,16 @@
   $.register({
     rule: {
       host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com$/,
+      path: /^\/freeze\/(.+)/,
+    },
+    start: function (m) {
+      $.openLink(m.path[1]);
+    },
+  });
+
+  $.register({
+    rule: {
+      host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com$/,
       path: /^\/[\d\w]+/,
     },
     ready: function () {
