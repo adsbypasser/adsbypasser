@@ -24,9 +24,9 @@
     "wintersmith-less": ""
   },
   "scripts": {
-    "build": "/usr/bin/env node --harmony-proxies ./node_modules/.bin/grunt",
-    "test": "/usr/bin/env node --harmony-proxies ./node_modules/.bin/grunt test",
-    "deploy": "/usr/bin/env node --harmony-proxies ./node_modules/.bin/grunt deploy",
-    "mirror": "/usr/bin/env node --harmony-proxies ./node_modules/.bin/grunt mirror"
+    "build": "./node_modules/.bin/grunt",
+    "test": "./node_modules/.bin/grunt test",
+    "deploy": "./node_modules/.bin/grunt deploy",
+    "mirror": "./node_modules/.bin/grunt mirror"
   }
 }
