@@ -322,9 +322,6 @@
 * imgsure.com
     * imgsure.com
     * picexposed.com
-* coin-ads
-    * coin-ads.com
-    * shortin.tk
 * firedrive.com
     * firedrive.com
     * putlocker.com
@@ -396,6 +393,7 @@
     * binbox.io
     * bk-ddl.net
     * blackcatpix.com
+    * boxcash.net
     * casimages.com
     * cf.ly
     * cli.gs
@@ -472,6 +470,7 @@
     * leechbd.tk
     * lienscash.com
     * link-protector.com
+    * link.im
     * link2dollar.com
     * link2you.ru
     * linkdecode.com
@@ -545,6 +544,7 @@
     * urlinn.com
     * urlms.com
     * urlv2.com
+    * victly.com
     * vidto.me
     * viidii.info
     * vir.al
