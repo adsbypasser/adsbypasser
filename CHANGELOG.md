@@ -1,4 +1,4 @@
-## TBA
+## 5.27.0
 
 * fixed
     * oni.vn
