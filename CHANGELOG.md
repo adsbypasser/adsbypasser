@@ -1,3 +1,18 @@
+## TBA
+
+* fixed
+    * oni.vn
+    * lynk.my
+    * sh.st
+    * linkbucks.com
+* added
+    * victly.com
+    * link.im
+    * boxcash.net
+* removed
+    * coin-ads.com
+    * shortin.tk
+
 ## 5.26.0
 
 * fixed
