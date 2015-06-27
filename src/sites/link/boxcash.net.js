@@ -30,7 +30,7 @@ $.register({
   },
   start: function (m) {
     'use strict';
-    
+
     $.openLink(m.query[1]);
   },
 });

@@ -82,7 +82,7 @@ describe('image', function () {
           self.browser.window.location.pathname.should.equals(path);
           done();
         });
-      });      
+      });
     });
 
     describe('replace', function () {
