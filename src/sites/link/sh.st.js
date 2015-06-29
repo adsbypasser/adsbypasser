@@ -35,10 +35,26 @@
   $.register({
     rule: {
       host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com$/,
-      path: /^\/freeze\/(.+)/,
+      path: /^\/freeze\/.+/,
     },
-    start: function (m) {
-      $.openLink(m.path[1]);
+    ready: function () {
+      // Wait for the timer (server-side check)
+      var o = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          // If the button is now active
+          if (mutation.target.getAttribute('class').match(/active/)) {
+            o.disconnect();
+            // Then we can redirect
+            $.openLink(mutation.target.href);
+          }
+        });
+      });
+
+      o.observe($('#skip_button'), {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+
     },
   });
 
