@@ -31,7 +31,8 @@ $.register({
   start: function (m) {
     'use strict';
 
-    $.openLink(m.query[1]);
+    var l = decodeURIComponent(m.query[1]);
+    $.openLink(l);
   },
 });
 
