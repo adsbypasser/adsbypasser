@@ -38,6 +38,7 @@
       path: /^\/freeze\/(.+)/,
     },
     start: function (m) {
+      $.resetCookies();
       $.openLink(m.path[1]);
     },
   });
