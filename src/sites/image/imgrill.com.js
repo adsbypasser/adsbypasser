@@ -32,7 +32,7 @@
           /^pixup\.us$/,
           /^(www\.)?\.imgult\.com$/,
           /^bulkimg\.info$/,
-          /^(image\.adlock|imgspot|teenshot)\.org$/,
+          /^(image(\.adlock|on)|imgspot|teenshot)\.org$/,
           /^img\.yt$/,
           /^vava\.in$/,
           /^55888\.eu$/,
