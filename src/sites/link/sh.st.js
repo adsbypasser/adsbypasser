@@ -3,29 +3,25 @@
 
   function afterGotSessionId (sessionId) {
     var X_NewRelic_ID = $.searchScripts(/xpid:"([^"]+)"/);
-    // this is an unsafe function
-    var Fingerprint = $.window.Fingerprint;
-    var browserToken = null;
-    if (Fingerprint) {
-      browserToken = (new Fingerprint({canvas: !0})).get();
-    } else {
-      browserToken = Math.round((new Date()).getTime() / 1000);
-    }
-    var data = "sessionId=" + sessionId + "&browserToken=" + browserToken;
+
+    var data = {
+      adSessionId: sessionId,
+    };
+
     var header = {
       Accept: 'application/json, text/javascript',
     };
+    
     if (X_NewRelic_ID) {
       header['X-NewRelic-ID'] = X_NewRelic_ID;
     }
 
     var i = setInterval(function () {
-      $.get('/adSession/callback', data, header).then(function (text) {
+      $.get('/shortest-url/end-adsession', data, header).then(function (text) {
         var r = _.parseJSON(text);
         if (r.status == "ok" && r.destinationUrl) {
           clearInterval(i);
           $.removeAllTimer();
-          // some sites need referer
           $.openLink(r.destinationUrl);
         }
       });
@@ -35,10 +31,26 @@
   $.register({
     rule: {
       host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com$/,
-      path: /^\/freeze\/(.+)/,
+      path: /^\/freeze\/.+/,
     },
-    start: function (m) {
-      $.openLink(m.path[1]);
+    ready: function () {
+      // Wait for the timer (server-side check)
+      var o = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          // If the button is now active
+          if (mutation.target.getAttribute('class').match(/active/)) {
+            o.disconnect();
+            // Then we can redirect
+            $.openLink(mutation.target.href);
+          }
+        });
+      });
+
+      o.observe($('#skip_button'), {
+        attributes: true,
+        attributeFilter: ['class'],
+      });
+
     },
   });
 
