@@ -24,9 +24,9 @@
     "wintersmith-less": ""
   },
   "scripts": {
-    "build": "./node_modules/.bin/grunt",
-    "test": "./node_modules/.bin/grunt test",
-    "deploy": "./node_modules/.bin/grunt deploy",
-    "mirror": "./node_modules/.bin/grunt mirror"
+    "build": "node --harmony ./node_modules/grunt-cli/bin/grunt",
+    "test": "node --harmony ./node_modules/grunt-cli/bin/grunt test",
+    "deploy": "node --harmony ./node_modules/grunt-cli/bin/grunt deploy",
+    "mirror": "node --harmony ./node_modules/grunt-cli/bin/grunt mirror"
   }
 }
