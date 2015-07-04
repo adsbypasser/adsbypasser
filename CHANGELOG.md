@@ -1,3 +1,13 @@
+## TBA
+
+* fixed
+    * boxcash.net
+    * sh.st
+* added
+    * adfe.es
+    * imageon.org
+
+
 ## 5.27.0
 
 * fixed
