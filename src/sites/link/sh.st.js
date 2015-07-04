@@ -11,7 +11,7 @@
     var header = {
       Accept: 'application/json, text/javascript',
     };
-    
+
     if (X_NewRelic_ID) {
       header['X-NewRelic-ID'] = X_NewRelic_ID;
     }

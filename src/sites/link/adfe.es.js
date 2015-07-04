@@ -10,7 +10,7 @@ $.register({
 
     // Not at the final step?
     if (!f.STEP4) {
-    	return;
+      return;
     }
 
     f.submit();
