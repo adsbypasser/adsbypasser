@@ -12,7 +12,7 @@
         host: [
           /^image(decode|ontime)\.com$/,
           /^(zonezeed|zelje|croft|myhot|dam|bok)image\.com$/,
-          /^(picstwist|www\.imglemon|ericsony|imgpu|wpc8|uplimg|goimge)\.com$/,
+          /^(picstwist|www\.imglemon|ericsony|imgpu|wpc8|uplimg|goimge|xxx\.pornprimehd)\.com$/,
           /^(img(serve|coin|fap)|gallerycloud)\.net$/,
           /^hotimages\.eu$/,
           /^(imgstudio|dragimage|imageteam)\.org$/,
