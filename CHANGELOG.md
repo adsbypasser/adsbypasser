@@ -1,3 +1,13 @@
+## TBA
+
+* fixed
+    * linkbucks.com
+* added
+    * pornprimehd.com
+    * pasted.co
+    * lexiit.com
+    * thumbnailus.com
+
 ## 5.28.0
 
 * fixed
