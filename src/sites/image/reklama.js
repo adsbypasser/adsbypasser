@@ -60,7 +60,10 @@
         path: /^\/img-.*\.html$/,
       },
       {
-        host: /^img(run|twyti)\.net$/,
+        host: [
+          /^img(run|twyti)\.net$/,
+          /^imgtwyti\.com$/,
+        ],
         path: /^\/t\/img-.*\.html$/,
       },
       {
