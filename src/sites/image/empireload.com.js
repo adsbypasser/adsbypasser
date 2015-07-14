@@ -1,7 +1,7 @@
 $.register({
   rule: {
     host: /^(www\.)?empireload\.com$/,
-    path: /^(\/images(\/files\/a)?)\/v\.php$/,
+    path: /^(\/images(\/files\/\w)?)\/v\.php$/,
     query: /^\?link=(.+)$/,
   },
   start: function (m) {
