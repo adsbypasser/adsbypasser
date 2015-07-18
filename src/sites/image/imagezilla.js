@@ -1,12 +1,13 @@
 $.register({
   rule: {
     host: /^imagezilla\.net$/,
-    path: /^\/show\/(.+)$/,
   },
-  start: function (m) {
+  ready: function () {
     'use strict';
-
-    $.openImage('/images2/' + m.path[1]);
+    var i = $('#photo');
+    $.openLink(i.src, {
+      referer: true,
+    });
   },
 });
 
