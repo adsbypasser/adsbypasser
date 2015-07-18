@@ -26,7 +26,7 @@
           // starts with image
           /^image(decode|ontime|corn|picsa)\.com$/,
           // ends with image
-          /^(zonezeed|zelje|croft|myhot|dam|bok|hostur)image\.com$/,
+          /^(zonezeed|zelje|croft|myhot|bok|hostur)image\.com$/,
           // starts with img
           /^img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu)\.com$/,
           // starts with img-
@@ -41,6 +41,7 @@
           /^(like\.)08lkk\.com$/,
           /^(www\.)?\.imgult\.com$/,
           /imgseeds\.com$/,
+          /damimage\.com$/,
           // net
           /^img(serve|coin|fap|candy|master|-view|run)\.net$/,
           /^(gallerycloud|imagelaser)\.net$/,

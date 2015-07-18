@@ -30,6 +30,8 @@
   $.openImage = function (imgSrc, options) {
     options = options || {};
     var replace = !!options.replace;
+    // will be false by default
+    var referer = !!options.referer;
 
     if (replace) {
       replaceBody(imgSrc);
@@ -38,7 +40,7 @@
 
     if ($.config.redirectImage) {
       $.openLink(imgSrc, {
-        referer: false,
+        referer: referer,
       });
     }
   };
