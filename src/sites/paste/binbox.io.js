@@ -38,8 +38,6 @@
       $.get(API_URL, false, {
         Origin: _.none,
         Referer: _.none,
-        // referrer must be here
-        Cookie: 'referrer=nope',
         'X-Requested-With': _.none,
       }).then(function (pasteInfo) {
         pasteInfo = _.parseJSON(pasteInfo);
