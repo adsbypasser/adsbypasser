@@ -3,6 +3,7 @@ $.register({
     host: [
       /^(awet|sortir)\.in$/,
       /^st\.benfile\.com$/,
+      /^st\.azhie\.net$/,
     ],
   },
   ready: function () {
