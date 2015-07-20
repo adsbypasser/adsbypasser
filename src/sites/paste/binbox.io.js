@@ -20,7 +20,7 @@
     rule: {
       host: /^(www\.)?([a-zA-Z0-9]+\.)?binbox\.io$/,
       path: /\/([a-zA-Z0-9]+)/,
-      hash: /#([a-zA-Z0-9]+)/,
+      hash: /(?:#([a-zA-Z0-9]+))?/,
     },
     ready: function (m) {
       // If the hash is not here, it should ask the user for the password.
@@ -45,6 +45,11 @@
         pasteInfo = _.parseJSON(pasteInfo);
         if (!pasteInfo.ok) {
           throw new _.AdsBypasserError("error when getting paste information");
+        }
+
+        if (pasteInfo.paste.url) {
+          $.openLink(pasteInfo.paste.url);
+          return;
         }
 
         // Decrypt paste
