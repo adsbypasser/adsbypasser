@@ -24,7 +24,7 @@
         host: [
           // com
           // starts with image
-          /^image(decode|ontime|corn|picsa)\.com$/,
+          /^image(ontime|corn|picsa)\.com$/,
           // ends with image
           /^(zonezeed|zelje|croft|myhot|bok|hostur)image\.com$/,
           // starts with img
@@ -42,6 +42,7 @@
           /^(www\.)?\.imgult\.com$/,
           /imgseeds\.com$/,
           /damimage\.com$/,
+          /imagedecode\.com$/,
           // net
           /^img(serve|coin|fap|candy|master|-view|run)\.net$/,
           /^(gallerycloud|imagelaser)\.net$/,
