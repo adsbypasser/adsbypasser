@@ -39,7 +39,7 @@
         Origin: _.none,
         Referer: _.none,
         // referrer must be here
-        Cookie: 'referrer=nope',
+        Cookie: 'referrer=1',
         'X-Requested-With': _.none,
       }).then(function (pasteInfo) {
         pasteInfo = _.parseJSON(pasteInfo);
