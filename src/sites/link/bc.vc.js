@@ -4,7 +4,10 @@
   // bc.vc, shortcut
   $.register({
     rule: {
-      host: /^bc\.vc$/,
+      host: [
+        /^bc\.vc$/,
+        /^linc\.ml$/,
+      ],
       path: /^.+(https?:\/\/.+)$/,
     },
     start: function (m) {
