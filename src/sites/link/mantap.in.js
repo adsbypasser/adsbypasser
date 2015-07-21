@@ -3,6 +3,7 @@ $.register({
     host: [
       /^mant[ae][pb]\.in$/,
       /^st\.oploverz\.net$/,
+      /^minidroid\.net$/,
     ],
   },
   ready: function () {
