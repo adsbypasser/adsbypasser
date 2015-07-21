@@ -1,4 +1,4 @@
-## TBA
+## 5.30.0
 
 * fixed
     * safelinkconverter.com
