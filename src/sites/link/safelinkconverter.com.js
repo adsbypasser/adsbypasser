@@ -1,8 +1,11 @@
 $.register({
-  rule: {
+  rule: [{
     host: /^(www\.)?(link\.)?safelink(converter2?|review)\.com$/,
     query: /id=(\w+=*)/,
-  },
+  },{
+    host: /^(www\.)?dlneko\.com$/,
+    query: /go=(\w+=*)/,
+  }],
   start: function (m) {
     'use strict';
 
