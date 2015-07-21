@@ -1,7 +1,7 @@
 $.register({
   rule: [
     {
-      host: /^(www\.)?(link\.)?safelink(converter2?|review)\.com$/,
+      host: /^(www\.)?(link\.)?safelink(converter2?|s?review)\.com$/,
       query: /id=(\w+=*)/,
     },
     {
