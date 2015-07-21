@@ -29,7 +29,9 @@ have read sections below:
 
 ## Bug Report
 
-Please note that it is very hard to guarantee the compatibility to other
+Please check your environment matches [Supported Platforms](https://github.com/adsbypasser/adsbypasser/wiki/Supported-Platforms).
+
+Also please note that it is very hard to guarantee the compatibility to other
 userscripts or browser extensions.
 
 If other people can not reproduce your problem, you could create a new profile

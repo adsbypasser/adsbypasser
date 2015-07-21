@@ -20,7 +20,7 @@
     rule: {
       host: /^(www\.)?([a-zA-Z0-9]+\.)?binbox\.io$/,
       path: /\/([a-zA-Z0-9]+)/,
-      hash: /#([a-zA-Z0-9]+)/,
+      hash: /(?:#([a-zA-Z0-9]+))?/,
     },
     ready: function (m) {
       // If the hash is not here, it should ask the user for the password.
@@ -39,12 +39,17 @@
         Origin: _.none,
         Referer: _.none,
         // referrer must be here
-        Cookie: 'referrer=nope',
+        Cookie: 'referrer=1',
         'X-Requested-With': _.none,
       }).then(function (pasteInfo) {
         pasteInfo = _.parseJSON(pasteInfo);
         if (!pasteInfo.ok) {
           throw new _.AdsBypasserError("error when getting paste information");
+        }
+
+        if (pasteInfo.paste.url) {
+          $.openLink(pasteInfo.paste.url);
+          return;
         }
 
         // Decrypt paste
