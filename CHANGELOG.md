@@ -1,3 +1,22 @@
+## TBA
+
+* fixed
+    * safelinkconverter.com
+    * empireload.com
+    * imagezilla.net
+    * damimage.com
+    * binbox.io
+    * imagedecode.com
+* added
+    * project-photo.net
+    * imgtwyti.com
+    * linc.ml
+    * st.azhie.net
+    * dlneko.com
+    * minidroid.net
+    * safelinksreview.com
+    * multiupfile.com
+
 ## 5.29.0
 
 * fixed
