@@ -106,6 +106,7 @@
     * imgstudio.org
     * imgtaxi.com
     * imgtwyti.com
+    * imgtwyti.com
     * imgtzar.com
     * imgult.com
     * imgxyz.net
@@ -115,6 +116,7 @@
     * pixup.us
     * pixxx.me
     * pornprimehd.com
+    * project-photo.net
     * teenshot.org
     * thumbnailus.com
     * vava.in
@@ -178,6 +180,7 @@
     * gx.si
     * hit.us
     * kazan.vc
+    * linc.ml
     * link.tl
     * miniurl.tk
     * myam.me
@@ -328,8 +331,9 @@
     * putlocker.com
 * mantap.in
     * mantap.in
-    * mantep.in
     * manteb.in
+    * mantep.in
+    * minidroid.net
     * st.oploverz.net
 * moe.god.jp
     * dl.nsfk.in
@@ -342,8 +346,10 @@
     * pengaman.link
     * shortenurl.tk
 * safelink
+    * dlneko.com
     * safelinkconverter2.com
     * safelinkreview.com
+    * safelinksreview.com
 * qrrro.com
     * greenpiccs.com
     * qrrro.com
@@ -359,6 +365,7 @@
 * awet.in
     * awet.in
     * sortir.in
+    * st.azhie.net
 * gallerynova.se
     * gallerynova.se
     * gallerysense.se
