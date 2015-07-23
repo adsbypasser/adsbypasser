@@ -40,6 +40,7 @@
           /^(go|er)imge\.com$/,
           /^(like\.)08lkk\.com$/,
           /^(www\.)?\.imgult\.com$/,
+          /^nudeximg\.com$/,
           /imgseeds\.com$/,
           /damimage\.com$/,
           /imagedecode\.com$/,
