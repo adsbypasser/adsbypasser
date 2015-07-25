@@ -1,8 +1,14 @@
 $.register({
-  rule: {
-    host: /^imagescream\.com$/,
-    path: /^\/img\/soft\//,
-  },
+  rule: [
+    {
+      host: /^imagescream\.com$/,
+      path: /^\/img\/soft\//,
+    },
+    {
+      host: /^www\.picturescream\.com$/,
+      path: /^\/x\//,
+    },
+  ],
   ready: function () {
     'use strict';
 
