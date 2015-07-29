@@ -28,7 +28,7 @@
           // ends with image
           /^(zonezeed|zelje|croft|myhot|bok|hostur)image\.com$/,
           // starts with img
-          /^img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu)\.com$/,
+          /^img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer)\.com$/,
           // starts with img-
           /^img-(zone|planet)\.com$/,
           // starts with www
