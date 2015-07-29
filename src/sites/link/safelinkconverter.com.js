@@ -13,6 +13,16 @@ $.register({
     'use strict';
 
     var l = atob(m.query[1]);
+    var table = {
+      '!': 'a',
+      ')': 'e',
+      '_': 'i',
+      '(': 'o',
+      '*': 'u',
+    };
+    l = l.replace(/[!)_(*]/g, function (m) {
+      return table[m];
+    });
     $.openLink(l);
   },
 });
