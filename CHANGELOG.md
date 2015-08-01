@@ -1,3 +1,18 @@
+## TBA
+
+* fixed
+    * empireload.com
+    * safelinkreview.com
+    * linkshrink.net
+    * 08lkk.com
+* added
+    * nudeximg.com
+    * img24.org
+    * picturescream.com
+    * imgbeer.com
+* removed
+    * img.acianetmedia.com
+
 ## 5.30.0
 
 * fixed
