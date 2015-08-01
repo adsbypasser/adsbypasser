@@ -6,13 +6,8 @@ $.register({
   ready: function () {
     'use strict';
 
-    var a = $.searchScripts(/class="bt" href="([^"]+)"/);
-    if (!a) {
-      _.warn('pattern changed');
-      return;
-    }
-
-    $.openLink(a[1]);
+    var l = $('#skip .bt');
+    $.openLink(l.href);
   },
 });
 
