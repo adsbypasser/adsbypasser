@@ -38,7 +38,7 @@
           /^((i|hentai)\.)?imgslip\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           /^(go|er)imge\.com$/,
-          /^(like\.)08lkk\.com$/,
+          /^(like\.)?08lkk\.com$/,
           /^(www\.)?\.imgult\.com$/,
           /imgseeds\.com$/,
           /damimage\.com$/,
