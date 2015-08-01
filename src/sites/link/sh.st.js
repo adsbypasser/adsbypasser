@@ -30,7 +30,7 @@
 
   $.register({
     rule: {
-      host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com$/,
+      host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com|digg\.to$/,
       path: /^\/freeze\/.+/,
     },
     ready: function () {
@@ -56,7 +56,7 @@
 
   $.register({
     rule: {
-      host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com$/,
+      host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com|digg\.to$/,
       path: /^\/[\d\w]+/,
     },
     ready: function () {
