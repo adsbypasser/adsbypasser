@@ -86,6 +86,7 @@
     * img.yt
     * imgadult.com
     * imgban.com
+    * imgbeer.com
     * imgblow.com
     * imgcandy.net
     * imgcloud.co
@@ -112,6 +113,7 @@
     * imgxyz.net
     * lexiit.com
     * myhotimage.com
+    * nudeximg.com
     * picstwist.com
     * pixup.us
     * pixxx.me
@@ -306,6 +308,7 @@
     * all-poster.ru
     * anonpic.com
     * imagescream.com
+    * picturescream.com
     * picturevip.com
 * upan.so
     * upan.so
@@ -457,9 +460,9 @@
     * imagezilla.net
     * imagik.fr
     * img.3ezy.net
-    * img.acianetmedia.com
     * img.deli.sh
     * img1.imagilive.com
+    * img24.org
     * img3x.net
     * imgbar.net
     * imgbin.me
