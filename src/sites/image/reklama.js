@@ -46,7 +46,7 @@
           /imagedecode\.com$/,
           // net
           /^img(serve|coin|fap|candy|master|-view|run)\.net$/,
-          /^(gallerycloud|imagelaser|project-photo)\.net$/,
+          /^(gallerycloud|imagelaser|project-photo|pix-link)\.net$/,
           // org
           /^img(studio|spot)\.org$/,
           /^image(\.adlock|on|team)\.org$/,
