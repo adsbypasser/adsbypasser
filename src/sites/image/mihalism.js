@@ -16,7 +16,6 @@
         /^img\.deli\.sh$/,
         /^image(pong|back)\.info$/,
         /^imgdream\.net$/,
-        /^photoup\.biz$/,
       ],
       path: /^\/viewer\.php$/,
       query: /file=([^&]+)/,
