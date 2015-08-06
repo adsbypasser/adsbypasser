@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * u.shareme.in
+    * problem on Firefox 42
+
 ## 5.31.0
 
 * fixed
