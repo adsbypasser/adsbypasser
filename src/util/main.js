@@ -50,7 +50,7 @@
       element.__defineSetter__('onbeforeunload', seal.set);
     } else {
       $.window.Object.defineProperty(element, 'onbeforeunload', {
-        configurable: false,
+        configurable: true,
         enumerable: false,
         get: undefined,
         // this will turn to undefined in Firefox, need upstream fix
