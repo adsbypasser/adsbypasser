@@ -7,10 +7,12 @@
     * deb.gs
     * drstickyfingers.com
     * dyo.gs
+    * eafyfsuh.net
     * fapoff.com
     * filesonthe.net
     * freean.us
     * freegaysitepass.com
+    * fuestfka.com
     * galleries.bz
     * goneviral.com
     * hornywood.tv
@@ -54,7 +56,6 @@
     * miragepics.com
     * nixhelp.de
     * overpic.net
-    * photoup.biz
     * pictureshoster.com
     * postimg.net
 * reklama
@@ -115,6 +116,7 @@
     * myhotimage.com
     * nudeximg.com
     * picstwist.com
+    * pix-link.net
     * pixup.us
     * pixxx.me
     * pornprimehd.com
@@ -298,6 +300,7 @@
     * redirects.ca
 * sh.st
     * dh10thbvu.com
+    * digg.to
     * jnw0.com
     * sh.st
     * u2ks.com
@@ -427,6 +430,7 @@
     * embedupload.com
     * filoops.info
     * fit.sh
+    * forbes.com
     * fotolink.su
     * fotosik.pl
     * free-tv-video-online.info
@@ -535,6 +539,7 @@
     * screenlist.ru
     * setlinks.us
     * shink.in
+    * shortskip.com
     * shorturl.rapeit.net
     * similarsites.com
     * srelink.com
