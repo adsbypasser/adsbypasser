@@ -1,6 +1,11 @@
 (function () {
   'use strict';
 
+  function getTokenFromRocketScript () {
+    var a = $.searchScripts(/var eu = '(?!false)(.*)'/);
+    return a ? a[1] : null;
+  }
+
   $.register({
     rule: {
       path: /\/locked$/,
@@ -20,14 +25,26 @@
   });
 
   $.register({
-    rule: function () {
-      var h = $.$('html[id="adfly_html"]');
-      var b = $.$('body[id="home"]');
-      if (h && b) {
-        return true;
-      } else {
-        return null;
-      }
+    rule: [
+      // rocket loader hack
+      'http://u.shareme.in/*',
+
+      // generic pattern
+      function () {
+        var h = $.$('html[id="adfly_html"]');
+        var b = $.$('body[id="home"]');
+        if (h && b) {
+          return true;
+        } else {
+          return null;
+        }
+      },
+    ],
+    start: function () {
+      // Rocket Loader will modify DOM before `ready()` can do anything,
+      // so we hack `document.write` to block CloudFlare's main script.
+      // after this the inline script will fail, and leave DOM alone.
+      $.window.document.write = _.nop;
     },
     ready: function () {
       // check if this is ad page
@@ -42,7 +59,7 @@
       // disable cookie check
       $.window.cookieCheck = _.nop;
 
-      h = $.window.eu;
+      h = $.window.eu || getTokenFromRocketScript();
       if (!h) {
         h = $('#adfly_bar');
         $.window.close_bar();
