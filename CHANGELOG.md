@@ -1,4 +1,4 @@
-## TBA
+## 5.32.0
 
 * fixed
     * linkshrink.net
