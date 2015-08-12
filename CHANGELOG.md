@@ -1,3 +1,17 @@
+## TBA
+
+* fixed
+    * linkshrink.net
+* added
+    * digg.to
+    * pix-link.net
+    * fuestfka.com
+    * eafyfsuh.net
+    * shortskip.com
+    * forbes.com
+* removed
+    * photoup.biz
+
 ## 5.31.1
 
 * fixed
