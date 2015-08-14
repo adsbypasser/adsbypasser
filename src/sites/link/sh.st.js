@@ -28,9 +28,11 @@
     }, 1000);
   }
 
+  var hostRules = /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com|digg\.to$/;
+
   $.register({
     rule: {
-      host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com|digg\.to$/,
+      host: hostRules,
       path: /^\/freeze\/.+/,
     },
     ready: function () {
@@ -56,7 +58,7 @@
 
   $.register({
     rule: {
-      host: /^sh\.st|(dh10thbvu|u2ks|jnw0)\.com|digg\.to$/,
+      host: hostRules,
       path: /^\/[\d\w]+/,
     },
     ready: function () {
