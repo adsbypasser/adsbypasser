@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * configuration error
+    * eafyfsuh.net
+
 ## 5.32.0
 
 * fixed
