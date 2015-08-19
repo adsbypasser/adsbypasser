@@ -1,4 +1,4 @@
-## TBA
+## 5.32.1
 
 * fixed
     * configuration error
