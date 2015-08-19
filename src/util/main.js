@@ -77,7 +77,7 @@
 
 
   function beforeDOMReady (handler) {
-    _.info('working on\n%s \nwith\n%o', window.location.toString(), $.config);
+    _.info('working on\n%s \nwith\n%s', window.location.toString(), JSON.stringify($.config));
     disableLeavePrompt($.window);
     disableWindowOpen();
     handler.start();
