@@ -29,11 +29,11 @@
   }
 
   function helper (id, getNext) {
-    var i = $.$('form > input[name="next"]');
+    var i = $.$('form input[name="next"]');
     if (i) {
       // first stage
       var next = getNext(i);
-      go(id, $('input[name="pre"]', i.parentNode).value, next);
+      go(id, $('form input[name="pre"]').value, next);
       return;
     }
 
@@ -57,6 +57,7 @@
         /^(uploadrr|imageeer|imzdrop)\.com$/,
         /^imgdrive\.co$/,
         /^cuteimg\.cc$/,
+        /^imgtiger\.org$/,
       ],
       path: pathRule,
     },
