@@ -56,6 +56,7 @@
         /^imgclick\.net$/,
         /^(uploadrr|imageeer|imzdrop)\.com$/,
         /^imgdrive\.co$/,
+        /^cuteimg\.cc$/,
       ],
       path: pathRule,
     },
