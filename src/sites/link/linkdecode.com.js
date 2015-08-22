@@ -21,8 +21,14 @@ $.register({
     	return;
     }
 
+    // Interstitial
+    var b = $.$('#popup');
+    if (b && b.href) {
+      $.openLink(b.href);
+    }
+
     // Else if base64 + salt, we get the decrypted URL from the website
-    var b = $('#m > .Visit_Link');
+    b = $('#m > .Visit_Link');
     b = b.onclick.toString().match(/window\.open\(\'([^']+)\'/);
     if (!b) {
       throw new _.AdsBypasser('pattern changed');
