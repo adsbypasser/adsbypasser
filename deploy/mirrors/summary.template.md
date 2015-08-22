@@ -11,7 +11,7 @@ Any feature request or bug report is welcome. (either in English, 中文 or 日�
 The source repository is on [GitHub]. You could use GitHub to report issues or
 send pull requests, if you have an account.
 
-You can configure some function in [this page][1], please see [here] if you
+You can configure some function in [this page][1], please see [here][5] if you
 need more information.
 
 # Supported Platforms
@@ -50,6 +50,7 @@ contributors. (sort by GitHub account)
 [2]: https://github.com/adsbypasser/adsbypasser/wiki/Supported-Platforms
 [3]: https://github.com/adsbypasser/adsbypasser/blob/master/CHANGELOG.md
 [4]: https://github.com/adsbypasser/adsbypasser/blob/master/SITES.md
+[5]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
 [RedirectionHelper]: http://userscripts-mirror.org/scripts/show/69797
 [SuYS]: http://userscripts-mirror.org/users/SuYS.html
 [GitHub]: https://github.com/adsbypasser/adsbypasser
