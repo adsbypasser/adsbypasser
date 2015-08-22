@@ -8,6 +8,9 @@ $.register({
       host: /^www\.picturescream\.com$/,
       path: /^\/x\//,
     },
+    {
+      host: /^picturescream\.asia$/,
+    },
   ],
   ready: function () {
     'use strict';
