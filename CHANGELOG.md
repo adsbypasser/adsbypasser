@@ -1,4 +1,4 @@
-## TBA
+## 5.33.0
 
 * fixed
     * linkdecode.com
