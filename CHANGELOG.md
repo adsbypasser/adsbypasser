@@ -1,3 +1,22 @@
+## TBA
+
+* fixed
+    * linkdecode.com
+    * imgking.co
+* added
+    * imgsicily.it
+    * cuteimg.cc
+    * nimplus.com
+    * picturescream.asia
+    * porno-pirat.ru
+    * imgtiger.org
+    * newimagepost.com
+    * teenimage.org
+    * funimg.net
+    * greasyimage.com
+    * avenuexxx.com
+    * imgcentral.com
+
 ## 5.32.1
 
 * fixed
