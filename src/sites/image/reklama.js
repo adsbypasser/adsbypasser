@@ -50,7 +50,7 @@
           // org
           /^img(studio|spot)\.org$/,
           /^image(\.adlock|on|team)\.org$/,
-          /^(dragimage|teenshot)\.org$/,
+          /^(dragimage|teenshot|teenimage)\.org$/,
           // else
           /^(hotimages|55888)\.eu$/,
           /^imgcloud\.co$/,
