@@ -72,7 +72,7 @@
       },
       {
         host: /^imgking\.co$/,
-        path: /^\/img-.*\.htmls$/,
+        path: /^\/img-.*\.htmls?$/,
       },
     ],
     ready: ready,
