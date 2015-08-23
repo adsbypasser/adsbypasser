@@ -39,7 +39,7 @@
   // imageview.me
   $.register({
     rule: {
-      host: /imageview\.me|244pix\.com|imgnip\.com|postimg\.net$/,
+      host: /imageview\.me|244pix\.com|imgnip\.com|postimg\.net|imgcentral\.com$/,
       path: /^\/viewerr.*\.php$/,
       query: /file=([^&]+)/,
     },
