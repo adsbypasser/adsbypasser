@@ -25,6 +25,7 @@ $.register({
     var b = $.$('#popup');
     if (b && b.href) {
       $.openLink(b.href);
+      return;
     }
 
     // Else if base64 + salt, we get the decrypted URL from the website
