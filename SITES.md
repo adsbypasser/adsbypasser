@@ -49,6 +49,7 @@
     * imagecurl.org
     * imagepong.info
     * imageview.me
+    * imgcentral.com
     * imgdream.net
     * imgnip.com
     * imgsin.com
@@ -67,8 +68,10 @@
     * dragimage.org
     * ericsony.com
     * erimge.com
+    * funimg.net
     * gallerycloud.net
     * goimge.com
+    * greasyimage.com
     * hosturimage.com
     * hotimages.eu
     * image.adlock.org
@@ -114,13 +117,17 @@
     * imgxyz.net
     * lexiit.com
     * myhotimage.com
+    * newimagepost.com
+    * nimplus.com
     * nudeximg.com
     * picstwist.com
     * pix-link.net
     * pixup.us
     * pixxx.me
+    * porno-pirat.ru
     * pornprimehd.com
     * project-photo.net
+    * teenimage.org
     * teenshot.org
     * thumbnailus.com
     * vava.in
@@ -312,12 +319,14 @@
     * anonpic.com
     * imagescream.com
     * picturescream.com
+    * picturescream.asia
     * picturevip.com
 * upan.so
     * upan.so
     * gxp.so
 * imgpaying.com
     * chronos.to
+    * cuteimg.cc
     * imageeer.com
     * imgclick.net
     * imgdrive.co
@@ -326,6 +335,7 @@
     * imgpaying.com
     * imgrock.net
     * imgsee.me
+    * imgtiger.org
     * imgzeus.com
     * imzdrop.com
     * uploadrr.com
@@ -398,6 +408,7 @@
     * allkeyshop.com
     * anonymbucks.com
     * arab.sh
+    * avenuexxx.com
     * bayimg.com
     * beeimg.com
     * biglistofwebsites.com
