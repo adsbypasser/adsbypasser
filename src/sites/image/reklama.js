@@ -26,7 +26,7 @@
           // starts with image
           /^image(ontime|corn|picsa)\.com$/,
           // ends with image
-          /^(zonezeed|zelje|croft|myhot|bok|hostur)image\.com$/,
+          /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy)image\.com$/,
           // starts with img
           /^img(rill|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer)\.com$/,
           // starts with img-
