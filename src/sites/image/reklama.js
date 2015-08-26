@@ -74,6 +74,10 @@
         host: /^imgking\.co$/,
         path: /^\/img-.*\.htmls?$/,
       },
+      {
+        host: /^imgbb\.net$/,
+        path: /^\/.-.+$/,
+      },
     ],
     ready: ready,
   });
