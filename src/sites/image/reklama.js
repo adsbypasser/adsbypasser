@@ -86,7 +86,7 @@
     rule: {
       host: [
         /^www\.img(taxi|adult)\.com$/,
-        /^www.imgdrive.net$/,
+        /^www\.imgdrive\.net$/,
       ],
       path: /^\/img-.*\.html$/,
     },
