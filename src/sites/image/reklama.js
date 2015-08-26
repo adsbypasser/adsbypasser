@@ -80,7 +80,7 @@
 
   $.register({
     rule: {
-      host: /^www.img(adult|taxi).com$/,
+      host: /^www.imgadult.com$/,
       path: /^\/img-.*\.html$/,
     },
     start: function () {
@@ -90,6 +90,27 @@
       }
       $.setCookie('user', 'true');
       window.location.reload();
+    },
+    ready: ready,
+  });
+
+  $.register({
+    rule: {
+      host: /^www.imgtaxi.com$/,
+      path: /^\/img-.*\.html$/,
+    },
+    start: function () {
+      var c = $.getCookie('img_c_d') || $.getCookie('img_p_d');
+      if (c) {
+        return;
+      }
+      $.post(window.location.href.toString(), {
+        cti: 1,
+        ref: '',
+        rc: 1,
+      }).then(function (data) {
+        window.location.reload();
+      });
     },
     ready: ready,
   });
