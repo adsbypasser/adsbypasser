@@ -59,7 +59,7 @@
           /^img\.yt$/,
           /^vava\.in$/,
           /^pixxx\.me$/,
-          /^porno-pirat\.ru$/,
+          /^(porno-pirat|24avarii)\.ru$/,
         ],
         path: /^\/img-.*\.html$/,
       },
