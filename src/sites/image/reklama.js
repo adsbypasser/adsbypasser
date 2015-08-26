@@ -80,23 +80,7 @@
 
   $.register({
     rule: {
-      host: /^www.imgadult.com$/,
-      path: /^\/img-.*\.html$/,
-    },
-    start: function () {
-      var c = $.getCookie('user');
-      if (c) {
-        return;
-      }
-      $.setCookie('user', 'true');
-      window.location.reload();
-    },
-    ready: ready,
-  });
-
-  $.register({
-    rule: {
-      host: /^www.imgtaxi.com$/,
+      host: /^www.img(taxi|adult).com$/,
       path: /^\/img-.*\.html$/,
     },
     start: function () {
