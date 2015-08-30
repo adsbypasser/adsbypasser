@@ -1,3 +1,17 @@
+## TBA
+
+* fixed
+    * imgtaxi.com
+    * imgadult.com
+* added
+    * 24avarii.ru
+    * imgwet.com (manual captcha)
+    * imgdrive.net
+    * imgbb.net
+    * uimgshare.com
+    * imageleon.com
+    * img.pornleech.com
+
 ## 5.33.0
 
 * fixed
