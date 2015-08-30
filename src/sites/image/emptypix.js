@@ -1,8 +1,14 @@
 $.register({
-  rule: {
-    host: /^emptypix\.com|overdream\.cz$/,
-    path: /^\/image\//,
-  },
+  rule: [
+    {
+      host: /^emptypix\.com|overdream\.cz$/,
+      path: /^\/image\//,
+    },
+    {
+      host: /^10\.imageleon\.com$/,
+      path: /^\/img-(.+)\.html$/,
+    },
+  ],
   ready: function () {
     'use strict';
 
