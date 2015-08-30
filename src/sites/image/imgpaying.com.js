@@ -29,11 +29,11 @@
   }
 
   function helper (id, getNext) {
-    var i = $.$('form input[name="next"]');
+    var i = $.$('input[name="next"]');
     if (i) {
       // first stage
       var next = getNext(i);
-      go(id, $('form input[name="pre"]').value, next);
+      go(id, $('input[name="pre"]').value, next);
       return;
     }
 
@@ -54,7 +54,7 @@
         /^img(paying|mega|zeus|monkey|trex)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
-        /^(uploadrr|imageeer|imzdrop)\.com$/,
+        /^(uploadrr|imageeer|imzdrop|www\.uimgshare)\.com$/,
         /^imgdrive\.co$/,
         /^cuteimg\.cc$/,
         /^imgtiger\.org$/,
