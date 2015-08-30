@@ -61,6 +61,7 @@
     * postimg.net
 * reklama
     * 08lkk.com
+    * 24avarii.ru
     * bokimage.com
     * bulkimg.info
     * croftimage.com
@@ -90,12 +91,14 @@
     * img.yt
     * imgadult.com
     * imgban.com
+    * imgbb.net
     * imgbeer.com
     * imgblow.com
     * imgcandy.net
     * imgcloud.co
     * imgcoin.net
     * imgdevil.com
+    * imgdrive.net
     * imgfap.net
     * imgking.co
     * imglemon.com
@@ -114,6 +117,7 @@
     * imgtwyti.com
     * imgtzar.com
     * imgult.com
+    * imgwet.com (captcha)
     * imgxyz.net
     * lexiit.com
     * myhotimage.com
@@ -251,6 +255,7 @@
     * ifap.co
 * emptypix
     * emptypix.com
+    * imageleon.com
     * overdream.cz
 * fotoo
     * fotoo.pl
@@ -265,6 +270,7 @@
     * hostingfailov.com
 * imgfantasy
     * imagedomino.com
+    * img.pornleech.com
     * imgfantasy.com
     * imgleech.com
 * imgbabes
@@ -338,6 +344,7 @@
     * imgtiger.org
     * imgzeus.com
     * imzdrop.com
+    * uimgshare.com
     * uploadrr.com
 * imgsure.com
     * imgsure.com
