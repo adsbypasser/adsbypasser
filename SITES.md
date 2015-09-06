@@ -44,7 +44,6 @@
     * empireload.com
     * funextra.hostzi.com
     * hentai-hosting.com
-    * imageback.info
     * imagecurl.com
     * imagecurl.org
     * imagepong.info
@@ -105,7 +104,6 @@
     * imgmaster.net
     * imgnext.com
     * imgpu.com
-    * imgrill.com
     * imgrun.net
     * imgsavvy.com
     * imgserve.net
@@ -113,6 +111,7 @@
     * imgspot.org
     * imgstudio.org
     * imgtaxi.com
+    * imgtornado.com
     * imgtwyti.com
     * imgtwyti.com
     * imgtzar.com
@@ -124,6 +123,7 @@
     * newimagepost.com
     * nimplus.com
     * nudeximg.com
+    * picspornfree.me
     * picstwist.com
     * pix-link.net
     * pixup.us
@@ -257,6 +257,7 @@
     * emptypix.com
     * imageleon.com
     * overdream.cz
+    * sexyxpixels.com
 * fotoo
     * fotoo.pl
     * fotoszok.pl
@@ -270,6 +271,7 @@
     * hostingfailov.com
 * imgfantasy
     * imagedomino.com
+    * imageporn.eu
     * img.pornleech.com
     * imgfantasy.com
     * imgleech.com
@@ -392,6 +394,9 @@
 * gallerynova.se
     * gallerynova.se
     * gallerysense.se
+* dailyss.net
+    * dailyss.net
+    * daily-img.com
 * else
     * 01.nl
     * 1be.biz
@@ -436,7 +441,6 @@
     * coolrom.com
     * cubeupload.com
     * cvc.la
-    * dailyss.net
     * dapat.in
     * dd.ma
     * dereferer.website
@@ -494,6 +498,7 @@
     * imgseeds.com
     * imgtheif.com
     * imgvault.pw
+    * iori.us
     * ipic.su
     * ity.im
     * javelite.tk
