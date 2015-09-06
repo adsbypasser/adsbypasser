@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^dailyss\.net$/,
+    host: [
+      /^dailyss\.net$/,
+      /^daily-img\.com$/,
+    ],
     path: /^\/image\/.+$/,
   },
   ready: function () {
