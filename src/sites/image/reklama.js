@@ -58,7 +58,7 @@
           /^bulkimg\.info$/,
           /^img\.yt$/,
           /^vava\.in$/,
-          /^pixxx\.me$/,
+          /^(pixxx|picspornfree)\.me$/,
           /^(porno-pirat|24avarii)\.ru$/,
         ],
         path: /^\/img-.*\.html$/,
