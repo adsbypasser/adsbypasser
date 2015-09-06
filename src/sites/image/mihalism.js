@@ -14,7 +14,7 @@
         /^imagecurl\.(com|org)$/,
         /^imagevau\.eu$/,
         /^img\.deli\.sh$/,
-        /^image(pong|back)\.info$/,
+        /^imagepong\.info$/,
         /^imgdream\.net$/,
         /^imgsicily\.it$/,
       ],
