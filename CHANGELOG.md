@@ -1,3 +1,17 @@
+## TBA
+
+* removed
+    * imageback.info
+    * imgrill.com
+* added
+    * daily-img.com
+    * server.sbenny.com
+    * iori.us
+    * picspornfree.me
+    * imageporn.eu
+    * sexyxpixels.com
+    * imgtornado.com
+
 ## 5.34.0
 
 * fixed
