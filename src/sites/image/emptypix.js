@@ -8,6 +8,10 @@ $.register({
       host: /^10\.imageleon\.com$/,
       path: /^\/img-(.+)\.html$/,
     },
+    {
+      host: /^sexyxpixels\.com$/,
+      query: /^\?v=/,
+    },
   ],
   ready: function () {
     'use strict';
