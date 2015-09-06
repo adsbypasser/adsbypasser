@@ -28,6 +28,7 @@
     rule: [
       // rocket loader hack
       'http://u.shareme.in/*',
+      'http://server.sbenny.com/*',
 
       // generic pattern
       function () {
