@@ -34,7 +34,7 @@
           // starts with www
           /^www\.(imagefolks|img(blow|lemon))\.com$/,
           // else
-          /^(picstwist|ericsony|wpc8|uplimg|xxx\.pornprimehd|lexiit|thumbnailus|nimplus|newimagepost)\.com$/,
+          /^(picstwist|ericsony|wpc8|uplimg|xxx\.pornprimehd|lexiit|thumbnailus|nimplus|newimagepost|xxximagenow)\.com$/,
           /^((i|hentai)\.)?imgslip\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           /^(go|er)imge\.com$/,
