@@ -10,6 +10,7 @@ $.register({
     'http://npicture.net/share-*.html',
     'http://www.onlinepic.net/share.php?id=*',
     'http://www.pixsor.com/share.php?id=*',
+    'http://holdthemoan.net/x/share-*.html',
   ],
   ready: function () {
     'use strict';
