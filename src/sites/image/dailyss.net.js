@@ -3,6 +3,7 @@ $.register({
     host: [
       /^dailyss\.net$/,
       /^daily-img\.com$/,
+      /^img-365\.com$/,
     ],
     path: /^\/image\/.+$/,
   },
