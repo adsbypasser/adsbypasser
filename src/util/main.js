@@ -27,6 +27,8 @@
 
   function disableWindowOpen () {
     $.window.open = _.nop;
+    $.window.alert = _.nop;
+    $.window.confirm = _.nop;
   }
 
 
