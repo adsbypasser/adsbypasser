@@ -1,3 +1,21 @@
+## TBA
+
+* fixed
+    * imgtaxi.com
+    * fastpic.ru
+* added
+    * img-365.com
+    * hotimage.uk
+    * xxximagenow.com
+    * uploadimage.eu
+    * imgload.me
+    * imghere.net
+    * holdthemoan.net
+    * sexseeimage.com
+    * adyou.me
+    * anafile.com
+    * myimg.club
+
 ## 5.35.0
 
 * removed
