@@ -60,6 +60,7 @@
           /^vava\.in$/,
           /^(pixxx|picspornfree)\.me$/,
           /^(porno-pirat|24avarii)\.ru$/,
+          /^hotimage\.uk$/,
         ],
         path: /^\/img-.*\.html$/,
       },
