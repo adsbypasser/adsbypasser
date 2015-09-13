@@ -58,6 +58,7 @@
         /^imgdrive\.co$/,
         /^cuteimg\.cc$/,
         /^imgtiger\.org$/,
+        /^myimg\.club$/,
       ],
       path: pathRule,
     },
