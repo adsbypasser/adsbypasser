@@ -39,7 +39,6 @@
     * zff.co
 * Mihalism Multi Host
     * 244pix.com
-    * daily-img.com
     * dwimg.com
     * empireload.com
     * funextra.hostzi.com
@@ -73,6 +72,7 @@
     * goimge.com
     * greasyimage.com
     * hosturimage.com
+    * hotimage.uk
     * hotimages.eu
     * image.adlock.org
     * imagecorn.com
@@ -99,8 +99,10 @@
     * imgdevil.com
     * imgdrive.net
     * imgfap.net
+    * imghere.net
     * imgking.co
     * imglemon.com
+    * imgload.me
     * imgmaster.net
     * imgnext.com
     * imgpu.com
@@ -136,6 +138,7 @@
     * thumbnailus.com
     * vava.in
     * wpc8.com
+    * xxximagenow.com
     * zeljeimage.com
     * zonezeedimage.com
 * imageporter
@@ -160,6 +163,7 @@
     * euro-pic.eu
     * freeimage.us
     * gratisimage.dk
+    * holdthemoan.net
     * images.maxigame.by
     * npicture.net
     * onlinepic.net
@@ -183,7 +187,6 @@
 * bc.vc
     * 1tk.us
     * ad5.eu
-    * adb.ug
     * adbla.us
     * adcrun.ch
     * adjet.eu
@@ -257,6 +260,7 @@
     * emptypix.com
     * imageleon.com
     * overdream.cz
+    * sexseeimage.com
     * sexyxpixels.com
 * fotoo
     * fotoo.pl
@@ -326,9 +330,10 @@
     * all-poster.ru
     * anonpic.com
     * imagescream.com
-    * picturescream.com
     * picturescream.asia
+    * picturescream.com
     * picturevip.com
+    * uploadimage.eu
 * upan.so
     * upan.so
     * gxp.so
@@ -346,6 +351,7 @@
     * imgtiger.org
     * imgzeus.com
     * imzdrop.com
+    * myimg.club
     * uimgshare.com
     * uploadrr.com
 * imgsure.com
@@ -397,6 +403,11 @@
 * dailyss.net
     * dailyss.net
     * daily-img.com
+    * img-365.com
+* adb.ug
+    * adb.ug
+    * adyou.me
+    * lynk.my
 * else
     * 01.nl
     * 1be.biz
@@ -416,8 +427,10 @@
     * adlot.us
     * ah-informatique.com
     * aka.gr
+    * al.ly
     * alabout.com
     * allkeyshop.com
+    * anafile.com
     * anonymbucks.com
     * arab.sh
     * avenuexxx.com
@@ -519,7 +532,6 @@
     * lnk.in
     * loook.ga
     * lostpic.net
-    * lynk.my
     * madlink.sk
     * maxmirror.com
     * mije.net
