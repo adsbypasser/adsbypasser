@@ -9,7 +9,10 @@ $.register({
       path: /^\/x\//,
     },
     {
-      host: /^picturescream\.asia$/,
+      host: [
+        /^picturescream\.asia$/,
+        /^uploadimage\.eu$/,
+      ],
     },
   ],
   ready: function () {
