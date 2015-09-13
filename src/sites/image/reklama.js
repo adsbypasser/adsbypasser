@@ -58,7 +58,7 @@
           /^bulkimg\.info$/,
           /^img\.yt$/,
           /^vava\.in$/,
-          /^(pixxx|picspornfree)\.me$/,
+          /^(pixxx|picspornfree|imgload)\.me$/,
           /^(porno-pirat|24avarii)\.ru$/,
           /^hotimage\.uk$/,
         ],
