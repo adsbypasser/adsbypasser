@@ -17,6 +17,7 @@
         /^imagepong\.info$/,
         /^imgdream\.net$/,
         /^imgsicily\.it$/,
+        /^www\.imghere\.net$/,
       ],
       path: /^\/viewer\.php$/,
       query: /file=([^&]+)/,
