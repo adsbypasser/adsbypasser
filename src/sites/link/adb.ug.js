@@ -1,6 +1,10 @@
 $.register({
   rule: {
-    host: /^(www\.)?adb\.ug|(www\.)?lynk\.my$/,
+    host: [
+      /^(www\.)?adb\.ug$/,
+      /^(www\.)?lynk\.my$/,
+      /^adyou\.me$/,
+    ],
     // Match everything but empty, privacy, terms, contact, contact/whatever or path beginning with #
     path: /^(?!\/(?:privacy|terms|contact(\/.*)?|#.*)?$).*$/
   },
@@ -17,7 +21,7 @@ $.register({
     }
 
     // pattern 2
-    m = $.searchScripts(/\{_args.+\}\}/);
+    m = $.searchScripts(/\{_args.+\}/);
     if (!m) {
       throw new _.AdsBypasserError('script content changed');
     }
