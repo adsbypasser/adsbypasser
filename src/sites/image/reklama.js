@@ -83,6 +83,7 @@
     ready: ready,
   });
 
+  // TODO need to refactor the cookie rule
   $.register({
     rule: {
       host: [
@@ -104,7 +105,26 @@
         window.location.reload();
       });
     },
-    ready: ready,
+    ready: function () {
+      $.removeNodes('iframe');
+
+      var node = $.$('#continuetoimage > form input');
+      if (node) {
+        // first pass
+        node.click();
+        // somehow imgrun.net need to click twice
+        node.click();
+        return;
+      }
+
+      // the cookies are shared in the whole domain
+      // we have to reset cookies to prevent wrong state
+      $.resetCookies();
+
+      // second pass
+      var i = $('img[class^=centred]');
+      $.openImage(i.src);
+    },
   });
 
   function helper () {
