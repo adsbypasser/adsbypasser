@@ -88,28 +88,27 @@
   function sendRequest (token) {
     'use strict';
 
-    _.info('sending token: %o', token);
+    token.ab = false;
 
-    var i = setInterval(function () {
+    _.info('waiting the interval');
+    setTimeout(function () {
+      _.info('sending token: %o', token);
       $.get('/intermission/loadTargetUrl', token).then(function (text) {
         var data = _.parseJSON(text);
-
         _.info('response: %o', data);
 
         if (!data.Success && data.Errors[0] === 'Invalid token') {
           // somehow this token is invalid, reload to get new one
           _.info('got invalid token');
-          clearInterval(i);
           retry();
           return;
         }
         if (data.Success && !data.AdBlockSpotted && data.Url) {
-          clearInterval(i);
           $.openLink(data.Url);
           return;
         }
       });
-    }, 1000);
+    }, 6000);
   }
 
   function retry () {
