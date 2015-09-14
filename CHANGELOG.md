@@ -1,4 +1,4 @@
-## TBA
+## 5.36.1
 
 * fixed
     * eafyfsuh.net
