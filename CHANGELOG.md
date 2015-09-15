@@ -1,3 +1,13 @@
+## 5.36.2
+
+* fixed
+    * eafyfsuh.net
+
+## 5.36.1
+
+* fixed
+    * eafyfsuh.net
+
 ## 5.36.0
 
 * fixed
