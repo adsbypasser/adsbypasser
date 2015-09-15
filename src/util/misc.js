@@ -133,6 +133,10 @@
           self = self[MAGIC_KEY];
           args[1] = Array.prototype.slice.call(args[1]);
         }
+        // special hack for querySelector
+        if (target === unsafeWindow.document.querySelector) {
+          self = self[MAGIC_KEY];
+        }
 
         var usargs = clone(args);
 

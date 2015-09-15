@@ -49,147 +49,152 @@
     /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
   ];
 
-  function generateRandomIP () {
+  (function () {
     'use strict';
 
-    return [0,0,0,0].map(function () {
-      return Math.floor(Math.random() * 256);
-    }).join('.');
-  }
-
-  function findToken (context) {
-    'use strict';
-
-    var script = $.searchScripts('window[\'init\' + \'Lb\' + \'js\' + \'\']', context);
-    if (!script) {
-      _.warn('pattern changed');
-      return null;
+    function generateRandomIP () {
+      return [0,0,0,0].map(function () {
+        return Math.floor(Math.random() * 256);
+      }).join('.');
     }
 
-    var m1 = script.match(/AdPopUrl\s*:\s*'.+\?[^=]+=([\w\d]+)'/);
-    var m2 = script.match(/Token\s*:\s*'([\w\d]+)'/);
-    var token = m1[1] || m2[1];
-    var m = script.match(/=\s*(\d+);/);
-    var ak = parseInt(m[1], 10);
-    var re = /\+\s*(\d+);/g;
-    var tmp = null;
-    // get second (i.e. the real) salt
-    while((m = re.exec(script)) !== null) {
-      tmp = m[1];
+    function findAdUrl () {
+      var script = $.searchScripts('window[\'init\' + \'Lb\' + \'js\' + \'\']');
+      if (!script) {
+        return null;
+      }
+      var m = script.match(/AdUrl\s*:\s*'([^']+)'/);
+      if (!m) {
+        return null;
+      }
+      return m[1];
     }
-    ak += parseInt(tmp, 10);
 
-    return {
-      t: token,
-      aK: ak,
-    };
-  }
+    function injectFakeFrame (adurl) {
+      var dummy = document.createElement('div');
+      dummy.id = 'content';
+      document.body.appendChild(dummy);
+      // non-standard properties will be striped after xray in Firefox
+      // have to assign property without xray
+      dummy = $.window.document.querySelector('#content');
+      dummy.src = adurl;
+    }
 
-  function sendRequest (token) {
-    'use strict';
-
-    token.ab = false;
-
-    _.info('waiting the interval');
-    setTimeout(function () {
-      _.info('sending token: %o', token);
-      $.get('/intermission/loadTargetUrl', token).then(function (text) {
-        var data = _.parseJSON(text);
-        _.info('response: %o', data);
-
-        if (!data.Success && data.Errors[0] === 'Invalid token') {
-          // somehow this token is invalid, reload to get new one
-          _.info('got invalid token');
-          retry();
-          return;
-        }
-        if (data.Success && !data.AdBlockSpotted && data.Url) {
-          $.openLink(data.Url);
-          return;
-        }
+    // TODO I've to write in this style because the Firefox's xray
+    // need to refactor this in future
+    var ci = (typeof cloneInto !== 'function') ? function (o) {
+      return o;
+    } : function (o) {
+      return cloneInto(o, unsafeWindow, {
+        cloneFunctions: true,
+        wrapReflectors: true,
       });
-    }, 6000);
-  }
-
-  function retry () {
-    'use strict';
-
-    $.get(window.location.toString(), {}, {
-      // trick the server to avoid possible survey page
-      'X-Forwarded-For': generateRandomIP(),
-    }).then(function (text) {
-      var d = $.toDOM(text);
-      var t = findToken(d);
-      if (!t) {
-        // if still fail, request again.
-        // wait a second to avoid flooding detection
-        var i = setTimeout(retry, 1000);
-        return;
-      }
-      sendRequest(t);
-    });
-  }
-
-  $.register({
-    rule: {
-      host: hostRules,
-      path: /^\/\w+\/url\/(.+)$/,
-    },
-    ready: function(m) {
-      'use strict';
-
-      $.removeAllTimer();
-      $.resetCookies();
-      $.removeNodes('iframe');
-
-      var url = m.path[1] + window.location.search;
-
-      var match = $.searchScripts(/UrlEncoded: ([^,]+)/);
-      if (match && match[1] === 'true') {
-        // encrypted url
-        url = Encode(ConvertFromHex(url));
-      }
-
-      $.openLink(url);
+    };
+    var ef = (typeof exportFunction !== 'function') ? function (fn) {
+      return fn;
+    } : function (fn) {
+      return exportFunction(fn, unsafeWindow, {
+        allowCrossOriginArguments: true,
+      });
+    };
+    function inspectAjax () {
+      var XHR = $.window.XMLHttpRequest;
+      $.window.XMLHttpRequest = function () {
+        var that = ci({});
+        var xhr = new XHR();
+        var resolver = null;
+        var rejecter = null;
+        var p = new Promise(function (resolve, reject) {
+          resolver = resolve;
+          rejecter = reject;
+        });
+        p.then(function (data) {
+          data = JSON.parse(data);
+          if (data.Success) {
+            $.openLink(data.Url);
+          } else {
+            _.warn('invalid request');
+          }
+        });
+        that.open = ef(function (method, url, async, user, password) {
+          return xhr.open(method, url, async, user, password);
+        });
+        that.send = ef(function (arg) {
+          var r = xhr.send(arg);
+          resolver(xhr.responseText);
+          return r;
+        });
+        return that;
+      };
     }
-  });
 
-  $.register({
-    rule: {
-      host: hostRules,
-    },
-    ready: function () {
-      'use strict';
+    $.register({
+      rule: {
+        host: hostRules,
+        path: /^\/\w+\/url\/(.+)$/,
+      },
+      ready: function(m) {
+        $.removeAllTimer();
+        $.resetCookies();
+        $.removeNodes('iframe');
 
-      $.removeAllTimer();
-      $.resetCookies();
-      $.removeNodes('iframe');
+        var url = m.path[1] + window.location.search;
 
-      if (window.location.pathname.indexOf('verify') >= 0) {
-        // NOTE dirty fix
-        var path = window.location.pathname.replace('/verify', '');
-        $.openLink(path);
-        return;
+        var match = $.searchScripts(/UrlEncoded: ([^,]+)/);
+        if (match && match[1] === 'true') {
+          // encrypted url
+          url = Encode(ConvertFromHex(url));
+        }
+
+        $.openLink(url);
       }
+    });
 
-      var token = findToken(document);
-      sendRequest(token);
-    },
-  });
+    $.register({
+      rule: {
+        host: hostRules,
+      },
+      start: function () {
+        // looks like the original request is the most stable
+        // so I do some trick to inspect XHR
+        inspectAjax();
+      },
+      ready: function () {
+        $.removeAllTimer();
+        $.resetCookies();
+        $.removeNodes('iframe');
 
-  // for entry script
-  // this is stupid, but inspecting script on every page is too heavy
-  $.register({
-    rule: {
-      query: /^(.*)[?&]_lbGate=\d+$/,
-    },
-    start: function (m) {
-      'use strict';
+        if (window.location.pathname.indexOf('verify') >= 0) {
+          // NOTE dirty fix
+          var path = window.location.pathname.replace('/verify', '');
+          $.openLink(path);
+          return;
+        }
 
-      $.setCookie('_lbGatePassed', 'true');
-      $.openLink(window.location.pathname + m.query[1]);
-    },
-  });
+        var adurl = findAdUrl();
+        if (!adurl) {
+          _.warn('pattern changed');
+          return;
+        }
+        // inject a fake frame to pass the adblock check
+        // otherwise it won't send AJAX request
+        injectFakeFrame(adurl);
+      },
+    });
+
+    // for entry script
+    // this is stupid, but inspecting script on every page is too heavy
+    $.register({
+      rule: {
+        query: /^(.*)[?&]_lbGate=\d+$/,
+      },
+      start: function (m) {
+        $.setCookie('_lbGatePassed', 'true');
+        $.openLink(window.location.pathname + m.query[1]);
+      },
+    });
+
+  })();
 
 })();
 
