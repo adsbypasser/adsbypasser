@@ -69,12 +69,12 @@
 
   $.register({
     rule: {
-      host: /^imgrock\.net$/,
+      host: /^img(rock|town)\.net$/,
       path: pathRule,
     },
     ready: function (m) {
       // they have random invalid forms here
-      var d = $.$('#imageviewir input[type=submit]:not([style])');
+      var d = $.$('[id^=imageviewi] input[type=submit]:not([style])');
       if (!d) {
         helper(m.path[1], getNext1);
         return;
