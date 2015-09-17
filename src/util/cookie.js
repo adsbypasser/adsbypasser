@@ -18,8 +18,8 @@
   $.setCookie = function (key, value) {
     var now = new Date();
     now.setTime(now.getTime() + 3600 * 1000);
-    var tpl = _.T('{0}={1};path=/;');
-    document.cookie = tpl(key, value, now.toUTCString());
+    var tpl = _.T('{0}={1};path={2};');
+    document.cookie = tpl(key, value, window.location.pathname, now.toUTCString());
   };
 
   $.getCookie = function (key) {
