@@ -75,9 +75,19 @@
       dummy.id = 'content';
       document.body.appendChild(dummy);
       // non-standard properties will be striped after xray in Firefox
-      // have to assign property without xray
       dummy = $.window.document.querySelector('#content');
-      dummy.src = adurl;
+      Object.defineProperty(dummy, 'tagName', {
+        configurable: true,
+        enumerable: false,
+        value: 'iframe',
+        writable: false,
+      });
+      Object.defineProperty(dummy, 'src', {
+        configurable: true,
+        enumerable: false,
+        value: adurl,
+        writable: false,
+      });
     }
 
     // TODO I've to write in this style because the Firefox's xray
@@ -179,6 +189,8 @@
         // inject a fake frame to pass the adblock check
         // otherwise it won't send AJAX request
         injectFakeFrame(adurl);
+        // touch to pass the server-side check
+        $.get(adurl);
       },
     });
 

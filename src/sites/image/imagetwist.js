@@ -1,12 +1,12 @@
 (function () {
   'use strict';
 
-  function run () {
+  function run (rp) {
     // dirty hack, prevent scripts appending elements
     $.window.jQuery.prototype.append = undefined;
     var i = $('img.pic');
     $.openImage(i.src, {
-      replace: true,
+      replace: rp,
     });
   }
 
@@ -15,14 +15,21 @@
       host: /^imagenpic\.com$/,
       path: /^\/.*\/.+\.html$/,
     },
-    ready: run,
+    ready: _.P(run, true),
   });
 
   $.register({
     rule: {
-      host: /^image(twist|cherry)\.com$/,
+      host: /^imagecherry\.com$/,
     },
-    ready: run,
+    ready: _.P(run, true),
+  });
+
+  $.register({
+    rule: {
+      host: /^imagetwist\.com$/,
+    },
+    ready: _.P(run, false),
   });
 
 })();
