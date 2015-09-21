@@ -12,12 +12,62 @@ $.register({
       path: /^\/n\.php$/,
       query: /v=([^&]+)/,
     },
+    {
+      host: /^(www\.)?safelinkair\.com$/,
+      path: /^\/code$/,
+      query: /(?:\?|&)link=([a-zA-Z0-9=]+)(?:$|&)/,
+    },
   ],
   start: function (m) {
     'use strict';
     var rawLink = atob(m.query[1]);
 
     $.openLink(rawLink);
+  },
+});
+
+$.register({
+  rule: [
+    {
+      host: /^(www\.)?(link\.)?safelink(converter2?|s?review)\.com$/,
+      query: /id=(\w+=*)/,
+    },
+    {
+      host: [
+        /^(www\.)?dlneko\.com$/,
+        /^satuasia\.com$/,
+      ],
+      query: /go=(\w+=*)/,
+    },
+  ],
+  start: function (m) {
+    'use strict';
+
+    var l = atob(m.query[1]);
+    var table = {
+      '!': 'a',
+      ')': 'e',
+      '_': 'i',
+      '(': 'o',
+      '*': 'u',
+    };
+    l = l.replace(/[!)_(*]/g, function (m) {
+      return table[m];
+    });
+    $.openLink(l);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^(www\.)?safelinkreview\.com$/,
+    path: /^\/\w+\/cost\/([\w\.]+)\/?$/,
+  },
+  start: function (m) {
+    'use strict';
+
+    var l = 'http://' + m.path[1];
+    $.openLink(l);
   },
 });
 
