@@ -63,6 +63,7 @@
           /^(porno-pirat|24avarii)\.ru$/,
           /^hotimage\.uk$/,
           /^imgease\.re$/,
+          /^goimg\.xyz$/,
         ],
         path: /^\/img-.*\.html$/,
       },
