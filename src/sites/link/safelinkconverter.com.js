@@ -5,7 +5,10 @@ $.register({
       query: /id=(\w+=*)/,
     },
     {
-      host: /^(www\.)?dlneko\.com$/,
+      host: [
+        /^(www\.)?dlneko\.com$/,
+        /^satuasia\.com$/,
+      ],
       query: /go=(\w+=*)/,
     },
   ],
