@@ -1,7 +1,10 @@
 $.register({
   rule: [
     {
-      host: /^(www\.)?sylnk\.net$/,
+      host: [
+        /^(www\.)?sylnk\.net$/,
+        /^dlneko\.com$/,
+      ],
       query: /link=([^&]+)/,
     },
     {
