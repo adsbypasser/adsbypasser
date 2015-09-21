@@ -59,6 +59,7 @@
         /^cuteimg\.cc$/,
         /^imgtiger\.org$/,
         /^myimg\.club$/,
+        /^foxyimg\.link$/,
       ],
       path: pathRule,
     },
