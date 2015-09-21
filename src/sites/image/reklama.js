@@ -45,7 +45,7 @@
           /damimage\.com$/,
           /imagedecode\.com$/,
           // net
-          /^img(serve|coin|fap|candy|master|-view|run)\.net$/,
+          /^img(serve|coin|fap|candy|master|-view|run|boom)\.net$/,
           /^(gallerycloud|imagelaser|project-photo|pix-link|funimg|golfpit)\.net$/,
           // org
           /^shotimg\.org$/,
