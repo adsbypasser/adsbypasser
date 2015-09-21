@@ -2,13 +2,16 @@
 $.register({
   rule: {
     host: /^(www\.)?boxcash\.net$/,
-    path: /^\/\w+$/,
+    path: /^\/[\w~]+$/,
   },
   ready: function () {
     'use strict';
 
     // JSON.parse() is not used because their JSON is malformed
-    var m = $.searchScripts(/\'\/ajax_link\.php\',\{key:'(\w+)',url:'(\d+)',t:'(\d+)',r:'(\w*)'\}/);
+    var m = $.searchScripts(/\'\/ajax_link\.php\',\s*\{key:\s*'(\w+)',\s*url:\s*'(\d+)',\s*t:\s*'(\d+)',\s*r:\s*'(\w*)'\}/);
+    if (!m) {
+      return;
+    }
 
     $.post('/ajax_link.php', {
       key: m[1],
