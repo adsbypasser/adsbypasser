@@ -7,9 +7,9 @@
     var node = $.$('#continuetoimage > form input');
     if (node) {
       // first pass
-      node.click();
-      // somehow imgrun.net need to click twice
-      node.click();
+      setTimeout(function () {
+        node.click();
+      }, 1000);
       return;
     }
 
@@ -62,6 +62,7 @@
           /^(pixxx|picspornfree|imgload)\.me$/,
           /^(porno-pirat|24avarii)\.ru$/,
           /^hotimage\.uk$/,
+          /^imgease\.re$/,
         ],
         path: /^\/img-.*\.html$/,
       },
