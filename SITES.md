@@ -69,7 +69,9 @@
     * erimge.com
     * funimg.net
     * gallerycloud.net
+    * goimg.xyz
     * goimge.com
+    * golfpit.net
     * greasyimage.com
     * hosturimage.com
     * hotimage.uk
@@ -93,13 +95,16 @@
     * imgbb.net
     * imgbeer.com
     * imgblow.com
+    * imgboom.net
     * imgcandy.net
     * imgcloud.co
     * imgcoin.net
     * imgdevil.com
     * imgdrive.net
+    * imgease.re
     * imgfap.net
     * imghere.net
+    * imgkicks.com
     * imgking.co
     * imglemon.com
     * imgload.me
@@ -133,6 +138,7 @@
     * porno-pirat.ru
     * pornprimehd.com
     * project-photo.net
+    * shotimg.org
     * teenimage.org
     * teenshot.org
     * thumbnailus.com
@@ -274,11 +280,13 @@
     * hotchyx.com
     * hostingfailov.com
 * imgfantasy
+    * 0img.net
     * imagedomino.com
     * imageporn.eu
     * img.pornleech.com
     * imgfantasy.com
     * imgleech.com
+    * imgsmile.com
 * imgbabes
     * imgbabes.com
     * imgflare.com
@@ -340,15 +348,18 @@
 * imgpaying.com
     * chronos.to
     * cuteimg.cc
+    * foxyimg.link
     * imageeer.com
     * imgclick.net
     * imgdrive.co
+    * imgmaze.com
     * imgmega.com
     * imgmonkey.com
     * imgpaying.com
     * imgrock.net
     * imgsee.me
     * imgtiger.org
+    * imgtown.net
     * imgzeus.com
     * imzdrop.com
     * myimg.club
@@ -381,11 +392,13 @@
     * safelinkconverter2.com
     * safelinkreview.com
     * safelinksreview.com
+    * satuasia.com
 * qrrro.com
     * greenpiccs.com
     * qrrro.com
 * sylnk.net
     * compul.in
+    * dlneko.com
     * sylnk.net
 * gca.sh (manual captcha)
     * gca.sh
