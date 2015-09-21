@@ -70,7 +70,10 @@
 
   $.register({
     rule: {
-      host: /^img(rock|town)\.net$/,
+      host: [
+        /^img(rock|town)\.net$/,
+        /^imgmaze\.com$/,
+      ],
       path: pathRule,
     },
     ready: function (m) {
