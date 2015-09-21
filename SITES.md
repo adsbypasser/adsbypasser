@@ -387,18 +387,17 @@
 * shortenurl.tk
     * pengaman.link
     * shortenurl.tk
-* safelink
-    * dlneko.com
-    * safelinkconverter2.com
-    * safelinkreview.com
-    * safelinksreview.com
-    * satuasia.com
 * qrrro.com
     * greenpiccs.com
     * qrrro.com
 * sylnk.net
     * compul.in
     * dlneko.com
+    * safelinkconverter2.com
+    * safelinkreview.com
+    * safelinksreview.com
+    * satuasia.com
+    * srelink.com
     * sylnk.net
 * gca.sh (manual captcha)
     * gca.sh
@@ -590,7 +589,6 @@
     * shortskip.com
     * shorturl.rapeit.net
     * similarsites.com
-    * srelink.com
     * stash-coins.com
     * steamcommunity.com
     * subirimagenes.com
