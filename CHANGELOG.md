@@ -1,3 +1,25 @@
+## TBA
+
+* fixed
+    * imagetwist.com
+    * sh.st
+    * boxcash.net
+    * turboimagehost.com
+* added
+    * imgkicks.com
+    * golfpit.net
+    * imgtown.net
+    * shotimg.org
+    * foxyimg.link
+    * imgmaze.com
+    * imgease.re
+    * 0img.net
+    * dlneko.com
+    * satuasia.com
+    * imgboom.net
+    * imgsmile.com
+    * goimg.xyz
+
 ## 5.36.3
 
 * fixed
