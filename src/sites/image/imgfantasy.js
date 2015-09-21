@@ -4,6 +4,7 @@
   var host = [
     /^(img(fantasy|leech|\.pornleech)|imagedomino)\.com$/,
     /^imageporn\.eu$/,
+    /^0img\.net$/,
   ];
 
   $.register({
