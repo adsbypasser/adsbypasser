@@ -1,6 +1,7 @@
 $.register({
   rule: {
     host: /^www\.turboimagehost\.com$/,
+    path: /^\/p\//,
   },
   ready: function () {
     'use strict';

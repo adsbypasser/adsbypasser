@@ -33,6 +33,19 @@
   $.register({
     rule: {
       host: hostRules,
+      path: /https?:\/\//,
+    },
+    start: function () {
+      var url = window.location.pathname + window.location.search + window.location.hash;
+      url = url.match(/(https?:\/\/.*)$/);
+      url = url[1];
+      $.openLink(url);
+    },
+  });
+
+  $.register({
+    rule: {
+      host: hostRules,
       path: /^\/freeze\/.+/,
     },
     ready: function () {
