@@ -2,7 +2,7 @@ $.register({
   rule: {
     host: [
       /^dailyss\.net$/,
-      /^daily-img\.com$/,
+      /^(www\.)daily-img\.com$/,
       /^img-365\.com$/,
     ],
     path: /^\/image\/.+$/,
