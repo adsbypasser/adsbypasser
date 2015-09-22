@@ -30,7 +30,7 @@ For more information please see [here][9].
 
 ## How To Build
 
-Please install [io.js] and [npm], then run:
+Please install [Node.js] and [npm], then run:
 
 ```
 npm install
@@ -53,7 +53,6 @@ For more information, please see [Wiki].
 [8]: https://adsbypasser.github.io/configure.html
 [9]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
 [Node.js]: http://nodejs.org/
-[io.js]: https://iojs.org/
 [npm]: https://npmjs.org/
 [RedirectionHelper]: http://userscripts-mirror.org/scripts/show/69797
 [SuYS]: http://userscripts-mirror.org/users/SuYS.html
