@@ -114,7 +114,7 @@
         var xhr = new XHR();
         var resolver = null;
         var rejecter = null;
-        var p = new Promise(function (resolve, reject) {
+        var p = _.D(function (resolve, reject) {
           resolver = resolve;
           rejecter = reject;
         });
