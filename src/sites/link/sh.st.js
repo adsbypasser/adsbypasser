@@ -79,7 +79,7 @@
 
       var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
       if (m) {
-        afterGotSessionId(m[1]);
+        // afterGotSessionId(m[1]);
         return;
       }
 
@@ -89,7 +89,7 @@
           var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
           if (m) {
             o.disconnect();
-            afterGotSessionId(m[1]);
+            // afterGotSessionId(m[1]);
           }
         });
       });

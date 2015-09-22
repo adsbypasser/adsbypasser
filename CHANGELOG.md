@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * eafyfsuh.net
+    * daily-img.com
+
 ## 5.37.0
 
 * fixed
