@@ -76,6 +76,7 @@
     },
     ready: function () {
       $.removeNodes('iframe');
+      $.removeAllTimer();
 
       var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
       if (m) {
