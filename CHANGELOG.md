@@ -1,3 +1,9 @@
+## TBA
+
+# fixed
+    * sh.st
+    * pixsor.com
+
 ## 5.37.1
 
 * fixed
