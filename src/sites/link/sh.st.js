@@ -74,6 +74,9 @@
       host: hostRules,
       path: /^\/[\d\w]+/,
     },
+    start: function () {
+      $.window._impspcabe = 0;
+    },
     ready: function () {
       $.removeNodes('iframe');
       $.removeAllTimer();
