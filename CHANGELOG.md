@@ -1,6 +1,15 @@
+## TBA
+
+* fixed
+    * sh.st
+    * linkshrink.net
+* added
+    * megaimage.org
+    * img-pay.com
+
 ## 5.37.2
 
-# fixed
+* fixed
     * sh.st
     * pixsor.com
 
