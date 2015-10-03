@@ -33,19 +33,6 @@
   $.register({
     rule: {
       host: hostRules,
-      path: /https?:\/\//,
-    },
-    start: function () {
-      var url = window.location.pathname + window.location.search + window.location.hash;
-      url = url.match(/(https?:\/\/.*)$/);
-      url = url[1];
-      $.openLink(url);
-    },
-  });
-
-  $.register({
-    rule: {
-      host: hostRules,
       path: /^\/freeze\/.+/,
     },
     ready: function () {
@@ -72,14 +59,31 @@
   $.register({
     rule: {
       host: hostRules,
+      path: /https?:\/\//,
+    },
+    start: function () {
+      var url = window.location.pathname + window.location.search + window.location.hash;
+      url = url.match(/(https?:\/\/.*)$/);
+      url = url[1];
+      $.openLink(url);
+    },
+  });
+
+  $.register({
+    rule: {
+      host: hostRules,
       path: /^\/[\d\w]+/,
+    },
+    start: function () {
+      $.window._impspcabe = 0;
     },
     ready: function () {
       $.removeNodes('iframe');
+      $.removeAllTimer();
 
       var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
       if (m) {
-        // afterGotSessionId(m[1]);
+        afterGotSessionId(m[1]);
         return;
       }
 
@@ -89,7 +93,7 @@
           var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
           if (m) {
             o.disconnect();
-            // afterGotSessionId(m[1]);
+            afterGotSessionId(m[1]);
           }
         });
       });

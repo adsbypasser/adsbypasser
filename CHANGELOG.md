@@ -1,3 +1,9 @@
+## 5.37.2
+
+# fixed
+    * sh.st
+    * pixsor.com
+
 ## 5.37.1
 
 * fixed

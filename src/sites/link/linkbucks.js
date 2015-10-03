@@ -119,6 +119,7 @@
           rejecter = reject;
         });
         p.then(function (data) {
+          _.info(data);
           data = JSON.parse(data);
           if (data.Success) {
             $.openLink(data.Url);
