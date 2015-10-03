@@ -3,6 +3,11 @@ $.register({
     host: /^linkshrink\.net$/,
     path: /^\/[a-zA-Z0-9]+$/,
   },
+  start: function () {
+    'use strict';
+
+    $.window._impspcabe = 0;
+  },
   ready: function () {
     'use strict';
 
