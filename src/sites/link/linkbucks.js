@@ -126,13 +126,21 @@
           } else {
             _.warn('invalid request');
           }
+        }, function () {
+          _.warn('request failed', xhr);
         });
         that.open = ef(function (method, url, async, user, password) {
+          _.info('open AJAX with', method, url, async, user, password);
           return xhr.open(method, url, async, user, password);
         });
         that.send = ef(function (arg) {
+          _.info('send AJAX with', arg);
           var r = xhr.send(arg);
-          resolver(xhr.responseText);
+          if (xhr.status === 200) {
+            resolver(xhr.responseText);
+          } else {
+            rejecter(xhr);
+          }
           return r;
         });
         return that;
