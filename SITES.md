@@ -85,6 +85,7 @@
     * imageontime.com
     * imagepicsa.com
     * imageteam.org
+    * img-pay.com
     * img-planet.com
     * img-view.net
     * img-zone.com
@@ -126,6 +127,7 @@
     * imgwet.com (captcha)
     * imgxyz.net
     * lexiit.com
+    * megaimage.org
     * myhotimage.com
     * newimagepost.com
     * nimplus.com
