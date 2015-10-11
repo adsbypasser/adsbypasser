@@ -5,11 +5,14 @@ $.register({
   ready: function () {
     'use strict';
 
-    $.removeNodes('iframe');
+    $.removeNodes('iframe, #CashSlideDiv, #ct_catfish');
 
-    var a = $('#close');
-    a.disabled = false;
-    a.click();
+    var a = document.querySelector('#modal-shadow');
+    a.style.display = 'block';
+    a = document.querySelector('#modal-alert');
+    a.style.left = 0;
+    a.style.top = 80;
+    a.style.display = 'block';
   },
 });
 
