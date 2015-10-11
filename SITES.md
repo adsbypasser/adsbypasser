@@ -111,6 +111,7 @@
     * imgload.me
     * imgmaster.net
     * imgnext.com
+    * imgnimz.com
     * imgpu.com
     * imgrun.net
     * imgsavvy.com
@@ -527,6 +528,7 @@
     * imgvault.pw
     * iori.us
     * ipic.su
+    * itw.me
     * ity.im
     * javelite.tk
     * jheberg.net
@@ -536,6 +538,7 @@
     * leechbd.tk
     * lienscash.com
     * link-protector.com
+    * link.animagz.org
     * link.im
     * link2dollar.com
     * link2you.ru
