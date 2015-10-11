@@ -7,9 +7,9 @@ $.register({
 
     $.removeNodes('iframe, #CashSlideDiv, #ct_catfish');
 
-    var a = document.querySelector('#modal-shadow');
+    var a = $('#modal-shadow');
     a.style.display = 'block';
-    a = document.querySelector('#modal-alert');
+    a = $('#modal-alert');
     a.style.left = 0;
     a.style.top = 80;
     a.style.display = 'block';
