@@ -1,3 +1,12 @@
+## TBA
+
+* fixed
+    * al.ly
+* added
+    * imgnimz.com
+    * itw.me
+    * link.animagz.org
+
 ## 5.38.0
 
 * fixed
