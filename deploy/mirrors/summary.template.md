@@ -44,6 +44,7 @@ contributors. (sort by GitHub account)
 * [MNB](https://github.com/MNBuyskih)
 * [ofyxp](https://github.com/ofyxp)
 * [RickyChen](https://github.com/RickyChien)
+* [xor10](https://github.com/xor10)
 
 
 [1]: https://adsbypasser.github.io/configure.html
