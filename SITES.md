@@ -289,6 +289,7 @@
     * img.pornleech.com
     * imgfantasy.com
     * imgleech.com
+    * imgsay.com
     * imgsmile.com
 * imgbabes
     * imgbabes.com
