@@ -248,6 +248,13 @@
   _.none = _.nop;
 
 
+  _.wait = function (msDelay) {
+    return _.D(function (resolve, reject) {
+      setTimeout(resolve, msDelay);
+    });
+  };
+
+
   function log (method, args) {
     if (_._quiet) {
       return;
