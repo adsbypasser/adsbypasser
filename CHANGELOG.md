@@ -1,3 +1,10 @@
+## TBA
+
+* fixed
+    * eafyfsuh.net
+* added
+    * imgsay.com
+
 ## 5.39.0
 
 * fixed
