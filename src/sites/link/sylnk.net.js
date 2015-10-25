@@ -35,7 +35,7 @@ $.register({
     {
       host: [
         /^(www\.)?dlneko\.com$/,
-        /^satuasia\.com$/,
+        /^(satuasia|tawaku)\.com$/,
       ],
       query: /go=(\w+=*)/,
     },
