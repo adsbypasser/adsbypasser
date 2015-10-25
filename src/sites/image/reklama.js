@@ -55,7 +55,7 @@
           /^teenshot\.org$/,
           // else
           /^(hotimages|55888)\.eu$/,
-          /^imgcloud\.co$/,
+          /^img(cloud|mag)\.co$/,
           /^pixup\.us$/,
           /^bulkimg\.info$/,
           /^img\.yt$/,
