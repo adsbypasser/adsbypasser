@@ -11,6 +11,7 @@ $.register({
     'http://www.onlinepic.net/share.php?id=*',
     'http://www.pixsor.com/share.php?id=*',
     'http://www.pixsor.com/share-*.html',
+    'http://pixsor.com/XXX/share-*.html',
     'http://holdthemoan.net/x/share-*.html',
   ],
   ready: function () {
