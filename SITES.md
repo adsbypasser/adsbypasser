@@ -95,6 +95,7 @@
     * imgban.com
     * imgbb.net
     * imgbeer.com
+    * imgbinbou.com
     * imgblow.com
     * imgboom.net
     * imgcandy.net
@@ -109,6 +110,7 @@
     * imgking.co
     * imglemon.com
     * imgload.me
+    * imgmag.co
     * imgmaster.net
     * imgnext.com
     * imgnimz.com
@@ -128,6 +130,7 @@
     * imgwet.com (captcha)
     * imgxyz.net
     * lexiit.com
+    * loftlm.ru
     * megaimage.org
     * myhotimage.com
     * newimagepost.com
@@ -289,6 +292,7 @@
     * img.pornleech.com
     * imgfantasy.com
     * imgleech.com
+    * imgnemo.com
     * imgsay.com
     * imgsmile.com
 * imgbabes
@@ -403,6 +407,7 @@
     * satuasia.com
     * srelink.com
     * sylnk.net
+    * tawaku.com
 * gca.sh (manual captcha)
     * gca.sh
     * repla.cr
