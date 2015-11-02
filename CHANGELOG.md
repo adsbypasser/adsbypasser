@@ -1,3 +1,15 @@
+## TBA
+
+* fixed
+    * img-365.com
+    * pixsor.com
+* added
+    * loftlm.ru
+    * imgmag.co
+    * tawaku.com
+    * imgbinbou.com
+    * imgnemo.com
+
 ## 5.40.0
 
 * fixed
