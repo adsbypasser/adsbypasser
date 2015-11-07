@@ -18,8 +18,6 @@
       path: /^\/([^\/]+)$/,
     },
     ready: function (m) {
-      'use strict';
-
       // disable page ajax
       $.window.$ = null;
 
