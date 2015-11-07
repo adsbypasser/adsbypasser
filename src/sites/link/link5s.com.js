@@ -3,14 +3,11 @@
 
   function sendRequest (opts) {
     return $.post('/ajax/r.php', opts).then(function (data) {
-      _.info(data);
       if (data.length <= 1) {
         return sendRequest(opts);
       }
       var a = $.toDOM(data);
       a = $('a', a);
-      _.info(a);
-      _.info(a.href);
       return a.href;
     });
   }
