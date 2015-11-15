@@ -48,6 +48,7 @@
     * imagepong.info
     * imageview.me
     * imgcentral.com
+    * imgcream.com
     * imgdream.net
     * imgnip.com
     * imgsin.com
@@ -136,6 +137,7 @@
     * newimagepost.com
     * nimplus.com
     * nudeximg.com
+    * photo-up.info
     * picspornfree.me
     * picstwist.com
     * pix-link.net
@@ -401,6 +403,8 @@
 * sylnk.net
     * compul.in
     * dlneko.com
+    * dlneko.net
+    * manteb.in
     * safelinkconverter2.com
     * safelinkreview.com
     * safelinksreview.com
@@ -422,8 +426,9 @@
     * gallerynova.se
     * gallerysense.se
 * dailyss.net
-    * dailyss.net
+    * 365-img.com
     * daily-img.com
+    * dailyss.net
     * img-365.com
 * adb.ug
     * adb.ug
@@ -548,6 +553,7 @@
     * link.im
     * link2dollar.com
     * link2you.ru
+    * link5s.com
     * linkdecode.com
     * linkdrop.net
     * linkshrink.net
