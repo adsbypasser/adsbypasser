@@ -14,10 +14,10 @@ $.register({
   ready: function () {
     'use strict';
 
-    // need referer
-    var a = $('div.tor a, div.i-h a');
-    a.removeAttribute('target');
-    a.click();
+    var a = $('.main-l a');
+    $.openImage(a.href, {
+      referer: true,
+    });
   },
 });
 
