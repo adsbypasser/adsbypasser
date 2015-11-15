@@ -1,4 +1,4 @@
-## TBA
+## 5.42.0
 
 * fixed
     * 1dl.biz
