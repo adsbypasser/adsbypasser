@@ -1,3 +1,15 @@
+## TBA
+
+* fixed
+    * 1dl.biz
+* added
+    * dlneko.net
+    * photo-up.info
+    * link5s.com
+    * 365-img.com
+    * manteb.in
+    * imgcream.com
+
 ## 5.41.0
 
 * fixed
