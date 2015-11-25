@@ -1,3 +1,17 @@
+## 5.43.0
+
+* added
+    * imgproject.net
+    * imgpython.net
+    * xxxscreens.com
+    * crd.ht
+    * lovechix.com
+    * sht.io
+    * img2share.com
+    * akoam.com
+* removed
+    * 4shared.com
+
 ## 5.42.0
 
 * fixed

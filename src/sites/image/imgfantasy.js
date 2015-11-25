@@ -2,7 +2,7 @@
   'use strict';
 
   var host = [
-    /^(img(fantasy|leech|\.pornleech|smile|say|nemo)|imagedomino)\.com$/,
+    /^(img(fantasy|leech|\.pornleech|smile|say|nemo)|imagedomino|lovechix)\.com$/,
     /^imageporn\.eu$/,
     /^0img\.net$/,
   ];

@@ -92,6 +92,7 @@
     * img-zone.com
     * img.spicyzilla.com
     * img.yt
+    * img2share.com
     * imgadult.com
     * imgban.com
     * imgbb.net
@@ -115,7 +116,9 @@
     * imgmaster.net
     * imgnext.com
     * imgnimz.com
+    * imgproject.net
     * imgpu.com
+    * imgpython.net
     * imgrun.net
     * imgsavvy.com
     * imgserve.net
@@ -153,6 +156,7 @@
     * vava.in
     * wpc8.com
     * xxximagenow.com
+    * xxxscreens.com
     * zeljeimage.com
     * zonezeedimage.com
 * imageporter
@@ -443,7 +447,6 @@
     * 2ty.cc
     * 3ra.be
     * 4fun.tw
-    * 4shared.com
     * a.pomf.se
     * ad2links.com
     * adfe.es
@@ -453,6 +456,7 @@
     * adlot.us
     * ah-informatique.com
     * aka.gr
+    * akoam.com
     * al.ly
     * alabout.com
     * allkeyshop.com
@@ -478,6 +482,7 @@
     * clk.im
     * comyonet.com
     * coolrom.com
+    * crd.ht
     * cubeupload.com
     * cvc.la
     * dapat.in
@@ -561,6 +566,7 @@
     * lnk.in
     * loook.ga
     * lostpic.net
+    * lovechix.com
     * madlink.sk
     * maxmirror.com
     * mije.net
@@ -605,6 +611,7 @@
     * shink.in
     * shortskip.com
     * shorturl.rapeit.net
+    * sht.io
     * similarsites.com
     * stash-coins.com
     * steamcommunity.com
