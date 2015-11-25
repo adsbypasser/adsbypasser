@@ -19,7 +19,7 @@ def exec_(config, edition, another_edition, script):
 
     summary = make_summary()
     another_edition = config[another_edition]
-    another_edition = 'https://openuserjs.org/scripts/{0}/{1}'.format(USERNAME, another_edition['SCRIPTNAME'])
+    another_edition = '{0}/scripts/{1}/{2}'.format(HOME_URL, USERNAME, another_edition['SCRIPTNAME'])
     summary = summary.getResult(edition, another_edition)
 
     b = mechanize.Browser()
