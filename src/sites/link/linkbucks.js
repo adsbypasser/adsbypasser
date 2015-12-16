@@ -52,12 +52,6 @@
   (function () {
     'use strict';
 
-    function generateRandomIP () {
-      return [0,0,0,0].map(function () {
-        return Math.floor(Math.random() * 256);
-      }).join('.');
-    }
-
     function findToken (context) {
       var script = $.searchScripts('    var f = window[\'init\' + \'Lb\' + \'js\' + \'\']', context);
       if (!script) {
@@ -130,7 +124,7 @@
     function retry () {
       return $.get(window.location.toString(), {}, {
         // trick the server to avoid possible survey page
-        'X-Forwarded-For': generateRandomIP(),
+        'X-Forwarded-For': $.generateRandomIP(),
       }).then(function (text) {
         var d = $.toDOM(text);
         var t = findToken(d);

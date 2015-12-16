@@ -24,7 +24,7 @@
 
   $.getCookie = function (key) {
     var c = _.C(document.cookie.split(';')).find(function (v) {
-      var k = v.replace(/^\s*(\w+)=.+$/, '$1');
+      var k = v.replace(/^\s*([a-zA-Z0-9-]+)=.+$/, '$1');
       if (k !== key) {
         return _.none;
       }
@@ -32,7 +32,7 @@
     if (!c) {
       return null;
     }
-    c = c.value.replace(/^\s*\w+=([^;]+).+$/, '$1');
+    c = c.value.replace(/^\s*[a-zA-Z0-9-]+=([^;]+).?$/, '$1');
     if (!c) {
       return null;
     }
