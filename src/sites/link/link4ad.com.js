@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^link4ad\.com$/,
+    host: /^link(4ad|ajc)\.com$/,
     path: /^\/(.+)$/,
   },
   ready: function (m) {
