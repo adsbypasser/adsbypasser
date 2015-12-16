@@ -14,7 +14,7 @@ def exec_(config, edition, another_edition, script):
     HOME_URL = 'https://openuserjs.org'
     LOGIN_URL = '{0}/register'.format(HOME_URL)
     SCRIPT_URL = '{0}/user/add/scripts/new'.format(HOME_URL)
-    ABOUT_URL = '{0}/scripts/{0}/{1}/edit'.format(HOME_URL, SCRIPTNAME)
+    ABOUT_URL = '{0}/scripts/{1}/{2}/edit'.format(HOME_URL, USERNAME, SCRIPTNAME)
     URL_PARAM = '/scripts/{0}/{1}/source'.format(USERNAME, SCRIPTNAME)
 
     summary = make_summary()
@@ -32,7 +32,7 @@ def exec_(config, edition, another_edition, script):
     b.submit()
 
     # github login
-    b.select_form(nr=1)
+    b.select_form(nr=0)
     b['login'] = GITHUB_USERNAME
     b['password'] = GITHUB_PASSWORD
     b.submit()
