@@ -1,3 +1,22 @@
+## TBA
+
+* fixed
+    * imagescream.com
+    * imgbb.net
+* added
+    * imgnova.xyz
+    * hulkimge.com
+    * img22.com
+    * linksas.us
+    * link4ad.com
+    * linkajc.com
+    * cuzle.com
+    * picstate.com.alsohe.com
+    * pic2pic.site
+    * streamingfrench.net
+    * ad4.fr
+    * imgurx.net
+
 ## 5.43.0
 
 * added
