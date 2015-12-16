@@ -2,12 +2,13 @@
   'use strict';
 
   function ready () {
-    $.removeNodes('iframe');
+    $.removeNodes('iframe, #adblock_detect');
 
     var node = $.$('#continuetoimage > form input');
     if (node) {
       // first pass
       setTimeout(function () {
+        node.removeAttribute('disabled');
         node.click();
       }, 1000);
       return;
