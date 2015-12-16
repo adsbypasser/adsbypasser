@@ -92,6 +92,7 @@
     * img-zone.com
     * img.spicyzilla.com
     * img.yt
+    * img22.com
     * img2share.com
     * imgadult.com
     * imgban.com
@@ -141,6 +142,7 @@
     * nimplus.com
     * nudeximg.com
     * photo-up.info
+    * pic2pic.site
     * picspornfree.me
     * picstwist.com
     * pix-link.net
@@ -183,6 +185,7 @@
     * gratisimage.dk
     * holdthemoan.net
     * images.maxigame.by
+    * imgurx.net
     * npicture.net
     * onlinepic.net
     * picfox.org
@@ -376,6 +379,7 @@
     * imgtown.net
     * imgzeus.com
     * imzdrop.com
+    * hulkimge.com
     * myimg.club
     * uimgshare.com
     * uploadrr.com
@@ -438,6 +442,9 @@
     * adb.ug
     * adyou.me
     * lynk.my
+* link4ad.com
+    * link4ad.com
+    * linkajc.com
 * else
     * 01.nl
     * 1be.biz
@@ -449,6 +456,7 @@
     * 4fun.tw
     * a.pomf.se
     * ad2links.com
+    * ad4.fr
     * adfe.es
     * adfoc.us
     * adjet.biz
@@ -460,6 +468,7 @@
     * al.ly
     * alabout.com
     * allkeyshop.com
+    * picstate.com.alsohe.com
     * anafile.com
     * anonymbucks.com
     * arab.sh
@@ -484,6 +493,7 @@
     * coolrom.com
     * crd.ht
     * cubeupload.com
+    * cuzle.com
     * cvc.la
     * dapat.in
     * dd.ma
@@ -539,6 +549,7 @@
     * imgbox.com
     * imgcarry.com
     * imgdollar.com
+    * imgnova.xyz
     * imgseeds.com
     * imgtheif.com
     * imgvault.pw
@@ -561,6 +572,7 @@
     * link5s.com
     * linkdecode.com
     * linkdrop.net
+    * linksas.us
     * linkshrink.net
     * lix.in
     * lnk.in
@@ -614,7 +626,7 @@
     * sht.io
     * similarsites.com
     * stash-coins.com
-    * steamcommunity.com
+    * streamingfrench.net
     * subirimagenes.com
     * supercheats.com
     * thinfi.com
