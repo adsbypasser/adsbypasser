@@ -67,6 +67,7 @@
           /^hotimage\.uk$/,
           /^imgease\.re$/,
           /^goimg\.xyz$/,
+          /^pic2pic\.site$/,
         ],
         path: /^\/img-.*\.html$/,
       },
