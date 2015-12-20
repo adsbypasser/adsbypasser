@@ -2,14 +2,17 @@
   'use strict';
 
   function ready () {
-    $.removeNodes('iframe');
+    $.removeNodes('iframe, #adblock_detect');
 
     var node = $.$('#continuetoimage > form input');
     if (node) {
       // first pass
-      setTimeout(function () {
+      _.wait(500).then(function () {
+        node.removeAttribute('disabled');
+        return _.wait(500);
+      }).then(function () {
         node.click();
-      }, 1000);
+      });
       return;
     }
 
@@ -28,7 +31,7 @@
           // ends with image
           /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy)image\.com$/,
           // starts with img
-          /^img(next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|-pay|nimz|binbou|2share)\.com$/,
+          /^img(next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|-pay|nimz|binbou|2share|22)\.com$/,
           // starts with img-
           /^img-(zone|planet)\.com$/,
           // starts with www
@@ -67,6 +70,7 @@
           /^hotimage\.uk$/,
           /^imgease\.re$/,
           /^goimg\.xyz$/,
+          /^pic2pic\.site$/,
         ],
         path: /^\/img-.*\.html$/,
       },

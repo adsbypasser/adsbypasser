@@ -30,6 +30,12 @@
     }
   };
 
+  $.generateRandomIP = function () {
+    return [0,0,0,0].map(function () {
+      return Math.floor(Math.random() * 256);
+    }).join('.');
+  };
+
   $.captcha = function (imgSrc, cb) {
     if (!$.config.externalServerSupport) {
       return;

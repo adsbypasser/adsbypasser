@@ -2,7 +2,7 @@ $.register({
   rule: [
     {
       host: /^imagescream\.com$/,
-      path: /^\/img\/soft\//,
+      path: /^\/img\/(soft\/)?/,
     },
     {
       host: /^www\.picturescream\.com$/,

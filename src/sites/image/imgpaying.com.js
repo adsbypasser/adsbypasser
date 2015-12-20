@@ -60,6 +60,7 @@
         /^imgtiger\.org$/,
         /^myimg\.club$/,
         /^foxyimg\.link$/,
+        /^hulkimge\.com$/,
       ],
       path: pathRule,
     },
