@@ -67,6 +67,16 @@
       }
     });
 
+    // deal with payload in POST
+    if (data) {
+      if (headers['Content-Type'].indexOf('json') >= 0) {
+        data = JSON.stringify(data);
+      } else {
+        data = toQuery(data);
+      }
+      headers['Content-Length'] = data.length;
+    }
+
     var xhr = null;
     var promise = _.D(function (resolve, reject) {
       xhr = GM.xmlhttpRequest({
@@ -107,10 +117,8 @@
   };
 
   $.post = function (url, data, headers) {
-    data = toQuery(data);
     var h = {
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-      'Content-Length': data.length,
     };
     if (headers) {
       _.C(headers).each(function (v, k) {
