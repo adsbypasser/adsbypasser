@@ -37,12 +37,13 @@
           // starts with xxx
           /^xxx(\.pornprimehd|imagenow|screens)\.com$/,
           // else
-          /^(picstwist|ericsony|wpc8|uplimg|lexiit|thumbnailus|nimplus|newimagepost|fapingpics)\.com$/,
+          /^(picstwist|ericsony|wpc8|uplimg|lexiit|thumbnailus|newimagepost|fapingpics)\.com$/,
           /^((i|hentai)\.)?imgslip\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           /^(go|er)imge\.com$/,
           /^(like\.)?08lkk\.com$/,
           /^(www\.)?\.imgult\.com$/,
+          /^nim(plus|zshare)\.com$/,
           /^nudeximg\.com$/,
           /imgseeds\.com$/,
           /damimage\.com$/,
