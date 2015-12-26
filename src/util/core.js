@@ -254,6 +254,18 @@
     });
   };
 
+  _.try = function (msInterval, fn) {
+    return _.D(function (resolve, reject) {
+      var handle = setInterval(function () {
+        var result = fn();
+        if (result !== _.none) {
+          clearInterval(handle);
+          resolve(result);
+        }
+      }, msInterval);
+    });
+  };
+
 
   function log (method, args) {
     if (_._quiet) {
