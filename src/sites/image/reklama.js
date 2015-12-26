@@ -70,6 +70,7 @@
           /^imgease\.re$/,
           /^goimg\.xyz$/,
           /^pic2pic\.site$/,
+          /^darpix\.ga$/,
         ],
         path: /^\/img-.*\.html$/,
       },
