@@ -232,7 +232,7 @@
     try {
       return JSON.parse(json);
     } catch (e) {
-      _.warn(e);
+      _.warn(e, json);
     }
     return _.none;
   };
