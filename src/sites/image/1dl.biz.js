@@ -14,7 +14,7 @@ $.register({
   ready: function () {
     'use strict';
 
-    var a = $('.main-l a');
+    var a = $('.main a, .main-l a');
     $.openImage(a.href, {
       referer: true,
     });

@@ -7,10 +7,12 @@
     var node = $.$('#continuetoimage > form input');
     if (node) {
       // first pass
-      setTimeout(function () {
+      _.wait(500).then(function () {
         node.removeAttribute('disabled');
+        return _.wait(500);
+      }).then(function () {
         node.click();
-      }, 1000);
+      });
       return;
     }
 
