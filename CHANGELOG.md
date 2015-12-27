@@ -1,4 +1,4 @@
-## TBA
+## 5.45.0
 
 * fixed
     * imgbb.net
