@@ -50,7 +50,7 @@
           /imagedecode\.com$/,
           // net
           /^img(serve|coin|fap|candy|master|-view|run|boom|project|python)\.net$/,
-          /^(gallerycloud|imagelaser|project-photo|pix-link|funimg|golfpit)\.net$/,
+          /^(gallerycloud|imagelaser|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
           // org
           /^shotimg\.org$/,
           /^img(studio|spot)\.org$/,
