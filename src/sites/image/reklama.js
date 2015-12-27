@@ -71,6 +71,7 @@
           /^goimg\.xyz$/,
           /^pic2pic\.site$/,
           /^darpix\.ga$/,
+          /^sxpics\.nl$/,
         ],
         path: /^\/img-.*\.html$/,
       },
