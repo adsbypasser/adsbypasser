@@ -5,3 +5,4 @@ dest
 *.pyc
 .idea/
 *.log
+.save.sh
