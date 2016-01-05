@@ -67,7 +67,7 @@
           /^img\.yt$/,
           /^vava\.in$/,
           /^(pixxx|picspornfree|imgload)\.me$/,
-          /^(porno-pirat|24avarii|loftlm)\.ru$/,
+          /^(porno-pirat|24avarii|loftlm|18pron)\.ru$/,
           /^hotimage\.uk$/,
           /^imgease\.re$/,
           /^goimg\.xyz$/,
