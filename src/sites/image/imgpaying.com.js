@@ -57,7 +57,7 @@
         /^(uploadrr|imageeer|imzdrop|www\.uimgshare)\.com$/,
         /^imgdrive\.co$/,
         /^cuteimg\.cc$/,
-        /^imgtiger\.org$/,
+        /^img(tiger|gold)\.org$/,
         /^myimg\.club$/,
         /^foxyimg\.link$/,
         /^hulkimge\.com$/,
