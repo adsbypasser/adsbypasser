@@ -29,6 +29,12 @@
   }
 
   function helper (id, getNext) {
+    var recaptcha = $.$('#recaptcha_widget');
+    if (recaptcha) {
+      _.info('stop because recaptcha');
+      return;
+    }
+
     var i = $.$('input[name="next"]');
     if (i) {
       // first stage
