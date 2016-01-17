@@ -24,6 +24,7 @@
     * poontown.net
     * qqc.co
     * rqq.co
+    * sasontnwc.net
     * seriousdeals.net
     * sexpalace.gs
     * theseblogs.com
@@ -60,12 +61,14 @@
     * postimg.net
 * reklama
     * 08lkk.com
+    * 18pron.ru
     * 24avarii.ru
     * bokimage.com
     * bulkimg.info
     * croftimage.com
     * damimage.com
     * darpix.ga
+    * dimtus.com
     * dragimage.org
     * ericsony.com
     * erimge.com
@@ -106,6 +109,7 @@
     * imgcandy.net
     * imgcloud.co
     * imgcoin.net
+    * imgcover.com
     * imgdevil.com
     * imgdrive.net
     * imgease.re
@@ -309,6 +313,7 @@
     * imgleech.com
     * imgnemo.com
     * imgsay.com
+    * imgsense.com
     * imgsmile.com
 * imgbabes
     * imgbabes.com
@@ -375,6 +380,7 @@
     * imageeer.com
     * imgclick.net
     * imgdrive.co
+    * imggold.org
     * imgmaze.com
     * imgmega.com
     * imgmonkey.com
@@ -383,6 +389,7 @@
     * imgsee.me
     * imgtiger.org
     * imgtown.net
+    * imgve.com
     * imgzeus.com
     * imzdrop.com
     * hulkimge.com
@@ -469,6 +476,7 @@
     * adlock.org
     * adlot.us
     * ah-informatique.com
+    * ah.pe
     * aka.gr
     * akoam.com
     * al.ly
