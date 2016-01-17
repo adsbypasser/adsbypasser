@@ -51,7 +51,7 @@
   $.register({
     rule: {
       host: [
-        /^img(paying|mega|zeus|monkey|trex)\.com$/,
+        /^img(paying|mega|zeus|monkey|trex|ve)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
         /^(uploadrr|imageeer|imzdrop|www\.uimgshare)\.com$/,
