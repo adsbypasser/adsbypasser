@@ -1,3 +1,20 @@
+## TBA
+
+* fixed
+    * imgnova.xyz
+    * imgclick.net
+    * imagepearl.com
+    * bc.vc
+* added
+    * 18pron.ru
+    * sasontnwc.net
+    * imgcover.com
+    * dimtus.com
+    * imgsense.com
+    * imggold.org
+    * imgve.com
+    * ah.pe
+
 ## 5.45.1
 
 * fixed
