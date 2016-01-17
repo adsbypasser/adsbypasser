@@ -84,6 +84,8 @@
 
     var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
     var make_url = matches[1];
+    // dummy varialbes for eval script
+    var tZ, cW, cH, sW, sH;
     var make_opts = eval('(' + matches[2] + ')');
 
     function makeLog () {
