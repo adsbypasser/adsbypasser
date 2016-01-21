@@ -671,3 +671,4 @@
     * yooclick.com
     * zo.mu
     * zzz.gl
+    * linkplugapp.com
