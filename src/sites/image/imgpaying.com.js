@@ -29,6 +29,12 @@
   }
 
   function helper (id, getNext) {
+    var recaptcha = $.$('#recaptcha_widget');
+    if (recaptcha) {
+      _.info('stop because recaptcha');
+      return;
+    }
+
     var i = $.$('input[name="next"]');
     if (i) {
       // first stage
@@ -51,13 +57,13 @@
   $.register({
     rule: {
       host: [
-        /^img(paying|mega|zeus|monkey|trex)\.com$/,
+        /^img(paying|mega|zeus|monkey|trex|ve)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
         /^(uploadrr|imageeer|imzdrop|www\.uimgshare)\.com$/,
         /^imgdrive\.co$/,
         /^cuteimg\.cc$/,
-        /^imgtiger\.org$/,
+        /^img(tiger|gold)\.org$/,
         /^myimg\.club$/,
         /^foxyimg\.link$/,
         /^hulkimge\.com$/,

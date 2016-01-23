@@ -232,7 +232,7 @@
     try {
       return JSON.parse(json);
     } catch (e) {
-      _.warn(e);
+      _.warn(e, json);
     }
     return _.none;
   };
@@ -251,6 +251,18 @@
   _.wait = function (msDelay) {
     return _.D(function (resolve, reject) {
       setTimeout(resolve, msDelay);
+    });
+  };
+
+  _.try = function (msInterval, fn) {
+    return _.D(function (resolve, reject) {
+      var handle = setInterval(function () {
+        var result = fn();
+        if (result !== _.none) {
+          clearInterval(handle);
+          resolve(result);
+        }
+      }, msInterval);
     });
   };
 

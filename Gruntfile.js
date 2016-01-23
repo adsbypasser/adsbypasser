@@ -253,14 +253,30 @@ module.exports = function (grunt) {
     });
   });
 
+  grunt.registerTask('sanity', function () {
+    var done = this.async();
+
+    // do not include experimental code
+    grunt.util.spawn({
+      cmd: 'git',
+      args: ['status', '--porcelain'],
+    }, function (error, result, code) {
+      if (error) {
+        throw error;
+      }
+      var uncleanFiles = result.stdout.trim().split('\n', false).length;
+      done(uncleanFiles <= 0);
+    });
+  });
+
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-mocha-test');
 
   grunt.registerTask('default', ['clean', 'strip', 'concat']);
   grunt.registerTask('test', 'mochaTest');
-  grunt.registerTask('deploy', ['default', 'summary', 'clone', 'ghpages']);
-  grunt.registerTask('mirror', ['default', 'summary', 'mirrors']);
+  grunt.registerTask('deploy', ['sanity', 'default', 'summary', 'clone', 'ghpages']);
+  grunt.registerTask('mirror', ['sanity', 'default', 'summary', 'mirrors']);
 
   function removeModelines (s) {
     return s.replace(/^\/\/\s*.+:.*[\r\n]*/gm, '');

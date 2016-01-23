@@ -1,3 +1,43 @@
+## 5.46.0
+
+* fixed
+    * imgnova.xyz
+    * imgclick.net
+    * imagepearl.com
+    * bc.vc
+* added
+    * 18pron.ru
+    * sasontnwc.net
+    * imgcover.com
+    * dimtus.com
+    * imgsense.com
+    * imggold.org
+    * imgve.com
+    * ah.pe
+
+## 5.45.1
+
+* fixed
+    * sites affected by experimental code
+
+## 5.45.0
+
+* fixed
+    * imgbb.net
+    * 1dl.biz
+    * linksas.us
+    * sh.st
+* added
+    * imagepearl.com
+    * fapingpics.com
+    * nimzshare.com
+    * darpix.ga
+    * sxpics.nl
+    * xximg.net
+    * dewaurl.com
+* removed
+    * alabout.com
+
 ## 5.44.0
 
 * fixed

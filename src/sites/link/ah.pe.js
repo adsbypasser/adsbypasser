@@ -1,14 +1,15 @@
 $.register({
   rule: {
-    host: /alabout\.com$/,
+    host: /^ah\.pe$/,
   },
   ready: function () {
     'use strict';
 
-    $.$$('a').each(function (a) {
-      if (/http:\/\/(www\.)?alabout\.com\/j\.phtml\?url=/.test(a.href)) {
-        a.href = a.textContent;
-      }
+    $.removeNodes('iframe');
+
+    var url = $.window.url;
+    $.get(url).then(function (url) {
+      $.openLink(url);
     });
   },
 });

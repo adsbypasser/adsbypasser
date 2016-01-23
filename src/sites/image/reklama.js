@@ -31,7 +31,7 @@
           // ends with image
           /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy)image\.com$/,
           // starts with img
-          /^img(next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|-pay|nimz|binbou|2share|22)\.com$/,
+          /^img(next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|-pay|nimz|binbou|2share|22|cover)\.com$/,
           // starts with img-
           /^img-(zone|planet)\.com$/,
           // starts with www
@@ -39,19 +39,20 @@
           // starts with xxx
           /^xxx(\.pornprimehd|imagenow|screens)\.com$/,
           // else
-          /^(picstwist|ericsony|wpc8|uplimg|lexiit|thumbnailus|nimplus|newimagepost)\.com$/,
+          /^(picstwist|ericsony|wpc8|uplimg|lexiit|thumbnailus|newimagepost|fapingpics|dimtus)\.com$/,
           /^((i|hentai)\.)?imgslip\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           /^(go|er)imge\.com$/,
           /^(like\.)?08lkk\.com$/,
           /^(www\.)?\.imgult\.com$/,
+          /^nim(plus|zshare)\.com$/,
           /^nudeximg\.com$/,
           /imgseeds\.com$/,
           /damimage\.com$/,
           /imagedecode\.com$/,
           // net
           /^img(serve|coin|fap|candy|master|-view|run|boom|project|python)\.net$/,
-          /^(gallerycloud|imagelaser|project-photo|pix-link|funimg|golfpit)\.net$/,
+          /^(gallerycloud|imagelaser|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
           // org
           /^shotimg\.org$/,
           /^img(studio|spot)\.org$/,
@@ -66,11 +67,13 @@
           /^img\.yt$/,
           /^vava\.in$/,
           /^(pixxx|picspornfree|imgload)\.me$/,
-          /^(porno-pirat|24avarii|loftlm)\.ru$/,
+          /^(porno-pirat|24avarii|loftlm|18pron)\.ru$/,
           /^hotimage\.uk$/,
           /^imgease\.re$/,
           /^goimg\.xyz$/,
           /^pic2pic\.site$/,
+          /^darpix\.ga$/,
+          /^sxpics\.nl$/,
         ],
         path: /^\/img-.*\.html$/,
       },

@@ -1,7 +1,7 @@
 $.register({
   rule: {
     host: /^imgnova\.xyz$/,
-    path: /^\/i\/v\.php$/,
+    path: /^\/i\/(v|x)\.php$/,
     query: /f=(.+)$/,
   },
   start: function (m) {

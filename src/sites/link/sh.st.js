@@ -22,7 +22,8 @@
         if (r.status == "ok" && r.destinationUrl) {
           clearInterval(i);
           $.removeAllTimer();
-          $.openLink(r.destinationUrl);
+          var url = decodeURIComponent(r.destinationUrl);
+          $.openLink(url);
         }
       });
     }, 1000);
