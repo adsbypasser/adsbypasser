@@ -1,6 +1,29 @@
 (function () {
   'use strict';
 
+  function waitDOM (element, fn) {
+    return _.D(function (resolve, reject) {
+      var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          if (mutation.type !== 'childList') {
+            return;
+          }
+          var result = _.C(mutation.addedNodes).find(function (child) {
+            return fn(child) ? child : _.none;
+          });
+          if (!result) {
+            return;
+          }
+          observer.disconnect();
+          resolve(result.payload);
+        });
+      });
+      observer.observe(element, {
+        childList: true,
+      });
+    });
+  }
+
   var pathRule = /^\/([0-9a-z]+)(\.|\/|$)/;
 
   function go (id, pre, next) {
@@ -84,15 +107,22 @@
       path: pathRule,
     },
     ready: function (m) {
-      // they have random invalid forms here
-      var d = $.$('[id^=imageviewi] input[type=submit]:not([style])');
-      if (!d) {
-        helper(m.path[1], getNext1);
+
+      var i = $.$('img.pic');
+      if (i) {
+        // second stage
+        $.openImage(i.src);
         return;
       }
-      // the form has a random field, directly use this form
-      d = d.parentNode;
-      d.submit();
+
+      var d = $('div[id^="imageviewi"]');
+      waitDOM(d, function (node) {
+        return node.nodeName === 'FORM' && $.$('input[name="id"]', node);
+      }).then(function (node) {
+        node.submit();
+      }).catch(function (e) {
+        _.warn(e);
+      });
     },
   });
 
