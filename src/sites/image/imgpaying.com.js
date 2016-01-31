@@ -82,7 +82,7 @@
       host: [
         /^img(paying|mega|zeus|monkey|trex|ve)\.com$/,
         /^(www\.)?imgsee\.me$/,
-        /^imgclick\.net$/,
+        /^img(click|maid)\.net$/,
         /^(uploadrr|imageeer|imzdrop|www\.uimgshare)\.com$/,
         /^imgdrive\.co$/,
         /^cuteimg\.cc$/,
