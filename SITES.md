@@ -458,6 +458,9 @@
 * link4ad.com
     * link4ad.com
     * linkajc.com
+* bk-ddl.net
+    * bk-ddl.net
+    * link.animagz.org
 * else
     * 01.nl
     * 1be.biz
@@ -493,7 +496,6 @@
     * bilder-upload.eu
     * bildr.no
     * binbox.io
-    * bk-ddl.net
     * blackcatpix.com
     * boxcash.net
     * casimages.com
@@ -578,7 +580,6 @@
     * leechbd.tk
     * lienscash.com
     * link-protector.com
-    * link.animagz.org
     * link.im
     * link2dollar.com
     * link2you.ru
