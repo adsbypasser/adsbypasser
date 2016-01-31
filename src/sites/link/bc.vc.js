@@ -211,6 +211,7 @@
         /^miniurl\.tk$/,
         /^vizzy\.es$/,
         /^kazan\.vc$/,
+        /^linkcash\.ml$/,
       ],
       path: /^\/.+/,
     },
