@@ -6,12 +6,6 @@ $.register({
     'use strict';
 
     var a = $('#skip-ad');
-    // var href = a.onclick.toString();
-    // url = url.match(/window\.open\('([^']+)'\)/);
-    // if (!url) {
-    //   _.info('pattern changed')
-    //   return;
-    // }
     $.openLink(a.href);
   },
 });
