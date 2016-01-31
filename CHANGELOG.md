@@ -1,4 +1,4 @@
-## TBA
+## 5.47.0
 
 * fixed
     * imgtown.net
