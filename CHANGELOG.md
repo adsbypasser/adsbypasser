@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * imgtown.net
+    * imgnova.xyz
+* added
+    * linkplugapp.com
+
 ## 5.46.0
 
 * fixed
