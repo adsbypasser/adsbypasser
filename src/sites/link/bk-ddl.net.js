@@ -12,6 +12,10 @@
       a = a.match(/window\.open \('([^']+)'\)/);
       return a[1];
     },
+    'coeg.in': function () {
+      var a = $('.link a');
+      return a.href;
+    },
   };
 
   $.register({
@@ -19,6 +23,7 @@
       host: [
         /^bk-ddl\.net$/,
         /^link\.animagz\.org$/,
+        /^coeg\.in$/,
       ],
       path: /^\/\w+$/,
     },
