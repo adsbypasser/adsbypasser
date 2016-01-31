@@ -231,6 +231,7 @@
     * kazan.vc
     * linc.ml
     * link.tl
+    * linkcash.ml
     * miniurl.tk
     * myam.me
     * shortit.in
@@ -381,6 +382,7 @@
     * imgclick.net
     * imgdrive.co
     * imggold.org
+    * imgmaid.net
     * imgmaze.com
     * imgmega.com
     * imgmonkey.com
@@ -425,6 +427,7 @@
     * compul.in
     * dlneko.com
     * dlneko.net
+    * link.filmku.net
     * manteb.in
     * safelinkconverter2.com
     * safelinkreview.com
@@ -460,6 +463,7 @@
     * linkajc.com
 * bk-ddl.net
     * bk-ddl.net
+    * coeg.in
     * link.animagz.org
 * else
     * 01.nl
@@ -572,6 +576,7 @@
     * ipic.su
     * itw.me
     * ity.im
+    * javcity.com
     * javelite.tk
     * jheberg.net
     * keptarolo.hu
@@ -584,6 +589,7 @@
     * link2dollar.com
     * link2you.ru
     * link5s.com
+    * linkarus.com
     * linkdecode.com
     * linkdrop.net
     * linkplugapp.com
@@ -632,6 +638,7 @@
     * rijaliti.info
     * riurl.com
     * robo.us
+    * ron.vn
     * sa.ae
     * safeurl.eu
     * screenlist.ru
