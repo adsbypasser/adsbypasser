@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^imgnova\.xyz$/,
+    host: [
+      /^imgnova\.xyz$/,
+      /^www\.hentai-hot\.xyz$/,
+    ],
     path: /^\/i\/(v|x|o)\.php$/,
     query: /f=(.+)$/,
   },
