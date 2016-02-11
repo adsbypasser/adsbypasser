@@ -40,11 +40,12 @@ contributors. (sort by GitHub account)
 * [Ercan ALAYLI](https://github.com/alayliercan)
 * [bitst0rm](https://github.com/bitst0rm)
 * [noname120](https://github.com/devnoname120), the author of [AntiAdware](https://github.com/handyuserscripts/antiadware#readme)
-* [U BLESS](https://github.com/ubless607)
 * [gabrielfin](https://github.com/gabrielfin)
 * [MNB](https://github.com/MNBuyskih)
+* [Tien Nguyen](https://github.com/nhtera)
 * [ofyxp](https://github.com/ofyxp)
 * [RickyChen](https://github.com/RickyChien)
+* [U BLESS](https://github.com/ubless607)
 * [xor10](https://github.com/xor10)
 
 

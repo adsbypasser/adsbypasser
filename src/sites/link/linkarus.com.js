@@ -1,14 +1,12 @@
 $.register({
   rule: {
-    host: /^link\.animagz\.org$/,
+    host: /^www\.linkarus\.com$/,
   },
   ready: function () {
     'use strict';
 
-    var a = $('.redirect');
-    a = a.href.match(/\?r=(.+)$/);
-    a = atob(a[1]);
-    $.openLink(a);
+    var a = $('#skip-ad');
+    $.openLink(a.href);
   },
 });
 

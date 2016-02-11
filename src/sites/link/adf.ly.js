@@ -89,19 +89,6 @@
     },
   });
 
-  $.register({
-    rule: 'http://ad7.biz/*',
-    ready: function () {
-      $.removeNodes('iframe');
-      $.resetCookies();
-
-      var script = $.searchScripts('var r_url');
-      var url = script.match(/&url=([^&]+)/);
-      url = url[1];
-      $.openLink(url);
-    },
-  });
-
 })();
 
 

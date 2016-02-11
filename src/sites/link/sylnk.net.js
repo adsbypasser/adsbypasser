@@ -17,6 +17,11 @@ $.register({
       path: /^\/code$/,
       query: /(?:\?|&)link=([a-zA-Z0-9=]+)(?:$|&)/,
     },
+    {
+      host: /^link\.filmku\.net$/,
+      path: /^\/p\/go\.html$/,
+      query: /^\?url=([a-zA-Z0-9=]+)$/,
+    },
   ],
   start: function (m) {
     'use strict';

@@ -231,6 +231,7 @@
     * kazan.vc
     * linc.ml
     * link.tl
+    * linkcash.ml
     * miniurl.tk
     * myam.me
     * shortit.in
@@ -381,6 +382,7 @@
     * imgclick.net
     * imgdrive.co
     * imggold.org
+    * imgmaid.net
     * imgmaze.com
     * imgmega.com
     * imgmonkey.com
@@ -425,6 +427,7 @@
     * compul.in
     * dlneko.com
     * dlneko.net
+    * link.filmku.net
     * manteb.in
     * safelinkconverter2.com
     * safelinkreview.com
@@ -458,6 +461,10 @@
 * link4ad.com
     * link4ad.com
     * linkajc.com
+* bk-ddl.net
+    * bk-ddl.net
+    * coeg.in
+    * link.animagz.org
 * else
     * 01.nl
     * 1be.biz
@@ -481,7 +488,6 @@
     * akoam.com
     * al.ly
     * allkeyshop.com
-    * picstate.com.alsohe.com
     * anafile.com
     * anonymbucks.com
     * arab.sh
@@ -494,7 +500,6 @@
     * bilder-upload.eu
     * bildr.no
     * binbox.io
-    * bk-ddl.net
     * blackcatpix.com
     * boxcash.net
     * casimages.com
@@ -571,6 +576,7 @@
     * ipic.su
     * itw.me
     * ity.im
+    * javcity.com
     * javelite.tk
     * jheberg.net
     * keptarolo.hu
@@ -579,13 +585,14 @@
     * leechbd.tk
     * lienscash.com
     * link-protector.com
-    * link.animagz.org
     * link.im
     * link2dollar.com
     * link2you.ru
     * link5s.com
+    * linkarus.com
     * linkdecode.com
     * linkdrop.net
+    * linkplugapp.com
     * linksas.us
     * linkshrink.net
     * lix.in
@@ -616,6 +623,7 @@
     * picmoe.net
     * pics-money.ru
     * picshare.geenza.com
+    * picstate.com.alsohe.com
     * pimpandhost.com
     * pixhost.org
     * pixhub.eu
@@ -630,6 +638,7 @@
     * rijaliti.info
     * riurl.com
     * robo.us
+    * ron.vn
     * sa.ae
     * safeurl.eu
     * screenlist.ru

@@ -1,3 +1,18 @@
+## 5.47.0
+
+* fixed
+    * imgtown.net
+    * imgnova.xyz
+* added
+    * linkplugapp.com
+    * javcity.com
+    * linkcash.ml
+    * linkarus.com
+    * coeg.in
+    * ron.vn
+    * imgmaid.net
+    * link.filmku.net
+
 ## 5.46.0
 
 * fixed
