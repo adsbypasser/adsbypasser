@@ -3,7 +3,7 @@ $.register({
     {
       host: [
         /^(www\.)?sylnk\.net$/,
-        /^dlneko\.(com|net)$/,
+        /^dlneko\.(com|net|org)$/,
       ],
       query: /link=([^&]+)/,
     },
