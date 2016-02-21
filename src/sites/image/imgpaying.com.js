@@ -107,8 +107,7 @@
       ],
       path: pathRule,
     },
-    ready: function (m) {
-
+    ready: function () {
       var i = $.$('img.pic');
       if (i) {
         // second stage
@@ -134,6 +133,22 @@
     },
     ready: function (m) {
       helper(m.path[1], getNext2);
+    },
+  });
+
+  $.register({
+    rule: 'http://imgview.net/tpind.php',
+    ready: function () {
+      var i = $.$('img.pic');
+      if (i) {
+        // second stage
+        $.openImage(i.src, {replace: true});
+        return;
+      }
+
+      var d = $('div[id^="imageviewi"] input[type="submit"][style=""]');
+      d = d.parentNode;
+      d.submit();
     },
   });
 
