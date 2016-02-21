@@ -42,6 +42,7 @@ $.register({
         /^(www\.)?dlneko\.com$/,
         /^(satuasia|tawaku)\.com$/,
         /^ww3\.manteb\.in$/,
+        /^link\.filmku\.net$/,
       ],
       query: /go=(\w+=*)/,
     },
