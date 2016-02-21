@@ -1,4 +1,4 @@
-## TBA
+## 5.48.0
 
 * fixed
     * imgnova.xyz
