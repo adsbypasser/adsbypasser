@@ -75,18 +75,18 @@
           /^darpix\.ga$/,
           /^sxpics\.nl$/,
         ],
-        path: /^\/img-.*\.html$/,
+        path: /^\/img-.*\.html/,
       },
       {
         host: [
           /^img(run|twyti)\.net$/,
           /^imgtwyti\.com$/,
         ],
-        path: /^\/t\/img-.*\.html$/,
+        path: /^\/t\/img-.*\.html/,
       },
       {
         host: /^imgking\.co$/,
-        path: /^\/img-.*\.htmls?$/,
+        path: /^\/img-.*\.html/,
       },
       {
         host: /^imgbb\.net$/,
