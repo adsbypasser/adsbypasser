@@ -34,7 +34,10 @@ $.register({
 $.register({
   rule: [
     {
-      host: /^(www\.)?(link\.)?safelink(converter2?|s?review)\.com$/,
+      host: [
+        /^(www\.)?(link\.)?safelink(converter2?|s?review)\.com$/,
+        /^susutin\.com$/,
+      ],
       query: /id=(\w+=*)/,
     },
     {
