@@ -4,7 +4,7 @@ $.register({
       /^imgnova\.xyz$/,
       /^www\.hentai-hot\.xyz$/,
     ],
-    path: /^\/i\/(v|x|o)\.php$/,
+    path: /^\/i\/(v|x|o|r)\.php$/,
     query: /f=(.+)$/,
   },
   start: function (m) {
