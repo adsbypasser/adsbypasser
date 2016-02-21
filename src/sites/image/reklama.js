@@ -47,7 +47,7 @@
           /^(www\.)?\.imgult\.com$/,
           /^nim(plus|zshare)\.com$/,
           /^nudeximg\.com$/,
-          /imgseeds\.com$/,
+          /imgseeds?\.com$/,
           /damimage\.com$/,
           /imagedecode\.com$/,
           // net
