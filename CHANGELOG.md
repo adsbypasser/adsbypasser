@@ -1,3 +1,22 @@
+## TBA
+
+* fixed
+    * imgnova.xyz
+    * linkarus.com
+    * 0img.net
+    * link.filmku.net
+* added
+    * hentai-hot.xyz
+    * imgseed.com
+    * imghit.com
+    * imgmain.com
+    * dlneko.org
+    * coreimg.net
+    * myimg.info
+    * imgview.net
+    * susutin.com
+    * disingkat.in
+
 ## 5.47.0
 
 * fixed
