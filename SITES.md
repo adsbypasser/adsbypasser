@@ -115,11 +115,13 @@
     * imgease.re
     * imgfap.net
     * imghere.net
+    * imghit.com
     * imgkicks.com
     * imgking.co
     * imglemon.com
     * imgload.me
     * imgmag.co
+    * imgmain.com
     * imgmaster.net
     * imgnext.com
     * imgnimz.com
@@ -128,6 +130,8 @@
     * imgpython.net
     * imgrun.net
     * imgsavvy.com
+    * imgseed.com
+    * imgseeds.com
     * imgserve.net
     * imgslip.com
     * imgspot.org
@@ -144,6 +148,7 @@
     * loftlm.ru
     * megaimage.org
     * myhotimage.com
+    * myimg.info
     * newimagepost.com
     * nimplus.com
     * nimzshare.com
@@ -376,8 +381,10 @@
     * gxp.so
 * imgpaying.com
     * chronos.to
+    * coreimg.net
     * cuteimg.cc
     * foxyimg.link
+    * hulkimge.com
     * imageeer.com
     * imgclick.net
     * imgdrive.co
@@ -392,9 +399,9 @@
     * imgtiger.org
     * imgtown.net
     * imgve.com
+    * imgview.net
     * imgzeus.com
     * imzdrop.com
-    * hulkimge.com
     * myimg.club
     * uimgshare.com
     * uploadrr.com
@@ -427,6 +434,7 @@
     * compul.in
     * dlneko.com
     * dlneko.net
+    * dlneko.org
     * link.filmku.net
     * manteb.in
     * safelinkconverter2.com
@@ -434,6 +442,7 @@
     * safelinksreview.com
     * satuasia.com
     * srelink.com
+    * susutin.com
     * sylnk.net
     * tawaku.com
 * gca.sh (manual captcha)
@@ -464,7 +473,11 @@
 * bk-ddl.net
     * bk-ddl.net
     * coeg.in
+    * disingkat.in
     * link.animagz.org
+* imgnova.xyz
+    * hentai-hot.xyz
+    * imgnova.xyz
 * else
     * 01.nl
     * 1be.biz
@@ -568,8 +581,6 @@
     * imgbox.com
     * imgcarry.com
     * imgdollar.com
-    * imgnova.xyz
-    * imgseeds.com
     * imgtheif.com
     * imgvault.pw
     * iori.us
