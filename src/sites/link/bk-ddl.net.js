@@ -1,22 +1,30 @@
 (function () {
   'use strict';
 
-  var hostMapper = {
-    'bk-ddl.net': function () {
-      var a = $('a.btn-block.redirect');
-      return a.href;
-    },
-    'link.animagz.org': function () {
-      var a = $('a.redirect');
-      a = a.onclick.toString();
-      a = a.match(/window\.open \('([^']+)'\)/);
-      return a[1];
-    },
-    'coeg.in': function () {
-      var a = $('.link a');
-      return a.href;
-    },
-  };
+  function hostMapper (host) {
+    switch (host) {
+    case 'bk-ddl.net':
+    case 'disingkat.in':
+      return function () {
+        var a = $('a.btn-block.redirect');
+        return a.href;
+      };
+    case 'link.animagz.org':
+      return function () {
+        var a = $('a.redirect');
+        a = a.onclick.toString();
+        a = a.match(/window\.open \('([^']+)'\)/);
+        return a[1];
+      };
+    case 'coeg.in':
+      return function () {
+        var a = $('.link a');
+        return a.href;
+      };
+    default:
+      return null;
+    }
+  }
 
   $.register({
     rule: {
@@ -24,11 +32,12 @@
         /^bk-ddl\.net$/,
         /^link\.animagz\.org$/,
         /^coeg\.in$/,
+        /^disingkat\.in$/,
       ],
       path: /^\/\w+$/,
     },
     ready: function (m) {
-      var mapper = hostMapper[m.host[0]];
+      var mapper = hostMapper(m.host[0]);
       var b64 = mapper().match(/\?r=(\w+={0,2}?)/);
 
       $.openLink(atob(b64[1]));
