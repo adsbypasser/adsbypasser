@@ -29,7 +29,7 @@
         $.window.confirmAge(1);
         return;
       }
-      var i = $('#container-home img');
+      var i = $('#container-home img[onclick]');
       $.openImage(i.src);
     },
   });
