@@ -48,7 +48,6 @@
           /^nim(plus|zshare)\.com$/,
           /^nudeximg\.com$/,
           /imgseeds?\.com$/,
-          /xxxsparrow?\.com$/,
           /damimage\.com$/,
           /imagedecode\.com$/,
           // net
