@@ -63,7 +63,7 @@
           /^(hotimages|55888)\.eu$/,
           /^img(cloud|mag)\.co$/,
           /^pixup\.us$/,
-          /^(bulkimg|photo-up|myimg)\.info$/,
+          /^(bulkimg|photo-up|myimg|ads-img|pop-img)\.info$/,
           /^img\.yt$/,
           /^vava\.in$/,
           /^(pixxx|picspornfree|imgload)\.me$/,
