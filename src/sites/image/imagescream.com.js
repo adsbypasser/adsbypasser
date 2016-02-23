@@ -5,7 +5,7 @@ $.register({
       path: /^\/img\/(soft\/)?/,
     },
     {
-      host: /^(www\.)?picturescream\.com$/,
+      host: /^(www\.)?(picturescream|picturevip)\.com$/,
       path: /^\/x\//,
     },
     {
@@ -25,7 +25,7 @@ $.register({
 
 $.register({
   rule: {
-    host: /^(imagescream|anonpic|picturevip)\.com|all-poster\.ru$/,
+    host: /^(imagescream|anonpic)\.com|all-poster\.ru$/,
     query: /^\?v=/,
   },
   ready: function () {
