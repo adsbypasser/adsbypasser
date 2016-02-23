@@ -5,7 +5,7 @@ $.register({
       path: /^\/img\/(soft\/)?/,
     },
     {
-      host: /^www\.picturescream\.com$/,
+      host: /^(www\.)?picturescream\.com$/,
       path: /^\/x\//,
     },
     {
