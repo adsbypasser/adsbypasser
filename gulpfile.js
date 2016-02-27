@@ -255,6 +255,18 @@ gulp.task('clean:wintersmith', ['wintersmith'], () => {
     .pipe(plugins.vinylPaths(plugins.del));
 });
 
+gulp.task('mirror', ['sanity', 'default', 'summary'], (done) => {
+  var p = child_process.spawn('python2', ['-m', 'mirrors'], {
+    cwd: 'deploy',
+  });
+  p.on('close', () => {
+    done();
+  });
+  p.on('error', (error) => {
+    throw error;
+  });
+});
+
 
 function finalizeMetadata (isLite, content) {
   var s = _.template(content);
