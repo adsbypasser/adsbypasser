@@ -1,6 +1,10 @@
 'use strict';
 
 
+var path = require('path');
+var child_process = require('child_process');
+var fs = require('fs');
+
 var gulp = require('gulp');
 var plugins = {
   del: require('del'),
@@ -14,6 +18,7 @@ var plugins = {
   blanketMocha: require('gulp-blanket-mocha'),
 };
 var _ = require('lodash');
+var wintersmith = require('wintersmith');
 
 // a bit hacky?
 var pkg = require('./package.json');
@@ -159,6 +164,97 @@ gulp.task('test', () => {
     }));
 });
 
+gulp.task('deploy', ['sanity', 'default', 'summary', 'clone', 'copy:summary', 'copy:compiled', 'wintersmith', 'clean:wintersmith']);
+
+gulp.task('sanity', (done) => {
+  // do not include experimental code
+  var p = child_process.spawn('git', ['status', '--porcelain']);
+  p.stdout.on('data', (data) => {
+    var uncleanFiles = data.toString('utf8').trim().split('\n', false).length;
+    if (uncleanFiles > 0) {
+      done(false);
+    }
+    done();
+  });
+  p.on('error', (error) => {
+    throw error;
+  });
+});
+
+gulp.task('summary', (done) => {
+  var p = child_process.spawn('python2', ['-m', 'mirrors.summary'], {
+    cwd: 'deploy',
+  });
+  p.on('close', () => {
+    done();
+  });
+  p.on('error', (error) => {
+    throw error;
+  });
+});
+
+gulp.task('clone', (done) => {
+  var data = require('./.deploy.json');
+  var stats = fs.statSync('dest/adsbypasser');
+  if (stats.isDirectory()) {
+    done();
+    return;
+  }
+
+  var p = child_process.spawn('git', ['clone', data.ghpages.REPO, '-b', 'master', 'dest/adsbypasser']);
+  p.on('close', () => {
+    done();
+  });
+  p.on('error', (error) => {
+    throw error;
+  });
+});
+
+gulp.task('copy:summary', () => {
+  return gulp.src('dest/summary.md')
+    .pipe(gulp.dest('deploy/ghpages/contents'));
+});
+
+gulp.task('copy:compiled', ['default'], () => {
+  return gulp.src([
+    'dest/adsbypasser.user.js',
+    'dest/adsbypasser.meta.js',
+    'dest/adsbypasserlite.user.js',
+    'dest/adsbypasserlite.meta.js',
+  ])
+    .pipe(gulp.dest('deploy/ghpages/contents/releases'));
+});
+
+gulp.task('wintersmith', ['copy:summary', 'copy:compiled'], (done) => {
+  var options = {
+    config: 'deploy/ghpages/config.json',
+    summary: 'dest/deploy/summary.md',
+    userjs: 'dest/adsbypasser.user.js',
+    metajs: 'dest/adsbypasser.meta.js',
+    lite_userjs: 'dest/adsbypasserlite.user.js',
+    lite_metajs: 'dest/adsbypasserlite.meta.js',
+  };
+  var rootPath = 'deploy/ghpages/contents';
+  var releasePath = path.join(rootPath, 'releases');
+  var outPath = 'dest/adsbypasser';
+
+  var env = wintersmith(options.config);
+  env.build(outPath, (error) => {
+    if (error) {
+      throw error;
+    }
+    done();
+  });
+});
+
+gulp.task('clean:wintersmith', ['wintersmith'], () => {
+  return gulp.src([
+    'deploy/ghpages/contents/summary.md',
+    'deploy/ghpages/contents/releases',
+  ])
+    .pipe(plugins.vinylPaths(plugins.del));
+});
+
 
 function finalizeMetadata (isLite, content) {
   var s = _.template(content);
@@ -173,3 +269,7 @@ function finalizeMetadata (isLite, content) {
   ];
   return s.join('');
 }
+
+// ex: ts=2 sts=2 sw=2 et
+// sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
+// kate: space-indent on; indent-width 2;
