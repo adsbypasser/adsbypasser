@@ -10,6 +10,8 @@ var plugins = {
   rename: require('gulp-rename'),
   stripComments: require('gulp-strip-comments'),
   removeEmptyLines: require('gulp-remove-empty-lines'),
+  mocha: require('gulp-mocha'),
+  blanketMocha: require('gulp-blanket-mocha'),
 };
 var _ = require('lodash');
 
@@ -144,6 +146,19 @@ gulp.task('merge:lite', ['meta:lite', 'script:lite'], () => {
     .pipe(gulp.dest('dest'));
 });
 
+gulp.task('test', () => {
+  return gulp.src(['tests/*.js'], {read: false})
+    .pipe(plugins.mocha({
+      reporter: 'spec',
+    }))
+    .pipe(plugins.blanketMocha({
+      instrument: ['tests/coverage.js'],
+      captureFile: 'dest/coverage.html',
+      quiet: true,
+      reporter: 'html-cov',
+    }));
+});
+
 
 function finalizeMetadata (isLite, content) {
   var s = _.template(content);
@@ -158,4 +173,3 @@ function finalizeMetadata (isLite, content) {
   ];
   return s.join('');
 }
-

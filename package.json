@@ -16,6 +16,8 @@
     "gulp-rename": "",
     "gulp-strip-comments": "",
     "gulp-remove-empty-lines": "",
+    "gulp-mocha": "",
+    "gulp-blanket-mocha": "",
     "blanket": "",
     "chai": "",
     "connect": "",
@@ -29,7 +31,7 @@
   },
   "scripts": {
     "build": "gulp",
-    "test": "gulp test",
+    "test": "node --harmony-proxies ./node_modules/gulp-cli/bin/gulp test",
     "deploy": "gulp deploy",
     "mirror": "gulp mirror"
   }
