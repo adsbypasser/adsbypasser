@@ -7,11 +7,17 @@
     "url": "https://github.com/adsbypasser/adsbypasser.git"
   },
   "devDependencies": {
-    "grunt": "",
-    "grunt-cli": "",
-    "grunt-contrib-concat": "",
-    "grunt-contrib-clean": "",
-    "grunt-mocha-test": "",
+    "gulp": "",
+    "gulp-cli": "",
+    "vinyl-paths": "",
+    "del": "",
+    "gulp-concat": "",
+    "gulp-change": "",
+    "gulp-rename": "",
+    "gulp-strip-comments": "",
+    "gulp-remove-empty-lines": "",
+    "gulp-mocha": "",
+    "gulp-blanket-mocha": "",
     "blanket": "",
     "chai": "",
     "connect": "",
@@ -24,9 +30,9 @@
     "wintersmith-less": ""
   },
   "scripts": {
-    "build": "./node_modules/.bin/grunt",
-    "test": "node --harmony-proxies ./node_modules/grunt-cli/bin/grunt test",
-    "deploy": "./node_modules/.bin/grunt deploy",
-    "mirror": "./node_modules/.bin/grunt mirror"
+    "build": "gulp",
+    "test": "node --harmony-proxies ./node_modules/gulp-cli/bin/gulp test",
+    "deploy": "gulp deploy",
+    "mirror": "gulp mirror"
   }
 }
