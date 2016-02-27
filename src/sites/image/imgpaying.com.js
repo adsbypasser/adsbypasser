@@ -80,7 +80,7 @@
   $.register({
     rule: {
       host: [
-        /^img(paying|mega|zeus|monkey|trex|ve)\.com$/,
+        /^img(paying|mega|zeus|monkey|trex|ve|dew)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^img(click|maid)\.net$/,
         /^(uploadrr|imageeer|imzdrop|www\.uimgshare)\.com$/,
