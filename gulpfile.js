@@ -156,12 +156,12 @@ gulp.task('test', () => {
     .pipe(plugins.mocha({
       reporter: 'spec',
     }))
-    .pipe(plugins.blanketMocha({
-      instrument: ['tests/coverage.js'],
-      captureFile: 'dest/coverage.html',
-      quiet: true,
-      reporter: 'html-cov',
-    }));
+    // .pipe(plugins.blanketMocha({
+    //   instrument: ['tests/coverage.js'],
+    //   captureFile: 'dest/coverage.html',
+    //   quiet: true,
+    //   reporter: 'html-cov',
+    // }));
 });
 
 gulp.task('deploy', ['sanity', 'default', 'summary', 'clone', 'copy:summary', 'copy:compiled', 'wintersmith', 'clean:wintersmith']);
