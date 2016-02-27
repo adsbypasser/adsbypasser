@@ -5,8 +5,9 @@ $.register({
       /^(imagedomino|lovechix)\.com$/,
       /^imageporn\.eu$/,
       /^0img\.net$/,
+      /^daily-img\.com$/,
     ],
-    query: /^\?(p|v)=/,
+    query: /^\?[pv]=/,
   },
   ready: function () {
     'use strict';
