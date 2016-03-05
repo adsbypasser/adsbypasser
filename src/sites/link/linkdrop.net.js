@@ -5,11 +5,12 @@ $.register({
   ready: function () {
     'use strict';
 
-    var matches = $.searchScripts(/\$\("a\.redirect"\)\.attr\("href","([^"]+)"\)\.text\("Continue"\);/);
+    $.removeNodes('iframe');
 
+    var matches = $.searchScripts(/\$\("a\.redirect"\)\.attr\("href","([^"]+)"\)\.text/);
     // Most likely not on a shortening page
     if (!matches) {
-        return;
+      return;
     }
 
     var l = matches[1];

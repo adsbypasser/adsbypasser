@@ -182,6 +182,25 @@
     },
   });
 
+  $.register({
+    rule: {
+      host: /^imgking\.co$/,
+      path: /^\/img3-.*\.html/,
+    },
+    ready: function () {
+      var url = $.window.linkid;
+      $.openImage(url);
+    },
+  });
+
+  $.register({
+    rule: {
+      host: /^imgking\.co$/,
+      path: /^\/img4-.*\.html/,
+    },
+    ready: ready,
+  });
+
 })();
 
 // ex: ts=2 sts=2 sw=2 et

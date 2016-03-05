@@ -1,13 +1,14 @@
 $.register({
-    rule: {
-          host: /^(www\.)?pixroute\.com$/
-    },
-    ready: function () {
-        'use strict';
+  rule: {
+    host: /^(www\.)?pixroute\.com$/
+  },
+  ready: function () {
+    'use strict';
 
-        var o = $('body > center > div > center:nth-child(12) > div > a > img');
-        $.openImage(o.src);
-    },
+    // the img ID is a random string
+    var o = $('.fr4me > div:nth-child(20) > a:nth-child(1) > img:nth-child(1)');
+    $.openImage(o.src);
+  },
 });
 
 // ex: ts=2 sts=2 sw=2 et
