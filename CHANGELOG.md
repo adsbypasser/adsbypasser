@@ -1,3 +1,28 @@
+## TBA
+
+* fixed
+    * img-365.com
+    * daily-img.com
+    * picturescream.com
+    * picturevip.com
+    * linkdrop.net
+    * pixroute.com
+    * imgking.co
+    * linksas.us
+* added
+    * pop-img.info
+    * ads-img.info
+    * xxxsparrow.com
+    * imgdew.com
+    * zatnawqy.net
+    * imgoutlet.com
+    * muucih.com
+    * ysf.pl
+    * srnk.co
+    * rumahsimpel.com
+* changed
+    * rewrite grunt to gulp
+
 ## 5.48.0
 
 * fixed
