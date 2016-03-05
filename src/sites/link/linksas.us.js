@@ -46,6 +46,34 @@ $.register({
   },
 });
 
+$.register({
+  rule: {
+    host: /^linksas\.us$/,
+    path: /^\/go\//,
+  },
+  ready: function () {
+    'use strict';
+
+    var a = $.$('#btnSubmit');
+    if (!a) {
+      // recaptcha stage
+      return;
+    }
+
+    var url = a.href;
+    var pattern = /https?:\/\//g;
+    var lastURL = '';
+    while (true) {
+      var matched = pattern.exec(url);
+      if (!matched) {
+        break;
+      }
+      lastURL = matched + url.substring(pattern.lastIndex);
+    }
+    $.openLink(lastURL);
+  },
+});
+
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
 // kate: space-indent on; indent-width 2;
