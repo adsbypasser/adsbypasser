@@ -4,6 +4,7 @@ $.register({
       host: [
         /^(www\.)?sylnk\.net$/,
         /^dlneko\.(com|net|org)$/,
+        /^rumahsimpel\.com$/,
       ],
       query: /link=([^&]+)/,
     },
