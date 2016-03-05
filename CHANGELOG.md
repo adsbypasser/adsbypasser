@@ -1,4 +1,4 @@
-## TBA
+## 5.49.0
 
 * fixed
     * img-365.com
