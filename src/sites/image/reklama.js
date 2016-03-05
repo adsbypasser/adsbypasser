@@ -48,6 +48,7 @@
           /^nim(plus|zshare)\.com$/,
           /^nudeximg\.com$/,
           /imgseeds?\.com$/,
+          /xxxsparrow?\.com$/,
           /damimage\.com$/,
           /imagedecode\.com$/,
           // net
@@ -63,7 +64,7 @@
           /^(hotimages|55888)\.eu$/,
           /^img(cloud|mag)\.co$/,
           /^pixup\.us$/,
-          /^(bulkimg|photo-up|myimg)\.info$/,
+          /^(bulkimg|photo-up|myimg|pop-img|ads-img)\.info$/,
           /^img\.yt$/,
           /^vava\.in$/,
           /^(pixxx|picspornfree|imgload)\.me$/,
