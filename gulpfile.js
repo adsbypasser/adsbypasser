@@ -27,7 +27,15 @@ var pkg = require('./package.json');
 gulp.task('default', ['clean', 'meta', 'script', 'merge']);
 
 gulp.task('clean', () => {
-  return gulp.src(['dest/script'])
+  return gulp.src([
+    'dest/script',
+    'dest/adsbypasser.meta.js',
+    'dest/adsbypasser.user.js',
+    'dest/adsbypasserlite.meta.js',
+    'dest/adsbypasserlite.user.js',
+    'dest/coverage.html',
+    'dest/summary.md',
+  ])
     .pipe(plugins.vinylPaths(plugins.del));
 });
 

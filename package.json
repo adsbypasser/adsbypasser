@@ -31,6 +31,7 @@
   },
   "scripts": {
     "build": "gulp",
+    "clean": "gulp clean",
     "test": "node --harmony-proxies ./node_modules/gulp-cli/bin/gulp test",
     "deploy": "gulp deploy",
     "mirror": "gulp mirror"
