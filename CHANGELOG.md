@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * fix module execution order
+
 ## 5.49.0
 
 * fixed
