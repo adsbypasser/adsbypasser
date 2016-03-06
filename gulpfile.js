@@ -192,7 +192,7 @@ gulp.task('sanity', (done) => {
   });
 });
 
-gulp.task('summary', (done) => {
+gulp.task('summary', ['clean'], (done) => {
   var p = child_process.spawn('python2', ['-m', 'mirrors.summary'], {
     cwd: 'deploy',
   });
@@ -221,7 +221,7 @@ gulp.task('clone', (done) => {
   });
 });
 
-gulp.task('copy:summary', () => {
+gulp.task('copy:summary', ['summary'], () => {
   return gulp.src('dest/summary.md')
     .pipe(gulp.dest('deploy/ghpages/contents'));
 });
