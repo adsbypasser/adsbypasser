@@ -64,6 +64,7 @@ gulp.task('script:full', [
     'dest/script/image.js',
     'dest/script/file.js',
     'dest/script/paste.js',
+    'src/util/main.js',
   ])
     .pipe(plugins.concat('script.js'))
     .pipe(plugins.stripComments())
@@ -81,8 +82,6 @@ gulp.task('script:util', ['clean'], () => {
     'src/util/link.js',
     'src/util/misc.js',
     'src/util/config.js',
-    'src/util/image.js',
-    'src/util/main.js',
   ])
     .pipe(plugins.concat('util.js'))
     .pipe(gulp.dest('dest/script'));
@@ -95,7 +94,10 @@ gulp.task('script:link', ['clean'], () => {
 });
 
 gulp.task('script:image', ['clean'], () => {
-  return gulp.src('src/sites/image/*.js')
+  return gulp.src([
+    'src/util/image.js',
+    'src/sites/image/*.js',
+  ])
     .pipe(plugins.concat('image.js'))
     .pipe(gulp.dest('dest/script'));
 });
@@ -123,6 +125,7 @@ gulp.task('script:lite', [
     'dest/script/link.js',
     'dest/script/file.js',
     'dest/script/paste.js',
+    'src/util/main.js',
   ])
     .pipe(plugins.concat('scriptlite.js'))
     .pipe(plugins.stripComments())
