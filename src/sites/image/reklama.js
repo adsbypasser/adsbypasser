@@ -55,7 +55,7 @@
           /^img(serve|coin|fap|candy|master|-view|run|boom|project|python)\.net$/,
           /^(gallerycloud|imagelaser|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
           // org
-          /^shotimg\.org$/,
+          /^(shot|adult)img\.org$/,
           /^img(studio|spot)\.org$/,
           /^image(\.adlock|on|team)\.org$/,
           /^(drag|teen|mega)image\.org$/,
