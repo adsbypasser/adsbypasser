@@ -1,3 +1,8 @@
+## 5.49.1
+
+* fixed
+    * fix module execution order
+
 ## 5.49.0
 
 * fixed

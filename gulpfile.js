@@ -27,7 +27,15 @@ var pkg = require('./package.json');
 gulp.task('default', ['clean', 'meta', 'script', 'merge']);
 
 gulp.task('clean', () => {
-  return gulp.src(['dest/script'])
+  return gulp.src([
+    'dest/script',
+    'dest/adsbypasser.meta.js',
+    'dest/adsbypasser.user.js',
+    'dest/adsbypasserlite.meta.js',
+    'dest/adsbypasserlite.user.js',
+    'dest/coverage.html',
+    'dest/summary.md',
+  ])
     .pipe(plugins.vinylPaths(plugins.del));
 });
 
@@ -64,6 +72,7 @@ gulp.task('script:full', [
     'dest/script/image.js',
     'dest/script/file.js',
     'dest/script/paste.js',
+    'src/util/main.js',
   ])
     .pipe(plugins.concat('script.js'))
     .pipe(plugins.stripComments())
@@ -81,8 +90,6 @@ gulp.task('script:util', ['clean'], () => {
     'src/util/link.js',
     'src/util/misc.js',
     'src/util/config.js',
-    'src/util/image.js',
-    'src/util/main.js',
   ])
     .pipe(plugins.concat('util.js'))
     .pipe(gulp.dest('dest/script'));
@@ -95,7 +102,10 @@ gulp.task('script:link', ['clean'], () => {
 });
 
 gulp.task('script:image', ['clean'], () => {
-  return gulp.src('src/sites/image/*.js')
+  return gulp.src([
+    'src/util/image.js',
+    'src/sites/image/*.js',
+  ])
     .pipe(plugins.concat('image.js'))
     .pipe(gulp.dest('dest/script'));
 });
@@ -123,6 +133,7 @@ gulp.task('script:lite', [
     'dest/script/link.js',
     'dest/script/file.js',
     'dest/script/paste.js',
+    'src/util/main.js',
   ])
     .pipe(plugins.concat('scriptlite.js'))
     .pipe(plugins.stripComments())
@@ -181,7 +192,7 @@ gulp.task('sanity', (done) => {
   });
 });
 
-gulp.task('summary', (done) => {
+gulp.task('summary', ['clean'], (done) => {
   var p = child_process.spawn('python2', ['-m', 'mirrors.summary'], {
     cwd: 'deploy',
   });
@@ -210,7 +221,7 @@ gulp.task('clone', (done) => {
   });
 });
 
-gulp.task('copy:summary', () => {
+gulp.task('copy:summary', ['summary'], () => {
   return gulp.src('dest/summary.md')
     .pipe(gulp.dest('deploy/ghpages/contents'));
 });

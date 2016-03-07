@@ -1,6 +1,6 @@
 {
   "name": "adsbypasser",
-  "version": "5.49.0",
+  "version": "5.49.1",
   "license": "BSD",
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
   },
   "scripts": {
     "build": "gulp",
+    "clean": "gulp clean",
     "test": "node --harmony-proxies ./node_modules/gulp-cli/bin/gulp test",
     "deploy": "gulp deploy",
     "mirror": "gulp mirror"
