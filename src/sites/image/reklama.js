@@ -27,7 +27,7 @@
         host: [
           // com
           // starts with image
-          /^image(ontime|corn|picsa)\.com$/,
+          /^image(ontime|corn|picsa|horse)\.com$/,
           // ends with image
           /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy)image\.com$/,
           // starts with img
