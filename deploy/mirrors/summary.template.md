@@ -8,10 +8,9 @@ This user script helps you
 {edition}
 
 Any feature request or bug report is welcome. (either in English, 中文 or 日本語)
-The source repository is on [GitHub]. You could use GitHub to report issues or
-send pull requests, if you have an account.
+You could use [GitHub] to report issues or send pull requests.
 
-You can configure some function in [this page][1], please see [here][5] if you
+You could configure some function in [this page][1], please see [here][5] if you
 need more information.
 
 # Supported Platforms
