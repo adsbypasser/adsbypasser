@@ -1,14 +1,20 @@
 $.register({
-  rule:{
-    host:/^openload\.co$/,
-    path:/^\/f\/.*/
+  rule: {
+    host: /^openload\.co$/,
+    path: /^\/f\/.*/,
   },
-  start:function(m){
-    $.window.adblock=false;
-    $.window.adblock2=false;
+  start: function (m) {
+    $.window.adblock = false;
+    $.window.adblock2 = false;
   },
-  ready:function(){
-  if($('#realdl>a').href)
-    $.openLink($('#realdl>a').href);
+  ready: function () {
+    var a = $('#realdl>a');
+    if (a.href) {
+      $.openLink(a.href);
+    }
   }
 });
+
+// ex: ts=2 sts=2 sw=2 et
+// sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
+// kate: space-indent on; indent-width 2;
