@@ -1,3 +1,10 @@
+## TBA
+
+* fixed
+    * beeimg.com
+    * hotimage.uk
+    * adf.ly
+
 ## 5.49.1
 
 * fixed
