@@ -32,7 +32,7 @@
 
       // generic pattern
       function () {
-        var h = $.$('html[id="adfly_html"]');
+        var h = $.$('html[id="main_html"]');
         var b = $.$('body[id="home"]');
         if (h && b) {
           return true;
@@ -49,7 +49,7 @@
     },
     ready: function () {
       // check if this is ad page
-      var h = $.$('#adfly_html'), b = $.$('#home');
+      var h = $.$('#main_html'), b = $.$('#home');
       if (!h || !b || h.nodeName !== 'HTML' || b.nodeName !== 'BODY') {
         // this is not a ad page
         return;

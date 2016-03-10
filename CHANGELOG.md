@@ -1,3 +1,10 @@
+## 5.49.2
+
+* fixed
+    * beeimg.com
+    * hotimage.uk
+    * adf.ly
+
 ## 5.49.1
 
 * fixed

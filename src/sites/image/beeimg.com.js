@@ -1,7 +1,7 @@
 $.register({
   rule: {
     host: /^beeimg\.com$/,
-    path: /\/view\/.*/
+    path: /\/view\/.*/,
   },
   ready: function () {
     'use strict';
