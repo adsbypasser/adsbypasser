@@ -1,4 +1,4 @@
-## TBA
+## 5.49.2
 
 * fixed
     * beeimg.com
