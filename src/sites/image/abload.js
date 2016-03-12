@@ -8,7 +8,7 @@
 
   $.register({
     rule: {
-      host: /^www\.imagepearl\.com$/,
+      host: [/^www\.imagepearl\.com$/, /^imagepearl\.com$/],
       path: /^\/verify\/(.+)$/,
     },
     start: function (m) {
@@ -23,6 +23,8 @@
       'http://*.abload.de/image.php?img=*',
       'http://www.imageup.ru/*/*/*.html',
       'http://itmages.ru/image/view/*/*',  // different layout same handler
+      'http://imagepearl.com/view/*',  // different layout same handler
+      'http://imagepearl.com/image/*',  // different layout same handler
       'http://www.imagepearl.com/view/*',  // different layout same handler
       'http://www.imagepearl.com/image/*',  // different layout same handler
     ],
