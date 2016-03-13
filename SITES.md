@@ -65,6 +65,7 @@
     * 18pron.ru
     * 24avarii.ru
     * ads-img.info
+    * adultimg.org
     * bokimage.com
     * bulkimg.info
     * croftimage.com
@@ -88,6 +89,7 @@
     * imagecorn.com
     * imagedecode.com
     * imagefolks.com
+    * imagehorse.com
     * imagelaser.net
     * imageon.org
     * imageontime.com
@@ -118,6 +120,7 @@
     * imgfap.net
     * imghere.net
     * imghit.com
+    * imgicy.com
     * imgkicks.com
     * imgking.co
     * imglemon.com
@@ -159,6 +162,7 @@
     * pic2pic.site
     * picspornfree.me
     * picstwist.com
+    * picture-bang.net
     * pix-link.net
     * pixup.us
     * pixxx.me
@@ -404,11 +408,13 @@
     * imgsee.me
     * imgtiger.org
     * imgtown.net
+    * imguniversal.com
     * imgve.com
     * imgview.net
     * imgzeus.com
     * imzdrop.com
     * myimg.club
+    * pic-maniac.com
     * uimgshare.com
     * uploadrr.com
 * imgsure.com
@@ -546,6 +552,7 @@
     * embedupload.com
     * filoops.info
     * fit.sh
+    * fiuxy.net.js
     * forbes.com
     * fotolink.su
     * fotosik.pl
@@ -633,6 +640,7 @@
     * nutshellurl.com
     * ohleech.com
     * oni.vn
+    * openload.co
     * oxyl.me
     * p.pw
     * pasted.co
