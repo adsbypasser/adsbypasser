@@ -83,7 +83,7 @@
         /^img(universal|paying|mega|zeus|monkey|trex|ve|dew|outlet)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^img(click|maid)\.net$/,
-        /^(uploadrr|imageeer|imzdrop|www\.uimgshare)\.com$/,
+        /^(uploadrr|imageeer|imzdrop|www\.uimgshare|pic-maniac)\.com$/,
         /^imgdrive\.co$/,
         /^cuteimg\.cc$/,
         /^img(tiger|gold)\.org$/,
