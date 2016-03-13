@@ -1,3 +1,17 @@
+## TBA
+
+* fixed
+    * imagepearl.com
+* added
+    * openload.co
+    * adultimg.org
+    * fiuxy.net
+    * imgicy.com
+    * imagehorse.com
+    * imguniversal.com
+    * picture-bang.net
+    * pic-maniac.com
+
 ## 5.49.2
 
 * fixed
