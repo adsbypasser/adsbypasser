@@ -196,7 +196,10 @@ gulp.task('summary', ['clean'], (done) => {
   var p = child_process.spawn('python2', ['-m', 'mirrors.summary'], {
     cwd: 'deploy',
   });
-  p.on('close', () => {
+  p.on('close', (code) => {
+    if (code !== 0) {
+      throw new Error('process error');
+    }
     done();
   });
   p.on('error', (error) => {
@@ -213,7 +216,10 @@ gulp.task('clone', (done) => {
   }
 
   var p = child_process.spawn('git', ['clone', data.ghpages.REPO, '-b', 'master', 'dest/adsbypasser']);
-  p.on('close', () => {
+  p.on('close', (code) => {
+    if (code !== 0) {
+      throw new Error('process error');
+    }
     done();
   });
   p.on('error', (error) => {
@@ -270,7 +276,10 @@ gulp.task('mirror', ['sanity', 'default', 'summary'], (done) => {
   var p = child_process.spawn('python2', ['-m', 'mirrors'], {
     cwd: 'deploy',
   });
-  p.on('close', () => {
+  p.on('close', (code) => {
+    if (code !== 0) {
+      throw new Error('process error');
+    }
     done();
   });
   p.on('error', (error) => {
