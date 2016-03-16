@@ -5,13 +5,10 @@
   $.register({
     rule: {
       host: /^www\.imagesnake\.com$/,
-      path: /^\/index\.php$/,
+      path: /^\/show\.php$/,
       query: /^\?/,
     },
-    ready: function () {
-      var a = $('#tablewraper a:nth-child(2)');
-      $.openImage(a.href);
-    },
+    ready: run,
   });
 
   // second stage
@@ -21,14 +18,14 @@
   }
   $.register({
     rule: {
-      host: /^www\.(imagesnake|freebunker|imgcarry)\.com$/,
+      host: /^www\.(freebunker|imgcarry)\.com$/,
       path: /^\/show\//,
     },
     ready: run,
   });
   $.register({
     rule: {
-      host: /^www\.imagefruit\.com$/,
+      host: /^www\.(imagesnake|imagefruit)\.com$/,
       path: /^\/(img|show)\/.+/,
     },
     ready: run,
