@@ -15,6 +15,7 @@
         /^imagevau\.eu$/,
         /^img\.deli\.sh$/,
         /^imgdream\.net$/,
+        /^img(dream|soo)\.net$/,
         /^imgsicily\.it$/,
         /^www\.imghere\.net$/,
       ],
