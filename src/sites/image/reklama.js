@@ -11,6 +11,8 @@
         node.removeAttribute('disabled');
         return _.wait(500);
       }).then(function () {
+        // tricky hack, some sites can not receive the click event without focus
+        node.focus();
         node.click();
       });
       return;
