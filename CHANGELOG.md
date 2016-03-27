@@ -1,3 +1,15 @@
+## TBA
+
+* fixed
+    * imagesnake.com
+    * susutin.com
+* added
+    * imgsoo.net
+    * imgwallet.com
+    * awaremmxv.com
+* removed
+    * imagepong.info
+
 ## 5.50.0
 
 * fixed
