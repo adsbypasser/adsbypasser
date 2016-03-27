@@ -54,6 +54,7 @@
     * imgdream.net
     * imgnip.com
     * imgsin.com
+    * imgsoo.net
     * loadsanook.com
     * miragepics.com
     * nixhelp.de
@@ -147,6 +148,7 @@
     * imgtwyti.com
     * imgtzar.com
     * imgult.com
+    * imgwallet.com
     * imgwet.com (captcha)
     * imgxyz.net
     * lexiit.com
@@ -424,6 +426,7 @@
     * firedrive.com
     * putlocker.com
 * mantap.in
+    * awaremmxv.com
     * mantap.in
     * manteb.in
     * mantep.in
