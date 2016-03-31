@@ -2,7 +2,7 @@
   'use strict';
 
   function ready () {
-    $.removeNodes('iframe, #adblock_detect');
+    $.removeNodes('iframe, #adblock_detect, .popupOverlay');
 
     var node = $.$('#continuetoimage > form input');
     if (node) {
