@@ -44,8 +44,7 @@ def exec_(config, edition, another_edition, script):
     cookies = {
         'connect.sid': urllib.unquote(cookies['connect.sid']),
     }
-    # somehow the SSL verification will fail
-    r = requests.post(SCRIPT_URL, cookies=cookies, verify=False, data={
+    r = requests.post(SCRIPT_URL, cookies=cookies, verify=True, data={
         'source': script.encode('utf-8'),
         'url': URL_PARAM,
     })
