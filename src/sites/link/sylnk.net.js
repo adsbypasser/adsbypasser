@@ -1,3 +1,5 @@
+// all blog type belong here?
+
 $.register({
   rule: [
     {
@@ -24,7 +26,10 @@ $.register({
       query: /^\?url=([a-zA-Z0-9=]+)$/,
     },
     {
-      host: /^(gadget|auto)14\.pw$/,
+      host: [
+        /^(gadget|auto)14\.pw$/,
+        /^nar-04\.tk$/,
+      ],
       query: /^\?d=([a-zA-Z0-9=]+)$/,
     },
   ],
