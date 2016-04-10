@@ -1,3 +1,21 @@
+## TBA
+
+* fixed
+    * imgnova.xyz
+    * imgseeds.com
+    * imgoutlet.com
+    * shink.in
+* added
+    * img-pop.info
+    * imgnm.net
+    * gadget14.pw
+    * auto14.pw
+    * fapat.me
+    * nar-04.tk
+    * spaste.com
+    * leechpremium.space
+    * naisho.lompat.in
+
 ## 5.51.0
 
 * fixed
