@@ -69,7 +69,7 @@
           /^(bulkimg|photo-up|myimg|pop-img|img-pop|ads-img)\.info$/,
           /^img\.yt$/,
           /^vava\.in$/,
-          /^(pixxx|picspornfree|imgload)\.me$/,
+          /^(pixxx|picspornfree|imgload|fapat)\.me$/,
           /^(porno-pirat|24avarii|loftlm|18pron)\.ru$/,
           /^www\.hotimage\.uk$/,
           /^imgease\.re$/,
