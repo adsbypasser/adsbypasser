@@ -80,7 +80,7 @@
   $.register({
     rule: {
       host: [
-        /^img(universal|paying|mega|zeus|monkey|trex|ve|dew|outlet)\.com$/,
+        /^img(universal|paying|mega|zeus|monkey|trex|ve|dew)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^img(click|maid)\.net$/,
         /^(uploadrr|imageeer|imzdrop|www\.uimgshare|pic-maniac)\.com$/,
@@ -103,7 +103,7 @@
     rule: {
       host: [
         /^img(rock|town)\.net$/,
-        /^imgmaze\.com$/,
+        /^img(maze|outlet)\.com$/,
       ],
       path: pathRule,
     },
