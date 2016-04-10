@@ -49,13 +49,11 @@ def exec_(config, edition, another_edition, script):
         'url': URL_PARAM,
     })
 
-    # edit metadata
-    b.open(ABOUT_URL)
-    b.select_form(nr=0)
-    b.find_control('groups').readonly = False
-    b['about'] = summary.encode('utf-8')
-    b['groups'] = 'ads'
-    b.submit()
+    # fuck the WYSIWYG editor
+    r = requests.post(ABOUT_URL, cookies=cookies, verify=True, data={
+        'about': summary.encode('utf-8'),
+        'groups': 'ads',
+    })
 
 
 # ex: ts=4 sts=4 sw=4 et
