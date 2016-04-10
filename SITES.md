@@ -53,6 +53,7 @@
     * imgcream.com
     * imgdream.net
     * imgnip.com
+    * imgnm.net
     * imgsin.com
     * imgsoo.net
     * loadsanook.com
@@ -76,6 +77,7 @@
     * dragimage.org
     * ericsony.com
     * erimge.com
+    * fapat.me
     * fapingpics.com
     * funimg.net
     * gallerycloud.net
@@ -98,6 +100,7 @@
     * imageteam.org
     * img-pay.com
     * img-planet.com
+    * img-pop.info
     * img-view.net
     * img-zone.com
     * img.spicyzilla.com
@@ -446,13 +449,17 @@
     * greenpiccs.com
     * qrrro.com
 * sylnk.net
+    * auto14.pw
     * compul.in
     * dlneko.com
     * dlneko.net
     * dlneko.org
+    * gadget14.pw
     * link.filmku.net
     * manteb.in
     * muucih.com
+    * naisho.lompat.in
+    * nar-04.tk
     * rumahsimpel.com
     * safelinkconverter2.com
     * safelinkreview.com
@@ -612,6 +619,7 @@
     * kingofshrink.com
     * larashare.com
     * leechbd.tk
+    * leechpremium.space
     * lienscash.com
     * link-protector.com
     * link.im
@@ -678,6 +686,7 @@
     * shorturl.rapeit.net
     * sht.io
     * similarsites.com
+    * spaste.com
     * srnk.co
     * stash-coins.com
     * streamingfrench.net
