@@ -24,7 +24,7 @@ $.register({
       query: /^\?url=([a-zA-Z0-9=]+)$/,
     },
     {
-      host: /^gadget14\.pw$/,
+      host: /^(gadget|auto)14\.pw$/,
       query: /^\?d=([a-zA-Z0-9=]+)$/,
     },
   ],
