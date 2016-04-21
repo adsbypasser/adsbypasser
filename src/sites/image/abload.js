@@ -19,6 +19,16 @@
   });
 
   $.register({
+    rule: {
+      host: /^www\.imageberyl\.com$/,
+      path: /^\/verify\/(.+)$/,
+    },
+    start: function (m) {
+      $.openLink('/view/' + m.path[1]);
+    },
+  });
+
+  $.register({
     rule: [
       'http://*.abload.de/image.php?img=*',
       'http://www.imageup.ru/*/*/*.html',
@@ -28,6 +38,10 @@
       {
         host: /^(www\.)?imagepearl\.com$/,
         path: /^\/(view|image)\//,
+      },
+      {
+        host: /^www\.imageberyl\.com$/,
+        path: /^\/view\//,
       },
     ],
     ready: run,
