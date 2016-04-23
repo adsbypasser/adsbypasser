@@ -78,6 +78,7 @@
           /^darpix\.ga$/,
           /^sxpics\.nl$/,
           /^darpix\.desi$/,
+          /^pic4you\.top$/,
         ],
         path: /^\/img-.*\.html/,
       },
