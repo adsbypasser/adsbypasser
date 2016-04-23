@@ -72,6 +72,7 @@
     * bulkimg.info
     * croftimage.com
     * damimage.com
+    * darpix.desi
     * darpix.ga
     * dimtus.com
     * dragimage.org
@@ -127,6 +128,7 @@
     * imgicy.com
     * imgkicks.com
     * imgking.co
+    * imgkings.com
     * imglemon.com
     * imgload.me
     * imgmag.co
@@ -134,6 +136,7 @@
     * imgmaster.net
     * imgnext.com
     * imgnimz.com
+    * imgplus.ru
     * imgproject.net
     * imgpu.com
     * imgpython.net
@@ -141,13 +144,14 @@
     * imgsavvy.com
     * imgseed.com
     * imgseeds.com
+    * imgsen.se
     * imgserve.net
     * imgslip.com
     * imgspot.org
     * imgstudio.org
     * imgtaxi.com
     * imgtornado.com
-    * imgtwyti.com
+    * imgtrial.com
     * imgtwyti.com
     * imgtzar.com
     * imgult.com
@@ -165,6 +169,7 @@
     * nudeximg.com
     * photo-up.info
     * pic2pic.site
+    * pic4you.top
     * picspornfree.me
     * picstwist.com
     * picture-bang.net
@@ -180,6 +185,7 @@
     * teenimage.org
     * teenshot.org
     * thumbnailus.com
+    * tinizo.com
     * vava.in
     * wpc8.com
     * xximg.net
@@ -230,6 +236,7 @@
 * abload
     * abload.de
     * fastpic.ru
+    * imageberyl.com
     * imagepearl.com
     * imageup.ru
     * itmages.ru
@@ -384,6 +391,7 @@
 * imagescream.com
     * all-poster.ru
     * anonpic.com
+    * bunnyforum.org
     * imagescream.com
     * picturescream.asia
     * picturescream.com
@@ -401,6 +409,7 @@
     * imageeer.com
     * imgclick.net
     * imgdew.com
+    * imgdiamond.com
     * imgdrive.co
     * imggold.org
     * imgmaid.net
@@ -567,6 +576,7 @@
     * fotolink.su
     * fotosik.pl
     * free-tv-video-online.info
+    * freeimgup.com
     * fundurl.com
     * funkyimg.com
     * gkurl.us
