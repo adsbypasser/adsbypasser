@@ -187,10 +187,16 @@
   });
 
   $.register({
-    rule: {
-      host: /^imgking\.co$/,
-      path: /^\/img3-.*\.html/,
-    },
+    rule: [
+      {
+        host: /^imgking\.co$/,
+        path: /^\/img3-.*\.html/,
+      },
+      {
+        host: /^imgkings\.com$/,
+        path: /^\/img-.*\.html/,
+      },
+    ],
     ready: function () {
       var url = $.window.linkid;
       $.openImage(url);
@@ -198,10 +204,16 @@
   });
 
   $.register({
-    rule: {
-      host: /^imgking\.co$/,
-      path: /^\/img4-.*\.html/,
-    },
+    rule: [
+      {
+        host: /^imgking\.co$/,
+        path: /^\/img4-.*\.html/,
+      },
+      {
+        host: /^imgkings\.com$/,
+        path: /^\/img2-.*\.html/,
+      },
+    ],
     ready: ready,
   });
 
