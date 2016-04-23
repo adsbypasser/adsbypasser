@@ -14,6 +14,7 @@
         // tricky hack, some sites can not receive the click event without focus
         node.focus();
         node.click();
+        node.click();
       });
       return;
     }

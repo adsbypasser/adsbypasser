@@ -6,7 +6,7 @@ $.register({
   ready: function () {
     'use strict';
 
-    var a = $('#linkZone a');
+    var a = $('[id^=linkZone] a');
     $.openLink(a.href);
   },
 });
