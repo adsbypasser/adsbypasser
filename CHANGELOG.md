@@ -1,3 +1,24 @@
+## TBA
+
+* fixed
+    * freebunker.com
+    * imgcarry.com
+    * imgcandy.net
+    * ysf.pl
+    * spaste.com
+* added
+    * bunnyforum.org
+    * imageberyl.com
+    * darpix.desi
+    * tinizo.com
+    * pic4you.top
+    * imgplus.ru
+    * imgkings.com
+    * imgdiamond.com
+    * freeimgup.com
+    * imgsen.se
+    * imgtrial.com
+
 ## 5.52.0
 
 * fixed
