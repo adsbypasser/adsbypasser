@@ -77,6 +77,7 @@
           /^pic2pic\.site$/,
           /^darpix\.ga$/,
           /^sxpics\.nl$/,
+          /^darpix\.desi$/,
         ],
         path: /^\/img-.*\.html/,
       },
