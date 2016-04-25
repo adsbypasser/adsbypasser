@@ -4,7 +4,7 @@
   // first stage
   $.register({
     rule: {
-      host: /^www\.(freebunker|imagesnake|imgcarry)\.com$/,
+      host: /^www\.(freebunker|imagesnake|imgcarry|imgshots)\.com$/,
       path: /^\/show\.php$/,
       query: /^\?/,
     },
