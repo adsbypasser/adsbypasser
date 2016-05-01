@@ -6,6 +6,13 @@
     $.openImage(i.src);
   }
 
+  function run2 () {
+    var i = $('#img_obj');
+    $.openImage(i.src, {
+      replace: true,
+    });
+  }
+
   $.register({
     rule: [
       {
@@ -32,6 +39,14 @@
       },
     ],
     ready: run,
+  });
+
+  $.register({
+    rule: {
+      host: /^www\.imgcarry\.com$/,
+      path: /^\/show\//,
+    },
+    ready: run2,
   });
 
 })();
