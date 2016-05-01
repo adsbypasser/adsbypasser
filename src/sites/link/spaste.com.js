@@ -1,13 +1,16 @@
 $.register({
   rule: {
     host: /^www\.spaste\.com$/,
-    path: /^\/go\/\w+$/,
+    path: /^\/go\/(\w+)$/,
   },
-  ready: function () {
+  start: function (m) {
     'use strict';
 
-    var a = $('[id^=linkZone] a');
-    $.openLink(a.href);
+    $.post('/site/getRedirectLink', {
+      code: m.path[1],
+    }).then(function (url) {
+      $.openLink(url);
+    });
   },
 });
 
