@@ -6,6 +6,7 @@ $.register({
       /^imageporn\.eu$/,
       /^0img\.net$/,
       /^daily-img\.com$/,
+      /^picangel\.in$/,
     ],
     query: /^\?[pv]=/,
   },
