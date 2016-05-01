@@ -5,6 +5,7 @@ $.register({
       /daily-img\.com$/,
       /img-365\.com$/,
       /^365-img\.com$/,
+      /^i\.hentai-ddl\.org$/,
     ],
     path: /^\/image\/.+$/,
   },
