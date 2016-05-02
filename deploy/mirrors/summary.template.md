@@ -5,6 +5,8 @@ This user script helps you
 * skip ads' count-down or continue page
 * block pop-up windows
 
+It **cannot** help you solve reCAPTCHA.
+
 {edition}
 
 Any feature request or bug report is welcome. (either in English, 中文 or 日本語)

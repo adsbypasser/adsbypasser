@@ -5,6 +5,8 @@ This user script helps you to
 * skip ads' count-down or continue pages
 * prevent windows popup
 
+It **cannot** help you solve reCAPTCHA.
+
 Forked from [RedirectionHelper] written by [SuYS].
 
 Please install from [home page][1].
