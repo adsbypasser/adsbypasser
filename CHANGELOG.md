@@ -1,5 +1,16 @@
 ## TBA
 
+* fixed
+    * imgcarry.com
+    * spaste.com
+    * imagepearl.com
+* added
+    * hentai-king.online
+    * naughtygate.net
+    * imageshots.com
+    * i.hentai-ddl.org
+    * picangel.in
+    * picstream.tv
 * removed
     * picstate.com.alsohe.com
 
