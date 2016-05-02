@@ -163,6 +163,7 @@
     * megaimage.org
     * myhotimage.com
     * myimg.info
+    * naughtygate.net
     * newimagepost.com
     * nimplus.com
     * nimzshare.com
@@ -301,7 +302,9 @@
 * imagesnake
     * freebunker.com
     * imagefruit.com
+    * imageshots.com
     * imagesnake.com
+    * imgcarry.com
 * imagetwist
     * imagecherry.com
     * imagenpic.com
@@ -341,6 +344,7 @@
     * imgsay.com
     * imgsense.com
     * imgsmile.com
+    * picangel.in
 * imgbabes
     * imgbabes.com
     * imgflare.com
@@ -495,6 +499,7 @@
     * 365-img.com
     * daily-img.com
     * dailyss.net
+    * i.hentai-ddl.org
     * img-365.com
 * adb.ug
     * adb.ug
@@ -510,6 +515,7 @@
     * link.animagz.org
 * imgnova.xyz
     * hentai-hot.xyz
+    * hentai-king.online
     * imgnova.xyz
 * else
     * 01.nl
@@ -671,7 +677,7 @@
     * picmoe.net
     * pics-money.ru
     * picshare.geenza.com
-    * picstate.com.alsohe.com
+    * picstream.tv
     * pimpandhost.com
     * pixhost.org
     * pixhub.eu
