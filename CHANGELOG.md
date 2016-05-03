@@ -1,4 +1,4 @@
-## TBA
+## 5.54.2
 
 * fixed
     * spaste.com
