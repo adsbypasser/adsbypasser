@@ -1,15 +1,18 @@
 $.register({
   rule: {
     host: /^www\.spaste\.com$/,
-    path: /^\/go\/(\w+)$/,
+    path: /^\/go\/\w+$/,
   },
-  start: function (m) {
+  ready: function () {
     'use strict';
 
-    $.post('/site/getRedirectLink', {
-      code: m.path[1],
-    }).then(function (url) {
-      $.openLink(url);
+    var id = $.searchScripts(/\{id:'(\d+)'\}/);
+    _.wait(2000).then(() => {
+      return $.post('/site/getRedirectLink', {
+        id: id,
+      }).then(function (url) {
+        $.openLink(url);
+      });
     });
   },
 });
