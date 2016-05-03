@@ -8,23 +8,13 @@
 
   $.register({
     rule: {
-      host: /^(www\.)?imagepearl\.com$/,
+      host: /^(www\.)?image(pearl|beryl)\.com$/,
       path: /^\/(verify|view)\/(.+)$/,
     },
     start: function (m) {
       $.openLink('/image/' + m.path[2], {
         referer: false,
       });
-    },
-  });
-
-  $.register({
-    rule: {
-      host: /^www\.imageberyl\.com$/,
-      path: /^\/verify\/(.+)$/,
-    },
-    start: function (m) {
-      $.openLink('/view/' + m.path[1]);
     },
   });
 
@@ -36,12 +26,8 @@
       'http://itmages.ru/image/view/*/*',
       // different layout same handler
       {
-        host: /^(www\.)?imagepearl\.com$/,
+        host: /^(www\.)?image(pearl|beryl)\.com$/,
         path: /^\/image\//,
-      },
-      {
-        host: /^www\.imageberyl\.com$/,
-        path: /^\/view\//,
       },
     ],
     ready: run,
