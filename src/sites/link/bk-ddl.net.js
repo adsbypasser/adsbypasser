@@ -21,6 +21,11 @@
         var a = $('.link a');
         return a.href;
       };
+    case 'gunting.in':
+      return function () {
+        var a = $('div.col-sm-6:nth-child(1) > center:nth-child(1) > a:nth-child(1)');
+        return a.href;
+      };
     default:
       return null;
     }
@@ -33,6 +38,7 @@
         /^link\.animagz\.org$/,
         /^coeg\.in$/,
         /^disingkat\.in$/,
+        /^gunting\.in$/,
       ],
       path: /^\/\w+$/,
     },
