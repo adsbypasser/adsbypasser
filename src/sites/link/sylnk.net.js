@@ -33,6 +33,11 @@ $.register({
       ],
       query: /^\?d=([a-zA-Z0-9=]+)$/,
     },
+    {
+      host: /^www\.anisubsia\.tk$/,
+      path: /^\/p\/link\.html$/,
+      query: /^\?url=([a-zA-Z0-9=]+)$/,
+    },
   ],
   start: function (m) {
     'use strict';
