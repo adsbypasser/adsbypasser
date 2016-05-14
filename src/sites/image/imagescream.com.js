@@ -14,6 +14,10 @@ $.register({
         /^uploadimage\.eu$/,
       ],
     },
+    {
+      host: /^postscreens\.info/,
+      path: /^\/.*/,
+    },
   ],
   ready: function () {
     'use strict';
