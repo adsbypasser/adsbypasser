@@ -1,3 +1,22 @@
+## TBA
+
+* fixed
+    * imgsay.com
+* added
+    * pic2pic.ru
+    * javtotal.com
+    * ehdwallpapers.org
+    * img4sharing.com
+    * postscreens.info
+    * imgsilo.net
+    * motosport.pw
+    * filmku.lompat.in
+    * imagebic.com
+    * gunting.in
+    * pixsense.net
+    * anisubsia.tk
+    * lindung.in
+
 ## 5.54.2
 
 * fixed
