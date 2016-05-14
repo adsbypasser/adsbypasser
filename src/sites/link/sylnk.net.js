@@ -30,6 +30,7 @@ $.register({
         /^(gadget|auto)14\.pw$/,
         /^motosport\.pw$/,
         /^nar-04\.tk$/,
+        /^lindung\.in$/,
       ],
       query: /^\?d=([a-zA-Z0-9=]+)$/,
     },
