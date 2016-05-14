@@ -99,6 +99,10 @@
         host: /^imgbb\.net$/,
         path: /^\/.-.+$/,
       },
+      {
+        host: /^cdn\.javtotal\.com$/,
+        path: /^\/img\/.+$/,
+      },
     ],
     ready: ready,
   });
