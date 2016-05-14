@@ -54,6 +54,7 @@
     * imgdream.net
     * imgnip.com
     * imgnm.net
+    * imgsilo.net
     * imgsin.com
     * imgsoo.net
     * loadsanook.com
@@ -108,6 +109,7 @@
     * img.yt
     * img22.com
     * img2share.com
+    * img4sharing.com
     * imgadult.com
     * imgban.com
     * imgbb.net
@@ -158,6 +160,7 @@
     * imgwallet.com
     * imgwet.com (captcha)
     * imgxyz.net
+    * javtotal.com
     * lexiit.com
     * loftlm.ru
     * megaimage.org
@@ -169,6 +172,7 @@
     * nimzshare.com
     * nudeximg.com
     * photo-up.info
+    * pic2pic.ru
     * pic2pic.site
     * pic4you.top
     * picspornfree.me
@@ -335,6 +339,7 @@
     * hostingfailov.com
 * imgfantasy
     * 0img.net
+    * imagebic.com
     * imagedomino.com
     * imageporn.eu
     * img.pornleech.com
@@ -400,6 +405,7 @@
     * picturescream.asia
     * picturescream.com
     * picturevip.com
+    * postscreens.info
     * uploadimage.eu
 * upan.so
     * upan.so
@@ -462,14 +468,18 @@
     * greenpiccs.com
     * qrrro.com
 * sylnk.net
+    * anisubsia.tk
     * auto14.pw
     * compul.in
     * dlneko.com
     * dlneko.net
     * dlneko.org
+    * filmku.lompat.in
     * gadget14.pw
+    * lindung.in
     * link.filmku.net
     * manteb.in
+    * motosport.pw
     * muucih.com
     * naisho.lompat.in
     * nar-04.tk
@@ -512,6 +522,7 @@
     * bk-ddl.net
     * coeg.in
     * disingkat.in
+    * gunting.in
     * link.animagz.org
 * imgnova.xyz
     * hentai-hot.xyz
@@ -574,6 +585,7 @@
     * dl-protect.com
     * dumppix.com
     * durl.me
+    * ehdwallpapers.org
     * embedupload.com
     * filoops.info
     * fit.sh
@@ -682,6 +694,7 @@
     * pixhost.org
     * pixhub.eu
     * pixroute.com
+    * pixsense.net
     * pornimagex.com
     * postimg.org
     * preview.rlu.ru
