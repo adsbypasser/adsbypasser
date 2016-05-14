@@ -28,6 +28,7 @@ $.register({
     {
       host: [
         /^(gadget|auto)14\.pw$/,
+        /^motosport\.pw$/,
         /^nar-04\.tk$/,
       ],
       query: /^\?d=([a-zA-Z0-9=]+)$/,
