@@ -38,7 +38,7 @@
           // starts with img-
           /^img-(zone|planet)\.com$/,
           // starts with www
-          /^www\.(imagefolks|img(blow|lemon))\.com$/,
+          /^www\.(img4sharing|imagefolks|img(blow|lemon))\.com$/,
           // starts with xxx
           /^xxx(\.pornprimehd|imagenow|screens)\.com$/,
           // else
@@ -98,6 +98,10 @@
       {
         host: /^imgbb\.net$/,
         path: /^\/.-.+$/,
+      },
+      {
+        host: /^cdn\.javtotal\.com$/,
+        path: /^\/img\/.+$/,
       },
     ],
     ready: ready,
