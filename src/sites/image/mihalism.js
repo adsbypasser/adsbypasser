@@ -14,7 +14,7 @@
         /^imagecurl\.(com|org)$/,
         /^imagevau\.eu$/,
         /^img\.deli\.sh$/,
-        /^img(dream|soo|nm)\.net$/,
+        /^img(dream|soo|nm|silo)\.net$/,
         /^imgsicily\.it$/,
         /^www\.imghere\.net$/,
       ],
