@@ -38,7 +38,8 @@
           // starts with img-
           /^img-(zone|planet)\.com$/,
           // starts with www
-          /^www\.(img4sharing|imagefolks|img(blow|lemon))\.com$/,
+          /^www\.img(blow|lemon|4sharing)\.com$/,
+          /^www\.imagefolks\.com$/,
           // starts with xxx
           /^xxx(\.pornprimehd|imagenow|screens)\.com$/,
           // else
