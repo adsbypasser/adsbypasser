@@ -58,7 +58,7 @@ $.register({
         /^ww3\.manteb\.in$/,
         /^link\.filmku\.net$/,
         /^www\.muucih\.com$/,
-        /^naisho\.lompat\.in$/,
+        /^(naisho|filmku)\.lompat\.in$/,
       ],
       query: /go=(\w+=*)/,
     },
