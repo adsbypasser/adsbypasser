@@ -21,6 +21,7 @@
         /^0img\.net$/,
         /^daily-img\.com$/,
         /^picangel\.in$/,
+        /^imagebic\.com$/,
       ],
       query: /^\?[pv]=/,
     },
