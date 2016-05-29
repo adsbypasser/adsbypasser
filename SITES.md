@@ -76,6 +76,7 @@
     * darpix.desi
     * darpix.ga
     * dimtus.com
+    * domaink.ru
     * dragimage.org
     * ericsony.com
     * erimge.com
@@ -115,6 +116,7 @@
     * imgbb.net
     * imgbeer.com
     * imgbinbou.com
+    * imgblank.com
     * imgblow.com
     * imgboom.net
     * imgcandy.net
@@ -142,6 +144,7 @@
     * imgproject.net
     * imgpu.com
     * imgpython.net
+    * imgrat.com
     * imgrun.net
     * imgsavvy.com
     * imgseed.com
@@ -224,6 +227,7 @@
     * holdthemoan.net
     * images.maxigame.by
     * imgurx.net
+    * imgz.pw
     * npicture.net
     * onlinepic.net
     * picfox.org
@@ -437,6 +441,7 @@
     * imgview.net
     * imgzeus.com
     * imzdrop.com
+    * ironimg.net
     * myimg.club
     * pic-maniac.com
     * uimgshare.com
@@ -471,11 +476,14 @@
     * anisubsia.tk
     * auto14.pw
     * compul.in
+    * designinghomey.com
     * dlneko.com
     * dlneko.net
     * dlneko.org
+    * edogawa.lon.pw
     * filmku.lompat.in
     * gadget14.pw
+    * getcomics.gq
     * lindung.in
     * link.filmku.net
     * manteb.in
@@ -518,16 +526,19 @@
 * link4ad.com
     * link4ad.com
     * linkajc.com
-* bk-ddl.net
-    * bk-ddl.net
+* coeg.in
     * coeg.in
     * disingkat.in
     * gunting.in
     * link.animagz.org
+    * sipkur.net
 * imgnova.xyz
     * hentai-hot.xyz
     * hentai-king.online
     * imgnova.xyz
+* ouo.io
+    * ouo.io
+    * ouo.press
 * else
     * 01.nl
     * 1be.biz
@@ -583,6 +594,7 @@
     * dikit.in
     * directupload.net
     * dl-protect.com
+    * dmus.in
     * dumppix.com
     * durl.me
     * ehdwallpapers.org
@@ -600,11 +612,13 @@
     * gkurl.us
     * go2.me
     * goimagehost.com
+    * goto.loncat.in
     * hentaimg.com
     * hostingpics.net
     * hotshorturl.com
     * ichan.org
     * ifotos.pl
+    * igg-games.com
     * ilix.in
     * ima.so
     * imadul.com
