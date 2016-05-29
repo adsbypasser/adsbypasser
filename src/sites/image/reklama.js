@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  function ready () {
+  function action (firstSelector, secondSelector) {
     $.removeNodes('iframe, #adblock_detect, .popupOverlay');
 
-    var node = $.$('#continuetoimage > form input');
+    var node = $.$(firstSelector);
     if (node) {
       // first pass
       _.wait(500).then(function () {
@@ -20,9 +20,11 @@
     }
 
     // second pass
-    var i = $('img[class^=centred]');
+    var i = $(secondSelector);
     $.openImage(i.src);
   }
+
+  var defaultAction = _.P(action, '#continuetoimage > form input', 'img[class^=centred]');
 
   $.register({
     rule: [
@@ -105,7 +107,15 @@
         path: /^\/img\/.+$/,
       },
     ],
-    ready: ready,
+    ready: defaultAction,
+  });
+
+  $.register({
+    rule: {
+      host: /^imgrat\.com$/,
+      path: /^\/img-.*\.html/,
+    },
+    ready: _.P(action, '#close', '#main_image img.center-block.img-responsive'),
   });
 
   // TODO need to refactor the cookie rule
@@ -221,7 +231,7 @@
         path: /^\/img2-.*\.html/,
       },
     ],
-    ready: ready,
+    ready: defaultAction,
   });
 
 })();
