@@ -65,6 +65,7 @@ $.register({
         /^link\.filmku\.net$/,
         /^www\.muucih\.com$/,
         /^(naisho|filmku)\.lompat\.in$/,
+        /^edogawa\.lon\.pw$/,
       ],
       query: /go=(\w+=*)/,
     },
