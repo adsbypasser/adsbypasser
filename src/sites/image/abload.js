@@ -9,12 +9,10 @@
   $.register({
     rule: {
       host: /^(www\.)?image(pearl|beryl)\.com$/,
-      path: /^\/(verify|view)\/(.+)$/,
+      path: /^\/verify\/(.+)$/,
     },
     start: function (m) {
-      $.openLink('/image/' + m.path[2], {
-        referer: false,
-      });
+      $.openLink('/view/' + m.path[1]);
     },
   });
 
@@ -27,7 +25,7 @@
       // different layout same handler
       {
         host: /^(www\.)?image(pearl|beryl)\.com$/,
-        path: /^\/image\//,
+        path: /^\/view\//,
       },
     ],
     ready: run,

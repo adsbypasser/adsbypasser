@@ -7,7 +7,7 @@ $.register({
     'use strict';
 
     var id = $.searchScripts(/\{id:'(\d+)'\}/);
-    _.wait(2000).then(function () {
+    _.wait(3000).then(function () {
       return $.post('/site/getRedirectLink', {
         id: id,
       }).then(function (url) {
