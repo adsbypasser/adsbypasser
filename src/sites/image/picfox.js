@@ -14,6 +14,7 @@ $.register({
     'http://pixsor.com/XXX/share-*.html',
     'http://holdthemoan.net/x/share-*.html',
     'http://imgurx.net/x/share-*.html',
+    'http://www.imgz.pw/share-*.html',
   ],
   ready: function () {
     'use strict';
