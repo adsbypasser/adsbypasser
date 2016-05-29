@@ -7,6 +7,7 @@ $.register({
         /^(www\.)?sylnk\.net$/,
         /^dlneko\.(com|net|org)$/,
         /^rumahsimpel\.com$/,
+        /^designinghomey\.com$/,
       ],
       query: /link=([^&]+)/,
     },
