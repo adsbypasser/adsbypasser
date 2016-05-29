@@ -130,6 +130,9 @@
   }
 
   function migrate (c) {
+    if (typeof c.version !== 'number' || c.version < 0) {
+      throw new _.AdsBypasserError('wrong config version: ' + c.version);
+    }
     while (c.version < PATCHES.length) {
       PATCHES[c.version](c);
       ++c.version;
