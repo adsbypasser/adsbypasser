@@ -55,6 +55,7 @@ $.register({
       host: [
         /^(www\.)?(link\.)?safelink(converter2?|s?review)\.com$/,
         /^susutin\.com$/,
+        /^getcomics\.gq$/,
       ],
       query: /id=(\w+=*)/,
     },
