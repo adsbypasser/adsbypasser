@@ -3,7 +3,9 @@
 
   function run () {
     var i = $('#img_obj');
-    $.openImage(i.src);
+    $.openImage(i.src, {
+      referer: true,
+    });
   }
 
   function run2 () {
