@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^(www\.)?ouo\.io$/,
+    host: /^(www\.)?ouo\.(io|press)$/,
     path: /^\/go\/\w+$/,
   },
   ready: function (m) {
