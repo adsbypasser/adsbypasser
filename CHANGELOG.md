@@ -12,7 +12,7 @@
     * domaink.ru
     * dmus.in
     * ironimg.net
-    * loncat.in
+    * goto.loncat.in
     * edogawa.lon.pw
     * ouo.press
     * designinghomey.com
