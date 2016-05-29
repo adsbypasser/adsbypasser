@@ -1,38 +1,32 @@
 (function () {
   'use strict';
-
   function run () {
     var i = $('#image');
     $.openImage(i.src);
   }
-
   $.register({
     rule: {
       host: /^(www\.)?image(pearl|beryl)\.com$/,
-      path: /^\/(verify|view)\/(.+)$/,
+      path: /^\/(verify|image)\/(.+)$/,
     },
     start: function (m) {
-      $.openLink('/image/' + m.path[2], {
+      $.openLink('/view/' + m.path[2], {
         referer: false,
       });
     },
   });
-
   $.register({
     rule: [
       'http://*.abload.de/image.php?img=*',
       'http://www.imageup.ru/*/*/*.html',
-      // different layout same handler
       'http://itmages.ru/image/view/*/*',
-      // different layout same handler
       {
         host: /^(www\.)?image(pearl|beryl)\.com$/,
-        path: /^\/image\//,
+        path: /^\/view\//,
       },
     ],
     ready: run,
   });
-
 })();
 
 // ex: ts=2 sts=2 sw=2 et
