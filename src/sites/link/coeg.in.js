@@ -3,7 +3,6 @@
 
   function hostMapper (host) {
     switch (host) {
-    case 'bk-ddl.net':
     case 'disingkat.in':
       return function () {
         var a = $('a.btn-block.redirect');
@@ -34,7 +33,6 @@
   $.register({
     rule: {
       host: [
-        /^bk-ddl\.net$/,
         /^link\.animagz\.org$/,
         /^coeg\.in$/,
         /^disingkat\.in$/,
