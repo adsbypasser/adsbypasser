@@ -50,6 +50,23 @@
     },
   });
 
+  $.register({
+    rule: {
+      host: /^sipkur\.net$/,
+      path: [
+        /^\/\w+$/,
+        /^\/menujulink\//,
+      ],
+    },
+    ready: function () {
+      var d = $('#testapk > div');
+      d = d.onclick.toString();
+      d = d.match(/window\.open\('([^']+)'/);
+
+      $.openLink(d[1]);
+    },
+  });
+
 })();
 
 // ex: ts=2 sts=2 sw=2 et
