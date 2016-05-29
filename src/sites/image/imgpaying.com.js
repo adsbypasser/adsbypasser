@@ -90,7 +90,7 @@
         /^myimg\.club$/,
         /^foxyimg\.link$/,
         /^hulkimge\.com$/,
-        /^coreimg\.net$/,
+        /^(core|iron)img\.net$/,
       ],
       path: pathRule,
     },
