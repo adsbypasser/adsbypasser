@@ -146,9 +146,11 @@
         return;
       }
 
+      _.wait(500).then(function () {
       var d = $('div[id^="imageviewi"] input[type="submit"][style=""]');
       d = d.parentNode;
       d.submit();
+      });
     },
   });
 
