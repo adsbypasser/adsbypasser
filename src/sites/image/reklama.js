@@ -92,6 +92,7 @@
           /^img(run|twyti)\.net$/,
           /^imgtwyti\.com$/,
           /^hentai-pop\.com$/,
+          /^jav-hentai\.host$/,
         ],
         path: /^\/[ti]\/img-.*\.html/,
       },
