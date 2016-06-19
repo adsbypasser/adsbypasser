@@ -83,7 +83,7 @@
       host: [
         /^img(universal|paying|mega|zeus|monkey|trex|ve|dew|diamond)\.com$/,
         /^(www\.)?imgsee\.me$/,
-        /^img(click|maid)\.net$/,
+        /^imgmaid\.net$/,
         /^(uploadrr|imageeer|imzdrop|www\.uimgshare|pic-maniac)\.com$/,
         /^imgdrive\.co$/,
         /^cuteimg\.cc$/,
@@ -134,6 +134,23 @@
     },
     ready: function (m) {
       helper(m.path[1], getNext2);
+    },
+  });
+
+  $.register({
+    rule: {
+      host: /^imgclick\.net$/,
+      path: pathRule,
+    },
+    ready: function () {
+      'use strict';
+      var f = $.$('#ddshow Form');
+      if (f) {
+        f.submit();
+        return;
+      }
+      var i = $('#dshow img');
+      $.openImage(i.src);
     },
   });
 
