@@ -91,8 +91,9 @@
         host: [
           /^img(run|twyti)\.net$/,
           /^imgtwyti\.com$/,
+          /^hentai-pop\.com$/,
         ],
-        path: /^\/t\/img-.*\.html/,
+        path: /^\/[ti]\/img-.*\.html/,
       },
       {
         host: /^imgking\.co$/,
