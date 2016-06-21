@@ -59,7 +59,7 @@
           /imagedecode\.com$/,
           // net
           /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics)\.net$/,
-          /^(naughtygate|gallerycloud|imagelaser|picture-bang|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
+          /^(imagesouls|naughtygate|gallerycloud|imagelaser|picture-bang|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
           // org
           /^(shot|adult)img\.org$/,
           /^img(studio|spot)\.org$/,
