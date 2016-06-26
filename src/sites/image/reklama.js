@@ -11,8 +11,10 @@
         node.removeAttribute('disabled');
         return _.wait(500);
       }).then(function () {
-        // tricky hack, some sites can not receive the click event without focus
+        // HACK some sites can not receive the click event without focus
         node.focus();
+        // HACK some sites needs to click multiple times
+        node.click();
         node.click();
         node.click();
       });
@@ -119,6 +121,18 @@
       path: /^\/img-.*\.html/,
     },
     ready: _.P(action, '#close', '#main_image img.center-block.img-responsive'),
+  });
+
+  $.register({
+    rule: {
+      host: /^imageporn\.eu$/,
+      path: /^\/img-.*\.html/,
+    },
+    start: function () {
+      // HACK break script injection
+      $.window.document.createElement = null;
+    },
+    ready: defaultAction,
   });
 
   // TODO need to refactor the cookie rule
