@@ -17,7 +17,6 @@
       host: [
         /^img(fantasy|leech|\.pornleech|smile|nemo|sense)\.com$/,
         /^(imagedomino|lovechix)\.com$/,
-        /^imageporn\.eu$/,
         /^0img\.net$/,
         /^daily-img\.com$/,
         /^picangel\.in$/,

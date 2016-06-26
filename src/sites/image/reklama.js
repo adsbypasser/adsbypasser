@@ -120,6 +120,18 @@
     ready: _.P(action, '#close', '#main_image img.center-block.img-responsive'),
   });
 
+  $.register({
+    rule: {
+      host: /^imageporn\.eu$/,
+      path: /^\/img-.*\.html/,
+    },
+    start: function () {
+      // HACK break script injection
+      $.window.document.createElement = null;
+    },
+    ready: defaultAction,
+  });
+
   // TODO need to refactor the cookie rule
   $.register({
     rule: {
