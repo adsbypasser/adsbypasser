@@ -1,3 +1,13 @@
+## TBA
+
+* fixed
+    * imgview.net
+    * imgclick.com
+    * adf.ly
+    * imageon.org
+    * bunnyforum.org
+    * imageporn.eu
+
 ## 5.56.0
 
 * fixed
