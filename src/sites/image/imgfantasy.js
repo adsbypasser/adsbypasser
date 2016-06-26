@@ -22,6 +22,7 @@
         /^daily-img\.com$/,
         /^picangel\.in$/,
         /^imagebic\.com$/,
+        /^bunnyforum\.org$/,
       ],
       query: /^\?[pv]=/,
     },
