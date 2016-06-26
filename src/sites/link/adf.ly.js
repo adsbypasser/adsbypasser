@@ -46,6 +46,8 @@
       // so we hack `document.write` to block CloudFlare's main script.
       // after this the inline script will fail, and leave DOM alone.
       $.window.document.write = _.nop;
+      // break anti-adblock script
+      $.window.btoa = _.nop;
     },
     ready: function () {
       // check if this is ad page
