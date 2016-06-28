@@ -45,7 +45,7 @@
           /^www\.img(blow|lemon|4sharing)\.com$/,
           /^www\.imagefolks\.com$/,
           // starts with xxx
-          /^xxx(\.pornprimehd|imagenow|screens)\.com$/,
+          /^xxx(imagenow|screens)\.com$/,
           // else
           /^(picstwist|ericsony|wpc8|uplimg|lexiit|thumbnailus|newimagepost|fapingpics|dimtus|tinizo)\.com$/,
           /^((i|hentai)\.)?imgslip\.com$/,
