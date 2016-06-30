@@ -7,7 +7,7 @@ $.register({
     'use strict';
 
     var url = atob(m.path[1]);
-    url = url.match(/\{sht-io\}(.+)$/);
+    url = url.match(/\{sht-io\}(.+)\{sht-io\}.*\{sht-io\}/);
     $.openLink(url[1]);
   },
 });
