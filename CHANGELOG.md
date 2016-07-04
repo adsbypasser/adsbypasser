@@ -1,4 +1,4 @@
-## TBA
+## 5.56.2
 
 * fixed
     * AJAX white list for TamperMonkey
