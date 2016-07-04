@@ -71,6 +71,20 @@
     },
   });
 
+  // empireload.com
+  $.register({
+    rule: {
+      host: /^dumppix\.com$/,
+      path: /^\/viewer\.php$/,
+      query: /file=([^&]+)/,
+    },
+    start: function (m) {
+      $.openImage('/images/' + m.query[1], {
+        referer: true,
+      });
+    },
+  });
+
 })();
 
 // ex: ts=2 sts=2 sw=2 et
