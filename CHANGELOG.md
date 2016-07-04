@@ -1,3 +1,11 @@
+## 5.56.2
+
+* fixed
+    * AJAX white list for TamperMonkey
+    * sht.io
+    * dumppix.com
+    * picstream.tv
+
 ## 5.56.1
 
 * fixed

@@ -41,6 +41,7 @@
     * zff.co
 * Mihalism Multi Host
     * 244pix.com
+    * dumppix.com
     * dwimg.com
     * empireload.com
     * funextra.hostzi.com
@@ -595,7 +596,6 @@
     * directupload.net
     * dl-protect.com
     * dmus.in
-    * dumppix.com
     * durl.me
     * ehdwallpapers.org
     * embedupload.com
