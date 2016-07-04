@@ -28,3 +28,4 @@
 <% } %>
 // @include        http://*
 // @include        https://*
+// @connect        *

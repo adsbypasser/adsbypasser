@@ -7,7 +7,8 @@ $.register({
     'use strict';
 
     var url = atob(m.path[1]);
-    url = url.match(/\{sht-io\}(.+)$/);
+    // the salt is like: XXX{sht-io}url{sht-io}{sht-io}standard
+    url = url.match(/\{sht-io\}(.+)\{sht-io\}.*\{sht-io\}/);
     $.openLink(url[1]);
   },
 });
