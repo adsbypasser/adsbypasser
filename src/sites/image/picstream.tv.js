@@ -6,7 +6,7 @@ $.register({
   ready: function () {
     'use strict';
 
-    var img = $('#view1 > div:nth-child(1) > a:nth-child(1) > img:nth-child(1)');
+    var img = $('#view1 > div:nth-child(1) > img:nth-child(1)');
     $.openImage(img.src);
   },
 });
