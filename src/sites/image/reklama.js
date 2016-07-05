@@ -95,6 +95,7 @@
           /^imgtwyti\.com$/,
           /^hentai-pop\.com$/,
           /^(jav|img)-hentai\.host$/,
+          /^hentai-king\.host$/,
           /^img-king\.xyz$/,
         ],
         path: /^\/[ti]\/img-.*\.html/,
