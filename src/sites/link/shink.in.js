@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^(www\.)?shink\.in$/,
+    host: [
+      /^(www\.)?shink\.in$/,
+      /^fas\.li$/,
+    ],
     path: /^\/\w+$/,
   },
   ready: function () {
@@ -32,14 +35,19 @@ $.register({
 
 $.register({
   rule: {
-    host: /^(www\.)?shink\.in$/,
+    host: [
+      /^(www\.)?shink\.in$/,
+      /^fas\.li$/,
+    ],
     path: /^\/go\/\w+$/,
   },
   ready: function () {
     'use strict';
 
     var a = $('#btn-main');
-    $.openLink(a.href);
+    var i = a.href.lastIndexOf('http');
+    a = a.href.substr(i);
+    $.openLink(a);
   },
 });
 
