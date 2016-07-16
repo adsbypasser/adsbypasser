@@ -19,12 +19,12 @@ $.register({
     {
       host: /^(www\.)?safelinkair\.com$/,
       path: /^\/code$/,
-      query: /(?:\?|&)link=([a-zA-Z0-9=]+)(?:$|&)/,
+      query: /(?:\?|&)link=([a-zA-Z0-9\/=]+)(?:$|&)/,
     },
     {
       host: /^link\.filmku\.net$/,
       path: /^\/p\/go\.html$/,
-      query: /^\?url=([a-zA-Z0-9=]+)$/,
+      query: /^\?url=([a-zA-Z0-9\/=]+)$/,
     },
     {
       host: [
@@ -33,12 +33,12 @@ $.register({
         /^nar-04\.tk$/,
         /^lindung\.in$/,
       ],
-      query: /^\?d=([a-zA-Z0-9=]+)$/,
+      query: /^\?d=([a-zA-Z0-9\/=]+)$/,
     },
     {
       host: /^www\.anisubsia\.tk$/,
       path: /^\/p\/link\.html$/,
-      query: /^\?url=([a-zA-Z0-9=]+)$/,
+      query: /^\?url=([a-zA-Z0-9\/=]+)$/,
     },
   ],
   start: function (m) {
