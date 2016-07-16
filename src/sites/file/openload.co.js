@@ -5,16 +5,16 @@ $.register({
   },
   start: function (m) {
     $.window.adblock = false;
-    $.window.adblock2 = false; 
-    $.window.popAdsLoaded = true; 
+    $.window.adblock2 = false;
+    $.window.popAdsLoaded = true;
   },
   ready: function () {
-    'use strict'; 
+    'use strict';
 
-    var timer = $('#downloadTimer');  
-    timer.style.display = 'none';     
+    var timer = $('#downloadTimer');
+    timer.style.display = 'none';
 
-    var dlCtn = $('#realdl'); 
+    var dlCtn = $('#realdl');
     dlCtn.style.display = 'inline-block';
 
     var dlBtn = $('a', dlCtn);
@@ -22,7 +22,7 @@ $.register({
 
     var videoCtn = $.$('.videocontainer');
 
-    if (videoCtn) {  
+    if (videoCtn) {
       var overlay = $('#videooverlay', videoCtn);
       overlay.click();
 
@@ -31,6 +31,8 @@ $.register({
       dlBtn.addEventListener('click', function (evt) {
         evt.preventDefault();
 
+        // TODO *iframe* hack is not normal
+        // please generalize in the future
         var iframe = document.createElement('iframe');
         iframe.src = dlBtn.href;
         document.body.appendChild(iframe);
@@ -39,7 +41,7 @@ $.register({
       _.info(_.T('{0} -> {1}')(window.location, dlBtn.href));
 
       dlBtn.click();
-    } else {  
+    } else {
       $.openLink(dlBtn.href);
     }
   }
