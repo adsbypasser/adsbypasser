@@ -35,6 +35,7 @@ $.register({
         /^motosport\.pw$/,
         /^nar-04\.tk$/,
         /^lindung\.in$/,
+        /^motonews\.club$/,
       ],
       query: /^\?d=([a-zA-Z0-9=]+)$/,
     },
