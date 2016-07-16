@@ -7,7 +7,6 @@ $.register({
         /^(www\.)?sylnk\.net$/,
         /^dlneko\.(com|net|org)$/,
         /^rumahsimpel\.com$/,
-        /^designinghomey\.com$/,
       ],
       query: /link=([^&]+)/,
     },
@@ -100,6 +99,19 @@ $.register({
 
     var l = 'http://' + m.path[1];
     $.openLink(l);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^designinghomey\.com$/,
+    query: /get=/,
+  },
+  ready: function () {
+    'use strict';
+
+    var s = $.searchScripts(/var a='([^']+)'/);
+    $.openLink(s[1]);
   },
 });
 
