@@ -22,9 +22,12 @@ $.register({
       query: /(?:\?|&)link=([a-zA-Z0-9=]+)(?:$|&)/,
     },
     {
-      host: /^link\.filmku\.net$/,
-      path: /^\/p\/go\.html$/,
-      query: /^\?url=([a-zA-Z0-9=]+)$/,
+      host: [
+        /^link\.filmku\.net$/,
+        /^www\.healthygress24\.ga$/,
+      ],
+      path: /^\/p\/(go|healty-lie)\.html$/,
+      query: /^\?url=([a-zA-Z0-9\/=]+)$/,
     },
     {
       host: [
