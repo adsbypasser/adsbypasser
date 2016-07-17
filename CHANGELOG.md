@@ -1,3 +1,38 @@
+## TBA
+
+* fixed
+    * 1dl.biz
+    * avenuexxx.com
+    * nar-04.tk
+* added
+    * hentai-pop.com
+    * cdn.javtotal.com
+    * jav-hentai.host
+    * img-king.xyz
+    * imagesouls.net
+    * xxx.porn0day.com
+    * img-hentai.host
+    * hentai-king.host
+    * imagecrest.com
+    * healthygress24.ga
+    * motonews.club
+    * designinghomey.com
+    * kurogaze.net
+    * lolinez.com
+    * fas.li
+    * elde.me
+    * nmac.to
+    * admy.link
+    * moesubs.com
+    * img-uploads.com
+    * imgreputa.com
+    * freephotohostin.com
+    * sports14.pw
+    * insurance1.tech
+    * imgzizi.xyz
+* removed
+    * pornprimehd.com
+
 ## 5.56.2
 
 * fixed
