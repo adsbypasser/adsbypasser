@@ -59,6 +59,7 @@
           /xxxsparrow?\.com$/,
           /damimage\.com$/,
           /imagedecode\.com$/,
+          /^www\.freephotohostin\.com$/,
           // net
           /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics)\.net$/,
           /^(imagesouls|naughtygate|gallerycloud|imagelaser|picture-bang|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
