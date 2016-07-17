@@ -38,7 +38,7 @@
           // ends with image
           /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy)image\.com$/,
           // starts with img
-          /^img(icy|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|-pay|nimz|binbou|2share|22|cover|hit|main|trial|blank)\.com$/,
+          /^img(icy|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|-pay|nimz|binbou|2share|22|cover|hit|main|trial|blank|-uploads)\.com$/,
           // starts with img-
           /^img-(zone|planet)\.com$/,
           // starts with www
