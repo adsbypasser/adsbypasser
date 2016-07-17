@@ -1,7 +1,6 @@
 $.register({
   rule: {
     host: /^avenuexxx\.com$/,
-    path: /^\/archives\//,
   },
   ready: function () {
     'use strict';

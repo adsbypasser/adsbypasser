@@ -7,7 +7,6 @@ $.register({
         /^(www\.)?sylnk\.net$/,
         /^dlneko\.(com|net|org)$/,
         /^rumahsimpel\.com$/,
-        /^designinghomey\.com$/,
       ],
       query: /link=([^&]+)/,
     },
@@ -19,7 +18,7 @@ $.register({
     {
       host: /^(www\.)?safelinkair\.com$/,
       path: /^\/code$/,
-      query: /(?:\?|&)link=([a-zA-Z0-9=]+)(?:$|&)/,
+      query: /(?:\?|&)link=([a-zA-Z0-9\/=]+)(?:$|&)/,
     },
     {
       host: [
@@ -37,12 +36,12 @@ $.register({
         /^lindung\.in$/,
         /^motonews\.club$/,
       ],
-      query: /^\?d=([a-zA-Z0-9=]+)$/,
+      query: /^\?d=([a-zA-Z0-9\/=]+)$/,
     },
     {
       host: /^www\.anisubsia\.tk$/,
       path: /^\/p\/link\.html$/,
-      query: /^\?url=([a-zA-Z0-9=]+)$/,
+      query: /^\?url=([a-zA-Z0-9\/=]+)$/,
     },
     {
       host: /^www\.insurance1\.tech$/,
@@ -108,6 +107,19 @@ $.register({
 
     var l = 'http://' + m.path[1];
     $.openLink(l);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^designinghomey\.com$/,
+    query: /get=/,
+  },
+  ready: function () {
+    'use strict';
+
+    var s = $.searchScripts(/var a='([^']+)'/);
+    $.openLink(s[1]);
   },
 });
 

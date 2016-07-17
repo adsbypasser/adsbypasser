@@ -6,11 +6,43 @@ $.register({
   start: function (m) {
     $.window.adblock = false;
     $.window.adblock2 = false;
+    $.window.popAdsLoaded = true;
   },
   ready: function () {
-    var a = $('#realdl>a');
-    if (a.href) {
-      $.openLink(a.href);
+    'use strict';
+
+    var timer = $('#downloadTimer');
+    timer.style.display = 'none';
+
+    var dlCtn = $('#realdl');
+    dlCtn.style.display = 'inline-block';
+
+    var dlBtn = $('a', dlCtn);
+    dlBtn.href = $.window.realdllink;
+
+    var videoCtn = $.$('.videocontainer');
+
+    if (videoCtn) {
+      var overlay = $('#videooverlay', videoCtn);
+      overlay.click();
+
+      // use iframe instead of $.openLink
+      // in order to not affect streaming
+      dlBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+
+        // TODO *iframe* hack is not normal
+        // please generalize in the future
+        var iframe = document.createElement('iframe');
+        iframe.src = dlBtn.href;
+        document.body.appendChild(iframe);
+      });
+
+      _.info(_.T('{0} -> {1}')(window.location, dlBtn.href));
+
+      dlBtn.click();
+    } else {
+      $.openLink(dlBtn.href);
     }
   }
 });

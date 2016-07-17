@@ -2,12 +2,12 @@ $.register({
   rule: [
     {
       host: /^1dl\.biz$/,
-      path: /^\/(\w)\.php$/,
-      query: /^\?([\d\/]+)$/,
+      path: /^\/\w\.php$/,
+      query: /^\?\w\/\d+$/,
     },
     {
       host: /^img\.1dl\.biz$/,
-      path: /^\/(\w)\.php$/,
+      path: /^\/\w\.php$/,
       query: /^\?\w\/([\d\/]+)$/,
     },
   ],
