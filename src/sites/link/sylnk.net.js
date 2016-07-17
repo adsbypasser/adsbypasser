@@ -44,6 +44,10 @@ $.register({
       path: /^\/p\/link\.html$/,
       query: /^\?url=([a-zA-Z0-9=]+)$/,
     },
+    {
+      host: /^www\.insurance1\.tech$/,
+      query: /^\?site=([a-zA-Z0-9\/=]+)/,
+    },
   ],
   start: function (m) {
     'use strict';
