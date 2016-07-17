@@ -31,7 +31,7 @@ $.register({
     },
     {
       host: [
-        /^(gadget|auto)14\.pw$/,
+        /^(gadget|auto|sports)14\.pw$/,
         /^motosport\.pw$/,
         /^nar-04\.tk$/,
         /^lindung\.in$/,
