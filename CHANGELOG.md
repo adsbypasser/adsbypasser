@@ -30,6 +30,7 @@
     * sports14.pw
     * insurance1.tech
     * imgzizi.xyz
+    * linkpaid.net
 * removed
     * pornprimehd.com
 
