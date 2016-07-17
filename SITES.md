@@ -41,6 +41,7 @@
     * zff.co
 * Mihalism Multi Host
     * 244pix.com
+    * cdn.javtotal.com
     * dumppix.com
     * dwimg.com
     * empireload.com
@@ -83,17 +84,21 @@
     * erimge.com
     * fapat.me
     * fapingpics.com
+    * freephotohostin.com
     * funimg.net
     * gallerycloud.net
     * goimg.xyz
     * goimge.com
     * golfpit.net
     * greasyimage.com
+    * hentai-king.host
+    * hentai-pop.com
     * hosturimage.com
     * hotimage.uk
     * hotimages.eu
     * image.adlock.org
     * imagecorn.com
+    * imagecrest.com
     * imagedecode.com
     * imagefolks.com
     * imagehorse.com
@@ -101,10 +106,14 @@
     * imageon.org
     * imageontime.com
     * imagepicsa.com
+    * imagesouls.net
     * imageteam.org
+    * img-hentai.host
+    * img-king.xyz
     * img-pay.com
     * img-planet.com
     * img-pop.info
+    * img-uploads.com
     * img-view.net
     * img-zone.com
     * img.spicyzilla.com
@@ -146,6 +155,7 @@
     * imgpu.com
     * imgpython.net
     * imgrat.com
+    * imgreputa.com
     * imgrun.net
     * imgsavvy.com
     * imgseed.com
@@ -164,6 +174,8 @@
     * imgwallet.com
     * imgwet.com (captcha)
     * imgxyz.net
+    * imgzizi.xyz
+    * jav-hentai.host
     * javtotal.com
     * lexiit.com
     * loftlm.ru
@@ -187,7 +199,6 @@
     * pixxx.me
     * pop-img.info
     * porno-pirat.ru
-    * pornprimehd.com
     * project-photo.net
     * shotimg.org
     * sxpics.nl
@@ -412,6 +423,7 @@
     * picturevip.com
     * postscreens.info
     * uploadimage.eu
+    * xxx.porn0day.com
 * upan.so
     * upan.so
     * gxp.so
@@ -485,9 +497,12 @@
     * filmku.lompat.in
     * gadget14.pw
     * getcomics.gq
+    * healthygress24.ga
+    * insurance1.tech
     * lindung.in
     * link.filmku.net
     * manteb.in
+    * motonews.club
     * motosport.pw
     * muucih.com
     * naisho.lompat.in
@@ -497,6 +512,7 @@
     * safelinkreview.com
     * safelinksreview.com
     * satuasia.com
+    * sports14.pw
     * srelink.com
     * susutin.com
     * sylnk.net
@@ -540,6 +556,9 @@
 * ouo.io
     * ouo.io
     * ouo.press
+* shink.in
+    * fas.li
+    * shink.in
 * else
     * 01.nl
     * 1be.biz
@@ -557,6 +576,7 @@
     * adjet.biz
     * adlock.org
     * adlot.us
+    * admy.link
     * ah-informatique.com
     * ah.pe
     * aka.gr
@@ -598,6 +618,7 @@
     * dmus.in
     * durl.me
     * ehdwallpapers.org
+    * elde.me
     * embedupload.com
     * filoops.info
     * fit.sh
@@ -659,6 +680,7 @@
     * jheberg.net
     * keptarolo.hu
     * kingofshrink.com
+    * kurogaze.net
     * larashare.com
     * leechbd.tk
     * leechpremium.space
@@ -671,11 +693,13 @@
     * linkarus.com
     * linkdecode.com
     * linkdrop.net
+    * linkpaid.net
     * linkplugapp.com
     * linksas.us
     * linkshrink.net
     * lix.in
     * lnk.in
+    * lolinez.com
     * loook.ga
     * lostpic.net
     * lovechix.com
@@ -684,10 +708,12 @@
     * mije.net
     * mirrorcreator.com
     * mirrorupload.net
+    * moesubs.com
     * mrjh.org
     * mt0.org
     * my-link.pro
     * mylinkgen.com
+    * nmac.to
     * noelshack.com
     * nsfw.in
     * nutshellurl.com
@@ -724,7 +750,6 @@
     * safeurl.eu
     * screenlist.ru
     * setlinks.us
-    * shink.in
     * shortskip.com
     * shorturl.rapeit.net
     * sht.io
