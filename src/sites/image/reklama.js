@@ -127,7 +127,10 @@
 
   $.register({
     rule: {
-      host: /^imageporn\.eu$/,
+      host: [
+        /^imageporn\.eu$/,
+        /^imgzizi\.xyz$/,
+      ],
       path: /^\/img-.*\.html/,
     },
     start: function () {
