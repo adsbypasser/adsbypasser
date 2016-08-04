@@ -24,7 +24,7 @@
     });
   }
 
-  var pathRule = /^\/([0-9a-z]+)(\.|\/|$)/;
+  var pathRule = /^\/([0-9a-zA-Z]+)(\.|\/|$)/;
 
   function go (id, pre, next) {
     $.openLink('', {
