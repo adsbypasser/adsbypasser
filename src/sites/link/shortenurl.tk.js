@@ -3,6 +3,7 @@ $.register({
     host: [
       /^(www\.)?shortenurl\.tk$/,
       /^(www\.)?pengaman\.link$/,
+      /^urlgo\.gs$/,
     ],
     path: /^\/\w+$/,
   },
