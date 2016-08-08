@@ -201,7 +201,7 @@
         /^(zpoz|ultry)\.net$/,
         /^(wwy|myam)\.me$/,
         /^ssl\.gs$/,
-        /^lin(c\.ml|k\.tl)$/,
+        /^linc\.ml$/,
         /^hit\.us$/,
         /^shortit\.in$/,
         /^(adbla|tl7)\.us$/,
