@@ -87,6 +87,7 @@
           /^darpix\.desi$/,
           /^pic4you\.top$/,
           /^imgsen\.se$/,
+          /^ipicture\.su$/
         ],
         path: /^\/img-.*\.html/,
       },
