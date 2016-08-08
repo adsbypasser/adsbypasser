@@ -24,6 +24,7 @@ $.register({
       host: [
         /^link\.filmku\.net$/,
         /^www\.healthygress24\.ga$/,
+        /^kombatch\.amankan\.link$/,
       ],
       path: /^\/p\/(go|healty-lie)\.html$/,
       query: /^\?url=([a-zA-Z0-9\/=]+)$/,
