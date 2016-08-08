@@ -1,3 +1,18 @@
+## TBA
+
+* fixed
+    * imgrock.net
+    * openload.co
+    * coeg.in
+    * link.tl
+* added
+    * uskip.me
+    * ipicture.su
+    * urlgo.gs
+    * amankan.link
+* removed
+    * linc.ml
+
 ## 5.57.0
 
 * fixed
