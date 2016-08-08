@@ -17,7 +17,7 @@
       };
     case 'coeg.in':
       return function () {
-        var a = $('.link a');
+        var a = $('.download-link a');
         return a.href;
       };
     case 'gunting.in':
