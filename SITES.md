@@ -175,6 +175,7 @@
     * imgwet.com (captcha)
     * imgxyz.net
     * imgzizi.xyz
+    * ipicture.su
     * jav-hentai.host
     * javtotal.com
     * lexiit.com
@@ -275,7 +276,6 @@
     * gx.si
     * hit.us
     * kazan.vc
-    * linc.ml
     * link.tl
     * linkcash.ml
     * miniurl.tk
@@ -482,10 +482,12 @@
 * shortenurl.tk
     * pengaman.link
     * shortenurl.tk
+    * urlgo.gs
 * qrrro.com
     * greenpiccs.com
     * qrrro.com
 * sylnk.net
+    * amankan.link
     * anisubsia.tk
     * auto14.pw
     * compul.in
@@ -775,6 +777,7 @@
     * urlinn.com
     * urlms.com
     * urlv2.com
+    * uskip.me
     * victly.com
     * vidto.me
     * viidii.info
