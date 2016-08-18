@@ -67,7 +67,7 @@
           /^(shot|adult)img\.org$/,
           /^img(studio|spot)\.org$/,
           /^image(\.adlock|on|team)\.org$/,
-          /^(drag|teen|mega)image\.org$/,
+          /^(voyeur|drag|teen|mega)image\.org$/,
           /^teenshot\.org$/,
           // else
           /^(hotimages|55888)\.eu$/,
