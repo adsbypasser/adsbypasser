@@ -114,8 +114,23 @@
         host: /^cdn\.javtotal\.com$/,
         path: /^\/img\/.+$/,
       },
+      {
+        host: /^imgtor\.pw$/,
+        path: /^\/img2\/.+$/,
+      },
     ],
     ready: defaultAction,
+  });
+
+  $.register({
+    rule: {
+        host: /^imgtor\.pw$/,
+        path: /^\/img\/.*$/,
+    },
+    start: function (m) {
+      var imageUrl = 'http://' + m.host[0] + m.path[0].replace("img","img2");
+      $.openLink(imageUrl);
+    },
   });
 
   $.register({
