@@ -103,7 +103,7 @@
   $.register({
     rule: {
       host: [
-        /^img(rock|town)\.net$/,
+        /^img(rock|town|view)\.net$/,
         /^img(maze|outlet)\.com$/,
       ],
       path: pathRule,
