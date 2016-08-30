@@ -48,6 +48,10 @@ $.register({
       host: /^www\.insurance1\.tech$/,
       query: /^\?site=([a-zA-Z0-9\/=]+)/,
     },
+    {
+      host: /^i\.gtaind\.com$/,
+      query: /^\?([a-zA-Z0-9\/=]+)$/,
+    },
   ],
   start: function (m) {
     'use strict';
