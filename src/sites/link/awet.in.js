@@ -4,6 +4,7 @@ $.register({
       /^(awet|sortir)\.in$/,
       /^st\.benfile\.com$/,
       /^st\.azhie\.net$/,
+      /^smll\.io$/,
     ],
   },
   ready: function () {
