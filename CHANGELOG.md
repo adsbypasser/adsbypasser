@@ -1,3 +1,33 @@
+## TBA
+
+* fixed
+    * 1be.biz
+    * motonews.club
+    * imgview.net
+* added
+    * playimg.com
+    * voyeurimage.org
+    * imgtor.pw
+    * zytpirwai.net
+    * shorten.id
+    * coinlink.co
+    * imagep2p.com
+    * gtaind.com
+    * comicon.com.br
+    * img3x.com
+    * adlink.guru
+    * picnictrans.com
+    * croco.me
+    * freeanimeonline.xyz
+    * imgcurl.com
+    * short.am
+    * smll.io
+* removed
+    * awet.in
+    * sortir.in
+    * st.benfile.com
+    * st.azhie.net
+
 ## 5.58.0
 
 * fixed
