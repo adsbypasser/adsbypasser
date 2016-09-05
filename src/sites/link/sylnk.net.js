@@ -120,7 +120,10 @@ $.register({
 
 $.register({
   rule: {
-    host: /^designinghomey\.com$/,
+    host: [
+      /^designinghomey\.com$/,
+      /^motonews\.club$/,
+    ],
     query: /get=/,
   },
   ready: function () {
