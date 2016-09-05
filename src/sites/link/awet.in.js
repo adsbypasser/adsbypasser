@@ -1,9 +1,6 @@
 $.register({
   rule: {
-    host: [
-      /^st\.azhie\.net$/,
-      /^smll\.io$/,
-    ],
+    host: /^smll\.io$/,
   },
   ready: function () {
     'use strict';
