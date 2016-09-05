@@ -1,7 +1,7 @@
 $.register({
   rule: {
     host: [
-      /^(awet|sortir)\.in$/,
+      /^sortir\.in$/,
       /^st\.benfile\.com$/,
       /^st\.azhie\.net$/,
       /^smll\.io$/,
