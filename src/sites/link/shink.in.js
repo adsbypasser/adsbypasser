@@ -3,6 +3,7 @@ $.register({
     host: [
       /^(www\.)?shink\.in$/,
       /^fas\.li$/,
+      /^croco\.me$/,
     ],
     path: /^\/\w+$/,
   },
@@ -34,13 +35,19 @@ $.register({
 });
 
 $.register({
-  rule: {
-    host: [
-      /^(www\.)?shink\.in$/,
-      /^fas\.li$/,
-    ],
-    path: /^\/go\/\w+$/,
-  },
+  rule: [
+    {
+      host: [
+        /^(www\.)?shink\.in$/,
+        /^fas\.li$/,
+      ],
+      path: /^\/go\/\w+$/,
+    },
+    {
+      host: /^croco\.me$/,
+      path: /^\/ok\/\w+$/,
+    },
+  ],
   ready: function () {
     'use strict';
 
