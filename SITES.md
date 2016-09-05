@@ -51,6 +51,7 @@
     * imagecurl.org
     * imagepong.info
     * imageview.me
+    * img3x.com
     * imgcentral.com
     * imgcream.com
     * imgdream.net
@@ -165,6 +166,7 @@
     * imgslip.com
     * imgspot.org
     * imgstudio.org
+    * imgtor.pw
     * imgtaxi.com
     * imgtornado.com
     * imgtrial.com
@@ -198,6 +200,7 @@
     * pix-link.net
     * pixup.us
     * pixxx.me
+    * playimg.com
     * pop-img.info
     * porno-pirat.ru
     * project-photo.net
@@ -208,6 +211,7 @@
     * thumbnailus.com
     * tinizo.com
     * vava.in
+    * voyeurimage.org
     * wpc8.com
     * xximg.net
     * xxximagenow.com
@@ -336,6 +340,7 @@
     * freeimgup.com
     * fullimg.com
     * ifap.co
+    * imagep2p.com
 * emptypix
     * emptypix.com
     * imageleon.com
@@ -359,6 +364,7 @@
     * imagedomino.com
     * imageporn.eu
     * img.pornleech.com
+    * imgcurl.com
     * imgfantasy.com
     * imgleech.com
     * imgnemo.com
@@ -497,8 +503,10 @@
     * dlneko.org
     * edogawa.lon.pw
     * filmku.lompat.in
+    * freeanimeonline.xyz
     * gadget14.pw
     * getcomics.gq
+    * gtaind.com
     * healthygress24.ga
     * insurance1.tech
     * lindung.in
@@ -525,10 +533,6 @@
 * segmentnext.com
     * segmentnext.com
     * videogameblogger.com
-* awet.in
-    * awet.in
-    * sortir.in
-    * st.azhie.net
 * gallerynova.se
     * gallerynova.se
     * gallerysense.se
@@ -559,8 +563,12 @@
     * ouo.io
     * ouo.press
 * shink.in
+    * croco.me
     * fas.li
     * shink.in
+* cuzle.com
+    * cuzle.com
+    * shorten.id
 * else
     * 01.nl
     * 1be.biz
@@ -576,6 +584,7 @@
     * adfe.es
     * adfoc.us
     * adjet.biz
+    * adlink.guru
     * adlock.org
     * adlot.us
     * admy.link
@@ -604,11 +613,12 @@
     * cli.gs
     * clictune.com
     * clk.im
+    * coinlink.co
+    * comicon.com.br
     * comyonet.com
     * coolrom.com
     * crd.ht
     * cubeupload.com
-    * cuzle.com
     * cvc.la
     * dapat.in
     * dd.ma
@@ -729,6 +739,7 @@
     * pic-upload.de
     * piccash.net
     * picmoe.net
+    * picnictrans.com
     * pics-money.ru
     * picshare.geenza.com
     * picstream.tv
@@ -752,10 +763,12 @@
     * safeurl.eu
     * screenlist.ru
     * setlinks.us
+    * short.am
     * shortskip.com
     * shorturl.rapeit.net
     * sht.io
     * similarsites.com
+    * smll.io
     * spaste.com
     * srnk.co
     * stash-coins.com
