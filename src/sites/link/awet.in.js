@@ -1,7 +1,6 @@
 $.register({
   rule: {
     host: [
-      /^st\.benfile\.com$/,
       /^st\.azhie\.net$/,
       /^smll\.io$/,
     ],
