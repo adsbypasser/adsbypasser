@@ -15,7 +15,7 @@
   $.register({
     rule: {
       host: [
-        /^img(fantasy|leech|\.pornleech|smile|nemo|sense)\.com$/,
+        /^img(fantasy|leech|\.pornleech|smile|nemo|sense|curl)\.com$/,
         /^(imagedomino|lovechix)\.com$/,
         /^0img\.net$/,
         /^daily-img\.com$/,
