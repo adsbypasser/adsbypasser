@@ -45,7 +45,10 @@ $.register({
       query: /^\?url=([a-zA-Z0-9\/=]+)$/,
     },
     {
-      host: /^www\.insurance1\.tech$/,
+      host: [
+        /^www\.insurance1\.tech$/,
+        /^www\.freeanimeonline\.xyz$/,
+      ],
       query: /^\?site=([a-zA-Z0-9\/=]+)/,
     },
     {
