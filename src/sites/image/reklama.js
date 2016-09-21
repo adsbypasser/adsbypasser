@@ -95,7 +95,7 @@
         host: [
           /^img(run|twyti)\.net$/,
           /^imgtwyti\.com$/,
-          /^hentai-pop\.com$/,
+          /^hentai-(pop|baka)\.com$/,
           /^(jav|img)-hentai\.host$/,
           /^hentai-king\.host$/,
           /^img-king\.xyz$/,
