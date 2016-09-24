@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^adlink\.guru$/,
+    host: [
+      /^adlink\.guru$/,
+      /^cypt\.ga$/,
+    ],
   },
   ready: function () {
     'use strict';
