@@ -138,6 +138,24 @@
   });
 
   $.register({
+    rule: {
+      host: /^imgfiles\.org$/,
+      path: pathRule,
+    },
+    ready: function (m) {
+      var i = $.$('img.pic');
+      if (i) {
+        // second stage
+        $.openImage(i.src);
+        return;
+      }
+
+      var f = $('form');
+      f.submit();
+    },
+  });
+
+  $.register({
     rule: 'http://imgview.net/tpind.php',
     ready: function () {
       var i = $.$('img.pic');
