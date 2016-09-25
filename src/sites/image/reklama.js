@@ -251,6 +251,10 @@
         host: /^imgkings\.com$/,
         path: /^\/img-.*\.html/,
       },
+      {
+        host: /^imagerar\.com$/,
+        path: /^\/img-/
+      }
     ],
     ready: function () {
       var url = $.window.linkid;
@@ -272,7 +276,23 @@
     ready: defaultAction,
   });
 
+  $.register({
+    rule: {
+      host: /^imagerar\.com$/,
+      path: /^\/img2-/
+    },
+    ready: function () {
+      var i = $('img[alt]');
+      if (i) {
+        $.openImage(i.src);
+      }
+    },
+  });
+
+
+
 })();
+
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
