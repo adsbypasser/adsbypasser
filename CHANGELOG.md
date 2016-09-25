@@ -1,4 +1,4 @@
-## TBA
+## 5.60.0
 
 * fixed
     * image scaling problem
