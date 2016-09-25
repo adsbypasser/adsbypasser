@@ -28,10 +28,19 @@
     // Create a link on the page
     var a = document.createElement('a');
     a.href = url;
+    a.addEventListener('click', function (event) {
+      event.stopPropagation();
+    });
 
     // Simulate a click on this link (so that the referer is sent)
     prepare(a);
     a.click();
+
+    // HACK keep clicking until it success
+    setInterval(function () {
+      _.warn('previous click does not work');
+      a.click();
+    }, 1000);
   }
 
 
