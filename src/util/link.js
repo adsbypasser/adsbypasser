@@ -28,6 +28,7 @@
     // Create a link on the page
     var a = document.createElement('a');
     a.href = url;
+    // Prevent event interfering
     a.addEventListener('click', function (event) {
       event.stopPropagation();
     });
@@ -36,7 +37,7 @@
     prepare(a);
     a.click();
 
-    // HACK keep clicking until it success
+    // HACK Keep clicking until it succeed
     setInterval(function () {
       _.warn('previous click does not work');
       a.click();
