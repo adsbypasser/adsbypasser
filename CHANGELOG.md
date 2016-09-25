@@ -1,3 +1,19 @@
+## TBA
+
+* fixed
+    * image scaling problem
+    * coinlink.co
+    * designinghomey.com
+    * trying to fix some redirection problems
+* added
+    * hentai-baka.com
+    * safelinkreviewer.com
+    * cypt.ga
+    * imgfiles.org
+    * cocoleech.com
+    * imagerar.com
+    * imgdragon.com
+
 ## 5.59.0
 
 * fixed
