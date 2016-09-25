@@ -173,6 +173,23 @@
     },
   });
 
+  $.register({
+    rule: /^http:\/\/imgdragon\.com\/(getfil\.php|dl)$/,
+    ready: function () {
+      var i = $.$('img.pic');
+      if (i) {
+        // second stage
+        $.openImage(i.src);
+        return;
+      }
+
+      _.wait(500).then(function () {
+        var f = $('#ContinueFRM');
+        f.submit();
+      });
+    },
+  });
+
 })();
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
