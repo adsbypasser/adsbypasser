@@ -28,36 +28,42 @@
       verify: function (v) {
         return typeof v === 'number' && v >= 0;
       },
+      normalize: toNumber,
     },
     {
       name: 'alignCenter',
       key: 'align_center',
       default_: true,
       verify: isBoolean,
+      normalize: toBoolean,
     },
     {
       name: 'changeBackground',
       key: 'change_background',
       default_: true,
       verify: isBoolean,
+      normalize: toBoolean,
     },
     {
       name: 'externalServerSupport',
       key: 'external_server_support',
       default_: false,
       verify: isBoolean,
+      normalize: toBoolean,
     },
     {
       name: 'redirectImage',
       key: 'redirect_image',
       default_: true,
       verify: isBoolean,
+      normalize: toBoolean,
     },
     {
       name: 'scaleImage',
       key: 'scale_image',
       default_: true,
       verify: isBoolean,
+      normalize: toBoolean,
     },
     {
       name: 'logLevel',
@@ -66,6 +72,7 @@
       verify: function (v) {
         return typeof v === 'number' && v >= 0 && v <= 2;
       },
+      normalize: toNumber,
     },
   ];
   var PATCHES = [
@@ -98,8 +105,16 @@
 
   var window = context.window;
 
-  function isBoolean(v) {
+  function isBoolean (v) {
     return typeof v === 'boolean';
+  }
+
+  function toBoolean (v) {
+    return !!v;
+  }
+
+  function toNumber (v) {
+    return parseInt(v, 10);
   }
 
   function createConfig () {
