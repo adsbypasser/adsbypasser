@@ -37,11 +37,10 @@
     prepare(a);
     a.click();
 
-    // HACK Keep clicking until it succeed
-    setInterval(function () {
+    // Warning if the page still not redirecting
+    _.wait(10 * 1000).then(function () {
       _.warn('previous click does not work');
-      a.click();
-    }, 1000);
+    });
   }
 
 
