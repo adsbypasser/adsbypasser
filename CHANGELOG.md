@@ -1,4 +1,4 @@
-## TBA
+## 5.60.1
 
 * fixed
     * remove redirecion hack
