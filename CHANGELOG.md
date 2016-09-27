@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * remove redirecion hack
+
 ## 5.60.0
 
 * fixed
