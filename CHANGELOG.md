@@ -1,4 +1,4 @@
-## TBA
+## 5.60.2
 
 * fixed
     * log configuration
