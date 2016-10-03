@@ -1,6 +1,8 @@
 (function () {
   'use strict';
 
+  var ajaxPattern = /\$.post\('([^']*)'[^{]+(\{\s*opt:\s*'make_log'[^}]+\}\s*\}),/i;
+
   // bc.vc, shortcut
   $.register({
     rule: {
@@ -20,6 +22,9 @@
       return script;
     }
     var matches = script.match(/eval(.*)/);
+    if (!matches) {
+      throw new _.AdsBypasserError('no script matches /eval(.*)/');
+    }
     matches = matches[1];
     script = eval(matches);
     return script;
@@ -44,7 +49,10 @@
   }
 
   function knockServer (script, dirtyFix) {
-    var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
+    var matches = script.match(ajaxPattern);
+    if (!matches) {
+      throw new _.AdsBypasserError('(in knock server) no script matches $.post');
+    }
     var make_url = matches[1];
     var make_opts = eval('(' + matches[2] + ')');
 
@@ -82,7 +90,10 @@
       }, 1000);
     };
 
-    var matches = script.match(/\$.post\('([^']*)'[^{]+(\{opt:'make_log'[^}]+\}\}),/i);
+    var matches = script.match(ajaxPattern);
+    if (!matches) {
+      throw new _.AdsBypasserError('(in knock server 2) no script matches $.post');
+    }
     var make_url = matches[1];
     // dummy varialbes for eval script
     var tZ, cW, cH, sW, sH;
