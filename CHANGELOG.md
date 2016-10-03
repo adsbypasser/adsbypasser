@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * log configuration
+    * bc.vc
+
 ## 5.60.1
 
 * fixed
