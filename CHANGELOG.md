@@ -1,4 +1,4 @@
-## TBA
+## 5.60.3
 
 * fixed
     * zytpirwai.net
