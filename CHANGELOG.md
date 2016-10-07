@@ -7,7 +7,7 @@
 ## 5.60.1
 
 * fixed
-    * remove redirecion hack
+    * remove redirection hack
 
 ## 5.60.0
 
