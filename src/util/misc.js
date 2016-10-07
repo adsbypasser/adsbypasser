@@ -30,6 +30,10 @@
     }
   };
 
+  $.nuke = function () {
+    document.write('nuked by AdsBypasser');
+  };
+
   $.generateRandomIP = function () {
     return [0,0,0,0].map(function () {
       return Math.floor(Math.random() * 256);
