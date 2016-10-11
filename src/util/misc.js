@@ -31,7 +31,11 @@
   };
 
   $.nuke = function () {
-    document.write('nuked by AdsBypasser');
+    try {
+      $.window.document.write('nuked by AdsBypasser');
+    } catch (e) {
+      _.warn('nuke failed', e);
+    }
   };
 
   $.generateRandomIP = function () {
@@ -145,6 +149,10 @@
         }
         // special hack for querySelector
         if (target === unsafeWindow.document.querySelector) {
+          self = self[MAGIC_KEY];
+        }
+        // special hack for write
+        if (target === unsafeWindow.document.write) {
           self = self[MAGIC_KEY];
         }
 
