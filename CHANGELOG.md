@@ -1,4 +1,4 @@
-## TBA
+## 5.60.4
 
 * fixed
     * page nuking on Firefox
