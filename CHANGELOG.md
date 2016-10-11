@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * page nuking on Firefox
+
 ## 5.60.3
 
 * fixed
