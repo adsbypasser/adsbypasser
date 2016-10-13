@@ -1,4 +1,4 @@
-## TBA
+## 5.60.5
 
 * fixed
     * coinlink.co
