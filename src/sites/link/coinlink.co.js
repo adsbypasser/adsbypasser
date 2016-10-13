@@ -6,7 +6,7 @@ $.register({
   ready: function (m) {
     'use strict';
 
-    var a = $('a.btn.btn-block.btn-warning');
+    var a = $('a#btn-main');
     $.openLink(a.href);
   },
 });
