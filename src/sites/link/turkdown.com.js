@@ -8,7 +8,9 @@ $.register({
     'use strict';
     $.get('?ajax='+m.query[1]).then(function (html) {
       html = _.parseJSON(html);
-      $.openLink(html.url);
+      var patt = new RegExp("stepone\=(.+)");
+      var res = patt.exec(html.url);
+      $.openLink(atob(res[1]));
     })
   },
 });
