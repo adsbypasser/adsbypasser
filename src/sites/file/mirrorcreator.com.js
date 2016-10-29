@@ -1,7 +1,7 @@
 $.register({
   rule: {
     host: /^(www\.)?mirrorcreator\.com$/,
-    path: /^\/showlink\.php$/,
+    path: /^\/showurl\.php$/,
   },
   ready: function () {
     'use strict';
