@@ -578,6 +578,9 @@
 * adlink.guru
     * adlink.guru
     * cypt.ga
+* linkdrop.net
+    * linkdrop.net
+    * dmus.in
 * else
     * 01.nl
     * 1be.biz
@@ -636,7 +639,6 @@
     * dikit.in
     * directupload.net
     * dl-protect.com
-    * dmus.in
     * durl.me
     * ehdwallpapers.org
     * elde.me
@@ -713,7 +715,6 @@
     * link5s.com
     * linkarus.com
     * linkdecode.com
-    * linkdrop.net
     * linkpaid.net
     * linkplugapp.com
     * linksas.us
