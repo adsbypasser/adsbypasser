@@ -70,7 +70,7 @@ $.register({
       host: [
         /^(www\.)?(link\.)?safelink(converter2?|s?review(er?))\.com$/,
         /^susutin\.com$/,
-        /^getcomics\.gq$/,
+        /^(getcomics|miuitutorial)\.gq$/,
       ],
       query: /id=(\w+=*)/,
     },
