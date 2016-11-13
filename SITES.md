@@ -38,6 +38,7 @@
     * youfap.me
     * yyv.co
     * zatnawqy.net
+    * zytpirwai.net
     * zff.co
 * Mihalism Multi Host
     * 244pix.com

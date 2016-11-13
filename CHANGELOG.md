@@ -1,3 +1,29 @@
+## 5.60.5
+
+* fixed
+    * coinlink.co
+
+## 5.60.4
+
+* fixed
+    * page nuking on Firefox
+
+## 5.60.3
+
+* fixed
+    * zytpirwai.net
+
+## 5.60.2
+
+* fixed
+    * log configuration
+    * bc.vc
+
+## 5.60.1
+
+* fixed
+    * remove redirection hack
+
 ## 5.60.0
 
 * fixed

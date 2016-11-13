@@ -12,7 +12,7 @@ $.register({
     },
     {
       host: /^(www\.)?compul\.in$/,
-      path: /^\/n\.php$/,
+      path: /^\/[np]\.php$/,
       query: /v=([^&]+)/,
     },
     {
