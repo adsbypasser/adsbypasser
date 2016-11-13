@@ -140,6 +140,22 @@ $.register({
   },
 });
 
+$.register({
+  rule: {
+    host: [
+      /^kombatch\.loncat\.pw$/,
+    ],
+  },
+  ready: function () {
+    'use strict';
+
+    var s = $.searchScripts(/\.open\("([^"]+)",/);
+    s = s[1].match(/go=([^&]+)/);
+    s = atob(s[1]);
+    $.openLink(s);
+  },
+});
+
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
 // kate: space-indent on; indent-width 2;
