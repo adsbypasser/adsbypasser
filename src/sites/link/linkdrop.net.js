@@ -7,14 +7,28 @@ $.register({
 
     $.removeNodes('iframe');
 
-    var matches = $.searchScripts(/\$\("a\.redirect"\)\.attr\("href","([^"]+)"\)\.text/);
-    // Most likely not on a shortening page
-    if (!matches) {
+    var jQuery = $.window.$;
+    var f = jQuery('#go-link');
+    if (f.length <= 0) {
       return;
     }
 
-    var l = matches[1];
-    $.openLink(l);
+    jQuery.ajax({
+      dataType: 'json',
+      type: 'POST',
+      url: f.attr('action'),
+      data: f.serialize(),
+      success: function (result, status, xhr) {
+        if (result.url) {
+          $.openLink(result.url);
+        } else {
+          _.warn(result.message);
+        }
+      },
+      error: function (xhr, status, error) {
+        _.warn(xhr, status, error);
+      },
+    });
   },
 });
 
