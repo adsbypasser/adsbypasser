@@ -1,4 +1,4 @@
-## TBA
+## 5.60.6
 
 * fixed
     * mirrorcreator.com
