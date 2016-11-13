@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^(www\.)?linkdrop\.net$/,
+    host: [
+      /^(www\.)?linkdrop\.net$/,
+      /^dmus\.in$/,
+    ],
   },
   ready: function () {
     'use strict';
