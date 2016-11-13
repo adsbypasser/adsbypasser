@@ -123,7 +123,7 @@ $.register({
     host: [
       /^designinghomey\.com$/,
       /^motonews\.club$/,
-      /^autofans\.pw$/,
+      /^(autofans|landscapenature)\.pw$/,
     ],
     query: /get=([^&]+)/,
   },
