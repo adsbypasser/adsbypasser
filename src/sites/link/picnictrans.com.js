@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^ww3\.picnictrans\.com$/,
+    host: /^ww[23]\.picnictrans\.com$/,
   },
   ready: function (m) {
     'use strict';
