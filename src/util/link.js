@@ -21,6 +21,8 @@
       document.body = document.createElement('body');
     }
     document.body.appendChild(e);
+    // yield execution for ... event loop?
+    return _.wait(0);
   }
 
 
@@ -28,18 +30,29 @@
     // Create a link on the page
     var a = document.createElement('a');
     a.href = url;
+
     // Prevent event interfering
+    var clicked = false;
     a.addEventListener('click', function (event) {
       event.stopPropagation();
+      clicked = true;
     });
 
-    // Simulate a click on this link (so that the referer is sent)
-    prepare(a);
-    a.click();
+    function loop () {
+      a.click();
+      return _.wait(1000).then(function () {
+        if (clicked) {
+          _.info('already clicked');
+          return Promise.resolve();
+        }
+        _.info('try again');
+        return loop();
+      });
+    }
 
-    // Warning if the page still not redirecting
-    _.wait(10 * 1000).then(function () {
-      _.warn('previous click does not work');
+    // Simulate clicks on this link (so that the referer is sent)
+    prepare(a).then(() => {
+      return loop();
     });
   }
 

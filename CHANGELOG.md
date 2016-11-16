@@ -1,3 +1,13 @@
+## 5.60.6
+
+* fixed
+    * mirrorcreator.com
+    * compul.in
+    * ah.pe
+    * adf.ly
+    * linkdrop.net
+    * dmus.in
+
 ## 5.60.5
 
 * fixed
