@@ -4,6 +4,7 @@ var Browser = require('zombie');
 
 var toolkit = require('./misc/toolkit.js');
 
+var _ = require('../src/util/core.js');
 var link = require('../src/util/link.js');
 
 var factory = toolkit.createFactory(link);
@@ -55,6 +56,8 @@ describe('link', function () {
         $.openLink(toolkit.page2);
 
         return self.browser.wait();
+      }).then(function () {
+        return _.wait(100);
       }).then(function () {
         self.browser.window.location.toString().should.equals(toolkit.page2);
         done();
