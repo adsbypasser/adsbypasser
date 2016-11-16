@@ -38,21 +38,18 @@
       clicked = true;
     });
 
-    function loop () {
-      a.click();
-      return _.wait(1000).then(function () {
-        if (clicked) {
-          _.info('already clicked');
-          return Promise.resolve();
-        }
-        _.info('try again');
-        return loop();
-      });
-    }
-
     // Simulate clicks on this link (so that the referer is sent)
     prepare(a).then(() => {
-      return loop();
+      a.click();
+      var tick = setInterval(function () {
+        if (clicked) {
+          _.info('already clicked');
+          clearInterval(tick);
+          return;
+        }
+        _.info('try again');
+        a.click();
+      }, 50);
     });
   }
 
