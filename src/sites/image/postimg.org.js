@@ -5,13 +5,8 @@ $.register({
   ready: function () {
     'use strict';
 
-    var a = $.$('body > center > a > img');
-    if(a){
-      $.openLink(a.parentNode.href);
-    }
-
-    var i = $('body > center > img');
-    $.openImage(i.src);
+    var img = $.$('#main-image');
+    $.openImage(img.dataset.full);
   },
 });
 
