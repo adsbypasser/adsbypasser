@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^postimg\.org$/,
+    host: /^postimg|pixxxels\.org$/,
   },
   ready: function () {
     'use strict';
