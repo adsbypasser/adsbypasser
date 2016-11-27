@@ -69,7 +69,7 @@ $.register({
   rule: [
     {
       host: [
-        /^(www\.)?(link\.)?safelink(converter2?|s?review(er?))\.com$/,
+        /^(www\.)?(link\.)?safelink(converter2?|s?review(e?r?))\.com?$/,
         /^susutin\.com$/,
         /^(getcomics|miuitutorial)\.gq$/,
       ],
