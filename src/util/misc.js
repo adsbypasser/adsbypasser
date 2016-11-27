@@ -30,12 +30,16 @@
     }
   };
 
-  $.nuke = function () {
+  $.nuke = function (url) {
     try {
-      $.window.document.write('nuked by AdsBypasser');
+      $.window.document.write('nuked by AdsBypasser, leading to ...<br/>');
     } catch (e) {
       _.warn('nuke failed', e);
     }
+    var a = document.createElement('a');
+    a.href = url;
+    a.textContent = url;
+    document.body.appendChild(a);
   };
 
   $.generateRandomIP = function () {

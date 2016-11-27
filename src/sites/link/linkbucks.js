@@ -181,7 +181,7 @@
 
         var token = findToken(document);
         sendRequest(token).then(function (url) {
-          $.nuke();
+          $.nuke(url);
           $.openLink(url);
         });
       },
