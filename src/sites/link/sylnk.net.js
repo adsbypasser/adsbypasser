@@ -36,6 +36,7 @@ $.register({
         /^nar-04\.tk$/,
         /^lindung\.in$/,
         /^motonews\.club$/,
+        /^gadget13\.com$/,
       ],
       query: /^\?d=([a-zA-Z0-9\/=]+)$/,
     },
