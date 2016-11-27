@@ -53,7 +53,7 @@
   }
 
   function helper (id, getNext) {
-    var recaptcha = $.$('#recaptcha_widget');
+    var recaptcha = $.$('#recaptcha_widget, #captcha');
     if (recaptcha) {
       _.info('stop because recaptcha');
       return;
