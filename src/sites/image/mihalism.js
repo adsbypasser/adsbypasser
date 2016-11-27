@@ -85,6 +85,17 @@
     },
   });
 
+  $.register({
+    rule: {
+      host: /^xxxhost\.me$/,
+      path: /^\/viewer5\.php$/,
+      query: /file=([^&]+)/,
+    },
+    start: function (m) {
+      $.openImage('files/' + m.query[1]);
+    },
+  });
+
 })();
 
 // ex: ts=2 sts=2 sw=2 et
