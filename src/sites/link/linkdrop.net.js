@@ -3,6 +3,7 @@ $.register({
     host: [
       /^(www\.)?linkdrop\.net$/,
       /^dmus\.in$/,
+      /^ulshare\.net$/,
     ],
   },
   ready: function () {
