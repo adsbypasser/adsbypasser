@@ -72,7 +72,8 @@ $.register({
         // safelinkconverter.com
         // safelinkconverter2.com
         // link.safelinkconverter.com
-        /^(link\.)?safelinkconverter2?\.com$/,
+        // decrypt.safelinkconverter.com
+        /(^|\.)safelinkconverter2?\.com$/,
         // safelinkreview.com
         // safelinksreview.com
         // safelinkreviewer.com
