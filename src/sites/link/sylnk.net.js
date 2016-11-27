@@ -36,6 +36,7 @@ $.register({
         /^nar-04\.tk$/,
         /^lindung\.in$/,
         /^motonews\.club$/,
+        /^ww[23]\.picnictrans\.com$/,
       ],
       query: /^\?d=([a-zA-Z0-9\/=]+)$/,
     },
@@ -136,6 +137,18 @@ $.register({
     }
     s = atob(m.query[1]);
     $.openLink(s);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^ww[23]\.picnictrans\.com$/,
+  },
+  ready: function () {
+    'use strict';
+
+    var a = $('div.kiri > center > a');
+    $.openLink(a.href);
   },
 });
 
