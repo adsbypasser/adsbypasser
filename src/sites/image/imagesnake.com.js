@@ -23,7 +23,7 @@
         query: /^\?/,
       },
       {
-        host: /^www\.freebunker\.com$/,
+        host: /^www\.(freebunker|imgshots)\.com$/,
         path: /^\/show\//,
       },
       {
