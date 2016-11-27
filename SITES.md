@@ -67,6 +67,7 @@
     * overpic.net
     * pictureshoster.com
     * postimg.net
+    * xxxhost.me
 * reklama
     * 08lkk.com
     * 18pron.ru
@@ -141,6 +142,7 @@
     * imgdrive.net
     * imgease.re
     * imgfap.net
+    * imgfapper.com
     * imghere.net
     * imghit.com
     * imgicy.com
@@ -208,6 +210,7 @@
     * porno-pirat.ru
     * project-photo.net
     * shotimg.org
+    * star-hentai.com
     * sxpics.nl
     * teenimage.org
     * teenshot.org
@@ -332,6 +335,7 @@
     * imageshots.com
     * imagesnake.com
     * imgcarry.com
+    * imgshots.com
 * imagetwist
     * imagecherry.com
     * imagenpic.com
@@ -417,8 +421,11 @@
     * dh10thbvu.com
     * digg.to
     * jnw0.com
+    * qaafa.com
     * sh.st
+    * short.est
     * u2ks.com
+    * viid.me
 * seomafia.net
     * apploadz.ru
     * seomafia.net
@@ -501,7 +508,10 @@
     * amankan.link
     * anisubsia.tk
     * auto14.pw
+    * autofans.pw
+    * blogspot.com
     * compul.in
+    * decrypt.safelinkconverter.com
     * designinghomey.com
     * dlneko.com
     * dlneko.net
@@ -509,21 +519,28 @@
     * edogawa.lon.pw
     * filmku.lompat.in
     * freeanimeonline.xyz
+    * gadget13.com
     * gadget14.pw
     * getcomics.gq
     * gtaind.com
     * healthygress24.ga
     * insurance1.tech
+    * kombatch.loncat.pw
+    * landscapenature.pw
     * lindung.in
     * link.filmku.net
+    * link.safelinkconverter.com
     * manteb.in
+    * miuitutorial.gq
     * motonews.club
     * motosport.pw
     * muucih.com
     * naisho.lompat.in
     * nar-04.tk
     * rumahsimpel.com
+    * safelinkconverter.com
     * safelinkconverter2.com
+    * safelinkreview.co
     * safelinkreview.com
     * safelinkreviewer.com
     * safelinksreview.com
@@ -579,8 +596,9 @@
     * adlink.guru
     * cypt.ga
 * linkdrop.net
-    * linkdrop.net
     * dmus.in
+    * linkdrop.net
+    * ulshare.net
 * else
     * 01.nl
     * 1be.biz
@@ -758,8 +776,8 @@
     * pixhub.eu
     * pixroute.com
     * pixsense.net
+    * pixxxels.org
     * pornimagex.com
-    * postimg.org
     * preview.rlu.ru
     * prntscr.com
     * pronpic.org
@@ -801,6 +819,7 @@
     * urlms.com
     * urlv2.com
     * uskip.me
+    * vavi.co
     * victly.com
     * vidto.me
     * viidii.info
