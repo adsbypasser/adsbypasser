@@ -1,3 +1,32 @@
+## TBA
+
+* fixed
+    * picnictrans.com
+    * imgking.co
+    * linkdrop.net
+    * imgclick.net
+* added
+    * star-hentai.com
+    * autofans.pw
+    * vavi.co
+    * miuitutorial.gq
+    * kombatch.loncat.pw
+    * landscapenature.pw
+    * pixxxels.org
+    * xxxhost.me
+    * gadget13.com
+    * imgfapper.com
+    * qaafa.com
+    * viid.me
+    * safelinkreview.co
+    * decrypt.safelinkconverter.com
+    * blogspot.com
+    * short.est
+    * ulshare.net
+    * imgshots.com
+* removed
+    * postimg.org
+
 ## 5.60.6
 
 * fixed
