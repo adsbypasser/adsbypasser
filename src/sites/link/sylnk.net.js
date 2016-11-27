@@ -56,6 +56,11 @@ $.register({
       host: /^i\.gtaind\.com$/,
       query: /^\?([a-zA-Z0-9\/=]+)$/,
     },
+    // blogspot, kind of brutal
+    {
+      host: /\.blogspot\.com?/,
+      query: /^\?url=([a-zA-Z0-9\/=]+)$/,
+    },
   ],
   start: function (m) {
     'use strict';
