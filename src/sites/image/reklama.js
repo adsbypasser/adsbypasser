@@ -104,7 +104,7 @@
       },
       {
         host: /^imgking\.co$/,
-        path: /^\/img-.*\.html/,
+        path: /^\/img4?-.*\.html/,
       },
       {
         host: /^imgbb\.net$/,
@@ -245,7 +245,7 @@
     rule: [
       {
         host: /^imgking\.co$/,
-        path: /^\/img3-.*\.html/,
+        path: /^\/img[3s]-.*\.html/,
       },
       {
         host: [
@@ -262,24 +262,24 @@
   });
 
   $.register({
-    rule: [
-      {
-        host: /^imgking\.co$/,
-        path: /^\/img4-.*\.html/,
-      },
-      {
-        host: /^imgkings\.com$/,
-        path: /^\/img2-.*\.html/,
-      },
-    ],
+    rule: {
+      host: /^imgkings\.com$/,
+      path: /^\/img2-.*\.html/,
+    },
     ready: defaultAction,
   });
 
   $.register({
-    rule: {
-      host: /^imagerar\.com$/,
-      path: /^\/img2-/
-    },
+    rule: [
+      {
+        host: /^imagerar\.com$/,
+        path: /^\/img2-/,
+      },
+      {
+        host: /^imgking\.co$/,
+        path: /^\/imgv-.*\.html/,
+      },
+    ],
     ready: function () {
       var i = $('img[alt]');
       $.openImage(i.src);
