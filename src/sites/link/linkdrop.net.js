@@ -12,7 +12,7 @@ $.register({
     $.removeNodes('iframe');
 
     var jQuery = $.window.$;
-    var f = jQuery('#go-link');
+    var f = jQuery('form.hidden[action="/links/go"]');
     if (f.length <= 0) {
       return;
     }

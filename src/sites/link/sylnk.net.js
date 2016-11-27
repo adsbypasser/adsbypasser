@@ -36,6 +36,7 @@ $.register({
         /^nar-04\.tk$/,
         /^lindung\.in$/,
         /^motonews\.club$/,
+        /^ww[23]\.picnictrans\.com$/,
         /^gadget13\.com$/,
       ],
       query: /^\?d=([a-zA-Z0-9\/=]+)$/,
@@ -157,9 +158,7 @@ $.register({
 
 $.register({
   rule: {
-    host: [
-      /^kombatch\.loncat\.pw$/,
-    ],
+    host: /^kombatch\.loncat\.pw$/,
   },
   ready: function () {
     'use strict';
@@ -168,6 +167,18 @@ $.register({
     s = s[1].match(/go=([^&]+)/);
     s = atob(s[1]);
     $.openLink(s);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^ww[23]\.picnictrans\.com$/,
+  },
+  ready: function () {
+    'use strict';
+
+    var a = $('div.kiri > center > a');
+    $.openLink(a.href);
   },
 });
 
