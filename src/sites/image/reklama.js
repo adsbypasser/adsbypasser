@@ -74,7 +74,6 @@
           /^img(cloud|mag)\.co$/,
           /^pixup\.us$/,
           /^(bulkimg|photo-up|myimg|pop-img|img-pop|ads-img)\.info$/,
-          /^img\.yt$/,
           /^vava\.in$/,
           /^(pixxx|picspornfree|imgload|fapat)\.me$/,
           /^(domaink|pic2pic|porno-pirat|24avarii|loftlm|18pron|imgplus)\.ru$/,
@@ -285,6 +284,14 @@
       var i = $('img[alt]');
       $.openImage(i.src);
     },
+  });
+
+  $.register({
+    rule: {
+      host: /^img\.yt$/,
+      path: /^\/img-.*\.html/,
+    },
+    ready: _.P(action, '#continuebutton', 'img[class^=centred]'),
   });
 
 })();
