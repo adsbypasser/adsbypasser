@@ -1,3 +1,9 @@
+## 5.61.1
+
+* fixed
+    * img.yt
+    * lynk.my
+
 ## 5.61.0
 
 * fixed

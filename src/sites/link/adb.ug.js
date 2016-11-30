@@ -21,7 +21,7 @@ $.register({
     }
 
     // pattern 2
-    m = $.searchScripts(/\{_args.+\}/);
+    m = $.searchScripts(/\{\s*_args[^}]+\}\s+\}/);
     if (!m) {
       throw new _.AdsBypasserError('script content changed');
     }
