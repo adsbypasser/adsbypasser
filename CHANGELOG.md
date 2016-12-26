@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * xxxhost.me
+    * imgking.co
+
 ## 5.61.1
 
 * fixed
