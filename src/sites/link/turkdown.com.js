@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^dream\.turkdown\.com$/,
+    host: /^turkdown\.com$/,
     path: /^\/link/,
     query: /^\?id=(.+)/,
   },
