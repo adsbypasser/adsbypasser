@@ -88,7 +88,7 @@
   $.register({
     rule: {
       host: /^xxxhost\.me$/,
-      path: /^\/viewer5\.php$/,
+      path: /^\/viewer\d+\.php$/,
       query: /file=([^&]+)/,
     },
     start: function (m) {

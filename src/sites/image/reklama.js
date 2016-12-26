@@ -245,7 +245,7 @@
     rule: [
       {
         host: /^imgking\.co$/,
-        path: /^\/img[3s]-.*\.html/,
+        path: /^\/imgs-.*\.html/,
       },
       {
         host: [
@@ -277,7 +277,7 @@
       },
       {
         host: /^imgking\.co$/,
-        path: /^\/imgv-.*\.html/,
+        path: /^\/img[v3]-.*\.html/,
       },
     ],
     ready: function () {

@@ -1,3 +1,9 @@
+## 5.61.2
+
+* fixed
+    * xxxhost.me
+    * imgking.co
+
 ## 5.61.1
 
 * fixed
