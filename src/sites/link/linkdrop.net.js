@@ -5,6 +5,7 @@ $.register({
       /^dmus\.in$/,
       /^ulshare\.net$/,
       /^adurl\.id$/,
+      /^goolink\.me$/,
     ],
   },
   ready: function () {
