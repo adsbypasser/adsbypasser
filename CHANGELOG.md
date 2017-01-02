@@ -1,3 +1,25 @@
+## TBA
+
+* fixed
+    * img.yt
+    * pixhost.org
+* added
+    * catcut.net
+    * adurl.id
+    * goolink.me
+    * filesbucks.com
+    * ani-share.com
+    * elink.link
+    * payurl.me
+    * gunting.web.id
+    * adyou.me
+    * gsurl.me
+    * g5u.pw
+    * azhie.net
+* removed
+    * eafyfsuh.net
+    * sasontnwc.net
+
 ## 5.61.2
 
 * fixed
