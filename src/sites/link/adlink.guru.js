@@ -8,6 +8,7 @@
         /^cypt\.ga$/,
         /^filesbucks\.com$/,
         /^elink\.link$/,
+        /^payurl\.me$/,
       ],
     },
     ready: function () {
