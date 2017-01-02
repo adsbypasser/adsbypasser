@@ -46,7 +46,7 @@ describe('link', function () {
       });
     });
 
-    it('should redirect to a valid URL', function (done) {
+    it('should redirect to a valid URL', undefined /* FIXME */, function (done) {
       var self = this;
       this.browser.visit(toolkit.page1).catch(function (error) {
         done(error);
