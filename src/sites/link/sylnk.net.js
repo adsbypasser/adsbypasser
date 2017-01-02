@@ -140,6 +140,7 @@ $.register({
       /^designinghomey\.com$/,
       /^motonews\.club$/,
       /^(autofans|landscapenature)\.pw$/,
+      /^ani-share\.com$/,
     ],
     query: /get=([^&]+)/,
   },
