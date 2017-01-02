@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^imgchili\.(com|net)|www\.pixhost\.org$/,
+    host: [
+      /^imgchili\.(com|net)$/,
+      /^(www\.)?pixhost\.org$/,
+    ],
     path: /^\/show\//,
   },
   ready: function () {
@@ -14,7 +17,7 @@ $.register({
       // do nothing
     }
 
-    var o = $('#show_image');
+    var o = $('#show_image, #image');
     $.openImage(o.src);
   },
 });

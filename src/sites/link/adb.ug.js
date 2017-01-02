@@ -1,35 +1,70 @@
-$.register({
-  rule: {
-    host: [
-      /^(www\.)?adb\.ug$/,
-      /^(www\.)?lynk\.my$/,
-      /^adyou\.me$/,
-    ],
-    // Match everything but empty, privacy, terms, contact, contact/whatever or path beginning with #
-    path: /^(?!\/(?:privacy|terms|contact(\/.*)?|#.*)?$).*$/
-  },
-  ready: function () {
-    'use strict';
+(function () {
+  'use strict';
 
-    $.removeNodes('iframe');
+  $.register({
+    rule: {
+      host: [
+        /^(www\.)?adb\.ug$/,
+        /^(www\.)?lynk\.my$/,
+        /^adyou\.me$/,
+      ],
+      // Match everything but empty, privacy, terms, contact, contact/whatever or path beginning with #
+      path: /^(?!\/(?:privacy|terms|contact(\/.*)?|#.*)?$).*$/
+    },
+    ready: function () {
+      'use strict';
 
-    // pattern 1
-    var m = $.searchScripts(/top\.location\.href="([^"]+)"/);
-    if (m) {
-      $.openLink(m[1]);
-      return;
-    }
+      $.removeNodes('iframe');
 
-    // pattern 2
-    m = $.searchScripts(/\{\s*_args[^}]+\}\s+\}/);
-    if (!m) {
-      throw new _.AdsBypasserError('script content changed');
-    }
-    m = eval('(' + m[0] + ')');
+      // pattern 1
+      var m = $.searchScripts(/top\.location\.href="([^"]+)"/);
+      if (m) {
+        $.openLink(m[1]);
+        return;
+      }
+
+      // pattern 2
+      getArguments().then(function (args) {
+        tryLink(args);
+      });
+    },
+  });
+
+  function getArguments () {
+    var PATTERN = /\{_args[^}]+\}[^}]+\}/;
+
+    return _.D(function (resolve, reject) {
+      var m = $.searchScripts(PATTERN);
+      if (m) {
+        resolve(m);
+        return;
+      }
+      var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          mutation.addedNodes.forEach(function (node) {
+            if (node.localName === 'script') {
+              var m = node.textContent.match(PATTERN);
+              if (m) {
+                resolve(m);
+                observer.disconnect();
+              }
+            }
+          });
+        });
+      });
+      observer.observe(document.body, {
+        childList: true,
+      });
+    }).then(function (m) {
+      return eval('(' + m[0] + ')');
+    });
+  }
+
+  function tryLink (args) {
     var url = window.location.pathname + '/skip_timer';
 
     var i = setInterval(function () {
-      $.post(url, m).then(function (text) {
+      $.post(url, args).then(function (text) {
         var jj = _.parseJSON(text);
         if (!jj.errors && jj.messages) {
           clearInterval(i);
@@ -37,9 +72,9 @@ $.register({
         }
       });
     }, 1000);
-  },
-});
+  }
 
+})();
 
 // ex: ts=2 sts=2 sw=2 et
 // sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
