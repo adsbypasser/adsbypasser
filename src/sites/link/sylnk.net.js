@@ -38,6 +38,7 @@ $.register({
         /^motonews\.club$/,
         /^ww[23]\.picnictrans\.com$/,
         /^gadget13\.com$/,
+        /^azhie\.net$/,
       ],
       query: /^\?d=([a-zA-Z0-9\/=]+)$/,
     },
