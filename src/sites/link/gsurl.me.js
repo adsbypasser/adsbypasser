@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^gsurl\.me$/,
+    host: [
+      /^gsurl\.me$/,
+      /^g5u\.pw$/,
+    ],
   },
   ready: function () {
     'use strict';
