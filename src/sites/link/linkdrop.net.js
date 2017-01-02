@@ -4,6 +4,7 @@ $.register({
       /^(www\.)?linkdrop\.net$/,
       /^dmus\.in$/,
       /^ulshare\.net$/,
+      /^adurl\.id$/,
     ],
   },
   ready: function () {
