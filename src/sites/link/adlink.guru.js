@@ -7,6 +7,7 @@
         /^adlink\.guru$/,
         /^cypt\.ga$/,
         /^filesbucks\.com$/,
+        /^elink\.link$/,
       ],
     },
     ready: function () {
