@@ -31,7 +31,7 @@
   });
 
   function getArguments () {
-    var PATTERN = /\{_args[^}]+\}[^}]+\}/;
+    var PATTERN = /\{\s*_args[^}]+\}[^}]+\}/;
 
     return _.D(function (resolve, reject) {
       var m = $.searchScripts(PATTERN);
