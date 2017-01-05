@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * imgrock.net
+    * lynk.my
+
 ## 5.62.0
 
 * fixed
