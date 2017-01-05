@@ -103,7 +103,7 @@
   $.register({
     rule: {
       host: [
-        /^img(rock|town|view)\.net$/,
+        /^img(town|view)\.net$/,
         /^img(maze|outlet)\.com$/,
       ],
       path: pathRule,
@@ -119,6 +119,30 @@
       var d = $('div[id^="imageviewi"]');
       waitDOM(d, function (node) {
         return node.nodeName === 'FORM' && $.$('input[name="id"]', node);
+      }).then(function (node) {
+        node.submit();
+      }).catch(function (e) {
+        _.warn(e);
+      });
+    },
+  });
+
+  $.register({
+    rule: {
+      host: /^imgrock\.net$/,
+      path: pathRule,
+    },
+    ready: function () {
+      var i = $.$('img.pic');
+      if (i) {
+        // second stage
+        $.openImage(i.src);
+        return;
+      }
+
+      var d = $.$$('div[id]').at(1);
+      waitDOM(d, function (node) {
+        return node.nodeName === 'FORM' && $.$('input[name="next"]:not([style])', node);
       }).then(function (node) {
         node.submit();
       }).catch(function (e) {
