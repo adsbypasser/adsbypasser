@@ -18,8 +18,8 @@ $.register({
   ready: function () {
     'use strict';
 
-    var i = $('#myUniqueImg');
-    $.openLink(i.src);
+    var a = $('#myUniqueImg').parentNode;
+    $.openLink(i.href);
   },
 });
 
