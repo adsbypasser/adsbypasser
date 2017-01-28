@@ -19,7 +19,7 @@ $.register({
     'use strict';
 
     var a = $('#myUniqueImg').parentNode;
-    $.openLink(i.href);
+    $.openLink(a.href);
   },
 });
 
