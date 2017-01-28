@@ -14,7 +14,7 @@ $.register({
     $.removeNodes('iframe');
 
     var jQuery = $.window.$;
-    var f = jQuery('form.hidden[action="/links/go"]');
+    var f = jQuery('form[action="/links/go"]');
     if (f.length <= 0) {
       return;
     }
