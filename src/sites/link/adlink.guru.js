@@ -10,6 +10,7 @@
         /^elink\.link$/,
         /^payurl\.me$/,
         /^www\.worldhack\.net$/,
+        /^123link\.top$/,
       ],
     },
     ready: function () {
