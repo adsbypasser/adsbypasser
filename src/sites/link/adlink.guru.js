@@ -9,6 +9,7 @@
         /^filesbucks\.com$/,
         /^elink\.link$/,
         /^payurl\.me$/,
+        /^www\.worldhack\.net$/,
       ],
     },
     ready: function () {
