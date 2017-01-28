@@ -86,8 +86,7 @@
           /^darpix\.desi$/,
           /^pic4you\.top$/,
           /^imgsen\.se$/,
-          /^ipicture\.su$/,
-          /^img\.yt$/,
+          /^ipicture\.su$/
         ],
         path: /^\/img-.*\.html/,
       },
@@ -285,6 +284,14 @@
       var i = $('img[alt]');
       $.openImage(i.src);
     },
+  });
+
+  $.register({
+    rule: {
+      host: /^img\.yt$/,
+      path: /^\/img-.*\.html/,
+    },
+    ready: _.P(action, '#continuebutton', 'img[class^=centred]'),
   });
 
 })();
