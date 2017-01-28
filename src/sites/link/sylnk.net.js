@@ -63,6 +63,10 @@ $.register({
       host: /\.blogspot\.com?/,
       query: /^\?url=([a-zA-Z0-9\/=]+)$/,
     },
+    {
+      host: /^sehatlega\.com$/,
+      query: /^\?lanjut=([a-zA-Z0-9\/=]+)$/,
+    },
   ],
   start: function (m) {
     'use strict';
