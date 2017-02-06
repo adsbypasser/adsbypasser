@@ -16,9 +16,13 @@
       ],
     },
     ready: function () {
+      $.removeNodes('iframe');
+
       firstStage().then(function (page) {
         return secondStage(page);
       }).then(function (url) {
+        // nuke for bol.tl, somehow it will interfere click event
+        $.nuke(url);
         $.openLink(url);
       }).catch(function (e) {
         _.warn(e);
