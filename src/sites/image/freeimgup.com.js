@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^freeimgup\.com$/,
+    host: /^(www\.)freeimgup\.com$/,
     path: /^\/xxx\//,
   },
   ready: function () {
