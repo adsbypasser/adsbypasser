@@ -12,6 +12,7 @@
         /^www\.worldhack\.net$/,
         /^123link\.top$/,
         /^pir\.im$/,
+        /^bol\.tl$/,
       ],
     },
     ready: function () {
