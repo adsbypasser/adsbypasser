@@ -66,22 +66,10 @@
       }
 
       var d = $.$$('div[id]').at(1);
-      // find the style first
-      waitHiddenClass(d).then(function (className) {
-        // if the target form was already created, just use it
-        var f = $.$$('form').find(function (v) {
-          if (v.classList.contains(className)) {
-            return _.none;
-          }
-          return v;
-        });
-        if (f) {
-          return f.payload;
-        }
-        // if not, wait for it
-        return waitDOM(d, function (node) {
-          return node.nodeName === 'FORM' && !node.classList.contains(className);
-        });
+      waitDOM(d, function (node) {
+        // making sure it's the corret node (form) and the only visible one since imgrock throws in
+        // a random number of "fake" ones
+        return node.nodeName === 'FORM' && node.offsetParent !== null;
       }).then(function (node) {
         node.submit();
       }).catch(function (e) {
@@ -174,25 +162,6 @@
         childList: true,
       });
     });
-  }
-
-  function waitHiddenClass (element) {
-    return waitDOM(element, function (node) {
-      if (node.nodeName !== 'STYLE') {
-        return false;
-      }
-      return !!getClassFromStyle(node);
-    }).then(function (node) {
-      return getClassFromStyle(node);
-    });
-  }
-
-  function getClassFromStyle (element) {
-    var c = element.textContent.match(/\.([^{]+)/);
-    if (!c) {
-      return null;
-    }
-    return c[1];
   }
 
   function go (id, pre, next) {
