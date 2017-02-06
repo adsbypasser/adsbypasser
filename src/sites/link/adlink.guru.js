@@ -11,6 +11,7 @@
         /^payurl\.me$/,
         /^www\.worldhack\.net$/,
         /^123link\.top$/,
+        /^pir\.im$/,
       ],
     },
     ready: function () {
