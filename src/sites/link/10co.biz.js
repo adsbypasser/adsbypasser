@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^10co\.(biz|xyz|co)$/,
+    host: /^10co\.(biz|xyz|co|me)$/,
   },
   ready: function () {
     'use strict';
