@@ -8,7 +8,7 @@
         /^cypt\.ga$/,
         /^filesbucks\.com$/,
         /^elink\.link$/,
-        /^payurl\.me$/,
+        /^(payurl|urlst)\.me$/,
         /^www\.worldhack\.net$/,
         /^123link\.top$/,
         /^pir\.im$/,
@@ -16,7 +16,7 @@
       ],
     },
     ready: function () {
-      $.removeNodes('iframe');
+      $.removeNodes('iframe', '.BJPPopAdsOverlay');
 
       firstStage().then(function (page) {
         return secondStage(page);
