@@ -249,7 +249,7 @@
       },
       {
         host: [
-          /^imgkings\.com$/,
+          /^img(kings|prime)\.com$/,
           /^imagerar\.com$/,
         ],
         path: /^\/img-.*\.html/,
@@ -278,6 +278,10 @@
       {
         host: /^imgking\.co$/,
         path: /^\/img[v3]-.*\.html/,
+      },
+      {
+        host: /^imgprime\.com$/,
+        path: /^\/img3-.*\.html$/,
       },
     ],
     ready: function () {
