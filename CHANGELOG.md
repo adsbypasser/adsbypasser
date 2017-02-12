@@ -1,3 +1,31 @@
+## TBA
+
+* fixed
+    * img.yt
+    * imgrock.net
+    * coinlink.co
+    * linkdrop.net
+    * pixsense.net
+    * freeimgup.com
+* added
+    * worldhack.net
+    * linkdolar.xyz
+    * sehatlega.com
+    * 123link.top
+    * 10co.biz
+    * 10co.xyz
+    * 10co.co
+    * 10co.me
+    * pir.im
+    * bol.tl
+    * zintata.com
+    * radikal.ru
+    * indexmovie.xyz
+    * urlst.me
+    * imgprime.com
+    * ilovebanten.com
+    * idsly.com
+
 ## 5.62.1
 
 * fixed
