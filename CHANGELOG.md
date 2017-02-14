@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * trying to fix click event blocker
+
 ## v5.63.0
 
 * fixed
