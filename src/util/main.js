@@ -73,47 +73,6 @@
   }
 
 
-  // NOTE maybe break in future Firefox release
-  function disableClickPopup (element) {
-    if (!element) {
-      return;
-    }
-
-    var seal = {
-      set: function () {
-        _.info('blocked click');
-      },
-    };
-
-    // release existing events
-    element.onclick = undefined;
-    // prevent they bind event again
-    if (isSafari) {
-      // Safiri must use old-style method
-      element.__defineSetter__('onclick', seal.set);
-    } else {
-      $.window.Object.defineProperty(element, 'onclick', {
-        configurable: true,
-        enumerable: false,
-        get: undefined,
-        // this will turn to undefined in Firefox, need upstream fix
-        set: seal.set,
-      });
-    }
-
-    // block addEventListener
-    var oael = element.addEventListener;
-    var nael = function (type) {
-      if (type === 'click') {
-        _.info('blocked addEventListener onclick');
-        return;
-      }
-      return oael.apply(this, arguments);
-    };
-    element.addEventListener = nael;
-  }
-
-
   function changeTitle () {
     document.title += ' - AdsBypasser';
   }
@@ -123,7 +82,6 @@
     _.info('working on\n%s \nwith\n%s', window.location.toString(), JSON.stringify($.config));
     disableLeavePrompt($.window);
     disableWindowOpen();
-    disableClickPopup($.document);
     handler.start();
   }
 
