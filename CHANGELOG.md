@@ -1,4 +1,4 @@
-## TBA
+## v5.63.2
 
 * fixed
     * remove click event blocker, broken by design
