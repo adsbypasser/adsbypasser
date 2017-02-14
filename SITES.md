@@ -687,7 +687,7 @@
     * embedupload.com
     * filoops.info
     * fit.sh
-    * fiuxy.net.js
+    * fiuxy.net
     * forbes.com
     * fotolink.su
     * fotosik.pl
