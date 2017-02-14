@@ -114,7 +114,7 @@
   function hijackAddEventListener (blackList) {
     var oael = unsafeWindow.EventTarget.prototype.addEventListener;
     var wrapper = function (type, handler, useCapture) {
-      if (blackList.hasOwnProperty(type) && blackList[type].indexOf(this)) {
+      if (blackList.hasOwnProperty(type) && (blackList[type].indexOf(this) >= 0)) {
         _.info('blocked', type, this, handler);
         return;
       }
