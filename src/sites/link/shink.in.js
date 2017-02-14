@@ -3,7 +3,7 @@ $.register({
     host: [
       /^(www\.)?shink\.in$/,
       /^fas\.li$/,
-      /^(www.)?croco.(me|site)$/,
+      /^(www\.)?croco\.(me|site)$/,
     ],
     path: /^\/\w+$/,
   },
@@ -44,7 +44,7 @@ $.register({
       path: /^\/go\/\w+$/,
     },
     {
-      host: /^(www.)?croco.(me|site)$/,
+      host: /^(www\.)?croco\.(me|site)$/,
       path: /^\/ok\/\w+$/,
     },
   ],
