@@ -1,3 +1,22 @@
+## TBA
+
+* fixed
+    * shink.in
+    * pixsense.net
+    * freeimgup.com
+    * imgtown.net
+    * linkdrop.net
+    * coinlink.co
+* added
+    * croco.site
+    * imgdomino.com
+    * imagesnake.org
+    * xiw34.com
+    * sipkur.us
+    * fiuxy.co
+* removed
+    * fiuxy.net
+
 ## v5.63.2
 
 * fixed
