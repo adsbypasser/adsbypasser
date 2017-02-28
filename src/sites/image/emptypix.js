@@ -4,6 +4,7 @@ $.register({
       host: [
         /^emptypix\.com|overdream\.cz$/,
         /^www\.sexseeimage\.com$/,
+        /^imgdomino\.com$/,
       ],
       path: /^\/image\//,
     },
