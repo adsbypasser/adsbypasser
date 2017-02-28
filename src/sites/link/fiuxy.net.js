@@ -1,9 +1,9 @@
 $.register({
-  rule:{
-    host:/^(www\.)?fiuxy\.net$/,
-    path:/^\/link\/\?.*$/
+  rule: {
+    host: /^(www\.)?fiuxy\.co$/,
+    path: /^\/links?\/$/,
   },
-  ready:function(){
+  ready: function () {
     $.openLink($('a.btn.a').href);
   }
 });
