@@ -20,14 +20,14 @@ def exec_(config, edition, another_edition, script):
 
     # login
     b.open(LOGIN_URL)
-    b.select_form(nr=3)
+    b.select_form(nr=2)
     b['user[email]'] = USERNAME
     b['user[password]'] = PASSWORD
     b.submit()
 
     # edit source
     b.open(EDIT_URL)
-    b.select_form(nr=2)
+    b.select_form(nr=1)
     b['script_version[additional_info][0][attribute_value]'] = summary.encode('utf-8')
     b['script_version[code]'] = script.encode('utf-8')
     b.submit(name='commit')
