@@ -50,7 +50,10 @@
 
   $.register({
     rule: {
-      host: /^sipkur\.net$/,
+      host: [
+        /^sipkur\.net$/,
+        /^sipkur\.us$/,
+      ],
       path: [
         /^\/\w+$/,
         /^\/menujulink\//,
