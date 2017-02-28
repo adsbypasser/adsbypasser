@@ -1,19 +1,7 @@
 $.register({
   rule: {
     host: /^www\.pixsense\.net$/,
-    path: /^\/site\/v\/(\d+)$/,
-  },
-  start: function (m) {
-    'use strict';
-
-    $.openLink('/site/viewFinalImage/' + m.path[1]);
-  },
-});
-
-$.register({
-  rule: {
-    host: /^www\.pixsense\.net$/,
-    path: /^\/site\/viewFinalImage\/\d+$/,
+    path: /^\/site\/v\/\d+$/,
   },
   ready: function () {
     'use strict';

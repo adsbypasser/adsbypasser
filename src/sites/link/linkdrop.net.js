@@ -45,7 +45,7 @@
 
   function getForm () {
     var jQuery = $.window.$;
-    var f = jQuery('form[action="/links/go"]');
+    var f = jQuery('form[action="/links/go"], form[action="/links/linkdropgo"]');
     if (f.length > 0) {
       return f;
     }

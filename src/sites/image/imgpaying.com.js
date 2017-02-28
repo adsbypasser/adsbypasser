@@ -28,7 +28,7 @@
   $.register({
     rule: {
       host: [
-        /^img(town|view)\.net$/,
+        /^imgview\.net$/,
         /^img(maze|outlet)\.com$/,
       ],
       path: PATH_RULE,
@@ -54,7 +54,7 @@
 
   $.register({
     rule: {
-      host: /^imgrock\.net$/,
+      host: /^img(rock|town)\.net$/,
       path: PATH_RULE,
     },
     ready: function () {
@@ -66,10 +66,20 @@
       }
 
       var d = $.$$('div[id]').at(1);
+      var visibleClasses = null;
       waitDOM(d, function (node) {
-        // making sure it's the corret node (form) and the only visible one since imgrock throws in
-        // a random number of "fake" ones
-        return node.nodeName === 'FORM' && node.offsetParent !== null;
+        if (node.nodeName === 'STYLE') {
+          visibleClasses = parseStyle(node);
+          return false;
+        }
+        // making sure it is the correct node (form) and the only visible one
+        // since it throws in a random number of "fake" ones
+        if (node.nodeName === 'FORM' && node.offsetParent !== null) {
+          return visibleClasses.some(function (class_) {
+            return node.classList.contains(class_);
+          });
+        }
+        return false;
       }).then(function (node) {
         node.submit();
       }).catch(function (e) {
@@ -162,6 +172,17 @@
         childList: true,
       });
     });
+  }
+
+  function parseStyle (style) {
+    style = style.textContent;
+    var pattern = /\.(\w+)\{visibility:initial;\}/g;
+    var rv = null;
+    var classes = [];
+    while ((rv = pattern.exec(style)) !== null) {
+      classes.push(rv[1]);
+    }
+    return classes;
   }
 
   function go (id, pre, next) {
