@@ -32,6 +32,47 @@
   }
 
 
+  // NOTE maybe break in future Firefox release
+  function disableLeavePrompt (element) {
+    if (!element) {
+      return;
+    }
+
+    var seal = {
+      set: function () {
+        _.info('blocked onbeforeunload');
+      },
+    };
+
+    // release existing events
+    element.onbeforeunload = undefined;
+    // prevent they bind event again
+    if (isSafari) {
+      // Safiri must use old-style method
+      element.__defineSetter__('onbeforeunload', seal.set);
+    } else {
+      $.window.Object.defineProperty(element, 'onbeforeunload', {
+        configurable: true,
+        enumerable: false,
+        get: undefined,
+        // this will turn to undefined in Firefox, need upstream fix
+        set: seal.set,
+      });
+    }
+
+    // block addEventListener
+    var oael = element.addEventListener;
+    var nael = function (type) {
+      if (type === 'beforeunload') {
+        _.info('blocked addEventListener onbeforeunload');
+        return;
+      }
+      return oael.apply(this, arguments);
+    };
+    element.addEventListener = nael;
+  }
+
+
   function changeTitle () {
     document.title += ' - AdsBypasser';
   }
@@ -39,10 +80,7 @@
 
   function beforeDOMReady (handler) {
     _.info('working on\n%s \nwith\n%s', window.location.toString(), JSON.stringify($.config));
-    hijackEvents({
-      'beforeunload': [$.window],
-      'click': [$.window.document],
-    });
+    disableLeavePrompt($.window);
     disableWindowOpen();
     handler.start();
   }
@@ -50,10 +88,7 @@
 
   function afterDOMReady (handler) {
     // some sites bind the event on body
-    hijackEvents({
-      'beforeunload': [$.window.document.body],
-      'click': [$.window.document.body],
-    });
+    disableLeavePrompt($.window.document.body);
     changeTitle();
     handler.ready();
   }
@@ -72,60 +107,6 @@
         resolve();
       });
     });
-  }
-
-
-  // HACK really should not do this, but ... (sigh)
-  function hijackEvents (blackList) {
-    hijackOnProperties(blackList);
-    hijackAddEventListener(blackList);
-  }
-
-
-  function hijackOnProperties (blackList) {
-    Object.keys(blackList).forEach(function (type) {
-      var propertyName = 'on' + type;
-      blackList[type].forEach(function (element) {
-        // release existing events
-        element[propertyName] = undefined;
-
-        // prevent they bind the event again
-        if (isSafari) {
-          // Safiri must use old-style method
-          element.__defineSetter__(propertyName, seal.set);
-        } else {
-          $.window.Object.defineProperty(element, propertyName, {
-            configurable: true,
-            enumerable: false,
-            get: undefined,
-            // this will turn to undefined in Firefox, need upstream fix
-            set: function (handler) {
-              _.info('blocked', type, this, handler);
-              return false;
-            },
-          });
-        }
-      });
-    });
-  }
-
-
-  // use $.window will be very complex, just use unsafeWindow at here
-  function hijackAddEventListener (blackList) {
-    var oael = unsafeWindow.EventTarget.prototype.addEventListener;
-    var wrapper = function (type, handler, useCapture) {
-      if (blackList.hasOwnProperty(type) && blackList[type].indexOf(this)) {
-        _.info('blocked', type, this, handler);
-        return;
-      }
-      return oael.call(this, type, handler, useCapture);
-    };
-    if (typeof exportFunction === 'function') {
-      wrapper = exportFunction(wrapper, unsafeWindow, {
-        allowCrossOriginArguments: true,
-      });
-    }
-    unsafeWindow.EventTarget.prototype.addEventListener = wrapper;
   }
 
 

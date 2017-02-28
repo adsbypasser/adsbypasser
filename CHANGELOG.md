@@ -1,3 +1,13 @@
+## v5.63.2
+
+* fixed
+    * remove click event blocker, broken by design
+
+## v5.63.1
+
+* fixed
+    * trying to fix click event blocker
+
 ## v5.63.0
 
 * fixed

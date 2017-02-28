@@ -18,7 +18,7 @@
   $.register({
     rule: [
       {
-        host: /^www\.(freebunker|imagesnake|imgcarry|imgshots)\.com$/,
+        host: /^www\.(freebunker|imagesnake|imgcarry|imgshots)\.(com|org)$/,
         path: /^\/show\.php$/,
         query: /^\?/,
       },
@@ -27,7 +27,7 @@
         path: /^\/show\//,
       },
       {
-        host: /^www\.(imagesnake|imagefruit)\.com$/,
+        host: /^www\.(imagesnake|imagefruit)\.(com|org)$/,
         path: /^\/(img|show)\/.+/,
       },
       {
