@@ -334,6 +334,7 @@
     * imagefruit.com
     * imageshots.com
     * imagesnake.com
+    * imagesnake.org
     * imgcarry.com
     * imgshots.com
 * imagetwist
@@ -351,6 +352,7 @@
 * emptypix
     * emptypix.com
     * imageleon.com
+    * imgdomino.com
     * overdream.cz
     * sexseeimage.com
     * sexyxpixels.com
@@ -426,6 +428,7 @@
     * short.est
     * u2ks.com
     * viid.me
+    * xiw34.com
 * seomafia.net
     * apploadz.ru
     * seomafia.net
@@ -582,6 +585,7 @@
     * gunting.in
     * link.animagz.org
     * sipkur.net
+    * sipkur.us
 * imgnova.xyz
     * hentai-hot.xyz
     * hentai-king.online
@@ -591,6 +595,7 @@
     * ouo.press
 * shink.in
     * croco.me
+    * croco.site
     * fas.li
     * shink.in
 * cuzle.com
@@ -687,7 +692,7 @@
     * embedupload.com
     * filoops.info
     * fit.sh
-    * fiuxy.net
+    * fiuxy.co
     * forbes.com
     * fotolink.su
     * fotosik.pl
