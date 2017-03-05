@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^openload\.co$/,
+    host: /^(openload\.co|oload\.tv)$/,
     path: /^\/f\/.*/,
   },
   start: function (m) {
