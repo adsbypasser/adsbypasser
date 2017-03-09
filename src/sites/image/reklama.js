@@ -80,7 +80,7 @@
           /^www\.hotimage\.uk$/,
           /^imgease\.re$/,
           /^goimg\.xyz$/,
-          /^pic2pic\.site$/,
+          /^(pic2pic|picz)\.site$/,
           /^darpix\.ga$/,
           /^sxpics\.nl$/,
           /^darpix\.desi$/,
