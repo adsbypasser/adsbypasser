@@ -61,7 +61,7 @@
           /imagedecode\.com$/,
           /^www\.freephotohostin\.com$/,
           // net
-          /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics)\.net$/,
+          /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics|pix)\.net$/,
           /^(imagesouls|naughtygate|gallerycloud|imagelaser|picture-bang|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
           // org
           /^(shot|adult)img\.org$/,
