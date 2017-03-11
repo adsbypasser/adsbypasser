@@ -1,7 +1,7 @@
 $.register({
   rule: {
     host: /^al\.ly$/,
-    host: /^ally.sh$/,
+    host: /^ally\.sh$/,
   },
   ready: function () {
     'use strict';
