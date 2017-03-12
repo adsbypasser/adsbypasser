@@ -154,6 +154,7 @@
     * imgmaster.net
     * imgnext.com
     * imgnimz.com
+    * imgpix.net
     * imgplus.ru
     * imgprime.com
     * imgproject.net
@@ -170,8 +171,8 @@
     * imgslip.com
     * imgspot.org
     * imgstudio.org
-    * imgtor.pw
     * imgtaxi.com
+    * imgtor.pw
     * imgtornado.com
     * imgtrial.com
     * imgtwyti.com
@@ -201,6 +202,7 @@
     * picspornfree.me
     * picstwist.com
     * picture-bang.net
+    * picz.site
     * pix-link.net
     * pixup.us
     * pixxx.me
@@ -514,6 +516,7 @@
     * anisubsia.tk
     * auto14.pw
     * autofans.pw
+    * awsubs.cf
     * azhie.net
     * blogspot.com
     * compul.in
@@ -552,6 +555,8 @@
     * safelinksreview.com
     * satuasia.com
     * sehatlega.com
+    * sidespace.net
+    * sinopsisfilmku.com
     * sports14.pw
     * srelink.com
     * susutin.com
@@ -610,6 +615,9 @@
     * filesbucks.com
     * payurl.me
     * pir.im
+    * tl.tc
+    * url.ht
+    * urle.co
     * urlst.me
     * worldhack.net
 * linkdrop.net
@@ -627,6 +635,18 @@
     * 10co.xyz
     * 10co.co
     * 10co.me
+* openload.co
+    * oload.tv
+    * openload.co
+* al.ly
+    * al.ly
+    * ally.sh
+* igg-games.com
+    * igg-games.com
+    * igg-games.co
+* allkeyshop.com
+    * allkeyshop.com
+    * cshort.org
 * else
     * 01.nl
     * 1be.biz
@@ -649,8 +669,6 @@
     * ah.pe
     * aka.gr
     * akoam.com
-    * al.ly
-    * allkeyshop.com
     * anafile.com
     * anonymbucks.com
     * arab.sh
@@ -709,7 +727,6 @@
     * hotshorturl.com
     * ichan.org
     * ifotos.pl
-    * igg-games.com
     * ilix.in
     * ilovebanten.com
     * ima.so
@@ -773,6 +790,7 @@
     * lnk.in
     * lolinez.com
     * loook.ga
+    * looy.in
     * lostpic.net
     * lovechix.com
     * madlink.sk
@@ -791,10 +809,10 @@
     * nutshellurl.com
     * ohleech.com
     * oni.vn
-    * openload.co
     * oxyl.me
     * p.pw
     * pasted.co
+    * pdi2.net
     * pic-money.ru
     * pic-upload.de
     * piccash.net
@@ -826,6 +844,7 @@
     * short.am
     * shortskip.com
     * shorturl.rapeit.net
+    * shrink-service.it
     * sht.io
     * similarsites.com
     * smll.io
@@ -835,6 +854,7 @@
     * streamingfrench.net
     * subirimagenes.com
     * supercheats.com
+    * techfunda.net
     * thinfi.com
     * tinyarrows.com
     * tinypic.com
