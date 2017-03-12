@@ -1,3 +1,28 @@
+## TBA
+
+* fixed
+    * susutin.com
+    * fas.li
+* added
+    * url.ht
+    * urle.co
+    * looy.in
+    * picz.site
+    * imgpix.net
+    * oload.tv
+    * ally.sh
+    * sinopsisfilmku.com
+    * awsubs.cf
+    * igg-games.co
+    * shrink-service.it
+    * techfunda.net
+    * tl.tc
+    * sidespace.net
+    * cshort.org
+    * pdi2.net
+* changed
+    * trying to fix problem for usi
+
 ## v5.64.0
 
 * fixed
