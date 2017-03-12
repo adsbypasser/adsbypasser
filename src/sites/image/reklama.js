@@ -34,9 +34,9 @@
         host: [
           // com
           // starts with image
-          /^image(ontime|corn|picsa|horse)\.com$/,
+          /^image(ontime|corn|picsa|horse|decode)\.com$/,
           // ends with image
-          /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy)image\.com$/,
+          /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy|dam)image\.com$/,
           // starts with img
           /^img(icy|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|-pay|nimz|binbou|2share|22|cover|hit|main|trial|blank|-uploads|reputa|fapper)\.com$/,
           // starts with img-
@@ -44,6 +44,8 @@
           // starts with www
           /^www\.img(blow|lemon|4sharing)\.com$/,
           /^www\.imagefolks\.com$/,
+          /^www\.freephotohostin\.com$/,
+          /^www\.hotimage\.uk$/,
           // starts with xxx
           /^xxx(imagenow|screens)\.com$/,
           // else
@@ -57,9 +59,6 @@
           /^nudeximg\.com$/,
           /imgseeds?\.com$/,
           /xxxsparrow?\.com$/,
-          /damimage\.com$/,
-          /imagedecode\.com$/,
-          /^www\.freephotohostin\.com$/,
           // net
           /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics|pix)\.net$/,
           /^(imagesouls|naughtygate|gallerycloud|imagelaser|picture-bang|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
@@ -77,7 +76,6 @@
           /^vava\.in$/,
           /^(pixxx|picspornfree|imgload|fapat)\.me$/,
           /^(domaink|pic2pic|porno-pirat|24avarii|loftlm|18pron|imgplus)\.ru$/,
-          /^www\.hotimage\.uk$/,
           /^imgease\.re$/,
           /^goimg\.xyz$/,
           /^(pic2pic|picz)\.site$/,
