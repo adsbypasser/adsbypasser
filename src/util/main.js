@@ -120,7 +120,9 @@
     delete $._main;
     delete $._findHandler;
 
-    if (window.top !== window.self) {
+    // use unsafeWindow here because usi (a manager for Android Firefox) does
+    // not implement the sandbox correctly
+    if (unsafeWindow.top !== unsafeWindow.self) {
       // skip frames
       return;
     }
