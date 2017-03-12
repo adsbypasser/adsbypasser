@@ -1,15 +1,17 @@
 $.register({
   rule: {
-    host: /^(www\.)?allkeyshop\.com$/,
+    host: [
+      /^(www\.)?allkeyshop\.com$/,
+      /^cshort\.org$/,
+    ],
   },
   ready: function (m) {
     'use strict';
 
     var matches = $.searchScripts(/window\.location\.href = "([^"]+)"/);
-    $.openLink(matches[1]);
-
-    // Avoid that the page redirects when it's already loading the target page
-    $.removeAllTimer();
+    matches = matches[1];
+    $.nuke(matches);
+    $.openLink(matches);
   },
 });
 
