@@ -9,8 +9,6 @@
         /^filesbucks\.com$/,
         /^elink\.link$/,
         /^(payurl|urlst)\.me$/,
-        /^url\.ht$/,
-        /^urle\.co$/,
         /^www\.worldhack\.net$/,
         /^123link\.top$/,
         /^pir\.im$/,
