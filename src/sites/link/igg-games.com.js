@@ -1,7 +1,7 @@
 $.register({
   rule: {
-    host: /^igg-games\.com$/,
-    query: /^\?xurl=(.*)$/,
+    host: /^igg-games\.com?$/,
+    query: /\?xurl=([^?]*)$/,
   },
   start: function (m) {
     'use strict';
