@@ -146,6 +146,7 @@ $.register({
       /^motonews\.club$/,
       /^(autofans|landscapenature)\.pw$/,
       /^ani-share\.com$/,
+      /^sinopsisfilmku\.com$/,
     ],
     query: /get=([^&]+)/,
   },
