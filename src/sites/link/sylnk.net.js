@@ -92,6 +92,7 @@ $.register({
         /^safelink(s?review(er)?)\.com?$/,
         /^susutin\.com$/,
         /^(getcomics|miuitutorial)\.gq$/,
+        /^awsubs\.cf$/,
       ],
       query: /id=(\w+=*)/,
     },
