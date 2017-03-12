@@ -120,7 +120,12 @@
         // so we have to explicitly assign property descriptor
         if (target === unsafeWindow && key === 'open') {
           var d = Object.getOwnPropertyDescriptor(target, key);
-          d.value = clone(value);
+          // wrap the returned object back so that content script can see
+          // through the object
+          d.value = clone(function () {
+            var rv = value();
+            return cloneInto(rv, unsafeWindow);
+          });
           Object.defineProperty(target, key, d);
         } else {
           target[key] = clone(value);
