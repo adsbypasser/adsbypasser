@@ -148,6 +148,7 @@ $.register({
       /^(autofans|landscapenature)\.pw$/,
       /^ani-share\.com$/,
       /^sinopsisfilmku\.com$/,
+      /^sidespace\.net$/,
     ],
     query: /get=([^&]+)/,
   },
