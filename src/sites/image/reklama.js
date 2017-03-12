@@ -61,7 +61,7 @@
           /imagedecode\.com$/,
           /^www\.freephotohostin\.com$/,
           // net
-          /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics)\.net$/,
+          /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics|pix)\.net$/,
           /^(imagesouls|naughtygate|gallerycloud|imagelaser|picture-bang|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
           // org
           /^(shot|adult)img\.org$/,
@@ -80,7 +80,7 @@
           /^www\.hotimage\.uk$/,
           /^imgease\.re$/,
           /^goimg\.xyz$/,
-          /^pic2pic\.site$/,
+          /^(pic2pic|picz)\.site$/,
           /^darpix\.ga$/,
           /^sxpics\.nl$/,
           /^darpix\.desi$/,
