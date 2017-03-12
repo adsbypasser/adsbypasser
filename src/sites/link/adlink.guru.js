@@ -15,6 +15,7 @@
         /^123link\.top$/,
         /^pir\.im$/,
         /^bol\.tl$/,
+        /^tl\.tc$/,
       ],
     },
     ready: function () {
