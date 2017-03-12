@@ -3,7 +3,7 @@ $.register({
     host: [
       /^openload\.co$/,
       /^oload\.tv$/,
-       ],
+    ],
     path: /^\/f\/.*/,
   },
   start: function (m) {
@@ -13,7 +13,7 @@ $.register({
   },
   ready: function () {
     'use strict';
-    
+
     setTimeout(function () {
       var timer = $('#downloadTimer');
       timer.style.display = 'none';
