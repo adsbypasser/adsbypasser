@@ -1,13 +1,14 @@
 $.register({
   rule: {
     host: /^igg-games\.com?$/,
-    query: /\?xurl=([^?]*)$/,
+    path: /\/urls\/([^\/]*)$/,
   },
   start: function (m) {
     'use strict';
-
-    var url = 'http' + decodeURIComponent(m.query[1]);
-    $.openLink(url);
+    
+    var url = atob(m.query[1]);
+    url = 'http' + decodeURIComponent(url.substr(url.lastIndexOf('xurl=') + 5));
+    $.openLink(url);	
   },
 });
 
