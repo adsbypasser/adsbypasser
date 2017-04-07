@@ -1,6 +1,5 @@
 'use strict';
 
-var Proxy = require('harmony-proxy');
 var _ = require('lodash');
 var fs = require('fs');
 var connect = require('connect');
