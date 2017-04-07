@@ -1,7 +1,7 @@
 {
   "name": "adsbypasser",
   "version": "5.65.0",
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
     "url": "https://github.com/adsbypasser/adsbypasser.git"
