@@ -1,7 +1,6 @@
 (function (context, factory) {
   if (typeof module === 'object' && typeof module.exports === 'object') {
-    var bluebird = require('bluebird');
-    module.exports = factory(context, bluebird.Promise);
+    module.exports = factory(context, Promise);
   } else {
     var P = null;
     if (context.unsafeWindow.Future) {
