@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?freeimgup\.com$/,
     path: /^\/xxx\//,
   },
-  ready: function () {
-    'use strict';
-
-    var img = $('#mainimage');
-    $.openImage(img.src);
+  async ready () {
+    const img = $('#mainimage');
+    await $.openImage(img.src);
   },
 });
