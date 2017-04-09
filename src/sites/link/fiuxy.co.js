@@ -1,9 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?fiuxy\.co$/,
     path: /^\/links?\/$/,
   },
-  ready: function () {
-    $.openLink($('a.btn.a').href);
+  async ready () {
+    await $.openLink($('a.btn.a').href);
   }
 });
