@@ -1,13 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^www\.fileproject\.com\.br$/,
     path: /^\/files\/+/,
   },
-  ready: function () {
-    'use strict';
-
-    var m = $.searchScripts(/<a id="down" href="([^"]+)">/);
-
-    $.openLink(m[1]);
+  async ready () {
+    const m = $.searchFromScripts(/<a id="down" href="([^"]+)">/);
+    await $.openLink(m[1]);
   },
 });
