@@ -1,20 +1,22 @@
-$.register({
+_.register({
   rule: 'http://adfoc.us/*',
-  ready: function () {
-    'use strict';
-
-    var root = document.body;
-    var observer = new MutationObserver(function (mutations) {
-      var o = $.$('#showSkip');
-      if (o) {
-        observer.disconnect();
-        o = o.querySelector('a');
-        $.openLink(o.href);
-      }
+  async ready () {
+    const promise = new Promise((resolve) => {
+      const root = document.body;
+      const observer = new MutationObserver(() => {
+        let o = $.$('#showSkip');
+        if (o) {
+          observer.disconnect();
+          o = o.querySelector('a');
+          resolve(o.href);
+        }
+      });
+      observer.observe(root, {
+        childList: true,
+        subtree: true,
+      });
     });
-    observer.observe(root, {
-      childList: true,
-      subtree: true,
-    });
+    const url = await promise;
+    await $.openLink(url);
   },
 });

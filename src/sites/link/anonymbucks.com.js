@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^anonymbucks\.com$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('#boton-continuar');
+  async ready () {
+    const a = $('#boton-continuar');
     a.click();
   },
 });
