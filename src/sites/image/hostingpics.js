@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://www.hostingpics.net/viewer.php?id=*',
-  ready: function () {
-    'use strict';
-
-    var i = $('#img_viewer');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#img_viewer');
+    await $.openImage(i.src);
   },
 });

@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^www\.(h-animes|adultmove)\.info/,
     path: /^\/.+\/.+\/.+\.html$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('.dlbutton2 > a');
-    $.openImage(a.href);
+  async ready () {
+    const a = $('.dlbutton2 > a');
+    await $.openImage(a.href);
   },
 });

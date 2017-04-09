@@ -1,18 +1,14 @@
-$.register({
+_.register({
   rule: 'http://hentaimg.com/mg/lndex-1.php?img=*',
-  ready: function () {
-    'use strict';
-
-    $.openLink('index-1.php' + window.location.search);
+  async ready () {
+    await $.openLink('index-1.php' + window.location.search);
   },
 });
 
-$.register({
+_.register({
   rule: 'http://hentaimg.com/mg/index-1.php?img=*',
-  ready: function () {
-    'use strict';
-
-    var i = $('#content img');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#content img');
+    await $.openImage(i.src);
   },
 });
