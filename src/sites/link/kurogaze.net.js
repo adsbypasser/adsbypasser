@@ -1,24 +1,20 @@
-$.register({
+_.register({
   rule: {
     host: /^st\.kurogaze\.net$/,
     query: /r=(.+)/,
   },
-  start: function (m) {
-    'use strict';
-
-    var r = atob(m.query[1]);
-    $.openLink(r);
+  async start (m) {
+    const r = atob(m.query[1]);
+    await $.openLink(r);
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^st\.kurogaze\.net$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('a.redirect');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('a.redirect');
+    await $.openLink(a.href);
   },
 });
