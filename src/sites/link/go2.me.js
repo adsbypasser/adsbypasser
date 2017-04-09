@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^u\.go2\.me$/,
   },
-  ready: function () {
-    'use strict';
-
-    var iframe = $('iframe');
-    $.openLink(iframe.src);
+  async ready () {
+    const iframe = $('iframe');
+    await $.openLink(iframe.src);
   },
 });

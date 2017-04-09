@@ -1,35 +1,30 @@
 (function () {
 
-  var hosts = /^gca\.sh|repla\.cr$/;
+  const hosts = /^gca\.sh|repla\.cr$/;
 
-  $.register({
+  _.register({
     rule: {
       host: hosts,
       path: /^\/adv\/\w+\/(.*)$/,
       query: /^(.*)$/,
       hash: /^(.*)$/,
     },
-    start: function (m) {
-      'use strict';
-
-      var l = m.path[1] + m.query[1] + m.hash[1];
-      $.openLink(l);
+    async start (m) {
+      const l = m.path[1] + m.query[1] + m.hash[1];
+      await $.openLink(l);
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: hosts,
     },
-    ready: function () {
-      'use strict';
+    async ready () {
+      $.remove('iframe');
 
-      $.removeNodes('iframe');
-
-      var jQuery = $.window.$;
-      setTimeout(function () {
-        jQuery("#captcha-dialog").dialog("open");
-      }, 1000);
+      const jQuery = $.window.$;
+      await _.wait(1000);
+      jQuery('#captcha-dialog').dialog('open');
     },
   });
 
