@@ -18,6 +18,7 @@
         /^pir\.im$/,
         /^bol\.tl$/,
         /^tl\.tc$/,
+        /^tmearn\.com$/,
       ],
     },
     ready: function () {
