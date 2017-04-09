@@ -1,21 +1,19 @@
-$.register({
+_.register({
   rule: {
     host: /^mt0\.org$/,
-    path: /^\/[^\/]+\/$/,
+    path: /^\/[^/]+\/$/,
   },
-  ready: function () {
-    'use strict';
-
-    $.removeNodes('frame[name=bottom]');
-
-    var f = $('frame[name=top]');
-    var i = setInterval(function () {
-      var a = $.$('div a', f.contentDocument);
+  async ready () {
+    $.remove('frame[name=bottom]');
+    const f = $('frame[name=top]');
+    // XXX threw away promise
+    const i = setInterval(() => {
+      const a = $.$('div a', f.contentDocument);
       if (!a) {
         return;
       }
       clearInterval(i);
-      $.openLink(a.href)
+      $.openLink(a.href);
     }, 1000);
   },
 });
