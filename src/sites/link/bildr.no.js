@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://bildr.no/view/*',
-  ready: function () {
-    'use strict';
-
-    var i = $('img.bilde');
-    $.openLink(i.src);
+  async ready () {
+    const i = $('img.bilde');
+    await $.openLink(i.src);
   },
 });
