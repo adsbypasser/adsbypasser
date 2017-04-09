@@ -1,14 +1,12 @@
-$.register({
+_.register({
   rule: {
     host: /^elde\.me$/,
   },
-  ready: function () {
-    'use strict';
-
+  async ready () {
     // do not remove recaptcha
-    $.removeNodes('iframe:not([name=undefined])');
+    $.remove('iframe:not([name=undefined])');
 
-    var a = $('#modal-alert');
+    const a = $('#modal-alert');
     a.style.display = 'block';
     a.style.top = 0;
     a.style.left = 0;
