@@ -1,34 +1,8 @@
 (function () {
-  'use strict';
 
-  function action (firstSelector, secondSelector) {
-    $.removeNodes('iframe, #adblock_detect, .popupOverlay');
+  const defaultAction = _.partial(action, '#continuetoimage > form input', 'img[class^=centred]');
 
-    var node = $.$(firstSelector);
-    if (node) {
-      // first pass
-      _.wait(500).then(function () {
-        node.removeAttribute('disabled');
-        return _.wait(500);
-      }).then(function () {
-        // HACK some sites can not receive the click event without focus
-        node.focus();
-        // HACK some sites needs to click multiple times
-        node.click();
-        node.click();
-        node.click();
-      });
-      return;
-    }
-
-    // second pass
-    var i = $(secondSelector);
-    $.openImage(i.src);
-  }
-
-  var defaultAction = _.P(action, '#continuetoimage > form input', 'img[class^=centred]');
-
-  $.register({
+  _.register({
     rule: [
       {
         host: [
@@ -75,7 +49,7 @@
           /^(bulkimg|photo-up|myimg|pop-img|img-pop|ads-img)\.info$/,
           /^vava\.in$/,
           /^(pixxx|picspornfree|imgload|fapat)\.me$/,
-          /^(domaink|pic2pic|porno-pirat|24avarii|loftlm|18pron|imgplus)\.ru$/,
+          /^(domaink|pic2pic|porno-pirat|24aconstii|loftlm|18pron|imgplus)\.ru$/,
           /^imgease\.re$/,
           /^goimg\.xyz$/,
           /^(pic2pic|picz)\.site$/,
@@ -125,26 +99,26 @@
     ready: defaultAction,
   });
 
-  $.register({
+  _.register({
     rule: {
-        host: /^imgtor\.pw$/,
-        path: /^\/img\/.*$/,
+      host: /^imgtor\.pw$/,
+      path: /^\/img\/.*$/,
     },
-    start: function (m) {
-      var imageUrl = 'http://' + m.host[0] + m.path[0].replace("img","img2");
-      $.openLink(imageUrl);
+    async start (m) {
+      const imageUrl = 'http://' + m.host[0] + m.path[0].replace('img', 'img2');
+      await $.openLink(imageUrl);
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^imgrat\.com$/,
       path: /^\/img-.*\.html/,
     },
-    ready: _.P(action, '#close', '#main_image img.center-block.img-responsive'),
+    ready: _.partial(action, '#close', '#main_image img.center-block.img-responsive'),
   });
 
-  $.register({
+  _.register({
     rule: {
       host: [
         /^imageporn\.eu$/,
@@ -152,7 +126,7 @@
       ],
       path: /^\/img-.*\.html/,
     },
-    start: function () {
+    async start () {
       // HACK break script injection
       $.window.document.createElement = null;
     },
@@ -160,7 +134,7 @@
   });
 
   // TODO need to refactor the cookie rule
-  $.register({
+  _.register({
     rule: {
       host: [
         /^(www\.)?img(adult|wallet|taxi)\.com$/,
@@ -168,26 +142,25 @@
       ],
       path: /^\/img-.*\.html$/,
     },
-    start: function () {
-      var c = $.getCookie('ibpuc');
+    async start () {
+      const c = $.getCookie('ibpuc');
       if (c) {
         return;
       }
-      $.post(window.location.href.toString(), {
+      await $.post(window.location.href.toString(), {
         cti: 1,
         ref: '',
         rc: 1,
         rp: 1,
         bt: 0,
         bw: 'edge',
-      }).then(function (data) {
-        window.location.reload();
       });
+      window.location.reload();
     },
-    ready: function () {
+    async ready () {
       $.removeNodes('iframe');
 
-      var node = $.$('#continuetoimage > form input');
+      const node = $.$('#continuetoimage > form input');
       if (node) {
         // first pass
         node.click();
@@ -201,53 +174,50 @@
       $.resetCookies();
 
       // second pass
-      var i = $('img[class^=centred]');
-      $.openImage(i.src);
+      const i = $('img[class^=centred]');
+      await $.openImage(i.src);
     },
   });
 
-  function helper () {
+  async function helper () {
     // crack the shitty qqc.co visitScript 5440
     $.window.setTimeout = _.nop;
 
     // this site checks cookie that caculate from session
     // do an AJAX to skip checking
-    return $.get(window.location.toString()).then(function (data) {
-      return $.toDOM(data);
-    });
+    const data = await $.get(window.location.toString());
+    return $.toDOM(data);
   }
 
-  $.register({
+  _.register({
     rule: {
       host: /^08lkk\.com$/,
       path: /^\/Photo\/img-.+\.html$/,
     },
-    start: function () {
-      helper().then(function (page) {
-        var i = $('img[class^=centred]', page);
-        $.openImage(i.src);
-      });
+    async start () {
+      const page = await helper();
+      const i = $('img[class^=centred]', page);
+      await $.openImage(i.src);
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^08lkk\.com$/,
       path: /^\/\d+\/img-.*\.html$/,
     },
-    start: function () {
-      helper().then(function (page) {
-        var bbcode = $.$('#imagecodes input', page);
-        bbcode = bbcode.value.match(/.+\[IMG\]([^\[]+)\[\/IMG\].+/);
-        bbcode = bbcode[1];
-        bbcode = bbcode.replace('small', 'big');
+    async start () {
+      const page = await helper();
+      let bbcode = $.$('#imagecodes input', page);
+      bbcode = bbcode.value.match(/.+\[IMG\]([^[]+)\[\/IMG\].+/);
+      bbcode = bbcode[1];
+      bbcode = bbcode.replace('small', 'big');
 
-        $.openImage(bbcode);
-      });
+      await $.openImage(bbcode);
     },
   });
 
-  $.register({
+  _.register({
     rule: [
       {
         host: /^imgking\.co$/,
@@ -261,13 +231,13 @@
         path: /^\/img-.*\.html/,
       },
     ],
-    ready: function () {
-      var url = $.window.linkid;
-      $.openImage(url);
+    async ready () {
+      const url = $.window.linkid;
+      await $.openImage(url);
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^imgkings\.com$/,
       path: /^\/img2-.*\.html/,
@@ -275,7 +245,7 @@
     ready: defaultAction,
   });
 
-  $.register({
+  _.register({
     rule: [
       {
         host: /^imagerar\.com$/,
@@ -290,18 +260,41 @@
         path: /^\/img3-.*\.html$/,
       },
     ],
-    ready: function () {
-      var i = $('img[alt]');
-      $.openImage(i.src);
+    async ready () {
+      const i = $('img[alt]');
+      await $.openImage(i.src);
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^img\.yt$/,
       path: /^\/img-.*\.html/,
     },
-    ready: _.P(action, '#continuebutton, #continuetoimage input[type="submit"]', 'img[class^=centred]'),
+    ready: _.partial(action, '#continuebutton, #continuetoimage input[type="submit"]', 'img[class^=centred]'),
   });
+
+  async function action (firstSelector, secondSelector) {
+    $.remove('iframe, #adblock_detect, .popupOverlay');
+
+    const node = $.$(firstSelector);
+    if (node) {
+      // first pass
+      await _.wait(500);
+      node.removeAttribute('disabled');
+      await _.wait(500);
+      // HACK some sites can not receive the click event without focus
+      node.focus();
+      // HACK some sites needs to click multiple times
+      node.click();
+      node.click();
+      node.click();
+      return;
+    }
+
+    // second pass
+    const i = $(secondSelector);
+    await $.openImage(i.src);
+  }
 
 })();
