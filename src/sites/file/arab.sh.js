@@ -1,14 +1,11 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?arab\.sh$/,
     path: /^\/\w+$/,
   },
-  ready: function () {
-    'use strict';
-
-    var f = $('form[name=F1]');
-    setTimeout(function() {
-        f.submit();
-    }, 20000);
+  async ready () {
+    const f = $('form[name=F1]');
+    await _.wait(20 * 1000);
+    f.submit();
   },
 });
