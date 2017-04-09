@@ -293,7 +293,7 @@
       host: /^img\.yt$/,
       path: /^\/img-.*\.html/,
     },
-    ready: _.P(action, '#continuebutton', 'img[class^=centred]'),
+    ready: _.P(action, '#continuebutton, #continuetoimage input[type="submit"]', 'img[class^=centred]'),
   });
 
 })();
