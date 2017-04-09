@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^dailyss\.net$/,
@@ -9,24 +9,20 @@ $.register({
     ],
     path: /^\/image\/.+$/,
   },
-  ready: function () {
-    'use strict';
-
-    var i = $('#image-viewer-container img');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#image-viewer-container img');
+    await $.openImage(i.src);
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^xxx\.porn0day\.com$/,
     path: /^\/image\/.+$/,
   },
-  ready: function () {
-    'use strict';
-
+  async ready () {
     // the URL in img is a thumbnail
-    var i = $('link[rel^=image_src]');
-    $.openImage(i.href);
+    const i = $('link[rel^=image_src]');
+    await $.openImage(i.href);
   },
 });

@@ -69,7 +69,7 @@
         if (k !== _.none) {
           observer.disconnect();
           resolve([k, v, r]);
-          break;
+          return;
         }
       });
       observer.observe(element, config);

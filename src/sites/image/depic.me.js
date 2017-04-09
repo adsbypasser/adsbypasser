@@ -1,14 +1,12 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^depic\.me$/,
       /^(www\.)?picamatic\.com$/,
     ],
   },
-  ready: function () {
-    'use strict';
-
-    var i = $('#pic');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#pic');
+    await $.openImage(i.src);
   },
 });
