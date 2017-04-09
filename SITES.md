@@ -610,12 +610,15 @@
     * 123link.top
     * adlink.guru
     * bol.tl
+    * cut-urls.com
     * cypt.ga
     * elink.link
     * filesbucks.com
+    * hashe.in
     * payurl.me
     * pir.im
     * tl.tc
+    * tmearn.com
     * url.ht
     * urle.co
     * urlst.me
