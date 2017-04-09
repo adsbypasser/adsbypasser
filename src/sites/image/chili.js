@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^imgchili\.(com|net)$/,
@@ -6,18 +6,15 @@ $.register({
     ],
     path: /^\/show\//,
   },
-  ready: function () {
-    'use strict';
+  async ready () {
+    $.remove('iframe, #ad');
 
-    $.removeNodes('iframe, #ad');
-
-    try {
-      $('#all').style.display = '';
-    } catch (e) {
-      // do nothing
+    let o = $.$('#all');
+    if (o) {
+      o.style.display = '';
     }
 
-    var o = $('#show_image, #image');
-    $.openImage(o.src);
+    o = $('#show_image, #image');
+    await $.openImage(o.src);
   },
 });
