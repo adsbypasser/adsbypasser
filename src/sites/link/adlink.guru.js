@@ -11,6 +11,7 @@
         /^(payurl|urlst)\.me$/,
         /^url\.ht$/,
         /^urle\.co$/,
+        /^cut-urls\.com$/,
         /^hashe\.in$/,
         /^www\.worldhack\.net$/,
         /^123link\.top$/,
