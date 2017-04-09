@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^pdi2\.net$/,
   },
-  ready: function () {
-    'use strict';
-
-    var s = $.searchScripts(/top\.location = '([^']+)'/);
+  async ready () {
+    let s = $.searchFromScripts(/top\.location = '([^']+)'/);
     s = s[1];
-    $.openLink(s);
+    await $.openLink(s);
   },
 });
