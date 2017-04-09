@@ -7,6 +7,7 @@ $.register({
     'use strict';
 
     var a = $('#btn-main');
-    $.openLink(a.href);
+//    $.openLink(a.href);
+    a.click();
   },
 });
