@@ -1,17 +1,14 @@
-$.register({
+_.register({
   rule: {
     host: /\.link2dollar\.com$/,
     path: /^\/\d+$/,
   },
-  ready: function () {
-    'use strict';
-
-    var m = $.searchScripts(/var rlink = '([^']+)';/);
+  async ready () {
+    let m = $.searchFromScripts(/const rlink = '([^']+)';/);
     if (!m) {
       throw new _.AdsBypasserError('site changed');
     }
     m = m[1];
-
-    $.openLink(m);
+    await $.openLink(m);
   },
 });

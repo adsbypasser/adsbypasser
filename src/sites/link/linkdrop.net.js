@@ -1,7 +1,6 @@
 (function () {
-  'use strict';
 
-  $.register({
+  _.register({
     rule: {
       host: [
         /^(www\.)?linkdrop\.net$/,
@@ -12,10 +11,10 @@
         /^earningurl\.com$/,
       ],
     },
-    ready: function () {
-      $.removeNodes('iframe');
+    async ready () {
+      $.remove('iframe');
 
-      var f = getForm();
+      const f = getForm();
       if (!f) {
         return;
       }
@@ -25,14 +24,14 @@
   });
 
 
-  $.register({
+  _.register({
     rule: {
       host: /^sflnk\.me$/,
     },
-    ready: function () {
-      $.removeNodes('iframe');
+    async ready () {
+      $.remove('iframe');
 
-      var f = getForm();
+      let f = getForm();
       if (!f) {
         f = $('#link-view');
         f.submit();
@@ -45,8 +44,8 @@
 
 
   function getForm () {
-    var jQuery = $.window.$;
-    var f = jQuery('form[action="/links/go"], form[action="/links/linkdropgo"]');
+    const jQuery = $.window.$;
+    const f = jQuery('form[action="/links/go"], form[action="/links/linkdropgo"]');
     if (f.length > 0) {
       return f;
     }
@@ -54,21 +53,22 @@
   }
 
 
+  // XXX threw away promise
   function sendRequest (f) {
-    var jQuery = $.window.$;
+    const jQuery = $.window.$;
     jQuery.ajax({
       dataType: 'json',
       type: 'POST',
       url: f.attr('action'),
       data: f.serialize(),
-      success: function (result, status, xhr) {
+      success: (result) => {
         if (result.url) {
           $.openLink(result.url);
         } else {
           _.warn(result.message);
         }
       },
-      error: function (xhr, status, error) {
+      error: (xhr, status, error) => {
         _.warn(xhr, status, error);
       },
     });

@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^lnx\.lu$/,
@@ -6,10 +6,8 @@ $.register({
       /^z\.gs$/,
     ],
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('#clickbtn a');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('#clickbtn a');
+    await $.openLink(a.href);
   },
 });

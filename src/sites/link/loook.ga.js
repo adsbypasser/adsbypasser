@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?loook\.ga$/,
     path: /^\/\d+$/
   },
-  ready: function (m) {
-    'use strict';
-
-    var a = $('#download_link > a.btn');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('#download_link > a.btn');
+    await $.openLink(a.href);
   },
 });

@@ -1,16 +1,13 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?link\.im$/,
     path: /^\/\w+$/,
   },
-  start: function () {
-    'use strict';
-
-    $.post(document.location.href, {
+  async start () {
+    const text = await $.post(document.location.href, {
       image: 'Continue',
-    }).then(function (text) {
-      var m = text.match(/window\.location\.replace\('([^']+)'\)/);
-      $.openLink(m[1]);
     });
+    const m = text.match(/window\.location\.replace\('([^']+)'\)/);
+    await $.openLink(m[1]);
   },
 });

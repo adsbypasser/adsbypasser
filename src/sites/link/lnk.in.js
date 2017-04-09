@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^lnk\.in$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('#divRedirectText a');
-    $.openLink(a.innerHTML);
+  async ready () {
+    const a = $('#divRedirectText a');
+    await $.openLink(a.innerHTML);
   },
 });

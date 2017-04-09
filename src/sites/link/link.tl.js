@@ -1,18 +1,16 @@
-$.register({
+_.register({
   rule: {
     host: /^link\.tl$/,
     path: /^\/fly\/site\.php$/,
     query: /^\?to=(.+)$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('.skip > .btn');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('.skip > .btn');
+    await $.openLink(a.href);
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^link\.tl$/,
     path: /[^^](https?:\/\/.+)$/,
@@ -24,14 +22,12 @@ $.register({
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^link\.tl$/,
     path: /^\/(.+)$/,
   },
-  start: function (m) {
-    'use strict';
-
-    $.openLink('/fly/site.php?to=' + m.path[1]);
+  async start (m) {
+    await $.openLink('/fly/site.php?to=' + m.path[1]);
   },
 });

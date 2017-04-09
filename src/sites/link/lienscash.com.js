@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://www.lienscash.com/l/*',
-  ready: function () {
-    'use strict';
-
-    var a = $('#redir_btn');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('#redir_btn');
+    await $.openLink(a.href);
   },
 });

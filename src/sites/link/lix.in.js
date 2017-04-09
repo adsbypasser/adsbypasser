@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://lix.in/-*',
-  ready: function () {
-    'use strict';
-
-    var i = $.$('#ibdc');
+  async ready () {
+    let i = $.$('#ibdc');
     if (i) {
       // captcha, do nothing
       return;
@@ -14,6 +12,6 @@ $.register({
       return;
     }
     i = $('iframe');
-    $.openLink(i.src);
+    await $.openLink(i.src);
   },
 });
