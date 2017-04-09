@@ -6,7 +6,6 @@ $.register({
   ready: function (m) {
     'use strict';
 
-    var a = $('#btn-main');
-    $.openLink(a.href);
+    $('form').submit();
   },
 });
