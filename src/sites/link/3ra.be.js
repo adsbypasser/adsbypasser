@@ -1,13 +1,11 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?3ra\.be$/,
   },
-  ready: function () {
-    'use strict';
+  async ready () {
+    $.remove('iframe');
 
-    $.removeNodes('iframe');
-
-    var f = $.window.fc;
+    let f = $.window.fc;
     if (!f) {
       throw new _.AdsBypasserError('window.fc is undefined');
     }
@@ -16,6 +14,6 @@ $.register({
     if (!f) {
       throw new _.AdsBypasserError('url pattern outdated');
     }
-    $.openLink(f[1]);
+    await $.openLink(f[1]);
   },
 });
