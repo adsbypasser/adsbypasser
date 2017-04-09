@@ -1,10 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^thinfi\.com$/,
   },
-  ready: function () {
-    'use strict';
-    var a = $('div p a');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('div p a');
+    await $.openLink(a.href);
   },
 });
