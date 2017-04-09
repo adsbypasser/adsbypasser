@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^(b4he|fullimg)\.com/,
@@ -7,21 +7,17 @@ $.register({
     ],
     query: /^\?v=([^&]+)/,
   },
-  start: function (m) {
-    'use strict';
-
-    $.openImage('/images/' + m.query[1]);
+  async start (m) {
+    await $.openImage('/images/' + m.query[1]);
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^imagep2p\.com$/,
     query: /^\?v=([^&]+)/,
   },
-  start: function (m) {
-    'use strict';
-
-    $.openImage('/images/' + m.query[1] + '.jpeg');
+  async start (m) {
+    await $.openImage('/images/' + m.query[1] + '.jpeg');
   },
 });

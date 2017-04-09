@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^bayimg\.com$/,
   },
-  ready: function () {
-    'use strict';
-
-    var i = $('#mainImage');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#mainImage');
+    await $.openImage(i.src);
   },
 });
