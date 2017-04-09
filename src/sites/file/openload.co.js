@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^openload\.co$/,
@@ -6,49 +6,47 @@ $.register({
     ],
     path: /^\/f\/.*/,
   },
-  start: function (m) {
+  async start () {
     $.window.adblock = false;
     $.window.adblock2 = false;
     $.window.popAdsLoaded = true;
   },
-  ready: function () {
-    'use strict';
+  async ready () {
+    await _.wait(500);
 
-    setTimeout(function () {
-      var timer = $('#downloadTimer');
-      timer.style.display = 'none';
+    const timer = $('#downloadTimer');
+    timer.style.display = 'none';
 
-      var dlCtn = $('#realdl');
-      dlCtn.style.display = 'inline-block';
+    const dlCtn = $('#realdl');
+    dlCtn.style.display = 'inline-block';
 
-      var dlBtn = $('a', dlCtn);
-      var ePath = $('#streamurl');
-      dlBtn.href = "/stream/" + ePath.textContent;
+    const dlBtn = $('a', dlCtn);
+    const ePath = $('#streamurl');
+    dlBtn.href = '/stream/' + ePath.textContent;
 
-      var videoCtn = $.$('.videocontainer');
+    const videoCtn = $.$('.videocontainer');
 
-      if (videoCtn) {
-        var overlay = $('#videooverlay', videoCtn);
-        overlay.click();
+    if (videoCtn) {
+      const overlay = $('#videooverlay', videoCtn);
+      overlay.click();
 
-        // use iframe instead of $.openLink
-        // in order to not affect streaming
-        dlBtn.addEventListener('click', function (evt) {
-          evt.preventDefault();
+      // use iframe instead of $.openLink
+      // in order to not affect streaming
+      dlBtn.addEventListener('click', (evt) => {
+        evt.preventDefault();
 
-          // TODO *iframe* hack is not normal
-          // please generalize in the future
-          var iframe = document.createElement('iframe');
-          iframe.src = dlBtn.href;
-          document.body.appendChild(iframe);
-        });
+        // TODO *iframe* hack is not normal
+        // please generalize in the future
+        const iframe = document.createElement('iframe');
+        iframe.src = dlBtn.href;
+        document.body.appendChild(iframe);
+      });
 
-        _.info(_.T('{0} -> {1}')(window.location, dlBtn.href));
+      _.info(_.template('{0} -> {1}')(window.location, dlBtn.href));
 
-        dlBtn.click();
-      } else {
-        $.openLink(dlBtn.href);
-      }
-    }, 500);
+      dlBtn.click();
+    } else {
+      await $.openLink(dlBtn.href);
+    }
   }
 });
