@@ -1,14 +1,12 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?mirrorcreator\.com$/,
     path: /^\/showurl\.php$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $.$('#redirectlink a');
+  async ready () {
+    let a = $.$('#redirectlink a');
     if (a) {
-      $.openLink(a.href);
+      await $.openLink(a.href);
       return;
     }
 
@@ -17,6 +15,6 @@ $.register({
     if (!a.match(/^http/)) {
       throw new _.AdsBypasserError('not a valid URL');
     }
-    $.openLink(a);
+    await $.openLink(a);
   },
 });
