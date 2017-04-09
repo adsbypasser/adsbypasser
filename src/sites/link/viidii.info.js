@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^www\.viidii\.info$/,
   },
-  ready: function () {
-    'use strict';
-
-    var o = $('#directlink');
-    $.openLink(o.href);
+  async ready () {
+    const o = $('#directlink');
+    await $.openLink(o.href);
   },
 });
