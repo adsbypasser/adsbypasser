@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^x\.pixfarm\.net$/,
     path: /^\/sexy\/\d+\/\d+\/.+\.html$/,
   },
-  ready: function () {
-    'use strict';
-
-    var i = $('img');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('img');
+    await $.openImage(i.src);
   },
 });
