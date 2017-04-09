@@ -1,13 +1,11 @@
-$.register({
+_.register({
   rule: {
     host: /^www\.mrjh\.org$/,
     path: /^\/gallery\.php$/,
     query: /^\?entry=(.+)$/,
   },
-  ready: function (m) {
-    'use strict';
-
-    var url = m.query[1];
-    $.openImage('/' + url);
+  async ready (m) {
+    const url = m.query[1];
+    await $.openImage('/' + url);
   },
 });
