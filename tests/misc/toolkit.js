@@ -1,11 +1,9 @@
 'use strict';
 
-var Proxy = require('harmony-proxy');
 var _ = require('lodash');
 var fs = require('fs');
 var connect = require('connect');
 var serveStatic = require('serve-static');
-var bluebird = require('bluebird');
 
 var defaultConfig = {
   version: 1,
