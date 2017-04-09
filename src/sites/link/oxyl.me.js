@@ -1,17 +1,14 @@
-$.register({
+_.register({
   rule: {
     host: /^oxyl\.me$/,
   },
-  ready: function () {
-    'use strict';
-
+  async ready () {
     // If the list contains only one link
-    var l = $.$$('.links-container.result-form > a.result-a');
-
+    const l = $.$$('.links-container.result-form > a.result-a');
     // If only one link, we redirect to it
-    if (l.size() > 1) {
+    if (l.length > 1) {
       return;
     }
-    $.openLink(l.at(0).href);
+    await $.openLink(l[0].href);
   },
 });

@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?ohleech\.com$/,
     path: /^\/dl\/$/,
   },
-  ready: function () {
-    'use strict';
-
+  async ready () {
     $.window.startdl();
   },
 });

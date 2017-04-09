@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?ouo\.(io|press)$/,
     path: /^\/go\/\w+$/,
   },
-  ready: function (m) {
-    'use strict';
-
+  async ready () {
     $('form').submit();
   },
 });
