@@ -1,17 +1,15 @@
-$.register({
+_.register({
   rule: {
     host: /^img3x\.net$/,
   },
-  ready: function () {
-    'use strict';
-
-    var f = $.$('form');
+  async ready () {
+    let f = $.$('form');
     if (f) {
       f.submit();
       return;
     }
 
     f = $('#show_image');
-    $.openImage(f.src);
+    await $.openImage(f.src);
   },
 });

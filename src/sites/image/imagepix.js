@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://imagepix.org/image/*.html',
-  ready: function () {
-    'use strict';
-
-    var i = $('img[border="0"]');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('img[border="0"]');
+    await $.openImage(i.src);
   },
 });

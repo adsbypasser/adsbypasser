@@ -1,21 +1,6 @@
 (function () {
-  'use strict';
 
-  function run () {
-    var i = $('#img_obj');
-    $.openImage(i.src, {
-      referer: true,
-    });
-  }
-
-  function run2 () {
-    var i = $('#img_obj');
-    $.openImage(i.src, {
-      replace: true,
-    });
-  }
-
-  $.register({
+  _.register({
     rule: [
       {
         host: [
@@ -49,12 +34,26 @@
     ready: run,
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^www\.imgcarry\.com$/,
       path: /^\/show\//,
     },
     ready: run2,
   });
+
+  async function run () {
+    const i = $('#img_obj');
+    await $.openImage(i.src, {
+      referer: true,
+    });
+  }
+
+  async function run2 () {
+    const i = $('#img_obj');
+    await $.openImage(i.src, {
+      replace: true,
+    });
+  }
 
 })();

@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^imagik\.fr$/,
     path: /^\/view(-rl)?\/(.+)/,
   },
-  start: function (m) {
-    'use strict';
-
+  async start (m) {
     // mimetype is text/plain
-    $.openImage('/uploads/' + m.path[2]);
+    await $.openImage('/uploads/' + m.path[2]);
   },
 });

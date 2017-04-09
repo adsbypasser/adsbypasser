@@ -1,18 +1,16 @@
-$.register({
+_.register({
   rule: {
     host: /^img24\.org$/,
   },
-  ready: function () {
-    'use strict';
-
-    var f = $.$('img.img-polaroid + form');
+  async ready () {
+    let f = $.$('img.img-polaroid + form');
     if (f) {
       f.submit();
       return;
     }
 
     f = $('img.img-polaroid');
-    $.openImage(f.src, {
+    await $.openImage(f.src, {
       referer: true,
     });
   },

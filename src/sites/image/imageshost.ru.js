@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://imageshost.ru/photo/*/id*.html',
-  ready: function () {
-    'use strict';
-
-    var a = $('#bphoto a');
-    $.openImage(a.href);
+  async ready () {
+    const a = $('#bphoto a');
+    await $.openImage(a.href);
   },
 });

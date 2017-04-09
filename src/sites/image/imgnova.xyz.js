@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^imgnova\.xyz$/,
@@ -8,9 +8,7 @@ $.register({
     path: /^\/i\/.+\.php$/,
     query: /f=(.+)$/,
   },
-  start: function (m) {
-    'use strict';
-
-    $.openImage('f/' + m.query[1]);
+  async start (m) {
+    await $.openImage('f/' + m.query[1]);
   },
 });
