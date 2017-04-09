@@ -1,38 +1,33 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?gallery(nova|sense)\.se$/,
     path: /^\/site\/v\//,
   },
-  ready: function () {
-    'use strict';
-
-    var i = $('#myUniqueImg').parentNode;
-    $.openImage(i.href);
+  async ready () {
+    const i = $('#myUniqueImg').parentNode;
+    await $.openImage(i.href);
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?gallerynova\.se$/,
     path: /^\/site\/viewImage\/(\w+)/,
   },
-  ready: function (m) {
-    'use strict';
-
+  async ready (m) {
     // Confirm value, seems to always be '0' yet, but we anyways get it in case it changes in the future.
-    var confirm = $.searchScripts(/\$\("#confirmImage"\).val\("([^"]+)"\)/)[1];
+    const confirm = $.searchFromScripts(/\$\("#confirmImage"\).val\("([^"]+)"\)/)[1];
 
-    $.post('/site/viewConfirmCode/' + m.path[1], {
-      confirm: confirm
-    }).then(function (rawJson) {
-      // Good to know: the image is already present in the JSON as base64
-      var json = _.parseJSON(rawJson);
-
-      // Allows to decode \n \t \r and other characters like this
-      var decodedHTML = document.createTextNode(json.content).data;
-
-      var imgURL = decodedHTML.match(/<a href="([^"]+)" target="_blank">/)[1];
-      $.openImage(imgURL);
+    const rawJson = await $.post('/site/viewConfirmCode/' + m.path[1], {
+      confirm,
     });
+    // Good to know: the image is already present in the JSON as base64
+    const json = _.parseJSON(rawJson);
+
+    // Allows to decode \n \t \r and other characters like this
+    const decodedHTML = document.createTextNode(json.content).data;
+
+    const imgURL = decodedHTML.match(/<a href="([^"]+)" target="_blank">/)[1];
+    await $.openImage(imgURL);
   },
 });
