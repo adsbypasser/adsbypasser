@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?dereferer\.website$/,
     query: /^\?(.+)/,
   },
-  start: function (m) {
-    'use strict';
-
-    $.openLink(m.query[1]);
+  async start (m) {
+    await $.openLink(m.query[1]);
   },
 });

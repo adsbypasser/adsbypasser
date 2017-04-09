@@ -1,12 +1,11 @@
-$.register({
+_.register({
   rule: {
     host: /^dikit\.in$/,
   },
-  ready: function () {
-    'use strict';
-    $.removeNodes('iframe');
+  async ready () {
+    $.remove('iframe');
 
-    var a = $('.disclaimer a');
-    $.openLink(a.href);
+    const a = $('.disclaimer a');
+    await $.openLink(a.href);
   },
 });
