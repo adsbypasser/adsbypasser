@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^itw\.me$/,
     path: /^\/r\//,
   },
-  ready: function () {
-    'use strict';
-
-    var f = $('.go-form');
+  async ready () {
+    const f = $('.go-form');
     f.submit();
   },
 });

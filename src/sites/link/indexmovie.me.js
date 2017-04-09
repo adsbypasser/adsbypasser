@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^indexmovie\.me$/,
-    path: /^\/([^\/]+)$/,
+    path: /^\/([^/]+)$/,
   },
-  start: function (m) {
-    'use strict';
-
-    $.openLink('/get/' + m.path[1]);
+  async start (m) {
+    await $.openLink('/get/' + m.path[1]);
   },
 });
