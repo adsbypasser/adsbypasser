@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://www.subirimagenes.com/*.html',
-  ready: function () {
-    'use strict';
-
-    var i = $('#ImagenVisualizada');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#ImagenVisualizada');
+    await $.openImage(i.src);
   },
 });
