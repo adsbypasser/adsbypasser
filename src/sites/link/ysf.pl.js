@@ -1,28 +1,23 @@
-$.register({
+_.register({
   rule: {
     host: /^ysf\.pl$/,
     path: /^\/3\/(.+)$/,
   },
-  start: function (m) {
-    'use strict';
-
-    var url = atob(m.path[1]);
-    $.openLink(url);
+  async start (m) {
+    const url = atob(m.path[1]);
+    await $.openLink(url);
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^ysf\.pl$/,
     path: /^\/2\/(.+)$/,
   },
-  start: function (m) {
-    'use strict';
-
-    var url = m.path[1].match(/.{2}/g).map(function (h) {
+  async start (m) {
+    const url = m.path[1].match(/.{2}/g).map((h) => {
       return String.fromCharCode(parseInt(h, 16));
     }).join('');
-
-    $.openLink(url);
+    await $.openLink(url);
   },
 });
