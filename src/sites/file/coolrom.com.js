@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?coolrom\.com$/,
     path: /^\/dlpop\.php$/,
   },
-  ready: function () {
-    'use strict';
-
-    var matches = $.searchScripts(/<form method="POST" action="([^"]+)">/);
-    $.openLink(matches[1]);
+  async ready () {
+    const matches = $.searchFromScripts(/<form method="POST" action="([^"]+)">/);
+    await $.openLink(matches[1]);
   },
 });
