@@ -29,7 +29,7 @@
     }, 1000);
   }
 
-  var hostRules = /^sh\.st|(dh10thbvu|u2ks|jnw0|qaafa|xiw34)\.com|digg\.to|viid\.me|short\.est$/;
+  var hostRules = /^sh\.st|(dh10thbvu|u2ks|jnw0|qaafa|xiw34|cllkme)\.com|digg\.to|viid\.me|short\.est$/;
 
   $.register({
     rule: {
