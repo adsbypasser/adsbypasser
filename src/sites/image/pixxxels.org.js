@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^pixxxels\.org$/,
   },
-  ready: function () {
-    'use strict';
-
-    var img = $.$('#main-image');
-    $.openImage(img.dataset.full);
+  async ready () {
+    const img = $.$('#main-image');
+    await $.openImage(img.dataset.full);
   },
 });

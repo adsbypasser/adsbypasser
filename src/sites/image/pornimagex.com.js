@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^www\.pornimagex\.com$/,
     path: /^\/image\/.*$/,
   },
-  ready: function () {
-    'use strict';
-
-    var img = $('#fixed img.border2px');
-    $.openImage(img.src);
+  async ready () {
+    const img = $('#fixed img.border2px');
+    await $.openImage(img.src);
   },
 });

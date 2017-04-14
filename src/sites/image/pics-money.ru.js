@@ -1,38 +1,32 @@
-$.register({
+_.register({
   rule: [
     'http://pics-money.ru/allpicfree/*',
     'http://www.pics-money.ru/allimage/*',
   ],
 });
 
-$.register({
+_.register({
   rule: {
     host: /^pics-money\.ru$/,
     path: /^\/v\.php$/,
   },
-  ready: function () {
-    'use strict';
-
-    $.removeNodes('iframe');
-
-    var i = $('center img:not([id])');
-    $.openImage(i.src);
+  async ready () {
+    $.remove('iframe');
+    const i = $('center img:not([id])');
+    await $.openImage(i.src);
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^www\.pics-money\.ru$/,
   },
-  ready: function () {
-    'use strict';
-
-    $.removeNodes('iframe');
-
-    var i = $('#d1 img');
+  async ready () {
+    $.remove('iframe');
+    let i = $('#d1 img');
     i = i.onclick.toString();
     i = i.match(/mshow\('(.+)'\)/);
     i = i[1];
-    $.openImage(i);
+    await $.openImage(i);
   },
 });

@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://picshare.geenza.com/pics/*',
-  ready: function () {
-    'use strict';
-
-    var i = $('#picShare_image_container');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#picShare_image_container');
+    await $.openImage(i.src);
   },
 });

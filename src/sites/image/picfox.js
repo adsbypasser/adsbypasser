@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: [
     'http://amateurfreak.org/share-*.html',
     'http://amateurfreak.org/share.php?id=*',
@@ -16,10 +16,8 @@ $.register({
     'http://imgurx.net/x/share-*.html',
     'http://www.imgz.pw/share-*.html',
   ],
-  ready: function () {
-    'use strict';
-
-    var o = $('#iimg');
-    $.openImage(o.src);
+  async ready () {
+    const o = $('#iimg');
+    await $.openImage(o.src);
   },
 });
