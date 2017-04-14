@@ -16,10 +16,25 @@ $.register({
     host: /^www\.shrink-service\.it$/,
     path: /^\/shrinked\//,
   },
-  ready: function (m) {
+  ready: function () {
     'use strict';
 
     var i = $('input[id][name]');
+    $.openLink(i.value);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^www\.shrink-service\.it$/,
+    path: /^\/s\//,
+  },
+  ready: function () {
+    'use strict';
+
+    $.removeNodes('iframe');
+
+    var i = $('body > input[id][name]');
     $.openLink(i.value);
   },
 });
