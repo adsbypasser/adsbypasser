@@ -158,8 +158,9 @@
   $.register({
     rule: {
       host: [
-        /^www\.img(taxi|adult|wallet)\.com$/,
+        /^www\.img(adult|wallet)\.com$/,
         /^www\.imgdrive\.net$/,
+        /^(www\.)?imgtaxi\.com$/,
       ],
       path: /^\/img-.*\.html$/,
     },

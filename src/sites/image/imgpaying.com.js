@@ -64,7 +64,7 @@
         return;
       }
 
-      var d = $.$$('div[id]').at(1);
+      var d = $('td:nth-child(2) > center > div[id]');
       var visibleClasses = null;
       waitDOM(d, function (node) {
         if (node.nodeName === 'STYLE') {
