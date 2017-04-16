@@ -422,6 +422,7 @@
     * readthis.ca
     * redirects.ca
 * sh.st
+    * cllkme.com
     * dh10thbvu.com
     * digg.to
     * jnw0.com
