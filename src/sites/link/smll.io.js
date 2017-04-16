@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^smll\.io$/,
   },
-  ready: function () {
-    'use strict';
-
-    var m = $.searchScripts(/window\.location="([^"]*)";/);
-    $.openLink(m[1]);
+  async ready () {
+    const m = $.searchFromScripts(/window\.location="([^"]*)";/);
+    await $.openLink(m[1]);
   },
 });

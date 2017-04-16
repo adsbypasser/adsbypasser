@@ -1,35 +1,6 @@
 (function () {
-  'use strict';
 
-  function afterGotSessionId (sessionId) {
-    var X_NewRelic_ID = $.searchScripts(/xpid:"([^"]+)"/);
-
-    var data = {
-      adSessionId: sessionId,
-    };
-
-    var header = {
-      Accept: 'application/json, text/javascript',
-    };
-
-    if (X_NewRelic_ID) {
-      header['X-NewRelic-ID'] = X_NewRelic_ID;
-    }
-
-    var i = setInterval(function () {
-      $.get('/shortest-url/end-adsession', data, header).then(function (text) {
-        var r = _.parseJSON(text);
-        if (r.status == "ok" && r.destinationUrl) {
-          clearInterval(i);
-          $.removeAllTimer();
-          var url = decodeURIComponent(r.destinationUrl);
-          $.openLink(url);
-        }
-      });
-    }, 1000);
-  }
-
-  var hostRules = [
+  const hostRules = [
     /^sh\.st$/,
     /^(dh10thbvu|u2ks|jnw0|qaafa|xiw34|cllkme|clkmein|corneey|ceesty)\.com$/,
     /^[dfg]estyy\.com$/,
@@ -38,67 +9,71 @@
     /^short\.est$/,
   ];
 
-  $.register({
+  _.register({
     rule: {
       host: hostRules,
       path: /^\/freeze\/.+/,
     },
-    ready: function () {
-      // Wait for the timer (server-side check)
-      var o = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
-          // If the button is now active
-          if (mutation.target.getAttribute('class').match(/active/)) {
-            o.disconnect();
-            // Then we can redirect
-            $.openLink(mutation.target.href);
-          }
+    async ready () {
+      const promise = new Promise((resolve) => {
+        // Wait for the timer (server-side check)
+        const o = new MutationObserver((mutations) => {
+          mutations.forEach((mutation) => {
+            // If the button is now active
+            if (mutation.target.getAttribute('class').match(/active/)) {
+              o.disconnect();
+              // Then we can redirect
+              resolve(mutation.target.href);
+            }
+          });
+        });
+
+        o.observe($('#skip_button'), {
+          attributes: true,
+          attributeFilter: ['class'],
         });
       });
 
-      o.observe($('#skip_button'), {
-        attributes: true,
-        attributeFilter: ['class'],
-      });
-
+      const url = await promise;
+      await $.openLink(url);
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: hostRules,
       path: /https?:\/\//,
     },
-    start: function () {
-      var url = window.location.pathname + window.location.search + window.location.hash;
+    async start () {
+      let url = window.location.pathname + window.location.search + window.location.hash;
       url = url.match(/(https?:\/\/.*)$/);
       url = url[1];
-      $.openLink(url);
+      await $.openLink(url);
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: hostRules,
       path: /^\/[\d\w]+/,
     },
-    start: function () {
+    async start () {
       $.window._impspcabe = 0;
     },
-    ready: function () {
-      $.removeNodes('iframe');
+    async ready () {
+      $.remove('iframe');
       $.removeAllTimer();
 
-      var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
+      const m = $.searchFromScripts(/sessionId: "([\d\w]+)",/);
       if (m) {
         afterGotSessionId(m[1]);
         return;
       }
 
       // script not loaded yet, wait until it appears
-      var o = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
-          var m = $.searchScripts(/sessionId: "([\d\w]+)",/);
+      const o = new MutationObserver((mutations) => {
+        mutations.forEach(() => {
+          const m = $.searchFromScripts(/sessionId: "([\d\w]+)",/);
           if (m) {
             o.disconnect();
             afterGotSessionId(m[1]);
@@ -110,5 +85,34 @@
       });
     },
   });
+
+  function afterGotSessionId (sessionId) {
+    const X_NewRelic_ID = $.searchFromScripts(/xpid:"([^"]+)"/);
+
+    const data = {
+      adSessionId: sessionId,
+    };
+
+    const header = {
+      Accept: 'application/json, text/javascript',
+    };
+
+    if (X_NewRelic_ID) {
+      header['X-NewRelic-ID'] = X_NewRelic_ID;
+    }
+
+    // XXX threw away promise
+    const i = setInterval(function () {
+      $.get('/shortest-url/end-adsession', data, header).then(function (text) {
+        const r = _.parseJSON(text);
+        if (r.status == 'ok' && r.destinationUrl) {
+          clearInterval(i);
+          $.removeAllTimer();
+          const url = decodeURIComponent(r.destinationUrl);
+          return $.openLink(url);
+        }
+      });
+    }, 1000);
+  }
 
 })();

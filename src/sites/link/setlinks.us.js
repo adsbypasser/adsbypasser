@@ -1,32 +1,22 @@
-$.register({
+_.register({
   rule: /http:\/\/setlinks\.us\/(p|t|d).*/,
-  ready: function () {
-    'use strict';
-
+  async ready () {
     // Redirect links d
-    var k = $.searchScripts(/window\.location='([^']+)'/);
+    const k = $.searchFromScripts(/window\.location='([^']+)'/);
     if (k) {
-      $.openLink(k[1]);
+      await $.openLink(k[1]);
       return;
     }
 
     // One link container p
-    var aLinks = $.$$('div.links-container.result-form:not(.p-links-container) > span.dlinks > a');
+    const aLinks = $.$$('div.links-container.result-form:not(.p-links-container) > span.dlinks > a');
 
     // If only one link, we redirect to it
-    if (aLinks.size() === 1) {
-      $.openLink(aLinks.at(0).href);
+    if (aLinks.length === 1) {
+      await $.openLink(aLinks.at(0).href);
       return;
     }
 
     // Captcha links p,t
-    k = $('img[alt=captcha]');
-
-    $.captcha(k.src, function (a) {
-      var b = $('#captcha');
-      var c = $('input[name=Submit]');
-      b.value = a;
-      c.click();
-    });
   },
 });

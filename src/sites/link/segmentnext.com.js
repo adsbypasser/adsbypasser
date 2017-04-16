@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^segmentnext\.com$/,
@@ -7,9 +7,7 @@ $.register({
     path: /^\/interstitial\.html$/,
     query: /return_url=([^&]+)/,
   },
-  start: function (m) {
-    'use strict';
-
-    $.openLink(decodeURIComponent(m.query[1]));
+  async start (m) {
+    await $.openLink(decodeURIComponent(m.query[1]));
   },
 });

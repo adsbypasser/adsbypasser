@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^(www\.)?shortenurl\.tk$/,
@@ -8,11 +8,8 @@ $.register({
     ],
     path: /^\/\w+$/,
   },
-  ready: function (m) {
-    'use strict';
-
-    var l = $('a.btn-block.redirect');
-
-    $.openLink(l.href);
+  async ready () {
+    const l = $('a.btn-block.redirect');
+    await $.openLink(l.href);
   },
 });

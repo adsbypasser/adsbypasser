@@ -1,40 +1,33 @@
-$.register({
+_.register({
   rule: {
     host: /^get\.shrink-service\.it$/,
     path: /^\/(.+)/,
   },
-  start: function (m) {
-    'use strict';
-
-    var url = _.T('//www.shrink-service.it/shrinked/{0}');
-    $.openLink(url(m.path[1]));
+  async start (m) {
+    const url = _.template('//www.shrink-service.it/shrinked/{0}');
+    await $.openLink(url(m.path[1]));
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^www\.shrink-service\.it$/,
     path: /^\/shrinked\//,
   },
-  ready: function () {
-    'use strict';
-
-    var i = $('input[id][name]');
-    $.openLink(i.value);
+  async ready () {
+    const i = $('input[id][name]');
+    await $.openLink(i.value);
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^www\.shrink-service\.it$/,
     path: /^\/[se]\//,
   },
-  ready: function () {
-    'use strict';
-
-    $.removeNodes('iframe');
-
-    var i = $('body > input[id][name]');
+  async ready () {
+    $.remove('iframe');
+    const i = $('body > input[id][name]');
     $.openLink(i.value);
   },
 });
