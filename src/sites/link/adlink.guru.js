@@ -19,6 +19,7 @@
         /^bol\.tl$/,
         /^tl\.tc$/,
         /^tmearn\.com$/,
+        /^adfu\.us$/,
       ],
     },
     ready: function () {
