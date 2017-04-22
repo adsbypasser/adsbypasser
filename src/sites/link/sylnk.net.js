@@ -39,6 +39,7 @@ $.register({
         /^ww[23]\.picnictrans\.com$/,
         /^gadget13\.com$/,
         /^azhie\.net$/,
+        /^ww2\.awsubs\.co$/,
       ],
       query: /^\?d=([a-zA-Z0-9\/=]+)$/,
     },
