@@ -182,6 +182,7 @@ $.register({
 $.register({
   rule: {
     host: /^ww[23]\.picnictrans\.com$/,
+    host: /^short\.awsubs\.co$/,
   },
   ready: function () {
     'use strict';
