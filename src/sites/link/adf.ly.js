@@ -37,10 +37,14 @@
 
   $.register({
     rule: [
-      // rocket loader hack
-      'http://u.shareme.in/*',
-      'http://server.sbenny.com/*',
-
+      // HACK these sites need to run start-handlers at the right time
+      {
+        host: [
+          /^adf\.ly$/,
+          /^u\.shareme\.in$/,
+          /^server\.sbenny\.com$/,
+        ],
+      },
       // generic pattern
       function () {
         var h = $.$('html[id="main_html"]');
@@ -59,6 +63,13 @@
       $.window.document.write = _.nop;
       // break anti-adblock script
       $.window.btoa = _.nop;
+
+      waitToken().then(function (token) {
+        var url = decodeToken(token);
+        $.openLink(url);
+      }).catch(function (e) {
+        _.warn(e);
+      });
     },
     ready: function () {
       // check if this is ad page
@@ -79,26 +90,54 @@
         $.window.close_bar();
         return;
       }
-      var a = h.indexOf('!HiTommy');
-      if (a >= 0) {
-        h = h.substring(0, a);
-      }
-      a = '';
-      b = '';
-      for (var i = 0; i < h.length; ++i) {
-        if (i % 2 === 0) {
-          a = a + h.charAt(i);
-        } else {
-          b = h.charAt(i) + b;
-        }
-      }
-      h = atob(a + b);
-      h = h.substr(2);
-      if (location.hash) {
-        h += location.hash;
-      }
+      h = decodeToken(h);
       $.openLink(h);
     },
   });
+
+
+  function waitToken () {
+    return _.D(function (resolve) {
+      var o = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+          _.C(mutation.addedNodes).each(function (node) {
+            if (node.localName === 'script') {
+              var m = node.textContent.match(/var ysmm = '([^']+)'/);
+              if (m) {
+                o.disconnect();
+                resolve(m[1]);
+              }
+            }
+          });
+        });
+      });
+      o.observe(document.head, {
+        childList: true,
+      });
+    });
+  }
+
+
+  function decodeToken (token) {
+    var a = token.indexOf('!HiTommy');
+    if (a >= 0) {
+      token = token.substring(0, a);
+    }
+    a = '';
+    var b = '';
+    for (var i = 0; i < token.length; ++i) {
+      if (i % 2 === 0) {
+        a = a + token.charAt(i);
+      } else {
+        b = token.charAt(i) + b;
+      }
+    }
+    token = atob(a + b);
+    token = token.substr(2);
+    if (location.hash) {
+      token += location.hash;
+    }
+    return token;
+  }
 
 })();
