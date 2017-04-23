@@ -106,6 +106,7 @@ $.register({
         /^www\.muucih\.com$/,
         /^(naisho|filmku)\.lompat\.in$/,
         /^edogawa\.lon\.pw$/,
+        /^telolet\.in$/,
       ],
       query: /go=(\w+=*)/,
     },
