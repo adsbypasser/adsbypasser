@@ -1,3 +1,28 @@
+## TBA
+
+* fixed
+    * adf.ly
+    * link.tl
+    * blogspot.com
+* added
+    * adfu.us
+    * short.awsubs.co
+    * ww2.awsubs.co
+    * ima.gy
+    * erogedownload.net
+    * linkpoi.in
+    * telolet.in
+    * mirrorfilehost.com
+    * short.pastewma.com
+    * wiid.me
+    * clkme.me
+    * trlink.in
+    * adfly.tc
+    * linkfly.gaosmedia.com
+    * cpmlink.net
+    * gsurl.in
+    * bluenik.com
+
 ## v5.67.0
 
 * fixed
