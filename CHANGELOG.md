@@ -1,4 +1,4 @@
-## TBA
+## v5.68.0
 
 * fixed
     * adf.ly
