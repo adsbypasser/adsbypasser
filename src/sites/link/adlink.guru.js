@@ -21,6 +21,7 @@
         /^tmearn\.com$/,
         /^adfu\.us$/,
         /^short\.pastewma\.com$/,
+        /^adfly\.tc$/,
       ],
     },
     ready: function () {
