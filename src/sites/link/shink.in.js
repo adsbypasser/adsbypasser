@@ -4,6 +4,7 @@ $.register({
       /^(www\.)?shink\.in$/,
       /^fas\.li$/,
       /^(www\.)?croco\.(me|site)$/,
+      /^cpmlink\.net$/,
     ],
     path: /^\/\w+$/,
   },
@@ -47,6 +48,7 @@ $.register({
       host: [
         /^(www\.)?shink\.in$/,
         /^fas\.li$/,
+        /^cpmlink\.net$/,
       ],
       path: /^\/go\/\w+$/,
     },
