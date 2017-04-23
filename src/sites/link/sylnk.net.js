@@ -61,7 +61,11 @@ $.register({
     // blogspot, kind of brutal
     {
       host: /\.blogspot\.com?/,
-      query: /^\?url=([a-zA-Z0-9\/=]+)$/,
+      query: [
+        // id must be the first captured group
+        /^\?url=([a-zA-Z0-9\/=]+)$/,
+        /^\?id=([a-zA-Z0-9\/=]+)$/,
+      ],
     },
     {
       host: /^sehatlega\.com$/,
