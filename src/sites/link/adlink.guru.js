@@ -20,6 +20,7 @@
         /^tl\.tc$/,
         /^tmearn\.com$/,
         /^adfu\.us$/,
+        /^short\.pastewma\.com$/,
       ],
     },
     ready: function () {
