@@ -43,6 +43,7 @@
           /^adf\.ly$/,
           /^u\.shareme\.in$/,
           /^server\.sbenny\.com$/,
+          /^bluenik\.com$/,
         ],
       },
       // generic pattern
