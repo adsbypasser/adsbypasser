@@ -1,4 +1,8 @@
 * adf.ly
+    * adf.ly
+    * bluenik.com
+    * server.sbenny.com
+    * u.shareme.in
 * linkbucks
     * allanalpass.com
     * amy.gs
@@ -98,6 +102,7 @@
     * hosturimage.com
     * hotimage.uk
     * hotimages.eu
+    * ima.gy
     * image.adlock.org
     * imagecorn.com
     * imagecrest.com
@@ -422,6 +427,7 @@
     * readthis.ca
     * redirects.ca
 * sh.st
+    * clkme.me
     * cllkme.com
     * dh10thbvu.com
     * digg.to
@@ -431,6 +437,7 @@
     * short.est
     * u2ks.com
     * viid.me
+    * wiid.me
     * xiw34.com
 * seomafia.net
     * apploadz.ru
@@ -491,6 +498,7 @@
     * putlocker.com
 * mantap.in
     * awaremmxv.com
+    * linkpoi.in
     * mantap.in
     * manteb.in
     * mantep.in
@@ -527,6 +535,7 @@
     * dlneko.net
     * dlneko.org
     * edogawa.lon.pw
+    * erogedownload.net
     * filmku.lompat.in
     * freeanimeonline.xyz
     * gadget13.com
@@ -556,6 +565,7 @@
     * safelinksreview.com
     * satuasia.com
     * sehatlega.com
+    * short.awsubs.co
     * sidespace.net
     * sinopsisfilmku.com
     * sports14.pw
@@ -563,6 +573,8 @@
     * susutin.com
     * sylnk.net
     * tawaku.com
+    * telolet.in
+    * ww2.awsubs.co
 * gca.sh (manual captcha)
     * gca.sh
     * repla.cr
@@ -600,6 +612,7 @@
     * ouo.io
     * ouo.press
 * shink.in
+    * cpmlink.net
     * croco.me
     * croco.site
     * fas.li
@@ -609,6 +622,8 @@
     * shorten.id
 * adlink.guru
     * 123link.top
+    * adfly.tc
+    * adfu.us
     * adlink.guru
     * bol.tl
     * cut-urls.com
@@ -616,10 +631,13 @@
     * elink.link
     * filesbucks.com
     * hashe.in
+    * linkfly.gaosmedia.com
     * payurl.me
     * pir.im
+    * short.pastewma.com
     * tl.tc
     * tmearn.com
+    * trlink.in
     * url.ht
     * urle.co
     * urlst.me
@@ -632,8 +650,9 @@
     * linkdrop.net
     * ulshare.net
 * gsurl.me
-    * gsurl.me
     * g5u.pw
+    * gsurl.in
+    * gsurl.me
 * 10co.biz
     * 10co.biz
     * 10co.xyz
@@ -801,6 +820,7 @@
     * maxmirror.com
     * mije.net
     * mirrorcreator.com
+    * mirrorfilehost.com
     * mirrorupload.net
     * moesubs.com
     * mrjh.org
