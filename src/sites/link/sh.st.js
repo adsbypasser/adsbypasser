@@ -33,7 +33,7 @@
     /^sh\.st$/,
     /^(dh10thbvu|u2ks|jnw0|qaafa|xiw34|cllkme)\.com$/,
     /^digg\.to$/,
-    /^viid\.me$/,
+    /^[vw]iid\.me$/,
     /^short\.est$/,
   ];
 
