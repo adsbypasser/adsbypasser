@@ -49,7 +49,7 @@ gulp.task('clean', () => {
 
 gulp.task('test:lint', () => {
   return gulp.src([
-    'src/sites/**/*.js',
+    'src/**/*.js',
   ])
     .pipe(plugins.eslint())
     .pipe(plugins.eslint.format())

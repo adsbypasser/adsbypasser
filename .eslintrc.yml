@@ -1,6 +1,7 @@
 env:
   browser: true
   es6: true
+  greasemonkey: true
 extends: 'eslint:recommended'
 parser: 'babel-eslint'
 parserOptions:

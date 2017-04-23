@@ -1,308 +1,177 @@
-(function (context, factory) {
-  if (typeof module === 'object' && typeof module.exports === 'object') {
-    module.exports = factory(context, Promise);
-  } else {
-    var P = null;
-    if (context.unsafeWindow.Future) {
-      // HACK: for Gecko 24, so far only Pale Moon
-      // need dom.future.enabled = true
-      P = function (fn) {
-        return context.unsafeWindow.Future.call(this, function (fr) {
-          fn(fr.resolve.bind(fr), fr.reject.bind(fr));
-        });
-      };
-    } else if (context.PromiseResolver) {
-      // HACK: for Gecko 25, so far only Pale Moon
-      // need dom.promise.enabled = true
-      P = function (fn) {
-        return new context.Promise(function (pr) {
-          fn(pr.resolve.bind(pr), pr.reject.bind(pr));
-        });
-      };
-    } else if (typeof context.Promise === 'function') {
-      // "context" might be a special sandbox object in
-      // Tampermonkey Firefox version, and it might not be the global object
-      P = context.Promise;
-    } else {
-      P = this.Promise;
-    }
-    factory(context, P);
-  }
-}(this, function (context, Promise) {
-  'use strict';
+export {
+  AdsBypasserError,
+  every,
+  find,
+  forEach,
+  isString,
+  map,
+  none,
+  nop,
+  parseJSON,
+  partial,
+  template,
+  tryEvery,
+  wait,
+};
 
-  var _ = context._ = {};
 
-  function setupStack () {
-    if (Error.captureStackTrace) {
-      // V8-like
-      Error.captureStackTrace(this, this.constructor);
-    } else if (!this.hasOwnProperty('stack')) {
-      // fallback to Mozilla-like
-      var stack = (new Error()).stack.split('\n').slice(2);
-      var e = stack[0].match(/^.*@(.*):(\d*)$/);
-      this.fileName = e[1];
-      this.lineNumber = parseInt(e[2], 10);
-      this.stack = stack.join('\n');
-    }
+class AdsBypasserError extends Error {
+
+  constructor (message) {
+    super(message);
   }
 
-  function AdsBypasserError (message) {
-    setupStack.call(this);
-    this.message = message;
-  }
-  AdsBypasserError.prototype = Object.create(Error.prototype);
-  AdsBypasserError.prototype.constructor = AdsBypasserError;
-  AdsBypasserError.prototype.name = 'AdsBypasserError';
-  AdsBypasserError.extend = function (protoProps, staticProps) {
-    var parent = this, child = function () {
-      setupStack.call(this);
-      protoProps.constructor.apply(this, arguments);
-    };
-    extend(child, parent, staticProps);
-
-    child.prototype = Object.create(parent.prototype);
-    extend(child.prototype, protoProps);
-    child.prototype.constructor = child;
-
-    child.super = parent.prototype;
-
-    return child;
-  };
-  AdsBypasserError.super = null;
-  _.AdsBypasserError = AdsBypasserError;
-
-
-  function any (c, fn) {
-    if (c.some) {
-      return c.some(fn);
-    }
-    if (typeof c.length === 'number') {
-      return Array.prototype.some.call(c, fn);
-    }
-    return Object.keys(c).some(function (k) {
-      return fn(c[k], k, c);
-    });
+  get name () {
+    return 'AdsBypasserError';
   }
 
-  function all (c, fn) {
-    if (c.every) {
-      return c.every(fn);
-    }
-    if (typeof c.length === 'number') {
-      return Array.prototype.every.call(c, fn);
-    }
-    return Object.keys(c).every(function (k) {
-      return fn(c[k], k, c);
-    });
+}
+
+
+function forEach (collection, fn) {
+  if (isArrayLike(collection)) {
+    return Array.prototype.forEach.call(collection, fn);
   }
+  return Object.keys(collection).forEach((k) => {
+    return fn(collection[k], k, collection);
+  });
+}
 
-  function each (c, fn) {
-    if (c.forEach) {
-      c.forEach(fn);
-    } else if (typeof c.length === 'number') {
-      Array.prototype.forEach.call(c, fn);
-    } else {
-      Object.keys(c).forEach(function (k) {
-        fn(c[k], k, c);
-      });
+
+function every (collection, fn) {
+  if (isArrayLike(collection)) {
+    return Array.prototype.every.call(collection, fn);
+  }
+  return Object.keys(collection).every((k) => {
+    return fn(collection[k], k, collection);
+  });
+}
+
+
+function map (collection, fn) {
+  if (isArrayLike(collection)) {
+    return Array.prototype.map.call(collection, fn);
+  }
+  const mapped = Object.assign({}, collection);
+  Object.getOwnPropertyNames(mapped).forEach((k) => {
+    mapped[k] = fn(collection[k], k, collection);
+  });
+  return mapped;
+}
+
+
+function find (collection, fn) {
+  for (const [k, v] of enumerate(collection)) {
+    const r = fn(v, k, collection);
+    if (r !== none) {
+      return [k, v, r];
     }
   }
+  return [none, none, none];
+}
 
-  function map (c, fn) {
-    if (c.map) {
-      return c.map(fn);
-    }
-    if (typeof c.length === 'number') {
-      return Array.prototype.map.call(c, fn);
-    }
-    return Object.keys(c).map(function (k) {
-      return fn(c[k], k, c);
-    });
+
+function * enumerate (collection) {
+  if (isArrayLike(collection)) {
+    yield * Array.prototype.entries.call(collection);
+    return;
   }
-
-  function extend(c) {
-    Array.prototype.slice.call(arguments, 1).forEach(function (source) {
-      if (!source) {
-        return;
-      }
-      _.C(source).each(function (v, k) {
-        c[k] = v;
-      });
-    });
-    return c;
+  const keys = Object.getOwnPropertyNames(collection);
+  for (const k of keys) {
+    yield [k, collection[k]];
   }
-
-  function CollectionProxy (collection) {
-    this._c = collection;
-  }
-
-  CollectionProxy.prototype.size = function () {
-    if (typeof this._c.length === 'number') {
-      return this._c.length;
-    }
-    return Object.keys(c).length;
-  };
-
-  CollectionProxy.prototype.at = function (k) {
-    return this._c[k];
-  };
-
-  CollectionProxy.prototype.each = function (fn) {
-    each(this._c, fn);
-    return this;
-  };
-
-  CollectionProxy.prototype.find = function (fn) {
-    var result;
-    any(this._c, function (value, index, self) {
-      var tmp = fn(value, index, self);
-      if (tmp !== _.none) {
-        result = {
-          key: index,
-          value: value,
-          payload: tmp,
-        };
-        return true;
-      }
-      return false;
-    });
-    return result;
-  };
-
-  CollectionProxy.prototype.all = function (fn) {
-    return all(this._c, fn);
-  };
-
-  CollectionProxy.prototype.map = function (fn) {
-    return map(this._c, fn);
-  };
-
-  _.C = function (collection) {
-    return new CollectionProxy(collection);
-  };
+}
 
 
-  _.T = function (s) {
-    if (typeof s === 'string') {
-    } else if (s instanceof String) {
+function isArrayLike (collection) {
+  return Array.isArray(collection) || isNodeList(collection);
+}
+
+
+function isNodeList (collection) {
+  return collection.constructor.name === 'NodeList';
+}
+
+
+function template (s) {
+  if (typeof s !== 'string') {
+    if (s instanceof String) {
       s = s.toString();
     } else {
       throw new AdsBypasserError('template must be a string');
     }
-    var T = {
-      '{{': '{',
-      '}}': '}',
-    };
-    return function () {
-      var args = Array.prototype.slice.call(arguments);
-      var kwargs = args[args.length-1];
-
-      return s.replace(/\{\{|\}\}|\{([^\}]+)\}/g, function (m, key) {
-        if (T.hasOwnProperty(m)) {
-          return T[m];
-        }
-        if (args.hasOwnProperty(key)) {
-          return args[key];
-        }
-        if (kwargs.hasOwnProperty(key)) {
-          return kwargs[key];
-        }
-        return m;
-      });
-    };
-  };
-
-
-  _.P = function (fn) {
-    if (typeof fn !== 'function') {
-      throw new _.AdsBypasserError('must give a function');
-    }
-    var slice = Array.prototype.slice;
-    var args = slice.call(arguments, 1);
-    return function () {
-      return fn.apply(this, args.concat(slice.call(arguments)));
-    };
-  };
-
-
-  _.D = function (fn) {
-    return new Promise(fn);
-  };
-
-
-  _.parseJSON = function (json) {
-    try {
-      return JSON.parse(json);
-    } catch (e) {
-      _.warn(e, json);
-    }
-    return _.none;
-  };
-
-
-  _.isString = function (value) {
-    return (typeof value === 'string') || (value instanceof String);
-  };
-
-
-  _.nop = function () {
-  };
-  _.none = _.nop;
-
-
-  _.wait = function (msDelay) {
-    return _.D(function (resolve, reject) {
-      setTimeout(resolve, msDelay);
-    });
-  };
-
-  _.try = function (msInterval, fn) {
-    return _.D(function (resolve, reject) {
-      var handle = setInterval(function () {
-        var result = fn();
-        if (result !== _.none) {
-          clearInterval(handle);
-          resolve(result);
-        }
-      }, msInterval);
-    });
-  };
-
-
-  function log (method, args) {
-    if (_._quiet) {
-      return;
-    }
-    args = Array.prototype.slice.call(args);
-    if (_.isString(args[0])) {
-      args[0] = 'AdsBypasser: ' + args[0];
-    } else {
-      args.unshift('AdsBypasser:');
-    }
-    var f = console[method];
-    if (typeof f === 'function') {
-      f.apply(console, args);
-    }
   }
-
-  // HACK cyclic reference between $ and _
-  _._quiet = false;
-
-  _.info = function () {
-    log('info', arguments);
+  const T = {
+    '{{': '{',
+    '}}': '}',
   };
+  return (...args) => {
+    const kwargs = args[args.length-1];
 
-  _.warn = function () {
-    log('warn', arguments);
+    return s.replace(/\{\{|\}\}|\{([^}]+)\}/g, (m, key) => {
+      if (T.hasOwnProperty(m)) {
+        return T[m];
+      }
+      if (args.hasOwnProperty(key)) {
+        return args[key];
+      }
+      if (kwargs.hasOwnProperty(key)) {
+        return kwargs[key];
+      }
+      return m;
+    });
   };
+}
 
 
-  return _;
+function partial (fn, ...args) {
+  if (typeof fn !== 'function') {
+    throw new AdsBypasserError('must give a function');
+  }
+  // NOTE need to preserve *this* context?
+  return (...innerArgs) => {
+    return fn(...args.concat(innerArgs));
+  };
+}
 
-}));
+
+function parseJSON (json) {
+  try {
+    return JSON.parse(json);
+  } catch (e) {
+    _.warn(e, json);
+  }
+  return _.none;
+}
 
 
-// ex: ts=2 sts=2 sw=2 et
-// sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
-// kate: space-indent on; indent-width 2;
+function isString (value) {
+  return (typeof value === 'string') || (value instanceof String);
+}
+
+
+function nop () {
+}
+
+
+const none = nop;
+
+
+function wait (msDelay) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, msDelay);
+  });
+}
+
+
+function tryEvery (msInterval, fn) {
+  return new Promise((resolve) => {
+    const handle = setInterval(function () {
+      const result = fn();
+      if (result !== _.none) {
+        clearInterval(handle);
+        resolve(result);
+      }
+    }, msInterval);
+  });
+}
