@@ -22,6 +22,7 @@
         /^adfu\.us$/,
         /^short\.pastewma\.com$/,
         /^adfly\.tc$/,
+        /^linkfly\.gaosmedia\.com$/,
       ],
     },
     ready: function () {
