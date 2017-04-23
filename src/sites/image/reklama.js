@@ -116,6 +116,10 @@
         host: /^imgtor\.pw$/,
         path: /^\/img2\/.+$/,
       },
+      {
+        host: /^ima\.gy$/,
+        path: /^\/i\/.+$/,
+      },
     ],
     ready: defaultAction,
   });
