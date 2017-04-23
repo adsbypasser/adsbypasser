@@ -5,6 +5,7 @@ $.register({
       /^st\.oploverz\.net$/,
       /^minidroid\.net$/,
       /^ww3\.awaremmxv\.com$/,
+      /^linkpoi\.in$/,
     ],
   },
   ready: function () {
