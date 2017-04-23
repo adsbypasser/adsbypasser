@@ -1,13 +1,26 @@
 $.register({
   rule: {
     host: /^link\.tl$/,
-    path: /^\/fly\/go\.php$/,
+    path: /^\/fly\/site\.php$/,
+    query: /^\?to=(.+)$/,
   },
   ready: function () {
     'use strict';
 
-    var a = $('.skip_btn2 a');
+    var a = $('.skip > .btn');
     $.openLink(a.href);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^link\.tl$/,
+    path: /[^^](https?:\/\/.+)$/,
+  },
+  start: function (m) {
+    'use strict';
+
+    $.openLink(m.path[1]);
   },
 });
 
@@ -19,6 +32,6 @@ $.register({
   start: function (m) {
     'use strict';
 
-    $.openLink('/fly/go.php?to=' + m.path[1]);
+    $.openLink('/fly/site.php?to=' + m.path[1]);
   },
 });
