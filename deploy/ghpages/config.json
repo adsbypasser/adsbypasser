@@ -1,9 +1,0 @@
-{
-  "locals": {
-    "title": "AdsBypasser"
-  },
-  "plugins": [
-    "wintersmith-less"
-  ],
-  "port": 8000
-}
