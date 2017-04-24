@@ -44,6 +44,7 @@
           /^u\.shareme\.in$/,
           /^server\.sbenny\.com$/,
           /^bluenik\.com$/,
+          /^q\.gs$/,
         ],
       },
       // generic pattern
