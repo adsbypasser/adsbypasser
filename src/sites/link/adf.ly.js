@@ -36,27 +36,15 @@
   });
 
   $.register({
-    rule: [
-      // HACK these sites need to run start-handlers at the right time
-      {
-        host: [
-          /^adf\.ly$/,
-          /^u\.shareme\.in$/,
-          /^server\.sbenny\.com$/,
-          /^bluenik\.com$/,
-        ],
-      },
-      // generic pattern
-      function () {
-        var h = $.$('html[id="main_html"]');
-        var b = $.$('body[id="home"]');
-        if (h && b) {
-          return true;
-        } else {
-          return null;
-        }
-      },
-    ],
+    // generic pattern
+    rule: function () {
+      var h = $.$('html[id="main_html"]');
+      if (h) {
+        return true;
+      } else {
+        return null;
+      }
+    },
     start: function () {
       // Rocket Loader will modify DOM before `ready()` can do anything,
       // so we hack `document.write` to block CloudFlare's main script.
