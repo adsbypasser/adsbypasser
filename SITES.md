@@ -1,8 +1,4 @@
 * adf.ly
-    * adf.ly
-    * bluenik.com
-    * server.sbenny.com
-    * u.shareme.in
 * linkbucks
     * allanalpass.com
     * amy.gs
