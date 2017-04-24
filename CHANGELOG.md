@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * adf.ly sub-domains
+
 ## v5.68.1
 
 * fixed
