@@ -132,7 +132,7 @@
     });
 
     // find by URL
-    var handler = findHandler(true);
+    var handler = findHandler();
     if (handler) {
       // if log level is 0, disable console log
       if ($.config.logLevel <= 0) {
@@ -147,24 +147,6 @@
 
       return;
     }
-
-    // if log level less than 2, disable console log
-    if ($.config.logLevel < 2) {
-      _._quiet = true;
-    }
-
-    _.info('does not match location on `%s`, will try HTML content', window.location.toString());
-    waitDOM().then(function () {
-      // find again by HTML content
-      handler = findHandler(false);
-      if (!handler) {
-        _.info('does not match HTML content on `%s`', window.location.toString());
-        return;
-      }
-
-      beforeDOMReady(handler);
-      afterDOMReady(handler);
-    });
   };
 
   return $;

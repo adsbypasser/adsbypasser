@@ -47,9 +47,9 @@
     return url_1.match(rule);
   }
 
-  function dispatchByArray (byLocation, rules, url_1, url_3, url_6) {
+  function dispatchByArray (rules, url_1, url_3, url_6) {
     var tmp = _.C(rules).find(function (rule) {
-      var m = dispatch(byLocation, rule, url_1, url_3, url_6);
+      var m = dispatch(rule, url_1, url_3, url_6);
       if (!m) {
         return _.none;
       }
@@ -117,17 +117,14 @@
     return rule(url_1, url_3, url_6);
   }
 
-  function dispatch (byLocation, rule, url_1, url_3, url_6) {
+  function dispatch (rule, url_1, url_3, url_6) {
     // recursively dispatching
     if (rule instanceof Array) {
-      return dispatchByArray(byLocation, rule, url_1, url_3, url_6);
+      return dispatchByArray(rule, url_1, url_3, url_6);
     }
 
     // dispatch by HTML content
     if (typeof rule === 'function') {
-      if (byLocation) {
-        return null;
-      }
       return dispatchByFunction(rule, url_1, url_3, url_6);
     }
 
@@ -141,7 +138,7 @@
     return dispatchByObject(rule, url_6);
   }
 
-  $._findHandler = function (byLocation) {
+  $._findHandler = function () {
     var url_1 = window.location.toString();
     // <scheme>://<host><path>
     var url_3 = {
@@ -160,7 +157,7 @@
     };
 
     var pattern = _.C(patterns).find(function (pattern) {
-      var m = dispatch(byLocation, pattern.rule, url_1, url_3, url_6);
+      var m = dispatch(pattern.rule, url_1, url_3, url_6);
       if (!m) {
         return _.none;
       }
