@@ -9,6 +9,7 @@
         /^ulshare\.net$/,
         /^adurl\.id$/,
         /^goolink\.me$/,
+        /^earningurl\.com$/,
       ],
     },
     ready: function () {
