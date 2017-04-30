@@ -40,6 +40,7 @@ $.register({
         /^gadget13\.com$/,
         /^azhie\.net$/,
         /^ww2\.awsubs\.co$/,
+        /^autorp\.us$/
       ],
       query: /^\?d=([a-zA-Z0-9\/=]+)$/,
     },
