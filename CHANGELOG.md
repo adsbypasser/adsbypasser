@@ -1,3 +1,17 @@
+## TBA
+
+* fixed
+    * imgrock.net
+    * ah.pe
+    * Tampermonkey compatibility for Firefox
+* added
+    * earningurl.com
+    * adshort.in
+    * linkhits.us
+    * clkmein.com
+    * awsubsco.ga
+    * autorp.us
+
 ## v5.68.2
 
 * fixed
