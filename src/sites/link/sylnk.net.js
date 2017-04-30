@@ -98,6 +98,7 @@ $.register({
         /^susutin\.com$/,
         /^(getcomics|miuitutorial)\.gq$/,
         /^awsubs\.cf$/,
+        /^awsubsco\.ga$/,
       ],
       query: /id=(\w+=*)/,
     },
