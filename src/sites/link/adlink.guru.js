@@ -12,7 +12,7 @@
         /^url\.ht$/,
         /^urle\.co$/,
         /^cut-urls\.com$/,
-        /^(hashe|trlink)\.in$/,
+        /^(hashe|trlink|adshort)\.in$/,
         /^www\.worldhack\.net$/,
         /^123link\.top$/,
         /^pir\.im$/,
