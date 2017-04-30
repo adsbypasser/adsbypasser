@@ -19,8 +19,12 @@
           fn(pr.resolve.bind(pr), pr.reject.bind(pr));
         });
       };
-    } else {
+    } else if (typeof context.Promise === 'function') {
+      // "context" might be a special sandbox object in
+      // Tampermonkey Firefox version, and it might not be the global object
       P = context.Promise;
+    } else {
+      P = this.Promise;
     }
     factory(context, P);
   }

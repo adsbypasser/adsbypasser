@@ -77,6 +77,9 @@
     if (safe === null || !(safe instanceof Object)) {
       return safe;
     }
+    if (safe === unsafeWindow) {
+      return safe;
+    }
     if (safe instanceof String) {
       return safe.toString();
     }
