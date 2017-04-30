@@ -75,7 +75,15 @@
         // since it throws in a random number of "fake" ones
         if (node.nodeName === 'FORM' && node.offsetParent !== null) {
           return visibleClasses.some(function (class_) {
-            return node.classList.contains(class_);
+            var isVisible = node.classList.contains(class_);
+            if (!isVisible) {
+              return false;
+            }
+            var button = $.$('input[type="submit"]', node);
+            if (!button) {
+              return false;
+            }
+            return button.style.display !== 'none';
           });
         }
         return false;
