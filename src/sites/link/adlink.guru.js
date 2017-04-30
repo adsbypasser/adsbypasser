@@ -19,7 +19,7 @@
         /^bol\.tl$/,
         /^tl\.tc$/,
         /^tmearn\.com$/,
-        /^adfu\.us$/,
+        /^(adfu|linkhits)\.us$/,
         /^short\.pastewma\.com$/,
         /^adfly\.tc$/,
         /^linkfly\.gaosmedia\.com$/,
