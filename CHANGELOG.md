@@ -1,4 +1,4 @@
-## TBA
+## v5.69.0
 
 * fixed
     * imgrock.net
