@@ -14,21 +14,23 @@
       host: /^ah\.pe$/,
     },
     ready: function () {
-      $.removeNodes('iframe');
-
       var script = $.searchScripts('eval');
       script = decodeScript(script);
       script = decodeScript(script);
       script = decodeScript(script);
 
-      var path = script.match(/'(g\/[^']+)'/);
-      path = path[1];
+      var path = script.match(/([^;= ]+)=([^+ ;]+)\+"\."\+([^+ ]+)\+"\."\+([^; ]+);/);
+      if (!path) {
+        throw new _.AdsBypasserError('script changed');
+      }
+      if (typeof $.window[path[2]] === 'undefined') {
+        // recaptcha page
+        _.info('recaptcha');
+        return;
+      }
+      path = _.T('{0}.{1}.{2}')($.window[path[2]], $.window[path[3]], $.window[path[4]]);
 
-      _.wait(3000).then(function () {
-        $.get(path).then(function (url) {
-          $.openLink(url);
-        });
-      });
+      $.openLink(path);
     },
   });
 
