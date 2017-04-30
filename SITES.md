@@ -424,6 +424,7 @@
     * redirects.ca
 * sh.st
     * clkme.me
+    * clkmein.com
     * cllkme.com
     * dh10thbvu.com
     * digg.to
@@ -521,7 +522,9 @@
     * anisubsia.tk
     * auto14.pw
     * autofans.pw
+    * autorp.us
     * awsubs.cf
+    * awsubsco.ga
     * azhie.net
     * blogspot.com
     * compul.in
@@ -621,6 +624,7 @@
     * adfly.tc
     * adfu.us
     * adlink.guru
+    * adshort.in
     * bol.tl
     * cut-urls.com
     * cypt.ga
@@ -628,6 +632,7 @@
     * filesbucks.com
     * hashe.in
     * linkfly.gaosmedia.com
+    * linkhits.us
     * payurl.me
     * pir.im
     * short.pastewma.com
@@ -641,6 +646,7 @@
 * linkdrop.net
     * adurl.id
     * dmus.in
+    * earningurl.com
     * goolink.me
     * idsly.com
     * linkdrop.net
