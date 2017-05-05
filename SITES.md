@@ -783,6 +783,7 @@
     * imgcarry.com
     * imgdollar.com
     * imgtheif.com
+    * imgtorrnt.in
     * imgvault.pw
     * indexmovie.xyz
     * iori.us
