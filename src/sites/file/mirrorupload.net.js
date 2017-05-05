@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^(www\.)?mirrorupload.net$/,
+    host: /^(www\.)?mirrorupload\.net$/,
   },
   ready: function () {
     'use strict';
