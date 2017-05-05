@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.multiupfile\.com$/,
+    host: /^(www\.)?multiupfile\.com$/,
     path: /^\/f\//,
   },
   ready: function () {
