@@ -7,7 +7,7 @@ $.register({
   ready: function () {
     'use strict';
 
-    let img = $('center div table.tg tbody tr td center img');
+    var img = $('center div table.tg tbody tr td center img');
     $.openImage(img.src);
   }
 });
