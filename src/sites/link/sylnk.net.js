@@ -73,6 +73,10 @@ $.register({
       host: /^sehatlega\.com$/,
       query: /^\?lanjut=([a-zA-Z0-9\/=]+)$/,
     },
+    {
+      host: /^shorten\.id$/,
+      query: /^\?(.+)=$/,
+    },
   ],
   start: function (m) {
     'use strict';
