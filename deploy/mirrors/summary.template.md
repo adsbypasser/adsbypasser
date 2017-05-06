@@ -1,11 +1,11 @@
 # Feature
 
-This user script helps you
+This user script helps you to:
 
-* skip ads' count-down or continue page
-* block pop-up windows
+* skip countdown ads or continue pages.
+* prevent ad pop-up windows.
 
-It **cannot** help you solve reCAPTCHA.
+It **CANNOT** help you to solve reCAPTCHAs.
 
 {edition}
 
@@ -70,6 +70,6 @@ contributors. (sort by GitHub account)
 [3]: https://github.com/adsbypasser/adsbypasser/blob/master/CHANGELOG.md
 [4]: https://github.com/adsbypasser/adsbypasser/blob/master/SITES.md
 [5]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
-[RedirectionHelper]: http://userscripts-mirror.org/scripts/show/69797
-[SuYS]: http://userscripts-mirror.org/users/SuYS.html
+[RedirectionHelper]: https://userscripts-mirror.org/scripts/show/69797
+[SuYS]: https://userscripts-mirror.org/users/SuYS.html
 [GitHub]: https://github.com/adsbypasser/adsbypasser
