@@ -75,7 +75,8 @@ $.register({
     },
     {
       host: /^shorten\.id$/,
-      query: /^\?(.+)=$/,
+      // note the trailing `=`
+      query: /^\?url=([a-zA-Z0-9\/=]+)=$/,
     },
   ],
   start: function (m) {
