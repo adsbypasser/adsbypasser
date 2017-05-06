@@ -1,3 +1,4 @@
+// XXX not a general purpose link host
 $.register({
   rule: {
     host: /^(www\.)?comicon\.com\.br$/,
