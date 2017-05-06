@@ -1,7 +1,7 @@
 $.register({
   rule: {
     host: [
-      /^www\.cuzle\.com$/,
+      /^(www\.)?cuzle\.com$/,
       /^shorten\.id$/,
     ],
     path: /^\/$/,
