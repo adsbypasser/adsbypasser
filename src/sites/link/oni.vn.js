@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.oni\.vn$/,
+    host: /^(www\.)?oni\.vn$/,
   },
   ready: function () {
     'use strict';
