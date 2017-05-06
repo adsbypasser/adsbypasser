@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.linkarus\.com$/,
+    host: /^(www\.)?linkarus\.com$/,
     path: /^\/skip\//,
   },
   ready: function () {
@@ -17,7 +17,7 @@ $.register({
 
 $.register({
   rule: {
-    host: /^www\.linkarus\.com$/,
+    host: /^(www\.)?linkarus\.com$/,
   },
   ready: function () {
     'use strict';
