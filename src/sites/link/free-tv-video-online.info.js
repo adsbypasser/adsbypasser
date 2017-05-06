@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.free-tv-video-online\.info$/,
+    host: /^(www\.)?free-tv-video-online\.info$/,
     path: /^\/interstitial2\.html$/,
     query: /lnk=([^&]+)/,
   },
