@@ -12,7 +12,9 @@
       path: /^\/verify\/(.+)$/,
     },
     start: function (m) {
-      $.openLink('/view/' + m.path[1]);
+      $.openLink('/view/' + m.path[1], {
+        referer: false,
+      });
     },
   });
 

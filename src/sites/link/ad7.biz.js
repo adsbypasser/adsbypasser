@@ -3,7 +3,7 @@
 
   $.register({
     rule: {
-      host: /^ad7.biz$/,
+      host: /^ad7\.biz$/,
       path: /^\/\d+\/(.*)$/,
     },
     start: function (m) {
@@ -20,7 +20,7 @@
 
   $.register({
     rule: {
-      host: /^ad7.biz$/,
+      host: /^ad7\.biz$/,
       path: /^\/\w+$/,
     },
     ready: function () {
