@@ -8,13 +8,11 @@
 
   $.register({
     rule: {
-      host: /^(www\.)?image(pearl|crest)\.com$/,
+      host: /^(www\.)?image(pearl|beryl|crest)\.com$/,
       path: /^\/verify\/(.+)$/,
     },
     start: function (m) {
-      $.openLink('/view/' + m.path[1], {
-        referer: false
-      });
+      $.openLink('/view/' + m.path[1]);
     },
   });
 
@@ -26,7 +24,7 @@
       'http://itmages.ru/image/view/*/*',
       // different layout same handler
       {
-        host: /^(www\.)?image(pearl|crest)\.com$/,
+        host: /^(www\.)?image(pearl|beryl|crest)\.com$/,
         path: /^\/view\//,
       },
     ],
