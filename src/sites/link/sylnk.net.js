@@ -81,7 +81,6 @@ $.register({
   start: function (m) {
     'use strict';
     var rawLink = atob(m.query[1]);
-
     $.openLink(rawLink);
   },
 });
