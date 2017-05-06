@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.forbes\.com$/,
+    host: /^(www\.)?forbes\.com$/,
   },
   ready: function () {
     'use strict';
