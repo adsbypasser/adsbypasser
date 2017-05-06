@@ -213,7 +213,7 @@
         /^(wwy|myam)\.me$/,
         /^(ssl|srk)\.gs$/,
         /^shortit\.in$/,
-        /^(www\.)?adjet\.eu$/,
+        /^www\.adjet\.eu$/,
         /^cun\.bz$/,
         /^miniurl\.tk$/,
         /^vizzy\.es$/,
