@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.comicon\.com\.br$/,
+    host: /^(www\.)?comicon\.com\.br$/,
     path: /^\/redir\.php$/,
   },
   ready: function () {
