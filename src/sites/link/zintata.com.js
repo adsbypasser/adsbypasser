@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.zintata\.com$/,
+    host: /^(www\.)?zintata\.com$/,
     path: /^\/link\/$/,
   },
   ready: function () {
