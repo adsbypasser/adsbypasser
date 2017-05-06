@@ -23,7 +23,7 @@ $.register({
     {
       host: [
         /^link\.filmku\.net$/,
-        /^www\.healthygress24\.ga$/,
+        /^(www\.)?healthygress24\.ga$/,
         /^kombatch\.amankan\.link$/,
       ],
       path: /^\/p\/(go|healty-lie)\.html$/,
@@ -45,14 +45,14 @@ $.register({
       query: /^\?d=([a-zA-Z0-9\/=]+)$/,
     },
     {
-      host: /^www\.anisubsia\.tk$/,
+      host: /^(www\.)?anisubsia\.tk$/,
       path: /^\/p\/link\.html$/,
       query: /^\?url=([a-zA-Z0-9\/=]+)$/,
     },
     {
       host: [
-        /^www\.insurance1\.tech$/,
-        /^www\.freeanimeonline\.xyz$/,
+        /^(www\.)?insurance1\.tech$/,
+        /^(www\.)?freeanimeonline\.xyz$/,
       ],
       query: /^\?site=([a-zA-Z0-9\/=]+)/,
     },
@@ -109,7 +109,7 @@ $.register({
         /^(satuasia|tawaku)\.com$/,
         /^ww3\.manteb\.in$/,
         /^link\.filmku\.net$/,
-        /^www\.muucih\.com$/,
+        /^(www\.)?muucih\.com$/,
         /^(naisho|filmku)\.lompat\.in$/,
         /^edogawa\.lon\.pw$/,
         /^telolet\.in$/,
@@ -151,11 +151,9 @@ $.register({
 $.register({
   rule: {
     host: [
-      /^designinghomey\.com$/,
+      /^(designinghomey|ani-share|sinopsisfilmku)\.com$/,
       /^motonews\.club$/,
       /^(autofans|landscapenature)\.pw$/,
-      /^ani-share\.com$/,
-      /^sinopsisfilmku\.com$/,
       /^(sidespace|erogedownload)\.net$/,
     ],
     query: /get=([^&]+)/,
