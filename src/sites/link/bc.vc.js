@@ -71,72 +71,6 @@
     }, 1000);
   }
 
-  function knockServer2 (script) {
-    // somehow I must use jQuery AJAX
-    var post = $.window.$.post;
-    // mock a fake AJAX function
-    $.window.$.post = function (a, b, c) {
-      if (typeof c !== 'function') {
-        return;
-      }
-      setTimeout(function () {
-        var data = {
-          error: false,
-          message: {
-            url: '#',
-          },
-        };
-        c(JSON.stringify(data));
-      }, 1000);
-    };
-
-    var matches = script.match(ajaxPattern);
-    if (!matches) {
-      throw new _.AdsBypasserError('(in knock server 2) no script matches $.post');
-    }
-    var make_url = matches[1];
-    // dummy varialbes for eval script
-    var tZ, cW, cH, sW, sH;
-    var make_opts = eval('(' + matches[2] + ')');
-
-    function makeLog () {
-        make_opts.opt = 'make_log';
-        post(make_url, make_opts, function (text) {
-          var data = _.parseJSON(text);
-          _.info('make_log', data);
-          if (!data.message) {
-            checksLog();
-            return;
-          }
-
-          $.openLink(data.message.url);
-        });
-    }
-
-    function checkLog () {
-      make_opts.opt = 'check_log';
-      post(make_url, make_opts, function (text) {
-        var data = _.parseJSON(text);
-        _.info('check_log', data);
-        if (!data.message) {
-          checkLog();
-          return;
-        }
-
-        makeLog();
-      });
-    }
-
-    function checksLog () {
-      make_opts.opt = 'checks_log';
-      post(make_url, make_opts, function () {
-        _.info('checks_log');
-        checkLog();
-      });
-    }
-
-    checksLog();
-  }
 
   // bc.vc
   $.register({
@@ -325,7 +259,6 @@
     jki = jki[1];
     var ojk = rv.match(/ojk:\s*'([^']+)'/);
     if (!ojk) {
-      _.info('!!!!');
       throw new _.AdsBypasserError('script changed');
     }
     ojk = ojk[1];
