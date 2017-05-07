@@ -220,18 +220,15 @@
   $.register({
     rule: {
       host: [
-        /^1tk\.us$/,
+        /^(1tk|hit|adbla|tl7)\.us$/,
         /^gx\.si$/,
         /^adwat\.ch$/,
         /^(fly2url|urlwiz|xafox)\.com$/,
         /^(zpoz|ultry)\.net$/,
         /^(wwy|myam)\.me$/,
-        /^ssl\.gs$/,
-        /^hit\.us$/,
+        /^(ssl|srk)\.gs$/,
         /^shortit\.in$/,
-        /^(adbla|tl7)\.us$/,
         /^www\.adjet\.eu$/,
-        /^srk\.gs$/,
         /^cun\.bz$/,
         /^miniurl\.tk$/,
         /^vizzy\.es$/,
@@ -246,7 +243,11 @@
 
   $.register({
     rule: {
-      host: /^adtr\.im|ysear\.ch|xip\.ir$/,
+      host: [
+        /^adtr\.im$/,
+        /^ysear\.ch$/,
+        /^xip\.ir$/,
+      ], 
       path: /^\/.+/,
     },
     ready: function () {
