@@ -220,7 +220,7 @@
   $.register({
     rule: {
       host: [
-        /^(1tk|hit|adbla|tl7)\.us$/,
+        /^(1tk|hit|adbla|tl7|mylink)\.us$/,
         /^gx\.si$/,
         /^adwat\.ch$/,
         /^(fly2url|urlwiz|xafox)\.com$/,
@@ -234,7 +234,6 @@
         /^vizzy\.es$/,
         /^kazan\.vc$/,
         /^linkcash\.ml$/,
-        /^mylink\.us$/,
       ],
       path: /^\/.+/,
     },
@@ -247,7 +246,7 @@
         /^adtr\.im$/,
         /^ysear\.ch$/,
         /^xip\.ir$/,
-      ], 
+      ],
       path: /^\/.+/,
     },
     ready: function () {
