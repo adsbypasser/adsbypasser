@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^cf\.ly$/,
-    path: /^\/[^\/]+$/,
+    path: /^\/[^/]+$/,
   },
-  start: function (m) {
-    'use strict';
-
-    $.removeNodes('iframe');
-    $.openLink('/skip' + m.path[0]);
+  async start (m) {
+    $.remove('iframe');
+    await $.openLink('/skip' + m.path[0]);
   },
 });

@@ -1,13 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^clk\.im$/,
   },
-  ready: function (m) {
-    'use strict';
-
-    $.removeNodes('iframe');
-
-    var matches = $.searchScripts(/\$\("\.countdown"\)\.attr\("href","([^"]+)"\)/);
-    $.openLink(matches[1]);
+  async ready () {
+    $.remove('iframe');
+    const matches = $.searchFromScripts(/\$\("\.countdown"\)\.attr\("href","([^"]+)"\)/);
+    await $.openLink(matches[1]);
   },
 });

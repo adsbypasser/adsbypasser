@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^cocoleech\.com$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('#download');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('#download');
+    await $.openLink(a.href);
   },
 });

@@ -1,37 +1,6 @@
 (function () {
-  'use strict';
 
-  function hostMapper (host) {
-    switch (host) {
-    case 'disingkat.in':
-      return function () {
-        var a = $('a.btn-block.redirect');
-        return a.href;
-      };
-    case 'link.animagz.org':
-      return function () {
-        var a = $('a.redirect');
-        a = a.onclick.toString();
-        a = a.match(/window\.open \('([^']+)'\)/);
-        return a[1];
-      };
-    case 'coeg.in':
-    case 'www.telondasmu.com':
-      return function () {
-        var a = $('.download-link a');
-        return a.href;
-      };
-    case 'gunting.in':
-      return function () {
-        var a = $('div.col-sm-6:nth-child(1) > center:nth-child(1) > a:nth-child(1)');
-        return a.href;
-      };
-    default:
-      return null;
-    }
-  }
-
-  $.register({
+  _.register({
     rule: {
       host: [
         /^link\.animagz\.org$/,
@@ -40,15 +9,15 @@
       ],
       path: /^\/\w+$/,
     },
-    ready: function (m) {
-      var mapper = hostMapper(m.host[0]);
-      var b64 = mapper().match(/\?r=(\w+={0,2}?)/);
+    async ready (m) {
+      const mapper = hostMapper(m.host[0]);
+      const b64 = mapper().match(/\?r=(\w+={0,2}?)/);
 
-      $.openLink(atob(b64[1]));
+      await $.openLink(atob(b64[1]));
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^sipkur\.(net|us)$/,
       path: [
@@ -56,13 +25,43 @@
         /^\/menujulink\//,
       ],
     },
-    ready: function () {
-      var d = $('#testapk > div');
+    async ready () {
+      let d = $('#testapk > div');
       d = d.onclick.toString();
       d = d.match(/window\.open\('([^']+)'/);
 
-      $.openLink(d[1]);
+      await $.openLink(d[1]);
     },
   });
+
+  function hostMapper (host) {
+    switch (host) {
+    case 'disingkat.in':
+      return () => {
+        const a = $('a.btn-block.redirect');
+        return a.href;
+      };
+    case 'link.animagz.org':
+      return () => {
+        let a = $('a.redirect');
+        a = a.onclick.toString();
+        a = a.match(/window\.open \('([^']+)'\)/);
+        return a[1];
+      };
+    case 'coeg.in':
+    case 'www.telondasmu.com':
+      return () => {
+        const a = $('.download-link a');
+        return a.href;
+      };
+    case 'gunting.in':
+      return () => {
+        const a = $('div.col-sm-6:nth-child(1) > center:nth-child(1) > a:nth-child(1)');
+        return a.href;
+      };
+    default:
+      return null;
+    }
+  }
 
 })();
