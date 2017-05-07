@@ -237,6 +237,7 @@
         /^vizzy\.es$/,
         /^kazan\.vc$/,
         /^linkcash\.ml$/,
+        /^mylink\.us$/,
       ],
       path: /^\/.+/,
     },
