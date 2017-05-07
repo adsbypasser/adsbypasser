@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^imgtorrnt.in$/,
+    host: /^imgtorrnt\.in$/,
     path: /^\/view\.php$/,
     query: /^\?id=.*/,
   },
