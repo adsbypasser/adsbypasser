@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.fileproject\.com\.br$/,
+    host: /^(www\.)?fileproject\.com\.br$/,
     path: /^\/files\/+/,
   },
   ready: function () {
