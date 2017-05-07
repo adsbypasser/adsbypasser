@@ -16,11 +16,10 @@
     rule: {
       host: [
         /^img(fantasy|leech|\.pornleech|smile|nemo|sense|curl)\.com$/,
-        /^(imagedomino|lovechix)\.com$/,
+        /^(imagedomino|lovechix|imagebic)\.com$/,
         /^0img\.net$/,
         /^daily-img\.com$/,
         /^picangel\.in$/,
-        /^imagebic\.com$/,
         /^bunnyforum\.org$/,
       ],
       query: /^\?[pv]=/,
