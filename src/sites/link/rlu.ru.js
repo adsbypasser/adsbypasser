@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^preview\.rlu\.ru$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('#content > .long_url > a');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('#content > .long_url > a');
+    await $.openLink(a.href);
   },
 });

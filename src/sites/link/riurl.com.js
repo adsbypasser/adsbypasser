@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^riurl\.com$/,
     path: /^\/.+/,
   },
-  ready: function () {
-    'use strict';
-
-    var s = $.$('body script');
+  async ready () {
+    let s = $.$('body script');
     if (s) {
       s = s.innerHTML.indexOf('window.location.replace');
       if (s >= 0) {
@@ -14,7 +12,7 @@ $.register({
         return;
       }
     }
-    $.openLink('', {
+    await $.openLink('', {
       path: {
         hidden: '1',
         image: ' ',
