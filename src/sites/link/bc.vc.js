@@ -45,7 +45,7 @@
         script: decompress(content, unzip),
       };
     }
-    throw _.AdsBypasserError('script changed');
+    throw new _.AdsBypasserError('script changed');
   }
 
   function knockServer (script, dirtyFix) {
