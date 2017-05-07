@@ -1,4 +1,4 @@
-## TBA
+## v5.70.0
 
 * fixed
     * ad7.biz
