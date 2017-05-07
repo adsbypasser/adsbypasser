@@ -293,6 +293,7 @@
     * linkcash.ml
     * miniurl.tk
     * myam.me
+    * mylink.us
     * shortit.in
     * shrink.gs
     * ssl.gs
@@ -565,6 +566,7 @@
     * satuasia.com
     * sehatlega.com
     * short.awsubs.co
+    * shorten.id
     * sidespace.net
     * sinopsisfilmku.com
     * sports14.pw
@@ -616,9 +618,6 @@
     * croco.site
     * fas.li
     * shink.in
-* cuzle.com
-    * cuzle.com
-    * shorten.id
 * adlink.guru
     * 123link.top
     * adfly.tc
@@ -716,7 +715,6 @@
     * clk.im
     * cocoleech.com
     * coinlink.co
-    * comicon.com.br
     * comyonet.com
     * coolrom.com
     * crd.ht
@@ -725,7 +723,6 @@
     * dapat.in
     * dd.ma
     * dereferer.website
-    * dewaurl.com
     * dikit.in
     * directupload.net
     * dl-protect.com
@@ -736,10 +733,8 @@
     * filoops.info
     * fit.sh
     * fiuxy.co
-    * forbes.com
     * fotolink.su
     * fotosik.pl
-    * free-tv-video-online.info
     * freeimgup.com
     * fundurl.com
     * funkyimg.com
@@ -750,7 +745,6 @@
     * hentaimg.com
     * hostingpics.net
     * hotshorturl.com
-    * ichan.org
     * ifotos.pl
     * ilix.in
     * ilovebanten.com
@@ -804,7 +798,6 @@
     * link2dollar.com
     * link2you.ru
     * link5s.com
-    * linkarus.com
     * linkdecode.com
     * linkdolar.xyz
     * linkpaid.net
@@ -823,7 +816,6 @@
     * mije.net
     * mirrorcreator.com
     * mirrorfilehost.com
-    * mirrorupload.net
     * moesubs.com
     * mrjh.org
     * mt0.org
