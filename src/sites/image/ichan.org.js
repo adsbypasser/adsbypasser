@@ -15,7 +15,7 @@ $.register({
 // board
 $.register({
   rule: {
-    host: /ichan\.org$/,
+    host: /^ichan\.org$/,
   },
   ready: function () {
     'use strict';
