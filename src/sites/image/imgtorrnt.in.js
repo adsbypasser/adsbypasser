@@ -9,5 +9,5 @@ $.register({
 
     var img = $('center div table.tg tbody tr td center img');
     $.openImage(img.src);
-  }
+  },
 });
