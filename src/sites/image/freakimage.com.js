@@ -1,6 +1,9 @@
 $.register({
   rule: {
-    host: /^freakimage\.com|www\.hostpic\.org$/,
+    host: [
+      /^freakimage\.com$/,
+      /^www\.hostpic\.org$/,
+    ],
     path: /^\/view\.php$/,
     query: /^\?filename=([^&]+)/,
   },
