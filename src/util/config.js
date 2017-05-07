@@ -128,6 +128,12 @@
         },
         set: function (v) {
           GM.setValue(m.key, v);
+
+          var nv = GM.getValue(m.key, m.default_);
+          if (nv !== v) {
+            var s = _.T('failed to write config, key: {0}, value: {1}, new: {2}');
+            throw new _.AdsBypasserError(s(s.key, nv, v));
+          }
         },
       });
     });
