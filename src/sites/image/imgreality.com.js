@@ -7,5 +7,5 @@ $.register({
     $.openImage("https://imgreality.com/dlimg.php?id=" + m.path[1], {
       replace: true
     })
-  }
+  },
 });
