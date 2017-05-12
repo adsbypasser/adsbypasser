@@ -13,7 +13,7 @@
   $.register({
     rule: {
       host: /^imagenpic\.com$/,
-      path: /^\/.*\/.+\.(htm|html)$/,
+      path: /^\/.*\/.+\.html?$/,
     },
     ready: _.P(run, true),
   });
