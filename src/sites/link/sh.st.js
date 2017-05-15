@@ -31,7 +31,7 @@
 
   var hostRules = [
     /^sh\.st$/,
-    /^(dh10thbvu|u2ks|jnw0|qaafa|xiw34|cllkme|clkmein|festyy)\.com$/,
+    /^(dh10thbvu|u2ks|jnw0|qaafa|xiw34|cllkme|clkmein|festyy|gestyy)\.com$/,
     /^digg\.to$/,
     /^([vw]iid|clkme)\.me$/,
     /^short\.est$/,
