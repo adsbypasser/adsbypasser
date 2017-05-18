@@ -195,7 +195,7 @@ $.register({
   rule: {
     host: [
       /^ww[23]\.picnictrans\.com$/,
-      /^short\.awsubs\.co$/,
+      /^short\.awsubs\.(co|me)$/,
     ],
   },
   ready: function () {
