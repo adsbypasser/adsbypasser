@@ -27,7 +27,7 @@ $.register({
 $.register({
   rule: {
     host: /^www\.shrink-service\.it$/,
-    path: /^\/s\//,
+    path: /^\/[se]\//,
   },
   ready: function () {
     'use strict';
