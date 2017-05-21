@@ -155,11 +155,9 @@ $.register({
 $.register({
   rule: {
     host: [
-      /^designinghomey\.com$/,
+      /^(designinghomey|ani-share|sinopsisfilmku)\.com$/,
       /^motonews\.club$/,
       /^(autofans|landscapenature)\.pw$/,
-      /^ani-share\.com$/,
-      /^sinopsisfilmku\.com$/,
       /^(sidespace|erogedownload)\.net$/,
     ],
     query: /get=([^&]+)/,
