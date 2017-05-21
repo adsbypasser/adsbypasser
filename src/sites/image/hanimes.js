@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /www\.(h-animes|adultmove)\.info/,
+    host: /^www\.(h-animes|adultmove)\.info/,
     path: /^\/.+\/.+\/.+\.html$/,
   },
   ready: function () {
