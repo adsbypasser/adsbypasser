@@ -68,7 +68,7 @@
   // empireload.com
   $.register({
     rule: {
-      host: /^(empireload|loadsanook)\.com$/,
+      host: /^loadsanook\.com$/,
       query: /file=([^&]+)/,
     },
     start: function (m) {

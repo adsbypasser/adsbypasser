@@ -6,12 +6,6 @@ $.register({
       // filter lbGate
       query: /^$/,
     },
-    {
-      host: /^empireload\.com$/,
-      path: /^\/sexy\/.+\.htm$/,
-      // filter lbGate
-      query: /^$/,
-    },
   ],
   ready: function () {
     'use strict';
