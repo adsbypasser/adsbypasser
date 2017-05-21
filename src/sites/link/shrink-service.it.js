@@ -13,7 +13,7 @@ $.register({
 
 $.register({
   rule: {
-    host: /^www\.shrink-service\.it$/,
+    host: /^(www\.)?shrink-service\.it$/,
     path: /^\/shrinked\//,
   },
   ready: function () {
@@ -26,7 +26,7 @@ $.register({
 
 $.register({
   rule: {
-    host: /^www\.shrink-service\.it$/,
+    host: /^(www\.)?shrink-service\.it$/,
     path: /^\/s\//,
   },
   ready: function () {
