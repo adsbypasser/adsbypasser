@@ -65,7 +65,6 @@
     },
   });
 
-  // empireload.com
   $.register({
     rule: {
       host: /^dumppix\.com$/,
