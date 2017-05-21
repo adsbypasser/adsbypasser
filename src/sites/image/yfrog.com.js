@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /\.yfrog\.com$/,
+    host: /^yfrog\.com$/,
   },
   ready: function () {
     'use strict';
