@@ -1,3 +1,32 @@
+## TBA
+
+* fixed
+    * short.am
+    * xlink.me
+    * xxx.porn0day.com
+    * pic4you.ru
+    * pic5you.ru
+    * keptarolo.hu
+    * h-animes.info
+    * adultmove.info
+    * imgult.com
+    * imagenpic.com
+    * shrink-service.it
+* added
+    * short.awsubs.me
+    * imgreality.com
+    * corneey.com
+    * ceesty.com
+    * destyy.com
+    * festyy.com
+    * gestyy.com
+* removed
+    * leechpremium.space
+    * empireload.com
+    * loadsanook.com
+    * a.pomf.se
+    * yfrog.com
+
 ## v5.70.0
 
 * fixed
