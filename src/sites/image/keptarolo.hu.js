@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /keptarolo\.hu$/,
+    host: /^keptarolo\.hu$/,
     path: /^(\/[^\/]+\/[^\/]+\.jpg)$/,
   },
   start: function (m) {
