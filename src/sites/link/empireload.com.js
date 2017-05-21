@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /empireload\.com$/,
+    host: /^empireload\.com$/,
     path: /^\/plugin\.php$/,
     query: /^\?id=linkout&url=([^&]+)$/,
   },
