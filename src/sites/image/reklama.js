@@ -38,7 +38,7 @@
           // ends with image
           /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy|dam)image\.com$/,
           // starts with img
-          /^img(icy|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|nimz|binbou|2share|22|cover|hit|main|trial|blank|reputa|fapper)\.com$/,
+          /^img(icy|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|nimz|binbou|2share|22|cover|hit|main|trial|blank|reputa|fapper|reality)\.com$/,
           /^imgseeds?\.com$/,
           // starts with img-
           /^img-(zone|planet|pay|uploads)\.com$/,
