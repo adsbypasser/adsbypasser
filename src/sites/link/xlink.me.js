@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^xlink.me$/
+    host: /^xlink\.me$/
   },
   ready: function () {
     'use strict';
