@@ -68,17 +68,6 @@
   // empireload.com
   $.register({
     rule: {
-      host: /^loadsanook\.com$/,
-      query: /file=([^&]+)/,
-    },
-    start: function (m) {
-      $.openImage('files/' + m.query[1]);
-    },
-  });
-
-  // empireload.com
-  $.register({
-    rule: {
       host: /^dumppix\.com$/,
       path: /^\/viewer\.php$/,
       query: /file=([^&]+)/,
