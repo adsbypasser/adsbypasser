@@ -34,9 +34,7 @@
     rule: {
       host: [
         /^link\.animagz\.org$/,
-        /^coeg\.in$/,
-        /^disingkat\.in$/,
-        /^gunting\.in$/,
+        /^(coeg|disingkat|gunting)\.in$/,
       ],
       path: /^\/\w+$/,
     },

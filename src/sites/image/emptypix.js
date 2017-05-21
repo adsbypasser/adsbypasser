@@ -2,9 +2,9 @@ $.register({
   rule: [
     {
       host: [
-        /^emptypix\.com|overdream\.cz$/,
+        /^(emptypix|imgdomino)\.com$/,
+        /^overdream\.cz$/,
         /^www\.sexseeimage\.com$/,
-        /^imgdomino\.com$/,
       ],
       path: /^\/image\//,
     },

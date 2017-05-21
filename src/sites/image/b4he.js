@@ -1,6 +1,10 @@
 $.register({
   rule: {
-    host: /^(b4he|fullimg)\.com|fastpics\.net|ifap\.co$/,
+    host: [
+      /^(b4he|fullimg)\.com/,
+      /^fastpics\.net/,
+      /^ifap\.co/,
+    ],
     query: /^\?v=([^&]+)/,
   },
   start: function (m) {

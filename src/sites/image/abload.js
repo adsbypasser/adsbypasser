@@ -8,7 +8,7 @@
 
   $.register({
     rule: {
-      host: /^(www\.)?image(pearl|beryl|crest)\.com$/,
+      host: /^(www\.)?image(pearl|crest)\.com$/,
       path: /^\/verify\/(.+)$/,
     },
     start: function (m) {
@@ -26,7 +26,7 @@
       'http://itmages.ru/image/view/*/*',
       // different layout same handler
       {
-        host: /^(www\.)?image(pearl|beryl|crest)\.com$/,
+        host: /^(www\.)?image(pearl|crest)\.com$/,
         path: /^\/view\//,
       },
     ],

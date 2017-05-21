@@ -46,7 +46,7 @@
           /^www\.img(blow|lemon|4sharing)\.com$/,
           /^www\.imagefolks\.com$/,
           /^www\.freephotohostin\.com$/,
-          /^(www\.)?\.imgult\.com$/,
+          /^(www\.)?imgult\.com$/,
           // starts with xxx
           /^xxx(imagenow|screens)\.com$/,
           /^xxxsparrow?\.com$/,
@@ -162,9 +162,8 @@
   $.register({
     rule: {
       host: [
-        /^www\.img(adult|wallet)\.com$/,
-        /^www\.imgdrive\.net$/,
-        /^(www\.)?imgtaxi\.com$/,
+        /^(www\.)?img(adult|wallet|taxi)\.com$/,
+        /^(www\.)?imgdrive\.net$/,
       ],
       path: /^\/img-.*\.html$/,
     },

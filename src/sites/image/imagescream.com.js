@@ -29,7 +29,10 @@ $.register({
 
 $.register({
   rule: {
-    host: /^(imagescream|anonpic)\.com|all-poster\.ru$/,
+    host: [
+      /^(imagescream|anonpic)\.com$/,
+      /^all-poster\.ru$/,
+    ],
     query: /^\?v=/,
   },
   ready: function () {

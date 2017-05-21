@@ -27,7 +27,10 @@
   // dwimg.com
   $.register({
     rule: {
-      host: /^(dwimg|imgsin|www\.pictureshoster)\.com$/,
+      host: [
+        /^(dwimg|imgsin)\.com$/,
+        /^www\.pictureshoster\.com$/,
+      ],
       path: /^\/viewer\.php$/,
       query: /file=([^&]+)/,
     },
@@ -40,8 +43,10 @@
   $.register({
     rule: {
       host: [
-        /img(nip|central|cream)\.com$/,
-        /imageview\.me|244pix\.com|postimg\.net$/,
+        /^img(nip|central|cream)\.com$/,
+        /^imageview\.me$/,
+        /^244pix\.com$/,
+        /^postimg\.net$/,
       ],
       path: /^\/viewerr.*\.php$/,
       query: /file=([^&]+)/,
@@ -60,18 +65,6 @@
     },
   });
 
-  // empireload.com
-  $.register({
-    rule: {
-      host: /(empireload|loadsanook)\.com$/,
-      query: /file=([^&]+)/,
-    },
-    start: function (m) {
-      $.openImage('files/' + m.query[1]);
-    },
-  });
-
-  // empireload.com
   $.register({
     rule: {
       host: /^dumppix\.com$/,

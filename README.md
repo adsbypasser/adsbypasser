@@ -1,11 +1,11 @@
 # AdsBypasser
 
-This user script helps you to
+This user script helps you to:
 
-* skip ads' count-down or continue pages
-* prevent windows popup
+* skip countdown ads or continue pages.
+* prevent ad pop-up windows.
 
-It **cannot** help you solve reCAPTCHA.
+It **CANNOT** help you to solve reCAPTCHAs.
 
 Forked from [RedirectionHelper] written by [SuYS].
 
@@ -27,7 +27,7 @@ See [SITES.md](SITES.md) and [Supported Platforms].
 ## Run-time Configurations
 
 Please see [this page][8] to adjust configurations.
-For more information please see [here][9].
+For more information, please see [here][9].
 
 
 ## How To Build
@@ -39,11 +39,10 @@ npm install
 npm run build
 ```
 
-Combined userscript will be `dest/adsbypasser.user.js`, which could install on
-browser.
+Combined userscript will be `dest/adsbypasser.user.js`,
+which you could install on the web browser.
 
 For more information, please see [Wiki].
-
 
 [1]: https://adsbypasser.github.io/
 [2]: https://greasyfork.org/scripts/4881-adsbypasser
@@ -54,9 +53,9 @@ For more information, please see [Wiki].
 [7]: https://travis-ci.org/adsbypasser/adsbypasser
 [8]: https://adsbypasser.github.io/configure.html
 [9]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
-[Node.js]: http://nodejs.org/
-[npm]: https://npmjs.org/
-[RedirectionHelper]: http://userscripts-mirror.org/scripts/show/69797
-[SuYS]: http://userscripts-mirror.org/users/SuYS.html
+[Node.js]: https://nodejs.org
+[npm]: https://www.npmjs.com/
+[RedirectionHelper]: https://userscripts-mirror.org/scripts/show/69797
+[SuYS]: https://userscripts-mirror.org/users/SuYS.html
 [Wiki]: https://github.com/adsbypasser/adsbypasser/wiki
 [Supported Platforms]: https://github.com/adsbypasser/adsbypasser/wiki/Supported-Platforms

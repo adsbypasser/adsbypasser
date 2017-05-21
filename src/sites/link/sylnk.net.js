@@ -73,11 +73,15 @@ $.register({
       host: /^sehatlega\.com$/,
       query: /^\?lanjut=([a-zA-Z0-9\/=]+)$/,
     },
+    {
+      host: /^shorten\.id$/,
+      // note the trailing `=`
+      query: /^\?url=([a-zA-Z0-9\/=]+)=$/,
+    },
   ],
   start: function (m) {
     'use strict';
     var rawLink = atob(m.query[1]);
-
     $.openLink(rawLink);
   },
 });
@@ -151,11 +155,9 @@ $.register({
 $.register({
   rule: {
     host: [
-      /^designinghomey\.com$/,
+      /^(designinghomey|ani-share|sinopsisfilmku)\.com$/,
       /^motonews\.club$/,
       /^(autofans|landscapenature)\.pw$/,
-      /^ani-share\.com$/,
-      /^sinopsisfilmku\.com$/,
       /^(sidespace|erogedownload)\.net$/,
     ],
     query: /get=([^&]+)/,

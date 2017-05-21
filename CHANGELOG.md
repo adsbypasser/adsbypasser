@@ -1,3 +1,25 @@
+## v5.70.0
+
+* fixed
+    * ad7.biz
+    * bc.vc
+    * imagepearl.com
+    * imagecrest.com
+    * prevent loop if it failed to update configurations
+* added
+    * imgtorrnt.in
+    * mylink.us
+* removed
+    * mirrorupload.net
+    * dewaurl.com
+    * imageberyl.com
+    * cuzle.com
+    * forbes.com
+    * comicon.com.br
+    * ichan.org
+    * free-tv-video-online.info
+    * linkarus.com
+
 ## v5.69.0
 
 * fixed

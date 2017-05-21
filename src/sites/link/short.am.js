@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^short.am$/,
+    host: /^short\.am$/,
   },
   ready: function () {
     'use strict';

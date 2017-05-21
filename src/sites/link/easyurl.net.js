@@ -1,6 +1,10 @@
 $.register({
   rule: {
-    host: /easyurl\.net|(atu|clickthru|redirects|readthis)\.ca|goshrink\.com$/,
+    host: [
+      /^easyurl\.net$/,
+      /^(atu|clickthru|redirects|readthis)\.ca$/,
+      /^goshrink\.com$/,
+    ],
   },
   ready: function () {
     'use strict';

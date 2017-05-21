@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^(www\.)?filoops\.info$/
+    host: /^(www\.)?filoops\.info$/,
   },
   ready: function () {
     'use strict';

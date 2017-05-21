@@ -1,6 +1,10 @@
 $.register({
   rule: {
-    host: /^lnx\.lu|url\.fm|z\.gs$/,
+    host: [
+      /^lnx\.lu$/,
+      /^url\.fm$/,
+      /^z\.gs$/,
+    ],
   },
   ready: function () {
     'use strict';
