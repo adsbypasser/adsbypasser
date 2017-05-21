@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^pic(4|5)you.ru$/
+    host: /^pic(4|5)you\.ru$/
   },
   ready: function () {
   // img is a direct child only if it's a thumb

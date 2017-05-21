@@ -54,7 +54,7 @@
           /^(i|xxx)\.hentaiyoutube\.com$/,
           /^(go|er)imge\.com$/,
           /^(like\.)?08lkk\.com$/,
-          /^(www\.)?\.imgult\.com$/,
+          /^(www\.)?imgult\.com$/,
           /^nim(plus|zshare)\.com$/,
           /^nudeximg\.com$/,
           /imgseeds?\.com$/,
