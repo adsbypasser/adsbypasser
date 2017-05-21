@@ -43,7 +43,6 @@
     * cdn.javtotal.com
     * dumppix.com
     * dwimg.com
-    * empireload.com
     * funextra.hostzi.com
     * hentai-hosting.com
     * imagecurl.com
@@ -59,7 +58,6 @@
     * imgsilo.net
     * imgsin.com
     * imgsoo.net
-    * loadsanook.com
     * miragepics.com
     * nixhelp.de
     * overpic.net
@@ -162,6 +160,7 @@
     * imgpu.com
     * imgpython.net
     * imgrat.com
+    * imgreality.com
     * imgreputa.com
     * imgrun.net
     * imgsavvy.com
@@ -424,11 +423,16 @@
     * readthis.ca
     * redirects.ca
 * sh.st
+    * ceesty.com
     * clkme.me
     * clkmein.com
     * cllkme.com
+    * corneey.com
+    * destyy.com
     * dh10thbvu.com
     * digg.to
+    * festyy.com
+    * gestyy.com
     * jnw0.com
     * qaafa.com
     * sh.st
@@ -566,6 +570,7 @@
     * satuasia.com
     * sehatlega.com
     * short.awsubs.co
+    * short.awsubs.me
     * shorten.id
     * sidespace.net
     * sinopsisfilmku.com
@@ -680,7 +685,6 @@
     * 2ty.cc
     * 3ra.be
     * 4fun.tw
-    * a.pomf.se
     * ad2links.com
     * ad4.fr
     * adfe.es
@@ -791,7 +795,6 @@
     * kurogaze.net
     * larashare.com
     * leechbd.tk
-    * leechpremium.space
     * lienscash.com
     * link-protector.com
     * link.im
@@ -899,7 +902,6 @@
     * x.pixfarm.net
     * xlink.me
     * yep.it
-    * yfrog.com
     * yooclick.com
     * ysf.pl
     * zintata.com
