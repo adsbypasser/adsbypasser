@@ -19,7 +19,7 @@ $.register({
 
 $.register({
   rule: {
-    host: /^xxx\.porn0day.\.com$/,
+    host: /^xxx\.porn0day\.com$/,
     path: /^\/image\/.+$/,
   },
   ready: function () {
