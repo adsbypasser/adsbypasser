@@ -38,37 +38,37 @@
           // ends with image
           /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy|dam)image\.com$/,
           // starts with img
-          /^img(icy|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|-pay|nimz|binbou|2share|22|cover|hit|main|trial|blank|-uploads|reputa|fapper)\.com$/,
+          /^img(icy|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|nimz|binbou|2share|22|cover|hit|main|trial|blank|reputa|fapper)\.com$/,
+          /^imgseeds?\.com$/,
           // starts with img-
-          /^img-(zone|planet)\.com$/,
+          /^img-(zone|planet|pay|uploads)\.com$/,
           // starts with www
           /^www\.img(blow|lemon|4sharing)\.com$/,
           /^www\.imagefolks\.com$/,
           /^www\.freephotohostin\.com$/,
-          /^www\.hotimage\.uk$/,
+          /^(www\.)?imgult\.com$/,
           // starts with xxx
           /^xxx(imagenow|screens)\.com$/,
+          /^xxxsparrow?\.com$/,
           // else
           /^(playimg|picstwist|ericsony|wpc8|uplimg|lexiit|thumbnailus|newimagepost|fapingpics|dimtus|tinizo)\.com$/,
           /^((i|hentai)\.)?imgslip\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           /^(go|er)imge\.com$/,
           /^(like\.)?08lkk\.com$/,
-          /^(www\.)?imgult\.com$/,
           /^nim(plus|zshare)\.com$/,
           /^nudeximg\.com$/,
-          /imgseeds?\.com$/,
-          /xxxsparrow?\.com$/,
           // net
           /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics|pix)\.net$/,
           /^(imagesouls|naughtygate|gallerycloud|imagelaser|picture-bang|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
           // org
           /^(shot|adult)img\.org$/,
-          /^img(studio|spot)\.org$/,
           /^image(\.adlock|on|team)\.org$/,
           /^(voyeur|drag|teen|mega)image\.org$/,
           /^teenshot\.org$/,
+          /^img(studio|spot)\.org$/,
           // else
+          /^www\.hotimage\.uk$/,
           /^(hotimages|55888)\.eu$/,
           /^img(cloud|mag)\.co$/,
           /^pixup\.us$/,
