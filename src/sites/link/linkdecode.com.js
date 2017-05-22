@@ -1,8 +1,8 @@
 $.register({
   rule: {
     host: [
-      /^www\.linkdecode\.com$/,
-      /^www\.fastdecode\.com$/,
+      /^(www\.)?linkdecode\.com$/,
+      /^(www\.)?fastdecode\.com$/,
     ],
     path: /^\/$/,
     query: /^\?(.+)$/,
