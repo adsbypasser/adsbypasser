@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.shortskip\.com$/,
+    host: /^(www\.)?shortskip\.com$/,
     path: /^\/short\.php$/,
     query: /i=([^&]+)/,
   },
