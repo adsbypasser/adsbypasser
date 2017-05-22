@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.mije\.net$/,
+    host: /^(www\.)?mije\.net$/,
     path: /^\/\w+\/(.+)$/,
   },
   start: function (m) {
