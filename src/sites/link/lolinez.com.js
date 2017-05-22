@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.lolinez\.com$/,
+    host: /^(www\.)?lolinez\.com$/,
     query: /\?(.+)/,
   },
   start: function (m) {
