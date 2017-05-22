@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /^www\.spaste\.com$/,
+    host: /^(www\.)?spaste\.com$/,
     path: /^\/go\/\w+$/,
   },
   ready: function () {
