@@ -11,8 +11,9 @@ $.register({
   ready: function () {
     'use strict';
 
-    var l = $('#skip .bt');
-    $.openLink(l.href);
+    var l = $.searchScripts(/revC\("([^"]+)"\)/);
+    l = atob(l[1]);
+    $.openLink('/' + l);
   },
 });
 
