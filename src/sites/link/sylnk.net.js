@@ -105,7 +105,7 @@ $.register({
         /^awsubs\.cf$/,
         /^awsubsco\.ga$/,
       ],
-      query: /id=(\w+=*)/,
+      query: /id=([\w\\]+=*)/,
     },
     {
       host: [
@@ -118,7 +118,7 @@ $.register({
         /^edogawa\.lon\.pw$/,
         /^telolet\.in$/,
       ],
-      query: /go=(\w+=*)/,
+      query: /go=([\w\\]+=*)/,
     },
   ],
   start: function (m) {
