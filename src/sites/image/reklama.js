@@ -168,7 +168,7 @@
       path: /^\/img-.*\.html$/,
     },
     start: function () {
-      var c = $.getCookie('img_c_d') || $.getCookie('img_p_d');
+      var c = $.getCookie('ibpuc');
       if (c) {
         return;
       }
@@ -176,6 +176,9 @@
         cti: 1,
         ref: '',
         rc: 1,
+        rp: 1,
+        bt: 0,
+        bw: 'edge',
       }).then(function (data) {
         window.location.reload();
       });
