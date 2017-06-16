@@ -64,30 +64,28 @@
         return;
       }
 
-      var d = $('td:nth-child(2) > center > div[id]');
-      var visibleClasses = null;
-      waitDOM(d, function (node) {
-        if (node.nodeName === 'STYLE') {
-          visibleClasses = parseStyle(node);
-          return false;
-        }
-        // making sure it is the correct node (form) and the only visible one
-        // since it throws in a random number of "fake" ones
-        if (node.nodeName === 'FORM' && node.offsetParent !== null) {
-          return visibleClasses.some(function (class_) {
-            var isVisible = node.classList.contains(class_);
-            if (!isVisible) {
-              return false;
-            }
-            var button = $.$('input[type="submit"]', node);
-            if (!button) {
-              return false;
-            }
-            return button.style.display !== 'none';
-          });
-        }
-        return false;
-      }).then(function (node) {
+      getAmbiguousForm('td:nth-child(2) > center > div[id]').then(function (node) {
+        node.submit();
+      }).catch(function (e) {
+        _.warn(e);
+      });
+    },
+  });
+
+  $.register({
+    rule: {
+      host: /^imgoutlet\.co$/,
+      path: PATH_RULE,
+    },
+    ready: function () {
+      var i = $.$('img.pic');
+      if (i) {
+        // second stage
+        $.openImage(i.src);
+        return;
+      }
+
+      getAmbiguousForm('.inner > center > div[id]').then(function (node) {
         node.submit();
       }).catch(function (e) {
         _.warn(e);
@@ -178,6 +176,33 @@
       observer.observe(element, {
         childList: true,
       });
+    });
+  }
+
+  function getAmbiguousForm (selector) {
+    var d = $(selector);
+    var visibleClasses = null;
+    return waitDOM(d, function (node) {
+      if (node.nodeName === 'STYLE') {
+        visibleClasses = parseStyle(node);
+        return false;
+      }
+      // making sure it is the correct node (form) and the only visible one
+      // since it throws in a random number of "fake" ones
+      if (node.nodeName === 'FORM' && node.offsetParent !== null) {
+        return visibleClasses.some(function (class_) {
+          var isVisible = node.classList.contains(class_);
+          if (!isVisible) {
+            return false;
+          }
+          var button = $.$('input[type="submit"]', node);
+          if (!button) {
+            return false;
+          }
+          return button.style.display !== 'none';
+        });
+      }
+      return false;
     });
   }
 
