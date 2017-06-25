@@ -1,4 +1,4 @@
-## TBA
+## v5.72.0
 
 * fixed
     * pronpic.org
