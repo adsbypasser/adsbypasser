@@ -1,3 +1,15 @@
+## TBA
+
+* fixed
+    * pronpic.org
+    * safelinkreviewer.co
+    * linkshrink.net
+    * imgwallet.com
+* added
+    * imgoutlet.co
+* removed
+    * igg-games.com
+
 ## v5.71.0
 
 * fixed
