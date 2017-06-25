@@ -476,6 +476,7 @@
     * imgmaze.com
     * imgmega.com
     * imgmonkey.com
+    * imgoutlet.co
     * imgoutlet.com
     * imgpaying.com
     * imgrock.net
@@ -670,9 +671,6 @@
 * al.ly
     * al.ly
     * ally.sh
-* igg-games.com
-    * igg-games.com
-    * igg-games.co
 * allkeyshop.com
     * allkeyshop.com
     * cshort.org
