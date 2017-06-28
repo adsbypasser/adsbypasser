@@ -1,6 +1,6 @@
 $.register({
   rule: {
-    host: /www.telondasmu.com/,
+    host: /^www\.telondasmu\.com$/,
   },
   ready: function () {
     'use strict';
