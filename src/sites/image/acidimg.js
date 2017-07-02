@@ -1,6 +1,7 @@
 $.register({
   rule: {
     host: /^acidimg\.cc$/,
+    path: /^\/img-(.+)\.html$/,
   },
   ready: function () {
     'use strict';
