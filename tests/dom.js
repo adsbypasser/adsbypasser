@@ -132,7 +132,7 @@ describe('dom', function () {
         var $ = factory(self.browser);
 
         $.removeNodes('.label');
-        expect($.$('.label')).to.be.not.found;
+        expect($.$('.label')).to.be.null;
 
         done();
       }).catch(function (error) {
