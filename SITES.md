@@ -683,7 +683,6 @@
     * 2ty.cc
     * 3ra.be
     * 4fun.tw
-    * acidimg.cc
     * ad2links.com
     * ad4.fr
     * adfe.es
