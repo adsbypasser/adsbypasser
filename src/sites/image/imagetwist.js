@@ -3,7 +3,9 @@
 
   function run (rp) {
     // dirty hack, prevent scripts appending elements
-    $.window.jQuery.prototype.append = undefined;
+    if ($.window.jQuery) {
+      $.window.jQuery.prototype.append = undefined;
+    }
     var i = $('img.pic');
     $.openImage(i.src, {
       replace: rp,
