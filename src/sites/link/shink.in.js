@@ -20,8 +20,8 @@ $.register({
     }
 
     // Remove the popup trigger area.
-    // NOTE it will add the node back immediately, maybe it will becomes very
-    // buzy.
+    // NOTE The site will add the node back immediately, so maybe it will
+    // becomes very busy.
     var o = new MutationObserver(function (mutations) {
       mutations.forEach(function (mutation) {
         mutation.addedNodes.forEach(function (node) {
@@ -46,7 +46,6 @@ $.register({
   rule: [
     {
       host: [
-        /^(www\.)?shink\.in$/,
         /^fas\.li$/,
         /^cpmlink\.net$/,
       ],
@@ -64,5 +63,18 @@ $.register({
     var i = a.href.lastIndexOf('http');
     a = a.href.substr(i);
     $.openLink(a);
+  },
+});
+
+$.register({
+  rule: {
+    host: /^(www\.)?shink\.in$/,
+    path: /^\/go\/\w+$/,
+  },
+  ready: function () {
+    'use strict';
+
+    var f = $('#skip');
+    f.submit();
   },
 });
