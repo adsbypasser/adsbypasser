@@ -1,3 +1,17 @@
+## TBA
+
+* fixed
+    * techfunda.net
+    * imgseed.com
+    * imagecrest.com
+    * imagetwist.com
+    * shink.in
+* added
+    * topload.pro
+    * jzrputtbut.net
+    * telondasmu.com
+    * acidimg.cc
+
 ## v5.72.0
 
 * fixed
