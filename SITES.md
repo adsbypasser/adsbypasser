@@ -15,6 +15,7 @@
     * galleries.bz
     * goneviral.com
     * hornywood.tv
+    * jzrputtbut.net
     * linkbabes.com
     * linkbucks.com
     * megaline.co
@@ -68,6 +69,7 @@
     * 08lkk.com
     * 18pron.ru
     * 24avarii.ru
+    * acidimg.cc
     * ads-img.info
     * adultimg.org
     * bokimage.com
@@ -611,6 +613,7 @@
     * link.animagz.org
     * sipkur.net
     * sipkur.us
+    * telondasmu.com
 * imgnova.xyz
     * hentai-hot.xyz
     * hentai-king.online
@@ -877,6 +880,7 @@
     * thinfi.com
     * tinyarrows.com
     * tinypic.com
+    * topload.pro
     * turboimagehost.com
     * typ.me
     * ulmt.in
