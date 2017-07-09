@@ -1,7 +1,10 @@
 $.register({
   rule: {
     host: /^techfunda\.net$/,
-    path: /^\/link\//,
+    path: [
+        /^\/link\//,
+        /^\/safe\//,
+    ],
   },
   ready: function () {
     'use strict';
