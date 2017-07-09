@@ -85,6 +85,7 @@
           /^pic4you\.top$/,
           /^imgsen\.se$/,
           /^ipicture\.su$/,
+          /^acidimg\.cc$/,
         ],
         path: /^\/img-.*\.html/,
       },
