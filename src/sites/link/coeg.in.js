@@ -16,6 +16,7 @@
         return a[1];
       };
     case 'coeg.in':
+    case 'www.telondasmu.com':
       return function () {
         var a = $('.download-link a');
         return a.href;
@@ -35,6 +36,7 @@
       host: [
         /^link\.animagz\.org$/,
         /^(coeg|disingkat|gunting)\.in$/,
+        /^www\.telondasmu\.com$/,
       ],
       path: /^\/\w+$/,
     },
