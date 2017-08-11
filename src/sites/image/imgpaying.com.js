@@ -53,7 +53,10 @@
 
   $.register({
     rule: {
-      host: /^img(rock|town)\.net$/,
+      host: [
+        /^imgtown\.net$/,
+        /^imgrock\.co$/,
+      ],
       path: PATH_RULE,
     },
     ready: function () {
