@@ -1,11 +1,9 @@
 $.register({
   rule: {
-    host: /^(www\.)?ouo\.(io|press)$/,
-    path: /^\/go\/\w+$/,
+    host: /^(www\.)?ouo\.(io|press)$/
   },
   ready: function (m) {
     'use strict';
-
-    $('form').submit();
+    $('form[method="POST"]>input[name="_token"]').parentNode.submit();
   },
 });
