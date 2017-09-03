@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?uskip\.me$/,
     path: /^\/go\/\w+$/,
   },
-  ready: function (m) {
-    'use strict';
-
-    var a = $('#btn-main');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('#btn-main');
+    await $.openLink(a.href);
   },
 });

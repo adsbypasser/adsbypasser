@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?pasted\.co$/,
     path: /^\/\w+$/,
   },
-  ready: function () {
-    'use strict';
-
-    $.removeNodes('#captcha_overlay');
+  async ready () {
+    $.remove('#captcha_overlay');
   },
 });

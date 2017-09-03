@@ -1,26 +1,25 @@
 (function () {
-  'use strict';
 
-  var host = /^imageshack\.us$/;
+  const host = /^imageshack\.us$/;
 
-  $.register({
+  _.register({
     rule: {
       host: host,
-      path: /^\/photo\/.+\/(.+)\/([^\/]+)/,
+      path: /^\/photo\/.+\/(.+)\/([^/]+)/,
     },
-    start: function (m) {
-      $.openImage(_.T('/f/{0}/{1}/')(m.path[1], m.path[2]));
+    async start (m) {
+      await $.openImage(_.template('/f/{0}/{1}/')(m.path[1], m.path[2]));
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: host,
-      path: /^\/f\/.+\/[^\/]+/,
+      path: /^\/f\/.+\/[^/]+/,
     },
-    ready: function () {
-      var i = $('#fullimg');
-      $.openImage(i.src);
+    async ready () {
+      const i = $('#fullimg');
+      await $.openImage(i.src);
     },
   });
 

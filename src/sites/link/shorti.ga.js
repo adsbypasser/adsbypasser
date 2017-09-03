@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?shorti\.ga$/,
     path: [
@@ -6,13 +6,11 @@ $.register({
       /^\/url_redirector\.html$/,
     ],
   },
-  ready: function () {
-    'use strict';
-
-    var f = $.$$('frame');
+  async ready () {
+    const f = $.$$('frame');
 
     // Find the right frame
-    var fl = f.find(function(value, key, self) {
+    const [, v,] = _.find(f, (value) => {
       if (value.getAttribute('class')) {
         return _.none;
       }
@@ -21,6 +19,6 @@ $.register({
       return 'Target frame found';
     });
 
-    $.openLink(fl.value.src);
+    await $.openLink(v.src);
   },
 });

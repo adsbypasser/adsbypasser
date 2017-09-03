@@ -1,14 +1,11 @@
-$.register({
+_.register({
   rule: {
     host: /^imgbox\.com$/,
     path: /^\/[\d\w]+$/,
   },
-  ready: function () {
-    'use strict';
-
-    $.removeNodes('iframe');
-
-    var i = $('#img');
-    $.openImage(i.src);
+  async ready () {
+    $.remove('iframe');
+    const i = $('#img');
+    await $.openImage(i.src);
   },
 });

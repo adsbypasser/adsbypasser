@@ -1,18 +1,6 @@
 (function () {
-  'use strict';
 
-  function helper (doReplace) {
-    if ($.window.confirmAge) {
-      $.window.confirmAge(1);
-      return;
-    }
-    var i = $('#container-home img[onclick]');
-    $.openImage(i.src, {
-      replace: doReplace,
-    });
-  }
-
-  $.register({
+  _.register({
     rule: {
       host: [
         /^img(fantasy|leech|\.pornleech|smile|nemo|sense|curl)\.com$/,
@@ -24,15 +12,26 @@
       ],
       query: /^\?[pv]=/,
     },
-    ready: _.P(helper, false),
+    ready: _.partial(helper, false),
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^imgsay\.com$/,
       query: /^\?[pv]=/,
     },
-    ready: _.P(helper, true),
+    ready: _.partial(helper, true),
   });
+
+  async function helper (doReplace) {
+    if ($.window.confirmAge) {
+      $.window.confirmAge(1);
+      return;
+    }
+    const i = $('#container-home img[onclick]');
+    await $.openImage(i.src, {
+      replace: doReplace,
+    });
+  }
 
 })();

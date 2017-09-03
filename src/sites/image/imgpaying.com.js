@@ -1,9 +1,8 @@
 (function () {
-  'use strict';
 
-  var PATH_RULE = /^\/([0-9a-zA-Z]+)(\.|\/|$)/;
+  const PATH_RULE = /^\/([0-9a-zA-Z]+)(\.|\/|$)/;
 
-  $.register({
+  _.register({
     rule: {
       host: [
         /^img(universal|paying|mega|zeus|monkey|trex|ve|dew|diamond)\.com$/,
@@ -19,12 +18,12 @@
       ],
       path: PATH_RULE,
     },
-    ready: function (m) {
-      helper(m.path[1], getNext1);
+    async ready (m) {
+      await helper(m.path[1], getNext1);
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: [
         /^imgview\.net$/,
@@ -32,145 +31,134 @@
       ],
       path: PATH_RULE,
     },
-    ready: function () {
-      var i = $.$('img.pic');
+    async ready () {
+      const i = $.$('img.pic');
       if (i) {
         // second stage
-        $.openImage(i.src);
+        await $.openImage(i.src);
         return;
       }
 
-      var d = $('div[id^="imageviewi"]');
-      waitDOM(d, function (node) {
+      const d = $('div[id^="imageviewi"]');
+      const node = await waitDOM(d, (node) => {
         return node.nodeName === 'FORM' && $.$('input[name="id"]', node);
-      }).then(function (node) {
-        node.submit();
-      }).catch(function (e) {
-        _.warn(e);
       });
+      node.submit();
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^img(rock|town)\.net$/,
       path: PATH_RULE,
     },
-    ready: function () {
-      var i = $.$('img.pic');
+    async ready () {
+      const i = $.$('img.pic');
       if (i) {
         // second stage
-        $.openImage(i.src);
+        await $.openImage(i.src);
         return;
       }
 
-      getAmbiguousForm('td:nth-child(2) > center > div[id]').then(function (node) {
-        node.submit();
-      }).catch(function (e) {
-        _.warn(e);
-      });
+      const node = await getAmbiguousForm('td:nth-child(2) > center > div[id]');
+      node.submit();
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^imgoutlet\.co$/,
       path: PATH_RULE,
     },
-    ready: function () {
-      var i = $.$('img.pic');
+    async ready () {
+      const i = $.$('img.pic');
       if (i) {
         // second stage
-        $.openImage(i.src);
+        await $.openImage(i.src);
         return;
       }
 
-      getAmbiguousForm('.inner > center > div[id]').then(function (node) {
-        node.submit();
-      }).catch(function (e) {
-        _.warn(e);
-      });
+      const node = getAmbiguousForm('.inner > center > div[id]');
+      node.submit();
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^chronos\.to$/,
       path: PATH_RULE,
     },
-    ready: function (m) {
-      helper(m.path[1], getNext2);
+    async ready (m) {
+      await helper(m.path[1], getNext2);
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^imgfiles\.org$/,
       path: PATH_RULE,
     },
-    ready: function (m) {
-      var i = $.$('img.pic');
+    async ready () {
+      const i = $.$('img.pic');
       if (i) {
         // second stage
-        $.openImage(i.src);
+        await $.openImage(i.src);
         return;
       }
 
-      var f = $('form');
+      const f = $('form');
       f.submit();
     },
   });
 
-  $.register({
+  _.register({
     rule: 'http://imgview.net/tpind.php',
-    ready: function () {
-      var i = $.$('img.pic');
+    async ready () {
+      const i = $.$('img.pic');
       if (i) {
         // second stage
-        $.openImage(i.src, {replace: true});
+        await $.openImage(i.src, {replace: true});
         return;
       }
 
-      _.wait(500).then(function () {
-        var d = $('div[id^="imageviewi"] input[type="submit"][style=""]');
-        d = d.parentNode;
-        d.submit();
-      });
+      await _.wait(500);
+      let d = $('div[id^="imageviewi"] input[type="submit"][style=""]');
+      d = d.parentNode;
+      d.submit();
     },
   });
 
-  $.register({
+  _.register({
     rule: /^http:\/\/imgdragon\.com\/(getfil\.php|dl)$/,
-    ready: function () {
-      var i = $.$('img.pic');
+    async ready () {
+      const i = $.$('img.pic');
       if (i) {
         // second stage
-        $.openImage(i.src);
+        await $.openImage(i.src);
         return;
       }
 
-      _.wait(500).then(function () {
-        var f = $('#ContinueFRM');
-        f.submit();
-      });
+      await _.wait(500);
+      const f = $('#ContinueFRM');
+      f.submit();
     },
   });
 
   function waitDOM (element, fn) {
-    return _.D(function (resolve, reject) {
-      var observer = new MutationObserver(function (mutations) {
-        mutations.forEach(function (mutation) {
+    return new Promise((resolve) => {
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
           if (mutation.type !== 'childList') {
             return;
           }
-          var result = _.C(mutation.addedNodes).find(function (child) {
+          const [k, , r] = _.find(mutation.addedNodes, (child) => {
             return fn(child) ? child : _.none;
           });
-          if (!result) {
+          if (k === _.none) {
             return;
           }
           observer.disconnect();
-          resolve(result.payload);
+          resolve(r);
         });
       });
       observer.observe(element, {
@@ -180,9 +168,9 @@
   }
 
   function getAmbiguousForm (selector) {
-    var d = $(selector);
-    var visibleClasses = null;
-    return waitDOM(d, function (node) {
+    const d = $(selector);
+    let visibleClasses = null;
+    return waitDOM(d, (node) => {
       if (node.nodeName === 'STYLE') {
         visibleClasses = parseStyle(node);
         return false;
@@ -190,12 +178,12 @@
       // making sure it is the correct node (form) and the only visible one
       // since it throws in a random number of "fake" ones
       if (node.nodeName === 'FORM' && node.offsetParent !== null) {
-        return visibleClasses.some(function (class_) {
-          var isVisible = node.classList.contains(class_);
+        return visibleClasses.some((class_) => {
+          const isVisible = node.classList.contains(class_);
           if (!isVisible) {
             return false;
           }
-          var button = $.$('input[type="submit"]', node);
+          const button = $.$('input[type="submit"]', node);
           if (!button) {
             return false;
           }
@@ -208,25 +196,13 @@
 
   function parseStyle (style) {
     style = style.textContent;
-    var pattern = /\.(\w+)\{visibility:initial;\}/g;
-    var rv = null;
-    var classes = [];
+    const pattern = /\.(\w+)\{visibility:initial;\}/g;
+    let rv = null;
+    const classes = [];
     while ((rv = pattern.exec(style)) !== null) {
       classes.push(rv[1]);
     }
     return classes;
-  }
-
-  function go (id, pre, next) {
-    $.openLink('', {
-      post: {
-        op: 'view',
-        id: id,
-        pre: pre,
-        next: next,
-        adb: '0',
-      },
-    });
   }
 
   function getNext1 (i) {
@@ -234,7 +210,7 @@
   }
 
   function getNext2 (i) {
-    var next = i.onclick && i.onclick.toString().match(/value='([^']+)'/);
+    let next = i.onclick && i.onclick.toString().match(/value='([^']+)'/);
     if (next) {
       next = next[1];
       return next;
@@ -243,30 +219,42 @@
     }
   }
 
-  function helper (id, getNext) {
-    var recaptcha = $.$('#recaptcha_widget, #captcha');
+  async function helper (id, getNext) {
+    const recaptcha = $.$('#recaptcha_widget, #captcha');
     if (recaptcha) {
       _.info('stop because recaptcha');
       return;
     }
 
-    var i = $.$('input[name="next"]');
+    let i = $.$('input[name="next"]');
     if (i) {
       // first stage
-      var next = getNext(i);
-      go(id, $('input[name="pre"]').value, next);
+      const next = getNext(i);
+      await go(id, $('input[name="pre"]').value, next);
       return;
     }
 
     i = $.$('img.pic');
     if (i) {
       // second stage
-      $.openImage(i.src);
+      await $.openImage(i.src);
       return;
     }
 
     // other page
     _.info('do nothing');
+  }
+
+  async function go (id, pre, next) {
+    await $.openLink('', {
+      post: {
+        op: 'view',
+        id: id,
+        pre: pre,
+        next: next,
+        adb: '0',
+      },
+    });
   }
 
 })();

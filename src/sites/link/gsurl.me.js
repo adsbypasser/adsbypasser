@@ -1,18 +1,15 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^gsurl\.(me|in)$/,
       /^g5u\.pw$/,
     ],
   },
-  ready: function () {
-    'use strict';
+  async ready () {
+    $.remove('#container');
 
-    $.removeNodes('#container');
-
-    var a = $('#link');
-    _.wait(5000).then(function () {
-      $.openLink(a.href);
-    });
+    const a = $('#link');
+    await _.wait(5000);
+    await $.openLink(a.href);
   },
 });

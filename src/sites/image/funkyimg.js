@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: [
     'http://funkyimg.com/viewer.php?img=*',
     'http://funkyimg.com/view/*',
   ],
-  ready: function () {
-    'use strict';
-
-    var i = $('#viewer img');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#viewer img');
+    await $.openImage(i.src);
   },
 });

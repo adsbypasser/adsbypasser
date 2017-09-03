@@ -6,3 +6,5 @@ dest
 .idea/
 *.log
 .save.sh
+build
+package-lock.json

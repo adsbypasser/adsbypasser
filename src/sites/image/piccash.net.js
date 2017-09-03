@@ -1,10 +1,10 @@
-$.register({
+_.register({
   rule: {
-    host: /^(www\.)?piccash\.net$/
+    host: /^(www\.)?piccash\.net$/,
   },
-  ready: function () {
-  var i = $('.container > img');
-  var m =i.onclick.toString().match(/mshow\('([^']+)'\);/);
-  $.openImage(m[1]);
+  async ready () {
+    const i = $('.container > img');
+    const m = i.onclick.toString().match(/mshow\('([^']+)'\);/);
+    await $.openImage(m[1]);
   },
 });

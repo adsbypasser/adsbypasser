@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?dapat\.in$/,
   },
-  ready: function () {
-    'use strict';
-
-    var f = $('iframe[name=pagetext]');
-    $.openLink(f.src);
+  async ready () {
+    const f = $('iframe[name=pagetext]');
+    await $.openLink(f.src);
   },
 });

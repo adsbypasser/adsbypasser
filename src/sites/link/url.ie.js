@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^url\.ie$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('a[title="Link to original URL"]');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('a[title="Link to original URL"]');
+    await $.openLink(a.href);
   },
 });

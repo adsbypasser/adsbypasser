@@ -1,47 +1,38 @@
-var chai = require('chai');
-var expect = chai.expect;
-var should = chai.should();
+import chai from 'chai';
 
-var _ = require('../src/util/core.js');
+import {
+  AdsBypasserError,
+  partial,
+  template,
+  every,
+  find,
+  none,
+  forEach,
+  map,
+} from 'util/core';
+
+
+chai.should();
+
 
 describe('core', function () {
-
-  describe('exception', function () {
-
-    it('should be inheritable', function () {
-      var TestError = _.AdsBypasserError.extend({
-        name: 'TestError',
-        constructor: function (msg) {
-          TestError.super.constructor.apply(this, arguments);
-        },
-      });
-      var e = new TestError('test');
-      e.name.should.equals('TestError');
-      e.message.should.equals('test');
-      Object.getPrototypeOf(e).should.equals(TestError.prototype);
-      e.constructor.should.equals(TestError);
-      TestError.super.should.equals(_.AdsBypasserError.prototype);
-      TestError.super.constructor.should.equals(_.AdsBypasserError);
-    });
-
-  });
 
   describe('partial', function () {
 
     it('should takes function as first parameter', function () {
-      _.P.should.throw(_.AdsBypasserError);
+      partial.should.throw(AdsBypasserError);
       (function () {
-        _.P(0);
-      }).should.throw(_.AdsBypasserError);
+        partial(0);
+      }).should.throw(AdsBypasserError);
     });
 
     it('should returns a function', function () {
-      _.P(function () {
+      partial(function () {
       }).should.be.a('function');
     });
 
     it('should receives arguments', function () {
-      var p = _.P(function (a, b, c) {
+      let p = partial(function (a, b, c) {
         a.should.equals(1);
         b.should.equals(2);
         c.should.equals(3);
@@ -50,7 +41,7 @@ describe('core', function () {
     });
 
     it('should returns correct value', function () {
-      var p = _.P(function () {
+      let p = partial(function () {
         return '__MAGIC__';
       });
       p().should.equals('__MAGIC__');
@@ -61,44 +52,44 @@ describe('core', function () {
   describe('template', function () {
 
     it('should be a function', function () {
-      var tpl = _.T('');
+      let tpl = template('');
       tpl.should.be.a('function');
     });
 
     it('should takes exactly one string', function () {
-      _.T.should.throw(_.AdsBypasserError);
+      template.should.throw(AdsBypasserError);
 
       (function (){
-        _.T(0);
-      }).should.throw(_.AdsBypasserError);
+        template(0);
+      }).should.throw(AdsBypasserError);
 
       (function (){
-        _.T('');
-      }).should.not.throw(_.AdsBypasserError);
+        template('');
+      }).should.not.throw(AdsBypasserError);
 
       (function (){
-        var s = new String();
-        _.T(s);
-      }).should.not.throw(_.AdsBypasserError);
+        let s = new String();
+        template(s);
+      }).should.not.throw(AdsBypasserError);
     });
 
     it('should return original string if no keyword', function () {
-      var s = 'input';
-      _.T(s)('dummy', 'parameter').should.equals(s);
+      let s = 'input';
+      template(s)('dummy', 'parameter').should.equals(s);
     });
 
     it('should escape double brackets', function () {
-      var s = '{{}}';
-      _.T(s)().should.equals('{}');
+      let s = '{{}}';
+      template(s)().should.equals('{}');
     });
 
     it('should works with index', function () {
-      var tpl = _.T('a {0} c {1} e');
+      let tpl = template('a {0} c {1} e');
       tpl('b', 'd').should.equals('a b c d e');
     });
 
     it('should works with key', function () {
-      var tpl = _.T('a {b} c {d} e');
+      let tpl = template('a {b} c {d} e');
       tpl({
         b: 'b',
         d: 'd',
@@ -106,7 +97,7 @@ describe('core', function () {
     });
 
     it('should be reusable', function () {
-      var tpl = _.T('{0} is {1}');
+      let tpl = template('{0} is {1}');
       tpl('nothing', 'true').should.equals('nothing is true');
       tpl('everything', 'premitted').should.equals('everything is premitted');
     });
@@ -115,102 +106,50 @@ describe('core', function () {
 
   describe('collection', function () {
 
-    it('all [1, 2, 3] are numbers should be true', function () {
-      _.C([1, 2, 3]).all(function (v) {
+    it('every [1, 2, 3] are numbers should be true', function () {
+      every([1, 2, 3], function (v) {
         return typeof v === 'number';
       }).should.be.true;
     });
 
-    it('all [1, 2, 3] are odd numbers should be false', function () {
-      _.C([1, 2, 3]).all(function (v) {
+    it('every [1, 2, 3] are odd numbers should be false', function () {
+      every([1, 2, 3], function (v) {
         return v % 2 === 1;
       }).should.be.false;
     });
 
-    it('the first even number in [1, 2, 3] should be 2', function () {
-      var tmp = _.C([1, 2, 3]).find(function (v) {
-        if (v % 2 !== 0) {
-          return _.nop;
-        }
-      })
-      tmp.key.should.equals(1);
-      tmp.value.should.equals(2);
+    it('the first even number in [1, 2, 3] should be 2', () => {
+      const [k, v, r] = find([1, 2, 3], (v) => {
+        return v % 2 === 0 ? true : none;
+      });
+      k.should.equals(1);
+      v.should.equals(2);
+      r.should.equals(true);
     });
 
     it('0 should not be found in [1, 2, 3]', function () {
-      expect(_.C([1, 2, 3]).find(function (v) {
-        if (v !== 0) {
-          return _.nop;
-        }
-      })).to.be.undefined;
+      const [k, v, r] = find([1, 2, 3], function (v) {
+        return v === 0 ? 0 : none;
+      });
+      k.should.equals(none);
+      v.should.equals(none);
+      r.should.equals(none);
     });
 
     it('should iterate all items', function () {
-      var sum = 0;
-      _.C([1, 2, 4]).each(function (v) {
+      let sum = 0;
+      forEach([1, 2, 4], function (v) {
         sum += v;
       });
       sum.should.equals(7);
     });
 
     it('should change all items', function () {
-      _.C([1, 2, 3]).map(function (v) {
+      map([1, 2, 3], function (v) {
         return v % 2 === 0;
       }).should.be.deep.equals([false, true, false]);
     });
 
   });
 
-  describe('deferred', function () {
-
-    it('should be resolvable', function (done) {
-      var d = _.D(function (resolve, reject) {
-        setTimeout(function () {
-          resolve(42);
-        }, 10);
-      });
-      d.then(function (answer) {
-        answer.should.equals(42);
-        done();
-      });
-    });
-
-    it('should be rejectable', function (done) {
-      var d = _.D(function (resolve, reject) {
-        setTimeout(function () {
-          reject(42);
-        }, 10);
-      });
-      d.catch(function (answer) {
-        answer.should.equals(42);
-        done();
-      });
-    });
-
-    it('should be chainable', function (done) {
-      var d = _.D(function (resolve, reject) {
-        setTimeout(function () {
-          resolve(1);
-        }, 10);
-      });
-      d.then(function (answer) {
-        answer.should.equals(1);
-        return _.D(function (resolve, reject) {
-          setTimeout(function () {
-            reject(2);
-          }, 10);
-        });
-      }).catch(function (answer) {
-        answer.should.equals(2);
-        done();
-      });
-    });
-
-  });
-
 });
-
-
-// ex: ts=2 sts=2 sw=2 et
-// sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
-// kate: space-indent on; indent-width 2;

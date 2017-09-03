@@ -1,13 +1,11 @@
-$.register({
+_.register({
   rule: {
     host: /^linkdolar\.xyz$/,
   },
-  ready: function () {
-    'use strict';
+  async ready () {
+    $.remove('iframe');
 
-    $.removeNodes('iframe');
-
-    var s = $.searchScripts(/^\s*eval\((.+)\)\s*$/);
+    let s = $.searchFromScripts(/^\s*eval\((.+)\)\s*$/);
     if (!s) {
       _.warn('site changed');
       return;
@@ -18,11 +16,10 @@ $.register({
       _.warn('site changed');
     }
 
-    var url = s[1];
-    var args = eval('(' + s[2] + ')');
+    const url = s[1];
+    const args = eval('(' + s[2] + ')');
 
-    $.post(url, args).then(function (target) {
-      $.openLink(target);
-    });
+    const target = await $.post(url, args);
+    await $.openLink(target);
   },
 });

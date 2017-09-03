@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^gkurl\.us$/,
   },
-  ready: function () {
-    'use strict';
-
-    var iframe = $('#gkurl-frame');
-    $.openLink(iframe.src);
+  async ready () {
+    const iframe = $('#gkurl-frame');
+    await $.openLink(iframe.src);
   },
 });

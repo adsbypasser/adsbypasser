@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^prntscr\.com$/
   },
-  ready: function () {
-    'use strict';
-
-    var i = $('#screenshot-image');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#screenshot-image');
+    await $.openImage(i.src);
   },
 });

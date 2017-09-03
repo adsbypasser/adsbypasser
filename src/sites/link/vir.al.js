@@ -1,14 +1,12 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?vir\.al$/,
   },
-  ready: function () {
-    'use strict';
-
-    var m = $.searchScripts(/var target_url = '([^']+)';/);
+  async ready () {
+    const m = $.searchFromScripts(/const target_url = '([^']+)';/);
     if (!m) {
       throw new _.AdsBypasserError('site changed');
     }
-    $.openLink(m[1]);
+    await $.openLink(m[1]);
   },
 });

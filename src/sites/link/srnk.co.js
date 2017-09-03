@@ -1,28 +1,26 @@
-$.register({
+_.register({
   rule: {
     host: /^srnk\.co$/,
     path: /^\/i\//,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $.$('#btn-with-link');
+  async ready () {
+    const a = $.$('#btn-with-link');
     if (!a) {
       // recaptcha stage
       return;
     }
 
-    var href = a.href;
-    var method = a.dataset.method;
+    const href = a.href;
+    const method = a.dataset.method;
     if (method) {
       // waiting stage
-      var csrfParam = $('meta[name="csrf-param"]').content;
-      var csrfToken = $('meta[name="csrf-token"]').content;
+      const csrfParam = $('meta[name="csrf-param"]').content;
+      const csrfToken = $('meta[name="csrf-token"]').content;
 
-      var form = document.createElement('form');
+      const form = document.createElement('form');
       form.method = 'post';
       form.action = href;
-      var input = document.createElement('input');
+      let input = document.createElement('input');
       input.name = '_method';
       input.value = method;
       form.appendChild(input);
@@ -37,13 +35,12 @@ $.register({
     }
 
     // final stage
-    $.post(location.pathname + '.js').then(function (script) {
-      var m = script.match(/var link = "([^"]+)";/);
-      if (!m) {
-        _.warn('script changed');
-        return;
-      }
-      $.openLink(m[1]);
-    });
+    const script = await $.post(location.pathname + '.js');
+    const m = script.match(/const link = "([^"]+)";/);
+    if (!m) {
+      _.warn('script changed');
+      return;
+    }
+    await $.openLink(m[1]);
   },
 });

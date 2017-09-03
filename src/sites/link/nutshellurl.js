@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^nutshellurl\.com$/,
   },
-  ready: function () {
-    'use strict';
-
-    var iframe = $('iframe');
-    $.openLink(iframe.src);
+  async ready () {
+    const iframe = $('iframe');
+    await $.openLink(iframe.src);
   },
 });

@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://blackcatpix.com/v.php?*',
-  ready: function () {
-    'use strict';
-
-    var img = $('td center img');
-    $.openImage(img.src);
+  async ready () {
+    const img = $('td center img');
+    await $.openImage(img.src);
   },
 });

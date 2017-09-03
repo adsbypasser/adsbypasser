@@ -1,23 +1,23 @@
-var render;
+let render;
 function commit () {}
-(function () {
+(() => {
   'use strict';
 
-  var view = {
+  const view = {
     panel: $('#panel'),
     options: $('#options'),
     save: $('#save'),
     msg: $('#msg'),
     installHint: $('#install-hint'),
   };
-  var template = {
+  const template = {
     checkbox: _.template($('#template-checkbox').text()),
     select: _.template($('#template-select').text()),
   };
-  var factory = {
+  const factory = {
 
-    checkbox: function (key, data) {
-      var html = template.checkbox({
+    checkbox (key, data) {
+      const html = template.checkbox({
         key: key,
         checked: data.value,
         label: data.label,
@@ -26,8 +26,8 @@ function commit () {}
       return $.parseHTML(html);
     },
 
-    select: function (key, data) {
-      var html = template.select({
+    select (key, data) {
+      const html = template.select({
         key: key,
         value: data.value,
         menu: data.menu,
@@ -40,32 +40,32 @@ function commit () {}
   };
 
 
-  render = function (data) {
+  render = (data) => {
     clearTimeout(detection);
 
     view.msg.addClass('animated');
 
-    _.each(data.options, function (v, k) {
-      var createUI = factory[v.type];
+    _.each(data.options, (v, k) => {
+      const createUI = factory[v.type];
 
       if (!createUI) {
         return;
       }
 
-      var d = createUI(k, v);
+      const d = createUI(k, v);
       view.options.append(d);
     });
 
     view.panel.css('display', 'block');
 
-    view.msg.on('transitionend webkitTransitionEnd', function () {
+    view.msg.on('transitionend webkitTransitionEnd', () => {
       view.msg.removeClass('dismissed');
     });
 
-    view.save.on('click', function (event) {
+    view.save.on('click', (event) => {
       event.preventDefault();
 
-      var data = {};
+      const data = {};
 
       // checkbox
       view.options.find('input[type="checkbox"]').each(function (k, v) {
@@ -84,7 +84,7 @@ function commit () {}
   };
 
 
-  var detection = setTimeout(function () {
+  const detection = setTimeout(() => {
     view.installHint.addClass('animated');
     view.installHint.css({
       'opacity': 1,
@@ -93,6 +93,3 @@ function commit () {}
   }, 1000);
 
 })();
-// ex: ts=2 sts=2 sw=2 et
-// sublime: tab_size 2; translate_tabs_to_spaces true; detect_indentation false; use_tab_stops true;
-// kate: space-indent on; indent-width 2;

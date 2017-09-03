@@ -1,15 +1,13 @@
-$.register({
+_.register({
   rule: 'http://img1.imagilive.com/*/*',
-  ready: function () {
-    'use strict';
-
-    var a = $.$('#page a.button');
+  async ready () {
+    const a = $.$('#page a.button');
     if (a) {
-      $.redirect(a.href);
+      await $.openLink(a.href);
       return;
     }
 
-    var i = $('#page > img:not([id])');
-    $.openImage(i.src);
+    const i = $('#page > img:not([id])');
+    await $.openImage(i.src);
   },
 });

@@ -1,7 +1,6 @@
 (function () {
-  'use strict';
 
-  $.register({
+  _.register({
     rule: {
       host: [
         /^adlink\.guru$/,
@@ -22,54 +21,49 @@
         /^linkfly\.gaosmedia\.com$/,
       ],
     },
-    ready: function () {
-      $.removeNodes('iframe', '.BJPPopAdsOverlay');
+    async ready () {
+      $.remove('iframe', '.BJPPopAdsOverlay');
 
-      firstStage().then(function (page) {
-        return secondStage(page);
-      }).then(function (url) {
-        // nuke for bol.tl, somehow it will interfere click event
-        $.nuke(url);
-        $.openLink(url);
-      }).catch(function (e) {
-        _.warn(e);
-      });
+      const page = await firstStage();
+      const url = await secondStage(page);
+      // nuke for bol.tl, somehow it will interfere click event
+      $.nuke(url);
+      await $.openLink(url);
     },
   });
 
   function firstStage () {
-    return _.D(function (resolve, reject) {
-      var f = $.$('#link-view');
+    return new Promise((resolve) => {
+      const f = $.$('#link-view');
       if (!f) {
         resolve(document);
         return;
       }
 
-      var args = extractArgument(f);
-      var url = f.getAttribute('action');
-      var p = $.post(url, args).then(function (data) {
+      const args = extractArgument(f);
+      const url = f.getAttribute('action');
+      const p = $.post(url, args).then((data) => {
         return $.toDOM(data);
       });
       resolve(p);
     });
   }
 
-  function secondStage (page) {
-    var f = $('#go-link', page);
-    var args = extractArgument(f);
-    var url = f.getAttribute('action');
-    return $.post(url, args).then(function (data) {
-      data = JSON.parse(data);
-      if (data && data.url) {
-        return data.url;
-      }
-      throw new _.AdsBypasserError('wrong data');
-    });
+  async function secondStage (page) {
+    const f = $('#go-link', page);
+    const args = extractArgument(f);
+    const url = f.getAttribute('action');
+    let data = await $.post(url, args);
+    data = _.parseJSON(data);
+    if (data && data.url) {
+      return data.url;
+    }
+    throw new _.AdsBypasserError('wrong data');
   }
 
   function extractArgument (form) {
-    var args = {};
-    $.$$('input', form).each(function (v) {
+    const args = {};
+    _.forEach($.$$('input', form), (v) => {
       args[v.name] = v.value;
     });
     return args;

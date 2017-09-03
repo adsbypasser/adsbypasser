@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <title>AdsBypasser</title>
+
+    <link rel="stylesheet" href="/css/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <p class="view">
+          <a href="https://github.com/adsbypasser/adsbypasser">
+            View the Project on GitHub
+            <small>adsbypasser/adsbypasser</small>
+            </a>
+        </p>
+
+        <div class="links" id="releases">
+          <a class="es7" href="/releases/<%= urls.full_es7 %>">
+            <strong>Install Full Edition</strong>
+          </a>
+          <a class="es7" href="/releases/<%= urls.lite_es7 %>">
+            <strong>Install Lite Edition</strong>
+          </a>
+          <a class="es5" href="/releases/<%= urls.full_es5 %>">
+            <strong>Install Full Edition</strong>
+          </a>
+          <a class="es5" href="/releases/<%= urls.lite_es5 %>">
+            <strong>Install Lite Edition</strong>
+          </a>
+        </div>
+
+        <div class="links">
+          <a href="/configure.html">
+            <strong>Configure Settings</strong>
+          </a>
+        </div>
+
+        <div class="links">
+          <a href="https://github.com/adsbypasser/adsbypasser/issues">
+            <strong>Report Bug / Request Feature</strong>
+          </a>
+        </div>
+      </header>
+
+      <section>
+        <%= summary %>
+      </section>
+
+      <footer>
+        <p>
+          This project is maintained by&nbsp;
+          <a href="https://github.com/legnaleurc">legnaleurc</a>
+        </p>
+        <p>
+          <small>Hosted on GitHub Pages</small><br />
+          &mdash; Theme by&nbsp;
+          <a href="https://github.com/orderedlist">orderedlist</a><br />
+        </p>
+      </footer>
+    </div>
+
+    <script defer src="/js/scale.fix.js"></script>
+    <script defer src="/js/index.js"></script>
+  </body>
+</html>

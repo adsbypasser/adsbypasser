@@ -1,11 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^imagezilla\.net$/,
   },
-  ready: function () {
-    'use strict';
-    var i = $('#photo');
-    $.openImage(i.src, {
+  async ready () {
+    const i = $('#photo');
+    await $.openImage(i.src, {
       referer: true,
     });
   },

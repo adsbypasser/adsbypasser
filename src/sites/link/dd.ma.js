@@ -1,17 +1,15 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?dd\.ma$/,
   },
-  ready: function (m) {
-    'use strict';
-
-    var i = $.$('#mainframe');
+  async ready () {
+    const i = $.$('#mainframe');
     if (i) {
-      $.openLink(i.src);
+      await $.openLink(i.src);
       return;
     }
 
-    var a = $('#btn_open a');
-    $.openLink(a.href);
+    const a = $('#btn_open a');
+    await $.openLink(a.href);
   },
 });

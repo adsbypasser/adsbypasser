@@ -1,35 +1,34 @@
 (function () {
-  'use strict';
 
-  $.register({
+  _.register({
     rule: {
       host: /^ad7\.biz$/,
       path: /^\/\d+\/(.*)$/,
     },
-    start: function (m) {
-      $.removeNodes('iframe');
+    async start (m) {
+      $.remove('iframe');
 
       // Redirection URL contained in URL
-      var redirectLink = m.path[1];
+      let redirectLink = m.path[1];
       if (!redirectLink.match(/^https?:\/\//)) {
-        redirectLink = "http://" + redirectLink;
+        redirectLink = 'http://' + redirectLink;
       }
-      $.openLink(redirectLink);
+      await $.openLink(redirectLink);
     },
   });
 
-  $.register({
+  _.register({
     rule: {
       host: /^ad7\.biz$/,
       path: /^\/\w+$/,
     },
-    ready: function () {
-      $.removeNodes('iframe');
+    async ready () {
+      $.remove('iframe');
 
-      var script = $.searchScripts('var r_url');
-      var url = script.match(/&url=([^&]+)/);
+      const script = $.searchFromScripts('const r_url');
+      let url = script.match(/&url=([^&]+)/);
       url = url[1];
-      $.openLink(url);
+      await $.openLink(url);
     },
   });
 

@@ -1,17 +1,15 @@
-$.register({
+_.register({
   rule: {
     host: /^ad4\.fr$/,
   },
-  ready: function () {
-    'use strict';
+  async ready () {
+    $.remove('iframe');
 
-    $.removeNodes('iframe');
-
-    var s = $.searchScripts(/"src", "([^"]+)"/);
+    const s = $.searchFromScripts(/"src", "([^"]+)"/);
     if (!s) {
       _.warn('changed');
       return;
     }
-    $.openLink(s[1]);
+    await $.openLink(s[1]);
   },
 });

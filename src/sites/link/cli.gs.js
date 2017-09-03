@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?cli\.gs$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('a.RedirectLink');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('a.RedirectLink');
+    await $.openLink(a.href);
   },
 });

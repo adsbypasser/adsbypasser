@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^catcut\.net$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('#rbs');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('#rbs');
+    await $.openLink(a.href);
   },
 });

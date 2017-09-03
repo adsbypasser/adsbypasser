@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^www\.x45x\.info$/,
@@ -9,9 +9,7 @@ $.register({
     ],
     query: /\?p[mt]=(.+)/,
   },
-  start: function (m) {
-    'use strict';
-
-    $.openImage('/?di=' + m.query[1]);
+  async start (m) {
+    await $.openImage('/?di=' + m.query[1]);
   },
 });

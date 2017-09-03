@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?typ\.me$/,
   },
-  ready: function (m) {
-    'use strict';
-
-    var a = $('#skipAdBtn');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('#skipAdBtn');
+    await $.openLink(a.href);
   },
 });

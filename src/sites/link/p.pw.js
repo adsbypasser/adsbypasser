@@ -1,14 +1,11 @@
-$.register({
+_.register({
   rule: {
     host: /^p\.pw$/,
   },
-  ready: function () {
-    'use strict';
-
-    $.removeNodes('iframe');
-
-    var m = $.searchScripts(/window\.location = "(.*)";/);
+  async ready () {
+    $.remove('iframe');
+    let m = $.searchFromScripts(/window\.location = "(.*)";/);
     m = m[1];
-    $.openLink(m);
+    await $.openLink(m);
   },
 });

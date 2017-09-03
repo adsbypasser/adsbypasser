@@ -1,38 +1,35 @@
 (function () {
-  'use strict';
 
-  function sendRequest (opts) {
-    return $.post('/ajax/r.php', opts).then(function (data) {
-      if (data.length <= 1) {
-        return sendRequest(opts);
-      }
-      var a = $.toDOM(data);
-      a = $('a', a);
-      return a.href;
-    });
-  }
-
-  $.register({
+  _.register({
     rule: {
       host: /^link5s\.com$/,
-      path: /^\/([^\/]+)$/,
+      path: /^\/([^/]+)$/,
     },
-    ready: function (m) {
+    async ready (m) {
       // disable page ajax
       $.window.$ = null;
 
-      var i = $('#iframeID');
-      var opts = {
+      const i = $('#iframeID');
+      const opts = {
         page: m.path[1],
         advID: i.dataset.cmp,
         u: i.dataset.u,
       };
-      $.removeNodes('iframe');
+      $.remove('iframe');
 
-      sendRequest(opts).then(function (url) {
-        $.openLink(url);
-      });
+      const url = await sendRequest(opts);
+      await $.openLink(url);
     },
   });
+
+  async function sendRequest (opts) {
+    const data = await $.post('/ajax/r.php', opts);
+    if (data.length <= 1) {
+      return await sendRequest(opts);
+    }
+    let a = $.toDOM(data);
+    a = $('a', a);
+    return a.href;
+  }
 
 })();

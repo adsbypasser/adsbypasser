@@ -7,7 +7,7 @@ This user script helps you to:
 
 It **CANNOT** help you to solve reCAPTCHAs.
 
-{edition}
+<%= edition_note %>
 
 Any feature request or bug report is welcome. (either in English, 中文 or 日本語)
 You could use [GitHub] to report issues or send pull requests.
@@ -22,15 +22,15 @@ supported.
 
 # Changelog
 
-{changelog}
+<%= changelog %>
 
 [more ...][3]
 
 # Supported Sites
 
-{sites}
+<%= site_groups %>
 
-[more ... ({count} sites)][4]
+[more ... (<%= site_count %> sites)][4]
 
 # Contributors
 

@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^durl\.me$/,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('a[class="proceedBtn"]');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('a[class="proceedBtn"]');
+    await $.openLink(a.href);
   },
 });

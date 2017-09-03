@@ -1,20 +1,18 @@
-$.register({
+_.register({
   rule: {
     host: /^www\.anafile\.com$/,
   },
-  ready: function () {
-    'use strict';
-
-    var b = $.$('#btn_download');
-    if (b) {
-      // second stage
-      b.disabled = false;
-      $.removeNodes('div[align=center]');
+  async ready () {
+    let b = $.$('#btn_download');
+    if (!b) {
+      // first stage
+      b = $('#plans_free form [type=submit]');
+      b.click();
       return;
     }
-
-    // first stage
-    b = $('#plans_free form [type=submit]');
-    b.click();
+    // second stage
+    b.disabled = false;
+    $.remove('div[align=center]');
+    return;
   },
 });

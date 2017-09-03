@@ -1,16 +1,14 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?safeurl\.eu$/,
     path: /\/\w+/,
   },
-  ready: function () {
-    'use strict';
-
-    var directUrl = $.searchScripts(/window\.open\("([^"]+)"\);/);
+  async ready () {
+    let directUrl = $.searchFromScripts(/window\.open\("([^"]+)"\);/);
     if (!directUrl) {
       throw new _.AdsBypasserError('script content changed');
     }
     directUrl = directUrl[1];
-    $.openLink(directUrl);
+    await $.openLink(directUrl);
   },
 });

@@ -1,24 +1,20 @@
-$.register({
+_.register({
   rule: {
     host: /^mylinkgen\.com$/,
     path: /^\/p\/(.+)$/,
   },
-  start: function (m) {
-    'use strict';
-
-    $.openLink('/g/' + m.path[1]);
+  async start (m) {
+    await $.openLink('/g/' + m.path[1]);
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^mylinkgen\.com$/,
     path: /^\/g\//,
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('#main-content a.btn.btn-default');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('#main-content a.btn.btn-default');
+    await $.openLink(a.href);
   },
 });

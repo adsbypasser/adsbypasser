@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://www.imagehousing.com/image/*',
-  ready: function () {
-    'use strict';
-
-    var i = $('td.text_item img');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('td.text_item img');
+    await $.openImage(i.src);
   },
 });

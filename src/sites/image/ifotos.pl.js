@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://ifotos.pl/zobacz/*',
-  ready: function () {
-    'use strict';
-
-    var m = $('meta[property="og:image"]');
-    $.openImage(m.content);
+  async ready () {
+    const m = $('meta[property="og:image"]');
+    await $.openImage(m.content);
   },
 });

@@ -1,37 +1,35 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?jheberg\.net$/,
     path: /^\/captcha\//,
   },
-  ready: function () {
-    'use strict';
-
+  async ready () {
     $('.dl-button').click();
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?jheberg\.net$/,
     path: /^\/redirect\//,
   },
-  ready: function () {
+  async ready () {
     'use strict';
 
-    // If the target is a direct link, then our script opens it, and afterwards the script of the website opens it too if the timer is not stopped
+    // If the target is a direct link, then our script opens it, and afterwards
+    // the script of the website opens it too if the timer is not stopped
     $.removeAllTimer();
 
-    var matches = $.searchScripts(/'slug':\s*'([^']+)',\s*'hoster':\s*'([^']+)'/);
+    const matches = $.searchFromScripts(/'slug':\s*'([^']+)',\s*'hoster':\s*'([^']+)'/);
 
-    var slug = matches[1];
-    var hoster = matches[2];
+    const slug = matches[1];
+    const hoster = matches[2];
 
-    $.post('/get/link/', {
-      'slug': slug,
-      'hoster': hoster
-    }).then(function(response) {
-      var respJSON = _.parseJSON(response);
-      $.openLink(respJSON.url);
+    const response = await $.post('/get/link/', {
+      slug,
+      hoster,
     });
+    const respJSON = _.parseJSON(response);
+    await $.openLink(respJSON.url);
   },
 });

@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: [
     {
       host: [
@@ -13,24 +13,20 @@ $.register({
       path: /^\/img-(.+)\.html$/,
     },
   ],
-  ready: function () {
-    'use strict';
-
-    var img = $('#full_image');
-    $.openImage(img.src);
+  async ready () {
+    const img = $('#full_image');
+    await $.openImage(img.src);
   },
 });
 
-$.register({
+_.register({
   rule: {
     host: /^sexyxpixels\.com$/,
     query: /^\?v=/,
   },
-  ready: function () {
-    'use strict';
-
-    var img = $('#full_image');
-    $.openImage(img.src, {
+  async ready () {
+    const img = $('#full_image');
+    await $.openImage(img.src, {
       referer: true,
     });
   },

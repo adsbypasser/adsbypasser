@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^01\.nl$/,
   },
-  ready: function () {
-    'use strict';
-
-    var f = $('iframe#redirectframe');
-    $.openLink(f.src);
+  async ready () {
+    const f = $('iframe#redirectframe');
+    await $.openLink(f.src);
   },
 });

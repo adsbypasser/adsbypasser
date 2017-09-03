@@ -1,27 +1,24 @@
-$.register({
+_.register({
   rule: 'http://reffbux.com/refflinx/view/*',
-  ready: function () {
-    'use strict';
+  async ready () {
+    $.remove('iframe');
 
-    $.removeNodes('iframe');
+    let m = $.searchFromScripts(/skip_this_ad_(\d+)_(\d+)/);
+    const id = m[1];
+    const share = m[2];
+    const location = window.location.toString();
 
-    var m = $.searchScripts(/skip_this_ad_(\d+)_(\d+)/);
-    var id = m[1];
-    var share = m[2];
-    var location = window.location.toString();
-
-    $.post('http://reffbux.com/refflinx/register', {
+    const text = await $.post('http://reffbux.com/refflinx/register', {
       id: id,
       share: share,
       fp: 0,
       location: location,
       referer: '',
-    }).then(function (text) {
-      var m = text.match(/'([^']+)'/);
-      if (!m) {
-        throw new _.AdsBypasserError('pattern changed');
-      }
-      $.openLink(m[1]);
     });
+    m = text.match(/'([^']+)'/);
+    if (!m) {
+      throw new _.AdsBypasserError('pattern changed');
+    }
+    await $.openLink(m[1]);
   },
 });

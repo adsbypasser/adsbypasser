@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://cubeupload.com/im/*',
-  ready: function () {
-    'use strict';
-
-    var img = $('img.galleryBigImg');
-    $.openImage(img.src);
+  async ready () {
+    const img = $('img.galleryBigImg');
+    await $.openImage(img.src);
   },
 });

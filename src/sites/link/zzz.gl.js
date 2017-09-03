@@ -1,15 +1,12 @@
-$.register({
+_.register({
   rule: {
     host: /^zzz\.gl$/,
   },
-  ready: function () {
-    'use strict';
-
-    var m = $.searchScripts(/var domainurl = '([^']+)';/);
+  async ready () {
+    const m = $.searchFromScripts(/const domainurl = '([^']+)';/);
     if (!m) {
       throw new _.AdsBypasserError('site changed');
     }
-
-    $.openLink(m[1]);
+    await $.openLink(m[1]);
   },
 });

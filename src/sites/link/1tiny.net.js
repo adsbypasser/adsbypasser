@@ -1,17 +1,13 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?1tiny\.net$/,
-    path: /\/\w+/
+    path: /\/\w+/,
   },
-  ready: function () {
-    'use strict';
-
-    var directUrl = $.searchScripts(/window\.location='([^']+)';/);
-
+  async ready () {
+    const directUrl = $.searchFromScripts(/window\.location='([^']+)';/);
     if (!directUrl) {
       throw new _.AdsBypasserError('script content changed');
     }
-
-    $.openLink(directUrl[1]);
+    await $.openLink(directUrl[1]);
   },
 });

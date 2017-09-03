@@ -1,11 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^ehdwallpapers\.org$/,
     path: /^\/images\/.*$/,
   },
-  ready: function () {
-    'use strict';
-    var i = $('.entry-content.clearfix img');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('.entry-content.clearfix img');
+    await $.openImage(i.src);
   },
 });

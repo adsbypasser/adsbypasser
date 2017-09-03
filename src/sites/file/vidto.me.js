@@ -1,14 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?vidto\.me$/,
   },
-  ready: function () {
-    'use strict';
-
-    var f = $('#btn_download').form;
-
-    setTimeout(function() {
-        f.submit();
-    }, 6000);
+  async ready () {
+    const f = $('#btn_download').form;
+    await _.wait(6 * 1000);
+    f.submit();
   },
 });

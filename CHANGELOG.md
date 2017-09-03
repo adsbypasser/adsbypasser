@@ -1,3 +1,9 @@
+## v6.0.0
+
+* changed
+    * rewrite to ES7
+    * rewrite build system
+
 ## v5.73.0
 
 * fixed

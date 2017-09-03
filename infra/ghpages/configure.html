@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <title>AdsBypasser Configuration</title>
+
+    <link rel="stylesheet" media="screen" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css" />
+    <link rel="stylesheet" media="screen" href="/css/configure.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  </head>
+  <body>
+    <div class="container">
+      <noscript>
+        <div class="alert alert-warning text-center" id="noscript-hint">
+          <strong>JavaScript is disabled, please check your browser or extension setting.</strong>
+        </div>
+      </noscript>
+
+      <div class="alert alert-success text-center" id="msg" role="alert">
+        <strong>Configuration Updated</strong>
+      </div>
+
+      <div class="alert alert-warning text-center" id="install-hint">
+        <strong>
+          It seems that AdsBypasser is not installed or active,&nbsp;
+          <a href="https://adsbypasser.github.io/">
+            see here for installation instructions
+          </a>
+          .
+        </strong>
+      </div>
+
+      <div id="panel" role="form">
+        <div class="form-group" id="options"></div>
+        <div class="form-group">
+          <button class="btn btn-primary pull-right" id="save" type="submit">Save</button>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <script type="text/plain" id="template-checkbox">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" name="<%= key %>" value="" <% if (checked) { %>checked<% } %> /><%= label %>
+          </label>
+          <p class="help-block"><%= help %></p>
+        </div>
+      </script>
+
+      <script type="text/plain" id="template-select">
+        <div class="form-group">
+          <label class="control-label" for="select-<%= key %>"><%= label %></label>
+          <select class="form-control" id="select-<%= key %>" name="<%= key %>">
+            <% _.each(menu, function (entry) { %>
+              <option value="<%= entry[0] %>" <% if (value === entry[0]) { %>selected<% } %>><%= entry[1] %></option>
+            <% }); %>
+          </select>
+          <p class="help-block"><%= help %></p>
+        </div>
+      </script>
+    </div>
+
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script defer src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script defer src="/js/render.js"></script>
+  </body>
+</html>

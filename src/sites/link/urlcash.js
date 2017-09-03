@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^urlcash\.(com|net|org)$/,
@@ -7,17 +7,15 @@ $.register({
       /^xxxs\.org$/,
     ],
   },
-  ready: function () {
-    'use strict';
-
+  async ready () {
     if ($.window && $.window.linkDestUrl) {
-      $.openLink($.window.linkDestUrl);
+      await $.openLink($.window.linkDestUrl);
       return;
     }
 
-    var matches = document.body.innerHTML.match(/linkDestUrl = '(.+)'/);
+    const matches = document.body.innerHTML.match(/linkDestUrl = '(.+)'/);
     if (matches) {
-      $.openLink(matches[1]);
+      await $.openLink(matches[1]);
       return;
     }
   },

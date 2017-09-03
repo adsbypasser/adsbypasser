@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^www\.(2i\.(sk|cz)|2imgs\.com)$/,
   },
-  ready: function () {
-    'use strict';
-
-    var img = $('#wrap3 img');
-    $.openImage(img.src);
+  async ready () {
+    const img = $('#wrap3 img');
+    await $.openImage(img.src);
   },
 });

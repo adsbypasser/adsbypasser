@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: [
       /^moe\.god\.jp$/,
@@ -6,10 +6,8 @@ $.register({
       /^dl\.nsfk\.in$/,
     ]
   },
-  ready: function () {
-    'use strict';
-
-    var a = $('div div center a');
-    $.openLink(a.href);
+  async ready () {
+    const a = $('div div center a');
+    await $.openLink(a.href);
   },
 });

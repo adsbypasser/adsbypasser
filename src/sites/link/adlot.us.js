@@ -1,22 +1,20 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?adlot\.us$/,
   },
-  ready: function () {
-    'use strict';
+  async ready () {
+    $.remove('iframe');
 
-    $.removeNodes('iframe');
-
-    var script = $.searchScripts('form');
-    var p = /name='([^']+)' value='([^']+)'/g;
-    var opt = {
+    const script = $.searchFromScripts('form');
+    const p = /name='([^']+)' value='([^']+)'/g;
+    const opt = {
       image: ' ',
     };
-    var tmp = null;
-    while (tmp = p.exec(script)) {
+    let tmp = null;
+    while ((tmp = p.exec(script))) {
       opt[tmp[1]] = tmp[2];
     }
-    $.openLink('', {
+    await $.openLink('', {
       path: opt,
     });
   },

@@ -1,13 +1,11 @@
-$.register({
+_.register({
   rule: {
     host: /^imgbin\.me$/,
     path: /^\/view\/([A-Z]+)$/,
   },
-  start: function (m) {
-    'use strict';
-
+  async start (m) {
     // always jpg
-    var tpl = _.T('/image/{0}.jpg');
-    $.openImage(tpl(m.path[1]));
+    const tpl = _.template('/image/{0}.jpg');
+    await $.openImage(tpl(m.path[1]));
   },
 });

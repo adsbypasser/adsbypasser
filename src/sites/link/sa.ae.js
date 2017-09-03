@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?sa\.ae$/,
     path: /^\/\w+\/$/,
   },
-  ready: function () {
-    'use strict';
-
-    var m = $.searchScripts(/var real_link = '([^']+)';/);
-    $.openLink(m[1]);
+  async ready () {
+    const m = $.searchFromScripts(/const real_link = '([^']+)';/);
+    await $.openLink(m[1]);
   },
 });

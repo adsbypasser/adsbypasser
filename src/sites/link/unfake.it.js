@@ -1,12 +1,10 @@
-$.register({
+_.register({
   rule: {
     host: /^unfake\.it$/,
   },
-  ready: function () {
-    'use strict';
-
-    var frame = $('frame');
-    var i = frame.src.lastIndexOf('http://');
-    $.openLink(frame.src.substr(i));
+  async ready () {
+    const frame = $('frame');
+    const i = frame.src.lastIndexOf('http://');
+    await $.openLink(frame.src.substr(i));
   },
 });

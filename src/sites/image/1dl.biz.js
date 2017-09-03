@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: [
     {
       host: /^1(dl|be)\.biz$/,
@@ -8,14 +8,12 @@ $.register({
     {
       host: /^img\.1dl\.biz$/,
       path: /^\/\w\.php$/,
-      query: /^\?\w\/([\d\/]+)$/,
+      query: /^\?\w\/([\d/]+)$/,
     },
   ],
-  ready: function () {
-    'use strict';
-
-    var a = $('.main a, .main-l a');
-    $.openImage(a.href, {
+  async ready () {
+    const a = $('.main a, .main-l a');
+    await $.openImage(a.href, {
       referer: true,
     });
   },

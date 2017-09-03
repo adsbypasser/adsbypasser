@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^urlms\.com$/,
   },
-  ready: function () {
-    'use strict';
-
-    var iframe = $('#content');
-    $.openLink(iframe.src);
+  async ready () {
+    const iframe = $('#content');
+    await $.openLink(iframe.src);
   },
 });

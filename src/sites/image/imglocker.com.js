@@ -1,4 +1,4 @@
-$.register({
+_.register({
   rule: {
     host: /^imglocker\.com$/,
     path: [
@@ -6,9 +6,8 @@ $.register({
       /^(\/\w+)\/(.+)$/,
     ],
   },
-  start: function (m) {
-    'use strict';
-    var url = _.T('//img.imglocker.com{0}_{1}');
-    $.openImage(url(m.path[1], m.path[2]));
+  async start (m) {
+    const url = _.template('//img.imglocker.com{0}_{1}');
+    await $.openImage(url(m.path[1], m.path[2]));
   },
 });

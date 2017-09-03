@@ -1,9 +1,7 @@
-$.register({
+_.register({
   rule: 'http://imageupper.com/i/?*',
-  ready: function () {
-    'use strict';
-
-    var i = $('#img');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#img');
+    await $.openImage(i.src);
   },
 });

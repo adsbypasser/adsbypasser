@@ -1,13 +1,10 @@
-$.register({
+_.register({
   rule: 'http://my-link.pro/*',
-  ready: function () {
-    'use strict';
-
+  async ready () {
     // Find the iframe that is used to display the real link
-    var i = $('iframe[scrolling=auto]');
-
+    const i = $('iframe[scrolling=auto]');
     if (i) {
-      $.openLink(i.src);
+      await $.openLink(i.src);
     }
   },
 });

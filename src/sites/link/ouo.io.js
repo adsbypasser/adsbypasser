@@ -1,9 +1,8 @@
-$.register({
+_.register({
   rule: {
     host: /^(www\.)?ouo\.(io|press)$/
   },
-  ready: function (m) {
-    'use strict';
+  async ready () {
     $('form[method="POST"]>input[name="_token"]').parentNode.submit();
   },
 });

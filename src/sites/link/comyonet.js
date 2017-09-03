@@ -1,11 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^comyonet\.com$/,
   },
-  ready: function () {
-    'use strict';
-
-    var input = $('input[name="enter"]');
+  async ready () {
+    const input = $('input[name="enter"]');
     input.click();
   },
 });

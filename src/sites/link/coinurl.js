@@ -1,15 +1,13 @@
-$.register({
+_.register({
   rule: {
     host: /^(?:(\w+)\.)?(coinurl\.com|cur\.lv)$/,
     path: /^\/([-\w]+)$/
   },
-  ready: function (m) {
-    'use strict';
+  async ready (m) {
+    $.remove('iframe');
 
-    $.removeNodes('iframe');
-
-    var host = 'http://cur.lv/redirect_curlv.php';
-    var param = m.host[1] === undefined ? {
+    const host = 'http://cur.lv/redirect_curlv.php';
+    const param = m.host[1] === undefined ? {
       code: m.path[1],
     } : {
       zone: m.host[1],
@@ -17,37 +15,38 @@ $.register({
     };
 
     // Retrieve the main frame
-    $.get(host, param).then(function(mainFrameContent) {
-      try {
-        // Convert it to HTML nodes
-        var docMainFrame = $.toDOM(mainFrameContent);
-      } catch (e) {
-        throw new _.AdsBypasserError('main frame changed');
-      }
+    const mainFrameContent = await $.get(host, param);
+    let docMainFrame = null;
+    try {
+      // Convert it to HTML nodes
+      docMainFrame = $.toDOM(mainFrameContent);
+    } catch (e) {
+      throw new _.AdsBypasserError('main frame changed');
+    }
 
-      // Regex allowing to extract the link from a subframe
-      var rExtractLink = /onclick="open_url\('([^']+)',\s*'go'\)/;
+    // Regex allowing to extract the link from a subframe
+    const rExtractLink = /onclick="open_url\('([^']+)',\s*'go'\)/;
 
-      // Iterate each frame
-      var innerFrames = $.$$('iframe', docMainFrame).each(function (currFrame) {
-        // Fix the host of the frame
-        // NOTE Webkit does not strictly follow HTMLElement spec, can not use HTMLFrameElement.src
-        var currFrameAddr = currFrame.getAttribute('src');
+    // XXX need asyncForEach
+    // Iterate each frame
+    _.forEach($.$$('iframe', docMainFrame), (currFrame) => {
+      // Fix the host of the frame
+      // NOTE Webkit does not strictly follow HTMLElement spec, can not use HTMLFrameElement.src
+      const currFrameAddr = currFrame.getAttribute('src');
 
-        // Get the content of the current frame
-        $.get(currFrameAddr).then(function(currFrameContent) {
-          // Try to find the link in the current frame
-          var aRealLink = rExtractLink.exec(currFrameContent);
+      // Get the content of the current frame
+      $.get(currFrameAddr).then((currFrameContent) => {
+        // Try to find the link in the current frame
+        const aRealLink = rExtractLink.exec(currFrameContent);
 
-          // Could not find it? Try to find it in the next frame
-          if (aRealLink === undefined || aRealLink[1] === undefined) {
-            return;
-          }
+        // Could not find it? Try to find it in the next frame
+        if (aRealLink === undefined || aRealLink[1] === undefined) {
+          return;
+        }
 
-          // Otherwise redirect to the link
-          var realLink = aRealLink[1];
-          $.openLink(realLink);
-        });
+        // Otherwise redirect to the link
+        const realLink = aRealLink[1];
+        return $.openLink(realLink);
       });
     });
   },

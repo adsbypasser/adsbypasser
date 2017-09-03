@@ -1,18 +1,184 @@
 (function() {
 
+  const hostRules = [
+    /^(([\w]{8}|www)\.)?(allanalpass|cash4files|drstickyfingers|fapoff|freegaysitepass|(gone|tube)viral|(pic|tna)bucks|whackyvidz|fuestfka)\.com$/,
+    /^(([\w]{8}|www)\.)?(a[mn]y|deb|dyo|sexpalace)\.gs$/,
+    /^(([\w]{8}|www)\.)?(filesonthe|poontown|seriousdeals|ultrafiles|urlbeat|zatnawqy|zytpirwai|jzrputtbut)\.net$/,
+    /^(([\w]{8}|www)\.)?freean\.us$/,
+    /^(([\w]{8}|www)\.)?galleries\.bz$/,
+    /^(([\w]{8}|www)\.)?hornywood\.tv$/,
+    /^(([\w]{8}|www)\.)?link(babes|bucks)\.com$/,
+    /^(([\w]{8}|www)\.)?(megaline|miniurls|qqc|rqq|tinylinks|yyv|zff)\.co$/,
+    /^(([\w]{8}|www)\.)?(these(blog|forum)s)\.com$/,
+    /^(([\w]{8}|www)\.)?youfap\.me$/,
+    /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
+  ];
+
+  _.register({
+    rule: {
+      host: hostRules,
+      path: /^\/\w+\/url\/(.+)$/,
+    },
+    async ready(m) {
+      $.removeAllTimer();
+      $.resetCookies();
+      $.remove('iframe');
+
+      let url = m.path[1] + window.location.search;
+
+      const match = $.searchFromScripts(/UrlEncoded: ([^,]+)/);
+      if (match && match[1] === 'true') {
+        // encrypted url
+        url = decrypt(url);
+      }
+
+      await $.openLink(url);
+    }
+  });
+
+  _.register({
+    rule: {
+      host: hostRules,
+    },
+    async start () {
+      // avoid additional request
+      $.window.XMLHttpRequest = _.nop;
+    },
+    async ready () {
+      $.removeAllTimer();
+      $.resetCookies();
+      $.remove('iframe');
+
+      if (window.location.pathname.indexOf('verify') >= 0) {
+        // NOTE dirty fix
+        const path = window.location.pathname.replace('/verify', '');
+        await $.openLink(path);
+        return;
+      }
+
+      const token = findToken(document);
+      const url = await sendRequest(token);
+      $.nuke(url);
+      await $.openLink(url);
+    },
+  });
+
+  // for entry script
+  // this is stupid, but inspecting script on every page is too heavy
+  _.register({
+    rule: {
+      query: /^(.*)[?&]_lbGate=\d+$/,
+    },
+    async start (m) {
+      $.setCookie('_lbGatePassed', 'true');
+      await $.openLink(window.location.pathname + m.query[1]);
+    },
+  });
+
+  function findToken (context) {
+    const script = $.searchFromScripts('    const f = window[\'init\' + \'Lb\' + \'js\' + \'\']', context);
+    if (!script) {
+      _.warn('pattern changed');
+      return null;
+    }
+
+    let adurl = script.match(/AdUrl\s*:\s*'([^']+)'/);
+    if (!adurl) {
+      return null;
+    }
+    adurl = adurl[1];
+
+    const m1 = script.match(/AdPopUrl\s*:\s*'.+\?[^=]+=([\w\d]+)'/);
+    const m2 = script.match(/Token\s*:\s*'([\w\d]+)'/);
+    const token = m1[1] || m2[1];
+    let m = script.match(/=\s*(\d+);/);
+    let ak = parseInt(m[1], 10);
+    const re = /\+\s*(\d+);/g;
+    let tmp = null;
+    // get second (i.e. the real) salt
+    while((m = re.exec(script)) !== null) {
+      tmp = m[1];
+    }
+    ak += parseInt(tmp, 10);
+
+    return {
+      t: token,
+      aK: ak,
+      adurl: adurl,
+    };
+  }
+
+  async function sendRequest (token) {
+    // touch the ad url to pass the server-side check
+    $.get(token.adurl);
+    delete token.adurl;
+
+    token.a_b = false;
+
+    _.info('waiting the interval');
+    await _.wait(5000);
+
+    _.info('sending token: %o', token);
+    const text = await $.get('/intermission/loadTargetUrl', token, {
+      // strip additional headers
+      'X-Requested-With': _.none,
+      Origin: _.none,
+    });
+    const data = _.parseJSON(text);
+    _.info('response: %o', data);
+
+    if (!data.Success && data.Errors[0] === 'Invalid token') {
+      // somehow this token is invalid, reload to get new one
+      _.warn('got invalid token');
+      return await retry();
+    }
+    if (data.AdBlockSpotted) {
+      _.warn('adblock spotted');
+      return;
+    }
+    if (data.Success && !data.AdBlockSpotted && data.Url) {
+      return data.Url;
+    }
+  }
+
+  async function retry () {
+    const text = await $.get(window.location.toString(), {}, {
+      // trick the server to avoid possible survey page
+      'X-Forwarded-For': $.generateRandomIP(),
+    });
+    const d = $.toDOM(text);
+    const t = findToken(d);
+    if (!t) {
+      // if still fail, request again.
+      // wait a second to avoid flooding detection
+      await _.wait(1000);
+      return await retry();
+    }
+    return await sendRequest(t);
+  }
+
+  function decrypt (url) {
+    url = ConvertFromHex(url);
+    let unsafe = _.template('({0})("{1}")');
+    unsafe = unsafe(Encode.toString(), url);
+    unsafe = (0, eval)(unsafe);
+    return unsafe;
+  }
+
   // copy from Lbjs, can not get from unsafeWindow
   function ConvertFromHex (str) {
-    var result = [];
+    const result = [];
     while (str.length >= 2) {
       result.push(String.fromCharCode(parseInt(str.substring(0, 2), 16)));
       str = str.substring(2, str.length);
     }
-    return result.join("");
+    return result.join('');
   }
   // function name MATTERS, do not change this function
   // arguments.callee does not exists in strict mode
-  var Encode = function (str) {
-    var s = [], j = 0, x, res = '', k = arguments.callee.toString().replace(/\s+/g, "");
+  /* eslint-disable no-var */
+  const Encode = function (str) {
+    var s = [], j = 0, x, res = '', k = arguments.callee.toString().replace(/\s+/g, '');
     for (var i = 0; i < 256; i++) {
       s[i] = i;
     }
@@ -34,171 +200,6 @@
     }
     return res;
   };
-
-  var hostRules = [
-    /^(([\w]{8}|www)\.)?(allanalpass|cash4files|drstickyfingers|fapoff|freegaysitepass|(gone|tube)viral|(pic|tna)bucks|whackyvidz|fuestfka)\.com$/,
-    /^(([\w]{8}|www)\.)?(a[mn]y|deb|dyo|sexpalace)\.gs$/,
-    /^(([\w]{8}|www)\.)?(filesonthe|poontown|seriousdeals|ultrafiles|urlbeat|zatnawqy|zytpirwai|jzrputtbut)\.net$/,
-    /^(([\w]{8}|www)\.)?freean\.us$/,
-    /^(([\w]{8}|www)\.)?galleries\.bz$/,
-    /^(([\w]{8}|www)\.)?hornywood\.tv$/,
-    /^(([\w]{8}|www)\.)?link(babes|bucks)\.com$/,
-    /^(([\w]{8}|www)\.)?(megaline|miniurls|qqc|rqq|tinylinks|yyv|zff)\.co$/,
-    /^(([\w]{8}|www)\.)?(these(blog|forum)s)\.com$/,
-    /^(([\w]{8}|www)\.)?youfap\.me$/,
-    /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
-  ];
-
-  (function () {
-    'use strict';
-
-    function findToken (context) {
-      var script = $.searchScripts('    var f = window[\'init\' + \'Lb\' + \'js\' + \'\']', context);
-      if (!script) {
-        _.warn('pattern changed');
-        return null;
-      }
-
-      var adurl = script.match(/AdUrl\s*:\s*'([^']+)'/);
-      if (!adurl) {
-        return null;
-      }
-      adurl = adurl[1];
-
-      var m1 = script.match(/AdPopUrl\s*:\s*'.+\?[^=]+=([\w\d]+)'/);
-      var m2 = script.match(/Token\s*:\s*'([\w\d]+)'/);
-      var token = m1[1] || m2[1];
-      var m = script.match(/=\s*(\d+);/);
-      var ak = parseInt(m[1], 10);
-      var re = /\+\s*(\d+);/g;
-      var tmp = null;
-      // get second (i.e. the real) salt
-      while((m = re.exec(script)) !== null) {
-        tmp = m[1];
-      }
-      ak += parseInt(tmp, 10);
-
-      return {
-        t: token,
-        aK: ak,
-        adurl: adurl,
-      };
-    }
-
-    function sendRequest (token) {
-      // touch the ad url to pass the server-side check
-      $.get(token.adurl);
-      delete token.adurl;
-
-      token.a_b = false;
-
-      _.info('waiting the interval');
-
-      return _.wait(5000).then(function () {
-        _.info('sending token: %o', token);
-
-        return $.get('/intermission/loadTargetUrl', token, {
-          // strip additional headers
-          'X-Requested-With': _.none,
-          Origin: _.none,
-        });
-      }).then(function (text) {
-        var data = _.parseJSON(text);
-        _.info('response: %o', data);
-
-        if (!data.Success && data.Errors[0] === 'Invalid token') {
-          // somehow this token is invalid, reload to get new one
-          _.warn('got invalid token');
-          return retry();
-        }
-        if (data.AdBlockSpotted) {
-          _.warn('adblock spotted');
-          return;
-        }
-        if (data.Success && !data.AdBlockSpotted && data.Url) {
-          return data.Url;
-        }
-      });
-    }
-
-    function retry () {
-      return $.get(window.location.toString(), {}, {
-        // trick the server to avoid possible survey page
-        'X-Forwarded-For': $.generateRandomIP(),
-      }).then(function (text) {
-        var d = $.toDOM(text);
-        var t = findToken(d);
-        if (!t) {
-          // if still fail, request again.
-          // wait a second to avoid flooding detection
-          return _.wait(1000).then(retry);
-        }
-        return sendRequest(t);
-      });
-    }
-
-    $.register({
-      rule: {
-        host: hostRules,
-        path: /^\/\w+\/url\/(.+)$/,
-      },
-      ready: function(m) {
-        $.removeAllTimer();
-        $.resetCookies();
-        $.removeNodes('iframe');
-
-        var url = m.path[1] + window.location.search;
-
-        var match = $.searchScripts(/UrlEncoded: ([^,]+)/);
-        if (match && match[1] === 'true') {
-          // encrypted url
-          url = Encode(ConvertFromHex(url));
-        }
-
-        $.openLink(url);
-      }
-    });
-
-    $.register({
-      rule: {
-        host: hostRules,
-      },
-      start: function () {
-        // avoid additional request
-        $.window.XMLHttpRequest = _.nop;
-      },
-      ready: function () {
-        $.removeAllTimer();
-        $.resetCookies();
-        $.removeNodes('iframe');
-
-        if (window.location.pathname.indexOf('verify') >= 0) {
-          // NOTE dirty fix
-          var path = window.location.pathname.replace('/verify', '');
-          $.openLink(path);
-          return;
-        }
-
-        var token = findToken(document);
-        sendRequest(token).then(function (url) {
-          $.nuke(url);
-          $.openLink(url);
-        });
-      },
-    });
-
-    // for entry script
-    // this is stupid, but inspecting script on every page is too heavy
-    $.register({
-      rule: {
-        query: /^(.*)[?&]_lbGate=\d+$/,
-      },
-      start: function (m) {
-        $.setCookie('_lbGatePassed', 'true');
-        $.openLink(window.location.pathname + m.query[1]);
-      },
-    });
-
-  })();
+  /* eslint-enable no-var */
 
 })();

@@ -1,22 +1,19 @@
-$.register({
+_.register({
   rule: {
     host: /^fit\.sh$/,
   },
-  ready: function () {
-    'use strict';
+  async ready () {
+    $.remove('.container-body');
 
-    $.removeNodes('.container-body');
-
-    var m = $.searchScripts(/token="([^"]+)"/);
+    let m = $.searchFromScripts(/token="([^"]+)"/);
     if (!m) {
       throw new _.AdsBypasserError('site changed');
     }
     m = m[1];
 
-    var interLink = '/go/' + m + '?fa=15466&a=' + window.location.hash.substr(1);
+    const interLink = '/go/' + m + '?fa=15466&a=' + window.location.hash.substr(1);
 
-    setTimeout(function () {
-      $.openLink(interLink);
-    }, 6000);
+    await _.wait(6 * 1000);
+    await $.openLink(interLink);
   },
 });

@@ -1,9 +1,9 @@
-$.register({
+_.register({
   rule: {
     host: /^www\.noelshack\.com$/
   },
-  ready: function () {
-    var i = $('#elt_to_aff');
-    $.openImage(i.src);
+  async ready () {
+    const i = $('#elt_to_aff');
+    await $.openImage(i.src);
   },
 });
