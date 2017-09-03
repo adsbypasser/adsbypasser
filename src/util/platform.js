@@ -39,6 +39,7 @@ function getGreaseMonkeyAPI () {
     registerMenuCommand: GM_registerMenuCommand,
     getValue: GM_getValue,
     setValue: GM_setValue,
+    deleteValue: GM_deleteValue,
     xmlhttpRequest: GM_xmlhttpRequest,
     getResourceText: GM_getResourceText,
     addStyle: GM_addStyle,

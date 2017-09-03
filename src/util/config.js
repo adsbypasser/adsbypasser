@@ -43,13 +43,6 @@ const MANIFEST = [
     normalize: toBoolean,
   },
   {
-    name: 'externalServerSupport',
-    key: 'external_server_support',
-    default_: false,
-    verify: isBoolean,
-    normalize: toBoolean,
-  },
-  {
     name: 'redirectImage',
     key: 'redirect_image',
     default_: true,
@@ -100,6 +93,9 @@ const PATCHES = [
     if (typeof c.logLevel !== 'number') {
       c.logLevel = 1;
     }
+  },
+  (c) => {
+    GM.deleteValue('external_server_support');
   },
 ];
 
@@ -157,9 +153,13 @@ function migrate (c) {
   if (typeof c.version !== 'number' || c.version < 0) {
     throw new AdsBypasserError('wrong config version: ' + c.version);
   }
-  while (c.version < PATCHES.length) {
+  for (let i = 0; c.version < PATCHES.length; ++i) {
     PATCHES[c.version](c);
     ++c.version;
+
+    if (i >= PATCHES.length) {
+      throw new AdsBypasserError('invalid config state', i, c);
+    }
   }
   return c;
 }
@@ -216,16 +216,6 @@ function loadConfig () {
             value: config.scaleImage,
             label: 'Scale Image',
             help: 'When image loaded, scale it to fit window if possible. (default: enabled)',
-          },
-          externalServerSupport: {
-            type: 'checkbox',
-            value: config.externalServerSupport,
-            label: 'External Server Support',
-            help: [
-              'Send URL information to external server to enhance features (e.g.: captcha resolving). (default: disabled)',
-              'Affected sites:',
-              'setlinks.us (captcha)',
-            ].join('<br/>\n'),
           },
           logLevel: {
             type: 'select',

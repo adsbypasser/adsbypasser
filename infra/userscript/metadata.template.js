@@ -16,6 +16,7 @@
 // @grant          GM_getResourceText
 // @grant          GM_getResourceURL
 <% } %>
+// @grant          GM_deleteValue
 // @grant          GM_getValue
 // @grant          GM_openInTab
 // @grant          GM_registerMenuCommand
