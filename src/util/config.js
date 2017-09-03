@@ -94,7 +94,7 @@ const PATCHES = [
       c.logLevel = 1;
     }
   },
-  (c) => {
+  () => {
     GM.deleteValue('external_server_support');
   },
 ];
