@@ -55,7 +55,7 @@
     rule: {
       host: [
         /^imgtown\.net$/,
-        /^imgrock\.co$/,
+        /^imgrock\.info$/,
       ],
       path: PATH_RULE,
     },
