@@ -139,9 +139,9 @@ function parseJSON (json) {
   try {
     return JSON.parse(json);
   } catch (e) {
-    _.warn(e, json);
+    console.warn(e, json);
   }
-  return _.none;
+  return none;
 }
 
 
