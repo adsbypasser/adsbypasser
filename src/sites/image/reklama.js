@@ -158,7 +158,7 @@
       window.location.reload();
     },
     async ready () {
-      $.removeNodes('iframe');
+      $.remove('iframe');
 
       const node = $.$('#continuetoimage > form input');
       if (node) {

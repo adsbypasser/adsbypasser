@@ -3,7 +3,7 @@ _.register({
     host: /^pixhub\.eu$/,
   },
   async ready () {
-    $.removeNodes('iframe, .adultpage, #FFN_Banner_Holder');
+    $.remove('iframe, .adultpage, #FFN_Banner_Holder');
     const i = $('.image-show img');
     await $.openImage(i.src);
   },

@@ -23,7 +23,7 @@
       path: /^\/.+/,
     },
     async ready () {
-      $.removeNodes('iframe');
+      $.remove('iframe');
 
       const token = findAJAXToken();
       const time = fakeAJAXToken();
