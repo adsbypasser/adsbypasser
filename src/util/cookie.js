@@ -24,7 +24,7 @@ function getCookie (key) {
   let [, c,] = find(document.cookie.split(';'), (v) => {
     const k = v.replace(/^\s*([a-zA-Z0-9-_]+)=.+$/, '$1');
     if (k !== key) {
-      return _.none;
+      return none;
     }
   });
   if (c === none) {
