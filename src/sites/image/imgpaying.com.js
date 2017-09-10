@@ -49,7 +49,10 @@
 
   _.register({
     rule: {
-      host: /^img(rock|town)\.net$/,
+      host: [
+        /^imgtown\.net$/,
+        /^imgrock\.info$/,
+      ],
       path: PATH_RULE,
     },
     async ready () {
