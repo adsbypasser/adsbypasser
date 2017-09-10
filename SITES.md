@@ -481,7 +481,7 @@
     * imgoutlet.co
     * imgoutlet.com
     * imgpaying.com
-    * imgrock.net
+    * imgrock.info
     * imgsee.me
     * imgtiger.org
     * imgtown.net
