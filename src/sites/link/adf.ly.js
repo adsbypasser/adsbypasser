@@ -47,6 +47,7 @@
       // break anti-adblock script
       $.window.btoa = _.nop;
 
+      await waitDocumentHead();
       const token = await waitToken();
       const url = decodeToken(token);
       await $.openLink(url);
@@ -92,6 +93,25 @@
         });
       });
       o.observe(document.head, {
+        childList: true,
+      });
+    });
+  }
+
+
+  function waitDocumentHead () {
+    return new Promise((resolve) => {
+      if (document.head) {
+        resolve();
+        return;
+      }
+      const o = new MutationObserver(() => {
+        if (document.head) {
+          o.disconnect();
+          resolve();
+        }
+      });
+      o.observe(document.documentElement, {
         childList: true,
       });
     });
