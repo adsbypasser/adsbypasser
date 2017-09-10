@@ -1,4 +1,4 @@
-## TBA
+## v6.1.0
 
 * changed
     * Trying to fix compatibility to Violentmonkey
