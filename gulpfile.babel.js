@@ -186,7 +186,9 @@ gulp.task('ghpages:copy:releases', ['ghpages:clone', 'userscript'], () => {
   for (const [supportImage, supportLagacy] of allBuildOptions()) {
     const featureName = supportImage ? 'full' : 'lite';
     const ecmaName = supportLagacy ? 'es5' : 'es7';
-    const js = output.to(`adsbypasser.${featureName}.${ecmaName}.user.js`);
+    let js = output.to(`adsbypasser.${featureName}.${ecmaName}.user.js`);
+    files.push(js);
+    js = output.to(`adsbypasser.${featureName}.${ecmaName}.meta.js`);
     files.push(js);
   }
   return gulp.src(files)
