@@ -7,7 +7,6 @@ export {
   map,
   none,
   nop,
-  parseJSON,
   partial,
   template,
   tryEvery,
@@ -132,16 +131,6 @@ function partial (fn, ...args) {
   return (...innerArgs) => {
     return fn(...args.concat(innerArgs));
   };
-}
-
-
-function parseJSON (json) {
-  try {
-    return JSON.parse(json);
-  } catch (e) {
-    console.warn(e, json);
-  }
-  return none;
 }
 
 
