@@ -124,7 +124,7 @@
       'X-Requested-With': _.none,
       Origin: _.none,
     });
-    const data = _.parseJSON(text);
+    const data = JSON.parse(text);
     _.info('response: %o', data);
 
     if (!data.Success && data.Errors[0] === 'Invalid token') {

@@ -206,7 +206,7 @@
           // dirty fix for tr5.in
           text = text.match(/\{.+\}/)[0];
         }
-        const jj = _.parseJSON(text);
+        const jj = JSON.parse(text);
         if (jj.message) {
           clearInterval(i);
           return $.openLink(jj.message.url);

@@ -27,7 +27,7 @@
         Cookie: 'referrer=1',
         'X-Requested-With': _.none,
       });
-      pasteInfo = _.parseJSON(pasteInfo);
+      pasteInfo = JSON.parse(pasteInfo);
       if (!pasteInfo.ok) {
         throw new _.AdsBypasserError('error when getting paste information');
       }

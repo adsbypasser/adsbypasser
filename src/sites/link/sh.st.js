@@ -104,7 +104,7 @@
     // XXX threw away promise
     const i = setInterval(function () {
       $.get('/shortest-url/end-adsession', data, header).then(function (text) {
-        const r = _.parseJSON(text);
+        const r = JSON.parse(text);
         if (r.status == 'ok' && r.destinationUrl) {
           clearInterval(i);
           $.removeAllTimer();

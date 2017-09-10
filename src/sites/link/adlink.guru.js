@@ -54,7 +54,7 @@
     const args = extractArgument(f);
     const url = f.getAttribute('action');
     let data = await $.post(url, args);
-    data = _.parseJSON(data);
+    data = JSON.parse(data);
     if (data && data.url) {
       return data.url;
     }

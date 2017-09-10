@@ -20,7 +20,7 @@ _.register({
     // get random ip info
     const url = _.template('http://ipinfo.io/{0}/json')($.generateRandomIP());
     let ipinfo = await $.get(url);
-    ipinfo = _.parseJSON(ipinfo);
+    ipinfo = JSON.parse(ipinfo);
     const payload = {
       codeAds: 1,
       country: ipinfo.country,
@@ -34,7 +34,7 @@ _.register({
       'Content-Type': 'application/json',
       'X-XSRF-TOKEN': token,
     });
-    data = _.parseJSON(data);
+    data = JSON.parse(data);
     await $.openLink(data.message);
   },
 });
