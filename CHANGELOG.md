@@ -1,3 +1,21 @@
+## TBA
+
+* changed
+    * Trying to fix compatibility to Violentmonkey
+* fixed
+    * ouo.io
+    * imgdrive.net
+    * fas.li
+    * adf.ly
+    * prntscr.com
+    * short.am
+    * urlcash.net
+    * idsly.com
+* added
+    * imgrock.info
+* removed
+    * imgrock.net
+
 ## v6.0.0
 
 * changed
