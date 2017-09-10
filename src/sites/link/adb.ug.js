@@ -62,7 +62,7 @@
     // XXX uncatched promise
     const i = setInterval(() => {
       $.post(url, args).then((text) => {
-        const jj = _.parseJSON(text);
+        const jj = JSON.parse(text);
         if (!jj.errors && jj.messages) {
           clearInterval(i);
           $.openLink(jj.messages.url);

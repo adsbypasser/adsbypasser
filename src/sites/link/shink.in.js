@@ -20,6 +20,8 @@ _.register({
     // NOTE The site will add the node back immediately, so maybe it will
     // becomes very busy.
     const o = new MutationObserver((mutations) => {
+      $.remove('.BJPPopAdsOverlay');
+
       mutations.forEach((mutation) => {
         mutation.addedNodes.forEach((node) => {
           if (node.localName === 'div') {
@@ -43,7 +45,6 @@ _.register({
   rule: [
     {
       host: [
-        /^fas\.li$/,
         /^cpmlink\.net$/,
       ],
       path: /^\/go\/\w+$/,
@@ -63,7 +64,10 @@ _.register({
 
 _.register({
   rule: {
-    host: /^(www\.)?shink\.in$/,
+    host: [
+      /^fas\.li$/,
+      /^(www\.)?shink\.in$/,
+    ],
     path: /^\/go\/\w+$/,
   },
   async ready () {

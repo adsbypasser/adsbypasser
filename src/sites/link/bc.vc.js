@@ -23,7 +23,7 @@
       path: /^\/.+/,
     },
     async ready () {
-      $.removeNodes('iframe');
+      $.remove('iframe');
 
       const token = findAJAXToken();
       const time = fakeAJAXToken();
@@ -206,7 +206,7 @@
           // dirty fix for tr5.in
           text = text.match(/\{.+\}/)[0];
         }
-        const jj = _.parseJSON(text);
+        const jj = JSON.parse(text);
         if (jj.message) {
           clearInterval(i);
           return $.openLink(jj.message.url);
@@ -235,7 +235,7 @@
 
 
   function findAJAXToken () {
-    const rv = $.searchScripts('/fly/ajax.php');
+    const rv = $.searchFromScripts('/fly/ajax.php');
     if (!rv) {
       throw new _.AdsBypasserError('script changed');
     }

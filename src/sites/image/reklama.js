@@ -142,25 +142,10 @@
       ],
       path: /^\/img-.*\.html$/,
     },
-    async start () {
-      const c = $.getCookie('ibpuc');
-      if (c) {
-        return;
-      }
-      await $.post(window.location.href.toString(), {
-        cti: 1,
-        ref: '',
-        rc: 1,
-        rp: 1,
-        bt: 0,
-        bw: 'edge',
-      });
-      window.location.reload();
-    },
     async ready () {
-      $.removeNodes('iframe');
+      $.remove('iframe');
 
-      const node = $.$('#continuetoimage > form input');
+      let node = $.$('#continuetoimage > form input');
       if (node) {
         // first pass
         node.click();
@@ -174,8 +159,22 @@
       $.resetCookies();
 
       // second pass
-      const i = $('img[class^=centred]');
-      await $.openImage(i.src);
+      node = $.$('img[class^=centred]');
+      if (node) {
+        await $.openImage(node.src);
+        return;
+      }
+
+      // simulate session
+      await $.post(window.location.href.toString(), {
+        cti: 1,
+        ref: '',
+        rc: 1,
+        rp: 1,
+        bt: 0,
+        bw: 'edge',
+      });
+      window.location.reload();
     },
   });
 

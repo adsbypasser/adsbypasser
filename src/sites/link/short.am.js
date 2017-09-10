@@ -8,7 +8,7 @@ _.register({
     await _.wait(5000);
     await $.openLink('', {
       post: {
-        image: 'Continue',
+        _image: 'Continue',
       },
     });
   },

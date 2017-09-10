@@ -22,7 +22,7 @@ _.register({
       confirm,
     });
     // Good to know: the image is already present in the JSON as base64
-    const json = _.parseJSON(rawJson);
+    const json = JSON.parse(rawJson);
 
     // Allows to decode \n \t \r and other characters like this
     const decodedHTML = document.createTextNode(json.content).data;

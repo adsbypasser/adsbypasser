@@ -8,7 +8,7 @@ _.register({
       id: m.path[1],
       type: 'json',
     });
-    const r = _.parseJSON(text);
+    const r = JSON.parse(text);
     if (r.success == true && r.data.full) {
       await $.openLink(r.data.full);
     } else {

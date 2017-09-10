@@ -26,7 +26,10 @@
 
   _.register({
     rule: {
-      host: /^sflnk\.me$/,
+      host: [
+        /^sflnk\.me$/,
+        /^idsly\.com$/,
+      ],
     },
     async ready () {
       $.remove('iframe');

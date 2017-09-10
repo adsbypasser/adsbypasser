@@ -29,7 +29,7 @@ _.register({
       slug,
       hoster,
     });
-    const respJSON = _.parseJSON(response);
+    const respJSON = JSON.parse(response);
     await $.openLink(respJSON.url);
   },
 });
