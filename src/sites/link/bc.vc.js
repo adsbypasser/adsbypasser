@@ -235,7 +235,7 @@
 
 
   function findAJAXToken () {
-    const rv = $.searchScripts('/fly/ajax.php');
+    const rv = $.searchFromScripts('/fly/ajax.php');
     if (!rv) {
       throw new _.AdsBypasserError('script changed');
     }

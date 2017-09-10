@@ -7,7 +7,7 @@ _.register({
     $.window._impspcabe = 0;
   },
   async ready () {
-    let l = $.searchScripts(/revC\("([^"]+)"\)/);
+    let l = $.searchFromScripts(/revC\("([^"]+)"\)/);
     l = atob(l[1]);
     await $.openLink('/' + l);
   },
