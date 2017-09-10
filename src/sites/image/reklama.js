@@ -43,7 +43,8 @@
           /^img(studio|spot)\.org$/,
           // else
           /^www\.hotimage\.uk$/,
-          /^(hotimages|55888)\.eu$/,
+          /^hotimages\.eu$/,
+          /(^|\.)55888\.eu$/,
           /^img(cloud|mag)\.co$/,
           /^pixup\.us$/,
           /^(bulkimg|photo-up|myimg|pop-img|img-pop|ads-img)\.info$/,
