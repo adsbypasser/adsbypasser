@@ -54,7 +54,9 @@ const MAGIC_KEY = '__adsbypasser_reverse_proxy__';
 function getUnsafeWindowProxy () {
   // GreaseMonkey 1.15 won't pass this test
   const isFirefox = typeof InstallTrigger !== 'undefined';
-  if (!isFirefox) {
+  // Violentmonkey does not need the wrapper
+  const isWebExtension = typeof cloneInto === 'undefined' || typeof exportFunction === 'undefined';
+  if (!isFirefox || isWebExtension) {
     // other browsers does not need this
     return usw;
   }
