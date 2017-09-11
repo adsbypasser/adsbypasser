@@ -7,7 +7,7 @@ _.register({
     const id = $.searchFromScripts(/\{id:'(\d+)'\}/);
     await _.wait(3000);
     const url = await $.post('/site/getRedirectLink', {
-      id: id,
+      id: id[1],
     });
     await $.openLink(url);
   },
