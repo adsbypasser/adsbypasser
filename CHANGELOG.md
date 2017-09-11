@@ -1,3 +1,11 @@
+## TBA
+
+* fixed
+    * configuration page
+    * 55888.eu
+    * ouo.io
+    * spaste.com
+
 ## v6.1.0
 
 * changed
