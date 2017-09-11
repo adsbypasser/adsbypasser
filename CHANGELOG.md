@@ -1,4 +1,4 @@
-## TBA
+## v6.1.1
 
 * fixed
     * configuration page
