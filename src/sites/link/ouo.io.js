@@ -1,8 +1,9 @@
 _.register({
   rule: {
-    host: /^(www\.)?ouo\.(io|press)$/
+    host: /^(www\.)?ouo\.(io|press)$/,
+    path: /^\/go\/\w+$/,
   },
   async ready () {
-    $('form[method="POST"]>input[name="_token"]').parentNode.submit();
+    $('form').submit();
   },
 });
