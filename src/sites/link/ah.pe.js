@@ -19,7 +19,7 @@
         _.info('recaptcha');
         return;
       }
-      path = _.template('{0}.{1}.{2}')($.window[path[2]], $.window[path[3]], $.window[path[4]]);
+      path = [$.window[path[2]], $.window[path[3]], $.window[path[4]]].join('.');
 
       await $.openLink(path);
     },

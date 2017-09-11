@@ -7,7 +7,6 @@ _.register({
     ],
   },
   async start (m) {
-    const url = _.template('//img.imglocker.com{0}_{1}');
-    await $.openImage(url(m.path[1], m.path[2]));
+    await $.openImage(`//img.imglocker.com${m.path[1]}_${m.path[2]}`);
   },
 });

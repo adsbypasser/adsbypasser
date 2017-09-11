@@ -18,7 +18,7 @@
       const paste_id = m.path[1];
       const paste_salt = m.hash[1];
 
-      const API_URL = _.template('https://binbox.io/{0}.json')(paste_id);
+      const API_URL = `https://binbox.io/${paste_id}.json`;
 
       let pasteInfo = await $.get(API_URL, false, {
         Origin: _.none,
@@ -58,14 +58,14 @@
   const sUrl = '(\\b(https?|ftp|file)://[-A-Z0-9+&@#/%?=~_|!:,.;]*[-A-Z0-9+&@#/%=~_|])';
 
   function isLink (text) {
-    const rUrl = new RegExp(_.template('^{0}$')(sUrl), 'i');
+    const rUrl = new RegExp(`^${sUrl}$`, 'i');
     return rUrl.test(text);
   }
 
   function linkify (text) {
     const rUrl = new RegExp(sUrl, 'ig');
     return text.replace(rUrl, (match) => {
-      return _.template('<a href=\'{0}\'>{0}</a>')(match);
+      return `<a href="${match}">${match}</a>`;
     });
   }
 

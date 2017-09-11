@@ -12,7 +12,7 @@
       const path = window.location.pathname;
       // this site doesn't really parse the query string
       // the order of param matters
-      const url = _.template('{0}?ajax=true&adblock=false&old=false&framed=false&uniq={1}')(path, uniq);
+      const url = `${path}?ajax=true&adblock=false&old=false&framed=false&uniq=${uniq}`;
 
       await getURL(url);
     },

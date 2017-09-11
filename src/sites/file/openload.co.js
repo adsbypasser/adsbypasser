@@ -42,7 +42,7 @@ _.register({
         document.body.appendChild(iframe);
       });
 
-      _.info(_.template('{0} -> {1}')(window.location, dlBtn.href));
+      _.info(`${window.location} -> ${dlBtn.href}`);
 
       dlBtn.click();
     } else {

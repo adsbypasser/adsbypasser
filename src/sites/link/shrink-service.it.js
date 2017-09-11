@@ -4,8 +4,7 @@ _.register({
     path: /^\/(.+)/,
   },
   async start (m) {
-    const url = _.template('//www.shrink-service.it/shrinked/{0}');
-    await $.openLink(url(m.path[1]));
+    await $.openLink(`//www.shrink-service.it/shrinked/${m.path[1]}`);
   },
 });
 

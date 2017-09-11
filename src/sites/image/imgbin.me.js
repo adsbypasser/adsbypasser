@@ -5,7 +5,6 @@ _.register({
   },
   async start (m) {
     // always jpg
-    const tpl = _.template('/image/{0}.jpg');
-    await $.openImage(tpl(m.path[1]));
+    await $.openImage(`/image/${m.path[1]}.jpg`);
   },
 });

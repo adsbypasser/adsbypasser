@@ -27,8 +27,7 @@
 
       const token = findAJAXToken();
       const time = fakeAJAXToken();
-      let url = _.template('/fly/ajax.php?wds={0}&time={1}');
-      url = url(token.wds, time);
+      const url = `/fly/ajax.php?wds=${token.wds}&time=${time}`;
 
       await _.wait(5000);
       let rv = await $.post(url, {

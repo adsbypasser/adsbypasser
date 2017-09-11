@@ -8,7 +8,7 @@
       path: /^\/photo\/.+\/(.+)\/([^/]+)/,
     },
     async start (m) {
-      await $.openImage(_.template('/f/{0}/{1}/')(m.path[1], m.path[2]));
+      await $.openImage(`/f/${m.path[1]}/${m.path[2]}/`);
     },
   });
 

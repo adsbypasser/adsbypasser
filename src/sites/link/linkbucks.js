@@ -159,8 +159,7 @@
 
   function decrypt (url) {
     url = ConvertFromHex(url);
-    let unsafe = _.template('({0})("{1}")');
-    unsafe = unsafe(Encode.toString(), url);
+    let unsafe = `(${Encode.toString()})("${url}")`;
     unsafe = (0, eval)(unsafe);
     return unsafe;
   }
