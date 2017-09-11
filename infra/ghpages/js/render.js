@@ -1,4 +1,3 @@
-let render;
 function commit () {}
 (() => {
   'use strict';
@@ -40,7 +39,7 @@ function commit () {}
   };
 
 
-  render = (data) => {
+  window.render = (data) => {
     clearTimeout(detection);
 
     view.msg.addClass('animated');
