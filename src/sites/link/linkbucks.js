@@ -76,7 +76,7 @@
   });
 
   function findToken (context) {
-    const script = $.searchFromScripts('    const f = window[\'init\' + \'Lb\' + \'js\' + \'\']', context);
+    const script = $.searchFromScripts('    var f = window[\'init\' + \'Lb\' + \'js\' + \'\']', context);
     if (!script) {
       _.warn('pattern changed');
       return null;
