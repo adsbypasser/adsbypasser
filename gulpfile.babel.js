@@ -82,6 +82,7 @@ gulp.task('ghpages', [
   'ghpages:less',
   'ghpages:copy:files',
   'ghpages:copy:releases',
+  'ghpages:copy:legacy',
 ]);
 
 gulp.task('check', ['check:git']);
@@ -194,6 +195,8 @@ gulp.task('ghpages:copy:releases', ['ghpages:clone', 'userscript'], () => {
   return gulp.src(files)
     .pipe(gulp.dest(output.to('ghpages/releases')));
 });
+
+createCopyLegacyTasks('ghpages:copy:legacy');
 
 
 // Generate tasks by various configurations.
@@ -336,6 +339,29 @@ function createNamespaceTask (supportImage) {
       .pipe(plugins.rename(`${featureName}.js`))
       .pipe(gulp.dest(output.to('namespace')));
   });
+}
+
+
+function createCopyLegacyTasks (taskName) {
+  const subTasks = [];
+  for (const [supportImage] of imageBuildOptions()) {
+    const featureName = supportImage ? 'full' : 'lite';
+    const baseName = `adsbypasser${supportImage ? '' : 'lite'}`;
+
+    for (const [part] of cartesianProductOf(['meta', 'user'])) {
+      const taskName = `ghpages:copy:legacy:${featureName}:${part}`;
+      gulp.task(taskName, [
+        'ghpages:clone',
+        'userscript',
+      ], () => {
+        return gulp.src(output.to(`adsbypasser.${featureName}.es7.${part}.js`))
+          .pipe(plugins.rename(`${baseName}.${part}.js`))
+          .pipe(gulp.dest(output.to('ghpages/releases')));
+      });
+      subTasks.push(taskName);
+    }
+  }
+  gulp.task(taskName, subTasks);
 }
 
 
