@@ -9,6 +9,7 @@ export {
 
 import {
   AdsBypasserError,
+  isString,
   template,
   forEach,
   find,
@@ -113,7 +114,7 @@ function searchFromScriptsByString (pattern, context) {
 function searchFromScripts (pattern, context) {
   if (pattern instanceof RegExp) {
     return searchFromScriptsByRegExp(pattern, context);
-  } else if (_.isString(pattern)) {
+  } else if (isString(pattern)) {
     return searchFromScriptsByString(pattern, context);
   } else {
     return null;

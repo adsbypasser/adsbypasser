@@ -157,7 +157,7 @@ function tryEvery (msInterval, fn) {
   return new Promise((resolve) => {
     const handle = setInterval(function () {
       const result = fn();
-      if (result !== _.none) {
+      if (result !== none) {
         clearInterval(handle);
         resolve(result);
       }
