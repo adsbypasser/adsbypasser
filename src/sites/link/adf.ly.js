@@ -119,11 +119,7 @@
 
 
   function decodeToken (token) {
-    let a = token.indexOf('!HiTommy');
-    if (a >= 0) {
-      token = token.substring(0, a);
-    }
-    a = '';
+    let a = '';
     let b = '';
     for (let i = 0; i < token.length; ++i) {
       if (i % 2 === 0) {
@@ -132,8 +128,27 @@
         b = token.charAt(i) + b;
       }
     }
-    token = atob(a + b);
-    token = token.substr(2);
+    token = a + b;
+    a = token.split('');
+    for (let i = 0; i < a.length; ++i) {
+      if (/\d/.test(a[i])) {
+        for (let j = i + 1; j < a.length; ++j) {
+          if (/\d/.test(a[j])) {
+            b = a[i] ^ a[j];
+            if (b < 10) {
+              a[i] = b;
+            }
+            i = j;
+            j = a.length;
+          }
+        }
+      }
+    }
+    token = a.join('');
+    token = atob(token);
+    token = token.substring(16);
+    token = token.substring(0, token.length - 16);
+
     if (location.hash) {
       token += location.hash;
     }
