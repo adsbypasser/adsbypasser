@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * adf.ly
+
 ## v6.1.2
 
 * fixed
