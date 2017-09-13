@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * bc.vc
+    * jzrputtbut.net
+
 ## v6.1.1
 
 * fixed
