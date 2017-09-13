@@ -1,11 +1,11 @@
-(() => {
+(function () {
   'use strict';
 
   if (canUseES7()) {
-    const links = document.querySelectorAll('#releases a.es5');
+    var links = document.querySelectorAll('#releases a.es5');
     links.forEach(hide);
   } else {
-    const links = document.querySelectorAll('#releases a.es7');
+    var links = document.querySelectorAll('#releases a.es7');
     links.forEach(hide);
   }
 
