@@ -107,7 +107,7 @@ function searchFromScriptsByString (pattern, context) {
   if (m === none) {
     return null;
   }
-  return m;
+  return m.textContent;
 }
 
 
