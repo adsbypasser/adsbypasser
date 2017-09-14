@@ -3,10 +3,10 @@
 
   if (canUseES7()) {
     var links = document.querySelectorAll('#releases a.es5');
-    links.forEach(hide);
+    Array.prototype.forEach.call(links, hide);
   } else {
     var links = document.querySelectorAll('#releases a.es7');
-    links.forEach(hide);
+    Array.prototype.forEach.call(links, hide);
   }
 
   function canUseES7 () {
