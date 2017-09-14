@@ -14,7 +14,6 @@
       eval('(async function () {});');
       return true;
     } catch (e) {
-      console.info('test', e);
       return false;
     }
   }
