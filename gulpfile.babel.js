@@ -364,10 +364,13 @@ function createCopyLegacyTasks (taskName) {
 function finalizeMetadata (supportImage, supportLagacy, content) {
   const featureName = supportImage ? 'full' : 'lite';
   const ecmaName = supportLagacy ? 'es5' : 'es7';
+  const featurePostfix = supportImage ? '' : ' Lite';
+  const ecmaPostfix = !supportLagacy ? '' : ' Legacy';
+
   let s = _.template(content);
   s = s({
     version: packageJSON.version,
-    title: supportImage ? 'AdsBypasser' : 'AdsBypasserLite',
+    title: `AdsBypasser${featurePostfix}${ecmaPostfix}`,
     supportImage,
     buildName: `${featureName}.${ecmaName}`,
   });
