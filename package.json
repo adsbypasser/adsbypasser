@@ -29,8 +29,8 @@
     "gulp-strip-comments": "^2.5.1",
     "lodash": "^4.17.4",
     "marked": "^0.3.6",
-    "mocha": "^3.5.0",
-    "webpack": "^3.5.5",
+    "mocha": "^3.5.3",
+    "webpack": "^3.6.0",
     "webpack-stream": "^4.0.0"
   },
   "scripts": {
