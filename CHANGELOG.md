@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * legacy browser support
+
 ## v6.1.3
 
 * fixed
