@@ -1,7 +1,3 @@
-export {
-  openLink,
-};
-
 import {
   isString,
   template,
@@ -99,3 +95,8 @@ async function openLink (to, options) {
 
   window.top.location.replace(to);
 }
+
+
+export {
+  openLink,
+};

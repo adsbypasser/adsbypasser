@@ -1,19 +1,3 @@
-export {
-  AdsBypasserError,
-  every,
-  find,
-  forEach,
-  isString,
-  map,
-  none,
-  nop,
-  partial,
-  template,
-  tryEvery,
-  wait,
-};
-
-
 class AdsBypasserError extends Error {
 
   constructor (message) {
@@ -164,3 +148,19 @@ function tryEvery (msInterval, fn) {
     }, msInterval);
   });
 }
+
+
+export {
+  AdsBypasserError,
+  every,
+  find,
+  forEach,
+  isString,
+  map,
+  none,
+  nop,
+  partial,
+  template,
+  tryEvery,
+  wait,
+};

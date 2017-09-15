@@ -1,8 +1,3 @@
-export {
-  _,
-  $,
-};
-
 import {
   get,
   post,
@@ -87,3 +82,9 @@ $.resetCookies = resetCookies;
 $.searchFromScripts = searchFromScripts;
 $.setCookie = setCookie;
 $.window = uswProxy;
+
+
+export {
+  _,
+  $,
+};

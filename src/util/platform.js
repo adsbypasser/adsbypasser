@@ -1,11 +1,5 @@
 /* global cloneInto: false exportFunction: false */
 
-export {
-  usw,
-  uswProxy,
-  GM,
-};
-
 import {
   forEach,
 } from 'util/core';
@@ -164,3 +158,10 @@ function clone (safe) {
   });
   return unsafe;
 }
+
+
+export {
+  usw,
+  uswProxy,
+  GM,
+};

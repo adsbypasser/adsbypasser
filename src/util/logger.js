@@ -1,8 +1,3 @@
-export {
-  info,
-  warn,
-};
-
 import {
   isString,
 } from 'util/core';
@@ -37,3 +32,9 @@ function info () {
 function warn () {
   log('warn', arguments);
 }
+
+
+export {
+  info,
+  warn,
+};

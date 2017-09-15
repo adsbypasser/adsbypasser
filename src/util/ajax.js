@@ -1,15 +1,9 @@
-export {
-  get,
-  post,
-};
-
 import {
   map,
   template,
   forEach,
   none,
 } from 'util/core';
-
 import {
   GM,
 } from 'util/platform';
@@ -132,3 +126,9 @@ function post (url, data, headers) {
   }
   return ajax('POST', url, data, h);
 }
+
+
+export {
+  get,
+  post,
+};

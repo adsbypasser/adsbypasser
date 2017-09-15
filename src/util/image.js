@@ -1,7 +1,3 @@
-export {
-  openImage,
-};
-
 import {
   template,
 } from 'util/core';
@@ -151,3 +147,8 @@ function replaceBody (imgSrc) {
     scaleImage(i);
   }
 }
+
+
+export {
+  openImage,
+};

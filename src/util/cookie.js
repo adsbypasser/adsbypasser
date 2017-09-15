@@ -1,9 +1,3 @@
-export {
-  setCookie,
-  getCookie,
-  resetCookies,
-};
-
 import {
   none,
   template,
@@ -55,3 +49,10 @@ function resetCookies () {
     document.cookie = e(k, c, d);
   });
 }
+
+
+export {
+  setCookie,
+  getCookie,
+  resetCookies,
+};

@@ -1,8 +1,3 @@
-export {
-  register,
-  findHandler,
-};
-
 import {
   AdsBypasserError,
   none,
@@ -188,3 +183,9 @@ function findHandler () {
     ready: pattern.ready ? partial(pattern.ready, matched) : nop,
   };
 }
+
+
+export {
+  register,
+  findHandler,
+};

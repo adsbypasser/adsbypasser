@@ -1,12 +1,3 @@
-export {
-  querySelector,
-  querySelectorOrNull,
-  querySelectorAll,
-  toDOM,
-  remove,
-  searchFromScripts,
-};
-
 import {
   AdsBypasserError,
   isString,
@@ -120,3 +111,13 @@ function searchFromScripts (pattern, context) {
     return null;
   }
 }
+
+
+export {
+  querySelector,
+  querySelectorOrNull,
+  querySelectorAll,
+  toDOM,
+  remove,
+  searchFromScripts,
+};

@@ -1,9 +1,3 @@
-export {
-  removeAllTimer,
-  nuke,
-  generateRandomIP,
-};
-
 import {
   nop,
 } from 'util/core';
@@ -45,3 +39,10 @@ function generateRandomIP () {
     return Math.floor(Math.random() * 256);
   }).join('.');
 }
+
+
+export {
+  removeAllTimer,
+  nuke,
+  generateRandomIP,
+};

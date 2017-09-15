@@ -1,8 +1,3 @@
-export {
-  loadConfig,
-  config,
-};
-
 import {
   AdsBypasserError,
   every,
@@ -239,3 +234,9 @@ function loadConfig () {
     },
   });
 }
+
+
+export {
+  loadConfig,
+  config,
+};
