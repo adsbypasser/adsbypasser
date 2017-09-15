@@ -260,22 +260,19 @@ function createBodyTask (supportImage, supportLagacy) {
   const namespacePath = output.to(`namespace/${featureName}.js`);
   const handlersPath = output.to(`handlers/${featureName}.js`);
   const compileRules = [];
-  const buildPlugins = [];
 
   if (supportLagacy) {
     compileRules.push({
       test: /\.js$/,
+      exclude: /node_modules/,
       use: {
         loader: 'babel-loader',
         options: {
+          plugins: ['transform-runtime'],
           presets: ['env'],
         },
       },
     });
-
-    buildPlugins.push(new webpack.ProvidePlugin({
-      Promise: ['util/polyfill', 'Promise_'],
-    }));
   }
 
   gulp.task(taskName, [
@@ -297,7 +294,6 @@ function createBodyTask (supportImage, supportLagacy) {
         module: {
           rules: compileRules,
         },
-        plugins: buildPlugins,
       }, webpack))
       .pipe(plugins.stripComments())
       .pipe(plugins.removeEmptyLines())
