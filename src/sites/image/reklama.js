@@ -24,6 +24,7 @@
           // starts with xxx
           /^xxx(imagenow|screens)\.com$/,
           /^xxxsparrow?\.com$/,
+          /^xxxwebdlxxx\.org$/,
           // else
           /^(playimg|picstwist|ericsony|wpc8|uplimg|lexiit|thumbnailus|newimagepost|fapingpics|dimtus|tinizo)\.com$/,
           /^((i|hentai)\.)?imgslip\.com$/,
