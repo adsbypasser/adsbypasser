@@ -2,7 +2,6 @@ import {
   AdsBypasserError,
   every,
   forEach,
-  template,
 } from 'util/core';
 import {
   register,
@@ -124,8 +123,8 @@ function createConfig () {
 
         const nv = GM.getValue(m.key, m.default_);
         if (nv !== v) {
-          const s = template('failed to write config, key: {0}, value: {1}, new: {2}');
-          throw new AdsBypasserError(s(s.key, nv, v));
+          const msg = `failed to write config, key: ${m.key}, value: ${nv}, new: ${v}`;
+          throw new AdsBypasserError(msg);
         }
       },
     });

@@ -1,7 +1,4 @@
 import {
-  template,
-} from 'util/core';
-import {
   config,
 } from 'util/config';
 import {
@@ -92,7 +89,7 @@ function scaleImage (i) {
 function changeBackground () {
   const bgImage = GM.getResourceURL('bgImage');
   document.body.style.backgroundColor = '#222222';
-  document.body.style.backgroundImage = template('url(\'{0}\')')(bgImage);
+  document.body.style.backgroundImage = `url('${bgImage}')`;
 }
 
 
@@ -119,7 +116,7 @@ function replaceBody (imgSrc) {
     warn('false url');
     return;
   }
-  info(template('replacing body with `{0}` ...')(imgSrc));
+  info(`replacing body with \`${imgSrc}\` ...`);
 
   // NOTE maybe nuke the whole page
   removeAllTimer();

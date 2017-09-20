@@ -1,6 +1,5 @@
 import {
   map,
-  template,
   forEach,
   none,
 } from 'util/core';
@@ -13,13 +12,12 @@ function deepJoin (prefix, object) {
   const keys = Object.getOwnPropertyNames(object);
   const mapped = map(keys, (k) => {
     const v = object[k];
-    const key = template('{0}[{1}]')(prefix, k);
+    const key = `${prefix}[${k}]`;
     if (typeof v === 'object') {
       return deepJoin(key, v);
     }
-    const tpl = template('{0}={1}');
     const tmp = [key, v].map(encodeURIComponent);
-    return tpl.apply(this, tmp);
+    return tmp.join('=');
   });
   return mapped.join('&');
 }
@@ -42,9 +40,8 @@ function toQuery (data) {
     if (typeof v === 'object') {
       return deepJoin(k, v);
     }
-    const tpl = template('{0}={1}');
     const tmp = [k, v].map(encodeURIComponent);
-    return tpl.apply(this, tmp);
+    return tmp.join('=');
   }).join('&');
 }
 

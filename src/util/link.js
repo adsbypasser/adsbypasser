@@ -1,6 +1,5 @@
 import {
   isString,
-  template,
   wait,
   forEach,
 } from 'util/core';
@@ -81,7 +80,7 @@ async function openLink (to, options) {
   const postData = options.post;
 
   const from = window.location.toString();
-  info(template('{0} -> {1}')(from, to));
+  info(`${from} -> ${to}`);
 
   if (postData) {
     await post(to, postData);

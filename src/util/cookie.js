@@ -1,16 +1,12 @@
 import {
   none,
-  template,
   forEach,
   find,
 } from 'util/core';
 
 
 function setCookie (key, value) {
-  const now = new Date();
-  now.setTime(now.getTime() + 3600 * 1000);
-  const tpl = template('{0}={1};path={2};');
-  document.cookie = tpl(key, value, window.location.pathname, now.toUTCString());
+  document.cookie = `${key}=${value};path=${location.pathname};`;
 }
 
 
@@ -41,9 +37,9 @@ function resetCookies () {
   forEach(document.cookie.split(';'), (v) => {
     const k = v.replace(/^\s*(\w+)=.+$/, '$1');
 
-    document.cookie = template('{0}=;expires={1};')(k, d);
-    document.cookie = template('{0}=;path=/;expires={1};')(k, d);
-    const e = template('{0}=;path=/;domain={1};expires={2};');
+    document.cookie = `${k}=;expires=${d};`;
+    document.cookie = `${k}=;path=/;expires=${d};`;
+    const e = (a, b, c) => `${a}=;path=/;domain=${b};expires=${c};`;
     document.cookie = e(k, a, d);
     document.cookie = e(k, b, d);
     document.cookie = e(k, c, d);

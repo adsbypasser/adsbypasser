@@ -3,7 +3,6 @@ import chai from 'chai';
 import {
   AdsBypasserError,
   partial,
-  template,
   every,
   find,
   none,
@@ -45,61 +44,6 @@ describe('core', function () {
         return '__MAGIC__';
       });
       p().should.equals('__MAGIC__');
-    });
-
-  });
-
-  describe('template', function () {
-
-    it('should be a function', function () {
-      let tpl = template('');
-      tpl.should.be.a('function');
-    });
-
-    it('should takes exactly one string', function () {
-      template.should.throw(AdsBypasserError);
-
-      (function (){
-        template(0);
-      }).should.throw(AdsBypasserError);
-
-      (function (){
-        template('');
-      }).should.not.throw(AdsBypasserError);
-
-      (function (){
-        let s = new String();
-        template(s);
-      }).should.not.throw(AdsBypasserError);
-    });
-
-    it('should return original string if no keyword', function () {
-      let s = 'input';
-      template(s)('dummy', 'parameter').should.equals(s);
-    });
-
-    it('should escape double brackets', function () {
-      let s = '{{}}';
-      template(s)().should.equals('{}');
-    });
-
-    it('should works with index', function () {
-      let tpl = template('a {0} c {1} e');
-      tpl('b', 'd').should.equals('a b c d e');
-    });
-
-    it('should works with key', function () {
-      let tpl = template('a {b} c {d} e');
-      tpl({
-        b: 'b',
-        d: 'd',
-      }).should.equals('a b c d e');
-    });
-
-    it('should be reusable', function () {
-      let tpl = template('{0} is {1}');
-      tpl('nothing', 'true').should.equals('nothing is true');
-      tpl('everything', 'premitted').should.equals('everything is premitted');
     });
 
   });

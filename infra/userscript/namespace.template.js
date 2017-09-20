@@ -13,7 +13,6 @@ import {
   forEach,
   none,
   partial,
-  template,
   wait,
 } from 'util/core';
 import {
@@ -57,7 +56,6 @@ const _ = {
   none,
   partial,
   register,
-  template,
   wait,
   warn,
 };

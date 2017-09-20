@@ -1,7 +1,6 @@
 import {
   AdsBypasserError,
   isString,
-  template,
   forEach,
   find,
   none,
@@ -11,7 +10,7 @@ import {
 class DomNotFoundError extends AdsBypasserError {
 
   constructor (selector) {
-    super(template('`{0}` not found')(selector));
+    super(`\`${selector}\` not found`);
   }
 
   get name () {

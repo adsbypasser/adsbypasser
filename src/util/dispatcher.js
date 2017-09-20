@@ -6,7 +6,6 @@ import {
   find,
   isString,
   map,
-  template,
   every,
 } from 'util/core';
 
@@ -66,13 +65,8 @@ function dispatchByString (rule, url_3) {
   // <path> := '/' <any chars>
   let path = /\/.*/;
   // <url-pattern> := <scheme>://<host><path>
-  let tpl = template('^({scheme})://({host})?({path})$');
-  tpl = tpl({
-    scheme: scheme.source,
-    host: host.source,
-    path: path.source,
-  });
-  let up = new RegExp(tpl);
+  let tmp = `^(${scheme.source})://(${host.source})?(${path.source})$`;
+  let up = new RegExp(tmp);
   const matched = rule.match(up);
 
   if (!matched) {
@@ -103,14 +97,13 @@ function dispatchByString (rule, url_3) {
     }
   }
 
-  tpl = template('^{0}$');
-  const tmp = path.replace(/[*.[\]?+#]/g, (c) => {
+  tmp = path.replace(/[*.[\]?+#]/g, (c) => {
     if (c === '*') {
       return '.*';
     }
     return '\\' + c;
   });
-  path = new RegExp(tpl(tmp));
+  path = new RegExp(`^${tmp}$`);
   if (!path.test(url_3.path)) {
     return null;
   }

@@ -76,37 +76,6 @@ function isNodeList (collection) {
 }
 
 
-function template (s) {
-  if (typeof s !== 'string') {
-    if (s instanceof String) {
-      s = s.toString();
-    } else {
-      throw new AdsBypasserError('template must be a string');
-    }
-  }
-  const T = {
-    '{{': '{',
-    '}}': '}',
-  };
-  return (...args) => {
-    const kwargs = args[args.length-1];
-
-    return s.replace(/\{\{|\}\}|\{([^}]+)\}/g, (m, key) => {
-      if (T.hasOwnProperty(m)) {
-        return T[m];
-      }
-      if (args.hasOwnProperty(key)) {
-        return args[key];
-      }
-      if (kwargs.hasOwnProperty(key)) {
-        return kwargs[key];
-      }
-      return m;
-    });
-  };
-}
-
-
 function partial (fn, ...args) {
   if (typeof fn !== 'function') {
     throw new AdsBypasserError('must give a function');
@@ -160,7 +129,6 @@ export {
   none,
   nop,
   partial,
-  template,
   tryEvery,
   wait,
 };
