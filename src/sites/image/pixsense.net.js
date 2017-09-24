@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^www\.pixsense\.net$/,
+    host: [
+      /^www\.pixsense\.net$/,
+      /^www\.imagespicy\.site$/,
+    ],
     path: /^\/site\/v\/\d+$/,
   },
   async ready () {
