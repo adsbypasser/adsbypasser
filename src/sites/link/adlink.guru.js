@@ -23,6 +23,7 @@
         /^linclik\.com$/,
         /^link-earn\.com$/,
         /^zez\.io$/,
+        /^adbull\.me$/,
       ],
     },
     async ready () {
