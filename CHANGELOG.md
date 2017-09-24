@@ -1,4 +1,4 @@
-## TBA
+## v6.2.0
 
 * fixed
     * sipkur.us
