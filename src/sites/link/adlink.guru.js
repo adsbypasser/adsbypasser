@@ -20,6 +20,7 @@
         /^(adfu|linkhits)\.us$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
+        /^linclik\.com$/,
       ],
     },
     async ready () {
