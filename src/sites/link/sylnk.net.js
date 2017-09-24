@@ -148,15 +148,21 @@ _.register({
 });
 
 _.register({
-  rule: {
-    host: [
-      /^(designinghomey|ani-share|sinopsisfilmku|autolinkach)\.com$/,
-      /^motonews\.club$/,
-      /^(autofans|landscapenature)\.pw$/,
-      /^(sidespace|erogedownload)\.net$/,
-    ],
-    query: /get=([^&]+)/,
-  },
+  rule: [
+    {
+      host: [
+        /^(designinghomey|ani-share|sinopsisfilmku|autolinkach)\.com$/,
+        /^motonews\.club$/,
+        /^(autofans|landscapenature)\.pw$/,
+        /^(sidespace|erogedownload)\.net$/,
+      ],
+      query: /get=([^&]+)/,
+    },
+    {
+      host: /^sipkur\.us$/,
+      path: /\.html$/,
+    },
+  ],
   async ready (m) {
     let s = $.searchFromScripts(/(const|var) a='([^']+)'/);
     if (s) {

@@ -19,7 +19,7 @@
 
   _.register({
     rule: {
-      host: /^sipkur\.(net|us)$/,
+      host: /^sipkur\.net$/,
       path: [
         /^\/\w+$/,
         /^\/menujulink\//,
