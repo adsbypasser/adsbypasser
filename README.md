@@ -11,11 +11,6 @@ Forked from [RedirectionHelper] written by [SuYS].
 
 Please install from [home page][1].
 
-Mirrors:
-
-* Greasy Fork [full][2], [lite][3]
-* OpenUserJS.org [full][4], [lite][5]
-
 [![Build Status][6]][7]
 
 
@@ -45,10 +40,6 @@ which you could install on the web browser.
 For more information, please see [Wiki].
 
 [1]: https://adsbypasser.github.io/
-[2]: https://greasyfork.org/scripts/4881-adsbypasser
-[3]: https://greasyfork.org/scripts/4882-adsbypasserlite
-[4]: https://openuserjs.org/scripts/legnaleurc/AdsBypasser
-[5]: https://openuserjs.org/scripts/legnaleurc/AdsBypasserLite
 [6]: https://travis-ci.org/adsbypasser/adsbypasser.png?branch=master,develop
 [7]: https://travis-ci.org/adsbypasser/adsbypasser
 [8]: https://adsbypasser.github.io/configure.html
