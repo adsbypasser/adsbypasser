@@ -8,6 +8,7 @@
         /^(filesbucks|tmearn|cut-urls)\.com$/,
         /^elink\.link$/,
         /^(payurl|urlst)\.me$/,
+        /^u2s\.io$/,
         /^url\.ht$/,
         /^urle\.co$/,
         /^(hashe|trlink|adshort)\.in$/,
