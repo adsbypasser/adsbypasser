@@ -25,6 +25,7 @@
         /^zez\.io$/,
         /^adbull\.me$/,
         /^adshort\.co$/,
+        /^adshorte\.com$/,
       ],
     },
     async ready () {
