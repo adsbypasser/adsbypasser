@@ -24,6 +24,7 @@
         /^link-earn\.com$/,
         /^zez\.io$/,
         /^adbull\.me$/,
+        /^adshort\.co$/,
       ],
     },
     async ready () {
