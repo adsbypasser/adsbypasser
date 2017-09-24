@@ -1,4 +1,5 @@
 import {
+  AdsBypasserError,
   map,
   forEach,
   none,
@@ -6,6 +7,50 @@ import {
 import {
   GM,
 } from 'util/platform';
+
+
+class AjaxError extends AdsBypasserError {
+
+  constructor (method, url, data, headers, status, response) {
+    super(`${method} ${url} got ${status}`);
+
+    this._method = method;
+    this._url = url;
+    this._data = data;
+    this._headers = headers;
+    this._status = status;
+    this._response = response;
+  }
+
+  get name () {
+    return 'AjaxError';
+  }
+
+  get method () {
+    return this._method;
+  }
+
+  get url () {
+    return this._url;
+  }
+
+  get data () {
+    return this._data;
+  }
+
+  get headers () {
+    return this._headers;
+  }
+
+  get status () {
+    return this._status;
+  }
+
+  get response () {
+    return this._response;
+  }
+
+}
 
 
 function deepJoin (prefix, object) {
@@ -88,7 +133,7 @@ function ajax (method, url, data, headers) {
         // HACK use this as fallback for zombie.js
         response = (typeof response.responseText !== 'undefined') ? response : this;
         if (response.status !== 200) {
-          reject(response.responseText);
+          reject(new AjaxError(method, url, data, headers, response.status, response.responseText));
         } else {
           resolve(response.responseText);
         }
@@ -96,7 +141,7 @@ function ajax (method, url, data, headers) {
       onerror (response) {
         // HACK use this as fallback for zombie.js
         response = (typeof response.responseText !== 'undefined') ? response : this;
-        reject(response.responseText);
+        reject(new AjaxError(method, url, data, headers, response.status, response.responseText));
       },
     });
   });
