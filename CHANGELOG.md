@@ -1,3 +1,19 @@
+## TBA
+
+* fixed
+    * sipkur.us
+* added
+    * xxxwebdlxxx.org
+    * u2s.io
+    * imagespicy.site
+    * linclik.com
+    * link-earn.com
+    * autolinkach.com
+    * zez.io
+    * adbull.me
+    * adshort.co
+    * adshorte.com
+
 ## v6.1.4
 
 * fixed
