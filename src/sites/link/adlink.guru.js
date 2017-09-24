@@ -22,6 +22,7 @@
         /^linkfly\.gaosmedia\.com$/,
         /^linclik\.com$/,
         /^link-earn\.com$/,
+        /^zez\.io$/,
       ],
     },
     async ready () {
