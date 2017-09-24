@@ -150,7 +150,7 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^(designinghomey|ani-share|sinopsisfilmku)\.com$/,
+      /^(designinghomey|ani-share|sinopsisfilmku|autolinkach)\.com$/,
       /^motonews\.club$/,
       /^(autofans|landscapenature)\.pw$/,
       /^(sidespace|erogedownload)\.net$/,
@@ -158,9 +158,9 @@ _.register({
     query: /get=([^&]+)/,
   },
   async ready (m) {
-    let s = $.searchFromScripts(/const a='([^']+)'/);
+    let s = $.searchFromScripts(/(const|var) a='([^']+)'/);
     if (s) {
-      await $.openLink(s[1]);
+      await $.openLink(s[2]);
       return;
     }
     s = atob(m.query[1]);
