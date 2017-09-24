@@ -21,6 +21,7 @@
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
         /^linclik\.com$/,
+        /^link-earn\.com$/,
       ],
     },
     async ready () {
