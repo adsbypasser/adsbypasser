@@ -6,6 +6,7 @@ _.register({
       /img-365\.com$/,
       /^365-img\.com$/,
       /^i\.hentai-ddl\.org$/,
+      /^imghost\.top$/,
     ],
     path: /^\/image\/.+$/,
   },
