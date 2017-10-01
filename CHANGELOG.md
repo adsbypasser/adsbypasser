@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * mirrorcreator.com
+    * configuration page
+
 ## v6.2.0
 
 * fixed
