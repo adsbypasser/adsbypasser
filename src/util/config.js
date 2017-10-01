@@ -7,7 +7,7 @@ import {
   register,
 } from 'util/dispatcher';
 import {
-  uswProxy,
+  usw,
   GM,
 } from 'util/platform';
 
@@ -173,7 +173,7 @@ function loadConfig () {
       path: /^\/configure\.html$/,
     },
     async ready () {
-      uswProxy.commit = (data) => {
+      usw.commit = (data) => {
         data.version = config.version;
         forEach(data, (v, k) => {
           config[k] = v;
@@ -181,7 +181,7 @@ function loadConfig () {
       };
 
       // TODO: i18n
-      uswProxy.render({
+      usw.render({
         version: config.version,
         options: {
           alignCenter: {

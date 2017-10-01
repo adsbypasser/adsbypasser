@@ -43,7 +43,7 @@ import {
   removeAllTimer,
 } from 'util/misc';
 import {
-  uswProxy,
+  usw,
 } from 'util/platform';
 
 
@@ -79,7 +79,7 @@ $.removeAllTimer = removeAllTimer;
 $.resetCookies = resetCookies;
 $.searchFromScripts = searchFromScripts;
 $.setCookie = setCookie;
-$.window = uswProxy;
+$.window = usw;
 
 
 export {

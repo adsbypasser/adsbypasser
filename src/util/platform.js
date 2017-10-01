@@ -5,8 +5,8 @@ import {
 } from 'util/core';
 
 
-const usw = getUnsafeWindow();
-const uswProxy = getUnsafeWindowProxy();
+const rawUSW = getUnsafeWindow();
+const usw = getUnsafeWindowProxy();
 const GM = getGreaseMonkeyAPI();
 
 
@@ -25,7 +25,7 @@ function getUnsafeWindow () {
 }
 
 function getGreaseMonkeyAPI () {
-  if (usw.global) {
+  if (rawUSW.global) {
     return null;
   }
   return {
@@ -52,7 +52,7 @@ function getUnsafeWindowProxy () {
   const isWebExtension = typeof cloneInto === 'undefined' || typeof exportFunction === 'undefined';
   if (!isFirefox || isWebExtension) {
     // other browsers does not need this
-    return usw;
+    return rawUSW;
   }
 
   const decorator = {
@@ -161,7 +161,7 @@ function clone (safe) {
 
 
 export {
+  rawUSW,
   usw,
-  uswProxy,
   GM,
 };
