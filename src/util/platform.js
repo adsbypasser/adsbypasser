@@ -28,17 +28,24 @@ function getGreaseMonkeyAPI () {
   if (rawUSW.global) {
     return null;
   }
-  return {
+  const gm = {
     openInTab: GM_openInTab,
     registerMenuCommand: GM_registerMenuCommand,
     getValue: GM_getValue,
     setValue: GM_setValue,
     deleteValue: GM_deleteValue,
     xmlhttpRequest: GM_xmlhttpRequest,
-    getResourceText: GM_getResourceText,
-    addStyle: GM_addStyle,
-    getResourceURL: GM_getResourceURL,
   };
+  if (typeof GM_getResourceText === 'function') {
+    gm.getResourceText = GM_getResourceText;
+  }
+  if (typeof GM_addStyle === 'function') {
+    gm.addStyle = GM_addStyle;
+  }
+  if (typeof GM_getResourceURL === 'function') {
+    gm.getResourceURL = GM_getResourceURL;
+  }
+  return gm;
 }
 
 // magic property to get the original object
