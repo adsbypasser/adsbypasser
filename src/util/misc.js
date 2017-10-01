@@ -2,7 +2,7 @@ import {
   nop,
 } from 'util/core';
 import {
-  uswProxy,
+  usw,
 } from 'util/platform';
 import {
   warn,
@@ -23,7 +23,7 @@ function removeAllTimer () {
 
 function nuke (url) {
   try {
-    uswProxy.document.write('nuked by AdsBypasser, leading to ...<br/>');
+    usw.document.write('nuked by AdsBypasser, leading to ...<br/>');
   } catch (e) {
     warn('nuke failed', e);
   }

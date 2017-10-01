@@ -5,9 +5,9 @@ import {
   findHandler,
 } from 'util/dispatcher';
 import {
-  usw,
+  rawUSW,
   GM,
-  uswProxy,
+  usw,
 } from 'util/platform';
 import {
   loadConfig,
@@ -24,13 +24,13 @@ const isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Con
 
 
 function disableWindowOpen () {
-  uswProxy.open = function () {
+  usw.open = function () {
     return {
       closed: false,
     };
   };
-  uswProxy.alert = nop;
-  uswProxy.confirm = nop;
+  usw.alert = nop;
+  usw.confirm = nop;
 }
 
 
@@ -53,7 +53,7 @@ function disableLeavePrompt (element) {
     // Safiri must use old-style method
     element.__defineSetter__('onbeforeunload', seal.set);
   } else {
-    uswProxy.Object.defineProperty(element, 'onbeforeunload', {
+    usw.Object.defineProperty(element, 'onbeforeunload', {
       configurable: true,
       enumerable: false,
       get: undefined,
@@ -82,7 +82,7 @@ function changeTitle () {
 
 async function beforeDOMReady (handler) {
   info('working on\n%s \nwith\n%s', window.location.toString(), JSON.stringify(config));
-  disableLeavePrompt(uswProxy);
+  disableLeavePrompt(usw);
   disableWindowOpen();
   await handler.start();
 }
@@ -90,7 +90,7 @@ async function beforeDOMReady (handler) {
 
 async function afterDOMReady (handler) {
   // some sites bind the event on body
-  disableLeavePrompt(uswProxy.document.body);
+  disableLeavePrompt(usw.document.body);
   changeTitle();
   await handler.ready();
 }
@@ -115,7 +115,7 @@ function waitDOM () {
 async function main () {
   // use unsafeWindow here because usi (a manager for Android Firefox) does
   // not implement the sandbox correctly
-  if (usw.top !== usw.self) {
+  if (rawUSW.top !== rawUSW.self) {
     // skip frames
     return;
   }
