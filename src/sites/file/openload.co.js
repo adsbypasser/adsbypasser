@@ -39,6 +39,7 @@ _.register({
         // please generalize in the future
         const iframe = document.createElement('iframe');
         iframe.src = dlBtn.href;
+        iframe.style.display = 'none';
         document.body.appendChild(iframe);
       });
 
