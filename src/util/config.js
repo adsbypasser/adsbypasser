@@ -173,6 +173,9 @@ function loadConfig () {
       path: /^\/configure\.html$/,
     },
     async ready () {
+      // HACK: wait until the page finished
+      await waitForPage();
+
       usw.commit = (data) => {
         data.version = config.version;
         forEach(data, (v, k) => {
@@ -231,6 +234,18 @@ function loadConfig () {
       });
 
     },
+  });
+}
+
+
+function waitForPage () {
+  return new Promise((resolve) => {
+    const i = setInterval(() => {
+      if (usw.render) {
+        clearInterval(i);
+        resolve();
+      }
+    }, 50);
   });
 }
 
