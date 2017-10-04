@@ -53,7 +53,7 @@
           /^(pixxx|picspornfree|imgload|fapat)\.me$/,
           /^(domaink|pic2pic|porno-pirat|24aconstii|loftlm|18pron|imgplus)\.ru$/,
           /^imgease\.re$/,
-          /^goimg\.xyz$/,
+          /^(goimg|xxx\.pornscreen)\.xyz$/,
           /^(pic2pic|picz)\.site$/,
           /^darpix\.ga$/,
           /^sxpics\.nl$/,
