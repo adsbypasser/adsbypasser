@@ -66,7 +66,7 @@ _.register({
   rule: {
     host: [
       /^fas\.li$/,
-      /^(www\.)?shink\.in$/,
+      /^(www\.)?shink\.(in|me)$/,
     ],
     path: /^\/go\/\w+$/,
   },
