@@ -3,6 +3,7 @@ _.register({
     host: [
       /^openload\.co$/,
       /^oload\.tv$/,
+      /^oload\.info$/,
     ],
     path: /^\/f\/.*/,
   },
