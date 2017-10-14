@@ -1,6 +1,6 @@
 (function () {
 
-  const PATH_RULE = /^\/([0-9a-zA-Z]+)(\.|\/|$)/;
+  const PATH_RULE = /^\/([0-9a-zA-Z\-]+)(\.|\/|$)/;
 
   _.register({
     rule: {
@@ -56,15 +56,18 @@
       path: PATH_RULE,
     },
     async ready () {
-      const i = $.$('img.pic');
+      const i = $.$('img.picview');
       if (i) {
         // second stage
         await $.openImage(i.src);
         return;
       }
 
-      const node = await getAmbiguousForm('td:nth-child(2) > center > div[id]');
-      node.submit();
+      const node = await getAmbiguousForm('div center + div[id]');
+      // it will replace the token on 'click hover', so just emulate this action
+      node.click();
+      node.click();
+      node.click();
     },
   });
 
@@ -170,10 +173,14 @@
     });
   }
 
-  function getAmbiguousForm (selector) {
+  async function getAmbiguousForm (selector) {
     const d = $(selector);
     let visibleClasses = null;
-    return waitDOM(d, (node) => {
+    let button = null;
+    await waitDOM(d, (node) => {
+      if (button) {
+        return true;
+      }
       if (node.nodeName === 'STYLE') {
         visibleClasses = parseStyle(node);
         return false;
@@ -186,15 +193,16 @@
           if (!isVisible) {
             return false;
           }
-          const button = $.$('input[type="submit"]', node);
+          button = $.$('input[type="button"]', node);
           if (!button) {
             return false;
           }
-          return button.style.display !== 'none';
+          return true;
         });
       }
       return false;
     });
+    return button;
   }
 
   function parseStyle (style) {
