@@ -62,6 +62,7 @@
           /^imgsen\.se$/,
           /^ipicture\.su$/,
           /^acidimg\.cc$/,
+          /^s\.imghost\.top$/,
         ],
         path: /^\/img-.*\.html/,
       },
