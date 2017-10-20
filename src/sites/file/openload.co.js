@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^openload\.co$/,
-      /^oload\.tv$/,
+      /^oload\.(info|tv)$/,
     ],
     path: /^\/f\/.*/,
   },
