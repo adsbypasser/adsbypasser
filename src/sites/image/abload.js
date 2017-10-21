@@ -3,7 +3,7 @@ _.register({
     host: /^(www\.)?image(pearl|crest)\.com$/,
     path: /^\/verify\/(.+)$/,
   },
-  async ready (m) {
+  async ready () {
     const w = screen.width;
     const h = screen.height;
     const i = $('#i').value;
