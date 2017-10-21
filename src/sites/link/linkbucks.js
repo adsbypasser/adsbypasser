@@ -144,7 +144,7 @@
   async function retry () {
     const text = await $.get(window.location.toString(), {}, {
       // trick the server to avoid possible survey page
-      'X-Forwarded-For': $.generateRandomIP(),
+      'X-Forwarded-For': _.generateRandomIP(),
     });
     const d = $.toDOM(text);
     const t = findToken(d);

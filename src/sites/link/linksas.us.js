@@ -18,7 +18,7 @@ _.register({
     });
 
     // get random ip info
-    const url = `http://ipinfo.io/${$.generateRandomIP()}/json`;
+    const url = `http://ipinfo.io/${_.generateRandomIP()}/json`;
     let ipinfo = await $.get(url);
     ipinfo = JSON.parse(ipinfo);
     const payload = {
