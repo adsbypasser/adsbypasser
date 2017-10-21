@@ -3,8 +3,18 @@ _.register({
     host: /^(www\.)?image(pearl|crest)\.com$/,
     path: /^\/verify\/(.+)$/,
   },
-  async start (m) {
-    await $.openLink('/view/' + m.path[1]);
+  async ready (m) {
+    const w = screen.width;
+    const h = screen.height;
+    const i = $('#i').value;
+    const r = $('#r').value;
+    await $.get('verify.php', {
+      w,
+      h,
+      i,
+      r,
+    });
+    location.reload();
   },
 });
 
