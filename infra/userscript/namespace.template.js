@@ -24,6 +24,7 @@ import {
   querySelectorOrNull,
   remove,
   searchFromScripts,
+  toDOM,
 } from 'util/dom';
 <% if (supportImage) { %>
 import {
@@ -79,6 +80,7 @@ $.removeAllTimer = removeAllTimer;
 $.resetCookies = resetCookies;
 $.searchFromScripts = searchFromScripts;
 $.setCookie = setCookie;
+$.toDOM = toDOM;
 $.window = usw;
 
 
