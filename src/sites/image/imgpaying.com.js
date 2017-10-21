@@ -1,6 +1,6 @@
 (function () {
 
-  const PATH_RULE = /^\/([0-9a-zA-Z\-]+)(\.|\/|$)/;
+  const PATH_RULE = /^\/([0-9a-zA-Z-]+)(\.|\/|$)/;
 
   _.register({
     rule: {
