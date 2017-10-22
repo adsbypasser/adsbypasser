@@ -1,7 +1,7 @@
 _.register({
   rule: {
     host: /^(www\.)?clictune\.com$/,
-    path: /^\/[^\/]+$/,
+    path: /^\/[^/]+$/,
   },
   async ready () {
     $.remove('iframe');
