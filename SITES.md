@@ -144,6 +144,7 @@
     * imgfapper.com
     * imghere.net
     * imghit.com
+    * imghost.top (variation)
     * imgicy.com
     * imgkicks.com
     * imgking.co
@@ -155,6 +156,7 @@
     * imgmaster.net
     * imgnext.com
     * imgnimz.com
+    * imgpart.com
     * imgpix.net
     * imgplus.ru
     * imgprime.com
@@ -223,6 +225,7 @@
     * voyeurimage.org
     * wpc8.com
     * xximg.net
+    * xxx.pornscreen.xyz
     * xxximagenow.com
     * xxxscreens.com
     * xxxsparrow.com
@@ -497,6 +500,7 @@
     * uimgshare.com
     * uploadrr.com
 * imgsure.com
+    * croea.com
     * imgsure.com
     * picexposed.com
 * firedrive.com
@@ -601,6 +605,7 @@
     * dailyss.net
     * i.hentai-ddl.org
     * img-365.com
+    * imghost.top
 * adb.ug
     * adb.ug
     * adyou.me
@@ -629,8 +634,9 @@
     * croco.site
     * fas.li
     * shink.in
+    * shink.me
 * adlink.guru
-    * 123link.top
+    * 123link.io
     * adbull.me
     * adfly.tc
     * adfu.us
@@ -678,6 +684,7 @@
     * 10co.co
     * 10co.me
 * openload.co
+    * oload.info
     * oload.tv
     * openload.co
 * al.ly
