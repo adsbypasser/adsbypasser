@@ -1,3 +1,20 @@
+## TBA
+
+* fixed
+    * imgrock.info
+    * imagecrest.com
+    * clictune.com
+* added
+    * imghost.top
+    * croea.com
+    * xxx.pornscreen.xyz
+    * imgpart.com
+    * shink.me
+    * oload.info
+    * 123link.io
+* removed
+    * 123link.top
+
 ## v6.2.1
 
 * fixed
