@@ -40,21 +40,21 @@ function getGreaseMonkeyAPI () {
   // GreaseMonkey v4.0 changed these functions to async.
   if (typeof GM_getValue === 'function') {
     gm.getValue = async (name, default_) => {
-      return GM_getValue(name, default_);
+      return Promise.resolve(GM_getValue(name, default_));
     };
   } else {
     gm.getValue = GM.getValue;
   }
   if (typeof GM_setValue === 'function') {
     gm.setValue = async (name, value) => {
-      return GM_setValue(name, value);
+      return Promise.resolve(GM_setValue(name, value));
     };
   } else {
     gm.setValue = GM.setValue;
   }
   if (typeof GM_deleteValue === 'function') {
     gm.deleteValue = async (name) => {
-      return GM_deleteValue(name);
+      return Promise.resolve(GM_deleteValue(name));
     };
   } else {
     gm.deleteValue = GM.deleteValue;
