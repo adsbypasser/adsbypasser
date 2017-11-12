@@ -24,7 +24,7 @@
         /^link-earn\.com$/,
         /^zez\.io$/,
         /^adbull\.me$/,
-        /^adshort\.co$/,
+        /^adshort\.im$/,
         /^adshorte\.com$/,
       ],
     },
