@@ -39,21 +39,21 @@ function getGreaseMonkeyAPI () {
   }
   // GreaseMonkey v4.0 changed these functions to async.
   if (typeof GM_getValue === 'function') {
-    gm.getValue = async (name, default_) => {
+    gm.getValue = (name, default_) => {
       return Promise.resolve(GM_getValue(name, default_));
     };
   } else {
     gm.getValue = GM.getValue;
   }
   if (typeof GM_setValue === 'function') {
-    gm.setValue = async (name, value) => {
+    gm.setValue = (name, value) => {
       return Promise.resolve(GM_setValue(name, value));
     };
   } else {
     gm.setValue = GM.setValue;
   }
   if (typeof GM_deleteValue === 'function') {
-    gm.deleteValue = async (name) => {
+    gm.deleteValue = (name) => {
       return Promise.resolve(GM_deleteValue(name));
     };
   } else {
@@ -71,15 +71,13 @@ function getGreaseMonkeyAPI () {
   } else {
     gm.registerMenuCommand = nop;
   }
-  // Lite edition does not have these functions.
-  if (typeof GM_getResourceText === 'function') {
-    gm.getResourceText = GM_getResourceText;
-  }
-  if (typeof GM_addStyle === 'function') {
-    gm.addStyle = GM_addStyle;
-  }
+  // Lite edition does not use this function.
   if (typeof GM_getResourceURL === 'function') {
-    gm.getResourceURL = GM_getResourceURL;
+    gm.getResourceUrl = (resourceName) => {
+      return Promise.resolve(GM_getResourceURL(resourceName));
+    };
+  } else if (GM.getResourceUrl) {
+    gm.getResourceUrl = GM.getResourceUrl;
   }
   return gm;
 }

@@ -66,9 +66,9 @@ function checkScaling () {
 }
 
 
-function scaleImage (i) {
-  const style = GMAPI.getResourceText('scaleImage');
-  GMAPI.addStyle(style);
+async function scaleImage (i) {
+  const siURL = await GMAPI.getResourceUrl('scaleImage');
+  appendStyleURL(siURL);
 
   if (i.naturalWidth && i.naturalHeight) {
     checkScaling.call(i);
@@ -84,16 +84,16 @@ function scaleImage (i) {
 }
 
 
-function changeBackground () {
-  const bgImage = GMAPI.getResourceURL('bgImage');
+async function changeBackground () {
+  const bgImage = await GMAPI.getResourceUrl('bgImage');
   document.body.style.backgroundColor = '#222222';
   document.body.style.backgroundImage = `url('${bgImage}')`;
 }
 
 
-function alignCenter () {
-  const style = GMAPI.getResourceText('alignCenter');
-  GMAPI.addStyle(style);
+async function alignCenter () {
+  const acURL = await GMAPI.getResourceUrl('alignCenter');
+  appendStyleURL(acURL);
 }
 
 
@@ -102,6 +102,15 @@ function injectStyle (d, i) {
 
   d.id = 'adsbypasser-wrapper';
   i.id = 'adsbypasser-image';
+}
+
+
+function appendStyleURL (url) {
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = url;
+  document.head.appendChild(link);
 }
 
 
@@ -136,14 +145,14 @@ async function replaceBody (imgSrc) {
     injectStyle(d, i);
   }
   if (ac) {
-    alignCenter();
+    await alignCenter();
   }
   const cb = await GMAPI.getValue('change_background');
   if (cb) {
-    changeBackground();
+    await changeBackground();
   }
   if (si) {
-    scaleImage(i);
+    await scaleImage(i);
   }
 }
 
