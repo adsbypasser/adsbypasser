@@ -4,6 +4,7 @@
     rule: {
       host: [
         /^adlink\.guru$/,
+        /^curs\.io$/,
         /^cypt\.ga$/,
         /^(filesbucks|tmearn|cut-urls)\.com$/,
         /^elink\.link$/,
