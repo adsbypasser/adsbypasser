@@ -541,6 +541,7 @@
     * awsubsco.ga
     * azhie.net
     * blogspot.com
+    * compartiendofull.net
     * compul.in
     * decrypt.safelinkconverter.com
     * designinghomey.com
@@ -636,20 +637,26 @@
     * shink.in
     * shink.me
 * adlink.guru
+    * 123link.co
     * 123link.io
+    * 123link.press
     * adbull.me
     * adfly.tc
     * adfu.us
     * adlink.guru
-    * adshort.co
+    * adshort.im
     * adshort.in
     * adshorte.com
     * bol.tl
+    * clik.pw
+    * coshurl.co
+    * curs.io
     * cut-urls.com
     * cypt.ga
     * elink.link
     * filesbucks.com
     * hashe.in
+    * l2s.io
     * linclik.com
     * link-earn.com
     * linkfly.gaosmedia.com
@@ -664,6 +671,7 @@
     * url.ht
     * urle.co
     * urlst.me
+    * weefy.me
     * worldhack.net
     * zez.io
 * linkdrop.net
@@ -685,6 +693,7 @@
     * 10co.me
 * openload.co
     * oload.info
+    * oload.stream
     * oload.tv
     * openload.co
 * al.ly
@@ -696,6 +705,9 @@
 * pixsense.net
     * imagespicy.site
     * pixsense.net
+* pics-money.ru
+    * p0xpicmoney.ru
+    * pics-money.ru
 * else
     * 01.nl
     * 1be.biz
@@ -859,7 +871,6 @@
     * piccash.net
     * picmoe.net
     * picnictrans.com
-    * pics-money.ru
     * picshare.geenza.com
     * picstream.tv
     * pimpandhost.com
