@@ -2,12 +2,13 @@
 
 import {
   forEach,
+  nop,
 } from 'util/core';
 
 
 const rawUSW = getUnsafeWindow();
 const usw = getUnsafeWindowProxy();
-const GM = getGreaseMonkeyAPI();
+const GMAPI = getGreaseMonkeyAPI();
 
 
 function getUnsafeWindow () {
@@ -25,17 +26,52 @@ function getUnsafeWindow () {
 }
 
 function getGreaseMonkeyAPI () {
+  // This is not ready for Node.js yet.
   if (rawUSW.global) {
     return null;
   }
-  const gm = {
-    openInTab: GM_openInTab,
-    registerMenuCommand: GM_registerMenuCommand,
-    getValue: GM_getValue,
-    setValue: GM_setValue,
-    deleteValue: GM_deleteValue,
-    xmlhttpRequest: GM_xmlhttpRequest,
-  };
+  const gm = {};
+  // GreaseMonkey 4.0 uses different API.
+  if (typeof GM_openInTab === 'function') {
+    gm.openInTab = GM_openInTab;
+  } else {
+    gm.openInTab = GM.openInTab;
+  }
+  // GreaseMonkey v4.0 changed these functions to async.
+  if (typeof GM_getValue === 'function') {
+    gm.getValue = async (name, default_) => {
+      return GM_getValue(name, default_);
+    };
+  } else {
+    gm.getValue = GM.getValue;
+  }
+  if (typeof GM_setValue === 'function') {
+    gm.setValue = async (name, value) => {
+      return GM_setValue(name, value);
+    };
+  } else {
+    gm.setValue = GM.setValue;
+  }
+  if (typeof GM_deleteValue === 'function') {
+    gm.deleteValue = async (name) => {
+      return GM_deleteValue(name);
+    };
+  } else {
+    gm.deleteValue = GM.deleteValue;
+  }
+  // NOTE The capital.
+  if (typeof GM_xmlhttpRequest === 'function') {
+    gm.xmlHttpRequest = GM_xmlhttpRequest;
+  } else {
+    gm.xmlHttpRequest = GM.xmlHttpRequest;
+  }
+  // GreaseMonkey v4.0 removed this function.
+  if (typeof GM_registerMenuCommand === 'function') {
+    gm.registerMenuCommand = GM_registerMenuCommand;
+  } else {
+    gm.registerMenuCommand = nop;
+  }
+  // Lite edition does not have these functions.
   if (typeof GM_getResourceText === 'function') {
     gm.getResourceText = GM_getResourceText;
   }
@@ -170,5 +206,5 @@ function clone (safe) {
 export {
   rawUSW,
   usw,
-  GM,
+  GMAPI,
 };
