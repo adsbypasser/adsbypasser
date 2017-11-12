@@ -77,6 +77,7 @@ window.commit = function commit () {};
       });
 
       // commit changes
+      // TODO this returns a promise.
       commit(data);
 
       view.msg.addClass('dismissed');

@@ -8,13 +8,12 @@ import {
 } from 'util/dispatcher';
 import {
   usw,
-  GM,
+  GMAPI,
 } from 'util/platform';
 
 
 const MANIFEST = [
   {
-    name: 'version',
     key: 'version',
     default_: 0,
     verify (v) {
@@ -23,35 +22,30 @@ const MANIFEST = [
     normalize: toNumber,
   },
   {
-    name: 'alignCenter',
     key: 'align_center',
     default_: true,
     verify: isBoolean,
     normalize: toBoolean,
   },
   {
-    name: 'changeBackground',
     key: 'change_background',
     default_: true,
     verify: isBoolean,
     normalize: toBoolean,
   },
   {
-    name: 'redirectImage',
     key: 'redirect_image',
     default_: true,
     verify: isBoolean,
     normalize: toBoolean,
   },
   {
-    name: 'scaleImage',
     key: 'scale_image',
     default_: true,
     verify: isBoolean,
     normalize: toBoolean,
   },
   {
-    name: 'logLevel',
     key: 'log_level',
     default_: 1,
     verify (v) {
@@ -63,33 +57,40 @@ const MANIFEST = [
 
 
 const PATCHES = [
-  (c) => {
-    const ac = typeof c.alignCenter === 'boolean';
-    if (typeof c.changeBackground !== 'boolean') {
-      c.changeBackground = ac ? c.alignCenter : true;
+  async () => {
+    const alignCenter = await GMAPI.getValue('align_center');
+    const changeBackground = await GMAPI.getValue('change_background');
+    const scaleImage = await GMAPI.getValue('scale_image');
+    const redirectImage = await GMAPI.getValue('redirect_image');
+
+    const ac = typeof alignCenter === 'boolean';
+    if (typeof changeBackground !== 'boolean') {
+      await GMAPI.setValue('change_background', ac ? alignCenter : true);
     }
-    if (typeof c.scaleImage !== 'boolean') {
-      c.scaleImage = ac ? c.alignCenter : true;
+    if (typeof scaleImage !== 'boolean') {
+      await GMAPI.setValue('scale_image', ac ? alignCenter : true);
     }
     if (!ac) {
-      c.alignCenter = true;
+      await GMAPI.setValue('align_center', true);
     }
-    if (typeof c.redirectImage !== 'boolean') {
-      c.redirectImage = true;
-    }
-  },
-  (c) => {
-    if (typeof c.externalServerSupport !== 'boolean') {
-      c.externalServerSupport = false;
+    if (typeof redirectImage !== 'boolean') {
+      await GMAPI.setValue('redirect_image', true);
     }
   },
-  (c) => {
-    if (typeof c.logLevel !== 'number') {
-      c.logLevel = 1;
+  async () => {
+    const externalServerSupport = await GMAPI.getValue('external_server_support');
+    if (typeof externalServerSupport !== 'boolean') {
+      await GMAPI.setValue('external_server_support', false);
     }
   },
-  () => {
-    GM.deleteValue('external_server_support');
+  async () => {
+    const logLevel = await GMAPI.getValue('log_level');
+    if (typeof logLevel !== 'number') {
+      await GMAPI.setValue('log_level', 1);
+    }
+  },
+  async () => {
+    await GMAPI.deleteValue('external_server_support');
   },
 ];
 
@@ -109,63 +110,36 @@ function toNumber (v) {
 }
 
 
-function createConfig () {
-  const c = {};
-  forEach(MANIFEST, (m) => {
-    Object.defineProperty(c, m.name, {
-      configurable: true,
-      enumerable: true,
-      get: () => {
-        return GM.getValue(m.key, m.default_);
-      },
-      set: (v) => {
-        GM.setValue(m.key, v);
-
-        const nv = GM.getValue(m.key, m.default_);
-        if (nv !== v) {
-          const msg = `failed to write config, key: ${m.key}, value: ${nv}, new: ${v}`;
-          throw new AdsBypasserError(msg);
-        }
-      },
-    });
+async function senityCheck () {
+  let verifyResults = MANIFEST.map(async (descriptor) => {
+    const rv = await GMAPI.getValue(descriptor.key);
+    return descriptor.verify(rv);
   });
-  return c;
-}
-
-
-function senityCheck (c) {
-  const ok = every(MANIFEST, (m) => {
-    return m.verify(c[m.name]);
-  });
+  verifyResults = await Promise.all(verifyResults);
+  const ok = every(verifyResults, v => v);
   if (!ok) {
-    c.version = 0;
+    await GMAPI.setValue('version', 0);
   }
-  return c;
-}
-
-function migrate (c) {
-  if (typeof c.version !== 'number' || c.version < 0) {
-    throw new AdsBypasserError('wrong config version: ' + c.version);
-  }
-  for (let i = 0; c.version < PATCHES.length; ++i) {
-    PATCHES[c.version](c);
-    ++c.version;
-
-    if (i >= PATCHES.length) {
-      throw new AdsBypasserError('invalid config state', i, c);
-    }
-  }
-  return c;
 }
 
 
-let config = null;
+async function migrate () {
+  let currentVersion = await GMAPI.getValue('version');
+  if (currentVersion !== 0 && !currentVersion) {
+    // null, undefined or NaN
+    throw new AdsBypasserError('invalid version');
+  }
+  while (currentVersion < PATCHES.length) {
+    PATCHES[currentVersion]();
+    ++currentVersion;
+  }
+  await GMAPI.setValue('version', currentVersion);
+}
 
 
-function loadConfig () {
-  config = createConfig();
-  config = senityCheck(config);
-  config = migrate(config);
+async function loadConfig () {
+  await senityCheck();
+  await migrate();
 
   register({
     rule: {
@@ -176,47 +150,46 @@ function loadConfig () {
       // HACK: wait until the page finished
       await waitForPage();
 
-      usw.commit = (data) => {
-        data.version = config.version;
-        forEach(data, (v, k) => {
-          config[k] = v;
-        });
+      usw.commit = async (data) => {
+        for (const [k, v] of Object.entries(data)) {
+          await GMAPI.setValue(k, v);
+        }
       };
 
       // TODO: i18n
       usw.render({
         version: config.version,
         options: {
-          alignCenter: {
+          align_center: {
             type: 'checkbox',
-            value: config.alignCenter,
+            value: await GMAPI.getValue('align_center'),
             label: 'Align Center',
             help: 'Align image to the center if possible. (default: enabled)',
           },
-          changeBackground: {
+          change_background: {
             type: 'checkbox',
-            value: config.changeBackground,
+            value: await GMAPI.getValue('change_background'),
             label: 'Change Background',
             help: 'Use Firefox-like image background if possible. (default: enabled)',
           },
-          redirectImage: {
+          redirect_image: {
             type: 'checkbox',
-            value: config.redirectImage,
+            value: await GMAPI.getValue('redirect_image'),
             label: 'Redirect Image',
             help: [
               'Directly open image link if possible. (default: enabled)',
               'If disabled, redirection will only works on link shortener sites.',
             ].join('<br/>\n'),
           },
-          scaleImage: {
+          scale_image: {
             type: 'checkbox',
-            value: config.scaleImage,
+            value: await GMAPI.getValue('scale_image'),
             label: 'Scale Image',
             help: 'When image loaded, scale it to fit window if possible. (default: enabled)',
           },
-          logLevel: {
+          log_level: {
             type: 'select',
-            value: config.logLevel,
+            value: await GMAPI.getValue('log_level'),
             menu: [
               [0, '0 (quiet)'],
               [1, '1 (default)'],
@@ -252,5 +225,4 @@ function waitForPage () {
 
 export {
   loadConfig,
-  config,
 };
