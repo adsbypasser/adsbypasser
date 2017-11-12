@@ -78,6 +78,11 @@ _.register({
       // note the trailing `=`
       query: /^\?url=([a-zA-Z0-9/=]+)=$/,
     },
+    {
+      host: /^www\.compartiendofull\.net$/,
+      path: /^\/go2/,
+      query: /^\?p=([a-zA-Z0-9/=]+)$/,
+    },
   ],
   async start (m) {
     const rawLink = atob(m.query[1]);

@@ -34,7 +34,12 @@
     async ready () {
       $.remove('iframe');
 
-      let f = getForm();
+      let f = $.$('#captchaShortlink');
+      if (f) {
+        // recaptcha
+        return;
+      }
+      f = getForm();
       if (!f) {
         f = $('#link-view');
         f.submit();
