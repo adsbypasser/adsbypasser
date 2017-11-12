@@ -223,6 +223,20 @@ function waitForPage () {
 }
 
 
+async function dumpConfig () {
+  let rv = MANIFEST.map(async (descriptor) => {
+    return [descriptor.key, await GMAPI.getValue(descriptor.key)];
+  });
+  rv = await Promise.all(rv);
+  const o = {};
+  for (const [k, v] of rv) {
+    o[k] = v;
+  }
+  return o;
+}
+
+
 export {
+  dumpConfig,
   loadConfig,
 };

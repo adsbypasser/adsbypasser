@@ -1,7 +1,4 @@
 import {
-  config,
-} from 'util/config';
-import {
   openLink,
 } from 'util/link';
 import {
@@ -15,7 +12,7 @@ import {
   removeAllTimer,
 } from 'util/misc';
 import {
-  GM,
+  GMAPI,
 } from 'util/platform';
 
 
@@ -26,11 +23,12 @@ async function openImage (imgSrc, options) {
   const referer = !!options.referer;
 
   if (replace) {
-    replaceBody(imgSrc);
+    await replaceBody(imgSrc);
     return;
   }
 
-  if (config.redirectImage) {
+  const redirectImage = await GMAPI.getValue('redirect_image');
+  if (redirectImage) {
     await openLink(imgSrc, {
       referer: referer,
     });
@@ -69,8 +67,8 @@ function checkScaling () {
 
 
 function scaleImage (i) {
-  const style = GM.getResourceText('scaleImage');
-  GM.addStyle(style);
+  const style = GMAPI.getResourceText('scaleImage');
+  GMAPI.addStyle(style);
 
   if (i.naturalWidth && i.naturalHeight) {
     checkScaling.call(i);
@@ -87,15 +85,15 @@ function scaleImage (i) {
 
 
 function changeBackground () {
-  const bgImage = GM.getResourceURL('bgImage');
+  const bgImage = GMAPI.getResourceURL('bgImage');
   document.body.style.backgroundColor = '#222222';
   document.body.style.backgroundImage = `url('${bgImage}')`;
 }
 
 
 function alignCenter () {
-  const style = GM.getResourceText('alignCenter');
-  GM.addStyle(style);
+  const style = GMAPI.getResourceText('alignCenter');
+  GMAPI.addStyle(style);
 }
 
 
@@ -107,8 +105,9 @@ function injectStyle (d, i) {
 }
 
 
-function replaceBody (imgSrc) {
-  if (!config.redirectImage) {
+async function replaceBody (imgSrc) {
+  const redirectImage = await GMAPI.getValue('redirect_image');
+  if (!redirectImage) {
     return;
   }
 
@@ -131,16 +130,19 @@ function replaceBody (imgSrc) {
   i.src = imgSrc;
   d.appendChild(i);
 
-  if (config.alignCenter || config.scaleImage) {
+  const ac = await GMAPI.getValue('align_center');
+  const si = await GMAPI.getValue('scale_image');
+  if (ac || si) {
     injectStyle(d, i);
   }
-  if (config.alignCenter) {
+  if (ac) {
     alignCenter();
   }
-  if (config.changeBackground) {
+  const cb = await GMAPI.getValue('change_background');
+  if (cb) {
     changeBackground();
   }
-  if (config.scaleImage) {
+  if (si) {
     scaleImage(i);
   }
 }

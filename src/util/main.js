@@ -6,12 +6,12 @@ import {
 } from 'util/dispatcher';
 import {
   rawUSW,
-  GM,
+  GMAPI,
   usw,
 } from 'util/platform';
 import {
+  dumpConfig,
   loadConfig,
-  config,
 } from 'util/config';
 import {
   warn,
@@ -81,6 +81,7 @@ function changeTitle () {
 
 
 async function beforeDOMReady (handler) {
+  const config = await dumpConfig();
   info('working on\n%s \nwith\n%s', window.location.toString(), JSON.stringify(config));
   disableLeavePrompt(usw);
   disableWindowOpen();
@@ -120,11 +121,11 @@ async function main () {
     return;
   }
 
-  GM.registerMenuCommand('AdsBypasser - Configure', () => {
-    GM.openInTab('https://adsbypasser.github.io/configure.html');
+  GMAPI.registerMenuCommand('AdsBypasser - Configure', () => {
+    GMAPI.openInTab('https://adsbypasser.github.io/configure.html');
   });
 
-  loadConfig();
+  await loadConfig();
 
   // find by URL
   const handler = findHandler();
