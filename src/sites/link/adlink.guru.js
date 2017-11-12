@@ -29,6 +29,7 @@
         /^adbull\.me$/,
         /^adshort\.im$/,
         /^adshorte\.com$/,
+        /^weefy\.me$/,
       ],
     },
     async ready () {
