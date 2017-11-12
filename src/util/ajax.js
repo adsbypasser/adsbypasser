@@ -124,7 +124,7 @@ function ajax (method, url, data, headers) {
   }
 
   return new Promise((resolve, reject) => {
-    GMAPI.xmlhttpRequest({
+    GMAPI.xmlHttpRequest({
       method: method,
       url: url,
       data: data,
