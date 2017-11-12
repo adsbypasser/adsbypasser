@@ -19,11 +19,14 @@ _.register({
 
 _.register({
   rule: {
-    host: /^www\.pics-money\.ru$/,
+    host: [
+      /^www\.pics-money\.ru$/,
+      /^p0xpicmoney\.ru$/,
+    ],
   },
   async ready () {
     $.remove('iframe');
-    let i = $('#d1 img');
+    let i = $('#d1 img, #pay_thumb_img > img');
     i = i.onclick.toString();
     i = i.match(/mshow\('(.+)'\)/);
     i = i[1];
