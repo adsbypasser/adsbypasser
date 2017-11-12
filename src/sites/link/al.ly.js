@@ -6,27 +6,21 @@ _.register({
     ],
   },
   async ready () {
-    // first stage
-    let i = $.$('body > section > iframe');
+    let i = $.$('#html_element');
     if (i) {
-      // the site will detect iframe being removed or not
-      i.src = 'about:blank';
-
-      // wait a reasonable time to avoid AdsBlock detection
-      await _.wait(3000);
-      const a = $('a.redirect');
-      a.click();
-
+      // first stage, show recaptcha immediately
+      $.remove('#messa');
+      i.classList.remove('hidden');
       return;
     }
 
     // second stage
-    i = $.searchFromScripts(/"href","([^"]+)"\)\.remove/);
+    i = $.searchFromScripts(/"href","([^"]+)" \+ hash\)\.remove/);
     if (!i) {
       _.warn('site changed');
       return;
     }
-    i = i[1];
+    i = i[1] + location.hash;
 
     $.openLink(i);
   },
