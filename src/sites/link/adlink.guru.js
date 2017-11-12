@@ -19,6 +19,7 @@
         /^(tl|adfly)\.tc$/,
         /^(adfu|linkhits)\.us$/,
         /^short\.pastewma\.com$/,
+        /^l2s\.io$/,
         /^linkfly\.gaosmedia\.com$/,
         /^linclik\.com$/,
         /^link-earn\.com$/,
