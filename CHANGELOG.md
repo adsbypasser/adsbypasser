@@ -1,3 +1,24 @@
+## TBA
+
+* fixed
+    * ally.sh
+    * idsly.com
+* added
+    * GreaseMonkey v4 support
+    * oload.stream
+    * 123link.co
+    * 123link.press
+    * adshort.im
+    * p0xpicmoney.ru
+    * compartiendofull.net
+    * l2s.io
+    * curs.io
+    * clik.pw
+    * weefy.me
+    * coshurl.co
+* removed
+    * adshort.co
+
 ## v6.3.0
 
 * fixed
