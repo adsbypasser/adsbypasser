@@ -5,7 +5,7 @@ import {
   none,
 } from 'util/core';
 import {
-  GM,
+  GMAPI,
 } from 'util/platform';
 
 
@@ -124,7 +124,7 @@ function ajax (method, url, data, headers) {
   }
 
   return new Promise((resolve, reject) => {
-    GM.xmlhttpRequest({
+    GMAPI.xmlhttpRequest({
       method: method,
       url: url,
       data: data,
