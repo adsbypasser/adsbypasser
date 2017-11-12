@@ -1,7 +1,6 @@
 import {
   AdsBypasserError,
   every,
-  forEach,
 } from 'util/core';
 import {
   register,
@@ -158,7 +157,7 @@ async function loadConfig () {
 
       // TODO: i18n
       usw.render({
-        version: config.version,
+        version: await GMAPI.getValue('version'),
         options: {
           align_center: {
             type: 'checkbox',

@@ -1,4 +1,4 @@
-/* global cloneInto: false exportFunction: false */
+/* global cloneInto: false exportFunction: false GM: false */
 
 import {
   forEach,
