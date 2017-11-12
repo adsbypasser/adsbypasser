@@ -9,8 +9,6 @@
 // @updateURL      https://adsbypasser.github.io/releases/adsbypasser.<%= buildName %>.meta.js
 // @downloadURL    https://adsbypasser.github.io/releases/adsbypasser.<%= buildName %>.user.js
 // @icon           https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/img/logo.png
-// @grant          unsafeWindow
-// @grant          GM_xmlhttpRequest
 <% if (supportImage) { %>
 // @grant          GM_addStyle
 // @grant          GM_getResourceText
@@ -21,6 +19,13 @@
 // @grant          GM_openInTab
 // @grant          GM_registerMenuCommand
 // @grant          GM_setValue
+// @grant          GM_xmlhttpRequest
+// @grant          unsafeWindow
+// @grant          GM.deleteValue
+// @grant          GM.getValue
+// @grant          GM.openInTab
+// @grant          GM.setValue
+// @grant          GM.xmlHttpRequest
 // @run-at         document-start
 <% if (supportImage) { %>
 // @resource       alignCenter https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/css/align_center.css
