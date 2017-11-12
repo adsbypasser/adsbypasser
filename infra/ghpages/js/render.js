@@ -73,7 +73,8 @@ window.commit = function commit () {};
       });
       // select
       view.options.find('select').each(function (k, v) {
-        data[v.name] = v.value;
+        // TODO not always integer
+        data[v.name] = parseInt(v.value, 10);
       });
 
       // commit changes
