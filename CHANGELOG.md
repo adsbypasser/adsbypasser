@@ -1,3 +1,8 @@
+## TBA
+
+* fixed
+    * lite edition bug
+
 ## v6.4.0
 
 * fixed
