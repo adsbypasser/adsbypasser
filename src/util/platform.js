@@ -76,7 +76,7 @@ function getGreaseMonkeyAPI () {
     gm.getResourceUrl = (resourceName) => {
       return Promise.resolve(GM_getResourceURL(resourceName));
     };
-  } else if (GM.getResourceUrl) {
+  } else if (typeof GM === 'object' && GM && GM.getResourceUrl) {
     gm.getResourceUrl = GM.getResourceUrl;
   }
   return gm;
