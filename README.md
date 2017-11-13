@@ -34,8 +34,7 @@ npm install
 npm run build
 ```
 
-Combined userscript will be `dest/adsbypasser.user.js`,
-which you could install on the web browser.
+Combined userscript will be `build/adsbypasser.full.es7.user.js`.
 
 For more information, please see [Wiki].
 
