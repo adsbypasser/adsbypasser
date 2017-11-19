@@ -1,3 +1,15 @@
+## TBA
+
+* fixed
+    * linkdrop.net
+* added
+    * adbilty.me
+    * oke.io
+    * susutinv2.com
+    * njiir.com
+* removed
+    * zytpirwai.net
+
 ## v6.4.1
 
 * fixed
