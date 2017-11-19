@@ -31,6 +31,7 @@
       host: [
         /^sflnk\.me$/,
         /^idsly\.com$/,
+        /^adbilty\.me$/,
       ],
     },
     async ready () {
