@@ -27,15 +27,14 @@ For more information, please see [here][9].
 
 ## How To Build
 
-Please install [Node.js] and [npm], then run:
+Please install [Node.js], then run:
 
 ```
 npm install
 npm run build
 ```
 
-Combined userscript will be `dest/adsbypasser.user.js`,
-which you could install on the web browser.
+Combined userscript will be `build/adsbypasser.full.es7.user.js`.
 
 For more information, please see [Wiki].
 
@@ -44,8 +43,7 @@ For more information, please see [Wiki].
 [7]: https://travis-ci.org/adsbypasser/adsbypasser
 [8]: https://adsbypasser.github.io/configure.html
 [9]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
-[Node.js]: https://nodejs.org
-[npm]: https://www.npmjs.com/
+[Node.js]: https://nodejs.org/
 [RedirectionHelper]: https://userscripts-mirror.org/scripts/show/69797
 [SuYS]: https://userscripts-mirror.org/users/SuYS.html
 [Wiki]: https://github.com/adsbypasser/adsbypasser/wiki

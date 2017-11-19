@@ -12,10 +12,12 @@
       ],
     },
     async ready () {
-      $.remove('iframe');
+      $.remove('iframe, [class$="Overlay"]');
+      $.block('[class$="Overlay"]', document.body);
 
       const f = getForm();
       if (!f) {
+        _.info('no form');
         return;
       }
 
@@ -53,7 +55,7 @@
 
   function getForm () {
     const jQuery = $.window.$;
-    const f = jQuery('form[action="/links/go"], form[action="/links/linkdropgo"]');
+    const f = jQuery('#go-link, .go-link, form[action="/links/go"], form[action="/links/linkdropgo"]');
     if (f.length > 0) {
       return f;
     }

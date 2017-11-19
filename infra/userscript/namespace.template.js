@@ -13,12 +13,14 @@ import {
   forEach,
   none,
   partial,
+  tryEvery,
   wait,
 } from 'util/core';
 import {
   register,
 } from 'util/dispatcher';
 import {
+  block,
   querySelector,
   querySelectorAll,
   querySelectorOrNull,
@@ -57,6 +59,7 @@ const _ = {
   none,
   partial,
   register,
+  tryEvery,
   wait,
   warn,
 };
@@ -67,6 +70,7 @@ function $ (selector, context) {
 }
 $.$ = querySelectorOrNull;
 $.$$ = querySelectorAll;
+$.block = block;
 $.get = get;
 $.getCookie = getCookie;
 $.nuke = nuke;

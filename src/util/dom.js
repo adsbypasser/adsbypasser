@@ -69,6 +69,40 @@ function remove (selector, context) {
 }
 
 
+function block (selector, context=null) {
+  if (!context) {
+    context = document;
+  }
+  let fn = null;
+  if (isString(selector)) {
+    fn = () => {
+      remove(selector, context);
+    };
+  } else if (typeof selector === 'function') {
+    fn = (mutation) => {
+      mutation.addedNodes.forEach((node) => {
+        if (selector(node)) {
+          node.parentNode.removeChild(node);
+        }
+      });
+    };
+  } else {
+    throw new TypeError('wrong selector');
+  }
+
+  const o = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      fn(mutation);
+    });
+  });
+
+  o.observe(context, {
+    childList: true,
+    subtree: true,
+  });
+}
+
+
 function searchFromScriptsByRegExp (pattern, context) {
   const scripts = querySelectorAll('script', context);
   const [, , m] = find(scripts, (s) => {
@@ -113,10 +147,11 @@ function searchFromScripts (pattern, context) {
 
 
 export {
+  block,
   querySelector,
-  querySelectorOrNull,
   querySelectorAll,
-  toDOM,
+  querySelectorOrNull,
   remove,
   searchFromScripts,
+  toDOM,
 };
