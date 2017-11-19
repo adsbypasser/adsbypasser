@@ -217,3 +217,15 @@ _.register({
     await $.openLink(s[1]);
   },
 });
+
+_.register({
+  rule: {
+    host: /^www\.njiir\.com$/,
+  },
+  async ready () {
+    let a = $('div.download-link > a');
+    a = a.href.match(/r=(.*)$/);
+    a = atob(a[1]);
+    await $.openLink(a);
+  },
+});
