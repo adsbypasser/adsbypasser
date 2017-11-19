@@ -20,6 +20,7 @@ import {
   register,
 } from 'util/dispatcher';
 import {
+  block,
   querySelector,
   querySelectorAll,
   querySelectorOrNull,
@@ -69,6 +70,7 @@ function $ (selector, context) {
 }
 $.$ = querySelectorOrNull;
 $.$$ = querySelectorAll;
+$.block = block;
 $.get = get;
 $.getCookie = getCookie;
 $.nuke = nuke;
