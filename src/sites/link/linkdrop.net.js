@@ -31,6 +31,7 @@
         /^sflnk\.me$/,
         /^idsly\.com$/,
         /^adbilty\.me$/,
+        /^oke\.io$/,
       ],
     },
     async ready () {
