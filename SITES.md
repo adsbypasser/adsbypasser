@@ -37,7 +37,6 @@
     * youfap.me
     * yyv.co
     * zatnawqy.net
-    * zytpirwai.net
     * zff.co
 * Mihalism Multi Host
     * 244pix.com
@@ -570,6 +569,7 @@
     * muucih.com
     * naisho.lompat.in
     * nar-04.tk
+    * njiir.com
     * rumahsimpel.com
     * safelinkconverter.com
     * safelinkconverter2.com
@@ -587,6 +587,7 @@
     * sports14.pw
     * srelink.com
     * susutin.com
+    * susutinv2.com
     * sylnk.net
     * tawaku.com
     * telolet.in
@@ -636,10 +637,11 @@
     * fas.li
     * shink.in
     * shink.me
-* adlink.guru
+* linkdrop.net
     * 123link.co
     * 123link.io
     * 123link.press
+    * adbilty.me
     * adbull.me
     * adfly.tc
     * adfu.us
@@ -647,20 +649,27 @@
     * adshort.im
     * adshort.in
     * adshorte.com
+    * adurl.id
     * bol.tl
     * clik.pw
     * coshurl.co
     * curs.io
     * cut-urls.com
     * cypt.ga
+    * dmus.in
+    * earningurl.com
     * elink.link
     * filesbucks.com
+    * goolink.me
     * hashe.in
+    * idsly.com
     * l2s.io
     * linclik.com
     * link-earn.com
+    * linkdrop.net
     * linkfly.gaosmedia.com
     * linkhits.us
+    * oke.io
     * payurl.me
     * pir.im
     * short.pastewma.com
@@ -668,20 +677,13 @@
     * tmearn.com
     * trlink.in
     * u2s.io
+    * ulshare.net
     * url.ht
     * urle.co
     * urlst.me
     * weefy.me
     * worldhack.net
     * zez.io
-* linkdrop.net
-    * adurl.id
-    * dmus.in
-    * earningurl.com
-    * goolink.me
-    * idsly.com
-    * linkdrop.net
-    * ulshare.net
 * gsurl.me
     * g5u.pw
     * gsurl.in
