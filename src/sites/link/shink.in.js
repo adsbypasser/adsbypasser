@@ -19,25 +19,10 @@ _.register({
     // Remove the popup trigger area.
     // NOTE The site will add the node back immediately, so maybe it will
     // becomes very busy.
-    const o = new MutationObserver((mutations) => {
-      $.remove('.BJPPopAdsOverlay');
-
-      mutations.forEach((mutation) => {
-        mutation.addedNodes.forEach((node) => {
-          if (node.localName === 'div') {
-            if (node.style.zIndex === '2147483647') {
-              node.parentNode.removeChild(node);
-              return;
-            }
-          }
-        });
-      });
-    });
-
-    o.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
+    $.remove('.BJPPopAdsOverlay');
+    $.block((node) => {
+      return node.localName === 'div' && node.style.zIndex === '2147483647';
+    }, document.body);
   },
 });
 
