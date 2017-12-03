@@ -9,6 +9,8 @@
         /^adurl\.id$/,
         /^goolink\.me$/,
         /^earningurl\.com$/,
+        /^cutwin\.com$/,
+        /^cutwi\.in$/,
       ],
     },
     async ready () {
