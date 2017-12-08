@@ -11,6 +11,7 @@
         /^earningurl\.com$/,
         /^cutwin\.com$/,
         /^cutwi\.in$/,
+        /^(www\.)?ourl\.io$/,
       ],
     },
     async ready () {
