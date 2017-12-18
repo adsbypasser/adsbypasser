@@ -5,7 +5,7 @@
       host: [
         /^(www\.)?adb\.ug$/,
         /^(www\.)?lynk\.my$/,
-        /^adyou\.me$/,
+        /^(www\.)?adyou\.(co|me)$/,
       ],
       // Match everything but empty, privacy, terms, contact, contact/whatever or path beginning with #
       path: /^(?!\/(?:privacy|terms|contact(\/.*)?|#.*)?$).*$/,
