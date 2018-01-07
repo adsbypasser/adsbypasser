@@ -66,7 +66,7 @@
       // disable devtools blocker
       $.window._0x337c4b = null;
 
-      const node = await getAmbiguousForm2('div[id] + div[id] > style', (node) => {
+      const node = await getAmbiguousForm('div[id] + div[id] > style', (node) => {
         return node.parentElement;
       });
       // it will replace the token on 'click hover', so just emulate this action
@@ -96,7 +96,7 @@
       // disable devtools blocker
       $.window._0x337c4b = null;
 
-      const node = await getAmbiguousForm2('div[id] + div[id] > style', (node) => {
+      const node = await getAmbiguousForm('div[id] + div[id] > style', (node) => {
         return node.parentElement;
       });
       node.click();
@@ -187,40 +187,8 @@
     });
   }
 
-  async function getAmbiguousForm (selector) {
-    const d = $(selector);
-    let visibleClasses = null;
-    let button = null;
-    await waitDOM(d, (node) => {
-      if (button) {
-        return true;
-      }
-      if (node.nodeName === 'STYLE') {
-        visibleClasses = parseStyle(node);
-        return false;
-      }
-      // making sure it is the correct node (form) and the only visible one
-      // since it throws in a random number of "fake" ones
-      if (node.nodeName === 'FORM' && node.offsetParent !== null) {
-        return visibleClasses.some((class_) => {
-          const isVisible = node.classList.contains(class_);
-          if (!isVisible) {
-            return false;
-          }
-          button = $.$('input[type="button"]', node);
-          if (!button) {
-            return false;
-          }
-          return true;
-        });
-      }
-      return false;
-    });
-    return button;
-  }
-
   // Used when the form's shell does not exist when page loaded.
-  async function getAmbiguousForm2 (selector, shellNormalizer) {
+  async function getAmbiguousForm (selector, shellNormalizer) {
     const d = await waitFormShell(selector, shellNormalizer);
     const style = $('style', d);
     const visibleClasses = parseStyle(style);
