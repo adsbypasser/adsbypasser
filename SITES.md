@@ -293,7 +293,6 @@
     * gx.si
     * hit.us
     * kazan.vc
-    * link.tl
     * linkcash.ml
     * miniurl.tk
     * myam.me
@@ -481,8 +480,8 @@
     * imgmaze.com
     * imgmega.com
     * imgmonkey.com
-    * imgoutlet.co
     * imgoutlet.com
+    * imgoutlet.pw
     * imgpaying.com
     * imgrock.info
     * imgsee.me
@@ -610,6 +609,7 @@
     * imghost.top
 * adb.ug
     * adb.ug
+    * adyou.co
     * adyou.me
     * lynk.my
 * link4ad.com
@@ -655,6 +655,8 @@
     * coshurl.co
     * curs.io
     * cut-urls.com
+    * cutwi.in
+    * cutwin.com
     * cypt.ga
     * dmus.in
     * earningurl.com
@@ -670,6 +672,7 @@
     * linkfly.gaosmedia.com
     * linkhits.us
     * oke.io
+    * ourl.io
     * payurl.me
     * pir.im
     * short.pastewma.com
@@ -706,9 +709,11 @@
     * cshort.org
 * pixsense.net
     * imagespicy.site
+    * imgsky.net
     * pixsense.net
 * pics-money.ru
     * p0xpicmoney.ru
+    * picker-click.ru
     * pics-money.ru
 * else
     * 01.nl
