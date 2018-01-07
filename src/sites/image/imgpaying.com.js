@@ -82,15 +82,24 @@
       path: PATH_RULE,
     },
     async ready () {
-      const i = $.$('img.pic');
+      const i = $.$('img.picview');
       if (i) {
         // second stage
+
+        // disable devtools blocker
+        $.window._0x2cd123 = null;
+
         await $.openImage(i.src);
         return;
       }
 
-      const node = getAmbiguousForm('.inner > center > div[id]');
-      node.submit();
+      // disable devtools blocker
+      $.window._0x337c4b = null;
+
+      const node = await getAmbiguousForm2('div[id] + div[id] > style', (node) => {
+        return node.parentElement;
+      });
+      node.click();
     },
   });
 
