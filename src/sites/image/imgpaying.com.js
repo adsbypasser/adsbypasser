@@ -63,7 +63,12 @@
         return;
       }
 
-      const node = await getAmbiguousForm('div center + div[id]');
+      // disable devtools blocker
+      $.window._0x337c4b = null;
+
+      const node = await getAmbiguousForm2('div[id] + div[id] > style', (node) => {
+        return node.parentElement;
+      });
       // it will replace the token on 'click hover', so just emulate this action
       node.click();
       node.click();
@@ -77,15 +82,24 @@
       path: PATH_RULE,
     },
     async ready () {
-      const i = $.$('img.pic');
+      const i = $.$('img.picview');
       if (i) {
         // second stage
+
+        // disable devtools blocker
+        $.window._0x2cd123 = null;
+
         await $.openImage(i.src);
         return;
       }
 
-      const node = getAmbiguousForm('.inner > center > div[id]');
-      node.submit();
+      // disable devtools blocker
+      $.window._0x337c4b = null;
+
+      const node = await getAmbiguousForm2('div[id] + div[id] > style', (node) => {
+        return node.parentElement;
+      });
+      node.click();
     },
   });
 
@@ -203,6 +217,43 @@
       return false;
     });
     return button;
+  }
+
+  // Used when the form's shell does not exist when page loaded.
+  async function getAmbiguousForm2 (selector, shellNormalizer) {
+    const d = await waitFormShell(selector, shellNormalizer);
+    const style = $('style', d);
+    const visibleClasses = parseStyle(style);
+    const forms = $.$$('form', d);
+    for (const form of forms) {
+      const isVisible = visibleClasses.some((class_) => {
+        return form.classList.contains(class_);
+      });
+      if (!isVisible) {
+        continue;
+      }
+      const button = $.$('input[type="button"]', form);
+      if (button) {
+        return button;
+      }
+    }
+    return null;
+  }
+
+  // Used when the form's shell does not exist when page loaded.
+  // Wait for the given selector, and normalize matched element by normalizer.
+  function waitFormShell (selector, normalizer) {
+    return new Promise((resolve) => {
+      const handle = setInterval(() => {
+        let shell = $.$(selector);
+        if (!shell) {
+          return;
+        }
+        clearInterval(handle);
+        shell = normalizer(shell);
+        resolve(shell);
+      }, 500);
+    });
   }
 
   function parseStyle (style) {
