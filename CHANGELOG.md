@@ -1,3 +1,22 @@
+## TBA
+
+* fixed
+    * clictune.com
+    * adyou.me
+    * imgrock.info
+    * imgdew.com
+* added
+    * ourl.io
+    * cutwin.com
+    * cutwi.in
+    * adyou.co
+    * imgsky.net
+    * picker-click.ru
+    * imgoutlet.pw
+* removed
+    * imgoutlet.co
+    * link.tl
+
 ## v6.5.0
 
 * fixed
