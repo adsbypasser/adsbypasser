@@ -1,6 +1,6 @@
 (function () {
 
-  const PATH_RULE = /^\/([0-9a-zA-Z-]+)(\.|\/|$)/;
+  const PATH_RULE = /^\/([0-9a-zA-Z-_]+)(\.|\/|$)/;
 
   _.register({
     rule: {
@@ -296,7 +296,7 @@
       return;
     }
 
-    i = $.$('img.pic');
+    i = $.$('img.picview');
     if (i) {
       // second stage
       await $.openImage(i.src);
