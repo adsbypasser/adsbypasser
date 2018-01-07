@@ -78,7 +78,7 @@
 
   _.register({
     rule: {
-      host: /^imgoutlet\.co$/,
+      host: /^imgoutlet\.pw$/,
       path: PATH_RULE,
     },
     async ready () {
