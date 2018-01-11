@@ -141,7 +141,6 @@
     rule: {
       host: [
         /^(www\.)?img(adult|wallet|taxi)\.com$/,
-        /^(www\.)?imgdrive\.net$/,
       ],
       path: /^\/img-.*\.html$/,
     },
