@@ -1,7 +1,7 @@
 ﻿_.register({
   rule: [
-  	'http://imgdrive.net/img-*',
-	'http://imgwallet.com/img-*',
+    'http://imgdrive.net/img-*',
+    'http://imgwallet.com/img-*',
   ],
   async ready () {
     const m = $('meta[property="og:image"]');
