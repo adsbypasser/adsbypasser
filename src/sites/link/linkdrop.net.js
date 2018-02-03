@@ -85,6 +85,7 @@
         /^zez\.io$/,
         /^adbull\.me$/,
         /^adshort\.im$/,
+        /^adshort\.pro$/,
         /^adshorte\.com$/,
         /^weefy\.me$/,
       ],
