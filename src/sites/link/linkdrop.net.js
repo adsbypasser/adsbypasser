@@ -11,6 +11,7 @@
         /^earningurl\.com$/,
         /^cutwin\.com$/,
         /^cutwi\.in$/,
+        /^cut-w\.in$/,
         /^(www\.)?ourl\.io$/,
       ],
     },
