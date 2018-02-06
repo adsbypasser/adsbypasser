@@ -65,6 +65,7 @@
         /^curs\.io$/,
         /^cypt\.ga$/,
         /^(filesbucks|tmearn|cut-urls)\.com$/,
+        /^dzurl\.ml$/,
         /^elink\.link$/,
         /^(payurl|urlst)\.me$/,
         /^u2s\.io$/,
