@@ -35,6 +35,7 @@
         /^idsly\.com$/,
         /^adbilty\.me$/,
         /^oke\.io$/,
+        /^(trlink|wolink)\.in$/,
       ],
     },
     async ready () {
