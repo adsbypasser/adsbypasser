@@ -35,6 +35,7 @@
         /^idsly\.com$/,
         /^adbilty\.me$/,
         /^oke\.io$/,
+        /^zlshorte\.net$/,
       ],
     },
     async ready () {
