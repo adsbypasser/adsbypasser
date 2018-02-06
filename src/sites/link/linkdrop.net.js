@@ -79,6 +79,8 @@
         /^(adfu|linkhits)\.us$/,
         /^short\.pastewma\.com$/,
         /^l2s\.io$/,
+        /^adbilty\.in$/,
+        /^gg-l\.xyz$/,
         /^linkfly\.gaosmedia\.com$/,
         /^linclik\.com$/,
         /^link-earn\.com$/,
