@@ -83,6 +83,7 @@
         /^linclik\.com$/,
         /^link-earn\.com$/,
         /^zez\.io$/,
+        /^zeiz\.me$/,
         /^adbull\.me$/,
         /^adshort\.im$/,
         /^adshorte\.com$/,
