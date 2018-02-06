@@ -16,9 +16,13 @@
   });
 
   _.register({
-    rule: {
-      host: /^imagetwist\.com$/,
-    },
+    rule: [
+      {
+        host: [
+          /^(imagetwist|imagexport)\.com$/,
+        ],
+      },
+    ],
     ready: _.partial(run, false),
   });
 
