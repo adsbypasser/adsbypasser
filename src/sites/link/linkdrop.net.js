@@ -61,6 +61,7 @@
       host: [
         /^adlink\.guru$/,
         /^clik\.pw$/,
+        /^short\.pe$/,
         /^coshurl\.co$/,
         /^curs\.io$/,
         /^cypt\.ga$/,
