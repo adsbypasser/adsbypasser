@@ -36,6 +36,7 @@
         /^adbilty\.me$/,
         /^oke\.io$/,
         /^zlshorte\.net$/,
+        /^(igram|gram)\.im$/,
       ],
     },
     async ready () {
