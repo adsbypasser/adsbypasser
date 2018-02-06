@@ -62,6 +62,7 @@
         /^adlink\.guru$/,
         /^clik\.pw$/,
         /^coshurl\.co$/,
+        /^coshink\.co$/,
         /^curs\.io$/,
         /^cypt\.ga$/,
         /^(filesbucks|tmearn|cut-urls)\.com$/,
