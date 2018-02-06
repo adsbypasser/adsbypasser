@@ -12,6 +12,7 @@
         /^cutwin\.com$/,
         /^cutwi\.in$/,
         /^(www\.)?ourl\.io$/,
+        /^urlcloud\.us$/,
       ],
     },
     async ready () {
