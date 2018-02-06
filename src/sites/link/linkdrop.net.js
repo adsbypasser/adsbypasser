@@ -87,6 +87,7 @@
         /^adshort\.im$/,
         /^adshorte\.com$/,
         /^weefy\.me$/,
+        /^bit-url\.com$/,
       ],
     },
     async ready () {
