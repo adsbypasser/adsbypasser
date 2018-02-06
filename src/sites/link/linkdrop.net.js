@@ -61,7 +61,6 @@
       host: [
         /^adlink\.guru$/,
         /^clik\.pw$/,
-        /^coshurl\.co$/,
         /^curs\.io$/,
         /^cypt\.ga$/,
         /^(filesbucks|tmearn|cut-urls)\.com$/,
