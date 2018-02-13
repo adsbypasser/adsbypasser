@@ -142,6 +142,7 @@
       host: [
         /^(www\.)?img(adult|wallet|taxi)\.com$/,
         /^(www\.)?imgdrive\.net$/,
+        /^(www\.)?imgfresh\.info$/,
       ],
       path: /^\/img-.*\.html$/,
     },
