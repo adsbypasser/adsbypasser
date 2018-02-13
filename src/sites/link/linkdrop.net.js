@@ -87,6 +87,7 @@
         /^adshort\.im$/,
         /^adshorte\.com$/,
         /^weefy\.me$/,
+        /^cut4links\.com$/,
       ],
     },
     async ready () {
