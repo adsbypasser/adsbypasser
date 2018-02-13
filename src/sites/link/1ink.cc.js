@@ -7,7 +7,7 @@ _.register({
     let url = document.head.querySelector('[name=keywords]').content;
     const urlCheck = url.includes('http');
     if (urlCheck != true)
-        url = "http://" + url;
+      url = 'http://' + url;
     await $.openLink(url);
   },
 });
