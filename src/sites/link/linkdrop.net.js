@@ -15,6 +15,7 @@
         /^(urlcloud|mitly)\.us$/,
         /^adpop\.me$/,
         /^wi\.cr$/,
+        /^tui\.click$/,
       ],
     },
     async ready () {
