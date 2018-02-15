@@ -39,6 +39,7 @@
         /^adbilty\.me$/,
         /^oke\.io$/,
         /^linkrex\.net$/,
+        /^3rabshort\.com$/,
       ],
     },
     async ready () {
