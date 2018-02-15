@@ -21,7 +21,7 @@ _.register({
     dlCtn.style.display = 'inline-block';
 
     const dlBtn = $('a', dlCtn);
-    const ePath = $('#streamurj');
+    const ePath = $('#streamurl');
     dlBtn.href = '/stream/' + ePath.textContent;
 
     const videoCtn = $.$('.videocontainer');
