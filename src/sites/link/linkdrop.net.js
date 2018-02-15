@@ -12,6 +12,7 @@
         /^(cutwin|cut-earn)\.com$/,
         /^(cutwi|cut-w)\.in$/,
         /^(www\.)?ourl\.io$/,
+        /^(urlcloud|mitly)\.us$/,
         /^adpop\.me$/,
         /^wi\.cr$/,
       ],
