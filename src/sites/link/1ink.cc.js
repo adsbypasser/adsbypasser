@@ -5,9 +5,10 @@ _.register({
   },
   async ready () {
     let url = document.head.querySelector('[name=keywords]').content;
-    const urlCheck = url.includes('http');
-    if (urlCheck != true)
+    const urlCheck = url.includes('http://') || url.includes('https://');
+    if (!urlCheck) {
       url = 'http://' + url;
+    }
     await $.openLink(url);
   },
 });
