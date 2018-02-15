@@ -40,7 +40,8 @@ _.register({
         /^gadget13\.com$/,
         /^azhie\.net$/,
         /^ww2\.awsubs\.co$/,
-        /^autorp\.us$/
+        /^autorp\.us$/,
+        /^plantaheim\.web\.id$/,
       ],
       query: /^\?d=([a-zA-Z0-9/=]+)$/,
     },
