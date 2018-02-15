@@ -13,6 +13,7 @@ import {
 } from './infra/website/summary.js';
 
 
+const ghpagesRepoURL = 'git@github.com:adsbypasser/adsbypasser.github.io.git';
 const packageJSON = parsePackageJSON();
 const plugins = gulpLoadPlugins({
   overridePattern: false,
@@ -142,7 +143,6 @@ gulp.task('ghpages:less', ['ghpages:clone'], () => {
 
 gulp.task('ghpages:clone', async () => {
   const repoPath = output.to('ghpages');
-  const data = require('./.deploy.json');
 
   const stat = util.promisify(fs.stat);
   try {
@@ -157,7 +157,7 @@ gulp.task('ghpages:clone', async () => {
   const cloneTask = new Promise((resolve, reject) => {
     const p = child_process.spawn('git', [
       'clone',
-      data.ghpages.REPO,
+      ghpagesRepoURL,
       '-b',
       'master',
       repoPath,
