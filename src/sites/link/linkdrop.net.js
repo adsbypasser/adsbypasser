@@ -105,6 +105,7 @@
         /^adshorte\.com$/,
         /^weefy\.me$/,
         /^bit-url\.com$/,
+        /^premiumzen\.com$/,
       ],
     },
     async ready () {
