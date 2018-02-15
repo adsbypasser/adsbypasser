@@ -5,7 +5,7 @@
       host: [
         /^link\.animagz\.org$/,
         /^(coeg|disingkat|gunting)\.in$/,
-        /^www\.telondasmu\.com$/,
+        /^www\.(telondasmu|siotong|siherp)\.com$/,
       ],
       path: /^\/\w+$/,
     },
@@ -50,6 +50,8 @@
       };
     case 'coeg.in':
     case 'www.telondasmu.com':
+    case 'www.siotong.com':
+    case 'www.siherp.com':
       return () => {
         const a = $('.download-link a');
         return a.href;
