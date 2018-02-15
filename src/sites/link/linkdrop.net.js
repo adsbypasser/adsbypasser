@@ -103,6 +103,7 @@
         /^adshort\.(im|pro)$/,
         /^adshorte\.com$/,
         /^weefy\.me$/,
+        /^bit-url\.com$/,
       ],
     },
     async ready () {
