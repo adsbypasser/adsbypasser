@@ -72,7 +72,7 @@
         /^urle\.co$/,
         /^(hashe|trlink|adshort)\.in$/,
         /^www\.worldhack\.net$/,
-        /^123link\.(io|co|press)$/,
+        /^123link\.(io|co|press|pw)$/,
         /^pir\.im$/,
         /^bol\.tl$/,
         /^(tl|adfly)\.tc$/,
