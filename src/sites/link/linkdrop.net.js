@@ -89,7 +89,7 @@
         /^123link\.(io|co|press|pw)$/,
         /^pir\.im$/,
         /^bol\.tl$/,
-        /^(tl|adfly)\.tc$/,
+        /^(tl|adfly|git)\.tc$/,
         /^(adfu|linkhits)\.us$/,
         /^short\.pastewma\.com$/,
         /^l2s\.io$/,
