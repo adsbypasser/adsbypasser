@@ -259,7 +259,7 @@
       },
       {
         host: /^imgprime\.com$/,
-        path: /^\/img3-.*\.html$/,
+        path: /^\/img.*\.html$/,
       },
     ],
     async ready () {

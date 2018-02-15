@@ -3,6 +3,7 @@ _.register({
     host: [
       /^gsurl\.(me|in)$/,
       /^g5u\.pw$/,
+      /^gurl\.ly$/,
     ],
   },
   async ready () {
