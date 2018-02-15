@@ -82,6 +82,7 @@
         /^elink\.link$/,
         /^(payurl|urlst)\.me$/,
         /^u2s\.io$/,
+        /^link4\.me$/,
         /^url\.ht$/,
         /^urle\.co$/,
         /^(hashe|trlink|adshort)\.in$/,
