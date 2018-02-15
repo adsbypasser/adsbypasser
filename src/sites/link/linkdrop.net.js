@@ -108,6 +108,7 @@
         /^bit-url\.com$/,
         /^premiumzen\.com$/,
         /^cut4links\.com$/,
+        /^coinlink\.co$/,
       ],
     },
     async ready () {

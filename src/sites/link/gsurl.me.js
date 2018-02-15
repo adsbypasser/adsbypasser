@@ -1,7 +1,7 @@
 _.register({
   rule: {
     host: [
-      /^(gsurl|gsul|getsl|gsur)\.(me|in)$/,
+      /^gsurl\.(me|in)$/,
       /^g5u\.pw$/,
       /^gurl\.ly$/,
     ],
