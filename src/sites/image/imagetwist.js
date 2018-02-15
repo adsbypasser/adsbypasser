@@ -17,7 +17,10 @@
 
   _.register({
     rule: {
-      host: /^imagetwist\.com$/,
+      host: [
+        /^imagetwist\.com$/,
+        /^imagexport\.com$/,
+      ],
     },
     ready: _.partial(run, false),
   });
