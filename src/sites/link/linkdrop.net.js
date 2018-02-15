@@ -85,7 +85,6 @@
         /^linkfly\.gaosmedia\.com$/,
         /^linclik\.com$/,
         /^link-earn\.com$/,
-        /^zez\.io$/,
         /^adbull\.me$/,
         /^adshort\.(im|pro)$/,
         /^adshorte\.com$/,
