@@ -107,6 +107,7 @@
         /^weefy\.me$/,
         /^bit-url\.com$/,
         /^premiumzen\.com$/,
+        /^cut4links\.com$/,
       ],
     },
     async ready () {
