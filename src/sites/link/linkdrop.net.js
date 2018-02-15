@@ -84,7 +84,7 @@
         /^link-earn\.com$/,
         /^zez\.io$/,
         /^adbull\.me$/,
-        /^adshort\.im$/,
+        /^adshort\.(im|pro)$/,
         /^adshorte\.com$/,
         /^weefy\.me$/,
       ],
