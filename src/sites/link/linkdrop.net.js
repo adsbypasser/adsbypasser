@@ -45,6 +45,7 @@
         /^mlink\.club$/,
         /^zlshorte\.net$/,
         /^(igram|gram)\.im$/,
+        /^(trlink|wolink)\.in$/,
       ],
     },
     async ready () {
