@@ -43,6 +43,8 @@
         /^3rabshort\.com$/,
         /^shink\.xyz$/,
         /^mlink\.club$/,
+        /^zlshorte\.net$/,
+        /^(igram|gram)\.im$/,
       ],
     },
     async ready () {
