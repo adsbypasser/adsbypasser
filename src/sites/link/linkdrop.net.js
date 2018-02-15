@@ -66,6 +66,7 @@
         /^clik\.pw$/,
         /^short\.pe$/,
         /^coshurl\.co$/,
+        /^coshink\.co$/,
         /^(curs|cuon)\.io$/,
         /^cypt\.ga$/,
         /^(filesbucks|tmearn|cut-urls)\.com$/,
