@@ -41,6 +41,8 @@
         /^oke\.io$/,
         /^linkrex\.net$/,
         /^3rabshort\.com$/,
+        /^shink\.xyz$/,
+        /^mlink\.club$/,
       ],
     },
     async ready () {
