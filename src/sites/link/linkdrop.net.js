@@ -16,6 +16,7 @@
         /^adpop\.me$/,
         /^wi\.cr$/,
         /^tui\.click$/,
+        /^megaurl\.in$/,
       ],
     },
     async ready () {
