@@ -13,6 +13,7 @@
         /^cutwi\.in$/,
         /^(www\.)?ourl\.io$/,
         /^adpop\.me$/,
+        /^wi\.cr$/,
       ],
     },
     async ready () {
