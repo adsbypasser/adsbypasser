@@ -79,6 +79,7 @@
         /^(curs|cuon)\.io$/,
         /^cypt\.ga$/,
         /^(filesbucks|tmearn|cut-urls)\.com$/,
+        /^adslink\.pw$/,
         /^dzurl\.ml$/,
         /^elink\.link$/,
         /^(payurl|urlst)\.me$/,
