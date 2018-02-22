@@ -5,7 +5,7 @@ _.register({
   },
   async ready () {
     let url = document.head.querySelector('[name=keywords]').content;
-    const urlCheck = url.includes('http://') || url.includes('https://');
+    const urlCheck = url.match(/^https?:\/\//);
     if (!urlCheck) {
       url = 'http://' + url;
     }
