@@ -141,6 +141,7 @@
     * imgease.re
     * imgfap.net
     * imgfapper.com
+    * imgfresh.info
     * imghere.net
     * imghit.com
     * imghost.top (variation)
@@ -348,6 +349,7 @@
     * imagecherry.com
     * imagenpic.com
     * imagetwist.com
+    * imagexport.com
     * imgtrex.com
 * b4he
     * b4he.com
@@ -558,6 +560,7 @@
     * insurance1.tech
     * kombatch.loncat.pw
     * landscapenature.pw
+    * lifesurance.info
     * lindung.in
     * link.filmku.net
     * link.safelinkconverter.com
@@ -569,6 +572,8 @@
     * naisho.lompat.in
     * nar-04.tk
     * njiir.com
+    * otoviral.racing
+    * plantaheim.web.id
     * rumahsimpel.com
     * safelinkconverter.com
     * safelinkconverter2.com
@@ -620,6 +625,8 @@
     * disingkat.in
     * gunting.in
     * link.animagz.org
+    * siherp.com
+    * siotong.com
     * sipkur.net
     * sipkur.us
     * telondasmu.com
@@ -641,56 +648,91 @@
     * 123link.co
     * 123link.io
     * 123link.press
+    * 123link.pw
+    * 3rabshort.com
     * adbilty.me
+    * adbitly.in
     * adbull.me
     * adfly.tc
     * adfu.us
     * adlink.guru
+    * adpop.me
     * adshort.im
     * adshort.in
+    * adshort.pro
     * adshorte.com
+    * adslink.pw
+    * adsrt.com
     * adurl.id
+    * bit-url.com
     * bol.tl
     * clik.pw
-    * coshurl.co
+    * coshink.co
+    * cuon.io
     * curs.io
+    * cut-earn.com
     * cut-urls.com
+    * cut-w.in
+    * cut4links.com
     * cutwi.in
     * cutwin.com
     * cypt.ga
     * dmus.in
+    * dzurl.ml
     * earningurl.com
     * elink.link
     * filesbucks.com
+    * gg-l.xyz
+    * git.tc
     * goolink.me
+    * gram.im
     * hashe.in
     * idsly.com
+    * igram.im
+    * jurl.io
     * l2s.io
     * linclik.com
     * link-earn.com
+    * link4.me
     * linkdrop.net
     * linkfly.gaosmedia.com
     * linkhits.us
+    * linkrex.net
+    * megaurl.in
+    * mitly.us
+    * mlink.club
     * oke.io
     * ourl.io
     * payurl.me
     * pir.im
+    * premiumzen.com
+    * shink.xyz
     * short.pastewma.com
+    * short.pe
     * tl.tc
     * tmearn.com
     * trlink.in
+    * tui.click
     * u2s.io
     * ulshare.net
     * url.ht
+    * urlcloud.us
     * urle.co
     * urlst.me
     * weefy.me
+    * wi.cr
+    * wolink.in
     * worldhack.net
-    * zez.io
+    * zeiz.me
+    * zlshorte.net
 * gsurl.me
     * g5u.pw
+    * getsl.me
+    * gsul.me
+    * gsur.in
     * gsurl.in
     * gsurl.me
+    * gurl.ly
 * 10co.biz
     * 10co.biz
     * 10co.xyz
@@ -715,10 +757,14 @@
     * p0xpicmoney.ru
     * picker-click.ru
     * pics-money.ru
+* short.am
+    * short.am
+    * srt.am
 * else
     * 01.nl
     * 1be.biz
     * 1dl.biz
+    * 1ink.cc
     * 1pics.ru
     * 1tiny.net
     * 2ty.cc
@@ -899,7 +945,6 @@
     * safeurl.eu
     * screenlist.ru
     * setlinks.us
-    * short.am
     * shortskip.com
     * shorturl.rapeit.net
     * shrink-service.it
