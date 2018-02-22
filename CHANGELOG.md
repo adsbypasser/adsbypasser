@@ -1,4 +1,4 @@
-## TBA
+## v6.7.0
 
 * fixed
     * imgprime.com
