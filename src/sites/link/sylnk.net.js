@@ -161,6 +161,8 @@ _.register({
         /^motonews\.club$/,
         /^(autofans|landscapenature)\.pw$/,
         /^(sidespace|erogedownload)\.net$/,
+        /^otoviral\.racing$/,
+        /^www\.lifesurance\.info$/,
       ],
       query: /get=([^&]+)/,
     },
