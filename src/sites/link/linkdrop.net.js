@@ -86,7 +86,7 @@
         /^link4\.me$/,
         /^url\.ht$/,
         /^urle\.co$/,
-        /^(hashe|trlink)\.in$/,
+        /^hashe\.in$/,
         /^www\.worldhack\.net$/,
         /^123link\.(io|co|press|pw)$/,
         /^pir\.im$/,
