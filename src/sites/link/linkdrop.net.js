@@ -109,6 +109,7 @@
         /^premiumzen\.com$/,
         /^cut4links\.com$/,
         /^coinlink\.co$/,
+        /^kokemoon\.com$/,
       ],
     },
     async ready () {
