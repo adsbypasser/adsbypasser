@@ -9,6 +9,7 @@
         /^adurl\.id$/,
         /^goolink\.me$/,
         /^earningurl\.com$/,
+        /^earn-guide\.com$/,
         /^(cutwin|cut-earn)\.com$/,
         /^(cutwi|cut-w)\.in$/,
         /^(www\.)?(ourl|jurl)\.io$/,
