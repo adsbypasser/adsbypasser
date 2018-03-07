@@ -76,6 +76,7 @@
         /^short\.pe$/,
         /^coshink\.co$/,
         /^(curs|cuon)\.io$/,
+        /^shark\.vn$/,
         /^cypt\.ga$/,
         /^(filesbucks|tmearn|cut-urls)\.com$/,
         /^adslink\.pw$/,
