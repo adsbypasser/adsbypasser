@@ -41,6 +41,7 @@
         /^adbilty\.me$/,
         /^oke\.io$/,
         /^linkrex\.net$/,
+        /^safelinku\.net$/,
         /^3rabshort\.com$/,
         /^shink\.xyz$/,
         /^mlink\.club$/,
