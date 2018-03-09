@@ -72,7 +72,7 @@
     rule: {
       host: [
         /^adlink\.guru$/,
-        /^clik\.pw$/,
+        /^(clik|psl)\.pw$/,
         /^short\.pe$/,
         /^coshink\.co$/,
         /^(curs|cuon)\.io$/,
