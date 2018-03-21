@@ -86,6 +86,7 @@
         /^elink\.link$/,
         /^(payurl|urlst)\.me$/,
         /^u2s\.io$/,
+        /^shortad\.cf$/,
         /^link4\.me$/,
         /^url\.ht$/,
         /^urle\.co$/,
