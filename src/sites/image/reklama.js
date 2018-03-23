@@ -63,6 +63,7 @@
           /^ipicture\.su$/,
           /^acidimg\.cc$/,
           /^s\.imghost\.top$/,
+          /^pic\.hotimg\.site$/,
         ],
         path: /^\/img-.*\.html/,
       },
