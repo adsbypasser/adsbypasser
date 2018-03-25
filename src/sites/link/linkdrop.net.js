@@ -83,7 +83,7 @@
         /^(filesbucks|tmearn|cut-urls|link-earn|shrinkearn)\.com$/,
         /^adslink\.pw$/,
         /^dzurl\.ml$/,
-        /^elink\.link$/,
+        /^(elink|petty)\.link$/,
         /^(payurl|urlst)\.me$/,
         /^u2s\.io$/,
         /^shortad\.cf$/,
