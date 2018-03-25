@@ -9,11 +9,20 @@ _.register({
     path: /^\/\w+$/,
   },
   async ready () {
-    const f = $('#skip');
-
     if (!$.$('#captcha')) {
-      // No captcha, we can redirect straight away
-      f.submit();
+      // no captcha, we can redirect straight away
+
+      // stage 1
+      let f = $.$('#skip');
+      if (f) {
+        f.submit();
+        return;
+      }
+
+      // stage 2
+      f = $('#btn-main');
+      await $.openLink(f.href);
+      return;
     }
 
     // Remove the popup trigger area.
