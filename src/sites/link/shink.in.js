@@ -19,9 +19,20 @@ _.register({
     // Remove the popup trigger area.
     // NOTE The site will add the node back immediately, so maybe it will
     // becomes very busy.
-    $.remove('.BJPPopAdsOverlay');
+    $.remove('div[class$=Overlay]');
     $.block((node) => {
-      return node.localName === 'div' && node.style.zIndex === '2147483647';
+      if (node.className.match(/Overlay$/)) {
+        return true;
+      }
+      if (node.localName === 'div') {
+        return [
+          '2147483647',
+          '2',
+        ].some((z) => {
+          return z === node.style.zIndex;
+        });
+      }
+      return false;
     }, document.body);
   },
 });
