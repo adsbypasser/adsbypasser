@@ -15,7 +15,6 @@
     * galleries.bz
     * goneviral.com
     * hornywood.tv
-    * jzrputtbut.net
     * linkbabes.com
     * linkbucks.com
     * megaline.co
@@ -37,6 +36,7 @@
     * youfap.me
     * yyv.co
     * zatnawqy.net
+    * zbqhfbetlmni.net
     * zff.co
 * Mihalism Multi Host
     * 244pix.com
@@ -200,6 +200,7 @@
     * nimzshare.com
     * nudeximg.com
     * photo-up.info
+    * pic.hotimg.site
     * pic2pic.ru
     * pic2pic.site
     * pic4you.top
@@ -298,6 +299,7 @@
     * miniurl.tk
     * myam.me
     * mylink.us
+    * mylink.zone
     * shortit.in
     * shrink.gs
     * ssl.gs
@@ -679,6 +681,7 @@
     * cypt.ga
     * dmus.in
     * dzurl.ml
+    * earn-guide.com
     * earningurl.com
     * elink.link
     * filesbucks.com
@@ -687,9 +690,11 @@
     * goolink.me
     * gram.im
     * hashe.in
+    * icutit.ca
     * idsly.com
     * igram.im
     * jurl.io
+    * kokemoon.com
     * l2s.io
     * linclik.com
     * link-earn.com
@@ -704,11 +709,17 @@
     * oke.io
     * ourl.io
     * payurl.me
+    * petty.link
     * pir.im
     * premiumzen.com
+    * psl.pw
+    * safelinku.net
+    * shark.vn
     * shink.xyz
     * short.pastewma.com
     * short.pe
+    * shortad.cf
+    * shrinkearn.com
     * tl.tc
     * tmearn.com
     * trlink.in
@@ -740,6 +751,7 @@
     * 10co.me
 * openload.co
     * oload.info
+    * oload.site
     * oload.stream
     * oload.tv
     * openload.co
