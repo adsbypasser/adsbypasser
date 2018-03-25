@@ -6,6 +6,7 @@
         /^link\.animagz\.org$/,
         /^(coeg|disingkat|gunting)\.in$/,
         /^www\.(telondasmu|siotong|siherp)\.com$/,
+        /^www\.greget\.space$/,
       ],
       path: /^\/\w+$/,
     },
@@ -52,6 +53,7 @@
     case 'www.telondasmu.com':
     case 'www.siotong.com':
     case 'www.siherp.com':
+    case 'www.greget.space':
       return () => {
         const a = $('.download-link a');
         return a.href;
