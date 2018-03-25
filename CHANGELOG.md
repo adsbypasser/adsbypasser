@@ -1,3 +1,27 @@
+## TBA
+
+* fixed
+    * imagepearl.com
+    * imgdrive.net
+    * shink.me
+* added
+    * shark.vn
+    * safelinku.net
+    * kokemoon.com
+    * earn-guide.com
+    * oload.site
+    * icutit.ca
+    * psl.pw
+    * mylink.zone
+    * shortad.cf
+    * pic.hotimg.site
+    * zbqhfbetlmni.net
+    * greget.space
+    * shrinkearn.com
+    * petty.link
+* removed
+    * jzrputtbut.net
+
 ## v6.7.0
 
 * fixed
