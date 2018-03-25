@@ -142,7 +142,6 @@
     rule: {
       host: [
         /^(www\.)?img(adult|wallet|taxi)\.com$/,
-        /^(www\.)?imgdrive\.net$/,
         /^(www\.)?imgfresh\.info$/,
       ],
       path: /^\/img-.*\.html$/,
@@ -276,6 +275,18 @@
       path: /^\/img-.*\.html/,
     },
     ready: _.partial(action, '#continuebutton, #continuetoimage input[type="submit"]', 'img[class^=centred]'),
+  });
+
+  _.register({
+    rule: {
+      host: /^(www\.)?imgdrive\.net$/,
+      path: /^\/img-.*\.html$/,
+    },
+    async ready () {
+      let m = $('meta[property="og:image"]');
+      m = m.content.replace('small', 'big');
+      await $.openImage(m);
+    },
   });
 
   async function action (firstSelector, secondSelector) {

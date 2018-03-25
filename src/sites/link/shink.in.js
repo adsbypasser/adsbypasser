@@ -9,19 +9,39 @@ _.register({
     path: /^\/\w+$/,
   },
   async ready () {
-    const f = $('#skip');
-
     if (!$.$('#captcha')) {
-      // No captcha, we can redirect straight away
-      f.submit();
+      // no captcha, we can redirect straight away
+
+      // stage 1
+      let f = $.$('#skip');
+      if (f) {
+        f.submit();
+        return;
+      }
+
+      // stage 2
+      f = $('#btn-main');
+      await $.openLink(f.href);
+      return;
     }
 
     // Remove the popup trigger area.
     // NOTE The site will add the node back immediately, so maybe it will
     // becomes very busy.
-    $.remove('.BJPPopAdsOverlay');
+    $.remove('div[class$=Overlay]');
     $.block((node) => {
-      return node.localName === 'div' && node.style.zIndex === '2147483647';
+      if (node.className.match(/Overlay$/)) {
+        return true;
+      }
+      if (node.localName === 'div') {
+        return [
+          '2147483647',
+          '2',
+        ].some((z) => {
+          return z === node.style.zIndex;
+        });
+      }
+      return false;
     }, document.body);
   },
 });
