@@ -1,4 +1,4 @@
-## TBA
+## v6.8.0
 
 * fixed
     * imagepearl.com
