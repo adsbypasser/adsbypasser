@@ -1,9 +1,10 @@
 _.register({
   rule: {
-    host: /^ur\.ly$/,
+    host: [/^ur\.ly$/, /^urly\.mobi$/],
+    path: /^\/x(.+)/,
   },
-  async ready () {
-    const path = window.location.href.replace('http://ur.ly/x', 'http://ur.ly/goii/');
+  async ready() {
+    const path = window.location.href.replace("/x", "/goii/");
     await $.openLink(path);
-  },
+  }
 });
