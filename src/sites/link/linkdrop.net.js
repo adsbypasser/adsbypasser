@@ -114,6 +114,7 @@
         /^coinlink\.co$/,
         /^kokemoon\.com$/,
         /^icutit\.ca$/,
+        /^shrt10\.com$/,
       ],
     },
     async ready () {
