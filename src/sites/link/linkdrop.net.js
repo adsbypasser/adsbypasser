@@ -113,7 +113,7 @@
         /^cut4links\.com$/,
         /^coinlink\.co$/,
         /^kokemoon\.com$/,
-        /^(icutit|cutearn)\.ca$/,
+        /^(icutit|cutearn|earnbig)\.ca$/,
       ],
     },
     async ready () {
