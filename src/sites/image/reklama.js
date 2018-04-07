@@ -271,7 +271,7 @@
 
   _.register({
     rule: {
-      host: /^img\.yt$/,
+      host: /^imx\.to$/,
       path: /^\/img-.*\.html/,
     },
     ready: _.partial(action, '#continuebutton, #continuetoimage input[type="submit"]', 'img[class^=centred]'),
