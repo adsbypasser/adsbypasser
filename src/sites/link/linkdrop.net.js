@@ -112,6 +112,7 @@
         /^premiumzen\.com$/,
         /^cut4links\.com$/,
         /^coinlink\.co$/,
+        /^man2link\.com$/,
         /^kokemoon\.com$/,
         /^icutit\.ca$/,
       ],
