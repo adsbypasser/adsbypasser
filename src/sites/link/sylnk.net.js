@@ -119,7 +119,7 @@ _.register({
         /^ww3\.manteb\.in$/,
         /^link\.filmku\.net$/,
         /^www\.muucih\.com$/,
-        /^(naisho|filmku)\.lompat\.in$/,
+        /^(naisho|filmku|henpoi)\.lompat\.in$/,
         /^edogawa\.lon\.pw$/,
         /^telolet\.in$/,
       ],
