@@ -119,7 +119,7 @@ _.register({
         /^ww3\.manteb\.in$/,
         /^link\.filmku\.net$/,
         /^www\.muucih\.com$/,
-        /^(naisho|filmku)\.lompat\.in$/,
+        /^(naisho|filmku|henpoi)\.lompat\.in$/,
         /^edogawa\.lon\.pw$/,
         /^telolet\.in$/,
       ],
@@ -205,6 +205,16 @@ _.register({
     const a = $('div.kiri > center > a');
     await $.openLink(a.href);
   },
+});
+
+_.register({
+  rule: {
+    host: /^aw-games\.net$/,
+  },
+  async ready () {
+    const a = $('.iklan a');
+    await $.openLink(a.href);
+  }
 });
 
 _.register({
