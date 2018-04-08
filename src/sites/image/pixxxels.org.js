@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^pixxxels\.org$/,
+    host: /^pixxxels\.cc$/,
   },
   async ready () {
     const img = $.$('#main-image');
