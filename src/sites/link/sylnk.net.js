@@ -209,6 +209,16 @@ _.register({
 
 _.register({
   rule: {
+    host: /^aw-games\.net$/,
+  },
+  async ready () {
+    const a = $('.iklan a');
+    await $.openLink(a.href);
+  }
+});
+
+_.register({
+  rule: {
     host: /^susutinv2\.com$/,
   },
   async ready () {
