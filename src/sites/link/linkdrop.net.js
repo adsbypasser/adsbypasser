@@ -16,6 +16,7 @@
         /^(urlcloud|mitly)\.us$/,
         /^adpop\.me$/,
         /^wi\.cr$/,
+        /^clk\.press$/,
         /^tui\.click$/,
         /^megaurl\.in$/,
       ],
