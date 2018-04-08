@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^imgchili\.(com|net)$/,
-      /^(www\.)?pixhost\.org$/,
+      /^(www\.)?pixhost\.to$/,
     ],
     path: /^\/show\//,
   },

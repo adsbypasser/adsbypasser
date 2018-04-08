@@ -3,7 +3,7 @@ _.register({
     host: [
       /^www\.pixsense\.net$/,
       /^www\.imagespicy\.site$/,
-      /^www\.imgsky\.net$/,
+      /^www\.(imgsky|imgfile)\.net$/,
     ],
     path: /^\/site\/v\/\d+$/,
   },

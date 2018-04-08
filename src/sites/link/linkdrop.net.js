@@ -16,6 +16,7 @@
         /^(urlcloud|mitly)\.us$/,
         /^adpop\.me$/,
         /^wi\.cr$/,
+        /^clk\.press$/,
         /^tui\.click$/,
         /^megaurl\.in$/,
       ],
@@ -114,6 +115,7 @@
         /^coinlink\.co$/,
         /^kokemoon\.com$/,
         /^(icutit|cutearn|earnbig)\.ca$/,
+        /^(www\.)?viralukk\.com$/,
       ],
     },
     async ready () {
