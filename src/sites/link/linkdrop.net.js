@@ -114,6 +114,7 @@
         /^coinlink\.co$/,
         /^kokemoon\.com$/,
         /^icutit\.ca$/,
+        /^(www\.)?viralukk\.com$/,
       ],
     },
     async ready () {
