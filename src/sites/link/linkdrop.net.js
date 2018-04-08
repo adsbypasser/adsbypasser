@@ -116,6 +116,7 @@
         /^kokemoon\.com$/,
         /^(icutit|cutearn|earnbig)\.ca$/,
         /^(www\.)?viralukk\.com$/,
+        /^shrt10\.com$/,
       ],
     },
     async ready () {
