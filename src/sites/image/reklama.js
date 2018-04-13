@@ -270,16 +270,13 @@
   });
 
   _.register({
-    rule: [
-      {
-        host: /^imx\.to$/,
-        path: /^\/img-.*\.html/,
-      },
-      {
-        host: /^imx\.to$/,
-        path: /^\/i\/.*/,
-      },
-    ],
+    rule: {
+      host: /^imx\.to$/,
+      path: [
+        /^\/img-.*\.html/,
+        /^\/i\/.*/,
+      ],
+    },
     ready: _.partial(action, '#continuebutton, #continuetoimage input[type="submit"]', 'img[class^=centred]'),
   });
 
