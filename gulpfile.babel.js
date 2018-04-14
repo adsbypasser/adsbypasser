@@ -5,8 +5,6 @@ import util from 'util';
 
 import _ from 'lodash';
 import gulp from 'gulp';
-import gulpLoadPlugins from 'gulp-load-plugins';
-import webpack from 'webpack';
 
 import {
   allBuildOptions,
@@ -15,6 +13,7 @@ import {
   finalizeMetadata,
   finalizeNamespace,
   imageBuildOptions,
+  plugins,
 } from './infra/building/lib.js';
 import {
   getSummaryForGitHubPages,
@@ -22,15 +21,6 @@ import {
 
 
 const ghpagesRepoURL = 'git@github.com:adsbypasser/adsbypasser.github.io.git';
-const plugins = gulpLoadPlugins({
-  overridePattern: false,
-  pattern: [
-    'webpack-stream',
-  ],
-  rename: {
-    'webpack-stream': 'webpack',
-  },
-});
 const output = {
   toString () {
     return path.resolve(__dirname, './build');
@@ -76,7 +66,7 @@ gulp.task('test:mocha:core', () => {
           'node_modules',
         ],
       },
-    }, webpack))
+    }))
     .pipe(plugins.rename(`core.js`))
     .pipe(gulp.dest(output.to('tests')));
 });
@@ -297,7 +287,7 @@ function createBodyTask (supportImage, supportLagacy) {
         module: {
           rules: compileRules,
         },
-      }, webpack))
+      }))
       .pipe(plugins.stripComments())
       .pipe(plugins.removeEmptyLines())
       .pipe(plugins.rename(`${featureName}.${ecmaName}.js`))

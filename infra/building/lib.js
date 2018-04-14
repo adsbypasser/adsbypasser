@@ -1,16 +1,9 @@
-export {
-  allBuildOptions,
-  cartesianProductOf,
-  finalizeHTML,
-  finalizeMetadata,
-  finalizeNamespace,
-  imageBuildOptions,
-};
-
 import fs from 'fs';
 
 import _ from 'lodash';
 import findup from 'findup-sync';
+import gulpLoadPlugins from 'gulp-load-plugins';
+import webpack from 'webpack';
 
 
 const buildOptions = {
@@ -18,6 +11,25 @@ const buildOptions = {
   supportLegacy: [false, true],
 };
 const packageJSON = parsePackageJSON();
+// Map `webpack-stream` to `webpack`, instead of `webpackStream`.
+const plugins = gulpLoadPlugins({
+  overridePattern: false,
+  pattern: [
+    'webpack-stream',
+  ],
+  rename: {
+    'webpack-stream': 'webpack',
+  },
+  // Tell `webpack-stream` to use latest webpack.
+  postRequireTransforms: {
+    webpack (owp) {
+      return (arg) => {
+        arg.mode = 'none';
+        return owp(arg, webpack);
+      };
+    },
+  },
+});
 
 
 function * cartesianProductOf (...args) {
@@ -91,3 +103,14 @@ function finalizeHTML (options, content) {
   s = s(options);
   return s;
 }
+
+
+export {
+  allBuildOptions,
+  cartesianProductOf,
+  finalizeHTML,
+  finalizeMetadata,
+  finalizeNamespace,
+  imageBuildOptions,
+  plugins,
+};

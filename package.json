@@ -31,7 +31,7 @@
     "lodash": "^4.17.4",
     "marked": "^0.3.19",
     "mocha": "^3.5.3",
-    "webpack": "^3.11.0",
+    "webpack": "^4.5.0",
     "webpack-stream": "^4.0.3"
   },
   "scripts": {
