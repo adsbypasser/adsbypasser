@@ -31,12 +31,13 @@ function fastBuild () {
     stdio: 'inherit',
   });
   // avoid TLE
-  setTimeout(() => {
+  let k = setTimeout(() => {
     p.kill('SIGTERM');
   }, 10 * 1000);
 
   return new Promise((resolve, reject) => {
     p.on('exit', (code, signal) => {
+      clearTimeout(k);
       if (code === 0) {
         resolve();
         return;
