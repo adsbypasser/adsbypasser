@@ -7,6 +7,7 @@
     "url": "https://github.com/adsbypasser/adsbypasser.git"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.2",
@@ -36,6 +37,7 @@
   "scripts": {
     "build": "gulp",
     "clean": "gulp clean",
+    "server": "babel-node infra/building/server.babel.js",
     "test": "npm run clean && gulp test",
     "ghpages": "npm run clean && gulp ghpages",
     "mirror": "npm run clean && gulp mirror"
