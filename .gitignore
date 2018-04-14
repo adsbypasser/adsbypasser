@@ -1,8 +1,6 @@
 .DS_Store
 /node_modules
-.deploy.json
 .idea/
 *.log
-/.save.sh
 /build
 /package-lock.json
