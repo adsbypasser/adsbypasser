@@ -1,4 +1,4 @@
-## TBA
+## v6.9.0
 
 * fixed
     * openload.co
