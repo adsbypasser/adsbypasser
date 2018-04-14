@@ -37,7 +37,7 @@
   "scripts": {
     "build": "gulp",
     "clean": "gulp clean",
-    "server": "babel-node infra/building/server.babel.js",
+    "start": "babel-node infra/building/server.babel.js",
     "test": "npm run clean && gulp test",
     "ghpages": "npm run clean && gulp ghpages",
     "mirror": "npm run clean && gulp mirror"
