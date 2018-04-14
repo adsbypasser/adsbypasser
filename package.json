@@ -18,7 +18,7 @@
     "gulp": "^3.9.1",
     "gulp-change": "^1.0.0",
     "gulp-clean": "^0.3.2",
-    "gulp-cli": "^1.4.0",
+    "gulp-cli": "^2.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-eslint": "^4.0.0",
     "gulp-inject-string": "^1.1.0",
