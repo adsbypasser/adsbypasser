@@ -120,7 +120,6 @@
     * img-view.net
     * img-zone.com
     * img.spicyzilla.com
-    * img.yt
     * img22.com
     * img2share.com
     * img4sharing.com
@@ -186,6 +185,7 @@
     * imgwet.com (captcha)
     * imgxyz.net
     * imgzizi.xyz
+    * imx.to
     * ipicture.su
     * jav-hentai.host
     * javtotal.com
@@ -266,7 +266,7 @@
 * imgchili
     * imgchili.com
     * imgchili.net
-    * pixhost.org
+    * pixhost.to
 * imgdino
     * imgdino.com
     * imgtiger.com
@@ -535,10 +535,12 @@
     * amankan.link
     * ani-share.com
     * anisubsia.tk
+    * apasih.pw
     * auto14.pw
     * autofans.pw
     * autolinkach.com
     * autorp.us
+    * aw-games.net
     * awsubs.cf
     * awsubsco.ga
     * azhie.net
@@ -559,6 +561,7 @@
     * getcomics.gq
     * gtaind.com
     * healthygress24.ga
+    * henpoi.lompat.in
     * insurance1.tech
     * kombatch.loncat.pw
     * landscapenature.pw
@@ -669,6 +672,7 @@
     * bit-url.com
     * bol.tl
     * clik.pw
+    * clk.press
     * coshink.co
     * cuon.io
     * curs.io
@@ -676,12 +680,14 @@
     * cut-urls.com
     * cut-w.in
     * cut4links.com
+    * cutearn.ca
     * cutwi.in
     * cutwin.com
     * cypt.ga
     * dmus.in
     * dzurl.ml
     * earn-guide.com
+    * earnbig.ca
     * earningurl.com
     * elink.link
     * filesbucks.com
@@ -720,6 +726,7 @@
     * short.pe
     * shortad.cf
     * shrinkearn.com
+    * shrt10.com
     * tl.tc
     * tmearn.com
     * trlink.in
@@ -730,6 +737,7 @@
     * urlcloud.us
     * urle.co
     * urlst.me
+    * viralukk.com
     * weefy.me
     * wi.cr
     * wolink.in
@@ -763,6 +771,7 @@
     * cshort.org
 * pixsense.net
     * imagespicy.site
+    * imgfile.net
     * imgsky.net
     * pixsense.net
 * pics-money.ru
@@ -772,6 +781,9 @@
 * short.am
     * short.am
     * srt.am
+* ur.ly
+    * ur.ly
+    * urly.mobi
 * else
     * 01.nl
     * 1be.biz
@@ -831,6 +843,7 @@
     * ehdwallpapers.org
     * elde.me
     * embedupload.com
+    * ewa.ac
     * filoops.info
     * fit.sh
     * fiuxy.co
@@ -941,7 +954,7 @@
     * pimpandhost.com
     * pixhub.eu
     * pixroute.com
-    * pixxxels.org
+    * pixxxels.cc
     * pornimagex.com
     * preview.rlu.ru
     * prntscr.com
