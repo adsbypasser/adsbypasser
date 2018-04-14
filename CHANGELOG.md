@@ -1,3 +1,31 @@
+## TBA
+
+* fixed
+    * openload.co
+* added
+    * imgfile.net
+    * henpoi.lompat.in
+    * aw-games.net
+    * viralukk.com
+    * clk.press
+    * pixxxels.cc
+    * imx.to
+    * pixhost.to
+    * gsul.me
+    * getsl.me
+    * gsur.in
+    * cutearn.ca
+    * earnbig.ca
+    * shrt10.com
+    * ur.ly
+    * urly.mobi
+    * apasih.pw
+    * ewa.ac
+* removed
+    * pixxxels.org
+    * img.yt
+    * pixhost.org
+
 ## v6.8.0
 
 * fixed
