@@ -141,7 +141,6 @@
   _.register({
     rule: {
       host: [
-        /^(www\.)?img(adult|wallet|taxi)\.com$/,
         /^(www\.)?imgfresh\.info$/,
       ],
       path: /^\/img-.*\.html$/,
@@ -282,7 +281,10 @@
 
   _.register({
     rule: {
-      host: /^(www\.)?imgdrive\.net$/,
+      host: [
+        /^(www\.)?imgdrive\.net$/,
+        /^(www\.)?img(taxi|wallet|adult)\.com$/,
+      ],
       path: /^\/img-.*\.html$/,
     },
     async ready () {
