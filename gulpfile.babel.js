@@ -5,24 +5,22 @@ import util from 'util';
 
 import _ from 'lodash';
 import gulp from 'gulp';
-import gulpLoadPlugins from 'gulp-load-plugins';
-import webpack from 'webpack';
 
+import {
+  allBuildOptions,
+  cartesianProductOf,
+  finalizeHTML,
+  finalizeMetadata,
+  finalizeNamespace,
+  imageBuildOptions,
+  plugins,
+} from './infra/building/lib.js';
 import {
   getSummaryForGitHubPages,
 } from './infra/website/summary.js';
 
 
-const packageJSON = parsePackageJSON();
-const plugins = gulpLoadPlugins({
-  overridePattern: false,
-  pattern: [
-    'webpack-stream',
-  ],
-  rename: {
-    'webpack-stream': 'webpack',
-  },
-});
+const ghpagesRepoURL = 'git@github.com:adsbypasser/adsbypasser.github.io.git';
 const output = {
   toString () {
     return path.resolve(__dirname, './build');
@@ -30,10 +28,6 @@ const output = {
   to (path_) {
     return path.resolve(this.toString(), path_);
   },
-};
-const buildOptions = {
-  supportImage: [true, false],
-  supportLegacy: [false, true],
 };
 
 
@@ -72,7 +66,7 @@ gulp.task('test:mocha:core', () => {
           'node_modules',
         ],
       },
-    }, webpack))
+    }))
     .pipe(plugins.rename(`core.js`))
     .pipe(gulp.dest(output.to('tests')));
 });
@@ -142,7 +136,6 @@ gulp.task('ghpages:less', ['ghpages:clone'], () => {
 
 gulp.task('ghpages:clone', async () => {
   const repoPath = output.to('ghpages');
-  const data = require('./.deploy.json');
 
   const stat = util.promisify(fs.stat);
   try {
@@ -157,7 +150,7 @@ gulp.task('ghpages:clone', async () => {
   const cloneTask = new Promise((resolve, reject) => {
     const p = child_process.spawn('git', [
       'clone',
-      data.ghpages.REPO,
+      ghpagesRepoURL,
       '-b',
       'master',
       repoPath,
@@ -294,7 +287,7 @@ function createBodyTask (supportImage, supportLagacy) {
         module: {
           rules: compileRules,
         },
-      }, webpack))
+      }))
       .pipe(plugins.stripComments())
       .pipe(plugins.removeEmptyLines())
       .pipe(plugins.rename(`${featureName}.${ecmaName}.js`))
@@ -358,76 +351,4 @@ function createCopyLegacyTasks (taskName) {
     }
   }
   gulp.task(taskName, subTasks);
-}
-
-
-function finalizeMetadata (supportImage, supportLagacy, content) {
-  const featureName = supportImage ? 'full' : 'lite';
-  const ecmaName = supportLagacy ? 'es5' : 'es7';
-  const featurePostfix = supportImage ? '' : ' Lite';
-  const ecmaPostfix = !supportLagacy ? '' : ' Legacy';
-
-  let s = _.template(content);
-  s = s({
-    version: packageJSON.version,
-    title: `AdsBypasser${featurePostfix}${ecmaPostfix}`,
-    supportImage,
-    buildName: `${featureName}.${ecmaName}`,
-  });
-  s = [
-    '// ==UserScript==\n',
-    s,
-    '// ==/UserScript==\n',
-  ];
-  return s.join('');
-}
-
-
-function finalizeNamespace (supportImage, content) {
-  let s = _.template(content);
-  s = s({
-    supportImage,
-  });
-  return s;
-}
-
-
-function finalizeHTML (options, content) {
-  let s = _.template(content);
-  s = s(options);
-  return s;
-}
-
-
-function parsePackageJSON () {
-  const pkg = fs.readFileSync('./package.json', {
-    encoding: 'utf-8',
-  });
-  return JSON.parse(pkg);
-}
-
-
-function * cartesianProductOf (...args) {
-  if (args.length < 1) {
-    yield [];
-    return;
-  }
-
-  const headSubList = args[0];
-  for (const item of headSubList) {
-    const tailLists = args.slice(1);
-    for (const items of cartesianProductOf(...tailLists)) {
-      yield [item].concat(items);
-    }
-  }
-}
-
-
-function * allBuildOptions () {
-  yield * cartesianProductOf(buildOptions.supportImage, buildOptions.supportLegacy);
-}
-
-
-function * imageBuildOptions () {
-  yield * cartesianProductOf(buildOptions.supportImage);
 }

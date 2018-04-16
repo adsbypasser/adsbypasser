@@ -63,6 +63,7 @@
           /^ipicture\.su$/,
           /^acidimg\.cc$/,
           /^s\.imghost\.top$/,
+          /^pic\.hotimg\.site$/,
         ],
         path: /^\/img-.*\.html/,
       },
@@ -141,7 +142,7 @@
     rule: {
       host: [
         /^(www\.)?img(adult|wallet|taxi)\.com$/,
-        /^(www\.)?imgdrive\.net$/,
+        /^(www\.)?imgfresh\.info$/,
       ],
       path: /^\/img-.*\.html$/,
     },
@@ -259,7 +260,7 @@
       },
       {
         host: /^imgprime\.com$/,
-        path: /^\/img3-.*\.html$/,
+        path: /^\/img.*\.html$/,
       },
     ],
     async ready () {
@@ -270,10 +271,25 @@
 
   _.register({
     rule: {
-      host: /^img\.yt$/,
-      path: /^\/img-.*\.html/,
+      host: /^imx\.to$/,
+      path: [
+        /^\/img-.*\.html/,
+        /^\/i\/.*/,
+      ],
     },
     ready: _.partial(action, '#continuebutton, #continuetoimage input[type="submit"]', 'img[class^=centred]'),
+  });
+
+  _.register({
+    rule: {
+      host: /^(www\.)?imgdrive\.net$/,
+      path: /^\/img-.*\.html$/,
+    },
+    async ready () {
+      let m = $('meta[property="og:image"]');
+      m = m.content.replace('small', 'big');
+      await $.openImage(m);
+    },
   });
 
   async function action (firstSelector, secondSelector) {

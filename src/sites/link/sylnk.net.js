@@ -40,7 +40,8 @@ _.register({
         /^gadget13\.com$/,
         /^azhie\.net$/,
         /^ww2\.awsubs\.co$/,
-        /^autorp\.us$/
+        /^autorp\.us$/,
+        /^plantaheim\.web\.id$/,
       ],
       query: /^\?d=([a-zA-Z0-9/=]+)$/,
     },
@@ -118,7 +119,7 @@ _.register({
         /^ww3\.manteb\.in$/,
         /^link\.filmku\.net$/,
         /^www\.muucih\.com$/,
-        /^(naisho|filmku)\.lompat\.in$/,
+        /^(naisho|filmku|henpoi)\.lompat\.in$/,
         /^edogawa\.lon\.pw$/,
         /^telolet\.in$/,
       ],
@@ -158,8 +159,10 @@ _.register({
       host: [
         /^(designinghomey|ani-share|sinopsisfilmku|autolinkach)\.com$/,
         /^motonews\.club$/,
-        /^(autofans|landscapenature)\.pw$/,
+        /^(autofans|landscapenature|apasih)\.pw$/,
         /^(sidespace|erogedownload)\.net$/,
+        /^otoviral\.racing$/,
+        /^www\.lifesurance\.info$/,
       ],
       query: /get=([^&]+)/,
     },
@@ -202,6 +205,16 @@ _.register({
     const a = $('div.kiri > center > a');
     await $.openLink(a.href);
   },
+});
+
+_.register({
+  rule: {
+    host: /^aw-games\.net$/,
+  },
+  async ready () {
+    const a = $('.iklan a');
+    await $.openLink(a.href);
+  }
 });
 
 _.register({

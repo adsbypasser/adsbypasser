@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^openload\.co$/,
-      /^oload\.(stream|info|tv)$/,
+      /^oload\.(stream|info|site|tv)$/,
     ],
     path: /^\/f\/.*/,
   },
@@ -21,7 +21,7 @@ _.register({
     dlCtn.style.display = 'inline-block';
 
     const dlBtn = $('a', dlCtn);
-    const ePath = $('#streamurl');
+    const ePath = $('#DtsBlkVFQx');
     dlBtn.href = '/stream/' + ePath.textContent;
 
     const videoCtn = $.$('.videocontainer');

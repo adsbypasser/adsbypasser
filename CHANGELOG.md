@@ -1,3 +1,114 @@
+## v6.9.0
+
+* fixed
+    * openload.co
+* added
+    * imgfile.net
+    * henpoi.lompat.in
+    * aw-games.net
+    * viralukk.com
+    * clk.press
+    * pixxxels.cc
+    * imx.to
+    * pixhost.to
+    * gsul.me
+    * getsl.me
+    * gsur.in
+    * cutearn.ca
+    * earnbig.ca
+    * shrt10.com
+    * ur.ly
+    * urly.mobi
+    * apasih.pw
+    * ewa.ac
+* removed
+    * pixxxels.org
+    * img.yt
+    * pixhost.org
+
+## v6.8.0
+
+* fixed
+    * imagepearl.com
+    * imgdrive.net
+    * shink.me
+* added
+    * shark.vn
+    * safelinku.net
+    * kokemoon.com
+    * earn-guide.com
+    * oload.site
+    * icutit.ca
+    * psl.pw
+    * mylink.zone
+    * shortad.cf
+    * pic.hotimg.site
+    * zbqhfbetlmni.net
+    * greget.space
+    * shrinkearn.com
+    * petty.link
+* removed
+    * jzrputtbut.net
+
+## v6.7.0
+
+* fixed
+    * imgprime.com
+    * openload.co
+    * coinlink.co
+    * clictune.com
+    * trlink.in
+* added
+    * 123link.pw
+    * gurl.ly
+    * adpop.me
+    * wi.cr
+    * short.pe
+    * srt.am
+    * linkrex.net
+    * coshink.co
+    * urlcloud.us
+    * 3rabshort.com
+    * gsul.me
+    * getsl.me
+    * adbitly.in
+    * gg-l.xyz
+    * mitly.us
+    * tui.click
+    * gsur.in
+    * shink.xyz
+    * mlink.club
+    * dzurl.ml
+    * zlshorte.net
+    * igram.im
+    * gram.im
+    * wolink.in
+    * bit-url.com
+    * git.tc
+    * link4.me
+    * premiumzen.com
+    * megaurl.in
+    * siotong.com
+    * siherp.com
+    * otoviral.racing
+    * lifesurance.info
+    * cut4links.com
+    * plantaheim.web.id
+    * imagexport.com
+    * adshort.pro
+    * cut-w.in
+    * cut-earn.com
+    * cuon.io
+    * zeiz.me
+    * adsrt.com
+    * imgfresh.info
+    * 1ink.cc
+    * jurl.io
+    * adslink.pw
+* removed
+    * zez.io
+    * coshurl.co
+
 ## v6.6.0
 
 * fixed

@@ -2,7 +2,10 @@ _.register({
   rule: {
     host: [
       /^gsurl\.(me|in)$/,
+      /^(gsul|getsl)\.me$/,
+      /^gsur\.in$/,
       /^g5u\.pw$/,
+      /^gurl\.ly$/,
     ],
   },
   async ready () {
