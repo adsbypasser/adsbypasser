@@ -11,7 +11,7 @@
         /^earningurl\.com$/,
         /^earn-guide\.com$/,
         /^(cutwin|cut-earn)\.com$/,
-        /^(cutwi|cut-w)\.in$/,
+        /^(cutwi|cut-w|cutl)\.in$/,
         /^(www\.)?(ourl|jurl)\.io$/,
         /^(urlcloud|mitly)\.us$/,
         /^adpop\.me$/,
