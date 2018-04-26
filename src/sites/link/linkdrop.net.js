@@ -117,6 +117,7 @@
         /^(icutit|cutearn|earnbig)\.ca$/,
         /^(www\.)?viralukk\.com$/,
         /^shrt10\.com$/,
+        /^top9space\.com$/,
       ],
     },
     async ready () {
