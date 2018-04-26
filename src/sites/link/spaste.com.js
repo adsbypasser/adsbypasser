@@ -23,8 +23,8 @@ _.register({
     if ($captcha[0]) {
       $captcha.click();
       for (let i = 0; i < 3; i++) {
-        let word = $('#currentCapQue').text();
-        $("[data-id='" + word + "']").delay(100).click();
+        const word = $('#currentCapQue').text();
+        $('[data-id=\'' + word + '\']').delay(100).click();
       }
       $('#template-contactform-submit').click();
     }
