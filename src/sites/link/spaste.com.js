@@ -12,3 +12,21 @@ _.register({
     await $.openLink(url);
   },
 });
+
+_.register({
+  rule: {
+    host: /^www\.spaste\.com$/,
+    path: /^\/s\/\w+$/,
+  },
+  async ready() {
+    const $captcha = $('#globalCaptchaConfirm');
+    if ($captcha[0]) {
+      $captcha.click();
+      for (let i = 0; i < 3; i++) {
+        const word = $('#currentCapQue').text();
+        $('[data-id=\'' + word + '\']').delay(100).click();
+      }
+      $('#template-contactform-submit').click();
+    }
+  },
+});
