@@ -12,7 +12,7 @@
     },
     async ready (m) {
       const mapper = hostMapper(m.host[0]);
-      const b64 = mapper().match(/\?r=(\w+={0,2}?)/);
+      const b64 = mapper().match(/\?r=([\w/]+={0,2})/);
 
       await $.openLink(atob(b64[1]));
     },
