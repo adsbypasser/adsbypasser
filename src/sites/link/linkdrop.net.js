@@ -118,6 +118,7 @@
         /^(www\.)?viralukk\.com$/,
         /^shrt10\.com$/,
         /^mikymoons\.com$/,
+        /^spamlink\.org$/,
       ],
     },
     async ready () {
