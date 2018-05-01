@@ -95,7 +95,7 @@
         /^www\.worldhack\.net$/,
         /^123link\.(io|co|press|pw)$/,
         /^pir\.im$/,
-        /^bol\.tl$/,
+        /^(www\.)?(pnd|bol)\.tl$/,
         /^(tl|adfly|git)\.tc$/,
         /^(adfu|linkhits)\.us$/,
         /^short\.pastewma\.com$/,
