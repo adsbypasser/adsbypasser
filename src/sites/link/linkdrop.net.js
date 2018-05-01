@@ -111,7 +111,7 @@
         /^weefy\.me$/,
         /^bit-url\.com$/,
         /^premiumzen\.com$/,
-        /^cut4links\.com$/,
+        /^cut4(links|link)\.com$/,
         /^coinlink\.co$/,
         /^kokemoon\.com$/,
         /^(icutit|cutearn|earnbig)\.ca$/,
