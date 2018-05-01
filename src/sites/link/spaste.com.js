@@ -13,20 +13,24 @@ _.register({
   },
 });
 
+
 _.register({
   rule: {
     host: /^www\.spaste\.com$/,
     path: /^\/s\/\w+$/,
   },
-  async ready() {
-    const $captcha = $('#globalCaptchaConfirm');
-    if ($captcha[0]) {
-      $captcha.click();
-      for (let i = 0; i < 3; i++) {
-        const word = $('#currentCapQue').text();
-        $('[data-id=\'' + word + '\']').delay(100).click();
-      }
-      $('#template-contactform-submit').click();
+  async ready () {
+    const captcha = $('#globalCaptchaConfirm');
+    captcha.click();
+    // need to wait for animation
+    await _.wait(1000);
+
+    for (let i = 0; i < 3; ++i) {
+      const word = $('#currentCapQue').textContent;
+      await _.wait(100);
+      $(`[data-id='${word}']`).click();
     }
+
+    $('#template-contactform-submit').click();
   },
 });
