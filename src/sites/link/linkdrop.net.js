@@ -119,6 +119,7 @@
         /^shrt10\.com$/,
         /^mikymoons\.com$/,
         /^spamlink\.org$/,
+        /^top9space\.com$/,
       ],
     },
     async ready () {
