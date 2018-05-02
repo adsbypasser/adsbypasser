@@ -13,13 +13,3 @@ _.register({
     await $.openLink(a.href);
   },
 });
-
-_.register({
-  rule: {
-    host: /^susutin\.com$/,
-  },
-  async ready () {
-    const s = $.searchFromScripts(/="([^"]+)",/);
-    await $.openLink(s[1]);
-  },
-});
