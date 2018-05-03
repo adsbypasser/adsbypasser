@@ -105,7 +105,6 @@ _.register({
         // safelinkreviewer.com
         // safelinkreview.co
         /^safelink(s?review(er)?)\.com?$/,
-        /^susutin\.com$/,
         /^(getcomics|miuitutorial)\.gq$/,
         /^awsubs\.cf$/,
         /^awsubsco\.ga$/,
@@ -215,20 +214,6 @@ _.register({
     const a = $('.iklan a');
     await $.openLink(a.href);
   }
-});
-
-_.register({
-  rule: {
-    host: /^susutinv2\.com$/,
-  },
-  async ready () {
-    const s = $.searchFromScripts(/="([^"]+)",/);
-    if (!s) {
-      _.warn('site changed');
-      return;
-    }
-    await $.openLink(s[1]);
-  },
 });
 
 _.register({
