@@ -216,6 +216,20 @@ _.register({
   }
 });
 
+-_.register({
+-  rule: {
+-    host: /^susutinv2\.com$/,
+-  },
+-  async ready () {
+-    const s = $.searchFromScripts(/="([^"]+)",/);
+-    if (!s) {
+-      _.warn('site changed');
+-      return;
+-    }
+-    await $.openLink(s[1]);
+-  },
+-});
+-
 _.register({
   rule: {
     host: /^www\.njiir\.com$/,
