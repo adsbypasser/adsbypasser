@@ -44,7 +44,7 @@
         /^oke\.io$/,
         /^linkrex\.net$/,
         /^safelinku\.net$/,
-        /^3(rabshort|bst)\.(com|co)$/,
+        /^3(rabshort|bst|rabcut)\.(com|co)$/,
         /^shink\.xyz$/,
         /^mlink\.club$/,
         /^zlshorte\.net$/,
