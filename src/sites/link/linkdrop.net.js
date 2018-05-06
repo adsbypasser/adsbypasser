@@ -13,7 +13,7 @@
         /^(cutwin|cut-earn)\.com$/,
         /^(cutwi|cut-w)\.in$/,
         /^(www\.)?(ourl|jurl)\.io$/,
-        /^(urlcloud|mitly)\.us$/,
+        /^mitly\.us$/,
         /^adpop\.me$/,
         /^wi\.cr$/,
         /^tui\.click$/,
@@ -51,6 +51,7 @@
         /^(trlink|wolink)\.in$/,
         /^clk\.press$/,
         /^short\.pe$/,
+        /^urlcloud\.us$/,
       ],
     },
     async ready () {
