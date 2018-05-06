@@ -105,7 +105,6 @@ _.register({
         // safelinkreviewer.com
         // safelinkreview.co
         /^safelink(s?review(er)?)\.com?$/,
-        /^susutin\.com$/,
         /^(getcomics|miuitutorial)\.gq$/,
         /^awsubs\.cf$/,
         /^awsubsco\.ga$/,
