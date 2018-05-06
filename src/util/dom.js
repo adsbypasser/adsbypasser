@@ -64,7 +64,7 @@ function toDOM (rawHTML) {
 function remove (selector, context) {
   const nodes = querySelectorAll(selector, context);
   forEach(nodes, (e) => {
-    e.parentNode.removeChild(e);
+    e.remove();
   });
 }
 
