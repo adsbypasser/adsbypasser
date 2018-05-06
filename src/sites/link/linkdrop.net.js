@@ -50,6 +50,7 @@
         /^(igram|gram)\.im$/,
         /^(trlink|wolink)\.in$/,
         /^clk\.press$/,
+        /^short\.pe$/,
       ],
     },
     async ready () {
@@ -72,8 +73,10 @@
         return;
       }
 
-      await _.wait(8000);
-      sendRequest(f);
+      while (true) {
+        await _.wait(2000);
+        sendRequest(f);
+      }
     },
   });
 
@@ -82,7 +85,6 @@
       host: [
         /^adlink\.guru$/,
         /^(clik|psl)\.pw$/,
-        /^short\.pe$/,
         /^coshink\.co$/,
         /^(curs|cuon)\.io$/,
         /^shark\.vn$/,
