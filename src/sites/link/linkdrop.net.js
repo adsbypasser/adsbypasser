@@ -16,7 +16,6 @@
         /^(urlcloud|mitly)\.us$/,
         /^adpop\.me$/,
         /^wi\.cr$/,
-        /^clk\.press$/,
         /^tui\.click$/,
         /^megaurl\.in$/,
       ],
@@ -50,16 +49,22 @@
         /^zlshorte\.net$/,
         /^(igram|gram)\.im$/,
         /^(trlink|wolink)\.in$/,
+        /^clk\.press$/,
       ],
     },
     async ready () {
-      $.remove('iframe');
-
       let f = $.$('#captchaShortlink');
       if (f) {
+        $.remove('[class$="Overlay"]');
+        $.block('[class$="Overlay"]', document.body);
+
         // recaptcha
+        _.info('recaptcha detected, stop');
         return;
       }
+
+      $.remove('iframe');
+
       f = getForm();
       if (!f) {
         f = $('#link-view');
@@ -67,6 +72,7 @@
         return;
       }
 
+      await _.wait(8000);
       sendRequest(f);
     },
   });
