@@ -5,6 +5,9 @@ import {
   find,
   none,
 } from 'util/core';
+import {
+  debug,
+} from 'util/logger';
 
 
 class DomNotFoundError extends AdsBypasserError {
@@ -64,6 +67,7 @@ function toDOM (rawHTML) {
 function remove (selector, context) {
   const nodes = querySelectorAll(selector, context);
   forEach(nodes, (e) => {
+    debug('removed', e);
     e.remove();
   });
 }
