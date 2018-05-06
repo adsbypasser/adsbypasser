@@ -1,3 +1,27 @@
+## TBA
+
+* fixed
+    * mirrorcreator.com
+    * imgadult.com
+    * imgwallet.com
+    * imgtaxi.com
+    * telondasmu.com
+    * imgprime.com
+* added
+    * cutl.in
+    * cut4link.com
+    * mikymoons.com
+    * twik.pw
+    * spamlink.org
+    * pnd.tl
+    * top9space.com
+    * mylink.zone
+    * 3bst.co
+* changed
+    * recaptcha for spaste.com
+* removed
+    * clictune.com
+
 ## v6.9.0
 
 * fixed
