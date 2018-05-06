@@ -7,6 +7,12 @@
     * imgtaxi.com
     * telondasmu.com
     * imgprime.com
+    * clk.press
+    * short.pe
+    * urlcloud.us
+    * ourl.io
+    * linkdrop.net
+    * adf.ly
 * added
     * cutl.in
     * cut4link.com
@@ -21,6 +27,8 @@
     * recaptcha for spaste.com
 * removed
     * clictune.com
+    * susutin.com
+    * shortit.in
 
 ## v6.9.0
 
