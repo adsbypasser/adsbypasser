@@ -18,3 +18,15 @@ _.register({
     await $.openLink(a);
   },
 });
+
+
+_.register({
+  rule: {
+    host: /^(www\.)?mirrorcreator\.com$/,
+    path: /^\/files\//,
+  },
+  async ready () {
+    const b = $('.downloadarea.downlinks form button');
+    b.click();
+  },
+});

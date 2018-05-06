@@ -141,7 +141,6 @@
   _.register({
     rule: {
       host: [
-        /^(www\.)?img(adult|wallet|taxi)\.com$/,
         /^(www\.)?imgfresh\.info$/,
       ],
       path: /^\/img-.*\.html$/,
@@ -249,6 +248,17 @@
   });
 
   _.register({
+    rule: {
+      host: /^imgprime\.com$/,
+      path: /^\/imga-u\/(.+)\.jpeg\.html/,
+    },
+    async ready () {
+      const path = window.location.href.replace('/imga-u', '/u').replace('.html', '');
+      await $.openLink(path);
+    },
+  });
+
+  _.register({
     rule: [
       {
         host: /^imagerar\.com$/,
@@ -282,7 +292,10 @@
 
   _.register({
     rule: {
-      host: /^(www\.)?imgdrive\.net$/,
+      host: [
+        /^(www\.)?imgdrive\.net$/,
+        /^(www\.)?img(taxi|wallet|adult)\.com$/,
+      ],
       path: /^\/img-.*\.html$/,
     },
     async ready () {

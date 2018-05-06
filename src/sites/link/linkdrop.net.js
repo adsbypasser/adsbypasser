@@ -3,7 +3,6 @@
   _.register({
     rule: {
       host: [
-        /^(www\.)?linkdrop\.net$/,
         /^dmus\.in$/,
         /^ulshare\.net$/,
         /^adurl\.id$/,
@@ -12,11 +11,10 @@
         /^earn-guide\.com$/,
         /^(cutwin|cut-earn)\.com$/,
         /^(cutwi|cut-w|cutl)\.in$/,
-        /^(www\.)?(ourl|jurl)\.io$/,
-        /^(urlcloud|mitly)\.us$/,
+        /^(www\.)?jurl\.io$/,
+        /^mitly\.us$/,
         /^adpop\.me$/,
         /^wi\.cr$/,
-        /^clk\.press$/,
         /^tui\.click$/,
         /^megaurl\.in$/,
       ],
@@ -50,16 +48,26 @@
         /^zlshorte\.net$/,
         /^(igram|gram)\.im$/,
         /^(trlink|wolink)\.in$/,
+        /^clk\.press$/,
+        /^short\.pe$/,
+        /^urlcloud\.us$/,
+        /^(www\.)?ourl\.io$/,
+        /^(www\.)?linkdrop\.net$/,
       ],
     },
     async ready () {
-      $.remove('iframe');
-
       let f = $.$('#captchaShortlink');
       if (f) {
+        $.remove('[class$="Overlay"]');
+        $.block('[class$="Overlay"]', document.body);
+
         // recaptcha
+        _.info('recaptcha detected, stop');
         return;
       }
+
+      $.remove('iframe');
+
       f = getForm();
       if (!f) {
         f = $('#link-view');
@@ -67,7 +75,10 @@
         return;
       }
 
-      sendRequest(f);
+      while (true) {
+        await _.wait(2000);
+        sendRequest(f);
+      }
     },
   });
 
@@ -76,7 +87,6 @@
       host: [
         /^adlink\.guru$/,
         /^(clik|psl|twik)\.pw$/,
-        /^short\.pe$/,
         /^coshink\.co$/,
         /^(curs|cuon)\.io$/,
         /^shark\.vn$/,

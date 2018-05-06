@@ -30,7 +30,7 @@ async function get (url) {
   a.addEventListener('click', (event) => {
     event.stopPropagation();
     clicked = true;
-  });
+  }, true);
 
   // Simulate clicks on this link (so that the referer is sent)
   await prepare(a);
@@ -43,7 +43,7 @@ async function get (url) {
     }
     info('try again');
     a.click();
-  }, 50);
+  }, 500);
 }
 
 
