@@ -114,7 +114,7 @@
         /^cut4(links|link)\.com$/,
         /^coinlink\.co$/,
         /^kokemoon\.com$/,
-        /^(icutit|cutearn|earnbig)\.ca$/,
+        /^(icutit|cutearn|earnbig|shortit)\.ca$/,
         /^(www\.)?viralukk\.com$/,
         /^shrt10\.com$/,
         /^mikymoons\.com$/,
