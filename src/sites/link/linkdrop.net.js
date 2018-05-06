@@ -3,7 +3,6 @@
   _.register({
     rule: {
       host: [
-        /^(www\.)?linkdrop\.net$/,
         /^dmus\.in$/,
         /^ulshare\.net$/,
         /^adurl\.id$/,
@@ -53,6 +52,7 @@
         /^short\.pe$/,
         /^urlcloud\.us$/,
         /^(www\.)?ourl\.io$/,
+        /^(www\.)?linkdrop\.net$/,
       ],
     },
     async ready () {
