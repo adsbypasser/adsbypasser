@@ -23,6 +23,8 @@
     * top9space.com
     * mylink.zone
     * 3bst.co
+    * shortit.ca
+    * 3rabcut.com
 * changed
     * recaptcha for spaste.com
 * removed
