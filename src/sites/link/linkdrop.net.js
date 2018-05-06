@@ -12,7 +12,7 @@
         /^earn-guide\.com$/,
         /^(cutwin|cut-earn)\.com$/,
         /^(cutwi|cut-w)\.in$/,
-        /^(www\.)?(ourl|jurl)\.io$/,
+        /^(www\.)?jurl\.io$/,
         /^mitly\.us$/,
         /^adpop\.me$/,
         /^wi\.cr$/,
@@ -52,6 +52,7 @@
         /^clk\.press$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
+        /^(www\.)?ourl\.io$/,
       ],
     },
     async ready () {
