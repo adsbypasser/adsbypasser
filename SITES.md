@@ -300,7 +300,6 @@
     * myam.me
     * mylink.us
     * mylink.zone
-    * shortit.in
     * shrink.gs
     * ssl.gs
     * tl7.us
@@ -595,7 +594,6 @@
     * sinopsisfilmku.com
     * sports14.pw
     * srelink.com
-    * susutin.com
     * susutinv2.com
     * sylnk.net
     * tawaku.com
@@ -654,6 +652,8 @@
     * 123link.io
     * 123link.press
     * 123link.pw
+    * 3bst.co
+    * 3rabcut.com
     * 3rabshort.com
     * adbilty.me
     * adbitly.in
@@ -679,8 +679,10 @@
     * cut-earn.com
     * cut-urls.com
     * cut-w.in
+    * cut4link.com
     * cut4links.com
     * cutearn.ca
+    * cutl.in
     * cutwi.in
     * cutwin.com
     * cypt.ga
@@ -710,6 +712,7 @@
     * linkhits.us
     * linkrex.net
     * megaurl.in
+    * mikymoons.com
     * mitly.us
     * mlink.club
     * oke.io
@@ -717,6 +720,7 @@
     * payurl.me
     * petty.link
     * pir.im
+    * pnd.tl
     * premiumzen.com
     * psl.pw
     * safelinku.net
@@ -725,12 +729,16 @@
     * short.pastewma.com
     * short.pe
     * shortad.cf
+    * shortit.ca
     * shrinkearn.com
     * shrt10.com
+    * spamlink.org
     * tl.tc
     * tmearn.com
+    * top9space.com
     * trlink.in
     * tui.click
+    * twik.pw
     * u2s.io
     * ulshare.net
     * url.ht
@@ -824,7 +832,6 @@
     * catcut.net
     * cf.ly
     * cli.gs
-    * clictune.com
     * clk.im
     * cocoleech.com
     * coinlink.co
@@ -933,6 +940,7 @@
     * mrjh.org
     * mt0.org
     * my-link.pro
+    * mylink.zone
     * mylinkgen.com
     * nmac.to
     * noelshack.com
