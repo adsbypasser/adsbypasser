@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^www\.(h-animes|adultmove)\.info/,
+    host: /^www\.h-animes\.info/,
     path: /^\/.+\/.+\/.+\.html$/,
   },
   async ready () {
