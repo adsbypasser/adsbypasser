@@ -4,7 +4,7 @@
   _.register({
     rule: {
       host: [
-        /^(miragepics|funextra\.hostzi|imgrex|cdn\.javtotal|img3x)\.com$/,
+        /^(miragepics|funextra\.hostzi|imgrex|img3x)\.com$/,
         /^bilder\.nixhelp\.de$/,
         /^imagecurl\.(com|org)$/,
         /^imagevau\.eu$/,
