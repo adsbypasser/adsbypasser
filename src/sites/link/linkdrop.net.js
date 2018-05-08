@@ -48,7 +48,7 @@
         /^mlink\.club$/,
         /^zlshorte\.net$/,
         /^(igram|gram)\.im$/,
-        /^(trlink|wolink)\.in$/,
+        /^(trlink|wolink|tocdo)\.in$/,
         /^clk\.press$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
