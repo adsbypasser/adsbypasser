@@ -3,7 +3,6 @@ _.register({
     host: [
       /^lnx\.lu$/,
       /^url\.fm$/,
-      /^z\.gs$/,
     ],
   },
   async ready () {
