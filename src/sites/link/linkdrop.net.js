@@ -54,6 +54,7 @@
         /^urlcloud\.us$/,
         /^(www\.)?ourl\.io$/,
         /^(www\.)?linkdrop\.net$/,
+        /^123link\.pw$/,
       ],
     },
     async ready () {
@@ -104,7 +105,7 @@
         /^urle\.co$/,
         /^hashe\.in$/,
         /^www\.worldhack\.net$/,
-        /^123link\.(io|co|press|pw)$/,
+        /^123link\.(io|co|press)$/,
         /^pir\.im$/,
         /^(www\.)?(pnd|bol)\.tl$/,
         /^(tl|adfly|git)\.tc$/,
