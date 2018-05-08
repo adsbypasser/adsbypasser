@@ -4,7 +4,7 @@
   _.register({
     rule: {
       host: [
-        /^(hentai-hosting|miragepics|funextra\.hostzi|imgrex|cdn\.javtotal|img3x)\.com$/,
+        /^(miragepics|funextra\.hostzi|imgrex|img3x)\.com$/,
         /^bilder\.nixhelp\.de$/,
         /^imagecurl\.(com|org)$/,
         /^imagevau\.eu$/,
@@ -39,9 +39,7 @@
     rule: {
       host: [
         /^img(nip|central|cream)\.com$/,
-        /^imageview\.me$/,
         /^244pix\.com$/,
-        /^postimg\.net$/,
       ],
       path: /^\/viewerr.*\.php$/,
       query: /file=([^&]+)/,
@@ -57,19 +55,6 @@
     async ready () {
       const i = $('#main_img');
       await $.openImage(i.src);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^dumppix\.com$/,
-      path: /^\/viewer\.php$/,
-      query: /file=([^&]+)/,
-    },
-    async start (m) {
-      await $.openImage('/images/' + m.query[1], {
-        referer: true,
-      });
     },
   });
 
