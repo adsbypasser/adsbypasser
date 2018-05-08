@@ -54,6 +54,7 @@
         /^urlcloud\.us$/,
         /^(www\.)?ourl\.io$/,
         /^(www\.)?linkdrop\.net$/,
+        /^(vy\.)?adsvy\.com$/,
       ],
     },
     async ready () {
