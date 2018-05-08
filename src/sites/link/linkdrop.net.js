@@ -55,6 +55,7 @@
         /^(www\.)?ourl\.io$/,
         /^(www\.)?linkdrop\.net$/,
         /^123link\.pw$/,
+        /^cut4links\.com$/,
       ],
     },
     async ready () {
@@ -123,7 +124,7 @@
         /^weefy\.me$/,
         /^bit-url\.com$/,
         /^premiumzen\.com$/,
-        /^cut4(links|link)\.com$/,
+        /^cut4link\.com$/,
         /^coinlink\.co$/,
         /^kokemoon\.com$/,
         /^(icutit|cutearn|earnbig|shortit)\.ca$/,
