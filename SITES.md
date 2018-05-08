@@ -47,11 +47,9 @@
     * hentai-hosting.com
     * imagecurl.com
     * imagecurl.org
-    * imagepong.info
     * imageview.me
     * img3x.com
     * imgcentral.com
-    * imgcream.com
     * imgdream.net
     * imgnip.com
     * imgnm.net
