@@ -48,7 +48,7 @@
         /^mlink\.club$/,
         /^zlshorte\.net$/,
         /^(igram|gram)\.im$/,
-        /^(trlink|wolink)\.in$/,
+        /^(trlink|wolink|tocdo)\.in$/,
         /^(cut|dz)4(links|link)\.com$/,
         /^short2win\.com$/,
         /^vnurl\.net$/,
