@@ -275,7 +275,6 @@
 * abload
     * abload.de
     * fastpic.ru
-    * imageberyl.com
     * imagepearl.com
     * imageup.ru
     * itmages.ru
