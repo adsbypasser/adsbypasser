@@ -2,7 +2,6 @@
 
   const hostRules = [
     /^(([\w]{8}|www)\.)?(allanalpass|cash4files|drstickyfingers|fapoff|(gone|tube)viral|(pic|tna)bucks|whackyvidz)\.com$/,
-    /^(([\w]{8}|www)\.)?(a[mn]y|dyo)\.gs$/,
     /^(([\w]{8}|www)\.)?(filesonthe|poontown|seriousdeals|ultrafiles|urlbeat|zatnawqy|zbqhfbetlmni)\.net$/,
     /^(([\w]{8}|www)\.)?freean\.us$/,
     /^(([\w]{8}|www)\.)?galleries\.bz$/,
