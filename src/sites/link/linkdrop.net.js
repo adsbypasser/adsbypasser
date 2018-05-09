@@ -135,6 +135,7 @@
         /^mikymoons\.com$/,
         /^spamlink\.org$/,
         /^top9space\.com$/,
+        /^royurls\.bid$/,
       ],
     },
     async ready () {
