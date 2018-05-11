@@ -2,7 +2,6 @@ _.register({
   rule: {
     host: [
       /^depic\.me$/,
-      /^(www\.)?picamatic\.com$/,
     ],
   },
   async ready () {
