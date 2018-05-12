@@ -15,6 +15,8 @@
     * gameinfo.pw
     * adshort.co
     * tocdo.in
+    * iiv.pl
+    * animeforce.stream
 * removed
     * freegaysitepass.com
     * fuestfka.com
