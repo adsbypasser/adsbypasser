@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^www\.x45x\.info$/,
-      /^(imadul|mypixxx\.lonestarnaughtygirls)\.com$/,
+      /^imadul\.com$/,
       /^ghanaimages\.co$/,
     ],
     query: /\?p[mt]=(.+)/,
