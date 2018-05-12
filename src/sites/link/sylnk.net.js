@@ -84,6 +84,10 @@ _.register({
       path: /^\/go2/,
       query: /^\?p=([a-zA-Z0-9/=]+)$/,
     },
+    {
+      host: /^animeforce\.stream$/,
+      query: /^\?l=([a-zA-Z0-9/=]+)$/,
+    },
   ],
   async start (m) {
     const rawLink = atob(m.query[1]);
