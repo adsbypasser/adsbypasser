@@ -720,6 +720,7 @@
     * oload.site
     * oload.stream
     * oload.tv
+    * oload.win
     * openload.co
 * al.ly
     * al.ly
