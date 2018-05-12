@@ -483,6 +483,7 @@
 * sylnk.net
     * amankan.link
     * ani-share.com
+    * animeforce.stream
     * anisubsia.tk
     * apasih.pw
     * auto14.pw
@@ -813,6 +814,7 @@
     * hostingpics.net
     * hotshorturl.com
     * ifotos.pl
+    * iiv.pl
     * ilix.in
     * ilovebanten.com
     * ima.so
