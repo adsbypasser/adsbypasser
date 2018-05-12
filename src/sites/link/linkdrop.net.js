@@ -56,6 +56,7 @@
         /^(www\.)?linkdrop\.net$/,
         /^(123link|clik)\.pw$/,
         /^cut4links\.com$/,
+        /^tmearn\.com$/,
       ],
     },
     async ready () {
@@ -94,7 +95,7 @@
         /^(curs|cuon)\.io$/,
         /^shark\.vn$/,
         /^cypt\.ga$/,
-        /^(filesbucks|tmearn|cut-urls|link-earn|shrinkearn)\.com$/,
+        /^(filesbucks|cut-urls|link-earn|shrinkearn)\.com$/,
         /^adslink\.pw$/,
         /^dzurl\.ml$/,
         /^(elink|petty)\.link$/,
