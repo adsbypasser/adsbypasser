@@ -507,6 +507,7 @@
     * freeanimeonline.xyz
     * gadget13.com
     * gadget14.pw
+    * gameinfo.pw
     * getcomics.gq
     * gtaind.com
     * healthygress24.ga
@@ -606,9 +607,11 @@
     * adfu.us
     * adlink.guru
     * adpop.me
+    * adshort.co
     * adshorte.com
     * adslink.pw
     * adsrt.com
+    * adsvy.com
     * adurl.id
     * bit-url.com
     * bol.tl
@@ -628,6 +631,7 @@
     * cutwin.com
     * cypt.ga
     * dmus.in
+    * dz4link.com
     * dzurl.ml
     * earn-guide.com
     * earnbig.ca
@@ -664,11 +668,13 @@
     * pnd.tl
     * premiumzen.com
     * psl.pw
+    * royurls.bid
     * safelinku.net
     * shark.vn
     * shink.xyz
     * short.pastewma.com
     * short.pe
+    * short2win.com
     * shortad.cf
     * shortit.ca
     * shrinkearn.com
@@ -676,6 +682,7 @@
     * spamlink.org
     * tl.tc
     * tmearn.com
+    * tocdo.in
     * top9space.com
     * trlink.in
     * tui.click
@@ -687,6 +694,7 @@
     * urle.co
     * urlst.me
     * viralukk.com
+    * vnurl.net
     * weefy.me
     * wi.cr
     * wolink.in
