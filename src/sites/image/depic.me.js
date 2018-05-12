@@ -1,8 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^depic\.me$/,
-    ],
+    host: /^depic\.me$/,
   },
   async ready () {
     const i = $('#pic');
