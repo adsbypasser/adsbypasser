@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^(www\.)?arab\.sh$/,
+    host: [
+      /^(www\.)?arab\.sh$/,
+      /^arabsh\.com$/,
+    ],
     path: /^\/\w+$/,
   },
   async ready () {
