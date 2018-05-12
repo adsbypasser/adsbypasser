@@ -17,14 +17,17 @@
       query: /url=([^&]+)/,
     },
     async start (m) {
+      // reset cookies
       $.resetCookies();
+      $.setCookie('FLYSESSID', generateRandomSessionCookie(40));
+
       const url = decodeURIComponent(m.query[1]);
       if (url.match(/^http/)) {
         // absolute path
         await $.openLink(url);
       } else {
-        // related path
-        await $.openLink('/' + url);
+        // cannot rely on url
+        await $.openLink(document.referrer);
       }
     },
   });
