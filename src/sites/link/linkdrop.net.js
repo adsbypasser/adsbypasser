@@ -54,7 +54,7 @@
         /^urlcloud\.us$/,
         /^(www\.)?ourl\.io$/,
         /^(www\.)?linkdrop\.net$/,
-        /^123link\.pw$/,
+        /^(123link|clik)\.pw$/,
         /^cut4links\.com$/,
       ],
     },
@@ -89,7 +89,7 @@
     rule: {
       host: [
         /^adlink\.guru$/,
-        /^(clik|psl|twik)\.pw$/,
+        /^(psl|twik)\.pw$/,
         /^coshink\.co$/,
         /^(curs|cuon)\.io$/,
         /^shark\.vn$/,
