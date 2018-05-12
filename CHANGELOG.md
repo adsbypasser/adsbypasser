@@ -6,6 +6,8 @@
     * 1dl.biz
     * 1be.biz
     * cut4links.com
+    * tmearn.com
+    * clik.pw
 * added
     * adsvy.com
     * vnurl.net
