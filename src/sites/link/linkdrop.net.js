@@ -121,7 +121,7 @@
         /^linclik\.com$/,
         /^zeiz\.me$/,
         /^adbull\.me$/,
-        /^adshort\.(in|co)$/,
+        /^adshort\.co$/,
         /^(adshorte|adsrt)\.com$/,
         /^weefy\.me$/,
         /^bit-url\.com$/,
