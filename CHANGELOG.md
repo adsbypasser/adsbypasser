@@ -5,12 +5,12 @@
     * 123link.pw
     * 1dl.biz
     * 1be.biz
+    * cut4links.com
 * added
     * adsvy.com
     * vnurl.net
     * short2win.com
     * dz4link.com
-    * cut4links.com
     * royurls.bid
     * gameinfo.pw
     * adshort.co
