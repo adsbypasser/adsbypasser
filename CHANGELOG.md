@@ -1,3 +1,80 @@
+## TBA
+
+* fixed
+    * adf.ly
+    * 123link.pw
+    * 1dl.biz
+    * 1be.biz
+* added
+    * adsvy.com
+    * vnurl.net
+    * short2win.com
+    * dz4link.com
+    * cut4links.com
+    * royurls.bid
+    * gameinfo.pw
+    * adshort.co
+    * tocdo.in
+* removed
+    * freegaysitepass.com
+    * fuestfka.com
+    * deb.gs
+    * sexpalace.gs
+    * dumppix.com
+    * postimg.net
+    * imageview.me
+    * hentai-hosting.com
+    * javtotal.com
+    * imgurban.info
+    * d69.in
+    * images.maxigame.by
+    * gratisimage.dk
+    * npicture.net
+    * onlinepic.net
+    * imgurx.net
+    * z.gs
+    * adultmove.info
+    * reducelnk.com
+    * amy.gs
+    * any.gs
+    * dyo.gs
+    * imgdream.net
+    * imgnm.net
+    * imgsilo.net
+    * imgsoo.net
+    * imagepearl.com
+    * imagecrest.com
+    * itmages.ru
+    * 1pics.ru
+    * javelite.tk
+    * crd.ht
+    * adshort.im
+    * adshort.pro
+    * adshort.in
+    * daily-img.com
+    * img-365.com
+    * 365-img.com
+    * xxx.porn0day.com
+    * picamatic.com
+    * ehdwallpapers.org
+    * imgdomino.com
+    * emptypix.com
+    * imageleon.com
+    * sexyxpixels.com
+    * gallerysense.se
+    * gallerynova.se
+    * maxmirror.com
+    * larashare.com
+    * iori.us
+    * firedrive.com
+    * arab.sh
+    * anafile.com
+    * ysf.pl
+    * zo.mu
+    * zzz.gl
+    * mypixxx.lonestarnaughtygirls.com
+    * h-animes.info
+
 ## v6.10.0
 
 * fixed
