@@ -1,9 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^depic\.me$/,
-      /^(www\.)?picamatic\.com$/,
-    ],
+    host: /^depic\.me$/,
   },
   async ready () {
     const i = $('#pic');

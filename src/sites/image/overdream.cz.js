@@ -1,9 +1,10 @@
 _.register({
   rule: {
-    host: /^1pics\.ru$/,
+    host: /^overdream\.cz$/,
+    path: /^\/image\//,
   },
   async ready () {
-    const img = $('img[alt$="1Pics.Ru"]');
+    const img = $('#full_image');
     await $.openImage(img.src);
   },
 });

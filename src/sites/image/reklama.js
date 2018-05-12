@@ -88,10 +88,6 @@
         path: /^\/.-.+$/,
       },
       {
-        host: /^cdn\.javtotal\.com$/,
-        path: /^\/img\/.+$/,
-      },
-      {
         host: /^imgtor\.pw$/,
         path: /^\/img2\/.+$/,
       },

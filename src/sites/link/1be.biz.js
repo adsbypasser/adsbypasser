@@ -1,7 +1,7 @@
 _.register({
   rule: {
-    host: /^(www\.)?1be\.biz$/,
-    path: /^\/s\.php$/,
+    host: /^(www\.)?1(be|dl)\.biz$/,
+    path: /^\/z\.php$/,
     query: /^\?(.+)/,
   },
   async start (m) {

@@ -51,6 +51,7 @@
       $.window.btoa = _.nop;
     },
     async ready () {
+      $.remove('iframe');
       // cheat the session
       $.setCookie('FLYSESSID', generateRandomSessionCookie(40));
       let rv = await $.get(location.href, '', {

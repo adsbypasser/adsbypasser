@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^(www\.)?(firedrive|putlocker)\.com$/,
+    host: /^(www\.)?putlocker\.com$/,
     path: /^\/file\/[0-9A-F]+$/,
   },
   async ready () {
