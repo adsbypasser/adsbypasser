@@ -5,16 +5,11 @@
   _.register({
     rule: {
       host: [
-        /^img(universal|paying|mega|zeus|monkey|trex|ve|dew|diamond)\.com$/,
+        /^img(monkey|trex|ve|dew|diamond)\.com$/,
         /^(www\.)?imgsee\.me$/,
-        /^img(click|maid)\.net$/,
-        /^(uploadrr|imageeer|imzdrop|www\.uimgshare|pic-maniac|hulkimge)\.com$/,
-        /^imgdrive\.co$/,
-        /^cuteimg\.cc$/,
-        /^img(tiger|gold)\.org$/,
-        /^myimg\.club$/,
-        /^foxyimg\.link$/,
-        /^(core|iron)img\.net$/,
+        /^imgclick\.net$/,
+        /^(uploadrr|imageeer|www\.uimgshare|pic-maniac|hulkimge)\.com$/,
+        /^ironimg\.net$/,
       ],
       path: PATH_RULE,
     },
@@ -100,16 +95,6 @@
         return node.parentElement;
       });
       node.click();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^chronos\.to$/,
-      path: PATH_RULE,
-    },
-    async ready (m) {
-      await helper(m.path[1], getNext2);
     },
   });
 
