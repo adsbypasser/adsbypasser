@@ -5,13 +5,12 @@ _.register({
       path: /^\/img\/(soft\/)?/,
     },
     {
-      host: /^(www\.)?(picturescream|picturevip)\.com$/,
+      host: /^(www\.)?picturescream\.com$/,
       path: /^\/x\//,
     },
     {
       host: [
         /^picturescream\.asia$/,
-        /^uploadimage\.eu$/,
       ],
     },
     {
@@ -28,7 +27,7 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^(imagescream|anonpic)\.com$/,
+      /^imagescream\.com$/,
       /^all-poster\.ru$/,
     ],
     query: /^\?v=/,
