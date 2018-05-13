@@ -130,16 +130,6 @@
     },
   });
 
-  async function helper () {
-    // crack the shitty qqc.co visitScript 5440
-    $.window.setTimeout = _.nop;
-
-    // this site checks cookie that caculate from session
-    // do an AJAX to skip checking
-    const data = await $.get(window.location.toString());
-    return $.toDOM(data);
-  }
-
   _.register({
     rule: [
       {
