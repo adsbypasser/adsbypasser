@@ -8,35 +8,28 @@
         host: [
           // com
           // starts with image
-          /^image(ontime|corn|picsa|horse|decode)\.com$/,
+          /^image(corn|decode)\.com$/,
           // ends with image
-          /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy|dam)image\.com$/,
+          /^(hostur|greasy|dam)image\.com$/,
           // starts with img
-          /^img(icy|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|nimz|binbou|2share|22|cover|hit|main|trial|blank|reputa|fapper|reality|part)\.com$/,
+          /^img(icy|savvy|tzar|tornado|kicks|2share|hit|main|trial|reputa|fapper|part)\.com$/,
           /^(i\.)?imgseeds?\.com$/,
           // starts with img-
-          /^img-(zone|planet|pay|uploads)\.com$/,
+          /^img-(planet|pay)\.com$/,
           // starts with www
-          /^www\.img(blow|lemon|4sharing)\.com$/,
-          /^www\.imagefolks\.com$/,
-          /^www\.freephotohostin\.com$/,
-          /^(www\.)?imgult\.com$/,
+          /^www\.imglemon\.com$/,
           // starts with xxx
-          /^xxx(imagenow|screens)\.com$/,
-          /^xxxsparrow?\.com$/,
+          /^xxxscreens\.com$/,
           /^xxxwebdlxxx\.org$/,
           // else
-          /^(playimg|picstwist|ericsony|wpc8|uplimg|lexiit|thumbnailus|newimagepost|fapingpics|dimtus|tinizo)\.com$/,
-          /^((i|hentai)\.)?imgslip\.com$/,
+          /^(wpc8|dimtus|tinizo)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
-          /^(go|er)imge\.com$/,
-          /^nim(plus|zshare)\.com$/,
-          /^nudeximg\.com$/,
+          /^erimge\.com$/,
+          /^nimzshare\.com$/,
           // net
-          /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics|pix)\.net$/,
-          /^(imagesouls|naughtygate|gallerycloud|imagelaser|picture-bang|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
+          /^img(serve|-view|project|python|pix)\.net$/,
+          /^(naughtygate|gallerycloud|funimg|xximg)\.net$/,
           // org
-          /^(shot|adult)img\.org$/,
           /^image(\.adlock|on|team)\.org$/,
           /^(voyeur|teen|mega)image\.org$/,
           /^teenshot\.org$/,
