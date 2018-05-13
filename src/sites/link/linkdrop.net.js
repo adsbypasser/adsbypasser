@@ -139,6 +139,7 @@
         /^spamlink\.org$/,
         /^top9space\.com$/,
         /^royurls\.bid$/,
+        /^itiad\.com$/,
       ],
     },
     async ready () {
