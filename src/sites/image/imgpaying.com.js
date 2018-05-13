@@ -224,16 +224,6 @@
     return i.value;
   }
 
-  function getNext2 (i) {
-    let next = i.onclick && i.onclick.toString().match(/value='([^']+)'/);
-    if (next) {
-      next = next[1];
-      return next;
-    } else {
-      return i.value;
-    }
-  }
-
   async function helper (id, getNext) {
     const recaptcha = $.$('#recaptcha_widget, #captcha');
     if (recaptcha) {
