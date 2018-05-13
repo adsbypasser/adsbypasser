@@ -10,10 +10,10 @@
 
   _.register({
     rule: {
-       host: [
-         /^(www\.)?(image(carry|dunk|porter|switch)|pic(leet|turedip|tureturn)|imgspice)\.com$/,
-         /^(www\.)?(piclambo|yankoimages)\.net$/,
-       ],
+      host: [
+        /^(www\.)?(image(carry|dunk|porter|switch)|pic(leet|turedip|tureturn)|imgspice)\.com$/,
+        /^(www\.)?(piclambo|yankoimages)\.net$/,
+      ],
     },
     ready: run,
   });
