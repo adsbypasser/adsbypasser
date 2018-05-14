@@ -21,8 +21,7 @@ rules:
     - always
   no-constant-condition:
     - error
-    -
-      checkLoops: false
+    - checkLoops: false
   no-var:
     - error
   prefer-const:
