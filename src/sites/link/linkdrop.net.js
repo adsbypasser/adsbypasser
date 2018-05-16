@@ -96,7 +96,7 @@
         /^adlink\.guru$/,
         /^(psl|twik)\.pw$/,
         /^coshink\.co$/,
-        /^(curs|cuon|crus)\.io$/,
+        /^(curs|cuon|crus|4cut)\.io$/,
         /^shark\.vn$/,
         /^cypt\.ga$/,
         /^(filesbucks|cut-urls|link-earn|shrinkearn)\.com$/,
