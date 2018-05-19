@@ -3,8 +3,7 @@
   _.register({
     rule: {
       host: [
-        /^link\.animagz\.org$/,
-        /^(coeg|disingkat|gunting)\.in$/,
+        /^(coeg|disingkat)\.in$/,
         /^www\.(telondasmu|siotong|siherp)\.com$/,
         /^www\.greget\.space$/,
       ],
@@ -42,13 +41,6 @@
         const a = $('a.btn-block.redirect');
         return a.href;
       };
-    case 'link.animagz.org':
-      return () => {
-        let a = $('a.redirect');
-        a = a.onclick.toString();
-        a = a.match(/window\.open \('([^']+)'\)/);
-        return a[1];
-      };
     case 'coeg.in':
     case 'www.telondasmu.com':
     case 'www.siotong.com':
@@ -56,11 +48,6 @@
     case 'www.greget.space':
       return () => {
         const a = $('.download-link a');
-        return a.href;
-      };
-    case 'gunting.in':
-      return () => {
-        const a = $('div.col-sm-6:nth-child(1) > center:nth-child(1) > a:nth-child(1)');
         return a.href;
       };
     default:
