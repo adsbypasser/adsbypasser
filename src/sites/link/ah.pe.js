@@ -2,6 +2,7 @@
 
   _.register({
     rule: {
+      // Supports adhy.pe
       host: /^ah\.pe$/,
     },
     async ready () {
