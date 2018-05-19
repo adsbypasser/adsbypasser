@@ -63,7 +63,15 @@ _.register({
   rule: [
     {
       host: [
+        // safelinkconverter.com
+        // safelinkconverter2.com
+        // link.safelinkconverter.com
+        // decrypt.safelinkconverter.com
         /(^|\.)safelinkconverter2?\.com$/,
+        // safelinkreview.com
+        // safelinksreview.com
+        // safelinkreviewer.com
+        // safelinkreview.co
         /^safelink(s?review(er)?)\.com?$/,
       ],
       query: /id=([\w\\]+=*)/,
