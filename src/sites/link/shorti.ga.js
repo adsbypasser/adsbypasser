@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^(www\.)?shorti\.ga$/,
+    host: [
+      /^(www\.)?shorti\.ga$/,
+      /^mxshort\.ml$/,
+    ],
     path: [
       /^\/\w+$/,
       /^\/url_redirector\.html$/,
