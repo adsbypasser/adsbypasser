@@ -1,7 +1,6 @@
 _.register({
   rule: {
     host: [
-      /^ethi\.in$/,
       /^st\.wardhanime\.net$/,
     ],
     path: /^\/i\/\d+$/,
