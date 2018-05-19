@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^iiv\.pl$/,
+    host: [
+      /^iiv\.pl$/,
+      /^cut\.so$/,
+    ],
   },
   async ready () {
     let d = $('#counting');
