@@ -6,8 +6,6 @@
         /^dmus\.in$/,
         /^ulshare\.net$/,
         /^adurl\.id$/,
-        /^goolink\.me$/,
-        /^earningurl\.com$/,
         /^earn-guide\.com$/,
         /^(cutwin|cut-earn)\.com$/,
         /^(cutwi|cut-w|cutl)\.in$/,
@@ -15,7 +13,6 @@
         /^mitly\.us$/,
         /^adpop\.me$/,
         /^wi\.cr$/,
-        /^tui\.click$/,
         /^megaurl\.in$/,
       ],
     },
@@ -36,19 +33,18 @@
   _.register({
     rule: {
       host: [
-        /^sflnk\.me$/,
         /^idsly\.com$/,
         /^adbilty\.me$/,
         /^oke\.io$/,
         /^linkrex\.net$/,
         /^safelinku\.net$/,
         /^3bst\.co$/,
-        /^3rab(short|cut)\.com$/,
+        /^3rabcut\.com$/,
         /^shink\.xyz$/,
         /^mlink\.club$/,
         /^zlshorte\.net$/,
         /^(igram|gram)\.im$/,
-        /^(trlink|wolink|tocdo)\.in$/,
+        /^tocdo\.in$/,
         /^dz4link\.com$/,
         /^short2win\.com$/,
         /^vnurl\.net$/,
@@ -93,28 +89,23 @@
   _.register({
     rule: {
       host: [
-        /^adlink\.guru$/,
         /^(psl|twik)\.pw$/,
         /^coshink\.co$/,
         /^(curs|cuon)\.io$/,
         /^shark\.vn$/,
-        /^cypt\.ga$/,
-        /^(filesbucks|cut-urls|link-earn|shrinkearn)\.com$/,
+        /^(cut-urls|link-earn|shrinkearn)\.com$/,
         /^adslink\.pw$/,
         /^dzurl\.ml$/,
-        /^(elink|petty)\.link$/,
-        /^(payurl|urlst)\.me$/,
+        /^petty\.link$/,
+        /^urlst\.me$/,
         /^u2s\.io$/,
         /^shortad\.cf$/,
         /^link4\.me$/,
-        /^url\.ht$/,
         /^urle\.co$/,
-        /^hashe\.in$/,
         /^www\.worldhack\.net$/,
         /^123link\.(io|co|press)$/,
-        /^pir\.im$/,
-        /^(www\.)?(pnd|bol)\.tl$/,
-        /^(tl|adfly|git)\.tc$/,
+        /^(www\.)?pnd\.tl$/,
+        /^(tl|git)\.tc$/,
         /^(adfu|linkhits)\.us$/,
         /^short\.pastewma\.com$/,
         /^l2s\.io$/,
@@ -131,13 +122,11 @@
         /^premiumzen\.com$/,
         /^cut4link\.com$/,
         /^coinlink\.co$/,
-        /^kokemoon\.com$/,
         /^(icutit|cutearn|earnbig|shortit)\.ca$/,
         /^(www\.)?viralukk\.com$/,
         /^shrt10\.com$/,
         /^mikymoons\.com$/,
         /^spamlink\.org$/,
-        /^top9space\.com$/,
         /^royurls\.bid$/,
       ],
     },
@@ -152,7 +141,6 @@
     },
   });
 
-
   function getForm () {
     const jQuery = $.window.$;
     const f = jQuery('#go-link, .go-link, form[action="/links/go"], form[action="/links/linkdropgo"]');
@@ -161,7 +149,6 @@
     }
     return null;
   }
-
 
   // XXX threw away promise
   function sendRequest (f) {
@@ -184,7 +171,6 @@
     });
   }
 
-
   function firstStage () {
     return new Promise((resolve) => {
       const f = $.$('#link-view');
@@ -202,7 +188,6 @@
     });
   }
 
-
   async function secondStage (page) {
     const f = $('#go-link', page);
     const args = extractArgument(f);
@@ -214,7 +199,6 @@
     }
     throw new _.AdsBypasserError('wrong data');
   }
-
 
   function extractArgument (form) {
     const args = {};
