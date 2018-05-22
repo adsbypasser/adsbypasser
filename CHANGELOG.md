@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * videogamesblogger.com
 * added
     * itiad.com
     * prnt.sc
