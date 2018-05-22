@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^(imgsure|picexposed|croea)\.com$/,
+    host: /^(picexposed|croea)\.com$/,
   },
   async ready () {
     const i = $('img.pic');
