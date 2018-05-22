@@ -3,11 +3,9 @@
   _.register({
     rule: {
       host: [
-        /^img(fantasy|leech|\.pornleech|smile|nemo|sense|curl)\.com$/,
-        /^(imagedomino|lovechix|imagebic)\.com$/,
+        /^img(fantasy|smile|nemo|curl)\.com$/,
+        /^(imagedomino|lovechix)\.com$/,
         /^0img\.net$/,
-        /^daily-img\.com$/,
-        /^picangel\.in$/,
         /^bunnyforum\.org$/,
       ],
       query: /^\?[pv]=/,
