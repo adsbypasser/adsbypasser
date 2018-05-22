@@ -2,6 +2,7 @@
 
 * added
     * itiad.com
+    * prnt.sc
 * removed
     * x.pixfarm.net
     * vvcap.net
