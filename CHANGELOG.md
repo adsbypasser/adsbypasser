@@ -114,6 +114,8 @@
     * img.deli.sh
     * imgsicily.it
     * pictureshoster.com
+    * javcity.com
+    * imgtheif.com
 
 ## v6.11.0
 
