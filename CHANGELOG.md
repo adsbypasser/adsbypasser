@@ -131,6 +131,9 @@
     * foxyimg.link
     * coreimg.net
     * chronos.to
+    * imgnova.xyz
+    * hentai-hot.xyz
+    * hentai-king.online
 
 ## v6.11.0
 
