@@ -116,6 +116,7 @@
     * pictureshoster.com
     * javcity.com
     * imgtheif.com
+    * imgsure.com
 
 ## v6.11.0
 
