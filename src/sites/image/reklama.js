@@ -12,7 +12,7 @@
           // ends with image
           /^(hostur|greasy|dam)image\.com$/,
           // starts with img
-          /^img(icy|savvy|tzar|tornado|kicks|2share|hit|main|trial|reputa|fapper|part)\.com$/,
+          /^img(icy|savvy|tzar|tornado|kicks|2share|hit|main|trial|reputa|fapper|part|balana)\.com$/,
           /^(i\.)?imgseeds?\.com$/,
           // starts with img-
           /^img-(planet|pay)\.com$/,
