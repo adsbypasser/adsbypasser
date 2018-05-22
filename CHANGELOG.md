@@ -134,6 +134,13 @@
     * imgnova.xyz
     * hentai-hot.xyz
     * hentai-king.online
+    * imglocker.com
+    * imgleech.com
+    * img.pornleech.com
+    * imgsense.com
+    * imagebic.com
+    * daily-img.com
+    * picangel.in
 
 ## v6.11.0
 
