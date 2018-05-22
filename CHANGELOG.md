@@ -101,6 +101,7 @@
     * imageporn.eu
     * imgzizi.xyz
     * 08lkk.com
+    * greenpiccs.com
 
 ## v6.11.0
 
