@@ -141,6 +141,16 @@
     * imagebic.com
     * daily-img.com
     * picangel.in
+    * imgbin.me
+    * img3x.net
+    * img24.org
+    * imagik.fr
+    * hostingfailov.com
+    * imagecherry.com
+    * fotoszok.pl.com
+    * picturevip.com
+    * uploadimage.eu
+    * anonpic.com
 
 ## v6.11.0
 
