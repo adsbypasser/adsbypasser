@@ -11,7 +11,9 @@
   _.register({
     rule: {
       host: [
-        /^(www\.)?(image(carry|dunk|porter|switch)|pic(leet|turedip|tureturn)|imgspice)\.com$/,
+        /^(www\.)?image(carry|dunk|porter|switch)\.com$/,
+        /^(www\.)?pic(leet|turedip|tureturn)\.com$/,
+        /^(www\.)?imgspice\.com$/,
         /^(www\.)?(piclambo|yankoimages)\.net$/,
       ],
     },
