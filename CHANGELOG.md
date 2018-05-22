@@ -2,6 +2,7 @@
 
 * removed
     * x.pixfarm.net
+    * vvcap.net
 
 ## v6.11.0
 
