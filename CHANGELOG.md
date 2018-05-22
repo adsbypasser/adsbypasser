@@ -117,6 +117,20 @@
     * javcity.com
     * imgtheif.com
     * imgsure.com
+    * imguniversal.com
+    * imgpaying.com
+    * imgmega.com
+    * imgzeus.com
+    * imgmaid.net
+    * imzdrop.com
+    * imgdrive.co
+    * cuteimg.cc
+    * imgtiger.org
+    * imggold.org
+    * myimg.club
+    * foxyimg.link
+    * coreimg.net
+    * chronos.to
 
 ## v6.11.0
 
