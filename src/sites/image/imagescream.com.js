@@ -9,9 +9,7 @@ _.register({
       path: /^\/x\//,
     },
     {
-      host: [
-        /^picturescream\.asia$/,
-      ],
+      host: /^picturescream\.asia$/,
     },
     {
       host: /^postscreens\.info/,
