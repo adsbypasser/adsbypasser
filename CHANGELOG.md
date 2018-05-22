@@ -108,6 +108,12 @@
     * picmoe.net
     * pic2profit.com
     * picp2.com
+    * imgrex.com
+    * img3x.com
+    * imagevau.eu
+    * img.deli.sh
+    * imgsicily.it
+    * pictureshoster.com
 
 ## v6.11.0
 
