@@ -103,6 +103,11 @@
     * imgzizi.xyz
     * 08lkk.com
     * greenpiccs.com
+    * pornimagex.com
+    * pixhub.eu
+    * picmoe.net
+    * pic2profit.com
+    * picp2.com
 
 ## v6.11.0
 
