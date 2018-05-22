@@ -16,7 +16,6 @@
         /^adpop\.me$/,
         /^wi\.cr$/,
         /^tui\.click$/,
-        /^megaurl\.in$/,
       ],
     },
     async ready () {
@@ -29,7 +28,8 @@
         return;
       }
 
-      sendRequest(f);
+      const url = await sendRequest(f);
+      await $.openLink(url);
     },
   });
 
@@ -61,6 +61,7 @@
         /^(vy\.)?adsvy\.com$/,
         /^cut4links\.com$/,
         /^tmearn\.com$/,
+        /^megaurl\.in$/,
       ],
     },
     async ready () {
@@ -85,7 +86,13 @@
 
       while (true) {
         await _.wait(2000);
-        sendRequest(f);
+        try {
+          const url = await sendRequest(f);
+          await $.openLink(url);
+          break;
+        } catch (e) {
+          _.warn(e);
+        }
       }
     },
   });
@@ -163,24 +170,26 @@
   }
 
 
-  // XXX threw away promise
   function sendRequest (f) {
-    const jQuery = $.window.$;
-    jQuery.ajax({
-      dataType: 'json',
-      type: 'POST',
-      url: f.attr('action'),
-      data: f.serialize(),
-      success: (result) => {
-        if (result.url) {
-          $.openLink(result.url);
-        } else {
-          _.warn(result.message);
-        }
-      },
-      error: (xhr, status, error) => {
-        _.warn(xhr, status, error);
-      },
+    return new Promise((resolve, reject) => {
+      const jQuery = $.window.$;
+      jQuery.ajax({
+        dataType: 'json',
+        type: 'POST',
+        url: f.attr('action'),
+        data: f.serialize(),
+        success: (result) => {
+          if (result.url) {
+            resolve(result.url);
+          } else {
+            reject(new _.AdsBypasserError(result.message));
+          }
+        },
+        error: (xhr, status, error) => {
+          _.warn(xhr, status, error);
+          reject(new _.AdsBypasserError('request error'));
+        },
+      });
     });
   }
 
