@@ -1,5 +1,7 @@
 ## TBA
 
+* added
+    * itiad.com
 * removed
     * x.pixfarm.net
     * vvcap.net
