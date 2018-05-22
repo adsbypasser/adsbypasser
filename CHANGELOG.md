@@ -1,3 +1,8 @@
+## TBA
+
+* removed
+    * x.pixfarm.net
+
 ## v6.11.0
 
 * fixed
