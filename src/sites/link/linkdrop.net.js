@@ -61,6 +61,7 @@
         /^(vy\.)?adsvy\.com$/,
         /^cut4links\.com$/,
         /^tmearn\.com$/,
+        /^koylinks\.win$/,
       ],
     },
     async ready () {
