@@ -140,6 +140,7 @@
         /^top9space\.com$/,
         /^royurls\.bid$/,
         /^itiad\.com$/,
+        /^oturl\.com$/,
       ],
     },
     async ready () {
