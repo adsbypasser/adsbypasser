@@ -51,7 +51,7 @@
         /^(trlink|wolink|tocdo)\.in$/,
         /^dz4link\.com$/,
         /^short2win\.com$/,
-        /^vnurl\.net$/,
+        /^(vn|vina)url\.net$/,
         /^clk\.press$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
