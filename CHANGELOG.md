@@ -5,6 +5,7 @@
 * added
     * itiad.com
     * prnt.sc
+    * imgmass.com
 * removed
     * x.pixfarm.net
     * vvcap.net
