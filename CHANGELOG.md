@@ -180,6 +180,39 @@
     * upan.so
     * ultshare.com
     * typ.me
+    * dlneko.com
+    * dlneko.net
+    * dlneko.org
+    * rumahsimpel.com
+    * safelinkair.com
+    * healthygress24.ga
+    * kombatch.amankan.link
+    * gadget14.pw
+    * auto14.pw
+    * nar-04.tk
+    * gadget13.com
+    * autorp.us
+    * anisubsia.tk
+    * insurance1.tech
+    * freeanimeonline.xyz
+    * shorten.id
+    * getcomics.gq
+    * miuitutorial.gq
+    * awsubs.cf
+    * awsubsco.ga
+    * satuasia.com
+    * tawaku.com
+    * link.filmku.net
+    * muucih.com
+    * telolet.in
+    * designinghomey.com
+    * sinopsisfilmku.com
+    * sidespace.net
+    * erogedownload.net
+    * otoviral.racing
+    * sipkur.us
+    * aw-games.net
+    * ww3.manteb.in
 
 ## v6.11.0
 
