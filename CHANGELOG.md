@@ -2,9 +2,20 @@
 
 * fixed
     * videogamesblogger.com
+    * viidii.info
+    * gameinfo.pw
+    * megaurl.in
+    * cuon.io
+    * gsurl.me
+    * sehatlega.com
+    * apasih.pw
 * added
     * itiad.com
     * prnt.sc
+    * imgmass.com
+    * shrten.xyz
+    * crus.io
+    * 4cut.io
 * removed
     * x.pixfarm.net
     * vvcap.net
@@ -153,6 +164,78 @@
     * picturevip.com
     * uploadimage.eu
     * anonpic.com
+    * imagepix.org
+    * imageheli.com
+    * imgtube.net
+    * pixliv.com
+    * imagearn.com
+    * image18.org
+    * hentaimg.com
+    * ghanaimages.co
+    * blackcatpix.com
+    * fastpics.net
+    * ifap.co
+    * avenuexxx.com
+    * 2imgs.com
+    * xlink.me
+    * wzzq.me
+    * victly.com
+    * upan.so
+    * ultshare.com
+    * typ.me
+    * dlneko.com
+    * dlneko.net
+    * dlneko.org
+    * rumahsimpel.com
+    * safelinkair.com
+    * healthygress24.ga
+    * kombatch.amankan.link
+    * gadget14.pw
+    * auto14.pw
+    * nar-04.tk
+    * gadget13.com
+    * autorp.us
+    * anisubsia.tk
+    * insurance1.tech
+    * freeanimeonline.xyz
+    * shorten.id
+    * getcomics.gq
+    * miuitutorial.gq
+    * awsubs.cf
+    * awsubsco.ga
+    * satuasia.com
+    * tawaku.com
+    * link.filmku.net
+    * muucih.com
+    * telolet.in
+    * designinghomey.com
+    * sinopsisfilmku.com
+    * sidespace.net
+    * erogedownload.net
+    * otoviral.racing
+    * sipkur.us
+    * aw-games.net
+    * ww3.manteb.in
+    * streamingfrench.net
+    * stash-coins.com
+    * srnk.co
+    * smll.io
+    * shortskip.com
+    * shortenurl.tk
+    * pengaman.link
+    * urlgo.gs
+    * shink.in
+    * qaafa.com
+    * digg.to
+    * short.est
+    * setlinks.us
+    * robo.us
+    * riurl.com
+    * rijaliti.info
+    * reffbux.com
+    * rapeit.net
+    * oxyl.me
+    * ohleech.com
 
 ## v6.11.0
 

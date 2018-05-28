@@ -3,7 +3,6 @@ _.register({
     host: [
       /^www\.x45x\.info$/,
       /^imadul\.com$/,
-      /^ghanaimages\.co$/,
     ],
     query: /\?p[mt]=(.+)/,
   },
