@@ -72,7 +72,7 @@ _.register({
     },
     {
       host: /^sehatlega\.com$/,
-      query: /^\?lanjut=([a-zA-Z0-9/=]+)$/,
+      query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
     {
       host: /^shorten\.id$/,
