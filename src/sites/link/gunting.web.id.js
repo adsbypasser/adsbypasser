@@ -1,8 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^gunting\.web\.id$/,
-    ],
+    host: /^gunting\.web\.id$/,
     path: /^\/\w+$/,
   },
   async ready () {
