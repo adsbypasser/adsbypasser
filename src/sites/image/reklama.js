@@ -8,58 +8,43 @@
         host: [
           // com
           // starts with image
-          /^image(ontime|corn|picsa|horse|decode)\.com$/,
+          /^image(corn|decode)\.com$/,
           // ends with image
-          /^(zonezeed|zelje|croft|myhot|bok|hostur|greasy|dam)image\.com$/,
+          /^(hostur|greasy|dam)image\.com$/,
           // starts with img
-          /^img(icy|next|savvy|\.spicyzilla|twyti|xyz|devil|tzar|ban|pu|beer|wet|tornado|kicks|nimz|binbou|2share|22|cover|hit|main|trial|blank|reputa|fapper|reality|part)\.com$/,
+          /^img(icy|savvy|tzar|tornado|kicks|2share|hit|main|trial|reputa|fapper|part|balana)\.com$/,
           /^(i\.)?imgseeds?\.com$/,
           // starts with img-
-          /^img-(zone|planet|pay|uploads)\.com$/,
+          /^img-(planet|pay)\.com$/,
           // starts with www
-          /^www\.img(blow|lemon|4sharing)\.com$/,
-          /^www\.imagefolks\.com$/,
-          /^www\.freephotohostin\.com$/,
-          /^(www\.)?imgult\.com$/,
+          /^www\.imglemon\.com$/,
           // starts with xxx
-          /^xxx(imagenow|screens)\.com$/,
-          /^xxxsparrow?\.com$/,
+          /^xxxscreens\.com$/,
           /^xxxwebdlxxx\.org$/,
           // else
-          /^(playimg|picstwist|ericsony|wpc8|uplimg|lexiit|thumbnailus|newimagepost|fapingpics|dimtus|tinizo)\.com$/,
-          /^((i|hentai)\.)?imgslip\.com$/,
+          /^(wpc8|dimtus|tinizo)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
-          /^(go|er)imge\.com$/,
-          /^(like\.)?08lkk\.com$/,
-          /^nim(plus|zshare)\.com$/,
-          /^nudeximg\.com$/,
+          /^erimge\.com$/,
+          /^nimzshare\.com$/,
           // net
-          /^img(serve|coin|fap|candy|master|-view|run|boom|project|python|pics|pix)\.net$/,
-          /^(imagesouls|naughtygate|gallerycloud|imagelaser|picture-bang|project-photo|pix-link|funimg|golfpit|xximg)\.net$/,
+          /^img(serve|-view|project|python|pix)\.net$/,
+          /^(naughtygate|gallerycloud|funimg|xximg)\.net$/,
           // org
-          /^(shot|adult)img\.org$/,
           /^image(\.adlock|on|team)\.org$/,
-          /^(voyeur|drag|teen|mega)image\.org$/,
+          /^(voyeur|teen|mega)image\.org$/,
           /^teenshot\.org$/,
           /^img(studio|spot)\.org$/,
           // else
           /^www\.hotimage\.uk$/,
           /^hotimages\.eu$/,
           /(^|\.)55888\.eu$/,
-          /^img(cloud|mag)\.co$/,
+          /^imgcloud\.co$/,
           /^pixup\.us$/,
-          /^(bulkimg|photo-up|myimg|pop-img|img-pop|ads-img)\.info$/,
-          /^vava\.in$/,
-          /^(pixxx|picspornfree|imgload|fapat)\.me$/,
-          /^(domaink|pic2pic|porno-pirat|24aconstii|loftlm|18pron|imgplus)\.ru$/,
-          /^imgease\.re$/,
-          /^(goimg|xxx\.pornscreen)\.xyz$/,
-          /^(pic2pic|picz)\.site$/,
+          /^(pop-img|ads-img)\.info$/,
+          /^(domaink|porno-pirat)\.ru$/,
+          /^xxx\.pornscreen\.xyz$/,
+          /^picz\.site$/,
           /^darpix\.ga$/,
-          /^sxpics\.nl$/,
-          /^darpix\.desi$/,
-          /^pic4you\.top$/,
-          /^imgsen\.se$/,
           /^ipicture\.su$/,
           /^acidimg\.cc$/,
           /^s\.imghost\.top$/,
@@ -69,27 +54,14 @@
       },
       {
         host: [
-          /^img(run|twyti)\.net$/,
-          /^imgtwyti\.com$/,
-          /^hentai-(pop|baka)\.com$/,
+          /^hentai-pop\.com$/,
           /^star-hentai\.com$/,
-          /^(jav|img)-hentai\.host$/,
-          /^hentai-king\.host$/,
-          /^img-king\.xyz$/,
         ],
         path: /^\/[ti]\/img-.*\.html/,
       },
       {
         host: /^imgking\.co$/,
         path: /^\/img4?-.*\.html/,
-      },
-      {
-        host: /^imgbb\.net$/,
-        path: /^\/.-.+$/,
-      },
-      {
-        host: /^imgtor\.pw$/,
-        path: /^\/img2\/.+$/,
       },
       {
         host: /^ima\.gy$/,
@@ -101,36 +73,10 @@
 
   _.register({
     rule: {
-      host: /^imgtor\.pw$/,
-      path: /^\/img\/.*$/,
-    },
-    async start (m) {
-      const imageUrl = 'http://' + m.host[0] + m.path[0].replace('img', 'img2');
-      await $.openLink(imageUrl);
-    },
-  });
-
-  _.register({
-    rule: {
       host: /^imgrat\.com$/,
       path: /^\/img-.*\.html/,
     },
     ready: _.partial(action, '#close', '#main_image img.center-block.img-responsive'),
-  });
-
-  _.register({
-    rule: {
-      host: [
-        /^imageporn\.eu$/,
-        /^imgzizi\.xyz$/,
-      ],
-      path: /^\/img-.*\.html/,
-    },
-    async start () {
-      // HACK break script injection
-      $.window.document.createElement = null;
-    },
-    ready: defaultAction,
   });
 
   // TODO need to refactor the cookie rule
@@ -174,44 +120,6 @@
         bw: 'edge',
       });
       window.location.reload();
-    },
-  });
-
-  async function helper () {
-    // crack the shitty qqc.co visitScript 5440
-    $.window.setTimeout = _.nop;
-
-    // this site checks cookie that caculate from session
-    // do an AJAX to skip checking
-    const data = await $.get(window.location.toString());
-    return $.toDOM(data);
-  }
-
-  _.register({
-    rule: {
-      host: /^08lkk\.com$/,
-      path: /^\/Photo\/img-.+\.html$/,
-    },
-    async start () {
-      const page = await helper();
-      const i = $('img[class^=centred]', page);
-      await $.openImage(i.src);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^08lkk\.com$/,
-      path: /^\/\d+\/img-.*\.html$/,
-    },
-    async start () {
-      const page = await helper();
-      let bbcode = $.$('#imagecodes input', page);
-      bbcode = bbcode.value.match(/.+\[IMG\]([^[]+)\[\/IMG\].+/);
-      bbcode = bbcode[1];
-      bbcode = bbcode.replace('small', 'big');
-
-      await $.openImage(bbcode);
     },
   });
 

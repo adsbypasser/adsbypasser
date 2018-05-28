@@ -14,7 +14,6 @@
         /^adpop\.me$/,
         /^wi\.cr$/,
         /^tui\.click$/,
-        /^megaurl\.in$/,
       ],
     },
     async ready () {
@@ -27,7 +26,8 @@
         return;
       }
 
-      sendRequest(f);
+      const url = await sendRequest(f);
+      await $.openLink(url);
     },
   });
 
@@ -36,12 +36,12 @@
       host: [
         /^idsly\.com$/,
         /^adbilty\.me$/,
-        /^oke\.io$/,
+        /^(oke|cuon)\.io$/,
         /^linkrex\.net$/,
         /^safelinku\.net$/,
         /^3bst\.co$/,
         /^3rabcut\.com$/,
-        /^shink\.xyz$/,
+        /^(shink|shrten)\.xyz$/,
         /^mlink\.club$/,
         /^zlshorte\.net$/,
         /^(igram|gram)\.im$/,
@@ -58,6 +58,7 @@
         /^(vy\.)?adsvy\.com$/,
         /^cut4links\.com$/,
         /^tmearn\.com$/,
+        /^megaurl\.in$/,
       ],
     },
     async ready () {
@@ -82,7 +83,13 @@
 
       while (true) {
         await _.wait(2000);
-        sendRequest(f);
+        try {
+          const url = await sendRequest(f);
+          await $.openLink(url);
+          break;
+        } catch (e) {
+          _.warn(e);
+        }
       }
     },
   });
@@ -92,7 +99,7 @@
       host: [
         /^(psl|twik)\.pw$/,
         /^coshink\.co$/,
-        /^(curs|cuon)\.io$/,
+        /^(curs|crus|4cut)\.io$/,
         /^shark\.vn$/,
         /^(cut-urls|link-earn|shrinkearn)\.com$/,
         /^adslink\.pw$/,
@@ -129,6 +136,7 @@
         /^mikymoons\.com$/,
         /^spamlink\.org$/,
         /^royurls\.bid$/,
+        /^itiad\.com$/,
       ],
     },
     async ready () {
@@ -151,24 +159,26 @@
     return null;
   }
 
-  // XXX threw away promise
   function sendRequest (f) {
-    const jQuery = $.window.$;
-    jQuery.ajax({
-      dataType: 'json',
-      type: 'POST',
-      url: f.attr('action'),
-      data: f.serialize(),
-      success: (result) => {
-        if (result.url) {
-          $.openLink(result.url);
-        } else {
-          _.warn(result.message);
-        }
-      },
-      error: (xhr, status, error) => {
-        _.warn(xhr, status, error);
-      },
+    return new Promise((resolve, reject) => {
+      const jQuery = $.window.$;
+      jQuery.ajax({
+        dataType: 'json',
+        type: 'POST',
+        url: f.attr('action'),
+        data: f.serialize(),
+        success: (result) => {
+          if (result.url) {
+            resolve(result.url);
+          } else {
+            reject(new _.AdsBypasserError(result.message));
+          }
+        },
+        error: (xhr, status, error) => {
+          _.warn(xhr, status, error);
+          reject(new _.AdsBypasserError('request error'));
+        },
+      });
     });
   }
 
