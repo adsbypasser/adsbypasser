@@ -157,6 +157,17 @@ _.register({
 });
 
 _.register({
+  rule: {
+    host: /^gameinfo\.pw$/,
+    query: /^\?id=([a-zA-Z0-9/=]+)$/,
+  },
+  async ready () {
+    const f = $('form');
+    f.submit();
+  },
+});
+
+_.register({
   rule: [
     {
       host: [
@@ -172,6 +183,9 @@ _.register({
     {
       host: /^sipkur\.us$/,
       path: /\.html$/,
+    },
+    {
+      host: /^gameinfo\.pw$/,
     },
   ],
   async ready (m) {

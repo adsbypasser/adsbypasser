@@ -10,13 +10,6 @@
 
   _.register({
     rule: {
-      host: /^imagecherry\.com$/,
-    },
-    ready: _.partial(run, true),
-  });
-
-  _.register({
-    rule: {
       host: [
         /^imagetwist\.com$/,
         /^imagexport\.com$/,

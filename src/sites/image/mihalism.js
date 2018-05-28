@@ -4,12 +4,9 @@
   _.register({
     rule: {
       host: [
-        /^(miragepics|funextra\.hostzi|imgrex|img3x)\.com$/,
+        /^(miragepics|funextra\.hostzi)\.com$/,
         /^bilder\.nixhelp\.de$/,
         /^imagecurl\.(com|org)$/,
-        /^imagevau\.eu$/,
-        /^img\.deli\.sh$/,
-        /^imgsicily\.it$/,
         /^www\.imghere\.net$/,
       ],
       path: /^\/viewer\.php$/,
@@ -23,7 +20,6 @@
     rule: {
       host: [
         /^(dwimg|imgsin)\.com$/,
-        /^www\.pictureshoster\.com$/,
       ],
       path: /^\/viewer\.php$/,
       query: /file=([^&]+)/,
