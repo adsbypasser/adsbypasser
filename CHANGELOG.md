@@ -164,6 +164,13 @@
     * pixliv.com
     * imagearn.com
     * image18.org
+    * hentaimg.com
+    * ghanaimages.co
+    * blackcatpix.com
+    * fastpics.net
+    * ifap.co
+    * avenuexxx.com
+    * 2imgs.com
 
 ## v6.11.0
 
