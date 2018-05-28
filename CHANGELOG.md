@@ -221,6 +221,18 @@
     * shortenurl.tk
     * pengaman.link
     * urlgo.gs
+    * shink.in
+    * qaafa.com
+    * digg.to
+    * short.est
+    * setlinks.us
+    * robo.us
+    * riurl.com
+    * rijaliti.info
+    * reffbux.com
+    * rapeit.net
+    * oxyl.me
+    * ohleech.com
 
 ## v6.11.0
 
