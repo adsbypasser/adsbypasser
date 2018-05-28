@@ -175,6 +175,7 @@
     * xlink.me
     * wzzq.me
     * victly.com
+    * upan.so
 
 ## v6.11.0
 
