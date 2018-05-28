@@ -11,6 +11,8 @@
     * prnt.sc
     * imgmass.com
     * shrten.xyz
+    * crus.io
+    * 4cut.io
 * removed
     * x.pixfarm.net
     * vvcap.net
@@ -176,6 +178,8 @@
     * wzzq.me
     * victly.com
     * upan.so
+    * ultshare.com
+    * typ.me
 
 ## v6.11.0
 
