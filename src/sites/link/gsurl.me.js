@@ -12,7 +12,6 @@ _.register({
     $.remove('#container');
 
     const a = $('#link');
-    await _.wait(5000);
-    await $.openLink(a.href);
+    await $.openLink(`${a.href}&ab=${$.window.x}`);
   },
 });

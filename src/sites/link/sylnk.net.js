@@ -41,7 +41,7 @@ _.register({
     },
     {
       host: /^sehatlega\.com$/,
-      query: /^\?lanjut=([a-zA-Z0-9/=]+)$/,
+      query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
     {
       host: /^www\.compartiendofull\.net$/,
@@ -113,7 +113,7 @@ _.register({
 
 _.register({
   rule: {
-    host: /^gameinfo\.pw$/,
+    host: /^(gameinfo|apasih)\.pw$/,
     query: /^\?id=([a-zA-Z0-9/=]+)$/,
   },
   async ready () {
@@ -128,13 +128,13 @@ _.register({
       host: [
         /^(ani-share|autolinkach)\.com$/,
         /^motonews\.club$/,
-        /^(autofans|landscapenature|apasih|gameinfo)\.pw$/,
+        /^(autofans|landscapenature)\.pw$/,
         /^www\.lifesurance\.info$/,
       ],
       query: /get=([^&]+)/,
     },
     {
-      host: /^gameinfo\.pw$/,
+      host: /^(gameinfo|apasih)\.pw$/,
     },
   ],
   async ready (m) {
