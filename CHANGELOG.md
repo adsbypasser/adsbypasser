@@ -2,6 +2,10 @@
 
 * fixed
     * videogamesblogger.com
+    * viidii.info
+    * gameinfo.pw
+    * megaurl.in
+    * cuon.io
 * added
     * itiad.com
     * prnt.sc
