@@ -158,7 +158,7 @@ _.register({
 
 _.register({
   rule: {
-    host: /^gameinfo\.pw$/,
+    host: /^(gameinfo|apasih)\.pw$/,
     query: /^\?id=([a-zA-Z0-9/=]+)$/,
   },
   async ready () {
@@ -185,7 +185,7 @@ _.register({
       path: /\.html$/,
     },
     {
-      host: /^gameinfo\.pw$/,
+      host: /^(gameinfo|apasih)\.pw$/,
     },
   ],
   async ready (m) {
