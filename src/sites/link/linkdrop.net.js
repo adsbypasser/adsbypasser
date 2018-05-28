@@ -60,7 +60,7 @@
         /^(123link|clik)\.pw$/,
         /^(vy\.)?adsvy\.com$/,
         /^cut4links\.com$/,
-        /^tmearn\.com$/,
+        /^(tmearn|payshorturl|urltips)\.com$/,
         /^megaurl\.in$/,
       ],
     },
