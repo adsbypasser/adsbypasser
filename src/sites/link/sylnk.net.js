@@ -173,7 +173,7 @@ _.register({
       host: [
         /^(designinghomey|ani-share|sinopsisfilmku|autolinkach)\.com$/,
         /^motonews\.club$/,
-        /^(autofans|landscapenature|apasih|gameinfo)\.pw$/,
+        /^(autofans|landscapenature)\.pw$/,
         /^(sidespace|erogedownload)\.net$/,
         /^otoviral\.racing$/,
         /^www\.lifesurance\.info$/,
