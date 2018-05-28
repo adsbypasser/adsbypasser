@@ -6,6 +6,9 @@
     * gameinfo.pw
     * megaurl.in
     * cuon.io
+    * gsurl.me
+    * sehatlega.com
+    * apasih.pw
 * added
     * itiad.com
     * prnt.sc
