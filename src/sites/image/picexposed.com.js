@@ -1,9 +1,9 @@
 _.register({
   rule: {
-    host: /^avenuexxx\.com$/,
+    host: /^(picexposed|croea)\.com$/,
   },
   async ready () {
-    const i = $('#content img');
+    const i = $('img.pic');
     await $.openImage(i.src);
   },
 });

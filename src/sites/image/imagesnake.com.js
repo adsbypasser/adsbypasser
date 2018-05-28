@@ -27,7 +27,7 @@
       },
       'http://fotoo.pl/show.php?img=*.html',
       {
-        host: /^www\.(fotoszok\.pl|imagestime)\.com$/,
+        host: /^www\.imagestime\.com$/,
         path: /^\/show\.php\/.*\.html$/,
       },
     ],
