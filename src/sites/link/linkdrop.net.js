@@ -44,7 +44,7 @@
         /^safelinku\.net$/,
         /^3bst\.co$/,
         /^3rab(short|cut)\.com$/,
-        /^shink\.xyz$/,
+        /^(shink|shrten)\.xyz$/,
         /^mlink\.club$/,
         /^zlshorte\.net$/,
         /^(igram|gram)\.im$/,
