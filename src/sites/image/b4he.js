@@ -1,9 +1,7 @@
 _.register({
   rule: {
     host: [
-      /^(b4he|fullimg)\.com/,
-      /^fastpics\.net/,
-      /^ifap\.co/,
+      /^(b4he|fullimg)\.com$/,
     ],
     query: /^\?v=([^&]+)/,
   },
