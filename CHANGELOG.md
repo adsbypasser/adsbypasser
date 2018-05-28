@@ -10,6 +10,7 @@
     * itiad.com
     * prnt.sc
     * imgmass.com
+    * shrten.xyz
 * removed
     * x.pixfarm.net
     * vvcap.net
@@ -171,6 +172,9 @@
     * ifap.co
     * avenuexxx.com
     * 2imgs.com
+    * xlink.me
+    * wzzq.me
+    * victly.com
 
 ## v6.11.0
 
