@@ -158,6 +158,12 @@
     * picturevip.com
     * uploadimage.eu
     * anonpic.com
+    * imagepix.org
+    * imageheli.com
+    * imgtube.net
+    * pixliv.com
+    * imagearn.com
+    * image18.org
 
 ## v6.11.0
 
