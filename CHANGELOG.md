@@ -213,6 +213,14 @@
     * sipkur.us
     * aw-games.net
     * ww3.manteb.in
+    * streamingfrench.net
+    * stash-coins.com
+    * srnk.co
+    * smll.io
+    * shortskip.com
+    * shortenurl.tk
+    * pengaman.link
+    * urlgo.gs
 
 ## v6.11.0
 
