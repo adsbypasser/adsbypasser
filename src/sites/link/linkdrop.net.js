@@ -13,7 +13,6 @@
         /^(cutwi|cut-w|cutl)\.in$/,
         /^(www\.)?jurl\.io$/,
         /^mitly\.us$/,
-        /^adpop\.me$/,
         /^wi\.cr$/,
         /^tui\.click$/,
       ],
@@ -38,7 +37,7 @@
       host: [
         /^sflnk\.me$/,
         /^idsly\.com$/,
-        /^adbilty\.me$/,
+        /^(adbilty|adpop)\.me$/,
         /^(oke|cuon)\.io$/,
         /^linkrex\.net$/,
         /^safelinku\.net$/,
