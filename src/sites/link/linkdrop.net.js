@@ -62,6 +62,7 @@
         /^cut4links\.com$/,
         /^tmearn\.com$/,
         /^megaurl\.in$/,
+        /^icutit\.ca$/,
       ],
     },
     async ready () {
@@ -139,7 +140,7 @@
         /^cut4link\.com$/,
         /^coinlink\.co$/,
         /^kokemoon\.com$/,
-        /^(icutit|cutearn|earnbig|shortit)\.ca$/,
+        /^(cutearn|earnbig|shortit)\.ca$/,
         /^(www\.)?viralukk\.com$/,
         /^shrt10\.com$/,
         /^mikymoons\.com$/,
