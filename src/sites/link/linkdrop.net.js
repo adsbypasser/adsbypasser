@@ -147,6 +147,7 @@
         /^top9space\.com$/,
         /^royurls\.bid$/,
         /^itiad\.com$/,
+        /^raolink\.com$/,
       ],
     },
     async ready () {
