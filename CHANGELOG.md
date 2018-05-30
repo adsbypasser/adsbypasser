@@ -9,6 +9,8 @@
     * gsurl.me
     * sehatlega.com
     * apasih.pw
+    * icutit.ca
+    * adpop.me
 * added
     * itiad.com
     * prnt.sc
