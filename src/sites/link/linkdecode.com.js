@@ -1,8 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^www\.linkdecode\.com$/,
-    ],
+    host: /^www\.linkdecode\.com$/,
     path: /^\/$/,
     query: /^\?(.+)$/,
   },
