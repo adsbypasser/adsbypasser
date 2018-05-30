@@ -19,6 +19,7 @@
     * crus.io
     * 4cut.io
     * imageshimage.com
+    * imgrock.pw
 * removed
     * x.pixfarm.net
     * vvcap.net
