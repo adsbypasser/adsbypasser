@@ -240,6 +240,17 @@
     * rapeit.net
     * oxyl.me
     * ohleech.com
+    * mt0.org
+    * moe.god.jp
+    * moesubs.akurapopo.pro
+    * dl.nsfk.in
+    * madlink.sk
+    * mantap.in
+    * mantab.in
+    * mantep.in
+    * manteb.in
+    * st.oploverz.net
+    * awaremmxv.com
 
 ## v6.11.0
 
