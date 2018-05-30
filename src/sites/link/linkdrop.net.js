@@ -118,7 +118,7 @@
         /^link4\.me$/,
         /^url\.ht$/,
         /^urle\.co$/,
-        /^hashe\.in$/,
+        /^(hashe|taive)\.in$/,
         /^www\.worldhack\.net$/,
         /^123link\.(io|co|press)$/,
         /^pir\.im$/,
