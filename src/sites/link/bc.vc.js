@@ -51,8 +51,7 @@
   _.register({
     rule: {
       host: [
-        /^hit\.us$/,
-        /^mylink\.(us|zone)$/,
+        /^(hit|mylink)\.us$/,
         /^xafox\.com$/,
         /^zpoz\.net$/,
         /^www\.adjet\.eu$/,
