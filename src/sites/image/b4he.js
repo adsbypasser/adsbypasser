@@ -1,8 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^(b4he|fullimg)\.com$/,
-    ],
+    host: /^fullimg\.com$/,
     query: /^\?v=([^&]+)/,
   },
   async start (m) {
