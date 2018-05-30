@@ -3,8 +3,8 @@
   _.register({
     rule: {
       host: [
-        /^img(fantasy|smile|nemo|curl)\.com$/,
-        /^(imagedomino|lovechix)\.com$/,
+        /^img(fantasy|nemo|curl)\.com$/,
+        /^imagedomino\.com$/,
         /^0img\.net$/,
         /^bunnyforum\.org$/,
       ],
