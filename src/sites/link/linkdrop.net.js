@@ -6,8 +6,6 @@
         /^dmus\.in$/,
         /^ulshare\.net$/,
         /^adurl\.id$/,
-        /^goolink\.me$/,
-        /^earningurl\.com$/,
         /^earn-guide\.com$/,
         /^(cutwin|cut-earn)\.com$/,
         /^(cutwi|cut-w|cutl)\.in$/,
@@ -35,14 +33,13 @@
   _.register({
     rule: {
       host: [
-        /^sflnk\.me$/,
         /^idsly\.com$/,
         /^(adbilty|adpop)\.me$/,
         /^(oke|cuon)\.io$/,
         /^linkrex\.net$/,
         /^safelinku\.net$/,
         /^3bst\.co$/,
-        /^3rab(short|cut)\.com$/,
+        /^3rabcut\.com$/,
         /^(shink|shrten)\.xyz$/,
         /^mlink\.club$/,
         /^zlshorte\.net$/,
@@ -103,28 +100,24 @@
   _.register({
     rule: {
       host: [
-        /^adlink\.guru$/,
         /^(psl|twik)\.pw$/,
         /^coshink\.co$/,
         /^(curs|crus|4cut)\.io$/,
         /^shark\.vn$/,
-        /^cypt\.ga$/,
-        /^(filesbucks|cut-urls|link-earn|shrinkearn)\.com$/,
+        /^(cut-urls|link-earn|shrinkearn)\.com$/,
         /^adslink\.pw$/,
         /^dzurl\.ml$/,
-        /^(elink|petty)\.link$/,
-        /^(payurl|urlst)\.me$/,
+        /^petty\.link$/,
+        /^urlst\.me$/,
         /^u2s\.io$/,
         /^shortad\.cf$/,
         /^link4\.me$/,
-        /^url\.ht$/,
         /^urle\.co$/,
         /^(hashe|taive)\.in$/,
         /^www\.worldhack\.net$/,
         /^123link\.(io|co|press)$/,
-        /^pir\.im$/,
-        /^(www\.)?(pnd|bol)\.tl$/,
-        /^(tl|adfly|git)\.tc$/,
+        /^(www\.)?pnd\.tl$/,
+        /^(tl|git)\.tc$/,
         /^(adfu|linkhits)\.us$/,
         /^short\.pastewma\.com$/,
         /^l2s\.io$/,
@@ -147,7 +140,6 @@
         /^shrt10\.com$/,
         /^mikymoons\.com$/,
         /^spamlink\.org$/,
-        /^top9space\.com$/,
         /^royurls\.bid$/,
         /^itiad\.com$/,
         /^(ot|load)url\.com$/,
@@ -166,7 +158,6 @@
     },
   });
 
-
   function getForm () {
     const jQuery = $.window.$;
     const f = jQuery('#go-link, .go-link, form[action="/links/go"], form[action="/links/linkdropgo"]');
@@ -175,7 +166,6 @@
     }
     return null;
   }
-
 
   function sendRequest (f) {
     return new Promise((resolve, reject) => {
@@ -200,7 +190,6 @@
     });
   }
 
-
   function firstStage () {
     return new Promise((resolve) => {
       const f = $.$('#link-view');
@@ -218,7 +207,6 @@
     });
   }
 
-
   async function secondStage (page) {
     const f = $('#go-link', page);
     const args = extractArgument(f);
@@ -230,7 +218,6 @@
     }
     throw new _.AdsBypasserError('wrong data');
   }
-
 
   function extractArgument (form) {
     const args = {};
