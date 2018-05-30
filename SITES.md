@@ -53,9 +53,7 @@
     * acidimg.cc
     * ads-img.info
     * adultimg.org
-    * bokimage.com
     * bulkimg.info
-    * croftimage.com
     * damimage.com
     * darpix.desi
     * darpix.ga
@@ -84,11 +82,8 @@
     * imagecorn.com
     * imagedecode.com
     * imagefolks.com
-    * imagehorse.com
     * imagelaser.net
     * imageon.org
-    * imageontime.com
-    * imagepicsa.com
     * imagerar.com
     * imagesouls.net
     * imageteam.org
@@ -99,24 +94,15 @@
     * img-pop.info
     * img-uploads.com
     * img-view.net
-    * img-zone.com
-    * img.spicyzilla.com
-    * img22.com
     * img2share.com
     * img4sharing.com
     * imgadult.com
-    * imgban.com
     * imgbb.net
-    * imgbeer.com
-    * imgbinbou.com
-    * imgblank.com
     * imgblow.com
     * imgboom.net
     * imgcandy.net
     * imgcloud.co
     * imgcoin.net
-    * imgcover.com
-    * imgdevil.com
     * imgdrive.net
     * imgease.re
     * imgfap.net
@@ -134,17 +120,13 @@
     * imgmag.co
     * imgmain.com
     * imgmaster.net
-    * imgnext.com
-    * imgnimz.com
     * imgpart.com
     * imgpix.net
     * imgplus.ru
     * imgprime.com
     * imgproject.net
-    * imgpu.com
     * imgpython.net
     * imgrat.com
-    * imgreality.com
     * imgreputa.com
     * imgrun.net
     * imgsavvy.com
@@ -159,12 +141,9 @@
     * imgtor.pw
     * imgtornado.com
     * imgtrial.com
-    * imgtwyti.com
     * imgtzar.com
     * imgult.com
     * imgwallet.com
-    * imgwet.com (captcha)
-    * imgxyz.net
     * imgzizi.xyz
     * imx.to
     * ipicture.su
@@ -172,7 +151,6 @@
     * lexiit.com
     * loftlm.ru
     * megaimage.org
-    * myhotimage.com
     * myimg.info
     * naughtygate.net
     * newimagepost.com
@@ -211,8 +189,6 @@
     * xxxscreens.com
     * xxxsparrow.com
     * xxxwebdlxxx.org
-    * zeljeimage.com
-    * zonezeedimage.com
 * imageporter
     * imagecarry.com
     * imagedunk.com
@@ -960,9 +936,7 @@
     * vidto.me
     * viidii.info
     * vir.al
-    * vvcap.net
     * wzzq.me
-    * x.pixfarm.net
     * xlink.me
     * yep.it
     * yooclick.com
