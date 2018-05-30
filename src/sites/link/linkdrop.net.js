@@ -64,6 +64,7 @@
         /^megaurl\.in$/,
         /^icutit\.ca$/,
         /^koylinks\.win$/,
+        /^lopte\.pro$/,
       ],
     },
     async ready () {
