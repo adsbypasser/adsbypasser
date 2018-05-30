@@ -48,18 +48,15 @@
     * xxxhost.me
 * reklama
     * 08lkk.com
-    * 18pron.ru
     * acidimg.cc
     * ads-img.info
     * damimage.com
-    * darpix.desi
     * darpix.ga
     * dimtus.com
     * domaink.ru
     * erimge.com
     * funimg.net
     * gallerycloud.net
-    * goimg.xyz
     * greasyimage.com
     * hentai-baka.com
     * hentai-king.host
@@ -84,7 +81,6 @@
     * imgbb.net
     * imgcloud.co
     * imgdrive.net
-    * imgease.re
     * imgfapper.com
     * imgfresh.info
     * imghere.net
@@ -98,7 +94,6 @@
     * imgmain.com
     * imgpart.com
     * imgpix.net
-    * imgplus.ru
     * imgprime.com
     * imgproject.net
     * imgpython.net
@@ -107,7 +102,6 @@
     * imgsavvy.com
     * imgseed.com
     * imgseeds.com
-    * imgsen.se
     * imgserve.net
     * imgspot.org
     * imgstudio.org
@@ -121,19 +115,15 @@
     * imx.to
     * ipicture.su
     * jav-hentai.host
-    * loftlm.ru
     * megaimage.org
     * naughtygate.net
     * nimzshare.com
     * pic.hotimg.site
-    * pic2pic.site
-    * pic4you.top
     * picz.site
     * pixup.us
     * pop-img.info
     * porno-pirat.ru
     * star-hentai.com
-    * sxpics.nl
     * teenimage.org
     * teenshot.org
     * tinizo.com
