@@ -118,7 +118,6 @@
     * darpix.desi
     * pic4you.top
     * imgsen.se
-    * imgrun.net
     * imgtwyti.net
     * imgtwyti.com
     * hentai-baka.com
