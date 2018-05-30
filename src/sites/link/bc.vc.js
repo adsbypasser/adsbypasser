@@ -76,8 +76,7 @@
   _.register({
     rule: {
       host: [
-        /^(1tk|hit|adbla|tl7)\.us$/,
-        /^mylink\.(us|zone)$/,
+        /^(1tk|hit|adbla|tl7|mylink)\.us$/,
         /^gx\.si$/,
         /^adwat\.ch$/,
         /^(fly2url|urlwiz|xafox)\.com$/,
