@@ -251,6 +251,9 @@
     * manteb.in
     * st.oploverz.net
     * awaremmxv.com
+    * looy.in
+    * loook.ga
+    * lnx.lu
 
 ## v6.11.0
 
