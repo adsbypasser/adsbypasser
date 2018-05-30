@@ -107,7 +107,7 @@
     * imgload.me
     * fapat.me
     * pic2pic.ru
-    * 24aconstii.ru
+    * 24avarii.ru
     * loftlm.ru
     * 18pron.ru
     * imgplus.ru
