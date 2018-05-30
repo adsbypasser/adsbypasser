@@ -2,6 +2,7 @@
 
   _.register({
     rule: {
+      // No action required for: adhy.pe
       host: /^ah\.pe$/,
     },
     async ready () {
