@@ -7,7 +7,6 @@
     rule: {
       host: [
         /^bc\.vc$/,
-        /^linc\.ml$/,
       ],
       path: /^.+(https?:\/\/.+)$/,
     },
@@ -49,47 +48,14 @@
     },
   });
 
-  // adcrun.ch
-  _.register({
-    rule: {
-      host: /^adcrun\.ch$/,
-      path: /^\/\w+$/,
-    },
-    async ready () {
-      // Try to bypass the survey
-      $.remove('.user_content');
-
-      const rSurveyLink = /http\.open\("GET", "api_ajax\.php\?sid=\d*&ip=[^&]*&longurl=([^"]+)" \+ first_time, (?:true|false)\);/;
-      const l = $.searchFromScripts(rSurveyLink);
-      // Redirect to the target link if we found it
-      if (l) {
-        await $.openLink(l[1]);
-        return;
-      }
-
-      // Otherwise it's most likely a simple bc.vc-like link
-      // Malformed JSON
-      await run(true);
-    },
-  });
-
   _.register({
     rule: {
       host: [
-        /^(1tk|hit|adbla|tl7)\.us$/,
-        /^mylink\.(us|zone)$/,
-        /^gx\.si$/,
-        /^adwat\.ch$/,
-        /^(fly2url|urlwiz|xafox)\.com$/,
-        /^(zpoz|ultry)\.net$/,
-        /^(wwy|myam)\.me$/,
-        /^(ssl|srk)\.gs$/,
+        /^(hit|mylink)\.us$/,
+        /^xafox\.com$/,
+        /^zpoz\.net$/,
         /^www\.adjet\.eu$/,
-        /^cun\.bz$/,
         /^miniurl\.tk$/,
-        /^vizzy\.es$/,
-        /^kazan\.vc$/,
-        /^linkcash\.ml$/,
       ],
       path: /^\/.+/,
     },
@@ -98,7 +64,10 @@
 
   _.register({
     rule: {
-      host: /^adtr\.im|ysear\.ch|xip\.ir$/,
+      host: [
+        /^ysear\.ch$/,
+        /^xip\.ir$/,
+      ],
       path: /^\/.+/,
     },
     async ready () {
@@ -214,7 +183,6 @@
     }, 1000);
   }
 
-
   async function run (dirtyFix) {
     // prevent redirection by iframe
     $.remove('iframe');
@@ -231,7 +199,6 @@
       await $.openLink(result);
     }
   }
-
 
   function findAJAXToken () {
     const rv = $.searchFromScripts('/fly/ajax.php');
@@ -260,7 +227,6 @@
     };
   }
 
-
   function fakeAJAXToken () {
     const skipAd = $('div.fly_head span#redirectin').parentElement;
     const margin = 6;
@@ -276,7 +242,6 @@
 
     return time;
   }
-
 
   function jQueryOffset (element) {
     const r = element.getBoundingClientRect();

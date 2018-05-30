@@ -19,6 +19,19 @@
     * crus.io
     * 4cut.io
     * imageshimage.com
+    * imgrock.pw
+    * koylinks.win
+    * tr.link
+    * oload.download
+    * taive.in
+    * payshorturl.com
+    * oturl.com
+    * loadurl.com
+    * vinaurl.net
+    * lopte.pro
+    * man2pro.com
+    * urltips.com
+    * raolink.com
 * removed
     * x.pixfarm.net
     * vvcap.net
@@ -94,7 +107,7 @@
     * imgload.me
     * fapat.me
     * pic2pic.ru
-    * 24aconstii.ru
+    * 24avarii.ru
     * loftlm.ru
     * 18pron.ru
     * imgplus.ru
@@ -105,7 +118,6 @@
     * darpix.desi
     * pic4you.top
     * imgsen.se
-    * imgrun.net
     * imgtwyti.net
     * imgtwyti.com
     * hentai-baka.com
@@ -239,6 +251,71 @@
     * rapeit.net
     * oxyl.me
     * ohleech.com
+    * mt0.org
+    * moe.god.jp
+    * moesubs.akurapopo.pro
+    * dl.nsfk.in
+    * madlink.sk
+    * mantap.in
+    * mantab.in
+    * mantep.in
+    * manteb.in
+    * st.oploverz.net
+    * awaremmxv.com
+    * looy.in
+    * loook.ga
+    * lnx.lu
+    * lnk.in
+    * indexmovie.me
+    * ilix.in
+    * priva.us
+    * leechbd.tk
+    * link-protector.com
+    * link2dollar.com
+    * cvc.la
+    * boxcash.net
+    * anonymbucks.com
+    * 3ra.be
+    * 2ty.cc
+    * adjet.biz
+    * adfe.es
+    * dereferer.website
+    * dikit.in
+    * elde.me
+    * ethi.in
+    * fit.sh
+    * fundurl.com
+    * gca.sh
+    * repla.cr
+    * go2.me
+    * linkajc.com
+    * link5s.com
+    * fastdecode.com
+    * linkdolar.xyz
+    * linkpaid.net
+    * dapat.in
+    * cf.ly
+    * link.animagz.org
+    * gunting.in
+    * linc.ml
+    * adcrun.ch
+    * 1tk.us
+    * adbla.us
+    * tl7.us
+    * gx.si
+    * adwat.ch
+    * fly2url.com
+    * urlwiz.com
+    * ultry.net
+    * wwy.me
+    * myam.me
+    * ssl.gs
+    * srk.gs
+    * cun.bz
+    * vizzy.es
+    * kazan.vc
+    * linkcash.ml
+    * adtr.im
 
 ## v6.11.0
 
