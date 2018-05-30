@@ -316,6 +316,21 @@
     * kazan.vc
     * linkcash.ml
     * adtr.im
+    * goolink.me
+    * earningurl.com
+    * sflnk.me
+    * 3rabshort.com
+    * adlink.guru
+    * cypt.ga
+    * filesbucks.com
+    * elink.link
+    * payurl.me
+    * url.ht
+    * pir.im
+    * bol.tl
+    * adfly.tc
+    * kokemoon.com
+    * top9space.com
 
 ## v6.11.0
 
