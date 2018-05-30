@@ -1,9 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^lnx\.lu$/,
-      /^url\.fm$/,
-    ],
+    host: /^url\.fm$/,
   },
   async ready () {
     const a = $('#clickbtn a');

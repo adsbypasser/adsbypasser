@@ -13,10 +13,8 @@
         /^(cutwi|cut-w|cutl)\.in$/,
         /^(www\.)?jurl\.io$/,
         /^mitly\.us$/,
-        /^adpop\.me$/,
         /^wi\.cr$/,
         /^tui\.click$/,
-        /^megaurl\.in$/,
       ],
     },
     async ready () {
@@ -29,7 +27,8 @@
         return;
       }
 
-      sendRequest(f);
+      const url = await sendRequest(f);
+      await $.openLink(url);
     },
   });
 
@@ -38,20 +37,21 @@
       host: [
         /^sflnk\.me$/,
         /^idsly\.com$/,
-        /^adbilty\.me$/,
-        /^oke\.io$/,
+        /^(adbilty|adpop)\.me$/,
+        /^(oke|cuon)\.io$/,
         /^linkrex\.net$/,
         /^safelinku\.net$/,
         /^3bst\.co$/,
         /^3rab(short|cut)\.com$/,
-        /^shink\.xyz$/,
+        /^(shink|shrten)\.xyz$/,
         /^mlink\.club$/,
         /^zlshorte\.net$/,
         /^(igram|gram)\.im$/,
         /^(trlink|wolink|tocdo)\.in$/,
+        /^tr\.link$/,
         /^dz4link\.com$/,
         /^short2win\.com$/,
-        /^vnurl\.net$/,
+        /^(vn|vina)url\.net$/,
         /^clk\.press$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
@@ -60,7 +60,11 @@
         /^(123link|clik)\.pw$/,
         /^(vy\.)?adsvy\.com$/,
         /^cut4links\.com$/,
-        /^tmearn\.com$/,
+        /^(tmearn|payshorturl)\.com$/,
+        /^megaurl\.in$/,
+        /^icutit\.ca$/,
+        /^koylinks\.win$/,
+        /^lopte\.pro$/,
       ],
     },
     async ready () {
@@ -85,7 +89,13 @@
 
       while (true) {
         await _.wait(2000);
-        sendRequest(f);
+        try {
+          const url = await sendRequest(f);
+          await $.openLink(url);
+          break;
+        } catch (e) {
+          _.warn(e);
+        }
       }
     },
   });
@@ -96,7 +106,7 @@
         /^adlink\.guru$/,
         /^(psl|twik)\.pw$/,
         /^coshink\.co$/,
-        /^(curs|cuon)\.io$/,
+        /^(curs|crus|4cut)\.io$/,
         /^shark\.vn$/,
         /^cypt\.ga$/,
         /^(filesbucks|cut-urls|link-earn|shrinkearn)\.com$/,
@@ -109,7 +119,7 @@
         /^link4\.me$/,
         /^url\.ht$/,
         /^urle\.co$/,
-        /^hashe\.in$/,
+        /^(hashe|taive)\.in$/,
         /^www\.worldhack\.net$/,
         /^123link\.(io|co|press)$/,
         /^pir\.im$/,
@@ -132,7 +142,7 @@
         /^cut4link\.com$/,
         /^coinlink\.co$/,
         /^kokemoon\.com$/,
-        /^(icutit|cutearn|earnbig|shortit)\.ca$/,
+        /^(cutearn|earnbig|shortit)\.ca$/,
         /^(www\.)?viralukk\.com$/,
         /^shrt10\.com$/,
         /^mikymoons\.com$/,
@@ -140,6 +150,7 @@
         /^top9space\.com$/,
         /^royurls\.bid$/,
         /^itiad\.com$/,
+        /^(ot|load)url\.com$/,
         /^man2pro\.com$/,
       ],
     },
@@ -165,24 +176,26 @@
   }
 
 
-  // XXX threw away promise
   function sendRequest (f) {
-    const jQuery = $.window.$;
-    jQuery.ajax({
-      dataType: 'json',
-      type: 'POST',
-      url: f.attr('action'),
-      data: f.serialize(),
-      success: (result) => {
-        if (result.url) {
-          $.openLink(result.url);
-        } else {
-          _.warn(result.message);
-        }
-      },
-      error: (xhr, status, error) => {
-        _.warn(xhr, status, error);
-      },
+    return new Promise((resolve, reject) => {
+      const jQuery = $.window.$;
+      jQuery.ajax({
+        dataType: 'json',
+        type: 'POST',
+        url: f.attr('action'),
+        data: f.serialize(),
+        success: (result) => {
+          if (result.url) {
+            resolve(result.url);
+          } else {
+            reject(new _.AdsBypasserError(result.message));
+          }
+        },
+        error: (xhr, status, error) => {
+          _.warn(xhr, status, error);
+          reject(new _.AdsBypasserError('request error'));
+        },
+      });
     });
   }
 

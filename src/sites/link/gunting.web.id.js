@@ -1,11 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^(www\.)?shortenurl\.tk$/,
-      /^(www\.)?pengaman\.link$/,
-      /^urlgo\.gs$/,
-      /^gunting\.web\.id$/,
-    ],
+    host: /^gunting\.web\.id$/,
     path: /^\/\w+$/,
   },
   async ready () {

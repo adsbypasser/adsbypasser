@@ -2,10 +2,24 @@
 
 * fixed
     * videogamesblogger.com
+    * viidii.info
+    * gameinfo.pw
+    * megaurl.in
+    * cuon.io
+    * gsurl.me
+    * sehatlega.com
+    * apasih.pw
+    * icutit.ca
+    * adpop.me
 * added
     * itiad.com
     * prnt.sc
     * imgmass.com
+    * shrten.xyz
+    * crus.io
+    * 4cut.io
+    * imageshimage.com
+    * imgrock.pw
 * removed
     * x.pixfarm.net
     * vvcap.net
@@ -154,6 +168,143 @@
     * picturevip.com
     * uploadimage.eu
     * anonpic.com
+    * imagepix.org
+    * imageheli.com
+    * imgtube.net
+    * pixliv.com
+    * imagearn.com
+    * image18.org
+    * hentaimg.com
+    * ghanaimages.co
+    * blackcatpix.com
+    * fastpics.net
+    * ifap.co
+    * avenuexxx.com
+    * 2imgs.com
+    * xlink.me
+    * wzzq.me
+    * victly.com
+    * upan.so
+    * ultshare.com
+    * typ.me
+    * dlneko.com
+    * dlneko.net
+    * dlneko.org
+    * rumahsimpel.com
+    * safelinkair.com
+    * healthygress24.ga
+    * kombatch.amankan.link
+    * gadget14.pw
+    * auto14.pw
+    * nar-04.tk
+    * gadget13.com
+    * autorp.us
+    * anisubsia.tk
+    * insurance1.tech
+    * freeanimeonline.xyz
+    * shorten.id
+    * getcomics.gq
+    * miuitutorial.gq
+    * awsubs.cf
+    * awsubsco.ga
+    * satuasia.com
+    * tawaku.com
+    * link.filmku.net
+    * muucih.com
+    * telolet.in
+    * designinghomey.com
+    * sinopsisfilmku.com
+    * sidespace.net
+    * erogedownload.net
+    * otoviral.racing
+    * sipkur.us
+    * aw-games.net
+    * ww3.manteb.in
+    * streamingfrench.net
+    * stash-coins.com
+    * srnk.co
+    * smll.io
+    * shortskip.com
+    * shortenurl.tk
+    * pengaman.link
+    * urlgo.gs
+    * shink.in
+    * qaafa.com
+    * digg.to
+    * short.est
+    * setlinks.us
+    * robo.us
+    * riurl.com
+    * rijaliti.info
+    * reffbux.com
+    * rapeit.net
+    * oxyl.me
+    * ohleech.com
+    * mt0.org
+    * moe.god.jp
+    * moesubs.akurapopo.pro
+    * dl.nsfk.in
+    * madlink.sk
+    * mantap.in
+    * mantab.in
+    * mantep.in
+    * manteb.in
+    * st.oploverz.net
+    * awaremmxv.com
+    * looy.in
+    * loook.ga
+    * lnx.lu
+    * lnk.in
+    * indexmovie.me
+    * ilix.in
+    * priva.us
+    * leechbd.tk
+    * link-protector.com
+    * link2dollar.com
+    * cvc.la
+    * boxcash.net
+    * anonymbucks.com
+    * 3ra.be
+    * 2ty.cc
+    * adjet.biz
+    * adfe.es
+    * dereferer.website
+    * dikit.in
+    * elde.me
+    * ethi.in
+    * fit.sh
+    * fundurl.com
+    * gca.sh
+    * repla.cr
+    * go2.me
+    * linkajc.com
+    * link5s.com
+    * fastdecode.com
+    * linkdolar.xyz
+    * linkpaid.net
+    * dapat.in
+    * cf.ly
+    * link.animagz.org
+    * gunting.in
+    * linc.ml
+    * adcrun.ch
+    * 1tk.us
+    * adbla.us
+    * tl7.us
+    * gx.si
+    * adwat.ch
+    * fly2url.com
+    * urlwiz.com
+    * ultry.net
+    * wwy.me
+    * myam.me
+    * ssl.gs
+    * srk.gs
+    * cun.bz
+    * vizzy.es
+    * kazan.vc
+    * linkcash.ml
+    * adtr.im
 
 ## v6.11.0
 

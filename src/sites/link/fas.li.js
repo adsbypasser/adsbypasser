@@ -1,7 +1,7 @@
 _.register({
   rule: {
     host: [
-      /^(www\.)?shink\.(in|me)$/,
+      /^(www\.)?shink\.me$/,
       /^fas\.li$/,
       /^(www\.)?croco\.(me|site)$/,
       /^cpmlink\.net$/,
@@ -71,7 +71,7 @@ _.register({
   rule: {
     host: [
       /^fas\.li$/,
-      /^(www\.)?shink\.(in|me)$/,
+      /^(www\.)?shink\.me$/,
     ],
     path: /^\/go\/\w+$/,
   },

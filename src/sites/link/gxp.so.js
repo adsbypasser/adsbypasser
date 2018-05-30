@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^(www\.)?(upan|gxp)\.so$/,
+    host: /^(www\.)?gxp\.so$/,
     path: /^\/\w+$/,
   },
   async ready () {
