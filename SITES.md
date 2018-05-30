@@ -382,14 +382,11 @@
     * 123link.pw
     * 3bst.co
     * 3rabcut.com
-    * 3rabshort.com
     * 4cut.io
     * adbilty.me
     * adbitly.in
     * adbull.me
-    * adfly.tc
     * adfu.us
-    * adlink.guru
     * adpop.me
     * adshort.co
     * adshorte.com
@@ -398,7 +395,6 @@
     * adsvy.com
     * adurl.id
     * bit-url.com
-    * bol.tl
     * clik.pw
     * clk.press
     * coshink.co
@@ -414,18 +410,13 @@
     * cutl.in
     * cutwi.in
     * cutwin.com
-    * cypt.ga
     * dmus.in
     * dz4link.com
     * dzurl.ml
     * earn-guide.com
     * earnbig.ca
-    * earningurl.com
-    * elink.link
-    * filesbucks.com
     * gg-l.xyz
     * git.tc
-    * goolink.me
     * gram.im
     * hashe.in
     * icutit.ca
@@ -433,7 +424,6 @@
     * igram.im
     * itiad.com
     * jurl.io
-    * kokemoon.com
     * koylinks.win
     * l2s.io
     * linclik.com
@@ -454,9 +444,7 @@
     * oturl.com
     * ourl.io
     * payshorturl.com
-    * payurl.me
     * petty.link
-    * pir.im
     * pnd.tl
     * premiumzen.com
     * psl.pw
@@ -478,14 +466,12 @@
     * tl.tc
     * tmearn.com
     * tocdo.in
-    * top9space.com
     * tr.link
     * trlink.in
     * tui.click
     * twik.pw
     * u2s.io
     * ulshare.net
-    * url.ht
     * urlcloud.us
     * urle.co
     * urlst.me
