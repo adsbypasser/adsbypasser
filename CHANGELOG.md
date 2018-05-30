@@ -272,6 +272,12 @@
     * dikit.in
     * elde.me
     * ethi.in
+    * fit.sh
+    * fundurl.com
+    * gca.sh
+    * repla.cr
+    * go2.me
+    * linkajc.com
 
 ## v6.11.0
 
