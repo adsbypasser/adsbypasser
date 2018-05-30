@@ -16,6 +16,7 @@
     * shrten.xyz
     * crus.io
     * 4cut.io
+    * imageshimage.com
 * removed
     * x.pixfarm.net
     * vvcap.net
