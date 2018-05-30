@@ -1,7 +1,6 @@
 _.register({
   rule: {
     host: [
-      /^lnx\.lu$/,
       /^url\.fm$/,
     ],
   },
