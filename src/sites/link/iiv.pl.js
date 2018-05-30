@@ -1,5 +1,6 @@
 _.register({
   rule: {
+    // No action required for: cut.so
     host: /^iiv\.pl$/,
   },
   async ready () {
