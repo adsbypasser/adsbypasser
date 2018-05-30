@@ -9,6 +9,8 @@
     * gsurl.me
     * sehatlega.com
     * apasih.pw
+    * icutit.ca
+    * adpop.me
 * added
     * itiad.com
     * prnt.sc
@@ -16,6 +18,7 @@
     * shrten.xyz
     * crus.io
     * 4cut.io
+    * imageshimage.com
 * removed
     * x.pixfarm.net
     * vvcap.net

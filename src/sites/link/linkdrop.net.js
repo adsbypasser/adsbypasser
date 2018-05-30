@@ -11,7 +11,6 @@
         /^(cutwi|cut-w|cutl)\.in$/,
         /^(www\.)?jurl\.io$/,
         /^mitly\.us$/,
-        /^adpop\.me$/,
         /^wi\.cr$/,
         /^tui\.click$/,
       ],
@@ -35,7 +34,7 @@
     rule: {
       host: [
         /^idsly\.com$/,
-        /^adbilty\.me$/,
+        /^(adbilty|adpop)\.me$/,
         /^(oke|cuon)\.io$/,
         /^linkrex\.net$/,
         /^safelinku\.net$/,
@@ -59,6 +58,7 @@
         /^cut4links\.com$/,
         /^tmearn\.com$/,
         /^megaurl\.in$/,
+        /^icutit\.ca$/,
       ],
     },
     async ready () {
@@ -131,6 +131,7 @@
         /^cut4link\.com$/,
         /^coinlink\.co$/,
         /^(icutit|cutearn|earnbig|shortit)\.ca$/,
+        /^kokemoon\.com$/,
         /^(www\.)?viralukk\.com$/,
         /^shrt10\.com$/,
         /^mikymoons\.com$/,
