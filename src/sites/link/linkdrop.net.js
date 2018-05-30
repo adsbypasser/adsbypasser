@@ -152,6 +152,7 @@
         /^itiad\.com$/,
         /^(ot|load)url\.com$/,
         /^man2pro\.com$/,
+        /^raolink\.com$/,
       ],
     },
     async ready () {
