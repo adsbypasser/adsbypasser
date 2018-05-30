@@ -151,6 +151,7 @@
         /^royurls\.bid$/,
         /^itiad\.com$/,
         /^(ot|load)url\.com$/,
+        /^man2pro\.com$/,
       ],
     },
     async ready () {
