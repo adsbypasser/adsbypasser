@@ -1,4 +1,4 @@
-## TBA
+## v6.12.0
 
 * fixed
     * videogamesblogger.com
