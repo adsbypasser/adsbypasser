@@ -48,6 +48,7 @@
         /^zlshorte\.net$/,
         /^(igram|gram)\.im$/,
         /^(trlink|wolink|tocdo)\.in$/,
+        /^tr\.link$/,
         /^dz4link\.com$/,
         /^short2win\.com$/,
         /^vnurl\.net$/,
