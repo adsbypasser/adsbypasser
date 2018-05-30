@@ -5,11 +5,10 @@
   _.register({
     rule: {
       host: [
-        /^img(monkey|trex|ve|dew|diamond)\.com$/,
+        /^img(monkey|trex|ve|dew)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
         /^(uploadrr|imageeer|www\.uimgshare|pic-maniac|hulkimge)\.com$/,
-        /^ironimg\.net$/,
       ],
       path: PATH_RULE,
     },
