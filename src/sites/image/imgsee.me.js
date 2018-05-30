@@ -162,7 +162,7 @@
         return;
       }
 
-      let node = await getAmbiguousForm(
+      const node = await getAmbiguousForm(
         'div[id] + div[id] > input:not([style])',
         (node) => {
           const d = node.parentElement;
