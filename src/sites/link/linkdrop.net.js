@@ -130,7 +130,7 @@
         /^premiumzen\.com$/,
         /^cut4link\.com$/,
         /^coinlink\.co$/,
-        /^(icutit|cutearn|earnbig|shortit)\.ca$/,
+        /^(cutearn|earnbig|shortit)\.ca$/,
         /^kokemoon\.com$/,
         /^(www\.)?viralukk\.com$/,
         /^shrt10\.com$/,
