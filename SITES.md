@@ -241,7 +241,6 @@
     * miniurl.tk
     * myam.me
     * mylink.us
-    * mylink.zone
     * shrink.gs
     * ssl.gs
     * tl7.us
