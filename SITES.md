@@ -47,7 +47,6 @@
     * pictureshoster.com
     * xxxhost.me
 * reklama
-    * 08lkk.com
     * acidimg.cc
     * ads-img.info
     * damimage.com
@@ -58,8 +57,6 @@
     * funimg.net
     * gallerycloud.net
     * greasyimage.com
-    * hentai-baka.com
-    * hentai-king.host
     * hentai-pop.com
     * hosturimage.com
     * hotimage.uk
@@ -71,14 +68,11 @@
     * imageon.org
     * imagerar.com
     * imageteam.org
-    * img-hentai.host
-    * img-king.xyz
     * img-pay.com
     * img-planet.com
     * img-view.net
     * img2share.com
     * imgadult.com
-    * imgbb.net
     * imgcloud.co
     * imgdrive.net
     * imgfapper.com
@@ -106,15 +100,12 @@
     * imgspot.org
     * imgstudio.org
     * imgtaxi.com
-    * imgtor.pw
     * imgtornado.com
     * imgtrial.com
     * imgtzar.com
     * imgwallet.com
-    * imgzizi.xyz
     * imx.to
     * ipicture.su
-    * jav-hentai.host
     * megaimage.org
     * naughtygate.net
     * nimzshare.com
@@ -257,7 +248,6 @@
     * 0img.net
     * imagebic.com
     * imagedomino.com
-    * imageporn.eu
     * img.pornleech.com
     * imgcurl.com
     * imgfantasy.com
@@ -286,9 +276,6 @@
     * 2i.cz
     * 2i.sk
     * 2imgs.com
-* pic2profit.com
-    * pic2profit.com
-    * picp2.com
 * pic4you.ru
     * pic4you.ru
     * pic5you.ru
@@ -397,7 +384,6 @@
     * shortenurl.tk
     * urlgo.gs
 * qrrro.com
-    * greenpiccs.com
     * qrrro.com
 * sylnk.net
     * amankan.link
@@ -820,15 +806,12 @@
     * pic-money.ru
     * pic-upload.de
     * piccash.net
-    * picmoe.net
     * picnictrans.com
     * picshare.geenza.com
     * picstream.tv
     * pimpandhost.com
-    * pixhub.eu
     * pixroute.com
     * pixxxels.cc
-    * pornimagex.com
     * preview.rlu.ru
     * prntscr.com
     * pronpic.org
