@@ -254,6 +254,24 @@
     * looy.in
     * loook.ga
     * lnx.lu
+    * lnk.in
+    * indexmovie.me
+    * ilix.in
+    * priva.us
+    * leechbd.tk
+    * link-protector.com
+    * link2dollar.com
+    * cvc.la
+    * boxcash.net
+    * anonymbucks.com
+    * 3ra.be
+    * 2ty.cc
+    * adjet.biz
+    * adfe.es
+    * dereferer.website
+    * dikit.in
+    * elde.me
+    * ethi.in
 
 ## v6.11.0
 
