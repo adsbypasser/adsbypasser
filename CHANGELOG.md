@@ -20,6 +20,18 @@
     * 4cut.io
     * imageshimage.com
     * imgrock.pw
+    * koylinks.win
+    * tr.link
+    * oload.download
+    * taive.in
+    * payshorturl.com
+    * oturl.com
+    * loadurl.com
+    * vinaurl.net
+    * lopte.pro
+    * man2pro.com
+    * urltips.com
+    * raolink.com
 * removed
     * x.pixfarm.net
     * vvcap.net
