@@ -52,24 +52,15 @@
     * 24avarii.ru
     * acidimg.cc
     * ads-img.info
-    * adultimg.org
-    * bulkimg.info
     * damimage.com
     * darpix.desi
     * darpix.ga
     * dimtus.com
     * domaink.ru
-    * dragimage.org
-    * ericsony.com
     * erimge.com
-    * fapat.me
-    * fapingpics.com
-    * freephotohostin.com
     * funimg.net
     * gallerycloud.net
     * goimg.xyz
-    * goimge.com
-    * golfpit.net
     * greasyimage.com
     * hentai-baka.com
     * hentai-king.host
@@ -81,31 +72,20 @@
     * image.adlock.org
     * imagecorn.com
     * imagedecode.com
-    * imagefolks.com
-    * imagelaser.net
     * imageon.org
     * imagerar.com
-    * imagesouls.net
     * imageteam.org
     * img-hentai.host
     * img-king.xyz
     * img-pay.com
     * img-planet.com
-    * img-pop.info
-    * img-uploads.com
     * img-view.net
     * img2share.com
-    * img4sharing.com
     * imgadult.com
     * imgbb.net
-    * imgblow.com
-    * imgboom.net
-    * imgcandy.net
     * imgcloud.co
-    * imgcoin.net
     * imgdrive.net
     * imgease.re
-    * imgfap.net
     * imgfapper.com
     * imgfresh.info
     * imghere.net
@@ -116,10 +96,7 @@
     * imgking.co
     * imgkings.com
     * imglemon.com
-    * imgload.me
-    * imgmag.co
     * imgmain.com
-    * imgmaster.net
     * imgpart.com
     * imgpix.net
     * imgplus.ru
@@ -128,13 +105,11 @@
     * imgpython.net
     * imgrat.com
     * imgreputa.com
-    * imgrun.net
     * imgsavvy.com
     * imgseed.com
     * imgseeds.com
     * imgsen.se
     * imgserve.net
-    * imgslip.com
     * imgspot.org
     * imgstudio.org
     * imgtaxi.com
@@ -142,52 +117,32 @@
     * imgtornado.com
     * imgtrial.com
     * imgtzar.com
-    * imgult.com
     * imgwallet.com
     * imgzizi.xyz
     * imx.to
     * ipicture.su
     * jav-hentai.host
-    * lexiit.com
     * loftlm.ru
     * megaimage.org
-    * myimg.info
     * naughtygate.net
-    * newimagepost.com
-    * nimplus.com
     * nimzshare.com
-    * nudeximg.com
-    * photo-up.info
     * pic.hotimg.site
-    * pic2pic.ru
     * pic2pic.site
     * pic4you.top
-    * picspornfree.me
-    * picstwist.com
-    * picture-bang.net
     * picz.site
-    * pix-link.net
     * pixup.us
-    * pixxx.me
-    * playimg.com
     * pop-img.info
     * porno-pirat.ru
-    * project-photo.net
-    * shotimg.org
     * star-hentai.com
     * sxpics.nl
     * teenimage.org
     * teenshot.org
-    * thumbnailus.com
     * tinizo.com
-    * vava.in
     * voyeurimage.org
     * wpc8.com
     * xximg.net
     * xxx.pornscreen.xyz
-    * xxximagenow.com
     * xxxscreens.com
-    * xxxsparrow.com
     * xxxwebdlxxx.org
 * imageporter
     * imagecarry.com
@@ -922,7 +877,6 @@
     * ulmt.in
     * ultshare.com
     * unfake.it
-    * uplimg.com
     * upmirror.info
     * url.ie
     * urlgator.com
