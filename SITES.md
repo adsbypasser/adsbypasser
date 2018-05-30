@@ -49,7 +49,6 @@
 * reklama
     * 08lkk.com
     * 18pron.ru
-    * 24avarii.ru
     * acidimg.cc
     * ads-img.info
     * damimage.com
