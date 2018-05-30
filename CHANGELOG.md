@@ -280,6 +280,31 @@
     * linkajc.com
     * link5s.com
     * fastdecode.com
+    * linkdolar.xyz
+    * linkpaid.net
+    * dapat.in
+    * cf.ly
+    * link.animagz.org
+    * gunting.in
+    * linc.ml
+    * adcrun.ch
+    * 1tk.us
+    * adbla.us
+    * tl7.us
+    * gx.si
+    * adwat.ch
+    * fly2url.com
+    * urlwiz.com
+    * ultry.net
+    * wwy.me
+    * myam.me
+    * ssl.gs
+    * srk.gs
+    * cun.bz
+    * vizzy.es
+    * kazan.vc
+    * linkcash.ml
+    * adtr.im
 
 ## v6.11.0
 
