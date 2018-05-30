@@ -278,6 +278,8 @@
     * repla.cr
     * go2.me
     * linkajc.com
+    * link5s.com
+    * fastdecode.com
 
 ## v6.11.0
 
