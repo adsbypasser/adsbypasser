@@ -62,6 +62,7 @@
         /^tmearn\.com$/,
         /^megaurl\.in$/,
         /^icutit\.ca$/,
+        /^koylinks\.win$/,
       ],
     },
     async ready () {
