@@ -13,6 +13,7 @@
       host: [
         /^imagetwist\.com$/,
         /^imagexport\.com$/,
+        /^imageshimage\.com$/,
       ],
     },
     ready: _.partial(run, false),

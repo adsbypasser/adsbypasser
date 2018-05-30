@@ -1,9 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^ethi\.in$/,
-      /^st\.wardhanime\.net$/,
-    ],
+    host: /^st\.wardhanime\.net$/,
     path: /^\/i\/\d+$/,
   },
   async ready () {
