@@ -149,6 +149,31 @@
     },
   });
 
+  _.register({
+    rule: {
+      host: /^imgrock\.pw$/,
+      path: PATH_RULE,
+    },
+    async ready () {
+      const i = $.$('img.picview');
+      if (i) {
+        // second stage
+        await $.openImage(i.src);
+        return;
+      }
+
+      let node = await getAmbiguousForm(
+        'div[id] + div[id] > input:not([style])',
+        (node) => {
+          const d = node.parentElement;
+          // first click the input element, then the ambiguous forms will show
+          node.click();
+          return d;
+        });
+      node.click();
+    },
+  });
+
   function waitDOM (element, fn) {
     return new Promise((resolve) => {
       const observer = new MutationObserver((mutations) => {
@@ -185,7 +210,7 @@
       if (!isVisible) {
         continue;
       }
-      const button = $.$('input[type="button"]', form);
+      const button = $.$('input[type="button"], button[type="button"]', form);
       if (button) {
         return button;
       }
