@@ -58,6 +58,7 @@
         /^(vy\.)?adsvy\.com$/,
         /^cut4links\.com$/,
         /^(tmearn|payshorturl|urltips)\.com$/,
+        /^earn-url\.com$/,
         /^megaurl\.in$/,
         /^icutit\.ca$/,
         /^koylinks\.win$/,
