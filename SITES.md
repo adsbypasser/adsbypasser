@@ -200,6 +200,7 @@
     * imgshots.com
 * imagetwist
     * imagenpic.com
+    * imageshimage.com
     * imagetwist.com
     * imagexport.com
     * imgtrex.com
@@ -291,6 +292,7 @@
     * imgoutlet.com
     * imgoutlet.pw
     * imgrock.info
+    * imgrock.pw
     * imgsee.me
     * imgtown.net
     * imgve.com
@@ -381,6 +383,7 @@
     * 3bst.co
     * 3rabcut.com
     * 3rabshort.com
+    * 4cut.io
     * adbilty.me
     * adbitly.in
     * adbull.me
@@ -399,6 +402,7 @@
     * clik.pw
     * clk.press
     * coshink.co
+    * crus.io
     * cuon.io
     * curs.io
     * cut-earn.com
@@ -427,8 +431,10 @@
     * icutit.ca
     * idsly.com
     * igram.im
+    * itiad.com
     * jurl.io
     * kokemoon.com
+    * koylinks.win
     * l2s.io
     * linclik.com
     * link-earn.com
@@ -437,18 +443,24 @@
     * linkfly.gaosmedia.com
     * linkhits.us
     * linkrex.net
+    * loadurl.com
+    * lopte.pro
+    * man2pro.com
     * megaurl.in
     * mikymoons.com
     * mitly.us
     * mlink.club
     * oke.io
+    * oturl.com
     * ourl.io
+    * payshorturl.com
     * payurl.me
     * petty.link
     * pir.im
     * pnd.tl
     * premiumzen.com
     * psl.pw
+    * raolink.com
     * royurls.bid
     * safelinku.net
     * shark.vn
@@ -460,11 +472,14 @@
     * shortit.ca
     * shrinkearn.com
     * shrt10.com
+    * shrten.xyz
     * spamlink.org
+    * taive.in
     * tl.tc
     * tmearn.com
     * tocdo.in
     * top9space.com
+    * tr.link
     * trlink.in
     * tui.click
     * twik.pw
@@ -474,6 +489,8 @@
     * urlcloud.us
     * urle.co
     * urlst.me
+    * urltips.com
+    * vinaurl.net
     * viralukk.com
     * vnurl.net
     * weefy.me
@@ -496,6 +513,7 @@
     * 10co.co
     * 10co.me
 * openload.co
+    * oload.download
     * oload.info
     * oload.site
     * oload.stream
@@ -523,6 +541,9 @@
 * ur.ly
     * ur.ly
     * urly.mobi
+* prntscr.com
+    * prntscr.com
+    * prnt.sc
 * else
     * 01.nl
     * 1be.biz
@@ -599,6 +620,7 @@
     * imgbox.com
     * imgcarry.com
     * imgdollar.com
+    * imgmass.com
     * imgvault.pw
     * ipic.su
     * itw.me
@@ -646,7 +668,6 @@
     * pixroute.com
     * pixxxels.cc
     * preview.rlu.ru
-    * prntscr.com
     * pronpic.org
     * putlocker.com
     * qrrro.com
