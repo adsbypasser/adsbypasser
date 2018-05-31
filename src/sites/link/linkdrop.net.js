@@ -62,7 +62,7 @@
         /^icutit\.ca$/,
         /^koylinks\.win$/,
         /^lopte\.pro$/,
-        /^tny\.ec$/,
+        /^(tny|tiny)\.ec$/,
       ],
     },
     async ready () {
