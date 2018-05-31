@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^(?:(\w+)\.)?(coinurl\.com|cur\.lv)$/,
+    host: [
+      /^(?:(\w+)\.)?coinurl\.com$/,
+      /^(?:(\w+)\.)?cur\.lv$/,
+    ],
     path: /^\/([-\w]+)$/
   },
   async ready (m) {
