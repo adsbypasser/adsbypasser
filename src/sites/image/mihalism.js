@@ -7,7 +7,6 @@
         /^(miragepics|funextra\.hostzi)\.com$/,
         /^bilder\.nixhelp\.de$/,
         /^imagecurl\.(com|org)$/,
-        /^www\.imghere\.net$/,
       ],
       path: /^\/viewer\.php$/,
       query: /file=([^&]+)/,
@@ -15,12 +14,9 @@
     start: helper,
   });
 
-  // dwimg.com
   _.register({
     rule: {
-      host: [
-        /^(dwimg|imgsin)\.com$/,
-      ],
+      host: /^imgsin\.com$/,
       path: /^\/viewer\.php$/,
       query: /file=([^&]+)/,
     },
@@ -29,12 +25,10 @@
     },
   });
 
-  // imageview.me
   _.register({
     rule: {
       host: [
         /^img(nip|central|cream)\.com$/,
-        /^244pix\.com$/,
       ],
       path: /^\/viewerr.*\.php$/,
       query: /file=([^&]+)/,

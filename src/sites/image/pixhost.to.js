@@ -1,9 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^imgchili\.(com|net)$/,
-      /^(www\.)?pixhost\.to$/,
-    ],
+    host: /^(www\.)?pixhost\.to$/,
     path: /^\/show\//,
   },
   async ready () {
