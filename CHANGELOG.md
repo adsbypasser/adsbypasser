@@ -13,6 +13,30 @@
     * picturescream.com
     * picturescream.asia
     * postscreens.info
+    * imgsmile.com
+    * lovechix.com
+    * imgdiamond.com
+    * ironimg.net
+    * imghere.net
+    * 244pix.com
+    * dwimg.com
+    * topload.pro
+    * link2you.ru
+    * ilovebanten.com
+    * gxp.so
+    * dd.ma
+    * adlock.org
+    * hit.us
+    * miniurl.tk
+    * xip.ir
+    * buzurl.com
+    * cf2.me
+    * cf3.me
+    * cf5.me
+    * cf6.co
+    * cf7.co
+    * ex9.co
+    * xt3.me
 
 ## v6.12.0
 
