@@ -3,6 +3,10 @@
 * fixed
     * pnd.tl
     * shrinkearn.com
+* added
+    * earn-url.com
+    * tny.ec
+    * tiny.ec
 * removed
     * bilder-space.de
     * b4he.com
