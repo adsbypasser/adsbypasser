@@ -1,3 +1,19 @@
+## TBA
+
+* fixed
+    * pnd.tl
+    * shrinkearn.com
+* removed
+    * bilder-space.de
+    * b4he.com
+    * x45x.info
+    * imgchili.com
+    * imgchili.net
+    * imagescream.com
+    * picturescream.com
+    * picturescream.asia
+    * postscreens.info
+
 ## v6.12.0
 
 * fixed
