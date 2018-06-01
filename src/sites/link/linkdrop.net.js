@@ -64,6 +64,7 @@
         /^koylinks\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
+        /^(tny|tiny)\.ec$/,
       ],
     },
     async ready () {
