@@ -1,14 +1,12 @@
 (function() {
 
   const hostRules = [
-    /^(([\w]{8}|www)\.)?(allanalpass|cash4files|drstickyfingers|fapoff|(gone|tube)viral|(pic|tna)bucks|whackyvidz)\.com$/,
-    /^(([\w]{8}|www)\.)?(filesonthe|poontown|seriousdeals|ultrafiles|urlbeat|zatnawqy|zbqhfbetlmni)\.net$/,
+    /^(([\w]{8}|www)\.)?(allanalpass|drstickyfingers|whackyvidz)\.com$/,
+    /^(([\w]{8}|www)\.)?(filesonthe|poontown|seriousdeals|urlbeat|zatnawqy)\.net$/,
     /^(([\w]{8}|www)\.)?freean\.us$/,
-    /^(([\w]{8}|www)\.)?galleries\.bz$/,
-    /^(([\w]{8}|www)\.)?hornywood\.tv$/,
     /^(([\w]{8}|www)\.)?link(babes|bucks)\.com$/,
-    /^(([\w]{8}|www)\.)?(megaline|miniurls|qqc|rqq|tinylinks|yyv|zff)\.co$/,
-    /^(([\w]{8}|www)\.)?(these(blog|forum)s)\.com$/,
+    /^(([\w]{8}|www)\.)?(miniurls|qqc|rqq|tinylinks|yyv)\.co$/,
+    /^(([\w]{8}|www)\.)?theseblogs\.com$/,
     /^(([\w]{8}|www)\.)?youfap\.me$/,
     /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
   ];
