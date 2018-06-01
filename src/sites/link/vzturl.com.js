@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^(www\.)?(buz|vzt)url\.com$/,
+    host: /^(www\.)?vzturl\.com$/,
   },
   async ready () {
     const frame = $('frame[scrolling=yes]');

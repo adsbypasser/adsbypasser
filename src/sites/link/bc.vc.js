@@ -51,11 +51,10 @@
   _.register({
     rule: {
       host: [
-        /^(hit|mylink)\.us$/,
+        /^mylink\.us$/,
         /^xafox\.com$/,
         /^zpoz\.net$/,
         /^www\.adjet\.eu$/,
-        /^miniurl\.tk$/,
       ],
       path: /^\/.+/,
     },
@@ -64,10 +63,7 @@
 
   _.register({
     rule: {
-      host: [
-        /^ysear\.ch$/,
-        /^xip\.ir$/,
-      ],
+      host: /^ysear\.ch$/,
       path: /^\/.+/,
     },
     async ready () {

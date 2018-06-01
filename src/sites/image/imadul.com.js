@@ -1,9 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^www\.x45x\.info$/,
-      /^imadul\.com$/,
-    ],
+    host: /^imadul\.com$/,
     query: /\?p[mt]=(.+)/,
   },
   async start (m) {
