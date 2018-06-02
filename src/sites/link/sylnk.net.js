@@ -36,6 +36,7 @@ _.register({
         /\.blogspot\.com?/,
         /^simaholina\.xyz$/,
         /^(www\.)?id-securelink\.xyz$/,
+        /^(www\.)?tojros\.tk$/,
       ],
       query: [
         // id must be the first captured group
