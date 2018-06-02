@@ -15,15 +15,13 @@ _.register({
     },
     {
       host: [
-        /^sports14\.pw$/,
-        /^motosport\.pw$/,
+        /^(sports14|motosport)\.pw$/,
         /^lindung\.in$/,
         /^motonews\.club$/,
         /^ww[23]\.picnictrans\.com$/,
-        /^azhie\.net$/,
+        /^(azhie|skinnycat)\.net$/,
         /^ww2\.awsubs\.co$/,
         /^plantaheim\.web\.id$/,
-        /^skinnycat\.net$/,
       ],
       query: /^\?d=([a-zA-Z0-9/=]+)$/,
     },
