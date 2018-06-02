@@ -32,7 +32,10 @@ _.register({
     },
     // blogspot, kind of brutal
     {
-      host: /\.blogspot\.com?/,
+      host: [
+        /\.blogspot\.com?/,
+        /^simaholina\.xyz$/,
+      ],
       query: [
         // id must be the first captured group
         /^\?url=([a-zA-Z0-9/=]+)$/,
