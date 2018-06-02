@@ -23,6 +23,7 @@ _.register({
         /^azhie\.net$/,
         /^ww2\.awsubs\.co$/,
         /^plantaheim\.web\.id$/,
+        /^skinnycat\.net$/,
       ],
       query: /^\?d=([a-zA-Z0-9/=]+)$/,
     },
