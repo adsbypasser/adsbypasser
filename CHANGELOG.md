@@ -44,6 +44,28 @@
     * cf7.co
     * ex9.co
     * xt3.me
+    * dh10thbvu.com
+    * u2ks.com
+    * xiw34.com
+    * theseforums.com
+    * hornywood.tv
+    * galleries.bz
+    * megaline.co
+    * zff.co
+    * zbqhfbetlmni.net
+    * cash4files.com
+    * fapoff.com
+    * picbucks.com
+    * tnabucks.com
+    * goneviral.com
+    * tubeviral.com
+    * ultrafiles.net
+    * shark.vn
+    * kokemoon.com
+    * hashe.in
+    * urlst.me
+    * linkhits.us
+    * link-earn.com
 
 ## v6.12.0
 
