@@ -3,6 +3,7 @@
 * fixed
     * pnd.tl
     * shrinkearn.com
+    * tl.tc
 * added
     * earn-url.com
     * tny.ec
