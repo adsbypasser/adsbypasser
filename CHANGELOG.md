@@ -15,6 +15,7 @@
     * sloomp.space
     * novaenreta.space
     * businessforyouand.me
+    * simaholina.xyz
 * removed
     * bilder-space.de
     * b4he.com
