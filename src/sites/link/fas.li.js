@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^(www\.)?shink\.me$/,
-      /^shon\.xyz$/,
+      /^(shon|likn)\.xyz$/,
       /^fas\.li$/,
       /^(www\.)?croco\.(me|site)$/,
       /^cpmlink\.net$/,
