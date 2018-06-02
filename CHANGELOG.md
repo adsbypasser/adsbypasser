@@ -4,6 +4,8 @@
     * pnd.tl
     * shrinkearn.com
     * tl.tc
+    * spaste.com
+    * lifesurance.info
 * added
     * earn-url.com
     * tny.ec
@@ -12,6 +14,7 @@
     * likn.xyz
     * sloomp.space
     * novaenreta.space
+    * businessforyouand.me
 * removed
     * bilder-space.de
     * b4he.com
