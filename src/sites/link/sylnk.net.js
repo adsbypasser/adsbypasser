@@ -35,6 +35,7 @@ _.register({
       host: [
         /\.blogspot\.com?/,
         /^simaholina\.xyz$/,
+        /^(www\.)?id-securelink\.xyz$/,
       ],
       query: [
         // id must be the first captured group
