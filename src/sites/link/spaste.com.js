@@ -17,7 +17,7 @@ _.register({
 _.register({
   rule: {
     host: /^www\.spaste\.com$/,
-    path: /^\/s\/\w+$/,
+    path: /^\/(s|site)\/\w+$/,
   },
   async ready () {
     const captcha = $('#globalCaptchaConfirm');
