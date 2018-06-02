@@ -39,6 +39,7 @@ _.register({
         /^(www\.)?id-securelink\.xyz$/,
         /^(www\.)?tojros\.tk$/,
         /^(www\.)?designmyhomee\.com$/,
+        /^(www\.)?anjay\.info$/,
       ],
       query: [
         // id must be the first captured group
