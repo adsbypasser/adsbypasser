@@ -15,12 +15,11 @@ _.register({
     },
     {
       host: [
-        /^sports14\.pw$/,
-        /^motosport\.pw$/,
+        /^(sports14|motosport)\.pw$/,
         /^lindung\.in$/,
         /^motonews\.club$/,
         /^ww[23]\.picnictrans\.com$/,
-        /^azhie\.net$/,
+        /^(azhie|skinnycat)\.net$/,
         /^ww2\.awsubs\.co$/,
         /^plantaheim\.web\.id$/,
       ],
@@ -35,6 +34,10 @@ _.register({
       host: [
         /\.blogspot\.com?/,
         /^simaholina\.xyz$/,
+        /^(www\.)?id-securelink\.xyz$/,
+        /^(www\.)?tojros\.tk$/,
+        /^(www\.)?designmyhomee\.com$/,
+        /^(www\.)?anjay\.info$/,
       ],
       query: [
         // id must be the first captured group

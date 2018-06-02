@@ -15,6 +15,7 @@
     * sloomp.space
     * novaenreta.space
     * businessforyouand.me
+    * simaholina.xyz
     * id-securelink.xyz
     * tojros.tk
     * designmyhomee.com
