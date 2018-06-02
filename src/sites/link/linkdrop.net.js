@@ -63,6 +63,7 @@
         /^koylinks\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
+        /^tl\.tc$/,
       ],
     },
     async ready () {
@@ -117,7 +118,7 @@
         /^(hashe|taive)\.in$/,
         /^www\.worldhack\.net$/,
         /^123link\.(io|co|press)$/,
-        /^(tl|git)\.tc$/,
+        /^git\.tc$/,
         /^(adfu|linkhits)\.us$/,
         /^short\.pastewma\.com$/,
         /^l2s\.io$/,
