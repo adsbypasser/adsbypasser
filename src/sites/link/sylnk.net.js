@@ -40,7 +40,10 @@ _.register({
       ],
     },
     {
-      host: /^sehatlega\.com$/,
+      host: [
+        /^sehatlega\.com$/,
+        /^businessforyouand\.me$/,
+      ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
     {
