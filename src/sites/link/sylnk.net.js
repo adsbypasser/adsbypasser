@@ -113,7 +113,10 @@ _.register({
 
 _.register({
   rule: {
-    host: /^(gameinfo|apasih)\.pw$/,
+    host: [
+      /^(gameinfo|apasih)\.pw$/,
+      /^(www\.)?lifesurance\.info$/,
+    ],
     query: /^\?id=([a-zA-Z0-9/=]+)$/,
   },
   async ready () {
@@ -129,12 +132,15 @@ _.register({
         /^(ani-share|autolinkach)\.com$/,
         /^motonews\.club$/,
         /^(autofans|landscapenature)\.pw$/,
-        /^www\.lifesurance\.info$/,
+        /^(www\.)?lifesurance\.info$/,
       ],
       query: /get=([^&]+)/,
     },
     {
-      host: /^(gameinfo|apasih)\.pw$/,
+      host: [
+        /^(gameinfo|apasih)\.pw$/,
+        /^(www\.)?lifesurance\.info$/,
+      ],
     },
   ],
   async ready (m) {
