@@ -15,6 +15,11 @@
     * sloomp.space
     * novaenreta.space
     * businessforyouand.me
+    * id-securelink.xyz
+    * tojros.tk
+    * designmyhomee.com
+    * skinnycat.net
+    * anjay.info
 * removed
     * bilder-space.de
     * b4he.com
