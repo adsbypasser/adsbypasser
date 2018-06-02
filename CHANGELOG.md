@@ -16,6 +16,11 @@
     * novaenreta.space
     * businessforyouand.me
     * simaholina.xyz
+    * id-securelink.xyz
+    * tojros.tk
+    * designmyhomee.com
+    * skinnycat.net
+    * anjay.info
 * removed
     * bilder-space.de
     * b4he.com
