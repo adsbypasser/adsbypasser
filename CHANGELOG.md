@@ -7,6 +7,8 @@
     * earn-url.com
     * tny.ec
     * tiny.ec
+    * shon.xyz
+    * likn.xyz    
 * removed
     * bilder-space.de
     * b4he.com
