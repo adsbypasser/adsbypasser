@@ -9,7 +9,9 @@
     * tny.ec
     * tiny.ec
     * shon.xyz
-    * likn.xyz    
+    * likn.xyz
+    * sloomp.space
+    * novaenreta.space
 * removed
     * bilder-space.de
     * b4he.com
