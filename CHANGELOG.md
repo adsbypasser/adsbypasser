@@ -7,6 +7,7 @@
     * spaste.com
     * lifesurance.info
 * added
+    * admew.com
     * earn-url.com
     * tny.ec
     * tiny.ec
