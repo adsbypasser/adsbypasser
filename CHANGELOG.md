@@ -12,6 +12,7 @@
     * tiny.ec
     * shon.xyz
     * likn.xyz
+    * linkexa.com
     * sloomp.space
     * novaenreta.space
     * businessforyouand.me
