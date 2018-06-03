@@ -65,7 +65,7 @@
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
         /^(tny|tiny)\.ec$/,
-        /^linkexa\.com$/,
+        /^(linkexa|admew)\.com$/,
       ],
     },
     async ready () {
