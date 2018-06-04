@@ -71,6 +71,7 @@
     * img-view.net
     * img2share.com
     * imgadult.com
+    * imgbalana.com
     * imgcloud.co
     * imgdrive.net
     * imgfapper.com

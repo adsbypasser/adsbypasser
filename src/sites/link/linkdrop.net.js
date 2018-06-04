@@ -66,6 +66,7 @@
         /^(www\.)?pnd\.tl$/,
         /^(tny|tiny)\.ec$/,
         /^(linkexa|admew)\.com$/,
+        /^tl\.tc$/,
       ],
     },
     async ready () {
@@ -118,7 +119,7 @@
         /^taive\.in$/,
         /^www\.worldhack\.net$/,
         /^123link\.(io|co|press)$/,
-        /^(tl|git)\.tc$/,
+        /^git\.tc$/,
         /^adfu\.us$/,
         /^short\.pastewma\.com$/,
         /^l2s\.io$/,
