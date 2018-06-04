@@ -38,6 +38,7 @@ _.register({
         /^(www\.)?tojros\.tk$/,
         /^(www\.)?designmyhomee\.com$/,
         /^(www\.)?anjay\.info$/,
+        /^(www\.)?kakkoiisafe\.us$/,
       ],
       query: [
         // id must be the first captured group
