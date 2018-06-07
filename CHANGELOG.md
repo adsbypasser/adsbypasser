@@ -9,9 +9,11 @@
 * added
     * admew.com
     * earn-url.com
+    * eklink.net
     * tny.ec
     * tiny.ec
     * shon.xyz
+    * shrtfly.com
     * likn.xyz
     * linkexa.com
     * sloomp.space
