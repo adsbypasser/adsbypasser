@@ -64,6 +64,7 @@
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
         /^tl\.tc$/,
+        /^petty\.link$/,
       ],
     },
     async ready () {
@@ -109,7 +110,6 @@
         /^(cut-urls|link-earn)\.com$/,
         /^adslink\.pw$/,
         /^dzurl\.ml$/,
-        /^petty\.link$/,
         /^urlst\.me$/,
         /^u2s\.io$/,
         /^shortad\.cf$/,
