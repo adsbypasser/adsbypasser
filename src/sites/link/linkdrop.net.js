@@ -11,7 +11,6 @@
         /^(cutwi|cut-w|cutl)\.in$/,
         /^(www\.)?jurl\.io$/,
         /^mitly\.us$/,
-        /^wi\.cr$/,
         /^tui\.click$/,
       ],
     },
@@ -65,6 +64,7 @@
         /^(www\.)?pnd\.tl$/,
         /^tl\.tc$/,
         /^petty\.link$/,
+        /^wi\.cr$/,
       ],
     },
     async ready () {
