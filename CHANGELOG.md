@@ -1,87 +1,87 @@
 ## TBA
 
 * fixed
+    * lifesurance.info
     * pnd.tl
     * shrinkearn.com
-    * tl.tc
     * spaste.com
-    * lifesurance.info
+    * tl.tc        
 * added
     * admew.com
+    * anjay.info
+    * businessforyouand.me
+    * designmyhomee.com
     * earn-url.com
     * eklink.net
-    * tny.ec
-    * tiny.ec
-    * shon.xyz
-    * shrtfly.com
+    * id-securelink.xyz
+    * kakkoiisafe.us
     * likn.xyz
     * linkexa.com
-    * sloomp.space
     * novaenreta.space
-    * businessforyouand.me
+    * shon.xyz
+    * shrtfly.com
     * simaholina.xyz
-    * id-securelink.xyz
-    * tojros.tk
-    * designmyhomee.com
     * skinnycat.net
-    * anjay.info
-    * kakkoiisafe.us
+    * sloomp.space
+    * tiny.ec
+    * tny.ec
+    * tojros.tk
 * removed
-    * bilder-space.de
-    * b4he.com
-    * x45x.info
-    * imgchili.com
-    * imgchili.net
-    * imagescream.com
-    * picturescream.com
-    * picturescream.asia
-    * postscreens.info
-    * imgsmile.com
-    * lovechix.com
-    * imgdiamond.com
-    * ironimg.net
-    * imghere.net
     * 244pix.com
-    * dwimg.com
-    * topload.pro
-    * link2you.ru
-    * ilovebanten.com
-    * gxp.so
-    * dd.ma
     * adlock.org
-    * hit.us
-    * miniurl.tk
-    * xip.ir
+    * b4he.com
+    * bilder-space.de
     * buzurl.com
+    * cash4files.com
     * cf2.me
     * cf3.me
     * cf5.me
     * cf6.co
     * cf7.co
-    * ex9.co
-    * xt3.me
+    * dd.ma
     * dh10thbvu.com
-    * u2ks.com
-    * xiw34.com
-    * theseforums.com
-    * hornywood.tv
-    * galleries.bz
-    * megaline.co
-    * zff.co
-    * zbqhfbetlmni.net
-    * cash4files.com
+    * dwimg.com
+    * ex9.co
     * fapoff.com
-    * picbucks.com
-    * tnabucks.com
+    * galleries.bz
     * goneviral.com
-    * tubeviral.com
-    * ultrafiles.net
-    * shark.vn
-    * kokemoon.com
+    * gxp.so
     * hashe.in
-    * urlst.me
-    * linkhits.us
+    * hit.us
+    * hornywood.tv
+    * ilovebanten.com
+    * imagescream.com
+    * imgchili.com
+    * imgchili.net
+    * imgdiamond.com
+    * imghere.net
+    * imgsmile.com
+    * ironimg.net
+    * kokemoon.com
     * link-earn.com
+    * link2you.ru
+    * linkhits.us
+    * lovechix.com
+    * megaline.co
+    * miniurl.tk
+    * picbucks.com
+    * picturescream.asia
+    * picturescream.com
+    * postscreens.info
+    * shark.vn
+    * theseforums.com
+    * tnabucks.com
+    * topload.pro
+    * tubeviral.com
+    * u2ks.com
+    * ultrafiles.net
+    * urlst.me
+    * x45x.info
+    * xip.ir
+    * xiw34.com
+    * xt3.me
+    * zbqhfbetlmni.net
+    * zff.co
 
 ## v6.12.0
 
