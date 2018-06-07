@@ -5,7 +5,8 @@
     * pnd.tl
     * shrinkearn.com
     * spaste.com
-    * tl.tc        
+    * tl.tc
+    * wi.cr
 * added
     * admew.com
     * anjay.info
