@@ -108,7 +108,7 @@
         /^(psl|twik)\.pw$/,
         /^coshink\.co$/,
         /^(curs|crus|4cut)\.io$/,
-        /^cut-urls\.com$/,
+        /^(cut-urls|link-zero)\.com$/,
         /^adslink\.pw$/,
         /^dzurl\.ml$/,
         /^petty\.link$/,
