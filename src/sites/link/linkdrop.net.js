@@ -65,7 +65,7 @@
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
         /^(tny|tiny)\.ec$/,
-        /^(linkexa|admew)\.com$/,
+        /^(linkexa|admew|shrtfly)\.com$/,
         /^tl\.tc$/,
       ],
     },
