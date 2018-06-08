@@ -143,6 +143,7 @@ _.register({
         /^motonews\.club$/,
         /^(autofans|landscapenature)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
+        /^(www\.)?bolaoke\.club$/,
       ],
       query: /get=([^&]+)/,
     },
