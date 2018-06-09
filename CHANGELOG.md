@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * earnbig.ca
     * lifesurance.info
     * pnd.tl
     * shrinkearn.com
@@ -10,6 +11,7 @@
 * added
     * admew.com
     * anjay.info
+    * bolaoke.club
     * businessforyouand.me
     * designmyhomee.com
     * earn-url.com
