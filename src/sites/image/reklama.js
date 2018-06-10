@@ -30,7 +30,7 @@
           /^img(serve|-view|project|python|pix)\.net$/,
           /^(naughtygate|gallerycloud|funimg|xximg)\.net$/,
           // org
-          /^image(\.adlock|on|team)\.org$/,
+          /^image(on|team)\.org$/,
           /^(voyeur|teen|mega)image\.org$/,
           /^teenshot\.org$/,
           /^img(studio|spot)\.org$/,
