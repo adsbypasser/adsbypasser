@@ -22,6 +22,7 @@
     * kakkoiisafe.us
     * likn.xyz
     * linkexa.com
+    * link-zero.com
     * novaenreta.space
     * shon.xyz
     * shrtfly.com
