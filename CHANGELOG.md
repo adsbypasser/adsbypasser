@@ -2,7 +2,9 @@
 
 * fixed
     * earnbig.ca
+    * gg-l.xyz
     * lifesurance.info
+    * petty.link
     * pnd.tl
     * shrinkearn.com
     * spaste.com
