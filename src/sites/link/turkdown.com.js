@@ -8,10 +8,10 @@ $.register({
     'use strict';
     $.get('?ajax='+m.query[1]).then(function (html) {
       html = _.parseJSON(html);
-      var patt = new RegExp("stepone\=(.+)");
+      var patt = new RegExp('stepone=(.+)');
       var res = patt.exec(html.url);
       $.openLink(atob(res[1]));
-    })
+    }),
   },
 });
 
