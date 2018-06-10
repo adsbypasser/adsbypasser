@@ -43,7 +43,7 @@
         /^short\.pe$/,
         /^urlcloud\.us$/,
         /^(www\.)?linkdrop\.net$/,
-        /^(123link|clik)\.pw$/,
+        /^(123link|clik|tokenfly)\.pw$/,
         /^(vy\.)?adsvy\.com$/,
         /^cut4links\.com$/,
         /^(tmearn|payshorturl|urltips|shrinkearn)\.com$/,
