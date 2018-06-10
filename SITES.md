@@ -263,19 +263,25 @@
 * sylnk.net
     * ani-share.com
     * animeforce.stream
+    * anjay.info
     * apasih.pw
     * autofans.pw
     * autolinkach.com
     * azhie.net
     * blogspot.com
+    * bolaoke.club
+    * businessforyouand.me
     * compartiendofull.net
     * compul.in
     * decrypt.safelinkconverter.com
+    * designmyhomee.com
     * edogawa.lon.pw
     * filmku.lompat.in
     * gameinfo.pw
     * gtaind.com
     * henpoi.lompat.in
+    * id-securelink.xyz
+    * kakkoiisafe.us
     * kombatch.loncat.pw
     * landscapenature.pw
     * lifesurance.info
@@ -295,10 +301,12 @@
     * sehatlega.com
     * short.awsubs.co
     * short.awsubs.me
+    * skinnycat.net
     * sports14.pw
     * srelink.com
     * susutinv2.com
     * sylnk.net
+    * tojros.tk
     * ww2.awsubs.co
 * segmentnext.com
     * segmentnext.com
@@ -320,14 +328,18 @@
     * sipkur.net
     * telondasmu.com
 * ouo.io
+    * novaenreta.space
     * ouo.io
     * ouo.press
+    * sloomp.space
 * fas.li
     * cpmlink.net
     * croco.me
     * croco.site
     * fas.li
+    * likn.xyz
     * shink.me
+    * shon.xyz
 * linkdrop.net
     * 123link.co
     * 123link.io
@@ -340,6 +352,7 @@
     * adbitly.in
     * adbull.me
     * adfu.us
+    * admew.com
     * adpop.me
     * adshort.co
     * adshorte.com
@@ -367,7 +380,9 @@
     * dz4link.com
     * dzurl.ml
     * earn-guide.com
+    * earn-url.com
     * earnbig.ca
+    * eklink.net
     * gg-l.xyz
     * git.tc
     * gram.im
@@ -379,8 +394,10 @@
     * koylinks.win
     * l2s.io
     * linclik.com
+    * link-zero.com
     * link4.me
     * linkdrop.net
+    * linkexa.com
     * linkfly.gaosmedia.com
     * linkrex.net
     * loadurl.com
@@ -410,10 +427,14 @@
     * shrinkearn.com
     * shrt10.com
     * shrten.xyz
+    * shrtfly.com
+    * simaholina.xyz
     * spamlink.org
     * taive.in
+    * tiny.ec
     * tl.tc
     * tmearn.com
+    * tny.ec
     * tocdo.in
     * tr.link
     * trlink.in
@@ -618,6 +639,7 @@
     * tinyarrows.com
     * tinypic.com
     * turboimagehost.com
+    * turkdown.com
     * ulmt.in
     * unfake.it
     * upmirror.info
