@@ -32,6 +32,7 @@
     * tiny.ec
     * tny.ec
     * tojros.tk
+    * turkdown.com
 * removed
     * 244pix.com
     * adlock.org
