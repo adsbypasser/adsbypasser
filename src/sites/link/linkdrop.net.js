@@ -208,7 +208,7 @@
     prepare () {
       this.removeOverlay();
 
-      let f = $.$('#captchaShortlink');
+      const f = $.$('#captchaShortlink');
       if (f) {
         _.info('recaptcha detected, stop');
         return false;
