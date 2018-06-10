@@ -11,7 +11,7 @@ $.register({
       var patt = new RegExp('stepone=(.+)');
       var res = patt.exec(html.url);
       $.openLink(atob(res[1]));
-    }),
+    });
   },
 });
 
