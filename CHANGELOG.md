@@ -1,4 +1,4 @@
-## TBA
+## v6.13.0
 
 * fixed
     * earnbig.ca
