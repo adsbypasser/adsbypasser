@@ -1,39 +1,24 @@
 * adf.ly
 * linkbucks
     * allanalpass.com
-    * cash4files.com
     * drstickyfingers.com
-    * fapoff.com
     * filesonthe.net
     * freean.us
-    * galleries.bz
-    * goneviral.com
-    * hornywood.tv
     * linkbabes.com
     * linkbucks.com
-    * megaline.co
     * miniurls.co
-    * picbucks.com
     * poontown.net
     * qqc.co
     * rqq.co
     * seriousdeals.net
     * theseblogs.com
-    * theseforums.com
     * tinylinks.co
-    * tnabucks.com
-    * tubeviral.com
-    * ultrafiles.net
     * urlbeat.net
     * whackyvidz.com
     * youfap.me
     * yyv.co
     * zatnawqy.net
-    * zbqhfbetlmni.net
-    * zff.co
 * Mihalism Multi Host
-    * 244pix.com
-    * dwimg.com
     * funextra.hostzi.com
     * imagecurl.com
     * imagecurl.org
@@ -60,7 +45,6 @@
     * hotimage.uk
     * hotimages.eu
     * ima.gy
-    * image.adlock.org
     * imagecorn.com
     * imagedecode.com
     * imageon.org
@@ -76,7 +60,6 @@
     * imgdrive.net
     * imgfapper.com
     * imgfresh.info
-    * imghere.net
     * imghit.com
     * imghost.top (variation)
     * imgicy.com
@@ -135,8 +118,6 @@
     * pictureturn.com
     * yankoimages.net
 * CF Image Host
-    * x45x.info
-    * imadul.com
 * picfox
     * amateurfreak.org
     * euro-pic.eu
@@ -145,10 +126,6 @@
     * imgz.pw
     * picfox.org
     * pixsor.com
-* imgchili
-    * imgchili.com
-    * imgchili.net
-    * pixhost.to
 * imgdino
     * imgdino.com
     * imgtiger.com
@@ -161,13 +138,10 @@
     * ad5.eu
     * adjet.eu
     * bc.vc
-    * hit.us
-    * miniurl.tk
     * mylink.us
     * shrink.gs
     * tr5.in
     * xafox.com
-    * xip.ir
     * ysear.ch
     * zpoz.net
 * coinurl
@@ -205,8 +179,7 @@
     * imagetwist.com
     * imagexport.com
     * imgtrex.com
-* b4he
-    * b4he.com
+* fullimg.com
     * freeimgup.com
     * fullimg.com
     * imagep2p.com
@@ -226,27 +199,15 @@
     * imgfantasy.com
     * imgnemo.com
     * imgsay.com
-    * imgsmile.com
 * imgbabes
     * imgbabes.com
     * imgflare.com
-* cashfly
-    * cf2.me
-    * cf3.me
-    * cf5.me
-    * cf6.co
-    * cf7.co
-    * ex9.co
-    * xt3.me
 * 2i.cz
     * 2i.cz
     * 2i.sk
 * pic4you.ru
     * pic4you.ru
     * pic5you.ru
-* buzurl.com
-    * buzurl.com
-    * vzturl.com
 * easyurl.net
     * atu.ca
     * clickthru.ca
@@ -261,31 +222,23 @@
     * cllkme.com
     * corneey.com
     * destyy.com
-    * dh10thbvu.com
     * festyy.com
     * gestyy.com
     * jnw0.com
     * sh.st
-    * u2ks.com
     * viid.me
     * wiid.me
-    * xiw34.com
 * seomafia.net
     * apploadz.ru
     * seomafia.net
-* imagescream.com
+* all-poster.ru
     * all-poster.ru
     * bunnyforum.org
-    * imagescream.com
-    * picturescream.asia
-    * picturescream.com
-    * postscreens.info
 * imgsee.me
     * hulkimge.com
     * imageeer.com
     * imgclick.net
     * imgdew.com
-    * imgdiamond.com
     * imgdragon.com
     * imgfiles.org
     * imgmaze.com
@@ -298,7 +251,6 @@
     * imgtown.net
     * imgve.com
     * imgview.net
-    * ironimg.net
     * pic-maniac.com
     * uimgshare.com
     * uploadrr.com
@@ -419,7 +371,6 @@
     * gg-l.xyz
     * git.tc
     * gram.im
-    * hashe.in
     * icutit.ca
     * idsly.com
     * igram.im
@@ -428,11 +379,9 @@
     * koylinks.win
     * l2s.io
     * linclik.com
-    * link-earn.com
     * link4.me
     * linkdrop.net
     * linkfly.gaosmedia.com
-    * linkhits.us
     * linkrex.net
     * loadurl.com
     * lopte.pro
@@ -452,7 +401,6 @@
     * raolink.com
     * royurls.bid
     * safelinku.net
-    * shark.vn
     * shink.xyz
     * short.pastewma.com
     * short.pe
@@ -475,7 +423,6 @@
     * ulshare.net
     * urlcloud.us
     * urle.co
-    * urlst.me
     * urltips.com
     * vinaurl.net
     * viralukk.com
@@ -542,7 +489,6 @@
     * ad2links.com
     * ad4.fr
     * adfoc.us
-    * adlock.org
     * adlot.us
     * admy.link
     * ah-informatique.com
@@ -553,7 +499,6 @@
     * beeimg.com
     * biglistofwebsites.com
     * bild.me
-    * bilder-space.de
     * bilder-upload.eu
     * bildr.no
     * binbox.io
@@ -566,7 +511,6 @@
     * comyonet.com
     * coolrom.com
     * cubeupload.com
-    * dd.ma
     * depic.me
     * directupload.net
     * dl-protect.com
@@ -583,13 +527,12 @@
     * goimagehost.com
     * goto.loncat.in
     * gunting.web.id
-    * gxp.so
     * hostingpics.net
     * hotshorturl.com
     * ifotos.pl
     * iiv.pl
-    * ilovebanten.com
     * ima.so
+    * imadul.com
     * image2you.ru
     * imagebam.com
     * imageban.net
@@ -618,7 +561,6 @@
     * kurogaze.net
     * lienscash.com
     * link.im
-    * link2you.ru
     * link4ad.com
     * linkdecode.com
     * linkplugapp.com
@@ -627,7 +569,6 @@
     * lix.in
     * lolinez.com
     * lostpic.net
-    * lovechix.com
     * mije.net
     * mirrorcreator.com
     * mirrorfilehost.com
@@ -652,6 +593,7 @@
     * picshare.geenza.com
     * picstream.tv
     * pimpandhost.com
+    * pixhost.to
     * pixroute.com
     * pixxxels.cc
     * preview.rlu.ru
@@ -675,7 +617,6 @@
     * thinfi.com
     * tinyarrows.com
     * tinypic.com
-    * topload.pro
     * turboimagehost.com
     * ulmt.in
     * unfake.it
@@ -691,6 +632,7 @@
     * vidto.me
     * viidii.info
     * vir.al
+    * vzturl.com
     * yep.it
     * yooclick.com
     * zintata.com
