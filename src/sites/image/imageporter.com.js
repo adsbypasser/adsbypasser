@@ -2,7 +2,7 @@
 
   _.register({
     rule: {
-      host: /^www\.imageporter\.com$/,
+      host: /^(www\.)?imageporter\.com$/,
       path: /^\/\w{12}\/.*\.html$/,
     },
     ready: run,
