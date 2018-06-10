@@ -15,17 +15,8 @@
       ],
     },
     async ready () {
-      $.remove('iframe, [class$="Overlay"]');
-      $.block('[class$="Overlay"]', document.body);
-
-      const f = getForm();
-      if (!f) {
-        _.info('no form');
-        return;
-      }
-
-      const url = await sendRequest(f);
-      await $.openLink(url);
+      const handler = new NoRecaptchaHandler();
+      await handler.call();
     },
   });
 
@@ -51,7 +42,6 @@
         /^clk\.press$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
-        /^(www\.)?ourl\.io$/,
         /^(www\.)?linkdrop\.net$/,
         /^(123link|clik)\.pw$/,
         /^(vy\.)?adsvy\.com$/,
@@ -68,35 +58,18 @@
       ],
     },
     async ready () {
-      let f = $.$('#captchaShortlink');
-      if (f) {
-        $.remove('[class$="Overlay"]');
-        $.block('[class$="Overlay"]', document.body);
+      const handler = new RecaptchaHandler();
+      await handler.call();
+    },
+  });
 
-        // recaptcha
-        _.info('recaptcha detected, stop');
-        return;
-      }
-
-      $.remove('iframe');
-
-      f = getForm();
-      if (!f) {
-        f = $('#link-view');
-        f.submit();
-        return;
-      }
-
-      while (true) {
-        await _.wait(2000);
-        try {
-          const url = await sendRequest(f);
-          await $.openLink(url);
-          break;
-        } catch (e) {
-          _.warn(e);
-        }
-      }
+  _.register({
+    rule: {
+      host: /^(www\.)?ourl\.io$/,
+    },
+    async ready () {
+      const handler = new OURLHandler();
+      await handler.call();
     },
   });
 
@@ -148,33 +121,223 @@
       ],
     },
     async ready () {
-      $.remove('iframe', '.BJPPopAdsOverlay');
-
-      const page = await firstStage();
-      const url = await secondStage(page);
-      // nuke for bol.tl, somehow it will interfere click event
-      $.nuke(url);
-      await $.openLink(url);
+      const handler = new StagedHandler();
+      await handler.call();
     },
   });
 
-  function getForm () {
+
+  class AbstractHandler {
+
+    constructor () {
+      this._overlaySelector = [
+        '[class$="Overlay"]',
+        '#__random_class_name__',
+      ].join(', ');
+
+      // TODO extract to paramater
+      this._formSelector = [
+        '#go-link',
+        '.go-link',
+        'form[action="/links/go"]',
+        'form[action="/links/linkdropgo"]',
+      ].join(', ');
+    }
+
+    removeOverlay () {
+      $.remove(this._overlaySelector);
+      $.block(this._overlaySelector, document.body);
+    }
+
+    removeFrame () {
+      $.remove('iframe');
+    }
+
+    async call () {
+      const ok = this.prepare();
+      if (!ok) {
+        return;
+      }
+
+      const mw = await this.getMiddleware();
+      if (!mw) {
+        this.withoutMiddleware();
+        return;
+      }
+
+      const url = await this.getURL(mw);
+      await $.openLink(url);
+    }
+
+  }
+
+
+  class NoRecaptchaHandler extends AbstractHandler {
+
+    constructor () {
+      super();
+    }
+
+    prepare () {
+      this.removeFrame();
+      this.removeOverlay();
+      return true;
+    }
+
+    async getMiddleware () {
+      return getJQueryForm(this._formSelector);
+    }
+
+    withoutMiddleware () {
+      _.info('no form');
+    }
+
+    async getURL (jForm) {
+      return await getURLFromJQueryForm(jForm);
+    }
+
+  }
+
+
+  class RecaptchaHandler extends AbstractHandler {
+
+    constructor () {
+      super();
+    }
+
+    prepare () {
+      this.removeOverlay();
+
+      let f = $.$('#captchaShortlink');
+      if (f) {
+        _.info('recaptcha detected, stop');
+        return false;
+      }
+      return true;
+    }
+
+    async getMiddleware () {
+      return getJQueryForm(this._formSelector);
+    }
+
+    withoutMiddleware () {
+      // TODO This line was added for sflnk.me, but the domain is gone.
+      // Need to confirm if this is still work for the rest sites.
+      const f = $('#link-view');
+      f.submit();
+    }
+
+    async getURL (jForm) {
+      while (true) {
+        await _.wait(2000);
+        try {
+          const url = await getURLFromJQueryForm(jForm);
+          if (url) {
+            return url;
+          }
+        } catch (e) {
+          _.warn(e);
+        }
+      }
+    }
+
+  }
+
+
+  class OURLHandler extends RecaptchaHandler {
+
+    constructor () {
+      super();
+    }
+
+    async getMiddleware () {
+      return {
+        verify: getJQueryForm('#get-link'),
+        go: getJQueryForm(this._formSelector),
+      };
+    }
+
+    async getURL (jFormObject) {
+      await getURLFromJQueryForm(jFormObject.verify);
+      return await getURLFromJQueryForm(jFormObject.go);
+    }
+
+  }
+
+
+  class StagedHandler extends AbstractHandler {
+
+    constructor () {
+      super();
+    }
+
+    prepare () {
+      this.removeFrame();
+      this.removeOverlay();
+      return true;
+    }
+
+    async getMiddleware () {
+      const f = $.$('#link-view');
+      if (!f) {
+        return document;
+      }
+
+      const args = extractArgument(f);
+      const url = f.getAttribute('action');
+      let page = await $.post(url, args);
+      page = $.toDOM(page);
+      return page;
+    }
+
+    withoutMiddleware () {
+      _.info('no page');
+    }
+
+    async getURL (page) {
+      const f = $('#go-link', page);
+      const args = extractArgument(f);
+      const url = f.getAttribute('action');
+      let data = await $.post(url, args);
+      data = JSON.parse(data);
+      if (data && data.url) {
+        // nuke for bol.tl, somehow it will interfere click event
+        $.nuke(data.url);
+
+        return data.url;
+      }
+      throw new _.AdsBypasserError('wrong data');
+    }
+
+  }
+
+
+  function extractArgument (form) {
+    const args = {};
+    _.forEach($.$$('input', form), (v) => {
+      args[v.name] = v.value;
+    });
+    return args;
+  }
+
+
+  function getJQueryForm (selector) {
     const jQuery = $.window.$;
-    const f = jQuery('#go-link, .go-link, form[action="/links/go"], form[action="/links/linkdropgo"]');
+    const f = jQuery(selector);
     if (f.length > 0) {
       return f;
     }
     return null;
   }
 
-  function sendRequest (f) {
+  function getURLFromJQueryForm (jForm) {
     return new Promise((resolve, reject) => {
       const jQuery = $.window.$;
       jQuery.ajax({
         dataType: 'json',
         type: 'POST',
-        url: f.attr('action'),
-        data: f.serialize(),
+        url: jForm.attr('action'),
+        data: jForm.serialize(),
         success: (result) => {
           if (result.url) {
             resolve(result.url);
@@ -188,43 +351,6 @@
         },
       });
     });
-  }
-
-  function firstStage () {
-    return new Promise((resolve) => {
-      const f = $.$('#link-view');
-      if (!f) {
-        resolve(document);
-        return;
-      }
-
-      const args = extractArgument(f);
-      const url = f.getAttribute('action');
-      const p = $.post(url, args).then((data) => {
-        return $.toDOM(data);
-      });
-      resolve(p);
-    });
-  }
-
-  async function secondStage (page) {
-    const f = $('#go-link', page);
-    const args = extractArgument(f);
-    const url = f.getAttribute('action');
-    let data = await $.post(url, args);
-    data = JSON.parse(data);
-    if (data && data.url) {
-      return data.url;
-    }
-    throw new _.AdsBypasserError('wrong data');
-  }
-
-  function extractArgument (form) {
-    const args = {};
-    _.forEach($.$$('input', form), (v) => {
-      args[v.name] = v.value;
-    });
-    return args;
   }
 
 })();
