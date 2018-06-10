@@ -3,7 +3,9 @@
 * fixed
     * earnbig.ca
     * gg-l.xyz
+    * imagebam.com
     * lifesurance.info
+    * ourl.io
     * petty.link
     * pnd.tl
     * shrinkearn.com
