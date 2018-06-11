@@ -126,6 +126,7 @@ _.register({
     host: [
       /^(gameinfo|apasih)\.pw$/,
       /^(www\.)?lifesurance\.info$/,
+      /^intercelestial\.com$/,
     ],
     query: /^\?id=([a-zA-Z0-9/=]+)$/,
   },
@@ -152,6 +153,7 @@ _.register({
       host: [
         /^(gameinfo|apasih)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
+        /^intercelestial\.com$/,
       ],
     },
   ],
