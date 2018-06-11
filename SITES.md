@@ -299,6 +299,7 @@
     * safelinkreviewer.com
     * safelinksreview.com
     * sehatlega.com
+    * sehatsegar.net
     * short.awsubs.co
     * short.awsubs.me
     * skinnycat.net
