@@ -141,6 +141,7 @@ _.register({
       host: [
         /^(ani-share|autolinkach)\.com$/,
         /^motonews\.club$/,
+        /^sehatsegar\.net$/,
         /^(autofans|landscapenature)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
         /^(www\.)?bolaoke\.club$/,
