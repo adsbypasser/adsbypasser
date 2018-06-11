@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * sehatsegar.net
     * tokenfly.pw
 * removed
 
