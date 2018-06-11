@@ -436,6 +436,7 @@
     * tmearn.com
     * tny.ec
     * tocdo.in
+    * tokenfly.pw
     * tr.link
     * trlink.in
     * tui.click
