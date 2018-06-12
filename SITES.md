@@ -284,12 +284,14 @@
     * intercelestial.com
     * kakkoiisafe.us
     * kombatch.loncat.pw
+    * kurosafe.menantisenja.com
     * kurosafe.online
     * kurosafe.website
     * landscapenature.pw
     * lifesurance.info
     * lindung.in
     * link.safelinkconverter.com
+    * losstor.com
     * motonews.club
     * motosport.pw
     * naisho.lompat.in
