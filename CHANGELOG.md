@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * intercelestial.com
     * sehatsegar.net
     * tokenfly.pw
 * removed
