@@ -4,6 +4,8 @@
     * anjay.info
 * added
     * intercelestial.com
+    * kurosafe.online
+    * kurosafe.website
     * sehatsegar.net
     * tetew.info
     * tokenfly.pw
