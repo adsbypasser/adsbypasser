@@ -281,6 +281,7 @@
     * gtaind.com
     * henpoi.lompat.in
     * id-securelink.xyz
+    * intercelestial.com
     * kakkoiisafe.us
     * kombatch.loncat.pw
     * landscapenature.pw
