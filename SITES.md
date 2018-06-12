@@ -308,6 +308,7 @@
     * srelink.com
     * susutinv2.com
     * sylnk.net
+    * tetew.info
     * tojros.tk
     * ww2.awsubs.co
 * segmentnext.com
