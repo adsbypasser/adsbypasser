@@ -39,11 +39,13 @@ _.register({
         /^(www\.)?designmyhomee\.com$/,
         /^(www\.)?anjay\.info$/,
         /^(www\.)?kakkoiisafe\.us$/,
+        /^(www\.)?kurosafe\.(website|online)$/,
       ],
       query: [
         // id must be the first captured group
         /^\?url=([a-zA-Z0-9/=]+)$/,
         /^\?id=([a-zA-Z0-9/=]+)$/,
+        /^\?site=([a-zA-Z0-9/=]+)$/,
       ],
     },
     {
