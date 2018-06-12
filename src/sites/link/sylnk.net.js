@@ -40,6 +40,7 @@ _.register({
         /^(www\.)?anjay\.info$/,
         /^(www\.)?kakkoiisafe\.us$/,
         /^(www\.)?kurosafe\.(website|online)$/,
+        /^(www\.)?losstor\.com$/,
       ],
       query: [
         // id must be the first captured group
