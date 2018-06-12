@@ -284,6 +284,8 @@
     * intercelestial.com
     * kakkoiisafe.us
     * kombatch.loncat.pw
+    * kurosafe.online
+    * kurosafe.website
     * landscapenature.pw
     * lifesurance.info
     * lindung.in
