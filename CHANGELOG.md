@@ -1,9 +1,11 @@
 ## TBA
 
 * fixed
+    * anjay.info
 * added
     * intercelestial.com
     * sehatsegar.net
+    * tetew.info
     * tokenfly.pw
 * removed
 
