@@ -209,7 +209,10 @@ _.register({
 
 _.register({
   rule: {
-    host: /^www\.njiir\.com$/,
+    host: [
+      /^www\.njiir\.com$/,
+      /^(www\.)?tetew\.info$/,
+    ],
   },
   async ready () {
     let a = $('div.download-link > a');
