@@ -1,7 +1,7 @@
 _.register({
   rule: {
     host: /^(www\.)?mirrorcreator\.com$/,
-    path: /^\/downlink\.php$/,
+    path: /^\/downlink\//,
   },
   async ready () {
     let a = $.$('#redirectlink a');
