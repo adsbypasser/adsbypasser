@@ -2,6 +2,7 @@
 
 * fixed
     * anjay.info
+    * mirrorcreator.com
 * added
     * intercelestial.com
     * kurosafe.menantisenja.com
