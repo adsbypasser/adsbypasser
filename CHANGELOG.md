@@ -2,6 +2,7 @@
 
 * fixed
     * anjay.info
+    * coinlink.co
     * mirrorcreator.com
 * added
     * intercelestial.com
