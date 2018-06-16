@@ -38,7 +38,7 @@
         /^tr\.link$/,
         /^dz4link\.com$/,
         /^short2win\.com$/,
-        /^(vn|vina)url\.net$/,
+        /^(vn|vina|fox)url\.net$/,
         /^clk\.press$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
