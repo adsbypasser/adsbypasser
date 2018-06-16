@@ -5,7 +5,9 @@
     * coinlink.co
     * mirrorcreator.com
 * added
+    * foxurl.net
     * intercelestial.com
+    * itiurl.co
     * kurosafe.menantisenja.com
     * kurosafe.online
     * kurosafe.website
