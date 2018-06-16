@@ -28,7 +28,7 @@
         /^(oke|cuon)\.io$/,
         /^linkrex\.net$/,
         /^safelinku\.net$/,
-        /^3bst\.co$/,
+        /^(3bst|itiurl)\.co$/,
         /^3rabcut\.com$/,
         /^(shink|shrten|gg-l)\.xyz$/,
         /^mlink\.club$/,
