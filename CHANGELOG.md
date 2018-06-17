@@ -11,6 +11,7 @@
     * kurosafe.menantisenja.com
     * kurosafe.online
     * kurosafe.website
+    * kuylink.com
     * losstor.com
     * sehatsegar.net
     * tetew.info
