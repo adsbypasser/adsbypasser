@@ -54,7 +54,7 @@
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
         /^(tny|tiny)\.ec$/,
-        /^(linkexa|admew|shrtfly)\.com$/,
+        /^(linkexa|admew|shrtfly|kuylink)\.com$/,
         /^tl\.tc$/,
         /^petty\.link$/,
         /^wi\.cr$/,
