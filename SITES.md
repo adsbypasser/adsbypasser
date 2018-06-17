@@ -370,6 +370,7 @@
     * bit-url.com
     * clik.pw
     * clk.press
+    * coinlink.co
     * coshink.co
     * crus.io
     * cuon.io
@@ -390,6 +391,7 @@
     * earn-url.com
     * earnbig.ca
     * eklink.net
+    * foxurl.net
     * gg-l.xyz
     * git.tc
     * gram.im
@@ -397,6 +399,7 @@
     * idsly.com
     * igram.im
     * itiad.com
+    * itiurl.co 
     * jurl.io
     * koylinks.win
     * l2s.io
