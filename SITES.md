@@ -402,6 +402,7 @@
     * itiurl.co 
     * jurl.io
     * koylinks.win
+    * kuylink.com
     * l2s.io
     * linclik.com
     * link-zero.com
