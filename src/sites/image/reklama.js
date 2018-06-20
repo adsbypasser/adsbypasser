@@ -8,7 +8,7 @@
         host: [
           // com
           // starts with image
-          /^image(corn|decode)\.com$/,
+          /^image(corn|decode|ko)\.com$/,
           // ends with image
           /^(hostur|greasy|dam)image\.com$/,
           // starts with img
