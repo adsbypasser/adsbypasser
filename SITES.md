@@ -47,6 +47,7 @@
     * ima.gy
     * imagecorn.com
     * imagedecode.com
+    * imageko.com
     * imageon.org
     * imagerar.com
     * imageteam.org
