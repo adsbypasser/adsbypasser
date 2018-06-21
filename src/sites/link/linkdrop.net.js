@@ -104,7 +104,7 @@
         /^adbull\.me$/,
         /^adshort\.co$/,
         /^(adshorte|adsrt)\.com$/,
-        /^weefy\.me$/,
+        /^(weefy|payskip)\.me$/,
         /^bit-url\.com$/,
         /^premiumzen\.com$/,
         /^cut4link\.com$/,
