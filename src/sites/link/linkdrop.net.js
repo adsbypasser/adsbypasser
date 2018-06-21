@@ -115,7 +115,7 @@
         /^mikymoons\.com$/,
         /^spamlink\.org$/,
         /^royurls\.bid$/,
-        /^itiad\.com$/,
+        /^(itiad|by6dk)\.com$/,
         /^(ot|load)url\.com$/,
         /^man2pro\.com$/,
         /^raolink\.com$/,
