@@ -5,7 +5,9 @@
     * coinlink.co
     * mirrorcreator.com
 * added
+    * by6dk.com
     * foxurl.net
+    * glinks.me
     * imageko.com
     * intercelestial.com
     * itiurl.co
@@ -14,6 +16,7 @@
     * kurosafe.website
     * kuylink.com
     * losstor.com
+    * payskip.me
     * sehatsegar.net
     * tetew.info
     * tokenfly.pw
