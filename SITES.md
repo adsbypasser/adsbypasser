@@ -369,6 +369,7 @@
     * adsvy.com
     * adurl.id
     * bit-url.com
+    * by6dk.com
     * clik.pw
     * clk.press
     * coinlink.co
@@ -423,6 +424,7 @@
     * oturl.com
     * ourl.io
     * payshorturl.com
+    * payskip.me
     * petty.link
     * pnd.tl
     * premiumzen.com
@@ -470,6 +472,7 @@
 * gsurl.me
     * g5u.pw
     * getsl.me
+    * glinks.me
     * gsul.me
     * gsur.in
     * gsurl.in
