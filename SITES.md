@@ -603,7 +603,6 @@
     * linkplugapp.com
     * linksas.us
     * linkshrink.net
-    * lix.in
     * lolinez.com
     * lostpic.net
     * mije.net
@@ -673,4 +672,3 @@
     * vzturl.com
     * yep.it
     * yooclick.com
-    * zintata.com
