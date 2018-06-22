@@ -21,7 +21,8 @@
     * tetew.info
     * tokenfly.pw
 * removed
-    * N/A
+    * lix.in
+    * zintata.com
 
 ## v6.13.0
 
