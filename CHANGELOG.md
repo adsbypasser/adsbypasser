@@ -2,6 +2,7 @@
 
 * fixed
     * anjay.info
+    * bit-url.com
     * coinlink.co
     * mirrorcreator.com
 * added
