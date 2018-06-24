@@ -3,6 +3,7 @@
 * fixed
     * anjay.info
     * bit-url.com
+    * catcut.net
     * coinlink.co
     * imagetwist.com
     * mirrorcreator.com
