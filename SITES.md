@@ -401,7 +401,7 @@
     * idsly.com
     * igram.im
     * itiad.com
-    * itiurl.co 
+    * itiurl.co
     * jurl.io
     * koylinks.win
     * kuylink.com
