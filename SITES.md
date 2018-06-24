@@ -516,6 +516,9 @@
 * prntscr.com
     * prntscr.com
     * prnt.sc
+* linkshrink.net
+    * dwindly.io
+    * linkshrink.net
 * else
     * 01.nl
     * 1be.biz
@@ -603,7 +606,6 @@
     * linkdecode.com
     * linkplugapp.com
     * linksas.us
-    * linkshrink.net
     * lolinez.com
     * lostpic.net
     * mije.net
