@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^aka\.gr$/
+    host: /^aka\.gr$/,
   },
   async ready () {
     const l = $('iframe#yourls-frame');

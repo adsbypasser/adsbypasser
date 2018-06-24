@@ -215,6 +215,7 @@ _.register({
   rule: {
     host: [
       /^www\.njiir\.com$/,
+      /^(www\.)?anjay\.info$/,
       /^(www\.)?tetew\.info$/,
     ],
   },

@@ -4,7 +4,7 @@ _.register({
       /^(?:(\w+)\.)?coinurl\.com$/,
       /^(?:(\w+)\.)?cur\.lv$/,
     ],
-    path: /^\/([-\w]+)$/
+    path: /^\/([-\w]+)$/,
   },
   async ready (m) {
     $.remove('iframe');
