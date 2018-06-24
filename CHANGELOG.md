@@ -5,6 +5,8 @@
     * bit-url.com
     * coinlink.co
     * mirrorcreator.com
+    * imagetwist.com
+    * moesubs.com
 * added
     * by6dk.com
     * foxurl.net
