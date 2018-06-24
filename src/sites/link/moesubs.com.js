@@ -4,7 +4,7 @@ _.register({
     path: /^\/url\//,
   },
   async ready () {
-    let a = $('body > div:nth-child(4) > i:nth-child(1)');
+    let a = $('.gotolink > center:nth-child(1) > div:nth-child(1) > i:nth-child(2)');
     a = a.textContent;
     const i = a.lastIndexOf('http');
     a = a.substr(i);
