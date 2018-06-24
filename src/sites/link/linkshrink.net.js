@@ -22,3 +22,22 @@ _.register({
     await $.openLink(m.path[1]);
   },
 });
+
+_.register({
+  rule: {
+    host: /^dwindly\.io$/,
+  },
+  async ready () {
+    let l = $.searchFromScripts(/encD\("([^"]+)"\)/);
+    if (l) {
+      // second stage
+      l = atob(l[1]);
+      await $.openLink('/' + l);
+      return;
+    }
+
+    // first stage
+    l = $.searchFromScripts(/document\.location\.href = "([^"]+)"/);
+    await $.openLink(l[1]);
+  },
+});
