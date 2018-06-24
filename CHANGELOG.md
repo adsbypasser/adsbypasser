@@ -9,6 +9,7 @@
     * moesubs.com
 * added
     * by6dk.com
+    * dwindly.io
     * foxurl.net
     * glinks.me
     * imageko.com
@@ -19,11 +20,11 @@
     * kurosafe.website
     * kuylink.com
     * losstor.com
+    * met.bz
     * payskip.me
     * sehatsegar.net
     * tetew.info
     * tokenfly.pw
-    * met.bz
 * removed
     * lix.in
     * zintata.com
