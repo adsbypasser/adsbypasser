@@ -112,8 +112,6 @@ gulp.task('ghpages:html', ['ghpages:clone'], () => {
     const js = `adsbypasser.${featureName}.${ecmaName}.user.js`;
     options.urls[`${featureName}_${ecmaName}`] = js;
   }
-  const rootPath = 'infra/ghpages/contents';
-  const releasePath = path.join(rootPath, 'releases');
   const outPath = output.to('ghpages');
 
   return gulp.src([
