@@ -1,5 +1,13 @@
 ## TBA
 
+* fixed
+    * N/A
+* added
+    * sweetlantern.com
+    * wicr.me
+* removed
+    * N/A
+
 ## v6.14.0
 
 * fixed
