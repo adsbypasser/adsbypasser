@@ -38,7 +38,7 @@
         /^(igram|gram)\.im$/,
         /^(trlink|wolink|tocdo)\.in$/,
         /^tr\.link$/,
-        /^dz4link\.com$/,
+        /^(dz4link|gocitlink)\.com$/,
         /^short2win\.com$/,
         /^(vn|vina|fox)url\.net$/,
         /^clk\.press$/,
