@@ -25,7 +25,8 @@
     rule: {
       host: [
         /^idsly\.com$/,
-        /^(adbilty|adpop)\.me$/,
+        /^(adbilty|adpop|wicr)\.me$/,
+        /^wi\.cr$/,
         /^(oke|cuon)\.io$/,
         /^linkrex\.net$/,
         /^safelinku\.net$/,
@@ -58,7 +59,6 @@
         /^(linkexa|admew|shrtfly|kuylink)\.com$/,
         /^tl\.tc$/,
         /^petty\.link$/,
-        /^wi\.cr$/,
       ],
     },
     async ready () {
