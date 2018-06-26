@@ -312,6 +312,7 @@
     * sports14.pw
     * srelink.com
     * susutinv2.com
+    * sweetlantern.com
     * sylnk.net
     * tetew.info
     * tojros.tk
@@ -466,6 +467,7 @@
     * vnurl.net
     * weefy.me
     * wi.cr
+    * wicr.me
     * wolink.in
     * worldhack.net
     * zeiz.me
