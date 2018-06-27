@@ -29,7 +29,7 @@
         /^wi\.cr$/,
         /^(oke|cuon)\.io$/,
         /^linkrex\.net$/,
-        /^safelinku\.net$/,
+        /^(safelinku|tinylinks)\.net$/,
         /^(3bst|coinlink|itiurl)\.co$/,
         /^3rabcut\.com$/,
         /^(shink|shrten|gg-l)\.xyz$/,
