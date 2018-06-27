@@ -397,6 +397,7 @@
     * foxurl.net
     * gg-l.xyz
     * git.tc
+    * gocitlink
     * gram.im
     * icutit.ca
     * idsly.com
@@ -448,6 +449,7 @@
     * spamlink.org
     * taive.in
     * tiny.ec
+    * tinylinks.net
     * tl.tc
     * tmearn.com
     * tny.ec
