@@ -3,7 +3,9 @@
 * fixed
     * N/A
 * added
+    * gocitlink.com
     * sweetlantern.com
+    * tinylinks.net
     * wicr.me
 * removed
     * N/A
