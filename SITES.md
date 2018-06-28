@@ -400,6 +400,7 @@
     * gocitlink
     * gram.im
     * icutit.ca
+    * idsly.bid
     * idsly.com
     * igram.im
     * itiad.com
