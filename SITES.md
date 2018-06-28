@@ -381,6 +381,7 @@
     * cut-earn.com
     * cut-urls.com
     * cut-w.in
+    * cut-win.com
     * cut4link.com
     * cut4links.com
     * cutearn.ca
