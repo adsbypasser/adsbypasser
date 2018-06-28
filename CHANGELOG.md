@@ -1,7 +1,7 @@
 ## TBA
 
 * fixed
-    * N/A
+    * plantaheim.web.id
 * added
     * gocitlink.com
     * idsly.bid
