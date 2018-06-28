@@ -153,6 +153,17 @@
       await $.openLink(path);
     },
   });
+  
+  _.register({
+    rule: {
+      host: /^22pixx\.xyz$/,
+      path: /^\/ia-i\/(.+)\.jpeg\.html/,
+    },
+    async ready () {
+      const path = window.location.href.replace('/ia-i', '/i').replace('.html', '');
+      await $.openLink(path);
+    },
+  });
 
   _.register({
     rule: [
