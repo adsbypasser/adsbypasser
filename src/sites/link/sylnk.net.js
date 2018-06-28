@@ -3,9 +3,7 @@
 _.register({
   rule: [
     {
-      host: [
-        /^(www\.)?sylnk\.net$/,
-      ],
+      host: /^(www\.)?sylnk\.net$/,
       query: /link=([^&]+)/,
     },
     {
@@ -32,16 +30,19 @@ _.register({
     // blogspot, kind of brutal
     {
       host: [
+        // com
         /\.blogspot\.com?/,
+        /^(www\.)?designmyhomee\.com$/,
+        /^(www\.)?losstor\.com$/,
+        /^kurosafe\.menantisenja\.com$/,
+        // xyz
         /^simaholina\.xyz$/,
         /^(www\.)?id-securelink\.xyz$/,
+        // else
         /^(www\.)?tojros\.tk$/,
-        /^(www\.)?designmyhomee\.com$/,
         /^(www\.)?anjay\.info$/,
         /^(www\.)?kakkoiisafe\.us$/,
         /^(www\.)?kurosafe\.(website|online)$/,
-        /^(www\.)?losstor\.com$/,
-        /^kurosafe\.menantisenja\.com$/,
       ],
       query: [
         // id must be the first captured group
@@ -131,8 +132,7 @@ _.register({
     host: [
       /^(gameinfo|apasih)\.pw$/,
       /^(www\.)?lifesurance\.info$/,
-      /^intercelestial\.com$/,
-      /^sweetlantern\.com$/,
+      /^(intercelestial|sweetlantern)\.com$/,
     ],
     query: /^\?id=([a-zA-Z0-9/=]+)$/,
   },
@@ -146,12 +146,14 @@ _.register({
   rule: [
     {
       host: [
-        /^(ani-share|autolinkach)\.com$/,
+        // club
         /^motonews\.club$/,
+        /^(www\.)?bolaoke\.club$/,
+        // else
+        /^(ani-share|autolinkach)\.com$/,
         /^sehatsegar\.net$/,
         /^(autofans|landscapenature)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
-        /^(www\.)?bolaoke\.club$/,
       ],
       query: /get=([^&]+)/,
     },
@@ -159,8 +161,7 @@ _.register({
       host: [
         /^(gameinfo|apasih)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
-        /^intercelestial\.com$/,
-        /^sweetlantern\.com$/,
+        /^(intercelestial|sweetlantern)\.com$/,
       ],
     },
   ],
@@ -217,9 +218,11 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^www\.njiir\.com$/,
+      // info
       /^(www\.)?anjay\.info$/,
-      /^(www\.)?tetew\.info$/,
+      /^(www\.)?tetew\.info$/,      
+      // else
+      /^www\.njiir\.com$/,
     ],
   },
   async ready () {
