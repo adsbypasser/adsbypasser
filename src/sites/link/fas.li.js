@@ -50,9 +50,7 @@ _.register({
 _.register({
   rule: [
     {
-      host: [
-        /^cpmlink\.net$/,
-      ],
+      host: /^cpmlink\.net$/,
       path: /^\/go\/\w+$/,
     },
     {
