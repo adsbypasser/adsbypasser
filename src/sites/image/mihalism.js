@@ -27,9 +27,7 @@
 
   _.register({
     rule: {
-      host: [
-        /^img(nip|central|cream)\.com$/,
-      ],
+      host: /^img(nip|central|cream)\.com$/,
       path: /^\/viewerr.*\.php$/,
       query: /file=([^&]+)/,
     },
