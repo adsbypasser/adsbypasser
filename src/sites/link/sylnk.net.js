@@ -54,6 +54,7 @@ _.register({
       host: [
         /^sehatlega\.com$/,
         /^businessforyouand\.me$/,
+        /^plantaheim\.web\.id$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
