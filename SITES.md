@@ -118,7 +118,6 @@
     * picturedip.com
     * pictureturn.com
     * yankoimages.net
-* CF Image Host
 * picfox
     * amateurfreak.org
     * euro-pic.eu
@@ -192,7 +191,7 @@
     * hostpic.org
 * imagevenue
     * hotchyx.com
-    * imagevenue.com    
+    * imagevenue.com
 * imgfantasy
     * 0img.net
     * imagedomino.com
@@ -349,7 +348,8 @@
     * likn.xyz
     * shink.me
     * shon.xyz
-* linkdrop.net    * 123link.co
+* linkdrop.net
+    * 123link.co
     * 123link.io
     * 123link.press
     * 123link.pw
@@ -524,7 +524,8 @@
 * linkshrink.net
     * dwindly.io
     * linkshrink.net
-* else    * 01.nl
+* else
+    * 01.nl
     * 1be.biz
     * 1dl.biz
     * 1ink.cc
@@ -679,4 +680,3 @@
     * vzturl.com
     * yep.it
     * yooclick.com
-
