@@ -4,6 +4,7 @@
     * N/A
 * added
     * gocitlink.com
+    * idsly.bid
     * sweetlantern.com
     * tinylinks.net
     * wicr.me
