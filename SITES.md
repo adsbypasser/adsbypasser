@@ -467,6 +467,7 @@
     * urltips.com
     * vinaurl.net
     * viralukk.com
+    * vivads.net
     * vnurl.net
     * weefy.me
     * wi.cr
