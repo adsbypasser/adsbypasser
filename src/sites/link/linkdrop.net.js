@@ -49,7 +49,7 @@
         /^(vy\.)?adsvy\.com$/,
         /^cut4links\.com$/,
         /^(tmearn|payshorturl|urltips|shrinkearn)\.com$/,
-        /^(earn-url|bit-url)\.com$/,
+        /^(earn-url|bit-url|cut-win)\.com$/,
         /^megaurl\.in$/,
         /^(icutit|earnbig)\.ca$/,
         /^koylinks\.win$/,
