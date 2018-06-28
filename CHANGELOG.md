@@ -1,8 +1,10 @@
 ## TBA
 
 * fixed
+    * link-zero.com
     * plantaheim.web.id
 * added
+    * cut-win.com
     * gocitlink.com
     * idsly.bid
     * sweetlantern.com
