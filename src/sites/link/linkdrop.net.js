@@ -12,7 +12,7 @@
         /^(www\.)?jurl\.io$/,
         /^mitly\.us$/,
         /^tui\.click$/,
-        /^met\.bz$/
+        /^met\.bz$/,
       ],
     },
     async ready () {
