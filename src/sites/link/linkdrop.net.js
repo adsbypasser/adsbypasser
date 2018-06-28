@@ -24,7 +24,7 @@
   _.register({
     rule: {
       host: [
-        /^idsly\.com$/,
+        /^idsly\.(com|bid)$/,
         /^(adbilty|adpop|wicr)\.me$/,
         /^wi\.cr$/,
         /^(oke|cuon)\.io$/,
