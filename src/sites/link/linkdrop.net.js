@@ -118,7 +118,7 @@
         /^(ot|load)url\.com$/,
         /^man2pro\.com$/,
         /^raolink\.com$/,
-        /^eklink\.net$/,
+        /^(eklink|vivads)\.net$/,
       ],
     },
     async ready () {
