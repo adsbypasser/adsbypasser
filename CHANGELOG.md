@@ -9,6 +9,7 @@
     * idsly.bid
     * sweetlantern.com
     * tinylinks.net
+    * vivads.net
     * wicr.me
 * removed
     * N/A
