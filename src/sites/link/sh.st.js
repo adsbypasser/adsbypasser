@@ -1,9 +1,11 @@
 (function () {
 
   const hostRules = [
-    /^sh\.st$/,
+    // com
     /^(jnw0|cllkme|clkmein|corneey|ceesty)\.com$/,
     /^[dfg]estyy\.com$/,
+    // else
+    /^sh\.st$/,
     /^([vw]iid|clkme)\.me$/,
   ];
 
