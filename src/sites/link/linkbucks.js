@@ -1,14 +1,16 @@
 (function() {
 
   const hostRules = [
+    // com
     /^(([\w]{8}|www)\.)?(allanalpass|drstickyfingers|whackyvidz)\.com$/,
+    /^(([\w]{8}|www)\.)?link(babes|bucks)\.com$/,
+    /^(([\w]{8}|www)\.)?theseblogs\.com$/,
+    /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
+    // else
     /^(([\w]{8}|www)\.)?(filesonthe|poontown|seriousdeals|urlbeat|zatnawqy)\.net$/,
     /^(([\w]{8}|www)\.)?freean\.us$/,
-    /^(([\w]{8}|www)\.)?link(babes|bucks)\.com$/,
     /^(([\w]{8}|www)\.)?(miniurls|qqc|rqq|tinylinks|yyv)\.co$/,
-    /^(([\w]{8}|www)\.)?theseblogs\.com$/,
     /^(([\w]{8}|www)\.)?youfap\.me$/,
-    /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
   ];
 
   _.register({
