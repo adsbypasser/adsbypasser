@@ -5,9 +5,7 @@
   // bc.vc, shortcut
   _.register({
     rule: {
-      host: [
-        /^bc\.vc$/,
-      ],
+      host: /^bc\.vc$/,
       path: /^.+(https?:\/\/.+)$/,
     },
     async start (m) {
