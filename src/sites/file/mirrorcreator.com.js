@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^(www\.)?mirrorcreator\.com$/,
+    host: [
+      /^(www\.)?mirrorcreator\.com$/,
+      /^(www\.)?mirrored\.to$/,
+    ],
     path: /^\/downlink\//,
   },
   async ready () {
@@ -22,7 +25,10 @@ _.register({
 
 _.register({
   rule: {
-    host: /^(www\.)?mirrorcreator\.com$/,
+    host: [
+      /^(www\.)?mirrorcreator\.com$/,
+      /^(www\.)?mirrored\.to$/,
+    ],
     path: /^\/files\//,
   },
   async ready () {
