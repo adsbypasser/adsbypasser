@@ -29,7 +29,7 @@
         /^(vy\.)?adsvy\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links)\.com$/,
         // net
-        /^(safelinku|tinylinks|linkrex|zlshorte)\.net$/,
+        /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
         /^(vn|vina|fox)url\.net$/,
         /^(www\.)?linkdrop\.net$/,
         // else
