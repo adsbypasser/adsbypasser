@@ -25,7 +25,7 @@
         // com
         /^(dz4link|gocitlink|3rabcut|short2win)\.com$/,
         /^(tmearn|payshorturl|urltips|shrinkearn)\.com$/,
-        /^(earn-url|bit-url|cut-win)\.com$/,
+        /^(earn-url|bit-url|cut-win|link-zero)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links)\.com$/,
         // net
