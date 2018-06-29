@@ -75,7 +75,7 @@
     rule: {
       host: [
         // com
-        /^(cut-urls|linclik|premiumzen|shrt10|itiad|by6dk|mikymoons|man2pro)\.com$/,
+        /^(cut-urls|linclik|premiumzen|shrt10|itiad|by6dk|mikymoons|man2pro|mykinggo)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
         /^ads(horte|rt)\.com$/,
