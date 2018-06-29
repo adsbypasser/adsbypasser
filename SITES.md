@@ -30,6 +30,7 @@
     * overpic.net
     * xxxhost.me
 * reklama
+    * 22pixx.xyz
     * acidimg.cc
     * ads-img.info
     * damimage.com
@@ -616,6 +617,7 @@
     * lostpic.net
     * mije.net
     * mirrorcreator.com
+    * mirrored.to
     * mirrorfilehost.com
     * moesubs.com
     * mrjh.org
