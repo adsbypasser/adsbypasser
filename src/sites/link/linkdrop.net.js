@@ -25,7 +25,7 @@
         // com
         /^(dz4link|gocitlink|3rabcut|short2win)\.com$/,
         /^(tmearn|payshorturl|urltips|shrinkearn)\.com$/,
-        /^(earn-url|bit-url|cut-win)\.com$/,
+        /^(earn-url|bit-url|cut-win|link-zero)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links)\.com$/,
         // net
@@ -75,7 +75,7 @@
     rule: {
       host: [
         // com
-        /^(cut-urls|link-zero|linclik|premiumzen|shrt10|itiad|by6dk|mikymoons|man2pro)\.com$/,
+        /^(cut-urls|linclik|premiumzen|shrt10|itiad|by6dk|mikymoons|man2pro)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
         /^ads(horte|rt)\.com$/,
