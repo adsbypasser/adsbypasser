@@ -4,9 +4,11 @@
     * link-zero.com
     * plantaheim.web.id
 * added
+    * 22pixx.xyz
     * cut-win.com
     * gocitlink.com
     * idsly.bid
+    * mirrored.to
     * sweetlantern.com
     * tinylinks.net
     * vivads.net
