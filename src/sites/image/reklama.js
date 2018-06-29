@@ -7,48 +7,42 @@
       {
         host: [
           // com
-          // starts with image
           /^image(corn|decode|ko)\.com$/,
-          // ends with image
           /^(hostur|greasy|dam)image\.com$/,
-          // starts with img
           /^img(icy|savvy|tzar|tornado|kicks|2share|hit|main|trial|reputa|fapper|part|balana)\.com$/,
           /^(i\.)?imgseeds?\.com$/,
-          // starts with img-
           /^img-(planet|pay)\.com$/,
-          // starts with www
           /^www\.imglemon\.com$/,
-          // starts with xxx
           /^xxxscreens\.com$/,
-          /^xxxwebdlxxx\.org$/,
-          // else
-          /^(wpc8|dimtus|tinizo)\.com$/,
+          /^(wpc8|dimtus|tinizo|erimge|nimzshare)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
-          /^erimge\.com$/,
-          /^nimzshare\.com$/,
-          // net
-          /^img(serve|-view|project|python|pix)\.net$/,
-          /^(naughtygate|gallerycloud|funimg|xximg)\.net$/,
           // org
+          /^(xxxwebdlxxx|teenshot)\.org$/,
           /^image(on|team)\.org$/,
           /^(voyeur|teen|mega)image\.org$/,
-          /^teenshot\.org$/,
           /^img(studio|spot)\.org$/,
-          // else
-          /^www\.hotimage\.uk$/,
+          // net
+          /^img(serve|project|python|pix)\.net$/,
+          /^img-view\.net$/,
+          /^(naughtygate|gallerycloud)\.net$/,
+          /^(fun|xx)img\.net$/,
+          // eu
           /^hotimages\.eu$/,
           /(^|\.)55888\.eu$/,
+          // site
+          /^picz\.site$/,
+          /^pic\.hotimg\.site$/,
+          // else
+          /^www\.hotimage\.uk$/,
           /^imgcloud\.co$/,
           /^pixup\.us$/,
           /^(pop-img|ads-img)\.info$/,
           /^(domaink|porno-pirat)\.ru$/,
           /^xxx\.pornscreen\.xyz$/,
-          /^picz\.site$/,
           /^darpix\.ga$/,
           /^ipicture\.su$/,
           /^acidimg\.cc$/,
           /^s\.imghost\.top$/,
-          /^pic\.hotimg\.site$/,
         ],
         path: /^\/img-.*\.html/,
       },
@@ -82,9 +76,7 @@
   // TODO need to refactor the cookie rule
   _.register({
     rule: {
-      host: [
-        /^(www\.)?imgfresh\.info$/,
-      ],
+      host: /^(www\.)?imgfresh\.info$/,
       path: /^\/img-.*\.html$/,
     },
     async ready () {
@@ -158,6 +150,17 @@
     },
     async ready () {
       const path = window.location.href.replace('/imga-u', '/u').replace('.html', '');
+      await $.openLink(path);
+    },
+  });
+  
+  _.register({
+    rule: {
+      host: /^22pixx\.xyz$/,
+      path: /^\/ia-i\/(.+)\.jpeg\.html/,
+    },
+    async ready () {
+      const path = window.location.href.replace('/ia-i', '/i').replace('.html', '');
       await $.openLink(path);
     },
   });

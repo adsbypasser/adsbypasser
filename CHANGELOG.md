@@ -1,5 +1,19 @@
 ## TBA
 
+* fixed
+    * link-zero.com
+    * plantaheim.web.id
+* added
+    * cut-win.com
+    * gocitlink.com
+    * idsly.bid
+    * sweetlantern.com
+    * tinylinks.net
+    * vivads.net
+    * wicr.me
+* removed
+    * N/A
+
 ## v6.14.0
 
 * fixed

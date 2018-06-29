@@ -1,9 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^short\.am$/,
-      /^srt\.am$/,
-    ],
+    host: /^(short|srt)\.am$/,
   },
   async ready () {
     // somehow the recaptcha can be skipped, lucky one
