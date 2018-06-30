@@ -369,6 +369,7 @@
     * adsrt.com
     * adsvy.com
     * adurl.id
+    * autech.xyz
     * bit-url.com
     * by6dk.com
     * clik.pw
@@ -410,6 +411,7 @@
     * koylinks.win
     * kuylink.com
     * l2s.io
+    * licklink.net
     * linclik.com
     * link4.me
     * linkdrop.net
@@ -425,6 +427,7 @@
     * mikymoons.com
     * mitly.us
     * mlink.club
+    * mykinggo.com
     * oke.io
     * oturl.com
     * ourl.io
