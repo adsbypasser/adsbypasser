@@ -5,10 +5,13 @@
     * plantaheim.web.id
 * added
     * 22pixx.xyz
+    * autech.xyz
     * cut-win.com
     * gocitlink.com
     * idsly.bid
+    * licklink.net
     * mirrored.to
+    * mykinggo.com
     * sweetlantern.com
     * tinylinks.net
     * vivads.net
