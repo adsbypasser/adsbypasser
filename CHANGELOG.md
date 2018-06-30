@@ -6,6 +6,7 @@
 * added
     * 22pixx.xyz
     * autech.xyz
+    * cut-earn.com
     * cut-win.com
     * gocitlink.com
     * idsly.bid
