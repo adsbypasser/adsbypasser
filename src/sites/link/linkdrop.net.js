@@ -50,7 +50,7 @@
         /^(tmearn|payshorturl|urltips|shrinkearn)\.com$/,
         /^(earn-url|bit-url|link-zero|cut-earn)\.com$/,
         /^megaurl\.in$/,
-        /^(icutit|earnbig)\.ca$/,
+        /^(icutit|earnbig|cutearn)\.ca$/,
         /^koylinks\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
@@ -123,16 +123,6 @@
     },
     async ready () {
       const handler = new StagedHandler();
-      await handler.call();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^cutearn\.ca$/,
-    },
-    async ready () {
-      const handler = new CutearnCaHandler();
       await handler.call();
     },
   });
@@ -221,11 +211,28 @@
       this.removeOverlay();
 
       const f = $.$('#captchaShortlink');
-      if (f) {
-        _.info('recaptcha detected, stop');
+      if (!f) {
+        return true;
+      }
+      _.info('recaptcha detected, stop');
+
+      // press the button after recaptcha
+      _.info('trying to listen submit button');
+      const b = $.$('#invisibleCaptchaShortlink');
+      if (!b) {
         return false;
       }
-      return true;
+
+      const o = new MutationObserver(() => {
+        if (!b.disabled) {
+          b.click();
+        }
+      });
+      o.observe(b, {
+        attributes: true,
+      });
+
+      return false;
     }
 
     async getMiddleware () {
@@ -319,34 +326,6 @@
         return data.url;
       }
       throw new _.AdsBypasserError('wrong data');
-    }
-
-  }
-
-
-  class CutearnCaHandler extends RecaptchaHandler {
-
-    constructor () {
-      super();
-    }
-
-    prepare () {
-      const ok = super.prepare();
-      if (!ok) {
-        _.info('listening submit button');
-
-        // press the button after recaptcha
-        const b = $('#invisibleCaptchaShortlink');
-        const o = new MutationObserver(() => {
-          if (!b.disabled) {
-            b.click();
-          }
-        });
-        o.observe(b, {
-          attributes: true,
-        });
-      }
-      return ok;
     }
 
   }
