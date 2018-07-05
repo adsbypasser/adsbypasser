@@ -153,7 +153,7 @@
       await $.openLink(path);
     },
   });
-  
+
   _.register({
     rule: {
       host: /^22pixx\.xyz$/,
