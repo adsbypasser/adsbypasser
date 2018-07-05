@@ -220,7 +220,7 @@ _.register({
     host: [
       // info
       /^(www\.)?anjay\.info$/,
-      /^(www\.)?tetew\.info$/,      
+      /^(www\.)?tetew\.info$/,
       // else
       /^www\.njiir\.com$/,
     ],
