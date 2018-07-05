@@ -19,8 +19,6 @@
     * tinylinks.net
     * vivads.net
     * wicr.me
-* removed
-    * N/A
 
 ## v6.14.0
 
