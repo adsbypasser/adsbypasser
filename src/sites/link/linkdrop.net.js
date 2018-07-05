@@ -108,7 +108,7 @@
         /^weefy\.me$/,
         /^premiumzen\.com$/,
         /^cut4link\.com$/,
-        /^(cutearn|shortit)\.ca$/,
+        /^shortit\.ca$/,
         /^(www\.)?viralukk\.com$/,
         /^shrt10\.com$/,
         /^mikymoons\.com$/,
@@ -127,6 +127,16 @@
     },
   });
 
+  _.register({
+    rule: {
+      host: /^cutearn\.ca$/,
+    },
+    async ready () {
+      const handler = new CutearnCaHandler();
+      await handler.call();
+    },
+  });
+
 
   class AbstractHandler {
 
@@ -134,6 +144,7 @@
       this._overlaySelector = [
         '[class$="Overlay"]',
         '#__random_class_name__',
+        '#headlineatas',
       ].join(', ');
 
       // TODO extract to paramater
@@ -186,7 +197,7 @@
     }
 
     async getMiddleware () {
-      return getJQueryForm(this._formSelector);
+      return await getJQueryForm(this._formSelector);
     }
 
     withoutMiddleware () {
@@ -218,7 +229,7 @@
     }
 
     async getMiddleware () {
-      return getJQueryForm(this._formSelector);
+      return await getJQueryForm(this._formSelector);
     }
 
     withoutMiddleware () {
@@ -253,8 +264,8 @@
 
     async getMiddleware () {
       return {
-        verify: getJQueryForm('#get-link'),
-        go: getJQueryForm(this._formSelector),
+        verify: await getJQueryForm('#get-link'),
+        go: await getJQueryForm(this._formSelector),
       };
     }
 
@@ -313,6 +324,34 @@
   }
 
 
+  class CutearnCaHandler extends RecaptchaHandler {
+
+    constructor () {
+      super();
+    }
+
+    prepare () {
+      const ok = super.prepare();
+      if (!ok) {
+        _.info('listening submit button');
+
+        // press the button after recaptcha
+        const b = $('#invisibleCaptchaShortlink');
+        const o = new MutationObserver(() => {
+          if (!b.disabled) {
+            b.click();
+          }
+        });
+        o.observe(b, {
+          attributes: true,
+        });
+      }
+      return ok;
+    }
+
+  }
+
+
   function extractArgument (form) {
     const args = {};
     _.forEach($.$$('input', form), (v) => {
@@ -322,8 +361,12 @@
   }
 
 
-  function getJQueryForm (selector) {
-    const jQuery = $.window.$;
+  async function getJQueryForm (selector) {
+    let jQuery = $.window.$;
+    while (!jQuery) {
+      await _.wait(50);
+      jQuery = $.window.$;
+    }
     const f = jQuery(selector);
     if (f.length > 0) {
       return f;
