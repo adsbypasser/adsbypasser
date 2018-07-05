@@ -2,6 +2,7 @@
 
 * fixed
     * cut-earn.com
+    * cutearn.ca
     * link-zero.com
     * payskip.me
     * plantaheim.web.id
