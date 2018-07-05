@@ -5,7 +5,7 @@
       host: [
         /^ulshare\.net$/,
         /^adurl\.id$/,
-        /^(cutwin|cut-earn|earn-guide)\.com$/,
+        /^(cutwin|earn-guide)\.com$/,
         /^(cutwi|cut-w|cutl|dmus)\.in$/,
         /^(www\.)?jurl\.io$/,
         /^mitly\.us$/,
@@ -25,7 +25,7 @@
         // com
         /^(dz4link|gocitlink|3rabcut|short2win)\.com$/,
         /^(tmearn|payshorturl|urltips|shrinkearn)\.com$/,
-        /^(earn-url|bit-url|cut-win|link-zero)\.com$/,
+        /^(earn-url|bit-url|cut-win|link-zero|cut-earn)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links)\.com$/,
         // net
@@ -36,7 +36,7 @@
         /^(trlink|wolink|tocdo|megaurl)\.in$/,
         /^(petty|tr)\.link$/,
         /^idsly\.(com|bid)$/,
-        /^(adbilty|adpop|wicr)\.me$/,
+        /^(adbilty|adpop|payskip|wicr)\.me$/,
         /^wi\.cr$/,
         /^(oke|cuon)\.io$/,
         /^(3bst|coinlink|itiurl)\.co$/,
@@ -47,7 +47,7 @@
         /^short\.pe$/,
         /^urlcloud\.us$/,
         /^(123link|clik|tokenfly)\.pw$/,
-        /^(icutit|earnbig)\.ca$/,
+        /^(icutit|earnbig|cutearn)\.ca$/,
         /^koylinks\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
@@ -82,12 +82,14 @@
         /^(www\.)?viralukk\.com$/,
         /^(ot|load)url\.com$/,
         /^(cut4|rao)link\.com$/,
+        /^(adshorte|adsrt)\.com$/,
+        /^cut4link\.com$/,
         // net
         /^www\.worldhack\.net$/,
         /^(eklink|vivads)\.net$/,
         // else
         /^(coshink|urle|adshort)\.co$/,
-        /^(weefy|payskip|adbull|zeiz|link4)\.me$/,
+        /^(weefy|adbull|zeiz|link4)\.me$/,
         /^(adbilty|taive)\.in$/,
         /^(psl|twik|adslink)\.pw$/,
         /^(curs|crus|4cut|u2s|l2s)\.io$/,
@@ -97,7 +99,7 @@
         /^123link\.(io|co|press)$/,
         /^git\.tc$/,
         /^adfu\.us$/,
-        /^(cutearn|shortit)\.ca$/,
+        /^shortit\.ca$/,
         /^spamlink\.org$/,
         /^royurls\.bid$/,
       ],
@@ -115,6 +117,7 @@
       this._overlaySelector = [
         '[class$="Overlay"]',
         '#__random_class_name__',
+        '#headlineatas',
       ].join(', ');
 
       // TODO extract to paramater
@@ -167,7 +170,7 @@
     }
 
     async getMiddleware () {
-      return getJQueryForm(this._formSelector);
+      return await getJQueryForm(this._formSelector);
     }
 
     withoutMiddleware () {
@@ -191,15 +194,32 @@
       this.removeOverlay();
 
       const f = $.$('#captchaShortlink');
-      if (f) {
-        _.info('recaptcha detected, stop');
+      if (!f) {
+        return true;
+      }
+      _.info('recaptcha detected, stop');
+
+      // press the button after recaptcha
+      _.info('trying to listen submit button');
+      const b = $.$('#invisibleCaptchaShortlink');
+      if (!b) {
         return false;
       }
-      return true;
+
+      const o = new MutationObserver(() => {
+        if (!b.disabled) {
+          b.click();
+        }
+      });
+      o.observe(b, {
+        attributes: true,
+      });
+
+      return false;
     }
 
     async getMiddleware () {
-      return getJQueryForm(this._formSelector);
+      return await getJQueryForm(this._formSelector);
     }
 
     withoutMiddleware () {
@@ -234,8 +254,8 @@
 
     async getMiddleware () {
       return {
-        verify: getJQueryForm('#get-link'),
-        go: getJQueryForm(this._formSelector),
+        verify: await getJQueryForm('#get-link'),
+        go: await getJQueryForm(this._formSelector),
       };
     }
 
@@ -303,8 +323,12 @@
   }
 
 
-  function getJQueryForm (selector) {
-    const jQuery = $.window.$;
+  async function getJQueryForm (selector) {
+    let jQuery = $.window.$;
+    while (!jQuery) {
+      await _.wait(50);
+      jQuery = $.window.$;
+    }
     const f = jQuery(selector);
     if (f.length > 0) {
       return f;
