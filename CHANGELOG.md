@@ -1,5 +1,8 @@
 ## TBA
 
+* fixed
+    * cutearn.ca
+
 ## v6.14.0
 
 * fixed
