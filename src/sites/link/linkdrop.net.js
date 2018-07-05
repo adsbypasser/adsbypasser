@@ -82,8 +82,6 @@
         /^(www\.)?viralukk\.com$/,
         /^(ot|load)url\.com$/,
         /^(cut4|rao)link\.com$/,
-        /^(adshorte|adsrt)\.com$/,
-        /^cut4link\.com$/,
         // net
         /^www\.worldhack\.net$/,
         /^(eklink|vivads)\.net$/,
