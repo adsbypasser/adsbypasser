@@ -3,6 +3,7 @@
 * fixed
     * cut-earn.com
     * link-zero.com
+    * payskip.me
     * plantaheim.web.id
 * added
     * 22pixx.xyz
