@@ -1,4 +1,4 @@
-## TBA
+## v6.15.0
 
 * fixed
     * cut-earn.com
