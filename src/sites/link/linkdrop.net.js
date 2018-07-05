@@ -25,7 +25,7 @@
     rule: {
       host: [
         /^idsly\.com$/,
-        /^(adbilty|adpop)\.me$/,
+        /^(adbilty|adpop|payskip)\.me$/,
         /^(oke|cuon)\.io$/,
         /^linkrex\.net$/,
         /^safelinku\.net$/,
@@ -105,7 +105,7 @@
         /^adbull\.me$/,
         /^adshort\.co$/,
         /^(adshorte|adsrt)\.com$/,
-        /^(weefy|payskip)\.me$/,
+        /^weefy\.me$/,
         /^premiumzen\.com$/,
         /^cut4link\.com$/,
         /^(cutearn|shortit)\.ca$/,
