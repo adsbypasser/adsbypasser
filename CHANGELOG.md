@@ -3,7 +3,9 @@
 * fixed
     * NA
 * added
-    * NA
+    * linktor.io
+    * skips.link
+    * za.gl
 * removed
     * NA
 
