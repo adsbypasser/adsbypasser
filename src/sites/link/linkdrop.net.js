@@ -34,7 +34,7 @@
         /^(www\.)?linkdrop\.net$/,
         // else
         /^(trlink|wolink|tocdo|megaurl)\.in$/,
-        /^(petty|tr)\.link$/,
+        /^(petty|skips|tr)\.link$/,
         /^idsly\.(com|bid)$/,
         /^(adbilty|adpop|payskip|wicr)\.me$/,
         /^wi\.cr$/,
