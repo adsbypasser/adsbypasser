@@ -451,6 +451,7 @@
     * shrten.xyz
     * shrtfly.com
     * simaholina.xyz
+    * skips.link
     * spamlink.org
     * taive.in
     * tiny.ec
@@ -478,6 +479,7 @@
     * wicr.me
     * wolink.in
     * worldhack.net
+    * za.gl
     * zeiz.me
     * zlshorte.net
 * gsurl.me
@@ -616,6 +618,7 @@
     * linkdecode.com
     * linkplugapp.com
     * linksas.us
+    * linktor.io
     * lolinez.com
     * lostpic.net
     * mije.net
