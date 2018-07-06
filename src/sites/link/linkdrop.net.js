@@ -30,7 +30,7 @@
         /^(linkexa|admew|shrtfly|kuylink|cut4links)\.com$/,
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
-        /^(vn|vina|fox)url\.net$/,
+        /^(vnurl|vinaurl|foxurl)\.net$/,
         /^(www\.)?linkdrop\.net$/,
         // else
         /^(trlink|wolink|tocdo|megaurl)\.in$/,
@@ -80,8 +80,8 @@
         /^linkfly\.gaosmedia\.com$/,
         /^(adshorte|adsrt)\.com$/,
         /^(www\.)?viralukk\.com$/,
-        /^(ot|load)url\.com$/,
-        /^(cut4|rao)link\.com$/,
+        /^(oturl|loadurl)\.com$/,
+        /^(cut4link|raolink)\.com$/,
         // net
         /^www\.worldhack\.net$/,
         /^(eklink|vivads)\.net$/,
