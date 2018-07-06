@@ -3,7 +3,7 @@
   const hostRules = [
     // com
     /^(([\w]{8}|www)\.)?(allanalpass|drstickyfingers|whackyvidz)\.com$/,
-    /^(([\w]{8}|www)\.)?link(babes|bucks)\.com$/,
+    /^(([\w]{8}|www)\.)?(linkbabes|linkbucks)\.com$/,
     /^(([\w]{8}|www)\.)?theseblogs\.com$/,
     /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
     // else
