@@ -100,6 +100,7 @@
         /^shortit\.ca$/,
         /^spamlink\.org$/,
         /^royurls\.bid$/,
+        /^za\.gl$/,
       ],
     },
     async ready () {
