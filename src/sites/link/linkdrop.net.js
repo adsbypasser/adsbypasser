@@ -78,7 +78,7 @@
         /^(cut-urls|linclik|premiumzen|shrt10|itiad|by6dk|mikymoons|man2pro|mykinggo)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
-        /^ads(horte|rt)\.com$/,
+        /^(adshorte|adsrt)\.com$/,
         /^(www\.)?viralukk\.com$/,
         /^(ot|load)url\.com$/,
         /^(cut4|rao)link\.com$/,
