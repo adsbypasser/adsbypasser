@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^(www\.)?1(be|dl)\.biz$/,
+    host: /^(www\.)?(1be|1dl)\.biz$/,
     path: /^\/z\.php$/,
     query: /^\?(.+)/,
   },
