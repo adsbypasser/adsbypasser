@@ -5,10 +5,11 @@
   _.register({
     rule: {
       host: [
-        /^img(monkey|trex|ve|dew)\.com$/,
+        /^(imgmonkey|imgtrex|imgve|imgdew)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
-        /^(uploadrr|imageeer|www\.uimgshare|pic-maniac|hulkimge)\.com$/,
+        /^(uploadrr|imageeer|pic-maniac|hulkimge)\.com$/,
+        /^www\.uimgshare\.com$/,
       ],
       path: PATH_RULE,
     },
@@ -21,7 +22,7 @@
     rule: {
       host: [
         /^imgview\.net$/,
-        /^img(maze|outlet)\.com$/,
+        /^(imgmaze|imgoutlet)\.com$/,
       ],
       path: PATH_RULE,
     },
