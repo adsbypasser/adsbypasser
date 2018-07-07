@@ -15,7 +15,7 @@
 
   _.register({
     rule: {
-      host: /^image(xport|shimage)\.com$/,
+      host: /^(imagexport|imageshimage)\.com$/,
     },
     ready: _.partial(run, false),
   });
