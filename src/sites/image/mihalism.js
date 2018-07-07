@@ -4,7 +4,8 @@
   _.register({
     rule: {
       host: [
-        /^(miragepics|funextra\.hostzi)\.com$/,
+        /^miragepics\.com$/,
+        /^funextra\.hostzi\.com$/,
         /^bilder\.nixhelp\.de$/,
         /^imagecurl\.(com|org)$/,
       ],
@@ -27,7 +28,7 @@
 
   _.register({
     rule: {
-      host: /^img(nip|central|cream)\.com$/,
+      host: /^(imgnip|imgcentral|imgcream)\.com$/,
       path: /^\/viewerr.*\.php$/,
       query: /file=([^&]+)/,
     },
