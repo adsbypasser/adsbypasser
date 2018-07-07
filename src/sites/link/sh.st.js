@@ -3,10 +3,10 @@
   const hostRules = [
     // com
     /^(jnw0|cllkme|clkmein|corneey|ceesty)\.com$/,
-    /^[dfg]estyy\.com$/,
+    /^(destyy|festyy|gestyy)\.com$/,
     // else
     /^sh\.st$/,
-    /^([vw]iid|clkme)\.me$/,
+    /^(viid|wiid|clkme)\.me$/,
   ];
 
   _.register({
