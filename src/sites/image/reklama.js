@@ -7,25 +7,26 @@
       {
         host: [
           // com
-          /^image(corn|decode|ko)\.com$/,
-          /^(hostur|greasy|dam)image\.com$/,
-          /^img(icy|savvy|tzar|tornado|kicks|2share|hit|main|trial|reputa|fapper|part|balana)\.com$/,
+          /^(imagecorn|imagedecode|imageko)\.com$/,
+          /^(hosturimage|greasyimage|damimage)\.com$/,
+          /^(imgicy|imgsavvy|imgtzar|imgtornado|imgkicks|img2share|imghit|imgmain)\.com$/,
+          /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana)\.com$/,
           /^(i\.)?imgseeds?\.com$/,
-          /^img-(planet|pay)\.com$/,
+          /^(img-planet|img-pay)\.com$/,
           /^www\.imglemon\.com$/,
           /^xxxscreens\.com$/,
           /^(wpc8|dimtus|tinizo|erimge|nimzshare)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           // org
           /^(xxxwebdlxxx|teenshot)\.org$/,
-          /^image(on|team)\.org$/,
-          /^(voyeur|teen|mega)image\.org$/,
-          /^img(studio|spot)\.org$/,
+          /^(imageon|imageteam)\.org$/,
+          /^(voyeurimage|teenimage|megaimage)\.org$/,
+          /^(imgstudio|imgspot)\.org$/,
           // net
-          /^img(serve|project|python|pix)\.net$/,
+          /^(imgserve|imgproject|imgpython|imgpix)\.net$/,
           /^img-view\.net$/,
           /^(naughtygate|gallerycloud)\.net$/,
-          /^(fun|xx)img\.net$/,
+          /^(funimg|xximg)\.net$/,
           // eu
           /^hotimages\.eu$/,
           /(^|\.)55888\.eu$/,
@@ -123,7 +124,7 @@
       },
       {
         host: [
-          /^img(kings|prime)\.com$/,
+          /^(imgkings|imgprime)\.com$/,
           /^imagerar\.com$/,
         ],
         path: /^\/img-.*\.html/,
@@ -201,7 +202,7 @@
     rule: {
       host: [
         /^(www\.)?imgdrive\.net$/,
-        /^(www\.)?img(taxi|wallet|adult)\.com$/,
+        /^(www\.)?(imgtaxi|imgwallet|imgadult)\.com$/,
       ],
       path: /^\/img-.*\.html$/,
     },
