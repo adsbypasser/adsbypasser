@@ -39,7 +39,7 @@
         /^(adbilty|adpop|payskip|wicr)\.me$/,
         /^wi\.cr$/,
         /^(oke|cuon)\.io$/,
-        /^(3bst|coinlink|itiurl)\.co$/,
+        /^(3bst|coinlink|itiurl|coshink)\.co$/,
         /^(shink|shrten|gg-l)\.xyz$/,
         /^mlink\.club$/,
         /^(igram|gram)\.im$/,
@@ -86,7 +86,7 @@
         /^www\.worldhack\.net$/,
         /^(eklink|vivads)\.net$/,
         // else
-        /^(coshink|urle|adshort)\.co$/,
+        /^(urle|adshort)\.co$/,
         /^(weefy|adbull|zeiz|link4)\.me$/,
         /^(adbilty|taive)\.in$/,
         /^(psl|twik|adslink)\.pw$/,
