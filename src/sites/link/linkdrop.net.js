@@ -87,7 +87,7 @@
         /^(eklink|vivads)\.net$/,
         // else
         /^(coshink|urle|adshort)\.co$/,
-        /^(weefy|adbull|zeiz|link4)\.me$/,
+        /^(weefy|adbull|zeiz|link4|adcoin)\.me$/,
         /^(adbilty|taive)\.in$/,
         /^(psl|twik|adslink)\.pw$/,
         /^(curs|crus|4cut|u2s|l2s)\.io$/,
