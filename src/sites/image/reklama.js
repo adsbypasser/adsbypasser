@@ -10,7 +10,7 @@
           /^(imagecorn|imagedecode|imageko)\.com$/,
           /^(hosturimage|greasyimage|damimage)\.com$/,
           /^(imgicy|imgsavvy|imgtzar|imgtornado|imgkicks|img2share|imghit|imgmain)\.com$/,
-          /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana)\.com$/,
+          /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana|imgjazz)\.com$/,
           /^(i\.)?imgseeds?\.com$/,
           /^(img-planet|img-pay)\.com$/,
           /^www\.imglemon\.com$/,
