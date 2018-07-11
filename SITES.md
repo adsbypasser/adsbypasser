@@ -362,6 +362,7 @@
     * adbilty.me
     * adbitly.in
     * adbull.me
+    * adcoin.me
     * adfu.us
     * admew.com
     * adpop.me
