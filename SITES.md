@@ -41,6 +41,7 @@
     * funimg.net
     * gallerycloud.net
     * greasyimage.com
+    * hdmoza.com
     * hentai-pop.com
     * hosturimage.com
     * hotimage.uk
@@ -62,6 +63,7 @@
     * imghit.com
     * imghost.top (variation)
     * imgicy.com
+    * imgjazz.com
     * imgkicks.com
     * imgking.co
     * imgkings.com
