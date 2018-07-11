@@ -3,6 +3,7 @@
 * fixed
     * coshink.co
 * added
+    * adcoin.me
     * hdmoza.com
     * imgjazz.com
     * linktor.io
