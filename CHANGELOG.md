@@ -1,8 +1,10 @@
 ## TBA
 
 * fixed
-    * NA
+    * coshink.co
 * added
+    * hdmoza.com
+    * imgjazz.com
     * linktor.io
     * skips.link
     * za.gl
