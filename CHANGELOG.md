@@ -2,6 +2,7 @@
 
 * fixed
     * coshink.co
+    * mirrored.to
 * added
     * adcoin.me
     * hdmoza.com
