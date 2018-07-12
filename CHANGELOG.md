@@ -5,6 +5,7 @@
     * mirrored.to
 * added
     * adcoin.me
+    * clk.sh
     * hdmoza.com
     * imgjazz.com
     * linktor.io
