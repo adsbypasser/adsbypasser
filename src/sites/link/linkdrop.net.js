@@ -43,7 +43,7 @@
         /^(shink|shrten|gg-l)\.xyz$/,
         /^mlink\.club$/,
         /^(igram|gram)\.im$/,
-        /^clk\.press$/,
+        /^clk\.(press|sh)$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
         /^(123link|clik|tokenfly)\.pw$/,
