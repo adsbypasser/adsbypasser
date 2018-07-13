@@ -143,6 +143,20 @@ _.register({
 });
 
 _.register({
+  rule: {
+    host: [
+      /^linkach\.com$/,
+    ],
+  },
+  async ready () {
+    const g = $('.humancheck form');
+    g.submit();
+    const h = $.searchFromScripts(/var a='([^']+)'/);
+    await $.openLink(h[1]);
+  },
+});
+
+_.register({
   rule: [
     {
       host: [
