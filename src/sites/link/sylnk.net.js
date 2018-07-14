@@ -147,12 +147,11 @@ _.register({
     host: [
       /^linkach\.com$/,
     ],
+    query: /^\?id=([a-zA-Z0-9/=]+)$/,
   },
   async ready () {
     const g = $('.humancheck form');
     g.submit();
-    const h = $.searchFromScripts(/var a='([^']+)'/);
-    await $.openLink(h[1]);
   },
 });
 
@@ -175,7 +174,7 @@ _.register({
       host: [
         /^(gameinfo|apasih)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
-        /^(intercelestial|sweetlantern)\.com$/,
+        /^(intercelestial|sweetlantern|linkach)\.com$/,
       ],
     },
   ],
