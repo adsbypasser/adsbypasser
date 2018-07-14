@@ -32,7 +32,7 @@ _.register({
     path: /^\/files\//,
   },
   async ready () {
-    const b = $('.downloadarea.downlinks form button');
+    const b = $('.hostarea.downlinks form button');
     b.click();
   },
 });
