@@ -8,7 +8,9 @@
     * clk.sh
     * hdmoza.com
     * imgjazz.com
+    * linkach.com
     * linktor.io
+    * lyon.kim
     * skips.link
     * za.gl
 * removed
