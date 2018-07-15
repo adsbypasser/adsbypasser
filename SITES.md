@@ -294,6 +294,7 @@
     * lifesurance.info
     * lindung.in
     * link.safelinkconverter.com
+    * linkach.com
     * losstor.com
     * motonews.club
     * motosport.pw
@@ -425,6 +426,7 @@
     * link-zero.com
     * loadurl.com
     * lopte.pro
+    * lyon.kim
     * man2pro.com
     * megaurl.in
     * met.bz
