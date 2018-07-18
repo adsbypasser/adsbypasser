@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /turkdown\.com$/,
+    host: /^turkdown\.com$/,
     path: /^\/link/,
     query: /^\?id=(.+)/,
   },
