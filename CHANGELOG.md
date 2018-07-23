@@ -1,4 +1,4 @@
-## TBA
+## v6.16.0
 
 * fixed
     * coshink.co
