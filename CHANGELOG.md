@@ -13,8 +13,6 @@
     * lyon.kim
     * skips.link
     * za.gl
-* removed
-    * NA
 
 ## v6.15.0
 
