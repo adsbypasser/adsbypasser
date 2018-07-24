@@ -380,6 +380,7 @@
     * clk.press
     * clk.sh
     * coinlink.co
+    * converthinks.xyz
     * coshink.co
     * crus.io
     * cuon.io
