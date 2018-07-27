@@ -3,6 +3,7 @@
 * fixed
     * NA
 * added
+    * awcar.icu
     * converthinks.xyz
     * imageblinks.com
 * removed
