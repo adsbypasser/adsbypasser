@@ -8,7 +8,7 @@ _.register({
 
     function base64_decode(w) {
       const v = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
-            p = [];
+        p = [];
       let m, b, z, k, x, q, A, y,
         s = 0,
         j = 0,
