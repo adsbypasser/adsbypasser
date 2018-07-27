@@ -271,6 +271,7 @@
     * apasih.pw
     * autofans.pw
     * autolinkach.com
+    * awcar.icu
     * azhie.net
     * blogspot.com
     * bolaoke.club
