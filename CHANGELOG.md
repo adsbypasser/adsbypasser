@@ -1,6 +1,17 @@
 ## TBA
 
 * fixed
+    * NA
+* added
+    * awcar.icu
+    * converthinks.xyz
+    * imageblinks.com
+* removed
+    * NA
+
+## v6.16.0
+
+* fixed
     * coshink.co
     * mirrored.to
 * added
@@ -13,8 +24,6 @@
     * lyon.kim
     * skips.link
     * za.gl
-* removed
-    * NA
 
 ## v6.15.0
 

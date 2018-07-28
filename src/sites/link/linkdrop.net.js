@@ -46,7 +46,7 @@
         /^clk\.(press|sh)$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
-        /^(123link|clik|tokenfly)\.pw$/,
+        /^(123link|clik|tokenfly|getlink)\.pw$/,
         /^(icutit|earnbig|cutearn)\.ca$/,
         /^koylinks\.win$/,
         /^lopte\.pro$/,

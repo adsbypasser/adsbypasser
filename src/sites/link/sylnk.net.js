@@ -38,6 +38,7 @@ _.register({
         // xyz
         /^(simaholina|autech)\.xyz$/,
         /^(www\.)?id-securelink\.xyz$/,
+        /^(www\.)?converthinks\.xyz$/,
         // else
         /^(www\.)?tojros\.tk$/,
         /^(www\.)?anjay\.info$/,
@@ -133,6 +134,7 @@ _.register({
       /^(gameinfo|apasih)\.pw$/,
       /^(www\.)?lifesurance\.info$/,
       /^(intercelestial|sweetlantern)\.com$/,
+      /^awcar\.icu$/,
     ],
     query: /^\?id=([a-zA-Z0-9/=]+)$/,
   },
@@ -175,6 +177,7 @@ _.register({
         /^(gameinfo|apasih)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
         /^(intercelestial|sweetlantern|linkach)\.com$/,
+        /^awcar\.icu$/,
       ],
     },
   ],
