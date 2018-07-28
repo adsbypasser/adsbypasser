@@ -10,3 +10,14 @@ _.register({
     await $.openLink(url);
   },
 });
+
+_.register({
+  rule: {
+    host: /^onepiece-ex\.com\.br$/,
+  },
+  async ready () {
+    $.remove('iframe');
+    const matches = $.searchFromScripts(/<a href="([^&]+)(?=" )/);
+    await $.openLink(matches[1]);
+  },
+});
