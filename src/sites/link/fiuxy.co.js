@@ -1,7 +1,6 @@
 _.register({
   rule: {
-    host: /^(www\.)?fiuxy\.co$/,
-    path: /^\/links?\/$/,
+    host: /^(www|links)\.fiuxy\.(co|bz)$/,
   },
   async ready () {
     await $.openLink($('a.btn.a').href);
