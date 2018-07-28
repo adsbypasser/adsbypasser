@@ -1,7 +1,13 @@
 _.register({
   rule: {
-    host: /^st\.kurogaze\.net$/,
-    query: /r=(.+)/,
+    host: [
+      /^st\.kurogaze\.net$/,
+      /^s\.yukisubs\.com$/,
+    ],
+    query: [
+      /r=(.+)/,
+      /link=([^&]+)/,
+    ],
   },
   async start (m) {
     const r = atob(m.query[1]);
