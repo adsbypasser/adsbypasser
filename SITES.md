@@ -405,6 +405,7 @@
     * earn-url.com
     * eklink.net
     * foxurl.net
+    * getlink.pw
     * gg-l.xyz
     * git.tc
     * gocitlink
