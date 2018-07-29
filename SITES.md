@@ -283,6 +283,7 @@
     * edogawa.lon.pw
     * filmku.lompat.in
     * gameinfo.pw
+    * getinfos.net
     * gtaind.com
     * henpoi.lompat.in
     * id-securelink.xyz
