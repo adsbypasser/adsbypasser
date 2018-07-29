@@ -5,6 +5,7 @@
 * added
     * awcar.icu
     * converthinks.xyz
+    * getlink.pw
     * imageblinks.com
 * removed
     * NA
