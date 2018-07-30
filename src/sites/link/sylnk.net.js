@@ -248,23 +248,3 @@ _.register({
     await $.openLink(a);
   },
 });
-
-_.register({
-  rule: {
-    host: /^getinfos\.net$/,
-    query: /^\?id(.+)/,
-  },
-  async ready () {
-    const m = $.$$('form');
-    if (!m) {
-      return;
-    }
-
-    let tUrl = await $.post(m[0].action, {
-      get: m[0][0].value,
-    });
-    tUrl = $.toDOM(tUrl);
-    const match = $.searchFromScripts(/changeLink\(\){var a='([^&]+)';/, tUrl);
-    await $.openLink(match[1]);
-  },
-});
