@@ -9,7 +9,6 @@ _.register({
       query: /link=(.+)/,
     },
   ],
-  },
   async start (m) {
     const r = atob(m.query[1]);
     await $.openLink(r);
