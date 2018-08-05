@@ -41,10 +41,7 @@
 
   _.register({
     rule: {
-      host: [
-        /^imgtown\.net$/,
-        /^imgrock\.info$/,
-      ],
+      host: /^imgrock\.info$/,
       path: PATH_RULE,
     },
     async ready () {
@@ -156,10 +153,12 @@
 
   _.register({
     rule: {
-      host: /^imgview\.pw$/,
+      host: /^img(view|town)\.pw$/,
       path: PATH_RULE,
     },
     async ready () {
+      $.remove('iframe');
+
       const i = $.$('img.picview');
       if (i) {
         // second stage
