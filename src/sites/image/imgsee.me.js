@@ -153,7 +153,7 @@
 
   _.register({
     rule: {
-      host: /^img(view|town|maze|dew)\.pw$/,
+      host: /^(imgview|imgtown|imgmaze|imgdew)\.pw$/,
       path: PATH_RULE,
     },
     async ready () {
