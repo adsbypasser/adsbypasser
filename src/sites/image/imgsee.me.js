@@ -5,7 +5,7 @@
   _.register({
     rule: {
       host: [
-        /^(imgmonkey|imgtrex|imgve|imgdew)\.com$/,
+        /^(imgmonkey|imgtrex|imgve)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
         /^(uploadrr|imageeer|pic-maniac|hulkimge)\.com$/,
@@ -153,7 +153,7 @@
 
   _.register({
     rule: {
-      host: /^img(view|town|maze)\.pw$/,
+      host: /^img(view|town|maze|dew)\.pw$/,
       path: PATH_RULE,
     },
     async ready () {
