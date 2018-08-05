@@ -57,6 +57,7 @@ _.register({
         /^sehatlega\.com$/,
         /^businessforyouand\.me$/,
         /^plantaheim\.web\.id$/,
+        /^davinsurance\.com$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
