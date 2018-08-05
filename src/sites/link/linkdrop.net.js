@@ -231,7 +231,7 @@
 
     async getURL (jForm) {
       while (true) {
-        await _.wait(2000);
+        await _.wait(1000);
         try {
           const url = await getURLFromJQueryForm(jForm);
           if (url) {
