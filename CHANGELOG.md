@@ -5,9 +5,13 @@
 * added
     * awcar.icu
     * converthinks.xyz
+    * davinsurance.com
+    * fiuxy.bz
     * getinfos.net
     * getlink.pw
     * imageblinks.com
+    * onepiece-ex.com.br
+    * s.yukisubs.com
 * removed
     * NA
 
