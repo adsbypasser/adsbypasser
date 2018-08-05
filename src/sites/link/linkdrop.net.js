@@ -31,7 +31,6 @@
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
         /^(vnurl|vinaurl|foxurl)\.net$/,
-        /^(www\.)?linkdrop\.net$/,
         // else
         /^(trlink|wolink|tocdo|megaurl)\.in$/,
         /^(petty|skips|tr)\.link$/,
@@ -68,6 +67,16 @@
     },
     async ready () {
       const handler = new OURLHandler();
+      await handler.call();
+    },
+  });
+
+  _.register({
+    rule: {
+      host: /^(www\.)?linkdrop\.net$/,
+    },
+    async ready () {
+      const handler = new LinkDropHandler();
       await handler.call();
     },
   });
@@ -262,6 +271,19 @@
     async getURL (jFormObject) {
       await getURLFromJQueryForm(jFormObject.verify);
       return await getURLFromJQueryForm(jFormObject.go);
+    }
+
+  }
+
+
+  class LinkDropHandler extends RecaptchaHandler {
+
+    constructor () {
+      super();
+    }
+
+    async getMiddleware () {
+      return await getJQueryForm('#mylink');
     }
 
   }
