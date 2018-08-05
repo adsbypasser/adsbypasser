@@ -20,10 +20,7 @@
 
   _.register({
     rule: {
-      host: [
-        /^imgview\.net$/,
-        /^(imgmaze|imgoutlet)\.com$/,
-      ],
+      host: /^(imgmaze|imgoutlet)\.com$/,
       path: PATH_RULE,
     },
     async ready () {
@@ -117,23 +114,6 @@
   });
 
   _.register({
-    rule: 'http://imgview.net/tpind.php',
-    async ready () {
-      const i = $.$('img.pic');
-      if (i) {
-        // second stage
-        await $.openImage(i.src, {replace: true});
-        return;
-      }
-
-      await _.wait(500);
-      let d = $('div[id^="imageviewi"] input[type="submit"][style=""]');
-      d = d.parentNode;
-      d.submit();
-    },
-  });
-
-  _.register({
     rule: /^http:\/\/imgdragon\.com\/(getfil\.php|dl)$/,
     async ready () {
       const i = $.$('img.pic');
@@ -164,6 +144,33 @@
 
       const node = await getAmbiguousForm(
         'div[id] + div[id] > input:not([style])',
+        (node) => {
+          const d = node.parentElement;
+          // first click the input element, then the ambiguous forms will show
+          node.click();
+          return d;
+        });
+      node.click();
+    },
+  });
+
+  _.register({
+    rule: {
+      host: /^imgview\.pw$/,
+      path: PATH_RULE,
+    },
+    async ready () {
+      const i = $.$('img.picview');
+      if (i) {
+        // second stage
+        await $.openImage(i.src);
+        return;
+      }
+
+      $.window._0x58ff35 = null;
+
+      const node = await getAmbiguousForm(
+        'script + div[id] > input:not([style])',
         (node) => {
           const d = node.parentElement;
           // first click the input element, then the ambiguous forms will show
