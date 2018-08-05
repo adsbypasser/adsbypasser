@@ -278,6 +278,7 @@
     * businessforyouand.me
     * compartiendofull.net
     * compul.in
+    * davinsurance.com
     * decrypt.safelinkconverter.com
     * designmyhomee.com
     * edogawa.lon.pw
@@ -584,7 +585,6 @@
     * comyonet.com
     * coolrom.com
     * cubeupload.com
-    * davinsurance.com
     * depic.me
     * directupload.net
     * dl-protect.com
