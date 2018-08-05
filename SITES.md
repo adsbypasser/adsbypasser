@@ -242,19 +242,19 @@
     * hulkimge.com
     * imageeer.com
     * imgclick.net
-    * imgdew.com
+    * imgdew.pw
     * imgdragon.com
     * imgfiles.org
-    * imgmaze.com
+    * imgmaze.pw
     * imgmonkey.com
     * imgoutlet.com
     * imgoutlet.pw
     * imgrock.info
     * imgrock.pw
     * imgsee.me
-    * imgtown.net
+    * imgtown.pw
     * imgve.com
-    * imgview.net
+    * imgview.pw
     * pic-maniac.com
     * uimgshare.com
     * uploadrr.com
