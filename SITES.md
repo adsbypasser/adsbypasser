@@ -542,6 +542,15 @@
 * linkshrink.net
     * dwindly.io
     * linkshrink.net
+* kurogaze.net
+    * kurogaze.net
+    * s.yukisubs.com
+* mylink.zone
+    * mylink.zone
+    * onepiece-ex.com.br
+* fiuxy.co
+    * fiuxy.co
+    * fiuxy.bz
 * else
     * 01.nl
     * 1be.biz
@@ -575,6 +584,7 @@
     * comyonet.com
     * coolrom.com
     * cubeupload.com
+    * davinsurance.com
     * depic.me
     * directupload.net
     * dl-protect.com
@@ -582,7 +592,6 @@
     * embedupload.com
     * ewa.ac
     * filoops.info
-    * fiuxy.co
     * fotolink.su
     * fotosik.pl
     * freeimgup.com
@@ -622,7 +631,6 @@
     * jheberg.net
     * keptarolo.hu
     * kingofshrink.com
-    * kurogaze.net
     * lienscash.com
     * link.im
     * link4ad.com
@@ -639,7 +647,6 @@
     * moesubs.com
     * mrjh.org
     * my-link.pro
-    * mylink.zone
     * mylinkgen.com
     * nmac.to
     * noelshack.com
