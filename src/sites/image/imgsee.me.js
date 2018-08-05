@@ -20,7 +20,7 @@
 
   _.register({
     rule: {
-      host: /^(imgmaze|imgoutlet)\.com$/,
+      host: /^imgoutlet\.com$/,
       path: PATH_RULE,
     },
     async ready () {
@@ -153,7 +153,7 @@
 
   _.register({
     rule: {
-      host: /^img(view|town)\.pw$/,
+      host: /^img(view|town|maze)\.pw$/,
       path: PATH_RULE,
     },
     async ready () {
