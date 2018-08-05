@@ -10,10 +10,17 @@
     * getinfos.net
     * getlink.pw
     * imageblinks.com
+    * imgdew.pw
+    * imgmaze.pw
+    * imgtown.pw
+    * imgview.pw
     * onepiece-ex.com.br
     * s.yukisubs.com
 * removed
-    * NA
+    * imgdew.com
+    * imgmaze.com
+    * imgtown.net
+    * imgview.net
 
 ## v6.16.0
 
