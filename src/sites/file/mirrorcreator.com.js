@@ -7,18 +7,8 @@ _.register({
     path: /^\/downlink\//,
   },
   async ready () {
-    let a = $.$('#redirectlink a');
-    if (a) {
-      await $.openLink(a.href);
-      return;
-    }
-
-    a = $('#redirectlink > div.redirecturl');
-    a = a.innerHTML;
-    if (!a.match(/^http/)) {
-      throw new _.AdsBypasserError('not a valid URL');
-    }
-    await $.openLink(a);
+    const a = $('.col-sm.centered.highlight a');
+    await $.openLink(a.href);
   },
 });
 
@@ -32,7 +22,7 @@ _.register({
     path: /^\/files\//,
   },
   async ready () {
-    const b = $('.hostarea.downlinks form button');
+    const b = $('.col-sm.centered.highlight form button');
     b.click();
   },
 });
