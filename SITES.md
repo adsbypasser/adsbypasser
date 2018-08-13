@@ -394,6 +394,7 @@
     * cutearn.ca
     * cut-earn.com
     * cutl.in
+    * cutsouf.com
     * cut-urls.com
     * cut-w.in
     * cutwi.in
@@ -440,6 +441,7 @@
     * mitly.us
     * mlink.club
     * mykinggo.com
+    * niagoshort.com
     * oke.io
     * oturl.com
     * ourl.io
@@ -478,6 +480,7 @@
     * tui.click
     * twik.pw
     * u2s.io
+    * ujv.me
     * ulshare.net
     * urlcloud.us
     * urle.co
@@ -489,6 +492,7 @@
     * weefy.me
     * wi.cr
     * wicr.me
+    * win4cut.com
     * wolink.in
     * worldhack.net
     * za.gl
@@ -592,6 +596,7 @@
     * embedupload.com
     * ewa.ac
     * filoops.info
+    * flylink.io
     * fotolink.su
     * fotosik.pl
     * freeimgup.com
@@ -690,6 +695,7 @@
     * tinypic.com
     * turboimagehost.com
     * turkdown.com
+    * ujv.al
     * ulmt.in
     * unfake.it
     * upmirror.info
