@@ -37,7 +37,7 @@
         /^idsly\.(com|bid)$/,
         /^(adbilty|adpop|payskip|wicr)\.me$/,
         /^wi\.cr$/,
-        /^(oke|cuon|linktor)\.io$/,
+        /^(oke|cuon|linktor|flylink)\.io$/,
         /^(3bst|coinlink|itiurl|coshink)\.co$/,
         /^(shink|shrten|gg-l)\.xyz$/,
         /^mlink\.club$/,
