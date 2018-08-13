@@ -90,6 +90,7 @@
         /^linkfly\.gaosmedia\.com$/,
         /^(adshorte|adsrt)\.com$/,
         /^(www\.)?viralukk\.com$/,
+        /^(www\.)?niagoshort\.com$/,
         /^(oturl|loadurl)\.com$/,
         /^(cut4link|raolink)\.com$/,
         // net
