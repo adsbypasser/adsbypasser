@@ -1,8 +1,15 @@
 ## TBA
 
 * fixed
+    * itiad.com
     * mirrored.to
 * added
+    * cutsouf.com
+    * flylink.io
+    * niagoshort.com
+    * ujv.al
+    * ujv.me
+    * win4cut.com
 * removed
 
 ## v6.17.0
