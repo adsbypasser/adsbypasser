@@ -638,6 +638,7 @@
     * kingofshrink.com
     * lienscash.com
     * link.im
+    * link.tl
     * link4ad.com
     * linkdecode.com
     * linkplugapp.com
