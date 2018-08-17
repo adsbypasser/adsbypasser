@@ -53,6 +53,7 @@
         /^(tny|tiny)\.ec$/,
         /^tl\.tc$/,
         /^lyon\.kim$/,
+        /^linkvip\.tk$/,
       ],
     },
     async ready () {
