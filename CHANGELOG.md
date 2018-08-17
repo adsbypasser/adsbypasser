@@ -6,6 +6,7 @@
 * added
     * cutsouf.com
     * flylink.io
+    * link.tl
     * niagoshort.com
     * ujv.al
     * ujv.me
