@@ -380,6 +380,7 @@
     * autech.xyz
     * bit-url.com
     * by6dk.com
+    * cashat.net
     * clik.pw
     * clk.press
     * clk.sh
@@ -430,6 +431,7 @@
     * linkexa.com
     * linkfly.gaosmedia.com
     * linkrex.net
+    * linkvip.tk
     * link-zero.com
     * loadurl.com
     * lopte.pro
@@ -458,6 +460,7 @@
     * short.pastewma.com
     * short.pe
     * short2win.com
+    * short2win.net
     * shortad.cf
     * shortit.ca
     * shrinkearn.com
