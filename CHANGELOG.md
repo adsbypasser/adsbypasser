@@ -4,10 +4,13 @@
     * itiad.com
     * mirrored.to
 * added
+    * cashat.net
     * cutsouf.com
     * flylink.io
     * link.tl
+    * linkvip.tk
     * niagoshort.com
+    * short2win.net
     * ujv.al
     * ujv.me
     * win4cut.com
