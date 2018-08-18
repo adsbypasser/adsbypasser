@@ -106,7 +106,7 @@
         /^dzurl\.ml$/,
         /^petty\.link$/,
         /^shortad\.cf$/,
-        /^123link\.(io|co|press)$/,
+        /^123link\.(io|co|press|pro)$/,
         /^git\.tc$/,
         /^adfu\.us$/,
         /^shortit\.ca$/,
