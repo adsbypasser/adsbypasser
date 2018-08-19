@@ -4,6 +4,7 @@
     * itiad.com
     * mirrored.to
 * added
+    * 123link.pro
     * cashat.net
     * cutsouf.com
     * flylink.io
