@@ -360,6 +360,7 @@
     * 123link.co
     * 123link.io
     * 123link.press
+    * 123link.pro
     * 123link.pw
     * 3bst.co
     * 3rabcut.com
