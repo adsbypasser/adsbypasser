@@ -12,6 +12,7 @@
     * linkvip.tk
     * lnkshrnk.net
     * niagoshort.com
+    * rhvgmritmziwcm.net
     * short2win.net
     * ujv.al
     * ujv.me
