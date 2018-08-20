@@ -10,6 +10,7 @@
     * flylink.io
     * link.tl
     * linkvip.tk
+    * lnkshrnk.net
     * niagoshort.com
     * short2win.net
     * ujv.al
