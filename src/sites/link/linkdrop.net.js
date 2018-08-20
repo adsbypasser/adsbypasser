@@ -24,7 +24,7 @@
       host: [
         // com
         /^(dz4link|gocitlink|3rabcut|short2win)\.com$/,
-        /^(tmearn|payshorturl|urltips|shrinkearn|cutsouf)\.com$/,
+        /^(tmearn|payshorturl|urltips|shrinkearn|itiad|cutsouf)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links)\.com$/,
@@ -86,7 +86,7 @@
     rule: {
       host: [
         // com
-        /^(cut-urls|linclik|premiumzen|shrt10|itiad|by6dk|mikymoons|man2pro|mykinggo|win4cut)\.com$/,
+        /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro|mykinggo|win4cut)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
         /^(adshorte|adsrt)\.com$/,
