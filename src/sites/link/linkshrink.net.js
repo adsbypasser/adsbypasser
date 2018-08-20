@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^linkshrink\.net$/,
+    host: /^(linkshrink|lnkshrnk)\.net$/,
     path: /^\/[a-zA-Z0-9]+$/,
   },
   async start () {
@@ -15,7 +15,7 @@ _.register({
 
 _.register({
   rule: {
-    host: /^linkshrink\.net$/,
+    host: /^(linkshrink|lnkshrnk)\.net$/,
     path: /=(.+)$/,
   },
   async start (m) {
