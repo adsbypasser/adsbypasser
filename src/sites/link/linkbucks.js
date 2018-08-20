@@ -6,8 +6,10 @@
     /^(([\w]{8}|www)\.)?(linkbabes|linkbucks)\.com$/,
     /^(([\w]{8}|www)\.)?theseblogs\.com$/,
     /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
+    // net
+    /^(([\w]{8}|www)\.)?(filesonthe|poontown|seriousdeals|urlbeat)\.net$/,
+    /^(([\w]{8}|www)\.)?(zatnawqy|rhvgmritmziwcm)\.net$/,
     // else
-    /^(([\w]{8}|www)\.)?(filesonthe|poontown|seriousdeals|urlbeat|zatnawqy|rhvgmritmziwcm)\.net$/,
     /^(([\w]{8}|www)\.)?freean\.us$/,
     /^(([\w]{8}|www)\.)?(miniurls|qqc|rqq|tinylinks|yyv)\.co$/,
     /^(([\w]{8}|www)\.)?youfap\.me$/,
