@@ -56,6 +56,7 @@ function evil (script) {
     unsafeWindow,
     window,
   ) => {
+    // eslint-disable-next-line no-eval
     return eval(script);
   })();
   /* eslint-enable no-unused-vars */
