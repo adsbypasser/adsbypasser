@@ -551,6 +551,7 @@
 * linkshrink.net
     * dwindly.io
     * linkshrink.net
+    * lnkshrnk.net
 * kurogaze.net
     * kurogaze.net
     * s.yukisubs.com
