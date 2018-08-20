@@ -242,6 +242,7 @@
 * imgsee.me
     * hulkimge.com
     * imageeer.com
+    * imgant.com
     * imgclick.net
     * imgdew.pw
     * imgdragon.com
