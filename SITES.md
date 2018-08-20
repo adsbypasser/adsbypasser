@@ -596,6 +596,7 @@
     * comyonet.com
     * coolrom.com
     * cubeupload.com
+    * dawnstation.com
     * depic.me
     * directupload.net
     * dl-protect.com
