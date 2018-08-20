@@ -180,6 +180,27 @@
     },
   });
 
+  _.register({
+    rule: {
+      host: /^imgant\.com$/,
+      path: /^\/img-(\d+)\.html$/,
+    },
+    async start (m) {
+      await $.openLink(`imgview-${m.path[1]}.html`);
+    },
+  });
+
+  _.register({
+    rule: {
+      host: /^imgant\.com$/,
+      path: /^\/imgview-\d+\.html$/,
+    },
+    async ready () {
+      const i = $('#picView');
+      await $.openImage(i.src);
+    },
+  });
+
   function waitDOM (element, fn) {
     return new Promise((resolve) => {
       const observer = new MutationObserver((mutations) => {
