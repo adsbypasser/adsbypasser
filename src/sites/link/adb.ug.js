@@ -52,7 +52,7 @@
         childList: true,
       });
     }).then((m) => {
-      return eval('(' + m[0] + ')');
+      return _.evil(`(${m[0]})`);
     });
   }
 

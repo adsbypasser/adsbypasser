@@ -159,6 +159,8 @@
   function decrypt (url) {
     url = ConvertFromHex(url);
     let unsafe = `(${Encode.toString()})("${url}")`;
+    // TODO Have to use this to escape strict mode ...
+    // eslint-disable-next-line no-eval
     unsafe = (0, eval)(unsafe);
     return unsafe;
   }

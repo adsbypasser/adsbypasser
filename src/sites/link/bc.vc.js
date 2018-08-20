@@ -131,7 +131,7 @@
       throw new _.AdsBypasserError('no script matches /eval(.*)/');
     }
     matches = matches[1];
-    script = eval(matches);
+    script = _.evil(matches);
     return script;
   }
 
@@ -159,7 +159,7 @@
       throw new _.AdsBypasserError('(in knock server) no script matches $.post');
     }
     const make_url = matches[1];
-    const make_opts = eval('(' + matches[2] + ')');
+    const make_opts = _.evil(`(${matches[2]})`);
 
     // XXX refactor?
     const i = setInterval(function () {

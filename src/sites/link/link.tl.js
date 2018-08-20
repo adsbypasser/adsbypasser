@@ -5,7 +5,7 @@ _.register({
   },
   async ready () {
     let m = $.searchFromScripts(/eval\((.+}\))\)/);
-    m = eval(`(() => { 'use strict'; return ${m[1]}; })()`);
+    m = _.evil(`(${m[1]})`);
     let l = m.match(/(?:\$\.ajax.+|href=')(http.+skip.+|http[^']+)',data/);
     l = l[1];
     if (!l.match(/skip/)) {
