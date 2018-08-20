@@ -8,6 +8,7 @@
     * cashat.net
     * cutsouf.com
     * flylink.io
+    * imgant.com
     * link.tl
     * linkvip.tk
     * lnkshrnk.net
