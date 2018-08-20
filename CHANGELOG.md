@@ -1,4 +1,4 @@
-## TBA
+## v6.18.0
 
 * fixed
     * itiad.com
@@ -20,7 +20,6 @@
     * ujv.al
     * ujv.me
     * win4cut.com
-* removed
 
 ## v6.17.0
 
