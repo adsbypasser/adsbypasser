@@ -86,7 +86,8 @@
     rule: {
       host: [
         // com
-        /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro|mykinggo|win4cut)\.com$/,
+        /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro)\.com$/,
+        /^(mykinggo|win4cut)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
         /^(adshorte|adsrt)\.com$/,
