@@ -377,6 +377,7 @@
     * adpop.me
     * adshort.co
     * adshorte.com
+    * adskipme.com
     * adslink.pw
     * adsrt.com
     * adsvy.com
