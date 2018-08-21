@@ -27,7 +27,7 @@
         /^(tmearn|payshorturl|urltips|shrinkearn|itiad|cutsouf)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn)\.com$/,
         /^(vy\.)?adsvy\.com$/,
-        /^(linkexa|admew|shrtfly|kuylink|cut4links)\.com$/,
+        /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme)\.com$/,
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat)\.net$/,
