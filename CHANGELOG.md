@@ -1,7 +1,8 @@
 ## TBA
-    * fixed
-    * added
-    * removed
+
+* fixed
+* added
+* removed
 
 ## v6.18.0
 
