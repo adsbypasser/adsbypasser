@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * telolet.in
 * removed
 
 ## v6.18.0
