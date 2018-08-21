@@ -323,6 +323,7 @@
     * susutinv2.com
     * sweetlantern.com
     * sylnk.net
+    * telolet.in
     * tetew.info
     * tojros.tk
     * ww2.awsubs.co
