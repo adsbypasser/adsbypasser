@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * adskipme.com
     * telolet.in
 * removed
 
