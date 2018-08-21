@@ -98,6 +98,7 @@ _.register({
       host: [
         /^(naisho|filmku|henpoi)\.lompat\.in$/,
         /^edogawa\.lon\.pw$/,
+        /^telolet\.in$/,
       ],
       query: /go=([\w\\]+=*)/,
     },
