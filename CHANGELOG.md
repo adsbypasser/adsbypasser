@@ -3,6 +3,7 @@
 * fixed
 * added
     * adskipme.com
+    * insurance-waifu.cf
     * telolet.in
 * removed
 
