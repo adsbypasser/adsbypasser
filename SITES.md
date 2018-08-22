@@ -320,7 +320,6 @@
     * skinnycat.net
     * sports14.pw
     * srelink.com
-    * susutinv2.com
     * sweetlantern.com
     * sylnk.net
     * tetew.info
