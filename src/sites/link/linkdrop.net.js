@@ -87,7 +87,7 @@
       host: [
         // com
         /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro)\.com$/,
-        /^(mykinggo|win4cut)\.com$/,
+        /^(mykinggo|win4cut|link4win)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
         /^(adshorte|adsrt)\.com$/,
