@@ -391,6 +391,7 @@
     * clik.pw
     * clk.press
     * clk.sh
+    * cll.press
     * coinlink.co
     * converthinks.xyz
     * coshink.co
