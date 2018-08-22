@@ -318,6 +318,7 @@
     * short.awsubs.co
     * short.awsubs.me
     * skinnycat.net
+    * spacetica.com
     * sports14.pw
     * srelink.com
     * susutinv2.com
