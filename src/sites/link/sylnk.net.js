@@ -210,6 +210,17 @@ _.register({
 
 _.register({
   rule: {
+    host: /^hexafile\.net$/,
+    path: /^\/[a-zA-Z0-9]+/,
+  },
+  async ready () {
+    const h = $.searchFromScripts(/window\.location="([^"]+)";/);
+    await $.openLink(h[1]);
+  },
+});
+
+_.register({
+  rule: {
     host: [
       /^ww[23]\.picnictrans\.com$/,
       /^short\.awsubs\.(co|me)$/,
