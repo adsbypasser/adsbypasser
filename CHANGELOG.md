@@ -3,6 +3,7 @@
 * fixed
 * added
 * removed
+    * susutinv2.com
 
 ## v6.18.0
 
