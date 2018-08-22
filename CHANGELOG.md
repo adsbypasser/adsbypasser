@@ -3,6 +3,7 @@
 * fixed
 * added
     * adskipme.com
+    * cll.press
     * hexafile.net
     * insurance-waifu.cf
     * link4win.com
