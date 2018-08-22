@@ -252,3 +252,14 @@ _.register({
     await $.openLink(a);
   },
 });
+
+_.register({
+  rule: {
+    host: /^spacetica\.com$/,
+    path: /^\/\w+$/,
+  },
+  async ready () {
+    const l = $('p > b > a');
+    await $.openLink(l.href);
+  },
+});
