@@ -4,6 +4,7 @@
 * added
     * adskipme.com
     * insurance-waifu.cf
+    * spacetica.com
     * telolet.in
 * removed
 
