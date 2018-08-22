@@ -3,7 +3,9 @@
 * fixed
 * added
     * adskipme.com
+    * hexafile.net
     * insurance-waifu.cf
+    * link4win.com
     * spacetica.com
     * telolet.in
 * removed
