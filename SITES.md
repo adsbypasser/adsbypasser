@@ -289,6 +289,7 @@
     * getinfos.net
     * gtaind.com
     * henpoi.lompat.in
+    * hexafile.net
     * id-securelink.xyz
     * intercelestial.com
     * kakkoiisafe.us
@@ -433,6 +434,7 @@
     * licklink.net
     * linclik.com
     * link4.me
+    * link4win.com
     * linkdrop.net
     * linkexa.com
     * linkfly.gaosmedia.com
