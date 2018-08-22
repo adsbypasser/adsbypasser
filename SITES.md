@@ -640,6 +640,7 @@
     * imgdollar.com
     * imgmass.com
     * imgvault.pw
+    * insurance-waifu.cf
     * ipic.su
     * itw.me
     * ity.im
