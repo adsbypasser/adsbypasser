@@ -98,6 +98,7 @@
     * naughtygate.net
     * nimzshare.com
     * pic.hotimg.site
+    * picmoza.com
     * picz.site
     * pixup.us
     * pop-img.info
