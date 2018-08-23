@@ -17,6 +17,7 @@
           /^xxxscreens\.com$/,
           /^(wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
+          /^picmoza\.com$/,
           // org
           /^(xxxwebdlxxx|teenshot)\.org$/,
           /^(imageon|imageteam)\.org$/,
