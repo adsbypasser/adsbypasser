@@ -8,6 +8,7 @@
     * insurance-waifu.cf
     * javlibrary.com
     * link4win.com
+    * picmoza.com
     * spacetica.com
     * telolet.in
 * removed
