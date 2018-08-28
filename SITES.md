@@ -477,6 +477,7 @@
     * shrt10.com
     * shrten.xyz
     * shrtfly.com
+    * shrtfly.net
     * simaholina.xyz
     * skips.link
     * spamlink.org
