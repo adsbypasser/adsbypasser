@@ -30,7 +30,7 @@
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme)\.com$/,
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
-        /^(vnurl|vinaurl|foxurl|short2win|cashat)\.net$/,
+        /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
         // else
         /^(trlink|wolink|tocdo|megaurl)\.in$/,
         /^(petty|skips|tr)\.link$/,
