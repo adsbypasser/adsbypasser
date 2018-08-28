@@ -9,6 +9,7 @@
     * javlibrary.com
     * link4win.com
     * picmoza.com
+    * shrtfly.net
     * spacetica.com
     * telolet.in
 * removed
