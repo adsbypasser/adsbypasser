@@ -134,6 +134,7 @@ _.register({
     host: [
       /^(gameinfo|apasih)\.pw$/,
       /^(www\.)?lifesurance\.info$/,
+      /^(www\.)?bolaoke\.club$/,
       /^(intercelestial|sweetlantern)\.com$/,
       /^awcar\.icu$/,
       /^getinfos\.net$/,
@@ -178,6 +179,7 @@ _.register({
       host: [
         /^(gameinfo|apasih)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
+        /^(www\.)?bolaoke\.club$/,
         /^(intercelestial|sweetlantern|linkach|autolinkach)\.com$/,
         /^awcar\.icu$/,
         /^getinfos\.net$/,
