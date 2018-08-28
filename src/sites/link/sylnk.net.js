@@ -149,7 +149,7 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^linkach\.com$/,
+      /^(linkach|autolinkach)\.com$/,
     ],
     query: /^\?id=([a-zA-Z0-9/=]+)$/,
   },
@@ -178,7 +178,7 @@ _.register({
       host: [
         /^(gameinfo|apasih)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
-        /^(intercelestial|sweetlantern|linkach)\.com$/,
+        /^(intercelestial|sweetlantern|linkach|autolinkach)\.com$/,
         /^awcar\.icu$/,
         /^getinfos\.net$/,
       ],
