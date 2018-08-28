@@ -1,6 +1,9 @@
 ## TBA
 
 * fixed
+    * autolinkach.com
+    * bolaoke.club
+    * psl.pw
 * added
 * removed
     * susutinv2.com
