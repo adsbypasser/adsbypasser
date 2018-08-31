@@ -15,9 +15,8 @@
           /^(img-planet|img-pay)\.com$/,
           /^(www\.)?(imglemon|imageblinks)\.com$/,
           /^xxxscreens\.com$/,
-          /^(wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza)\.com$/,
+          /^(wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza|picmoza)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
-          /^picmoza\.com$/,
           // org
           /^(xxxwebdlxxx|teenshot)\.org$/,
           /^(imageon|imageteam)\.org$/,
