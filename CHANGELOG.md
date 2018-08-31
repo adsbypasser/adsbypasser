@@ -6,6 +6,7 @@
     * cll.press
     * fmlawkers.club
     * hexafile.net
+    * indexmovie.club
     * insurance-waifu.cf
     * javlibrary.com
     * link4win.com
