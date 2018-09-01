@@ -10,6 +10,7 @@
     * insurance-waifu.cf
     * javlibrary.com
     * link4win.com
+    * picclock.ru
     * picmoza.com
     * shrtfly.net
     * spacetica.com
