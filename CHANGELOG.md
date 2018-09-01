@@ -3,6 +3,7 @@
 * fixed
     * autolinkach.com
     * bolaoke.club
+    * davinsurance.com
     * psl.pw
 * added
 * removed
