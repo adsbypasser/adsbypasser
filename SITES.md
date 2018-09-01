@@ -686,6 +686,7 @@
     * pic-money.ru
     * pic-upload.de
     * piccash.net
+    * picclock.ru
     * picnictrans.com
     * picpic.online
     * picshare.geenza.com
