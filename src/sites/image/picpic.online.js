@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^picpic\.online$/,
+    host: [
+      /^picpic\.online$/,
+      /^picclock\.ru$/,
+    ],
     path: /^\/\d+\/\d+\/$/,
   },
   async ready () {
