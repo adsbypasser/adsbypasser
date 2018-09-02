@@ -322,7 +322,9 @@
     * short.awsubs.co
     * short.awsubs.me
     * skinnycat.net
+    * skyinsurance.ml
     * spacetica.com
+    * speedcar.club
     * sports14.pw
     * srelink.com
     * susutinv2.com
