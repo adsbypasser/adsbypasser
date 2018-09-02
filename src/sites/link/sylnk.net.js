@@ -136,6 +136,7 @@ _.register({
     host: [
       /^(gameinfo|apasih)\.pw$/,
       /^(www\.)?lifesurance\.info$/,
+      /^speedcar\.club$/,
       /^(intercelestial|sweetlantern)\.com$/,
       /^awcar\.icu$/,
       /^skyinsurance\.ml$/,
@@ -181,6 +182,7 @@ _.register({
       host: [
         /^(gameinfo|apasih)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
+        /^speedcar\.club$/,
         /^(intercelestial|sweetlantern|linkach)\.com$/,
         /^awcar\.icu$/,
         /^skyinsurance\.ml$/,
