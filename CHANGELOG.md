@@ -13,7 +13,9 @@
     * picclock.ru
     * picmoza.com
     * shrtfly.net
+    * skyinsurance.ml
     * spacetica.com
+    * speedcar.club
     * telolet.in
 * removed
 
