@@ -137,7 +137,7 @@ _.register({
       /^(gameinfo|apasih)\.pw$/,
       /^(www\.)?lifesurance\.info$/,
       /^speedcar\.club$/,
-      /^(intercelestial|sweetlantern)\.com$/,
+      /^(intercelestial|sweetlantern|davinsurance)\.com$/,
       /^awcar\.icu$/,
       /^skyinsurance\.ml$/,
       /^getinfos\.net$/,
@@ -153,7 +153,7 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^linkach\.com$/,
+      /^(linkach|autolinkach)\.com$/,
     ],
     query: /^\?id=([a-zA-Z0-9/=]+)$/,
   },
@@ -183,7 +183,7 @@ _.register({
         /^(gameinfo|apasih)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
         /^speedcar\.club$/,
-        /^(intercelestial|sweetlantern|linkach)\.com$/,
+        /^(intercelestial|sweetlantern|linkach|autolinkach|davinsurance)\.com$/,
         /^awcar\.icu$/,
         /^skyinsurance\.ml$/,
         /^getinfos\.net$/,
@@ -234,20 +234,6 @@ _.register({
   async ready () {
     const a = $('div.kiri > center > a');
     await $.openLink(a.href);
-  },
-});
-
-_.register({
-  rule: {
-    host: /^susutinv2\.com$/,
-  },
-  async ready () {
-    const s = $.searchFromScripts(/="([^"]+)",/);
-    if (!s) {
-      _.warn('site changed');
-      return;
-    }
-    await $.openLink(s[1]);
   },
 });
 

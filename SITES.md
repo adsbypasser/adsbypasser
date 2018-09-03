@@ -327,7 +327,6 @@
     * speedcar.club
     * sports14.pw
     * srelink.com
-    * susutinv2.com
     * sweetlantern.com
     * sylnk.net
     * telolet.in

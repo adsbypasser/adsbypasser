@@ -1,6 +1,10 @@
 ## TBA
 
 * fixed
+    * autolinkach.com
+    * bolaoke.club
+    * davinsurance.com
+    * psl.pw
 * added
     * adskipme.com
     * cll.press
@@ -18,6 +22,7 @@
     * speedcar.club
     * telolet.in
 * removed
+    * susutinv2.com
 
 ## v6.18.0
 
