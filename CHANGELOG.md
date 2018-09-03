@@ -1,4 +1,4 @@
-## TBA
+## v6.19.0
 
 * fixed
     * autolinkach.com
