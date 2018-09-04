@@ -713,6 +713,7 @@
     * st.wardhanime.net
     * subirimagenes.com
     * supercheats.com
+    * swzz.xyz
     * techfunda.net
     * thinfi.com
     * tinyarrows.com
