@@ -590,7 +590,7 @@
     * ah.pe
     * ah-informatique.com
     * aka.gr
-    * akoam.com
+    * akoam.net
     * bayimg.com
     * beeimg.com
     * biglistofwebsites.com
