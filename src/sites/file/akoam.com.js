@@ -1,12 +1,11 @@
 _.register({
   rule: {
-    host: /^akoam\.com$/,
-    path: /^\/download\//,
+    host: /^akoam\.net$/,
+    path: /^\/download\/([^/]+)\//,
   },
-  async start () {
+  async start (m) {
     // the site's rule
-    const locationLink = location.hash;
-    let data = await $.post(locationLink);
+    let data = await $.post(location.href, m.path[1]);
     try {
       data = JSON.parse(data);
     } catch (e) {
