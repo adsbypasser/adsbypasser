@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * swzz.xyz
 * removed
 
 ## v6.19.0
