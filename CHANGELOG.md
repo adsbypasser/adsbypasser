@@ -2,8 +2,10 @@
 
 * fixed
 * added
+    * akoam.net
     * swzz.xyz
 * removed
+    * akoam.com
 
 ## v6.19.0
 
