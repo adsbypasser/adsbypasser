@@ -3,6 +3,7 @@
 * fixed
 * added
     * akoam.net
+    * link4win.net
     * swzz.xyz
 * removed
     * akoam.com
