@@ -440,6 +440,7 @@
     * linclik.com
     * link4.me
     * link4win.com
+    * link4win.net
     * linkdrop.net
     * linkexa.com
     * linkfly.gaosmedia.com
