@@ -23,7 +23,7 @@
     rule: {
       host: [
         // com
-        /^(dz4link|gocitlink|3rabcut|short2win)\.com$/,
+        /^(dz4link|gocitlink|3rabcut|short2win|adsrt)\.com$/,
         /^(tmearn|payshorturl|urltips|shrinkearn|itiad|cutsouf)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn)\.com$/,
         /^(vy\.)?adsvy\.com$/,
@@ -90,7 +90,7 @@
         /^(mykinggo|win4cut|link4win)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
-        /^(adshorte|adsrt)\.com$/,
+        /^adshorte\.com$/,
         /^(www\.)?viralukk\.com$/,
         /^(www\.)?niagoshort\.com$/,
         /^(oturl|loadurl)\.com$/,
