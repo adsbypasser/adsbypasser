@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * adsrt.com
 * removed
 
 ## v6.19.0
