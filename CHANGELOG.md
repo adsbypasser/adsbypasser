@@ -1,8 +1,8 @@
 ## TBA
 
 * fixed
-* added
     * adsrt.com
+* added
 * removed
 
 ## v6.19.0
