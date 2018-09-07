@@ -4,6 +4,7 @@
 * added
     * akoam.net
     * link4win.net
+    * linksad.net
     * swzz.xyz
 * removed
     * akoam.com
