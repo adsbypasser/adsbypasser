@@ -445,6 +445,7 @@
     * linkexa.com
     * linkfly.gaosmedia.com
     * linkrex.net
+    * linksad.net
     * linkvip.tk
     * link-zero.com
     * loadurl.com
