@@ -226,6 +226,16 @@ _.register({
 
 _.register({
   rule: {
+    host: /^drivefiles\.bid$/,
+  },
+  async ready () {
+    const d = $.searchFromScripts(/window\.open\('([^']+)'\);/);
+    await $.openLink(d[1]);
+  },
+});
+
+_.register({
+  rule: {
     host: [
       /^ww[23]\.picnictrans\.com$/,
       /^short\.awsubs\.(co|me)$/,
