@@ -35,6 +35,7 @@ _.register({
         /^(www\.)?designmyhomee\.com$/,
         /^(www\.)?losstor\.com$/,
         /^kurosafe\.menantisenja\.com$/,
+        /^drive\.jepitkertas\.com$/,
         // xyz
         /^(simaholina|autech)\.xyz$/,
         /^(www\.)?id-securelink\.xyz$/,
