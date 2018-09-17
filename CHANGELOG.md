@@ -1,6 +1,10 @@
 ## TBA
 
 * fixed
+    * adsrt.com
+    * bolaoke.club
+    * sehatsegar.net
+    * imagetwist.com
 * added
     * akoam.net
     * drivefiles.bid
