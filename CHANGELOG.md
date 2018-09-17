@@ -4,6 +4,7 @@
     * adsrt.com
     * bolaoke.club
     * sehatsegar.net
+    * imagetwist.com
 * added
 * removed
 
