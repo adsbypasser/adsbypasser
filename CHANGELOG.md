@@ -2,6 +2,8 @@
 
 * fixed
     * adsrt.com
+    * bolaoke.club
+    * sehatsegar.net
 * added
 * removed
 
