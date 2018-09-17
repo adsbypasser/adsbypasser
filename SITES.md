@@ -284,6 +284,8 @@
     * davinsurance.com
     * decrypt.safelinkconverter.com
     * designmyhomee.com
+    * drivefiles.bid
+    * drive.jepitkertas.com
     * edogawa.lon.pw
     * filmku.lompat.in
     * fmlawkers.club
