@@ -1,4 +1,4 @@
-## TBA
+## v6.20.0
 
 * fixed
     * adsrt.com
