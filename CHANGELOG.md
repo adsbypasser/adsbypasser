@@ -3,6 +3,8 @@
 * fixed
 * added
     * akoam.net
+    * drivefiles.bid
+    * drive.jepitkertas.com
     * link4win.net
     * linksad.net
     * swzz.xyz
