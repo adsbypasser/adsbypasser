@@ -658,6 +658,7 @@
     * itw.me
     * ity.im
     * javlibrary.com
+    * javtor.com
     * jheberg.net
     * keptarolo.hu
     * kingofshrink.com
