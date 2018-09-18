@@ -15,7 +15,7 @@
           /^(img-planet|img-pay)\.com$/,
           /^(www\.)?(imglemon|imageblinks)\.com$/,
           /^xxxscreens\.com$/,
-          /^(wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza|picmoza)\.com$/,
+          /^(wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           // org
           /^(xxxwebdlxxx|teenshot)\.org$/,
@@ -61,6 +61,10 @@
       {
         host: /^ima\.gy$/,
         path: /^\/i\/.+$/,
+      },
+      {
+        host: /^picmoza\.com$/,
+        path: /^\/\/?img-.*\.html$/,
       },
     ],
     ready: defaultAction,
