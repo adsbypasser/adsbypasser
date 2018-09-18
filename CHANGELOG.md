@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * javtor.com
 * removed
 
 ## v6.20.0
