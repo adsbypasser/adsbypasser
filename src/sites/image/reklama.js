@@ -124,7 +124,7 @@
       },
       {
         host: [
-          /^(imgkings|imgprime)\.com$/,
+          /^imgkings\.com$/,
           /^imagerar\.com$/,
         ],
         path: /^\/img-.*\.html/,
@@ -176,14 +176,26 @@
         host: /^imgking\.co$/,
         path: /^\/img[v3]-.*\.html/,
       },
-      {
-        host: /^imgprime\.com$/,
-        path: /^\/img.*\.html$/,
-      },
     ],
     async ready () {
       const i = $('img[alt]');
       await $.openImage(i.src);
+    },
+  });
+
+  _.register({
+    rule: {
+      host: /^imgprime\.com$/,
+      path: /^\/img.*\.html$/,
+    },
+    async ready () {
+      let a = $.$('#continuetoimage a');
+      if (a) {
+        await $.openLink(a.href);
+        return;
+      }
+      a = $('img[alt]');
+      await $.openImage(a.src);
     },
   });
 
