@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * imgprime.com
 * added
 * removed
 
