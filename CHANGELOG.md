@@ -2,6 +2,7 @@
 
 * fixed
     * imgprime.com
+    * picmoza.com
 * added
 * removed
 
