@@ -3,6 +3,7 @@
 * fixed
 * added
     * javtor.com
+    * topurl.net
 * removed
 
 ## v6.20.0
