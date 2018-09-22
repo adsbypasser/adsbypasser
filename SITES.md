@@ -496,6 +496,7 @@
     * tny.ec
     * tocdo.in
     * tokenfly.pw
+    * topurl.net
     * tr.link
     * trlink.in
     * tui.click
