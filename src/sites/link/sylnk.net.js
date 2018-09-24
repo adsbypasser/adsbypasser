@@ -135,7 +135,7 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^(gameinfo|apasih)\.pw$/,
+      /^(gameinfo|apasih|autoride)\.pw$/,
       /^(www\.)?lifesurance\.info$/,
       /^speedcar\.club$/,
       /^(www\.)?bolaoke\.club$/,
@@ -182,7 +182,7 @@ _.register({
     },
     {
       host: [
-        /^(gameinfo|apasih)\.pw$/,
+        /^(gameinfo|apasih|autoride)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
         /^speedcar\.club$/,
         /^(www\.)?bolaoke\.club$/,
