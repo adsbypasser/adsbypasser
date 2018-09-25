@@ -274,6 +274,7 @@
     * apasih.pw
     * autofans.pw
     * autolinkach.com
+    * autoride.pw
     * awcar.icu
     * azhie.net
     * blogspot.com
