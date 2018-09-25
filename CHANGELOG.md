@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * autoride.pw
     * javtor.com
     * topurl.net
 * removed
