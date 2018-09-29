@@ -537,6 +537,7 @@
     * 10co.me
     * 10co.xyz
 * openload.co
+    * oload.cloud
     * oload.download
     * oload.info
     * oload.site
