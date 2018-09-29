@@ -4,6 +4,7 @@
 * added
     * autoride.pw
     * javtor.com
+    * oload.cloud
     * topurl.net
 * removed
 
