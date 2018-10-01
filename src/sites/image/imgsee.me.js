@@ -76,14 +76,14 @@
         // second stage
 
         // disable devtools blocker
-        $.window._0x2cd123 = null;
+        $.window._0x5b50b7 = null;
 
         await $.openImage(i.src);
         return;
       }
 
       // disable devtools blocker
-      $.window._0x337c4b = null;
+      $.window._0x5b50b7 = null;
 
       const node = await getAmbiguousForm('div[id] + div[id] > style', (node) => {
         return node.parentElement;
@@ -228,21 +228,15 @@
   async function getAmbiguousForm (selector, shellNormalizer) {
     const d = await waitFormShell(selector, shellNormalizer);
     const style = $('style', d);
-    const visibleClasses = parseStyle(style);
-    const forms = $.$$('form', d);
-    for (const form of forms) {
-      const isVisible = visibleClasses.some((class_) => {
-        return form.classList.contains(class_);
-      });
-      if (!isVisible) {
-        continue;
-      }
-      const button = $.$('input[type="button"], button[type="button"]', form);
+    let visibleClasses = parseStyle(style);
+    visibleClasses = filterDuplicated(visibleClasses);
+    while (true) {
+      const button = findVisibleForm(visibleClasses);
       if (button) {
         return button;
       }
+      await _.wait(500);
     }
-    return null;
   }
 
   // Used when the form's shell does not exist when page loaded.
@@ -270,6 +264,38 @@
       classes.push(rv[1]);
     }
     return classes;
+  }
+
+  function filterDuplicated (classes) {
+    const table = new Map();
+    for (const c of classes) {
+      if (table.has(c)) {
+        table.set(c, false);
+      } else {
+        table.set(c, true);
+      }
+    }
+    return Array.from(table.entries()).filter((unique) => {
+      return unique;
+    }).map((_, c) => {
+      return c;
+    });
+  }
+
+  function findVisibleForm (classes) {
+    for (const class_ of classes) {
+      const form = $.$(`form.${class_}`);
+      if (!form) {
+        continue;
+      }
+      const button = $.$('input[type="button"], button[type="button"]', form);
+      const v = getComputedStyle(button).getPropertyValue('visibility');
+      if (v !== 'visible') {
+        continue;
+      }
+      return button;
+    }
+    return null;
   }
 
   function getNext1 (i) {
