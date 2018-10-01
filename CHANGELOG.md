@@ -1,12 +1,16 @@
 ## TBA
 
 * fixed
+    * beeimg.com
+    * imagetwist.com
+    * imgoutlet.pw
+    * imgprime.com
+    * picmoza.com
 * added
     * autoride.pw
     * javtor.com
     * oload.cloud
     * topurl.net
-* removed
 
 ## v6.20.0
 

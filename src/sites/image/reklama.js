@@ -15,7 +15,7 @@
           /^(img-planet|img-pay)\.com$/,
           /^(www\.)?(imglemon|imageblinks)\.com$/,
           /^xxxscreens\.com$/,
-          /^(wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza|picmoza)\.com$/,
+          /^(wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           // org
           /^(xxxwebdlxxx|teenshot)\.org$/,
@@ -61,6 +61,10 @@
       {
         host: /^ima\.gy$/,
         path: /^\/i\/.+$/,
+      },
+      {
+        host: /^picmoza\.com$/,
+        path: /^\/\/?img-.*\.html$/,
       },
     ],
     ready: defaultAction,
@@ -124,7 +128,7 @@
       },
       {
         host: [
-          /^(imgkings|imgprime)\.com$/,
+          /^imgkings\.com$/,
           /^imagerar\.com$/,
         ],
         path: /^\/img-.*\.html/,
@@ -176,14 +180,26 @@
         host: /^imgking\.co$/,
         path: /^\/img[v3]-.*\.html/,
       },
-      {
-        host: /^imgprime\.com$/,
-        path: /^\/img.*\.html$/,
-      },
     ],
     async ready () {
       const i = $('img[alt]');
       await $.openImage(i.src);
+    },
+  });
+
+  _.register({
+    rule: {
+      host: /^imgprime\.com$/,
+      path: /^\/img.*\.html$/,
+    },
+    async ready () {
+      let a = $.$('#continuetoimage a');
+      if (a) {
+        await $.openLink(a.href);
+        return;
+      }
+      a = $('img[alt]');
+      await $.openImage(a.src);
     },
   });
 
