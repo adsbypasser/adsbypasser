@@ -5,6 +5,8 @@ _.register({
   },
   async ready () {
     const img = $('img.img-responsive');
-    await $.openImage(img.src);
+    await $.openImage(img.src, {
+      replace: true,
+    });
   },
 });
