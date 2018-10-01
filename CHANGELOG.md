@@ -1,9 +1,9 @@
 ## TBA
 
 * fixed
+    * beeimg.com
     * imgprime.com
     * picmoza.com
-    * beeimg.com
 * added
 * removed
 
