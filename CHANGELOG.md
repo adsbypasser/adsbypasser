@@ -3,6 +3,7 @@
 * fixed
     * beeimg.com
     * imgprime.com
+    * imagetwist.com
     * picmoza.com
 * added
 * removed
