@@ -1,4 +1,4 @@
-## TBA
+## v6.21.0
 
 * fixed
     * beeimg.com
