@@ -2,8 +2,9 @@
 
 * fixed
     * beeimg.com
-    * imgprime.com
     * imagetwist.com
+    * imgoutlet.pw
+    * imgprime.com
     * picmoza.com
 * added
 * removed
