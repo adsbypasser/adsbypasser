@@ -23,7 +23,7 @@
     rule: {
       host: [
         // com
-        /^(dz4link|gocitlink|3rabcut|short2win|adsrt)\.com$/,
+        /^(dz4link|gocitlink|3rabcut|short2win|adsrt|shortglobal)\.com$/,
         /^(tmearn|payshorturl|urltips|shrinkearn|itiad|cutsouf)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn)\.com$/,
         /^(vy\.)?adsvy\.com$/,
