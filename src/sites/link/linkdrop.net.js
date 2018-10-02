@@ -36,7 +36,7 @@
         /^(trlink|wolink|tocdo|megaurl)\.in$/,
         /^(petty|skips|tr)\.link$/,
         /^idsly\.(com|bid)$/,
-        /^(adbilty|adpop|payskip|wicr|ujv)\.me$/,
+        /^(adbilty|adpop|payskip|wicr|ujv|tpx)\.me$/,
         /^wi\.cr$/,
         /^(oke|cuon|linktor|flylink)\.io$/,
         /^(3bst|coinlink|itiurl|coshink)\.co$/,
