@@ -411,6 +411,7 @@
     * cutearn.ca
     * cut-earn.com
     * cutl.in
+    * cutpaid.com
     * cutsouf.com
     * cut-urls.com
     * cut-w.in
@@ -481,6 +482,7 @@
     * short2win.com
     * short2win.net
     * shortad.cf
+    * shortglobal.com
     * shortit.ca
     * shrinkearn.com
     * shrt10.com
@@ -499,6 +501,7 @@
     * tocdo.in
     * tokenfly.pw
     * topurl.net
+    * tpx.me
     * tr.link
     * trlink.in
     * tui.click
