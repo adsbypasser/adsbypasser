@@ -2,6 +2,9 @@
 
 * fixed
 * added
+    * cutpaid.com
+    * shortglobal.com
+    * tpx.me
 * removed
 
 ## v6.21.0
