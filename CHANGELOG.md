@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * adzurl.cf
     * cutpaid.com
     * shortglobal.com
     * tpx.me
