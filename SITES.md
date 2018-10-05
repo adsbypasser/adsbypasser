@@ -392,6 +392,7 @@
     * adsrt.com
     * adsvy.com
     * adurl.id
+    * adzurl.cf
     * autech.xyz
     * bit-url.com
     * by6dk.com
