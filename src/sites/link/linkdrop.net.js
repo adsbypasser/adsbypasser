@@ -49,6 +49,7 @@
         /^urlcloud\.us$/,
         /^(123link|clik|tokenfly|getlink|psl)\.pw$/,
         /^(icutit|earnbig|cutearn)\.ca$/,
+        /^adzurl\.cf$/,
         /^koylinks\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
