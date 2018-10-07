@@ -170,7 +170,7 @@
     },
   });
 
-    _.register({
+  _.register({
     rule: {
       host: /^22pixx\.xyz$/,
       path: /^\/x-i\/(.+)\.jpeg\.html/,
