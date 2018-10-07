@@ -4,6 +4,7 @@
 * added
     * adzurl.cf
     * cutpaid.com
+    * oload.cc
     * shortglobal.com
     * tpx.me
 * removed
