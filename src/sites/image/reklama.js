@@ -170,6 +170,17 @@
     },
   });
 
+    _.register({
+    rule: {
+      host: /^22pixx\.xyz$/,
+      path: /^\/x-i\/(.+)\.jpeg\.html/,
+    },
+    async ready () {
+      const path = window.location.href.replace('/x', '/y');
+      await $.openLink(path);
+    },
+  });
+  
   _.register({
     rule: [
       {
