@@ -60,6 +60,7 @@ _.register({
         /^businessforyouand\.me$/,
         /^plantaheim\.web\.id$/,
         /^davinsurance\.com$/,
+        /^naturalhealthy\.xyz$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
