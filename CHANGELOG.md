@@ -5,9 +5,11 @@
 * added
     * adzurl.cf
     * cutpaid.com
+    * naturalhealthy.xyz
     * oload.cc
     * shortglobal.com
     * tpx.me
+    * vnurl.xyz
 * removed
 
 ## v6.21.0
