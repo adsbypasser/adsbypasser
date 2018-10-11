@@ -313,6 +313,7 @@
     * motonews.club
     * motosport.pw
     * naisho.lompat.in
+    * naturalhealthy.xyz
     * njiir.com
     * plantaheim.web.id
     * safelinkconverter.com
@@ -517,6 +518,7 @@
     * viralukk.com
     * vivads.net
     * vnurl.net
+    * vnurl.xyz
     * weefy.me
     * wi.cr
     * wicr.me
