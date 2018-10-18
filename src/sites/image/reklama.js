@@ -44,6 +44,7 @@
           /^ipicture\.su$/,
           /^acidimg\.cc$/,
           /^s\.imghost\.top$/,
+          /^xxx\.sexex\.xyz$/,
         ],
         path: /^\/img-.*\.html/,
       },
@@ -180,7 +181,7 @@
       await $.openLink(path);
     },
   });
-  
+
   _.register({
     rule: [
       {
