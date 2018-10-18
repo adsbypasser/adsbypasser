@@ -10,6 +10,7 @@
     * shortglobal.com
     * tpx.me
     * vnurl.xyz
+    * xxx.sexex.xyz
 * removed
 
 ## v6.21.0
