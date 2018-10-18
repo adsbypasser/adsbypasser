@@ -112,6 +112,7 @@
     * wpc8.com
     * xximg.net
     * xxx.pornscreen.xyz
+    * xxx.sexex.xyz
     * xxxscreens.com
     * xxxwebdlxxx.org
 * imageporter
