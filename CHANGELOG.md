@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * imgoutlet.pw
 * added
 * removed
 
