@@ -1,4 +1,4 @@
-## TBA
+## v6.22.0
 
 * fixed
     * imgoutlet.pw
