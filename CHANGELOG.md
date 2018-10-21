@@ -1,8 +1,9 @@
 ## TBA
 
 * fixed
-    * 22pixx.xyz
+    * imgoutlet.pw
 * added
+    * 22pixx.xyz
     * adzurl.cf
     * cutpaid.com
     * naturalhealthy.xyz
