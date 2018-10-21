@@ -85,9 +85,14 @@
       // disable devtools blocker
       $.window._0x5b50b7 = null;
 
-      const node = await getAmbiguousForm('div[id] + div[id] > style', (node) => {
-        return node.parentElement;
-      });
+      let node = null;
+      while (!node) {
+        await _.wait(500);
+        node = $.$('button[name="next"]');
+        console.info(node);
+      }
+      node.click();
+      node.click();
       node.click();
     },
   });
