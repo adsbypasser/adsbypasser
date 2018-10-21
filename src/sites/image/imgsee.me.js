@@ -89,7 +89,6 @@
       while (!node) {
         await _.wait(500);
         node = $.$('button[name="next"]');
-        console.info(node);
       }
       node.click();
       node.click();
