@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * fastpic.ru
 * added
 * removed
 
