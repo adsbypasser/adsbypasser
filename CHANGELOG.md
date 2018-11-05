@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * shtlink.co
 * removed
 
 ## v6.22.0
