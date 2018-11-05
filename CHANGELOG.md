@@ -3,6 +3,7 @@
 * fixed
 * added
     * shtlink.co
+    * won.pe
 * removed
 
 ## v6.22.0
