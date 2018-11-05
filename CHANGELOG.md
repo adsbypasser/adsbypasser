@@ -2,6 +2,7 @@
 
 * fixed
     * fastpic.ru
+    * oturl.com
 * added
 * removed
 
