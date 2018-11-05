@@ -725,6 +725,7 @@
     * screenlist.ru
     * shrink-service.it
     * sht.io
+    * shtlink.co
     * similarsites.com
     * spaste.com
     * st.wardhanime.net
@@ -753,5 +754,6 @@
     * viidii.info
     * vir.al
     * vzturl.com
+    * won.pe
     * yep.it
     * yooclick.com
