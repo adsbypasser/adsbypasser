@@ -1,4 +1,4 @@
-## TBA
+## v6.23.0
 
 * fixed
     * fastpic.ru
@@ -6,7 +6,6 @@
 * added
     * shtlink.co
     * won.pe
-* removed
 
 ## v6.22.0
 
