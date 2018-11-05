@@ -1,6 +1,8 @@
 ## TBA
 
 * fixed
+    * fastpic.ru
+    * oturl.com
 * added
     * shtlink.co
     * won.pe
