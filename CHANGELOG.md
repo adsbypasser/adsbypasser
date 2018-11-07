@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * clk.icu
 * removed
 
 ## v6.23.0
