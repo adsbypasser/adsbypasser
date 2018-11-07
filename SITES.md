@@ -400,6 +400,7 @@
     * by6dk.com
     * cashat.net
     * clik.pw
+    * clk.icu
     * clk.press
     * clk.sh
     * cll.press
