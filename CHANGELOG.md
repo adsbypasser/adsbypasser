@@ -4,6 +4,7 @@
 * added
     * 1ink.info
     * clk.icu
+    * healthtod.com
 * removed
 
 ## v6.23.0
