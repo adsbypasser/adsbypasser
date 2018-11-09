@@ -295,6 +295,7 @@
     * gameinfo.pw
     * getinfos.net
     * gtaind.com
+    * healthtod.com
     * henpoi.lompat.in
     * hexafile.net
     * id-securelink.xyz
