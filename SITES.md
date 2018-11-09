@@ -596,6 +596,7 @@
     * 1be.biz
     * 1dl.biz
     * 1ink.cc
+    * 1ink.info
     * 1pics.ru
     * 1tiny.net
     * 4fun.tw
