@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * 1ink.info
     * clk.icu
 * removed
 
