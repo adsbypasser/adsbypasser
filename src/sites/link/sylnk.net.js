@@ -61,6 +61,7 @@ _.register({
         /^plantaheim\.web\.id$/,
         /^davinsurance\.com$/,
         /^naturalhealthy\.xyz$/,
+        /^healthtod\.com$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
