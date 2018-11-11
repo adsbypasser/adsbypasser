@@ -1,12 +1,10 @@
-## TBA
+## v6.24.0
 
-* fixed
 * added
     * 1ink.info
     * clk.icu
     * healthtod.com
     * shortly.xyz
-* removed
 
 ## v6.23.0
 
