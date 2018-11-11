@@ -87,6 +87,17 @@
 
   _.register({
     rule: {
+      host: /^www\.shortly\.xyz$/,
+      path: /^\/link$/,
+    },
+    async ready () {
+      const handler = new ShortlyHandler();
+      await handler.call();
+    },
+  });
+
+  _.register({
+    rule: {
       host: [
         // com
         /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro)\.com$/,
@@ -344,6 +355,40 @@
       throw new _.AdsBypasserError('wrong data');
     }
 
+  }
+
+  class ShortlyHandler extends AbstractHandler {
+
+    constructor() {
+      super();
+    }
+
+    prepare () {
+      return true;
+    }
+
+    async getMiddleware () {
+      // the id has been hidden, find it from links
+      let a = $('#myModal .btn-primary');
+      a = a.pathname.match(/^\/r\/(.+)/);
+      return a[1];
+    }
+
+    withoutMiddleware () {
+      _.info('no page');
+    }
+
+    async getURL (id) {
+      while (true) {
+        const url = await $.post('getlink.php', {
+          id,
+        });
+        if (url) {
+          return url;
+        }
+        await _.wait(500);
+      }
+    }
   }
 
 
