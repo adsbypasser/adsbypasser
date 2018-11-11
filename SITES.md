@@ -489,6 +489,7 @@
     * shortad.cf
     * shortglobal.com
     * shortit.ca
+    * shortly.xyz
     * shrinkearn.com
     * shrt10.com
     * shrten.xyz
