@@ -98,7 +98,10 @@
 
   _.register({
     rule: {
-      host: /^imgfiles\.org$/,
+      host: [
+        /^imgfiles\.org$/,
+        /^picbaron\.com$/,
+      ],
       path: PATH_RULE,
     },
     async ready () {
