@@ -261,6 +261,7 @@
     * imgve.com
     * imgview.pw
     * pic-maniac.com
+    * picbaron.com
     * uimgshare.com
     * uploadrr.com
 * picexposed.com
@@ -393,6 +394,7 @@
     * adskipme.com
     * adslink.pw
     * adsrt.com
+    * adsrt.me
     * adsvy.com
     * adurl.id
     * adzurl.cf
@@ -411,29 +413,31 @@
     * crus.io
     * cuon.io
     * curs.io
+    * cut-earn.com
+    * cut-urls.com
+    * cut-w.in
+    * cut-win.com
     * cut4link.com
     * cut4links.com
     * cutearn.ca
-    * cut-earn.com
     * cutl.in
     * cutpaid.com
     * cutsouf.com
-    * cut-urls.com
-    * cut-w.in
     * cutwi.in
     * cutwin.com
-    * cut-win.com
     * dmus.in
     * dz4link.com
     * dzurl.ml
-    * earnbig.ca
+    * e2s.cc
     * earn-guide.com
     * earn-url.com
+    * earnbig.ca
     * eklink.net
     * foxurl.net
     * getlink.pw
     * gg-l.xyz
     * git.tc
+    * glory-link.com
     * gocitlink
     * gram.im
     * icutit.ca
@@ -448,6 +452,7 @@
     * l2s.io
     * licklink.net
     * linclik.com
+    * link-zero.com
     * link4.me
     * link4win.com
     * link4win.net
@@ -457,7 +462,6 @@
     * linkrex.net
     * linksad.net
     * linkvip.tk
-    * link-zero.com
     * loadurl.com
     * lopte.pro
     * lyon.kim
@@ -498,6 +502,7 @@
     * simaholina.xyz
     * skips.link
     * spamlink.org
+    * stfly.press
     * taive.in
     * tiny.ec
     * tinylinks.net
@@ -532,6 +537,7 @@
     * za.gl
     * zeiz.me
     * zlshorte.net
+    * zutrox.link
 * gsurl.me
     * g5u.pw
     * getsl.me
