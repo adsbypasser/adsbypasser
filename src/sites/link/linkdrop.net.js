@@ -58,6 +58,7 @@
         /^e2s\.cc$/,
         /^lyon\.kim$/,
         /^linkvip\.tk$/,
+        /^stfly\.press$/,
       ],
     },
     async ready () {
