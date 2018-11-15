@@ -35,7 +35,7 @@
         /^(link4win|linksad|topurl)\.net$/,
         // else
         /^(trlink|wolink|tocdo|megaurl)\.in$/,
-        /^(petty|skips|tr)\.link$/,
+        /^(petty|skips|tr|zutrox)\.link$/,
         /^idsly\.(com|bid)$/,
         /^(adbilty|adpop|payskip|wicr|ujv|tpx)\.me$/,
         /^wi\.cr$/,
