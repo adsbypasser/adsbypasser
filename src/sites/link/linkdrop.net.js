@@ -55,6 +55,7 @@
         /^(www\.)?pnd\.tl$/,
         /^(tny|tiny)\.ec$/,
         /^tl\.tc$/,
+        /^e2s\.cc$/,
         /^lyon\.kim$/,
         /^linkvip\.tk$/,
       ],
