@@ -48,6 +48,7 @@
         /^short\.pe$/,
         /^urlcloud\.us$/,
         /^(123link|clik|tokenfly|getlink|psl)\.pw$/,
+        /^(www\.)?lwt\.pw$/,
         /^(icutit|earnbig|cutearn)\.ca$/,
         /^adzurl\.cf$/,
         /^koylinks\.win$/,
