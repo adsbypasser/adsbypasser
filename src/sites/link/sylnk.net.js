@@ -89,6 +89,7 @@ _.register({
         // safelinkconverter2.com
         // link.safelinkconverter.com
         // decrypt.safelinkconverter.com
+        // decrypt2.safelinkconverter.com
         /(^|\.)safelinkconverter2?\.com$/,
         // safelinkreview.com
         // safelinksreview.com
