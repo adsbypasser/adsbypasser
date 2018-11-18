@@ -287,6 +287,7 @@
     * compul.in
     * davinsurance.com
     * decrypt.safelinkconverter.com
+    * decrypt2.safelinkconverter.com
     * designmyhomee.com
     * drivefiles.bid
     * drive.jepitkertas.com
