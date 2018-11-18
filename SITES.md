@@ -465,6 +465,7 @@
     * linkvip.tk
     * loadurl.com
     * lopte.pro
+    * lwt.pw
     * lyon.kim
     * man2pro.com
     * megaurl.in
