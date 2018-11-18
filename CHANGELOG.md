@@ -2,12 +2,13 @@
 
 * fixed
 * added
-    * zutrox.link
-    * glory-link.com
     * adsrt.me
     * e2s.cc
-    * stfly.press
+    * glory-link.com
+    * lwt.pw
     * picbaron.com
+    * stfly.press
+    * zutrox.link
 * removed
 
 ## v6.24.0
