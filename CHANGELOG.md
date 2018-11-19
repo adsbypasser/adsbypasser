@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * 22pixx.xyz
 * added
     * adsrt.me
     * e2s.cc
