@@ -154,7 +154,7 @@
       host: /^imgprime\.com$/,
       path: /^\/imga-u\/(.+)\.jpeg\.html/,
     },
-    async ready () {
+    async start () {
       const path = window.location.href.replace('/imga-u', '/u').replace('.html', '');
       await $.openLink(path);
     },
@@ -165,7 +165,7 @@
       host: /^22pixx\.xyz$/,
       path: /^\/ia-[io]\/(.+)\.jpeg\.html/,
     },
-    async ready () {
+    async start () {
       const path = window.location.href.replace('/ia-', '/').replace('.html', '');
       await $.openLink(path);
     },
@@ -176,7 +176,7 @@
       host: /^22pixx\.xyz$/,
       path: /^\/x-i\/(.+)\.jpeg\.html/,
     },
-    async ready () {
+    async start () {
       const path = window.location.href.replace('/x', '/y');
       await $.openLink(path);
     },
