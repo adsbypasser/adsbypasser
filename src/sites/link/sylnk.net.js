@@ -281,3 +281,29 @@ _.register({
     await $.openLink(l.href);
   },
 });
+
+_.register({
+  rule: {
+    host: /^daunshorte\.teknologilink\.com$/,
+    path: /^\/linkshortelink\/safelink\.php$/,
+  },
+  async ready () {
+    const l = $('div.article > div:nth-child(1) > center > a');
+    await $.openLink(l.href, {
+      referer: false,
+    });
+  },
+});
+
+_.register({
+  rule: {
+    host: /^teknosafe\.teknologilink\.com$/,
+    path: /^\/linkteknolink\/safelinkscript\.php$/,
+  },
+  async ready () {
+    const l = $('#templatemo_content > div:nth-child(4) > a:nth-child(4)');
+    await $.openLink(l.href, {
+      referer: false,
+    });
+  },
+});
