@@ -1,4 +1,4 @@
-## TBA
+## v6.25.0
 
 * fixed
     * 22pixx.xyz
