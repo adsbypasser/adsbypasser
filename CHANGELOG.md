@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * spacetica.com
 * added
 * removed
 
