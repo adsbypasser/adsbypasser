@@ -2,6 +2,7 @@
 
 * fixed
     * 22pixx.xyz
+    * spacetica.com
 * added
     * adsrt.me
     * e2s.cc
