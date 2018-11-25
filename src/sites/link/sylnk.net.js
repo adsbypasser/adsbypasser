@@ -276,7 +276,7 @@ _.register({
     path: /^\/\w+$/,
   },
   async ready () {
-    const l = $('p > b > a');
+    const l = $('.btn');
     await $.openLink(l.href);
   },
 });
