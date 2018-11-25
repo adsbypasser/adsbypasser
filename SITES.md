@@ -338,6 +338,7 @@
     * srelink.com
     * sweetlantern.com
     * sylnk.net
+    * teknologilink.com
     * telolet.in
     * tetew.info
     * tojros.tk
