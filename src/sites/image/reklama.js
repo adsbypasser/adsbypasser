@@ -163,25 +163,14 @@
   _.register({
     rule: {
       host: /^22pixx\.xyz$/,
-      path: /^\/ia-i\/(.+)\.jpeg\.html/,
+      path: /^\/ia-[io]\/(.+)\.jpeg\.html/,
     },
     async ready () {
-      const path = window.location.href.replace('/ia-i', '/i').replace('.html', '');
+      const path = window.location.href.replace('/ia-', '/').replace('.html', '');
       await $.openLink(path);
     },
   });
 
-  _.register({
-    rule: {
-      host: /^22pixx\.xyz$/,
-      path: /^\/ia-o\/(.+)\.jpeg\.html/,
-    },
-    async ready () {
-      const path = window.location.href.replace('/ia-o', '/o').replace('.html', '');
-      await $.openLink(path);
-    },
-  });
-  
   _.register({
     rule: {
       host: /^22pixx\.xyz$/,
