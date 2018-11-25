@@ -6,6 +6,7 @@
     * adsrt.me
     * e2s.cc
     * glory-link.com
+    * idnation.net
     * lwt.pw
     * picbaron.com
     * stfly.press
