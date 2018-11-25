@@ -9,6 +9,7 @@
     * lwt.pw
     * picbaron.com
     * stfly.press
+    * teknologilink.com
     * zutrox.link
 * removed
 
