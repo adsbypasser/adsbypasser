@@ -307,3 +307,14 @@ _.register({
     });
   },
 });
+
+_.register({
+  rule: {
+    host: /^idnation\.net$/,
+    query: /^\?page=/,
+  },
+  async ready () {
+    const l = $('#linko');
+    await $.openLink(l.href);
+  },
+});
