@@ -1,3 +1,10 @@
+## TBA
+
+* fixed
+* added
+* removed
+
+
 ## v6.25.0
 
 * fixed
@@ -13,7 +20,6 @@
     * stfly.press
     * teknologilink.com
     * zutrox.link
-* removed
 
 ## v6.24.0
 
