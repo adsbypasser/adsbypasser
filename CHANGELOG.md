@@ -2,8 +2,10 @@
 
 * fixed
 * added
+    * awsubsco.ml
+    * irisvera.com
+    * plantaheim.com
 * removed
-
 
 ## v6.25.0
 
