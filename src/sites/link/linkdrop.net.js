@@ -44,7 +44,7 @@
         /^(shink|shrten|gg-l|vnurl)\.xyz$/,
         /^mlink\.club$/,
         /^(igram|gram)\.im$/,
-        /^(clk|cll)\.(press|sh|icu)$/,
+        /^(clk|cll)\.(press|ink|sh|icu)$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
         /^(123link|clik|tokenfly|getlink|psl)\.pw$/,
