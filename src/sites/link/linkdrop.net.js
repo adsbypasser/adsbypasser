@@ -47,7 +47,7 @@
         /^(clk|cll)\.(press|ink|sh|icu)$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
-        /^(123link|clik|tokenfly|getlink|psl)\.pw$/,
+        /^(123link|clik|tokenfly|getlink|psl|pss)\.pw$/,
         /^(www\.)?lwt\.pw$/,
         /^(icutit|earnbig|cutearn)\.ca$/,
         /^adzurl\.cf$/,
