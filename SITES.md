@@ -410,6 +410,7 @@
     * cashat.net
     * clik.pw
     * clk.icu
+    * clk.ink
     * clk.press
     * clk.sh
     * cll.press
@@ -417,6 +418,7 @@
     * converthinks.xyz
     * coshink.co
     * crus.io
+    * cuio.io
     * cuon.io
     * curs.io
     * cut-earn.com
@@ -489,6 +491,7 @@
     * pnd.tl
     * premiumzen.com
     * psl.pw
+    * pss.pw
     * raolink.com
     * royurls.bid
     * safelinku.net
