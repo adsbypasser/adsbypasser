@@ -3,8 +3,11 @@
 * fixed
 * added
     * awsubsco.ml
+    * clk.ink
+    * cuio.io
     * irisvera.com
     * plantaheim.com
+    * pss.pw
 * removed
 
 ## v6.25.0
