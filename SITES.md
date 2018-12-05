@@ -566,6 +566,7 @@
     * oload.cc
     * oload.cloud
     * oload.download
+    * oload.fun
     * oload.info
     * oload.site
     * oload.stream
