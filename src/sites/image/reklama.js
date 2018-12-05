@@ -82,13 +82,7 @@
   // TODO need to refactor the cookie rule
   _.register({
     rule: {
-<<<<<<< HEAD
-      host: [
-        /^(www\.)?imgfresh\.info$/,
-      ],
-=======
       host: /^(www\.)?imgfresh\.info$/,
->>>>>>> pr/3
       path: /^\/img-.*\.html$/,
     },
     async ready () {
@@ -135,7 +129,6 @@
       },
       {
         host: [
-          /^img(kings|prime)\.com$/,
           /^imgkings\.com$/,
           /^imagerar\.com$/,
         ],
@@ -237,11 +230,7 @@
     rule: {
       host: [
         /^(www\.)?imgdrive\.net$/,
-<<<<<<< HEAD
-        /^(www\.)?img(taxi|wallet|adult)\.com$/,
-=======
         /^(www\.)?(imgtaxi|imgwallet|imgadult)\.com$/,
->>>>>>> pr/3
       ],
       path: /^\/img-.*\.html$/,
     },
