@@ -6,6 +6,7 @@
     * clk.ink
     * cuio.io
     * irisvera.com
+    * oload.fun
     * plantaheim.com
     * pss.pw
 * removed
