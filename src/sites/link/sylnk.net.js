@@ -19,7 +19,8 @@ _.register({
         /^ww[23]\.picnictrans\.com$/,
         /^(azhie|skinnycat)\.net$/,
         /^ww2\.awsubs\.co$/,
-        /^plantaheim\.web\.id$/,
+        /^plantaheim(\.web\.id|\.com)$/,
+        /^irisvera\.com$/,
       ],
       query: /^\?d=([a-zA-Z0-9/=]+)$/,
     },
@@ -58,10 +59,11 @@ _.register({
       host: [
         /^sehatlega\.com$/,
         /^businessforyouand\.me$/,
-        /^plantaheim\.web\.id$/,
+        /^plantaheim(\.web\.id|\.com)$/,
         /^davinsurance\.com$/,
         /^naturalhealthy\.xyz$/,
         /^healthtod\.com$/,
+        /^irisvera\.com$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
@@ -96,6 +98,7 @@ _.register({
         // safelinkreviewer.com
         // safelinkreview.co
         /^safelink(s?review(er)?)\.com?$/,
+        /^awsubsco\.ml$/,
       ],
       query: /id=([\w\\]+=*)/,
     },

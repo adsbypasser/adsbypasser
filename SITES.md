@@ -279,6 +279,7 @@
     * autolinkach.com
     * autoride.pw
     * awcar.icu
+    * awsubsco.ml
     * azhie.net
     * blogspot.com
     * bolaoke.club
@@ -304,6 +305,7 @@
     * idnation.net
     * indexmovie.club
     * intercelestial.com
+    * irisvera.com
     * kakkoiisafe.us
     * kombatch.loncat.pw
     * kurosafe.menantisenja.com
@@ -320,6 +322,7 @@
     * naisho.lompat.in
     * naturalhealthy.xyz
     * njiir.com
+    * plantaheim.com
     * plantaheim.web.id
     * safelinkconverter.com
     * safelinkconverter2.com
@@ -407,6 +410,7 @@
     * cashat.net
     * clik.pw
     * clk.icu
+    * clk.ink
     * clk.press
     * clk.sh
     * cll.press
@@ -414,6 +418,7 @@
     * converthinks.xyz
     * coshink.co
     * crus.io
+    * cuio.io
     * cuon.io
     * curs.io
     * cut-earn.com
@@ -486,6 +491,7 @@
     * pnd.tl
     * premiumzen.com
     * psl.pw
+    * pss.pw
     * raolink.com
     * royurls.bid
     * safelinku.net
