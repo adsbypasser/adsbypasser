@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^gsurl\.(me|in)$/,
-      /^(gsul|getsl)\.me$/,
+      /^(gsul|getsl|glinks)\.me$/,
       /^gsur\.in$/,
       /^g5u\.pw$/,
       /^gurl\.ly$/,
@@ -12,7 +12,6 @@ _.register({
     $.remove('#container');
 
     const a = $('#link');
-    await _.wait(5000);
-    await $.openLink(a.href);
+    await $.openLink(`${a.href}&ab=${$.window.x}`);
   },
 });

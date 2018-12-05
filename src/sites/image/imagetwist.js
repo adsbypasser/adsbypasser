@@ -1,26 +1,21 @@
 (function () {
 
   _.register({
-    rule: {
-      host: /^imagenpic\.com$/,
-      path: /^\/.*\/.+\.html?$/,
-    },
+    rule: [
+      {
+        host: /^imagenpic\.com$/,
+        path: /^\/.*\/.+\.html?$/,
+      },
+      {
+        host: /^imagetwist\.com$/,
+      },
+    ],
     ready: _.partial(run, true),
   });
 
   _.register({
     rule: {
-      host: /^imagecherry\.com$/,
-    },
-    ready: _.partial(run, true),
-  });
-
-  _.register({
-    rule: {
-      host: [
-        /^imagetwist\.com$/,
-        /^imagexport\.com$/,
-      ],
+      host: /^(imagexport|imageshimage)\.com$/,
     },
     ready: _.partial(run, false),
   });

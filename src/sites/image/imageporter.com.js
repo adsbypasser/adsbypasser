@@ -2,7 +2,7 @@
 
   _.register({
     rule: {
-      host: /^www\.imageporter\.com$/,
+      host: /^(www\.)?imageporter\.com$/,
       path: /^\/\w{12}\/.*\.html$/,
     },
     ready: run,
@@ -10,7 +10,12 @@
 
   _.register({
     rule: {
-      host: /^(www\.)?(image(carry|dunk|porter|switch)|pic(leet|turedip|tureturn)|imgspice)\.com|(piclambo|yankoimages)\.net$/,
+      host: [
+        /^(www\.)?(imagecarry|imagedunk|imageporter|imageswitch)\.com$/,
+        /^(www\.)?(picleet|picturedip|pictureturn)\.com$/,
+        /^(www\.)?imgspice\.com$/,
+        /^(www\.)?(piclambo|yankoimages)\.net$/,
+      ],
     },
     ready: run,
   });

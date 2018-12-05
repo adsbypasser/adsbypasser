@@ -17,14 +17,17 @@
       query: /url=([^&]+)/,
     },
     async start (m) {
+      // reset cookies
       $.resetCookies();
+      $.setCookie('FLYSESSID', generateRandomSessionCookie(40));
+
       const url = decodeURIComponent(m.query[1]);
       if (url.match(/^http/)) {
         // absolute path
         await $.openLink(url);
       } else {
-        // related path
-        await $.openLink('/' + url);
+        // cannot rely on url
+        await $.openLink(document.referrer);
       }
     },
   });
@@ -46,75 +49,31 @@
       $.window.document.write = _.nop;
       // break anti-adblock script
       $.window.btoa = _.nop;
-
-      await waitDocumentHead();
-      const token = await waitToken();
-      const url = decodeToken(token);
-      await $.openLink(url);
     },
     async ready () {
-      // check if this is ad page
-      const h = $.$('#main_html'), b = $.$('#home');
-      if (!h || !b || h.nodeName !== 'HTML' || b.nodeName !== 'BODY') {
-        // this is not a ad page
-        return;
-      }
-
       $.remove('iframe');
-
-      // disable cookie check
-      $.window.cookieCheck = _.nop;
-
-      let token = getTokenFromRocketScript();
-      if (!token) {
-        token = $('#adfly_bar');
-        $.window.close_bar();
-        return;
-      }
-      token = decodeToken(token);
-      await $.openLink(token);
+      // cheat the session
+      $.setCookie('FLYSESSID', generateRandomSessionCookie(40));
+      let rv = await $.get(location.href, '', {
+        'Origin': _.none,
+        'Referer': _.none,
+        'X-Requested-With': _.none,
+      });
+      rv = $.toDOM(rv);
+      rv = $.searchFromScripts(/var ysmm = '([^']+)'/, rv);
+      rv = rv[1];
+      rv = decodeToken(rv);
+      await $.openLink(rv);
     },
   });
 
 
-  function waitToken () {
-    return new Promise((resolve) => {
-      const o = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          _.forEach(mutation.addedNodes, (node) => {
-            if (node.localName === 'script') {
-              const m = node.textContent.match(/var ysmm = '([^']+)'/);
-              if (m) {
-                o.disconnect();
-                resolve(m[1]);
-              }
-            }
-          });
-        });
-      });
-      o.observe(document.head, {
-        childList: true,
-      });
-    });
-  }
-
-
-  function waitDocumentHead () {
-    return new Promise((resolve) => {
-      if (document.head) {
-        resolve();
-        return;
-      }
-      const o = new MutationObserver(() => {
-        if (document.head) {
-          o.disconnect();
-          resolve();
-        }
-      });
-      o.observe(document.documentElement, {
-        childList: true,
-      });
-    });
+  function generateRandomSessionCookie (length) {
+    const rv = [];
+    for (let i = 0; i < length; ++i) {
+      rv.push(Math.random().toString(36).charAt(2));
+    }
+    return rv.join('');
   }
 
 
@@ -153,12 +112,6 @@
       token += location.hash;
     }
     return token;
-  }
-
-
-  function getTokenFromRocketScript () {
-    const a = $.searchFromScripts(/const eu = '(?!false)(.*)'/);
-    return a ? a[1] : null;
   }
 
 })();

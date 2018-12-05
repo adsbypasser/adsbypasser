@@ -21,8 +21,7 @@ _.register({
   rule: {
     host: [
       /^www\.pics-money\.ru$/,
-      /^picker-click\.ru$/,
-      /^p0xpicmoney\.ru$/,
+      /^(picker-click|p0xpicmoney)\.ru$/,
     ],
   },
   async ready () {

@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^(www\.)?pixroute\.com$/
+    host: /^(www\.)?pixroute\.com$/,
   },
   async ready () {
     // the img ID is a random string

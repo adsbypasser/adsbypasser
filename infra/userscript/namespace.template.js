@@ -41,6 +41,7 @@ import {
   warn,
 } from 'util/logger';
 import {
+  evil,
   generateRandomIP,
   nuke,
   removeAllTimer,
@@ -52,6 +53,7 @@ import {
 
 const _ = {
   AdsBypasserError,
+  evil,
   find,
   forEach,
   generateRandomIP,

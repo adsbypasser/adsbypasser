@@ -29,7 +29,7 @@
     let a = encoded.match(/^\s*;eval\((.+)\);\s*$/);
     a = a[1];
     const b = a.match(/^(.+)\('([^']+)','([^']+)','([^']+)','([^']+)'\)$/);
-    const c = eval('(' + b[1] + ')');
+    const c = _.evil(`(${b[1]})`);
     return c(b[2], b[3], b[4], b[5]);
   }
 

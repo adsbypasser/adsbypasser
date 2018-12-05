@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^link(4ad|ajc)\.com$/,
+    host: /^link4ad\.com$/,
     path: /^\/(.+)$/,
   },
   async ready (m) {

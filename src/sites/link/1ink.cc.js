@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^1ink\.cc$/,
+    host: /^1ink\.(cc|info)$/,
     path: /^\/\w+$/,
   },
   async ready () {

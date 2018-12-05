@@ -1,12 +1,12 @@
 (function () {
 
   const hostRules = [
+    // com
+    /^(jnw0|cllkme|clkmein|corneey|ceesty)\.com$/,
+    /^(destyy|festyy|gestyy)\.com$/,
+    // else
     /^sh\.st$/,
-    /^(dh10thbvu|u2ks|jnw0|qaafa|xiw34|cllkme|clkmein|corneey|ceesty)\.com$/,
-    /^[dfg]estyy\.com$/,
-    /^digg\.to$/,
-    /^([vw]iid|clkme)\.me$/,
-    /^short\.est$/,
+    /^(viid|wiid|clkme)\.me$/,
   ];
 
   _.register({

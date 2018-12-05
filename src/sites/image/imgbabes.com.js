@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^www\.img(babes|flare)\.com$/,
+    host: /^www\.(imgbabes|imgflare)\.com$/,
   },
   async ready () {
     let i = $.$('input[onclick]');

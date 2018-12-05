@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^(qrrro|greenpiccs)\.com$/,
+    host: /^qrrro\.com$/,
     path: /^(\/images\/.+)\.html$/,
   },
   async start (m) {

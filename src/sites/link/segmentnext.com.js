@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^segmentnext\.com$/,
-      /^(www\.)?videogamesblogger.com$/,
+      /^(www\.)?videogamesblogger\.com$/,
     ],
     path: /^\/interstitial\.html$/,
     query: /return_url=([^&]+)/,

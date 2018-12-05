@@ -1,7 +1,10 @@
 _.register({
   rule: {
-    host: /^(?:(\w+)\.)?(coinurl\.com|cur\.lv)$/,
-    path: /^\/([-\w]+)$/
+    host: [
+      /^(?:(\w+)\.)?coinurl\.com$/,
+      /^(?:(\w+)\.)?cur\.lv$/,
+    ],
+    path: /^\/([-\w]+)$/,
   },
   async ready (m) {
     $.remove('iframe');

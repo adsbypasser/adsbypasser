@@ -17,7 +17,11 @@ async function main () {
   console.info(`Server running at http://${HOST}:${PORT}/`);
 
   while (true) {
-    await fastBuild();
+    try {
+      await fastBuild();
+    } catch (e) {
+      console.error(e);
+    }
     await wait(5000);
   }
 }

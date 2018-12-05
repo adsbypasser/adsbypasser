@@ -27,6 +27,10 @@ rules:
     - error
   prefer-const:
     - error
+  no-eval:
+    - error
+  no-implied-eval:
+    - error
 globals:
   _: false
   $: false

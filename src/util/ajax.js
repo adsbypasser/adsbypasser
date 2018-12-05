@@ -7,6 +7,9 @@ import {
 import {
   GMAPI,
 } from 'util/platform';
+import {
+  debug,
+} from 'util/logger';
 
 
 class AjaxError extends AdsBypasserError {
@@ -92,6 +95,8 @@ function toQuery (data) {
 
 
 function ajax (method, url, data, headers) {
+  debug('ajax', method, url, data, headers);
+
   // Host is not always the same as window.location.host, for example
   // foo.example.org can perform a request to example.org
   const l = document.createElement('a');

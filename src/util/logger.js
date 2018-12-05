@@ -24,6 +24,11 @@ function log (method, args) {
 }
 
 
+function debug () {
+  log('debug', arguments);
+}
+
+
 function info () {
   log('info', arguments);
 }
@@ -35,6 +40,7 @@ function warn () {
 
 
 export {
+  debug,
   info,
   warn,
 };

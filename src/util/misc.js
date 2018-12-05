@@ -41,8 +41,31 @@ function generateRandomIP () {
 }
 
 
+// This is not typo, I mean it. A naive approach though, patch is welcome.
+function evil (script) {
+  /* eslint-disable no-unused-vars */
+  return ((
+    GM,
+    GM_deleteValue,
+    GM_getResourceURL,
+    GM_getValue,
+    GM_openInTab,
+    GM_registerMenuCommand,
+    GM_setValue,
+    GM_xmlhttpRequest,
+    unsafeWindow,
+    window,
+  ) => {
+    // eslint-disable-next-line no-eval
+    return eval(script);
+  })();
+  /* eslint-enable no-unused-vars */
+}
+
+
 export {
   removeAllTimer,
   nuke,
   generateRandomIP,
+  evil,
 };

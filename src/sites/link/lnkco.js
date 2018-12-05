@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^(rd?)lnk\.co|reducelnk\.com$/,
+    host: /^(rd?)lnk\.co$/,
     path: /^\/[^.]+$/,
   },
   async ready () {

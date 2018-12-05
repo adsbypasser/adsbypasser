@@ -17,11 +17,13 @@ function getUnsafeWindow () {
     w = unsafeWindow;
   } catch (e) {
     try {
+      // eslint-disable-next-line no-eval
       w = (0, eval)('this').global;
     } catch (e) {
       // eslint-disable-next-line no-empty
     }
   }
+  // eslint-disable-next-line no-eval
   return w ? w : (0, eval)('this').window;
 }
 
