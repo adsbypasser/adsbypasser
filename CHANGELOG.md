@@ -1,4 +1,4 @@
-## TBA
+## v6.26.0
 
 * fixed
     * imgfile.net
