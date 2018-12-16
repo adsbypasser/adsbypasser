@@ -244,24 +244,26 @@
   async function action (firstSelector, secondSelector) {
     $.remove('iframe, #adblock_detect, .popupOverlay');
 
-    const node = $.$(firstSelector);
+    let node = $.$(firstSelector);
     if (node) {
-      // first pass
-      await _.wait(500);
-      node.removeAttribute('disabled');
-      await _.wait(500);
-      // HACK some sites can not receive the click event without focus
-      node.focus();
-      // HACK some sites needs to click multiple times
-      node.click();
-      node.click();
+      node = findFirstForm(node);
+      // clone the form and replace it to body to strip events
+      document.body.innerHTML = node.outerHTML;
+      node = $('form input');
       node.click();
       return;
     }
 
     // second pass
-    const i = $(secondSelector);
-    await $.openImage(i.src);
+    node = $(secondSelector);
+    await $.openImage(node.src);
+  }
+
+  function findFirstForm (child) {
+    while (child && child.localName !== 'form') {
+      child = child.parentElement;
+    }
+    return child;
   }
 
 })();
