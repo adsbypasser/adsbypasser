@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+* added
+* removed
+
 ## v6.26.0
 
 * fixed
@@ -12,7 +18,6 @@
     * plantaheim.com
     * probusinesshub.com
     * pss.pw
-* removed
 
 ## v6.25.0
 
