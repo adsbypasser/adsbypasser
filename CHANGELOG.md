@@ -3,6 +3,7 @@
 * fixed
 * added
     * lonelymoon.net
+    * stt.awsubs.co
 * removed
 
 ## v6.26.0
