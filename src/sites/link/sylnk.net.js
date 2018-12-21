@@ -184,7 +184,6 @@ _.register({
         /^sehatsegar\.net$/,
         /^(autofans|landscapenature)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
-        /^stt\.awsubs\.co$/,
       ],
       query: /get=([^&]+)/,
     },
