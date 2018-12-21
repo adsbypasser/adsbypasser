@@ -341,6 +341,7 @@
     * speedcar.club
     * sports14.pw
     * srelink.com
+    * stt.awsubs.co
     * sweetlantern.com
     * sylnk.net
     * teknologilink.com
