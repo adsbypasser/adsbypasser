@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * lonelymoon.net
 * removed
 
 ## v6.26.0
