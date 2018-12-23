@@ -4,6 +4,7 @@
 * added
     * lonelymoon.net
     * skipurls.com
+    * smarteasystudy.com
     * stt.awsubs.co
 * removed
 
