@@ -463,6 +463,7 @@
     * licklink.net
     * linclik.com
     * link-zero.com
+    * link2link.cf
     * link4.me
     * link4win.com
     * link4win.net
