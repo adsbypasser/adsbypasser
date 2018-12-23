@@ -514,6 +514,7 @@
     * simaholina.xyz
     * skips.link
     * skipurls.com
+    * smarteasystudy.com
     * spamlink.org
     * stfly.press
     * taive.in
