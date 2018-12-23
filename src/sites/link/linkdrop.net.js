@@ -27,12 +27,15 @@
         /^(tmearn|payshorturl|urltips|shrinkearn|itiad|cutsouf)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link)\.com$/,
         /^(vy\.)?adsvy\.com$/,
-        /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme)\.com$/,
+        /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls)\.com$/,
         /^cutpaid\.com$/,
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
         /^(link4win|linksad|topurl)\.net$/,
+        // pw
+        /^(123link|clik|tokenfly|getlink|psl|pss)\.pw$/,
+        /^(www\.)?lwt\.pw$/,     
         // else
         /^(trlink|wolink|tocdo|megaurl)\.in$/,
         /^(petty|skips|tr|zutrox)\.link$/,
@@ -47,8 +50,6 @@
         /^(clk|cll)\.(press|ink|sh|icu)$/,
         /^short\.pe$/,
         /^urlcloud\.us$/,
-        /^(123link|clik|tokenfly|getlink|psl|pss)\.pw$/,
-        /^(www\.)?lwt\.pw$/,
         /^(icutit|earnbig|cutearn)\.ca$/,
         /^adzurl\.cf$/,
         /^koylinks\.win$/,
