@@ -51,7 +51,7 @@
         /^short\.pe$/,
         /^urlcloud\.us$/,
         /^(icutit|earnbig|cutearn)\.ca$/,
-        /^adzurl\.cf$/,
+        /^(adzurl|link2link)\.cf$/,
         /^koylinks\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
