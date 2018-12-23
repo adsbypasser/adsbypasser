@@ -513,6 +513,7 @@
     * shrtfly.net
     * simaholina.xyz
     * skips.link
+    * skipurls.com
     * spamlink.org
     * stfly.press
     * taive.in
