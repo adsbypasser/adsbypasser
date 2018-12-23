@@ -476,7 +476,6 @@
     * lyon.kim
     * man2pro.com
     * megaurl.in
-    * megaurl.link
     * met.bz
     * mikymoons.com
     * mitly.us
