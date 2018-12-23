@@ -4,6 +4,7 @@
 * added
     * link2link.cf
     * lonelymoon.net
+    * megaurl.link
     * skipurls.com
     * smarteasystudy.com
     * stt.awsubs.co
