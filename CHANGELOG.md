@@ -3,6 +3,7 @@
 * fixed
 * added
     * lonelymoon.net
+    * skipurls.com
     * stt.awsubs.co
 * removed
 
