@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * businessiss2.info
     * link2link.cf
     * lonelymoon.net
     * megaurl.link
