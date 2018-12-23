@@ -62,6 +62,7 @@
         /^lyon\.kim$/,
         /^linkvip\.tk$/,
         /^stfly\.press$/,
+        /^businessiss2\.info$/,
       ],
     },
     async ready () {
