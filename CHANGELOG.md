@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * link2link.cf
     * lonelymoon.net
     * skipurls.com
     * smarteasystudy.com
