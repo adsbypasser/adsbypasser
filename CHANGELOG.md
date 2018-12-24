@@ -1,4 +1,4 @@
-## TBA
+## v6.27.0
 
 * fixed
     * linkdrop.net
