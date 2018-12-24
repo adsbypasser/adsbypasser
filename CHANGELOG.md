@@ -11,7 +11,6 @@
     * skipurls.com
     * smarteasystudy.com
     * stt.awsubs.co
-* removed
 
 ## v6.26.0
 
