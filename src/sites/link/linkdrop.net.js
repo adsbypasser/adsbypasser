@@ -308,7 +308,7 @@
     }
 
     async getMiddleware () {
-      return await getJQueryForm('#mylink');
+      return await getJQueryForm('#mylink1');
     }
 
   }

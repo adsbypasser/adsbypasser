@@ -1,6 +1,8 @@
 ## TBA
 
 * fixed
+    * linkdrop.net
+    * 1be.biz
 * added
     * businessiss2.info
     * link2link.cf
