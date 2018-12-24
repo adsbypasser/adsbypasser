@@ -2,6 +2,7 @@
 
 * fixed
     * linkdrop.net
+    * 1be.biz
 * added
 * removed
 
