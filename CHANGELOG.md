@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * linkdrop.net
 * added
 * removed
 
