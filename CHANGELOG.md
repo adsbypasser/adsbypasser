@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * buy-in-599rs.win
 * removed
 
 ## v6.27.0
