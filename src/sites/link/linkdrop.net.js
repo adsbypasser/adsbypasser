@@ -53,7 +53,7 @@
         /^urlcloud\.us$/,
         /^(icutit|earnbig|cutearn)\.ca$/,
         /^(adzurl|link2link)\.cf$/,
-        /^koylinks\.win$/,
+        /^(koylinks|buy-in-599rs)\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
         /^(tny|tiny)\.ec$/,
