@@ -3,6 +3,7 @@
 * fixed
 * added
     * buy-in-599rs.win
+    * cyahealth.com
 * removed
 
 ## v6.27.0
