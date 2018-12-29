@@ -437,6 +437,7 @@
     * cutsouf.com
     * cutwi.in
     * cutwin.com
+    * cyahealth.com
     * dmus.in
     * dz4link.com
     * dzurl.ml
