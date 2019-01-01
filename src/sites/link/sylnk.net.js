@@ -92,8 +92,9 @@ _.register({
         // decrypt.safelinkconverter.com
         // decrypt2.safelinkconverter.com
         // safelinkreview.com
+        // safelinkreviewx.com
         // safelinkreview.co
-        /(^|\.)safelink(converter|review)\.com?$/,
+        /(^|\.)safelink(converter|reviewx?)\.com?$/,
         /^awsubsco\.ml$/,
       ],
       query: /id=([\w\\]+=*)/,
