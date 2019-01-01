@@ -88,16 +88,12 @@ _.register({
     {
       host: [
         // safelinkconverter.com
-        // safelinkconverter2.com
         // link.safelinkconverter.com
         // decrypt.safelinkconverter.com
         // decrypt2.safelinkconverter.com
-        /(^|\.)safelinkconverter2?\.com$/,
         // safelinkreview.com
-        // safelinksreview.com
-        // safelinkreviewer.com
         // safelinkreview.co
-        /^safelink(s?review(er)?)\.com?$/,
+        /(^|\.)safelink(converter|review)\.com?$/,
         /^awsubsco\.ml$/,
       ],
       query: /id=([\w\\]+=*)/,
