@@ -63,7 +63,6 @@
         /^linkvip\.tk$/,
         /^stfly\.press$/,
         /^businessiss2\.info$/,
-        /^linku\.us$/,
       ],
     },
     async ready () {
@@ -127,7 +126,7 @@
         /^shortad\.cf$/,
         /^123link\.(io|co|press|pro)$/,
         /^git\.tc$/,
-        /^adfu\.us$/,
+        /^(adfu|linku)\.us$/,
         /^shortit\.ca$/,
         /^spamlink\.org$/,
         /^royurls\.bid$/,
