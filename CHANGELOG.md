@@ -4,6 +4,7 @@
 * added
     * buy-in-599rs.win
     * cyahealth.com
+    * idsly.org
     * linku.us
 * removed
 
