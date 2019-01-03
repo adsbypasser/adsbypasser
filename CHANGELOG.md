@@ -4,6 +4,7 @@
 * added
     * buy-in-599rs.win
     * cyahealth.com
+    * linku.us
 * removed
 
 ## v6.27.0
