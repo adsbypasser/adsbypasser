@@ -476,6 +476,7 @@
     * linkfly.gaosmedia.com
     * linkrex.net
     * linksad.net
+    * linku.us
     * linkvip.tk
     * loadurl.com
     * lopte.pro
