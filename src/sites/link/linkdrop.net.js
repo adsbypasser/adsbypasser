@@ -128,7 +128,7 @@
         /^git\.tc$/,
         /^(adfu|linku)\.us$/,
         /^shortit\.ca$/,
-        /^spamlink\.org$/,
+        /^(spamlink|idsly)\.org$/,
         /^royurls\.bid$/,
         /^za\.gl$/,
       ],
