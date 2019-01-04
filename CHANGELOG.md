@@ -6,7 +6,11 @@
     * cyahealth.com
     * idsly.org
     * linku.us
+    * safelinkreviewx.com
 * removed
+    * safelinkconverter2.com
+    * safelinkreviewer.com
+    * safelinksreview.com
 
 ## v6.27.0
 
