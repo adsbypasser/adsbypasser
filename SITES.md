@@ -326,11 +326,9 @@
     * plantaheim.com
     * plantaheim.web.id
     * safelinkconverter.com
-    * safelinkconverter2.com
     * safelinkreview.co
     * safelinkreview.com
-    * safelinkreviewer.com
-    * safelinksreview.com
+    * safelinkreviewx.com
     * sehatlega.com
     * sehatsegar.net
     * short.awsubs.co
