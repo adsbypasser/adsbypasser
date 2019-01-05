@@ -1,7 +1,6 @@
 _.register({
   rule: {
     host: [
-      /^www\.pixsense\.net$/,
       /^www\.imagespicy\.site$/,
       /^www\.(imgsky|imgfile)\.net$/,
     ],
@@ -16,7 +15,6 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^www\.pixsense\.net$/,
       /^www\.imagespicy\.site$/,
       /^www\.(imgsky|imgfile)\.net$/,
     ],
