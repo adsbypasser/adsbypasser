@@ -444,6 +444,7 @@
     * earn-guide.com
     * earn-url.com
     * earnbig.ca
+    * eatings.stream
     * eklink.net
     * foxurl.net
     * getlink.pw
