@@ -8,6 +8,7 @@
     * linku.us
     * safelinkreviewx.com
 * removed
+    * pixsense.net
     * safelinkconverter2.com
     * safelinkreviewer.com
     * safelinksreview.com
