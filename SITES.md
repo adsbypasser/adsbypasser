@@ -593,7 +593,6 @@
     * imagespicy.site
     * imgfile.net
     * imgsky.net
-    * pixsense.net
 * pics-money.ru
     * p0xpicmoney.ru
     * picker-click.ru
