@@ -4,6 +4,7 @@
 * added
     * buy-in-599rs.win
     * cyahealth.com
+    * eatings.stream
     * idsly.org
     * linku.us
     * safelinkreviewx.com
