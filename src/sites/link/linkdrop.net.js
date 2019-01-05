@@ -63,6 +63,7 @@
         /^linkvip\.tk$/,
         /^stfly\.press$/,
         /^businessiss2\.info$/,
+        /^eatings\.stream$/,
       ],
     },
     async ready () {
