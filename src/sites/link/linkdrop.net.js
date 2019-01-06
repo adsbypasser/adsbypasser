@@ -44,7 +44,7 @@
         /^(adbilty|adpop|payskip|wicr|ujv|tpx|adsrt)\.me$/,
         /^wi\.cr$/,
         /^(oke|cuon|cuio|linktor|flylink)\.io$/,
-        /^(3bst|coinlink|itiurl|coshink)\.co$/,
+        /^(3bst|coinlink|itiurl|coshink|link5s)\.co$/,
         /^(shink|shrten|gg-l|vnurl)\.xyz$/,
         /^mlink\.club$/,
         /^(igram|gram)\.im$/,
