@@ -389,6 +389,7 @@
     * 3bst.co
     * 3rabcut.com
     * 4cut.io
+    * 8o.ee
     * adbilty.me
     * adbitly.in
     * adbull.me
@@ -472,6 +473,7 @@
     * link4.me
     * link4win.com
     * link4win.net
+    * link5s.co
     * linkdrop.net
     * linkexa.com
     * linkfly.gaosmedia.com
@@ -556,6 +558,8 @@
     * win4cut.com
     * wolink.in
     * worldhack.net
+    * xemlink.net
+    * z2i.com
     * za.gl
     * zeiz.me
     * zlshorte.net
