@@ -2,13 +2,17 @@
 
 * fixed
 * added
+    * 8o.ee
     * buy-in-599rs.win
     * cyahealth.com
     * eatings.stream
     * ershadat.com
     * idsly.org
+    * link5s.co
     * linku.us
     * safelinkreviewx.com
+    * xemlink.net
+    * z2i.com
 * removed
     * pixsense.net
     * safelinkconverter2.com
