@@ -64,6 +64,7 @@
         /^stfly\.press$/,
         /^businessiss2\.info$/,
         /^eatings\.stream$/,
+        /^8o\.ee$/,
       ],
     },
     async ready () {
