@@ -446,6 +446,7 @@
     * earnbig.ca
     * eatings.stream
     * eklink.net
+    * ershadat.com
     * foxurl.net
     * getlink.pw
     * gg-l.xyz
