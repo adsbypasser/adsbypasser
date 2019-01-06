@@ -7,7 +7,7 @@
         /^www\.(telondasmu|siotong|siherp)\.com$/,
         /^www\.greget\.space$/,
       ],
-      path: /^\/\w+$/,
+      path: /^\/.+$/,
     },
     async ready (m) {
       const mapper = hostMapper(m.host[0]);
