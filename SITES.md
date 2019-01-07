@@ -297,6 +297,7 @@
     * fmlawkers.club
     * gameinfo.pw
     * getinfos.net
+    * giga74.com
     * gtaind.com
     * healthtod.com
     * henpoi.lompat.in
@@ -508,6 +509,7 @@
     * royurls.bid
     * safelinku.net
     * shink.xyz
+    * shln.pw
     * short.pastewma.com
     * short.pe
     * short2win.com
