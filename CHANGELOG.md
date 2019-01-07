@@ -2,6 +2,8 @@
 
 * fixed
 * added
+    * giga74.com
+    * shln.pw
 * removed
 
 ## v6.28.0
