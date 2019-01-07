@@ -96,6 +96,7 @@ _.register({
         // safelinkreviewx.com
         // safelinkreview.co
         /(^|\.)safelink(converter|reviewx?)\.com?$/,
+        /^giga74\.com$/,
         /^awsubsco\.ml$/,
       ],
       query: /id=([\w\\]+=*)/,
