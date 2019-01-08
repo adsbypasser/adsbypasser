@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * cuee.io
     * giga74.com
     * shln.pw
 * removed
