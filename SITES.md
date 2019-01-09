@@ -488,6 +488,7 @@
     * lwt.pw
     * lyon.kim
     * man2pro.com
+    * marivelkece.xyz
     * megaurl.in
     * megaurl.link
     * met.bz
