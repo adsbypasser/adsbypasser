@@ -4,6 +4,7 @@
 * added
     * cuee.io
     * giga74.com
+    * marivelkece.xyz
     * shln.pw
 * removed
 
