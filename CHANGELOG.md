@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * win4cut.com
 * added
 * removed
 
