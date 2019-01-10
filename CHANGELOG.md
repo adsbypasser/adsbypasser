@@ -2,10 +2,14 @@
 
 * fixed
 * added
+    * blogginggyanbox.com
+    * buyitonline.store
     * cuee.io
+    * gifsis.com
     * giga74.com
     * marivelkece.xyz
     * shln.pw
+    * yourtechguider.com
 * removed
 
 ## v6.28.0
