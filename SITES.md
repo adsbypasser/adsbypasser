@@ -409,8 +409,10 @@
     * adzurl.cf
     * autech.xyz
     * bit-url.com
+    * blogginggyanbox.com
     * businessiss2.info
     * buy-in-599rs.win
+    * buyitonline.store
     * by6dk.com
     * cashat.net
     * clik.pw
@@ -453,6 +455,7 @@
     * foxurl.net
     * getlink.pw
     * gg-l.xyz
+    * gifsis.com
     * git.tc
     * glory-link.com
     * gocitlink
@@ -563,6 +566,7 @@
     * wolink.in
     * worldhack.net
     * xemlink.net
+    * yourtechguider.com
     * z2i.com
     * za.gl
     * zeiz.me
