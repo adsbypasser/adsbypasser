@@ -65,6 +65,7 @@
         /^businessiss2\.info$/,
         /^eatings\.stream$/,
         /^8o\.ee$/,
+        /^buyitonline\.store$/,
       ],
     },
     async ready () {
