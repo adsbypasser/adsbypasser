@@ -14,6 +14,7 @@
           /^(i\.)?imgseeds?\.com$/,
           /^(img-planet|img-pay)\.com$/,
           /^(www\.)?(imglemon|imageblinks)\.com$/,
+          /^(www\.)?(multiimg)\.com$/,
           /^xxxscreens\.com$/,
           /^(wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
