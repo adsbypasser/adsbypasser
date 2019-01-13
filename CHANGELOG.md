@@ -8,6 +8,7 @@
     * gifsis.com
     * giga74.com
     * marivelkece.xyz
+    * multiimg.com
     * shln.pw
     * yourtechguider.com
 * removed
