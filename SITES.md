@@ -96,6 +96,7 @@
     * imx.to
     * ipicture.su
     * megaimage.org
+    * multiimg.com
     * naughtygate.net
     * nimzshare.com
     * pic.hotimg.site
