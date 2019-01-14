@@ -534,6 +534,7 @@
     * skipurls.com
     * smarteasystudy.com
     * spamlink.org
+    * srtfly.com
     * stfly.press
     * taive.in
     * tiny.ec
