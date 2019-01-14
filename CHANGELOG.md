@@ -10,6 +10,7 @@
     * marivelkece.xyz
     * multiimg.com
     * shln.pw
+    * srtfly.com
     * yourtechguider.com
 * removed
 
