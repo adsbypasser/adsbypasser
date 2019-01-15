@@ -61,6 +61,7 @@
     * imgadult.com
     * imgbalana.com
     * imgcloud.co
+    * imgcloud.pw
     * imgdrive.net
     * imgfapper.com
     * imgfresh.info
