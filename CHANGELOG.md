@@ -9,6 +9,7 @@
     * gifsis.com
     * giga74.com
     * imagescanner.cc
+    * imgcloud.pw
     * marivelkece.xyz
     * multiimg.com
     * shln.pw
