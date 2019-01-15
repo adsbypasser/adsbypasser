@@ -193,6 +193,10 @@
         host: /^imgking\.co$/,
         path: /^\/img[v3]-.*\.html/,
       },
+      {
+        host: /^picstate\.com$/,
+        path: /^\/view\/full\/.*/,
+      },
     ],
     async ready () {
       const i = $('img[alt]');
