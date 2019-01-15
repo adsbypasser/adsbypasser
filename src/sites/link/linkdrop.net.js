@@ -29,7 +29,7 @@
         /^(vy\.)?adsvy\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls)\.com$/,
         /^(cutpaid|smarteasystudy|cyahealth|ershadat|z2i|srtfly)\.com$/,
-        /^(blogginggyanbox|yourtechguider|gifsis)\.com$/,
+        /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash)\.com$/,
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
