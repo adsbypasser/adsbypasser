@@ -762,6 +762,7 @@
     * pixhost.to
     * pixroute.com
     * pixxxels.cc
+    * postimg.cc
     * preview.rlu.ru
     * probusinesshub.com
     * pronpic.org
