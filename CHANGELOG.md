@@ -12,6 +12,7 @@
     * imgcloud.pw
     * marivelkece.xyz
     * multiimg.com
+    * picstate.com
     * postimg.cc
     * shln.pw
     * srtfly.com
