@@ -103,6 +103,7 @@
     * nimzshare.com
     * pic.hotimg.site
     * picmoza.com
+    * picstate.com
     * picz.site
     * pixup.us
     * pop-img.info
