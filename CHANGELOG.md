@@ -12,6 +12,7 @@
     * imgcloud.pw
     * marivelkece.xyz
     * multiimg.com
+    * postimg.cc
     * shln.pw
     * srtfly.com
     * yourtechguider.com
