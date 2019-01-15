@@ -253,6 +253,14 @@
     },
   });
 
+  _.register({
+    rule: 'https://imgcloud.pw/image/*',
+    async ready () {
+      const l = $('link[rel="image_src"]');
+      await $.openImage(l.href);
+    },
+  });
+  
   async function action (firstSelector, secondSelector) {
     $.remove('iframe, #adblock_detect, .popupOverlay');
 
