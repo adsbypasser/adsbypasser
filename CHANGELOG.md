@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * 22pixx.xyz
     * win4cut.com
 * added
 * removed
