@@ -242,6 +242,17 @@
     },
   });
 
+  _.register({
+    rule: {
+      host: /^imagescanner\.cc$/,
+      path: /^\/.*\.jpg\.html/,
+    },
+    async start () {
+      const path = window.location.href.replace('.html', '');
+      await $.openLink(path);
+    },
+  });
+
   async function action (firstSelector, secondSelector) {
     $.remove('iframe, #adblock_detect, .popupOverlay');
 
