@@ -99,6 +99,7 @@ _.register({
         /(^|\.)safelink(converter|reviewx?)\.com?$/,
         /^giga74\.com$/,
         /^awsubsco\.ml$/,
+        /^nekopoi\.ga$/,
       ],
       query: /id=([\w\\]+=*)/,
     },
