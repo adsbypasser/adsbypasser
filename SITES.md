@@ -469,6 +469,7 @@
     * icutit.ca
     * idsly.bid
     * idsly.com
+    * idsly.net
     * idsly.org
     * igram.im
     * itiad.com
