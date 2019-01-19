@@ -8,6 +8,7 @@
     * cuee.io
     * gifsis.com
     * giga74.com
+    * idsly.net
     * imagescanner.cc
     * imgcloud.pw
     * marivelkece.xyz
