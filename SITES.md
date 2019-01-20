@@ -512,6 +512,7 @@
     * ourl.io
     * payshorturl.com
     * payskip.me
+    * payskip.org
     * petty.link
     * pnd.tl
     * premiumzen.com
