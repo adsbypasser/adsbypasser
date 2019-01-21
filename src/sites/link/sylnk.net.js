@@ -41,6 +41,7 @@ _.register({
         /^(simaholina|autech)\.xyz$/,
         /^(www\.)?id-securelink\.xyz$/,
         /^(www\.)?converthinks\.xyz$/,
+        /^(www\.)?marivelkece\.xyz$/,
         // else
         /^(www\.)?tojros\.tk$/,
         /^(www\.)?anjay\.info$/,
@@ -96,7 +97,9 @@ _.register({
         // safelinkreviewx.com
         // safelinkreview.co
         /(^|\.)safelink(converter|reviewx?)\.com?$/,
+        /^giga74\.com$/,
         /^awsubsco\.ml$/,
+        /^nekopoi\.ga$/,
       ],
       query: /id=([\w\\]+=*)/,
     },

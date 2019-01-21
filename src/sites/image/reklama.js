@@ -14,6 +14,7 @@
           /^(i\.)?imgseeds?\.com$/,
           /^(img-planet|img-pay)\.com$/,
           /^(www\.)?(imglemon|imageblinks)\.com$/,
+          /^(www\.)?(multiimg)\.com$/,
           /^xxxscreens\.com$/,
           /^(wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
@@ -203,6 +204,10 @@
         host: /^imgking\.co$/,
         path: /^\/img[v3]-.*\.html/,
       },
+      {
+        host: /^picstate\.com$/,
+        path: /^\/view\/full\/.*/,
+      },
     ],
     async ready () {
       const i = $('img[alt]');
@@ -252,6 +257,25 @@
     },
   });
 
+  _.register({
+    rule: {
+      host: /^imagescanner\.cc$/,
+      path: /^\/.*\.jpg\.html/,
+    },
+    async start () {
+      const path = window.location.href.replace('.html', '');
+      await $.openLink(path);
+    },
+  });
+
+  _.register({
+    rule: 'https://imgcloud.pw/image/*',
+    async ready () {
+      const l = $('link[rel="image_src"]');
+      await $.openImage(l.href);
+    },
+  });
+  
   async function action (firstSelector, secondSelector) {
     $.remove('iframe, #adblock_detect, .popupOverlay');
 
