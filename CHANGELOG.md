@@ -1,9 +1,25 @@
 ## TBA
 
 * fixed
-    * 22pixx.xyz
-    * win4cut.com
 * added
+    * 3rab-cash.com
+    * blogginggyanbox.com
+    * buyitonline.store
+    * cuee.io
+    * gifsis.com
+    * giga74.com
+    * idsly.net
+    * imagescanner.cc
+    * imgcloud.pw
+    * marivelkece.xyz
+    * multiimg.com
+    * nekopoi.ga
+    * payskip.org
+    * picstate.com
+    * postimg.cc
+    * shln.pw
+    * srtfly.com
+    * yourtechguider.com
 * removed
 
 ## v6.28.0
