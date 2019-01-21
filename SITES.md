@@ -606,6 +606,7 @@
     * oload.tv
     * oload.win
     * openload.co
+    * openload.pw
 * al.ly
     * al.ly
     * ally.sh
