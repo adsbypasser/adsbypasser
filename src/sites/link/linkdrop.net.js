@@ -112,7 +112,7 @@
       host: [
         // com
         /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro)\.com$/,
-        /^(mykinggo|link4win|loadurl|cut4link|raolink|adshorte)\.com$/,
+        /^(mykinggo|win4cut|link4win|loadurl|cut4link|raolink|adshorte)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
         /^(www\.)?viralukk\.com$/,
