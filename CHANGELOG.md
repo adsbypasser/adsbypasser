@@ -11,12 +11,15 @@
     * idsly.net
     * imagescanner.cc
     * imgcloud.pw
+    * lpe.pw
     * marivelkece.xyz
     * multiimg.com
+    * mykinggo.com
     * nekopoi.ga
     * openload.pw
     * payskip.org
     * picstate.com
+    * pinkhindi.com
     * postimg.cc
     * shln.pw
     * srtfly.com
