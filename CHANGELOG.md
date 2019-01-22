@@ -2,6 +2,7 @@
 
 * fixed
     * 22pixx.xyz
+    * mykinggo.com
     * win4cut.com
 * added
 * removed
