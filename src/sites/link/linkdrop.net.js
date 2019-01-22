@@ -30,6 +30,7 @@
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls)\.com$/,
         /^(cutpaid|smarteasystudy|cyahealth|ershadat|z2i)\.com$/,
         /^win4cut\.com$/,
+        /^mykinggo\.com$/,
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
@@ -110,7 +111,7 @@
       host: [
         // com
         /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro)\.com$/,
-        /^(mykinggo|link4win|loadurl|cut4link|raolink|adshorte)\.com$/,
+        /^(link4win|loadurl|cut4link|raolink|adshorte)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
         /^(www\.)?viralukk\.com$/,
