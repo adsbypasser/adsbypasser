@@ -495,6 +495,7 @@
     * linkvip.tk
     * loadurl.com
     * lopte.pro
+    * lpe.pw
     * lwt.pw
     * lyon.kim
     * man2pro.com
@@ -514,6 +515,7 @@
     * payskip.me
     * payskip.org
     * petty.link
+    * pinkhindi.com
     * pnd.tl
     * premiumzen.com
     * psl.pw
