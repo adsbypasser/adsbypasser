@@ -14,7 +14,6 @@
     * lpe.pw
     * marivelkece.xyz
     * multiimg.com
-    * mykinggo.com
     * nekopoi.ga
     * openload.pw
     * payskip.org
