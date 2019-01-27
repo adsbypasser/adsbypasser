@@ -15,6 +15,7 @@
     * marivelkece.xyz
     * multiimg.com
     * nekopoi.ga
+    * oload.club
     * openload.pw
     * payskip.org
     * picstate.com
