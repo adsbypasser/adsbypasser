@@ -478,6 +478,7 @@
     * koylinks.win
     * kuylink.com
     * l2s.io
+    * li-nkz.com
     * licklink.net
     * linclik.com
     * link-zero.com
