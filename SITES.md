@@ -445,6 +445,7 @@
     * cutl.in
     * cutpaid.com
     * cutsouf.com
+    * cuturl.in
     * cutwi.in
     * cutwin.com
     * cyahealth.com
