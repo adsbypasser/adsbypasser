@@ -11,6 +11,7 @@
     * idsly.net
     * imagescanner.cc
     * imgcloud.pw
+    * li-nkz.com
     * lpe.pw
     * marivelkece.xyz
     * multiimg.com
