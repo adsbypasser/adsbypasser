@@ -600,6 +600,7 @@
 * openload.co
     * oload.cc
     * oload.cloud
+    * oload.club
     * oload.download
     * oload.fun
     * oload.info
