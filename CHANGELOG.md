@@ -6,6 +6,7 @@
     * blogginggyanbox.com
     * buyitonline.store
     * cuee.io
+    * cuturl.in
     * gifsis.com
     * giga74.com
     * idsly.net
