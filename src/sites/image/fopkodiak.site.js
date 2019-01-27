@@ -4,7 +4,7 @@ _.register({
     path: /image\//,
   },
   async ready () {
-    let img = $("head > link[rel=image_src]");
+    const img = $('head > link[rel=image_src]');
     await $.openImage(img.href);
   }
 });

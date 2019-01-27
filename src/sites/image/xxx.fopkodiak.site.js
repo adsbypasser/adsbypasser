@@ -5,16 +5,16 @@ _.register({
   },
   async ready () {
     if (document.referrer == document.location.href) {
-      let img = $.$("#container > a > img");
+      let img = $.$('#container > a > img');
       if (img === null) {
-        img = $("#container > img");
+        img = $('#container > img');
       }
       await $.openImage(img.src);
     } else {
-      let f = $("form");
+      const f = $('form');
       await $.openLink(f.action, { 
         post: {
-          imgContinue: "Continue to image ...",
+          imgContinue: 'Continue to image ...',
         }
       });
     }
