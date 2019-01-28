@@ -30,14 +30,14 @@
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls)\.com$/,
         /^(cutpaid|smarteasystudy|cyahealth|ershadat|z2i|srtfly)\.com$/,
         /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi)\.com$/,
-        /^(mykinggo|li-nkz)\.com$/,
+        /^(mykinggo|li-nkz|win4cut)\.com$/,
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
         /^(link4win|linksad|topurl|xemlink)\.net$/,
         // pw
         /^(123link|clik|tokenfly|getlink|psl|pss|shln|lpe)\.pw$/,
-        /^(www\.)?lwt\.pw$/,     
+        /^(www\.)?lwt\.pw$/,
         // else
         /^(trlink|wolink|tocdo|cuturl)\.in$/,
         /^(petty|skips|tr|zutrox)\.link$/,
@@ -113,7 +113,7 @@
       host: [
         // com
         /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro)\.com$/,
-        /^(win4cut|link4win|loadurl|cut4link|raolink|adshorte)\.com$/,
+        /^(link4win|loadurl|cut4link|raolink|adshorte)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
         /^(www\.)?viralukk\.com$/,

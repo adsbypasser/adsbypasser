@@ -1,6 +1,9 @@
 ## TBA
 
 * fixed
+    * 22pixx.xyz
+    * mykinggo.com
+    * win4cut.com
 * added
     * 3rab-cash.com
     * blogginggyanbox.com
@@ -26,7 +29,6 @@
     * shln.pw
     * srtfly.com
     * yourtechguider.com
-* removed
 
 ## v6.28.0
 
