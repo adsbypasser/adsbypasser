@@ -6,7 +6,7 @@ _.register({
   async ready () {
     if (document.referrer == document.location.href) {
       let img = $.$('#container > a > img');
-      if (img === null) {
+      if (!img) {
         img = $('#container > img');
       }
       await $.openImage(img.src);
