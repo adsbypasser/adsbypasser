@@ -1,7 +1,7 @@
 _.register({
   rule: {
     host: /^xxx\.fopkodiak\.site$/,
-    path: /img-.*/,
+    path: /^\/img-/,
   },
   async ready () {
     if (document.referrer == document.location.href) {
