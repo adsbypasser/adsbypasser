@@ -36,7 +36,7 @@
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
         /^(link4win|linksad|topurl|xemlink)\.net$/,
         // pw
-        /^(123link|clik|tokenfly|getlink|psl|pss|shln|lpe)\.pw$/,
+        /^(123link|clik|tokenfly|getlink|psl|pss|shln|lpe|chrt)\.pw$/,
         /^(www\.)?lwt\.pw$/,
         // else
         /^(trlink|wolink|tocdo|cuturl)\.in$/,
