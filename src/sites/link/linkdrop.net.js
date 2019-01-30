@@ -70,6 +70,7 @@
         /^eatings\.stream$/,
         /^8o\.ee$/,
         /^buyitonline\.store$/,
+        /^shortearn\.eu$/,
       ],
     },
     async ready () {
