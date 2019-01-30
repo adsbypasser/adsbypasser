@@ -59,6 +59,7 @@
         /^(koylinks|buy-in-599rs)\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
+        /^(www\.)?shrink\.vip$/,
         /^(tny|tiny)\.ec$/,
         /^tl\.tc$/,
         /^e2s\.cc$/,
