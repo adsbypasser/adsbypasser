@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * counsellingresult2016.in
 * removed
 
 ## v6.29.0
