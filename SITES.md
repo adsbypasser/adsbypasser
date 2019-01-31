@@ -692,6 +692,7 @@
     * ewa.ac
     * filoops.info
     * flylink.io
+    * fopkodiak.site
     * fotolink.su
     * fotosik.pl
     * freeimgup.com
@@ -817,5 +818,6 @@
     * vir.al
     * vzturl.com
     * won.pe
+    * xxx.fopkodiak.site
     * yep.it
     * yooclick.com
