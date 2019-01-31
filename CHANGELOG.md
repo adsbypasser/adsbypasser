@@ -2,8 +2,12 @@
 
 * fixed
 * added
+    * chrt.pw
     * counsellingresult2016.in
+    * cuus.io
     * fopkodiak.site
+    * shortearn.eu
+    * shrink.vip
     * xxx.fopkodiak.site
 * removed
 
