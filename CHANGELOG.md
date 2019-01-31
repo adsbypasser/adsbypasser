@@ -3,6 +3,8 @@
 * fixed
 * added
     * counsellingresult2016.in
+    * fopkodiak.site
+    * xxx.fopkodiak.site
 * removed
 
 ## v6.29.0
