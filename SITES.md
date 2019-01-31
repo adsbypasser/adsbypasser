@@ -421,6 +421,7 @@
     * buyitonline.store
     * by6dk.com
     * cashat.net
+    * chrt.pw
     * clik.pw
     * clk.icu
     * clk.ink
@@ -449,6 +450,7 @@
     * cuturl.in
     * cutwi.in
     * cutwin.com
+    * cuus.io
     * cyahealth.com
     * dmus.in
     * dz4link.com
@@ -533,9 +535,11 @@
     * short2win.com
     * short2win.net
     * shortad.cf
+    * shortearn.eu
     * shortglobal.com
     * shortit.ca
     * shortly.xyz
+    * shrink.vip
     * shrinkearn.com
     * shrt10.com
     * shrten.xyz
