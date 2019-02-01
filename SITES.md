@@ -479,6 +479,7 @@
     * itiad.com
     * itiurl.co
     * jurl.io
+    * khabratk.com
     * koylinks.win
     * kuylink.com
     * l2s.io
