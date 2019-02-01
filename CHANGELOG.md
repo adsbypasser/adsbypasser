@@ -6,6 +6,7 @@
     * counsellingresult2016.in
     * cuus.io
     * fopkodiak.site
+    * khabratk.com
     * shortearn.eu
     * shrink.vip
     * xxx.fopkodiak.site
