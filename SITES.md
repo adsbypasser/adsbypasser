@@ -524,6 +524,7 @@
     * pinkhindi.com
     * pnd.tl
     * premiumzen.com
+    * programsfre.com
     * psl.pw
     * pss.pw
     * raolink.com
