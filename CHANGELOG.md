@@ -7,6 +7,7 @@
     * cuus.io
     * fopkodiak.site
     * khabratk.com
+    * programsfre.com
     * shortearn.eu
     * shrink.vip
     * xxx.fopkodiak.site
