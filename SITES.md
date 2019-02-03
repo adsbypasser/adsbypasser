@@ -415,6 +415,7 @@
     * adzurl.cf
     * autech.xyz
     * bit-url.com
+    * bloggingdekh.xyz
     * blogginggyanbox.com
     * businessiss2.info
     * buy-in-599rs.win
