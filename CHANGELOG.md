@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * bloggingdekh.xyz
     * chrt.pw
     * counsellingresult2016.in
     * cuus.io
