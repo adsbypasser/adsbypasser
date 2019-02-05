@@ -439,6 +439,7 @@
     * cuee.io
     * cuio.io
     * cuon.io
+    * curs.co
     * curs.io
     * cut-earn.com
     * cut-urls.com
