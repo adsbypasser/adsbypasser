@@ -50,6 +50,7 @@ _.register({
         /^(fmlawkers|indexmovie)\.club$/,
         /^micin\.online$/,
         /^unduh\.in/,
+        /^(www\.)?drakorsafe\.tech$/,
       ],
       query: [
         // id must be the first captured group
