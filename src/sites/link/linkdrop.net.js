@@ -47,7 +47,7 @@
         /^wi\.cr$/,
         /^payskip\.(me|org)$/,
         /^(oke|cuon|cuio|cuee|cuus|linktor|flylink)\.io$/,
-        /^(3bst|coinlink|itiurl|coshink|link5s)\.co$/,
+        /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
         /^(shink|shrten|gg-l|vnurl|bloggingdekh)\.xyz$/,
         /^mlink\.club$/,
         /^(igram|gram)\.im$/,
