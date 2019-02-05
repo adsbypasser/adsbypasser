@@ -49,6 +49,7 @@ _.register({
         /^(www\.)?kurosafe\.(website|online)$/,
         /^(fmlawkers|indexmovie)\.club$/,
         /^micin\.online$/,
+        /^unduh\.in/,
       ],
       query: [
         // id must be the first captured group
