@@ -5,6 +5,7 @@
     * bloggingdekh.xyz
     * chrt.pw
     * counsellingresult2016.in
+    * curs.co
     * cuus.io
     * drakorsafe.tech
     * fopkodiak.site
