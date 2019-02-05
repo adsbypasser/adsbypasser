@@ -294,6 +294,7 @@
     * decrypt.safelinkconverter.com
     * decrypt2.safelinkconverter.com
     * designmyhomee.com
+    * drakorsafe.tech
     * drivefiles.bid
     * drive.jepitkertas.com
     * edogawa.lon.pw
