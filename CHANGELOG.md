@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * 1921681254.tech
     * bloggingdekh.xyz
     * chrt.pw
     * counsellingresult2016.in
