@@ -394,6 +394,7 @@
     * 123link.press
     * 123link.pro
     * 123link.pw
+    * 1921681254.tech
     * 3bst.co
     * 3rab-cash.com
     * 3rabcut.com
