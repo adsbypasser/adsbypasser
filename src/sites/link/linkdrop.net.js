@@ -71,6 +71,7 @@
         /^8o\.ee$/,
         /^buyitonline\.store$/,
         /^shortearn\.eu$/,
+        /^1921681254\.tech$/,
       ],
     },
     async ready () {
