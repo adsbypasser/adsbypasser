@@ -11,9 +11,11 @@
     * drakorsafe.tech
     * fopkodiak.site
     * khabratk.com
+    * lindung.me
     * programsfre.com
     * shortearn.eu
     * shrink.vip
+    * szs.pw
     * unduh.in
     * xxx.fopkodiak.site
 * removed
