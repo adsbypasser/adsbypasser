@@ -320,6 +320,7 @@
     * landscapenature.pw
     * lifesurance.info
     * lindung.in
+    * lindung.me
     * link.safelinkconverter.com
     * linkach.com
     * lonelymoon.net
@@ -559,6 +560,7 @@
     * spamlink.org
     * srtfly.com
     * stfly.press
+    * szs.pw
     * taive.in
     * tiny.ec
     * tinylinks.net
