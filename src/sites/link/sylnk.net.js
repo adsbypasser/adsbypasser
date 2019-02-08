@@ -62,7 +62,7 @@ _.register({
     {
       host: [
         /^sehatlega\.com$/,
-        /^businessforyouand\.me$/,
+        /^(businessforyouand|lindung)\.me$/,
         /^plantaheim(\.web\.id|\.com)$/,
         /^davinsurance\.com$/,
         /^naturalhealthy\.xyz$/,
