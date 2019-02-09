@@ -402,6 +402,7 @@
     * 123link.vip
     * 1921681254.tech
     * 1idsly.com
+    * 2fly.me
     * 3bst.co
     * 3rab-cash.com
     * 3rabcut.com
