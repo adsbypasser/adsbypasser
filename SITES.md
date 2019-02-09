@@ -350,11 +350,13 @@
     * stt.awsubs.co
     * sweetlantern.com
     * sylnk.net
+    * technlab.com
     * teknologilink.com
     * telolet.in
     * tetew.info
     * tojros.tk
     * unduh.in
+    * wibuindo.xyz
     * ww2.awsubs.co
 * segmentnext.com
     * segmentnext.com
