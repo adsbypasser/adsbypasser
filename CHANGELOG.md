@@ -5,6 +5,7 @@
     * 123link.vip
     * 1921681254.tech
     * 1idsly.com
+    * 2fly.me
     * bloggingdekh.xyz
     * chrt.pw
     * counsellingresult2016.in
