@@ -51,6 +51,7 @@ _.register({
         /^micin\.online$/,
         /^unduh\.in/,
         /^(www\.)?drakorsafe\.tech$/,
+        /^omgmusik\.com$/,
       ],
       query: [
         // id must be the first captured group
