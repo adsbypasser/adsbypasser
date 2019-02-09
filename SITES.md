@@ -331,6 +331,7 @@
     * naturalhealthy.xyz
     * nekopoi.ga
     * njiir.com
+    * omglyrics.com
     * omgmusik.com
     * plantaheim.com
     * plantaheim.web.id
