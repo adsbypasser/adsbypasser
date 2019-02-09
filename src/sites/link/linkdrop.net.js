@@ -36,13 +36,13 @@
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
         /^(link4win|linksad|topurl|xemlink)\.net$/,
         // pw
-        /^(123link|clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs)\.pw$/,
+        /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs)\.pw$/,
         /^(www\.)?lwt\.pw$/,
         // else
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016)\.in$/,
         /^(petty|skips|tr|zutrox)\.link$/,
         /^megaurl\.(in|link)$/,
-        /^idsly\.(com|bid|net)$/,
+        /^(1)idsly\.(com|bid|net)$/,
         /^(adbilty|adpop|wicr|ujv|tpx|adsrt)\.me$/,
         /^wi\.cr$/,
         /^payskip\.(me|org)$/,
@@ -72,6 +72,7 @@
         /^buyitonline\.store$/,
         /^shortearn\.eu$/,
         /^1921681254\.tech$/,
+        /^123link\.(pw|vip)$/,
       ],
     },
     async ready () {
