@@ -16,7 +16,9 @@
     * shortearn.eu
     * shrink.vip
     * szs.pw
+    * technlab.com
     * unduh.in
+    * wibuindo.xyz
     * xxx.fopkodiak.site
 * removed
 
