@@ -12,6 +12,7 @@
     * fopkodiak.site
     * khabratk.com
     * lindung.me
+    * omgmusik.com
     * programsfre.com
     * shortearn.eu
     * shrink.vip
