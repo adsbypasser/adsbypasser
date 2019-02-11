@@ -39,7 +39,7 @@
         /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs)\.pw$/,
         /^(www\.)?lwt\.pw$/,
         // else
-        /^(trlink|wolink|tocdo|cuturl|counsellingresult2016)\.in$/,
+        /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide)\.in$/,
         /^(petty|skips|tr|zutrox)\.link$/,
         /^megaurl\.(in|link)$/,
         /^(1)idsly\.(com|bid|net)$/,
