@@ -73,6 +73,7 @@
         /^shortearn\.eu$/,
         /^1921681254\.tech$/,
         /^123link\.(pw|vip)$/,
+        /^lotechnocan\.org/,
       ],
     },
     async ready () {
