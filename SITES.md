@@ -318,6 +318,8 @@
     * kurosafe.online
     * kurosafe.website
     * landscapenature.pw
+    * lewat.in
+    * lewat.wibuindo.com
     * lifesurance.info
     * lindung.in
     * lindung.me
@@ -489,6 +491,7 @@
     * idsly.net
     * idsly.org
     * igram.im
+    * iitjeemainguide.in
     * itiad.com
     * itiurl.co
     * jurl.io
@@ -514,6 +517,7 @@
     * linkvip.tk
     * loadurl.com
     * lopte.pro
+    * lotechnocan.org
     * lpe.pw
     * lwt.pw
     * lyon.kim
@@ -806,12 +810,14 @@
     * sa.ae
     * safeurl.eu
     * screenlist.ru
+    * shortid.co
     * shrink-service.it
     * sht.io
     * shtlink.co
     * similarsites.com
     * spaste.com
     * st.wardhanime.net
+    * sub2unlock.com
     * subirimagenes.com
     * supercheats.com
     * swzz.xyz
