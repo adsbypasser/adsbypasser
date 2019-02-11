@@ -22,6 +22,7 @@
     * omglyrics.com
     * omgmusik.com
     * programsfre.com
+    * safelinkblogger.com
     * shortearn.eu
     * shortid.co
     * shrink.vip
