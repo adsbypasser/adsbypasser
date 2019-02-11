@@ -15,7 +15,7 @@ _.register({
     path: /^\/[a-zA-Z0-9]+/,
   },
   async ready () {
-    const su = $.searchFromScripts(/'href'\, '([^']+)'/);
+    const su = $.searchFromScripts(/'href', '([^']+)'/);
     await $.openLink(su[1]);
   },
 });
