@@ -37,6 +37,7 @@ _.register({
         /^(www\.)?losstor\.com$/,
         /^kurosafe\.menantisenja\.com$/,
         /^drive\.jepitkertas\.com$/,
+        /^lewat\.wibuindo\.com$/,
         // xyz
         /^(simaholina|autech)\.xyz$/,
         /^(www\.)?id-securelink\.xyz$/,
