@@ -29,6 +29,7 @@
     * sub2unlock.com
     * szs.pw
     * technlab.com
+    * tinylink.run
     * unduh.in
     * wibuindo.xyz
     * xxx.fopkodiak.site
