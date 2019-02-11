@@ -575,6 +575,7 @@
     * szs.pw
     * taive.in
     * tiny.ec
+    * tinylink.run
     * tinylinks.net
     * tl.tc
     * tmearn.com
