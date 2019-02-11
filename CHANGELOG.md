@@ -13,13 +13,19 @@
     * cuus.io
     * drakorsafe.tech
     * fopkodiak.site
+    * iitjeemainguide.in
     * khabratk.com
+    * lewat.in
+    * lewat.wibuindo.com
     * lindung.me
+    * lotechnocan.org
     * omglyrics.com
     * omgmusik.com
     * programsfre.com
     * shortearn.eu
+    * shortid.co
     * shrink.vip
+    * sub2unlock.com
     * szs.pw
     * technlab.com
     * unduh.in
