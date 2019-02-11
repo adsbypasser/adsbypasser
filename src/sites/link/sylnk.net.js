@@ -221,6 +221,16 @@ _.register({
 
 _.register({
   rule: {
+    host: /^lewat\.in$/,
+  },
+  async ready () {
+    const l = $('#lanjut > #goes > a');
+    await $.openLink(l.href);
+  },
+});
+
+_.register({
+  rule: {
     host: /^kombatch\.loncat\.pw$/,
   },
   async ready () {
