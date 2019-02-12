@@ -295,7 +295,10 @@ _.register({
 
 _.register({
   rule: {
-    host: /^spacetica\.com$/,
+    host: [
+      /^spacetica\.com$/,
+      /^skinnycat\.org$/,
+    ],
     path: /^\/\w+$/,
   },
   async ready () {
