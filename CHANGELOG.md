@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * imgfile.net
 * added
     * 123link.vip
     * 1921681254.tech
