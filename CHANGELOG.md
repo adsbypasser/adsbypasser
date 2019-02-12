@@ -13,10 +13,12 @@
     * cuus.io
     * drakorsafe.tech
     * fopkodiak.site
+    * gsmzone.site
     * iitjeemainguide.in
     * khabratk.com
     * lewat.in
     * lewat.wibuindo.com
+    * lin65.me
     * lindung.me
     * lotechnocan.org
     * omglyrics.com
@@ -26,6 +28,7 @@
     * shortearn.eu
     * shortid.co
     * shrink.vip
+    * skinnycat.org
     * sub2unlock.com
     * szs.pw
     * technlab.com
