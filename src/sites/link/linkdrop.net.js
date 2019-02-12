@@ -43,7 +43,7 @@
         /^(petty|skips|tr|zutrox)\.link$/,
         /^megaurl\.(in|link)$/,
         /^(1)idsly\.(com|bid|net)$/,
-        /^(adbilty|adpop|wicr|ujv|tpx|adsrt|2fly)\.me$/,
+        /^(adbilty|adpop|wicr|ujv|tpx|adsrt|2fly|lin65)\.me$/,
         /^wi\.cr$/,
         /^payskip\.(me|org)$/,
         /^(oke|cuon|cuio|cuee|cuus|linktor|flylink)\.io$/,
