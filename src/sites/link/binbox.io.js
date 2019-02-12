@@ -2,12 +2,12 @@
 _.register({
   rule: [
     {
-      host: /^(www\.)?([a-zA-Z0-9]+\.)?binbox\.io$/,
-      path: /\/o\/([a-zA-Z0-9]+)/,
+     host: /^(www\.)?([a-zA-Z0-9]+\.)?binbox\.io$/,
+     path: /\/o\/([a-zA-Z0-9]+)/,
     },
     {
-      host: /^gsmzone\.site$/,
-      path: /\/go\/([a-zA-Z0-9]+)/,
+     host: /^gsmzone\.site$/,
+     path: /\/go\/([a-zA-Z0-9]+)/,
     },
   ],
   async start (m) {
