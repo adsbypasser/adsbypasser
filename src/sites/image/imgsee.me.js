@@ -118,6 +118,21 @@
   });
 
   _.register({
+    rule: {
+      host: /^imgbaron\.com$/,
+      path: PATH_RULE,
+    },
+    async ready () {
+      await _.wait(500);
+      let img = $.$('img[style*="display"]');
+      if (img) {
+        img = img.src.split("=")[1];
+        await $.openImage(img);
+      }
+    },
+  });
+
+  _.register({
     rule: /^http:\/\/imgdragon\.com\/(getfil\.php|dl)$/,
     async ready () {
       const i = $.$('img.pic');
