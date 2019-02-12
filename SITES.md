@@ -346,6 +346,7 @@
     * short.awsubs.co
     * short.awsubs.me
     * skinnycat.net
+    * skinnycat.org
     * skyinsurance.ml
     * spacetica.com
     * speedcar.club
@@ -501,6 +502,7 @@
     * l2s.io
     * li-nkz.com
     * licklink.net
+    * lin65.me
     * linclik.com
     * link-zero.com
     * link2link.cf
@@ -726,6 +728,7 @@
     * gkurl.us
     * goimagehost.com
     * goto.loncat.in
+    * gsmzone.site
     * gunting.web.id
     * hostingpics.net
     * hotshorturl.com
