@@ -432,6 +432,7 @@
     * bit-url.com
     * bloggingdekh.xyz
     * blogginggyanbox.com
+    * btc.ms
     * businessiss2.info
     * buy-in-599rs.win
     * buyitonline.store
@@ -514,6 +515,7 @@
     * linkdrop.net
     * linkexa.com
     * linkfly.gaosmedia.com
+    * linkorlink.com
     * linkrex.net
     * linksad.net
     * linku.us
