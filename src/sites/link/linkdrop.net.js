@@ -76,6 +76,7 @@
         /^123link\.(pw|vip)$/,
         /^lotechnocan\.org$/,
         /^tinylink\.run$/,
+        /^btc\.ms$/,
       ],
     },
     async ready () {
