@@ -8,6 +8,7 @@
     * 1idsly.com
     * 2fly.me
     * bloggingdekh.xyz
+    * btc.ms
     * chrt.pw
     * counsellingresult2016.in
     * curs.co
@@ -22,6 +23,7 @@
     * lewat.wibuindo.com
     * lin65.me
     * lindung.me
+    * linkorlink.com
     * lotechnocan.org
     * omglyrics.com
     * omgmusik.com
