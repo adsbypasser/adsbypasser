@@ -1,4 +1,4 @@
-## TBA
+## v6.30.0
 
 * fixed
     * imgfile.net
@@ -40,7 +40,6 @@
     * unduh.in
     * wibuindo.xyz
     * xxx.fopkodiak.site
-* removed
 
 ## v6.29.0
 
