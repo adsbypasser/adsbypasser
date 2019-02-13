@@ -250,6 +250,7 @@
     * hulkimge.com
     * imageeer.com
     * imgant.com
+    * imgbaron.com
     * imgclick.net
     * imgdew.pw
     * imgdragon.com
