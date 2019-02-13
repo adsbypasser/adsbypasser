@@ -16,6 +16,7 @@
     * fopkodiak.site
     * gsmzone.site
     * iitjeemainguide.in
+    * imgbaron.com
     * khabratk.com
     * lewat.in
     * lewat.wibuindo.com
