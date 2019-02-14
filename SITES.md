@@ -638,6 +638,7 @@
     * oload.download
     * oload.fun
     * oload.info
+    * oload.live
     * oload.site
     * oload.stream
     * oload.tv
