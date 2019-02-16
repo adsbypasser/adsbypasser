@@ -6,7 +6,9 @@
     * fabsdeals.com
     * mrfourtech.com
     * oload.live
+    * tech4utoday.com
     * techandreview.info
+    * urlsamo.com
 * removed
 
 ## v6.30.0
