@@ -535,6 +535,7 @@
     * mitly.us
     * mlink.club
     * mykinggo.com
+    * mrfourtech.com
     * niagoshort.com
     * oke.io
     * oturl.com
@@ -579,6 +580,7 @@
     * stfly.press
     * szs.pw
     * taive.in
+    * techandreview.info
     * tiny.ec
     * tinylink.run
     * tinylinks.net
