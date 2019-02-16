@@ -581,6 +581,7 @@
     * stfly.press
     * szs.pw
     * taive.in
+    * tech4utoday.com
     * techandreview.info
     * tiny.ec
     * tinylink.run
@@ -601,6 +602,7 @@
     * ulshare.net
     * urlcloud.us
     * urle.co
+    * urlsamo.com
     * urltips.com
     * vinaurl.net
     * viralukk.com
