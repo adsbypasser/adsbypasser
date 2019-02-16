@@ -480,6 +480,7 @@
     * eatings.stream
     * eklink.net
     * ershadat.com
+    * fabsdeals.com
     * foxurl.net
     * getlink.pw
     * gg-l.xyz
