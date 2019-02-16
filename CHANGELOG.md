@@ -3,7 +3,9 @@
 * fixed
     * imgfile.net
 * added
+    * mrfourtech.com
     * oload.live
+    * techandreview.info
 * removed
 
 ## v6.30.0
