@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * imgfile.net
 * added
     * oload.live
 * removed
