@@ -3,6 +3,7 @@
 * fixed
     * imgfile.net
 * added
+    * fabsdeals.com
     * mrfourtech.com
     * oload.live
     * techandreview.info
