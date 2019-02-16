@@ -254,6 +254,10 @@
         return false;
       }
 
+      if (!b.disabled) {
+        b.click();
+      }
+      
       const o = new MutationObserver(() => {
         if (!b.disabled) {
           b.click();
