@@ -67,7 +67,7 @@
         /^lyon\.kim$/,
         /^linkvip\.tk$/,
         /^stfly\.press$/,
-        /^businessiss2\.info$/,
+        /^(businessiss2|techandreview)\.info$/,
         /^eatings\.stream$/,
         /^8o\.ee$/,
         /^buyitonline\.store$/,
