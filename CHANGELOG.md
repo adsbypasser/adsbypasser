@@ -2,6 +2,7 @@
 
 * fixed
     * imgfile.net
+    * wicr.me
 * added
     * fabsdeals.com
     * mrfourtech.com
