@@ -63,13 +63,10 @@ _.register({
     },
     {
       host: [
-        /^sehatlega\.com$/,
+        /^(sehatlega|davinsurance|healthtod|irisvera|akanosora)\.com$/,
         /^(businessforyouand|lindung)\.me$/,
         /^plantaheim(\.web\.id|\.com)$/,
-        /^davinsurance\.com$/,
         /^naturalhealthy\.xyz$/,
-        /^healthtod\.com$/,
-        /^irisvera\.com$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
