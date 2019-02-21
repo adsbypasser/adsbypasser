@@ -276,6 +276,7 @@
     * linkpoi.in
     * minidroid.net
 * sylnk.net
+    * akanosora.com
     * animeforce.stream
     * ani-share.com
     * anjay.info
@@ -463,6 +464,7 @@
     * cut4links.com
     * cutearn.ca
     * cutl.in
+    * cuto.io
     * cutpaid.com
     * cutsouf.com
     * cuturl.in
@@ -482,6 +484,7 @@
     * ershadat.com
     * fabsdeals.com
     * foxurl.net
+    * geki.tech
     * getlink.pw
     * gg-l.xyz
     * gifsis.com
