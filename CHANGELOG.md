@@ -4,7 +4,10 @@
     * imgfile.net
     * wicr.me
 * added
+    * akanosora.com
+    * cuto.io
     * fabsdeals.com
+    * geki.tech
     * mrfourtech.com
     * oload.live
     * tech4utoday.com
