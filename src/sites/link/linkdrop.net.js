@@ -47,7 +47,7 @@
         /^(adbilty|adpop|wicr|ujv|tpx|adsrt|2fly|lin65)\.me$/,
         /^wi\.cr$/,
         /^payskip\.(me|org)$/,
-        /^(oke|cuon|cuio|cuee|cuus|linktor|flylink)\.io$/,
+        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
         /^(shink|shrten|gg-l|vnurl|bloggingdekh)\.xyz$/,
         /^mlink\.club$/,
@@ -77,7 +77,7 @@
         /^lotechnocan\.org$/,
         /^tinylink\.run$/,
         /^btc\.ms$/,
-        /^cuto\.io$/,
+        /^earn\.theplusit\.ro$/,
       ],
     },
     async ready () {
