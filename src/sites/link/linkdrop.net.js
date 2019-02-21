@@ -77,6 +77,7 @@
         /^lotechnocan\.org$/,
         /^tinylink\.run$/,
         /^btc\.ms$/,
+        /^cuto\.io$/,
       ],
     },
     async ready () {
