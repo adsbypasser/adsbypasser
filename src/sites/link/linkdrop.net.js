@@ -72,7 +72,7 @@
         /^8o\.ee$/,
         /^buyitonline\.store$/,
         /^shortearn\.eu$/,
-        /^1921681254\.tech$/,
+        /^(1921681254|geki)\.tech$/,
         /^123link\.(pw|vip)$/,
         /^lotechnocan\.org$/,
         /^tinylink\.run$/,
