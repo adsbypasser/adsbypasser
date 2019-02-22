@@ -142,7 +142,7 @@
         /^shortad\.cf$/,
         /^123link\.(io|co|press|pro)$/,
         /^git\.tc$/,
-        /^(adfu|linku)\.us$/,
+        /^(adfu|linku|cutwin)\.us$/,
         /^shortit\.ca$/,
         /^(spamlink|idsly)\.org$/,
         /^royurls\.bid$/,
