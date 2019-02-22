@@ -6,8 +6,10 @@
 * added
     * akanosora.com
     * cuto.io
+    * earn.theplusit.ro
     * fabsdeals.com
     * geki.tech
+    * lapak.link
     * mrfourtech.com
     * oload.live
     * tech4utoday.com
