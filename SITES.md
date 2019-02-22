@@ -476,6 +476,7 @@
     * dz4link.com
     * dzurl.ml
     * e2s.cc
+    * earn.theplusit.ro
     * earn-guide.com
     * earn-url.com
     * earnbig.ca
@@ -506,6 +507,7 @@
     * koylinks.win
     * kuylink.com
     * l2s.io
+    * lapak.link
     * li-nkz.com
     * licklink.net
     * lin65.me
