@@ -11,6 +11,7 @@
         /^mitly\.us$/,
         /^tui\.click$/,
         /^met\.bz$/,
+        /^lapak\.link$/,
       ],
     },
     async ready () {
