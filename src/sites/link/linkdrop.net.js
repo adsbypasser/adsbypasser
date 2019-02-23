@@ -48,7 +48,7 @@
         /^(adbilty|adpop|wicr|ujv|tpx|adsrt|2fly|lin65)\.me$/,
         /^wi\.cr$/,
         /^payskip\.(me|org)$/,
-        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink)\.io$/,
+        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
         /^(shink|shrten|gg-l|vnurl|bloggingdekh)\.xyz$/,
         /^mlink\.club$/,
