@@ -5,15 +5,21 @@
     * wicr.me
 * added
     * akanosora.com
+    * crabcut.net
+    * cutadlink.net
     * cuto.io
+    * cutwin.us
     * earn.theplusit.ro
     * fabsdeals.com
+    * flaz.link
     * geki.tech
+    * icutlink.com
     * lapak.link
     * mrfourtech.com
     * oload.live
     * tech4utoday.com
     * techandreview.info
+    * uiz.io
     * urlsamo.com
 * removed
 
