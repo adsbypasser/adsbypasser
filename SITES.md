@@ -450,6 +450,7 @@
     * converthinks.xyz
     * coshink.co
     * counsellingresult2016.in
+    * crabcut.net
     * crus.io
     * cuee.io
     * cuio.io
@@ -462,6 +463,7 @@
     * cut-win.com
     * cut4link.com
     * cut4links.com
+    * cutadlink.net
     * cutearn.ca
     * cutl.in
     * cuto.io
@@ -470,6 +472,7 @@
     * cuturl.in
     * cutwi.in
     * cutwin.com
+    * cutwin.us
     * cuus.io
     * cyahealth.com
     * dmus.in
@@ -484,6 +487,7 @@
     * eklink.net
     * ershadat.com
     * fabsdeals.com
+    * flaz.link
     * foxurl.net
     * geki.tech
     * getlink.pw
@@ -494,6 +498,7 @@
     * gocitlink
     * gram.im
     * icutit.ca
+    * icutlink.com
     * idsly.bid
     * idsly.com
     * idsly.net
@@ -603,6 +608,7 @@
     * tui.click
     * twik.pw
     * u2s.io
+    * uiz.io
     * ujv.me
     * ulshare.net
     * urlcloud.us
