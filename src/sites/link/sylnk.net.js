@@ -43,6 +43,7 @@ _.register({
         /^(www\.)?id-securelink\.xyz$/,
         /^(www\.)?converthinks\.xyz$/,
         /^(www\.)?marivelkece\.xyz$/,
+        /^(www\.)?yametesenpai\.xyz$/,
         // else
         /^(www\.)?tojros\.tk$/,
         /^(www\.)?anjay\.info$/,
