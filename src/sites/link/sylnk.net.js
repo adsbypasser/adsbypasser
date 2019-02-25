@@ -286,6 +286,16 @@ _.register({
 
 _.register({
   rule: {
+    host: /^download-mirror\.ga$/,
+  },
+  async ready () {
+    const dm = $.searchFromScripts(/a href='([^']+)'/);
+    await $.openLink(dm[1]);
+  },
+});
+
+_.register({
+  rule: {
     host: [
       /^ww[23]\.picnictrans\.com$/,
       /^short\.awsubs\.(co|me)$/,
