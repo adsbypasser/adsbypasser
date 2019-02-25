@@ -239,6 +239,16 @@ _.register({
 
 _.register({
   rule: {
+    host: /^goou\.in$/,
+  },
+  async ready () {
+    const g = $('#download_link > a');
+    await $.openLink(g.href);
+  },
+});
+
+_.register({
+  rule: {
     host: /^kombatch\.loncat\.pw$/,
   },
   async ready () {
