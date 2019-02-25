@@ -229,6 +229,16 @@ _.register({
 
 _.register({
   rule: {
+    host: /^sardeath\.com$/,
+  },
+  async ready () {
+    const sd = $('.download-link > a');
+    await $.openLink(sd.href);
+  },
+});
+
+_.register({
+  rule: {
     host: /^kombatch\.loncat\.pw$/,
   },
   async ready () {
