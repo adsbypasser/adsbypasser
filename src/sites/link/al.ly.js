@@ -3,6 +3,7 @@ _.register({
     host: [
       /^al\.ly$/,
       /^ally\.sh$/,
+      /^ally\.shortens\.co$/,
     ],
   },
   async ready () {
