@@ -80,6 +80,7 @@
         /^btc\.ms$/,
         /^earn\.theplusit\.ro$/,
         /^skip\.az$/,
+        /^dutchycorp\.space$/,
       ],
     },
     async ready () {
