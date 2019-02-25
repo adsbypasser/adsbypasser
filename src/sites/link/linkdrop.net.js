@@ -66,7 +66,7 @@
         /^tl\.tc$/,
         /^e2s\.cc$/,
         /^lyon\.kim$/,
-        /^linkvip\.tk$/,
+        /^(linkvip|4short)\.tk$/,
         /^stfly\.press$/,
         /^(businessiss2|techandreview)\.info$/,
         /^eatings\.stream$/,
