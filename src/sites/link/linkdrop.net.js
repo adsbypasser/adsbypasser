@@ -79,6 +79,7 @@
         /^tinylink\.run$/,
         /^btc\.ms$/,
         /^earn\.theplusit\.ro$/,
+        /^skip\.az$/,
       ],
     },
     async ready () {
