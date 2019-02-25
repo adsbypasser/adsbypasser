@@ -239,6 +239,17 @@ _.register({
 
 _.register({
   rule: {
+    host: /^hikarinoakariost\.info$/,
+  },
+  async ready () {
+    await _.wait(5000);
+    const hi = $('.boton > h2 > a');
+    await $.openLink(hi.href);
+  },
+});
+
+_.register({
+  rule: {
     host: /^kombatch\.loncat\.pw$/,
   },
   async ready () {
