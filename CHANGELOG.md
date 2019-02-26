@@ -21,7 +21,6 @@
     * techandreview.info
     * uiz.io
     * urlsamo.com
-* removed
 
 ## v6.30.0
 
