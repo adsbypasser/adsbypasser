@@ -299,12 +299,15 @@
     * drakorsafe.tech
     * drivefiles.bid
     * drive.jepitkertas.com
+    * download-mirror.ga
+    * dukun-cit.com
     * edogawa.lon.pw
     * filmku.lompat.in
     * fmlawkers.club
     * gameinfo.pw
     * getinfos.net
     * giga74.com
+    * goou.in
     * gtaind.com
     * healthtod.com
     * henpoi.lompat.in
@@ -343,6 +346,7 @@
     * safelinkreview.co
     * safelinkreview.com
     * safelinkreviewx.com
+    * sardeath.com
     * sehatlega.com
     * sehatsegar.net
     * short.awsubs.co
@@ -365,6 +369,7 @@
     * unduh.in
     * wibuindo.xyz
     * ww2.awsubs.co
+    * yametesenpai.xyz
 * segmentnext.com
     * segmentnext.com
     * videogameblogger.com
@@ -412,6 +417,7 @@
     * 3rab-cash.com
     * 3rabcut.com
     * 4cut.io
+    * 4short.tk
     * 8o.ee
     * adbilty.me
     * adbitly.in
@@ -429,6 +435,7 @@
     * adsvy.com
     * adurl.id
     * adzurl.cf
+    * arba7kpro.com
     * autech.xyz
     * bit-url.com
     * bloggingdekh.xyz
@@ -476,6 +483,7 @@
     * cuus.io
     * cyahealth.com
     * dmus.in
+    * dutchycorp.space
     * dz4link.com
     * dzurl.ml
     * e2s.cc
@@ -483,6 +491,7 @@
     * earn-guide.com
     * earn-url.com
     * earnbig.ca
+    * earnmoneytalk.com
     * eatings.stream
     * eklink.net
     * ershadat.com
@@ -583,6 +592,7 @@
     * shrtfly.com
     * shrtfly.net
     * simaholina.xyz
+    * skip.az
     * skips.link
     * skipurls.com
     * smarteasystudy.com
@@ -664,6 +674,7 @@
 * al.ly
     * al.ly
     * ally.sh
+    * ally.shortens.co
 * allkeyshop.com
     * allkeyshop.com
     * cshort.org
