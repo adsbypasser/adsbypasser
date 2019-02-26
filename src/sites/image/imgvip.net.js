@@ -21,7 +21,7 @@ _.register({
     path: /^\/[a-z|0-9]{4,10}$/,
   },
   async ready () {
-    const matches = $.searchFromScripts(/document.getElementById("soDaBug").src = "([^"]+)";/);
+    const matches = $.searchFromScripts(/document\.getElementById\("soDaBug"\)\.src = "([^"]+)";/);
     await $.openImage(matches[1]);
   },
 });
