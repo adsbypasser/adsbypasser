@@ -25,7 +25,10 @@ _.register({
       query: /^\?d=([a-zA-Z0-9/=]+)$/,
     },
     {
-      host: /^i\.gtaind\.com$/,
+      host: [
+        /^i\.gtaind\.com$/,
+        /^hikarinoakariost\.info$/,
+      ],
       query: /^\?([a-zA-Z0-9/=]+)$/,
     },
     // blogspot, kind of brutal
@@ -234,17 +237,6 @@ _.register({
   async ready () {
     const sd = $('.download-link > a');
     await $.openLink(sd.href);
-  },
-});
-
-_.register({
-  rule: {
-    host: /^hikarinoakariost\.info$/,
-  },
-  async ready () {
-    await _.wait(5000);
-    const hi = $('.boton > h2 > a');
-    await $.openLink(hi.href);
   },
 });
 
