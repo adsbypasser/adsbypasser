@@ -25,7 +25,10 @@ _.register({
       query: /^\?d=([a-zA-Z0-9/=]+)$/,
     },
     {
-      host: /^i\.gtaind\.com$/,
+      host: [
+        /^i\.gtaind\.com$/,
+        /^hikarinoakariost\.info$/,
+      ],
       query: /^\?([a-zA-Z0-9/=]+)$/,
     },
     // blogspot, kind of brutal
