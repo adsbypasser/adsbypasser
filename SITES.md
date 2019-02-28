@@ -682,6 +682,7 @@
 * imgvip.net
     * imagespicy.site
     * imgfile.net
+    * imgsee.net
     * imgsky.net
 * pics-money.ru
     * p0xpicmoney.ru
