@@ -3,6 +3,7 @@
 * fixed
 * added
     * hikarinoakariost.info
+    * imagespublic.tk
     * imgsee.net
 * removed
 
