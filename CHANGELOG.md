@@ -3,6 +3,7 @@
 * fixed
 * added
     * hikarinoakariost.info
+    * imgsee.net
 * removed
 
 ## v6.31.0
