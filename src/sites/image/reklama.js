@@ -46,6 +46,7 @@
           /^acidimg\.cc$/,
           /^s\.imghost\.top$/,
           /^xxx\.sexex\.xyz$/,
+          /^imagespublic\.tk$/,
         ],
         path: /^\/img-.*\.html/,
       },
@@ -182,7 +183,7 @@
       await $.openLink(path);
     },
   });
-  
+
   _.register({
     rule: {
       host: /^22pixx\.xyz$/,
@@ -275,7 +276,7 @@
       await $.openImage(l.href);
     },
   });
-  
+
   async function action (firstSelector, secondSelector) {
     $.remove('iframe, #adblock_detect, .popupOverlay');
 
