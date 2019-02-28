@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^www\.imagespicy\.site$/,
-      /^www\.(imgsky|imgfile)\.net$/,
+      /^www\.(imgsky|imgfile|imgsee)\.net$/,
     ],
     path: /^\/site\/v\/\d+$/,
   },
@@ -16,7 +16,7 @@ _.register({
   rule: {
     host: [
       /^www\.imagespicy\.site$/,
-      /^www\.(imgsky|imgfile)\.net$/,
+      /^www\.(imgsky|imgfile|imgsee)\.net$/,
     ],
     path: /^\/[a-z|0-9]{4,10}$/,
   },
