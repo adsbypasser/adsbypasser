@@ -1,26 +1,45 @@
+## TBA
+
+* fixed
+* added
+* removed
+
 ## v6.31.0
 
 * fixed
+    * idsly.bid
+    * idsly.net
     * imgfile.net
     * wicr.me
 * added
+    * 4short.tk
     * akanosora.com
+    * ally.shortens.co
+    * arba7kpro.com
     * crabcut.net
     * cutadlink.net
     * cuto.io
     * cutwin.us
+    * download-mirror.ga
+    * dukun-cit.com
+    * dutchycorp.space
     * earn.theplusit.ro
+    * earnmoneytalk.com
     * fabsdeals.com
     * flaz.link
     * geki.tech
+    * goou.in
     * icutlink.com
     * lapak.link
     * mrfourtech.com
     * oload.live
+    * sardeath.com
+    * skip.az
     * tech4utoday.com
     * techandreview.info
     * uiz.io
     * urlsamo.com
+    * yametesenpai.xyz
 
 ## v6.30.0
 
