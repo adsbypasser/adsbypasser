@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * hikarinoakariost.info
 * removed
 
 ## v6.31.0
