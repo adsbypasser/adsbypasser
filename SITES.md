@@ -312,6 +312,7 @@
     * healthtod.com
     * henpoi.lompat.in
     * hexafile.net
+    * hikarinoakariost.info
     * id-securelink.xyz
     * idnation.net
     * indexmovie.club
