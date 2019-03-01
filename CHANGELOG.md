@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * imgsee.net
 * removed
 
 ## v6.31.0
