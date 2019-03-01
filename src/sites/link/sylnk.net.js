@@ -265,11 +265,11 @@ _.register({
 
 _.register({
   rule: {
-    host: /^hexafile\.net$/,
+    host: /^(v1\.)?hexafile\.net$/,
     path: /^\/[a-zA-Z0-9]+/,
   },
   async ready () {
-    const h = $.searchFromScripts(/window\.location="([^"]+)";/);
+    const h = $.searchFromScripts(/="([^"]+)",e=0,f=a/);
     await $.openLink(h[1]);
   },
 });
