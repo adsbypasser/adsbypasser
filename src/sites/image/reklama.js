@@ -47,6 +47,7 @@
           /^s\.imghost\.top$/,
           /^xxx\.sexex\.xyz$/,
           /^imagespublic\.tk$/,
+          /^ecoimages\.xyz$/,
         ],
         path: /^\/img-.*\.html/,
       },
