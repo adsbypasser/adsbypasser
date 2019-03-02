@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * hexafile.net
 * added
     * imgsee.net
 * removed
