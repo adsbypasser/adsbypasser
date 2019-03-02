@@ -1,4 +1,4 @@
-## TBA
+## v6.32.0
 
 * fixed
     * hexafile.net
@@ -8,7 +8,6 @@
     * imagespublic.tk
     * imgsee.net
     * oload.space
-* removed
 
 ## v6.31.0
 
