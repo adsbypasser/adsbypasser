@@ -192,7 +192,7 @@
     }
 
     async call () {
-      const ok = this.prepare();
+      const ok = await this.prepare();
       if (!ok) {
         return;
       }
@@ -243,7 +243,7 @@
       super();
     }
 
-    prepare () {
+    async prepare () {
       this.removeOverlay();
 
       const f = $.$('#captchaShortlink');
@@ -258,10 +258,6 @@
       if (!b) {
         return false;
       }
-
-      if (!b.disabled) {
-        b.click();
-      }
       
       const o = new MutationObserver(() => {
         if (!b.disabled) {
@@ -271,6 +267,13 @@
       o.observe(b, {
         attributes: true,
       });
+
+      await _.wait(1000);
+      const click = f.clientWidth === 0 || f.childNodes.length === 0;
+      if (click && !b.disabled) {
+        _.info('clicking submit button, because recaptcha was empty');
+        b.click();
+      }
 
       return false;
     }
