@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * ecoimages.xyz
     * hikarinoakariost.info
     * imagespublic.tk
     * imgsee.net
