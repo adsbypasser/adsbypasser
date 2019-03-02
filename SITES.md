@@ -39,6 +39,7 @@
     * darpix.ga
     * dimtus.com
     * domaink.ru
+    * ecoimages.xyz
     * erimge.com
     * funimg.net
     * gallerycloud.net
