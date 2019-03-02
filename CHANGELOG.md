@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * hexafile.net
 * added
     * ecoimages.xyz
     * hikarinoakariost.info
