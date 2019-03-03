@@ -1,5 +1,10 @@
 _.register({
-  rule: 'http://pic-money.ru/*.html',
+  rule: {
+    host: [
+      /^pic-money\.ru$/,
+      /^shaggyimg\.pro$/,
+    ],
+  },
   async ready () {
     const f = document.forms[0];
     const sig = $('input[name="sig"]', f).value;
