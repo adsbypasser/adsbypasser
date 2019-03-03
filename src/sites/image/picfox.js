@@ -10,6 +10,7 @@ _.register({
     'http://pixsor.com/XXX/share-*.html',
     'http://holdthemoan.net/x/share-*.html',
     'http://www.imgz.pw/share-*.html',
+    'https://imguur.pictures/share-*.html'
   ],
   async ready () {
     const o = $('#iimg');
