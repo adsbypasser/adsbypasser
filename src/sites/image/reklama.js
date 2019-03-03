@@ -49,7 +49,7 @@
           /^imagespublic\.tk$/,
           /^ecoimages\.xyz$/,
         ],
-        path: /^\/img-.*\.html/,
+        path: /\/img-.*\.html/,
       },
       {
         host: [
