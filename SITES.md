@@ -440,6 +440,7 @@
     * adzurl.cf
     * arba7kpro.com
     * autech.xyz
+    * bakilink.com
     * bit-url.com
     * bloggingdekh.xyz
     * blogginggyanbox.com
@@ -450,6 +451,7 @@
     * by6dk.com
     * cashat.net
     * chrt.pw
+    * click2see.desi
     * clik.pw
     * clk.icu
     * clk.ink
@@ -497,6 +499,9 @@
     * earnmoneytalk.com
     * eatings.stream
     * eklink.net
+    * empearn.com
+    * empireshort.com
+    * enewstalk.com
     * ershadat.com
     * fabsdeals.com
     * flaz.link
@@ -508,6 +513,7 @@
     * git.tc
     * glory-link.com
     * gocitlink
+    * gossipcorners.com
     * gram.im
     * icutit.ca
     * icutlink.com
@@ -559,6 +565,7 @@
     * mlink.club
     * mykinggo.com
     * mrfourtech.com
+    * newupdatesonline.com
     * niagoshort.com
     * oke.io
     * oturl.com
@@ -624,6 +631,7 @@
     * uiz.io
     * ujv.me
     * ulshare.net
+    * uptoos.com
     * urlcloud.us
     * urle.co
     * urlsamo.com
