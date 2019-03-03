@@ -2,6 +2,14 @@
 
 * fixed
 * added
+    * bakilink.com
+    * click2see.desi
+    * empearn.com
+    * empireshort.com
+    * enewstalk.com
+    * gossipcorners.com
+    * newupdatesonline.com
+    * uptoos.com
 * removed
 
 ## v6.32.0
