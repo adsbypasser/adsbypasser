@@ -51,7 +51,7 @@
         /^payskip\.(me|org)$/,
         /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
-        /^(shink|shrten|gg-l|vnurl|bloggingdekh)\.xyz$/,
+        /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11)\.xyz$/,
         /^mlink\.club$/,
         /^(igram|gram)\.im$/,
         /^(clk|cll)\.(press|ink|sh|icu)$/,
