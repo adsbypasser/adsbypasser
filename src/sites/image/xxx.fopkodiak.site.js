@@ -3,6 +3,7 @@ _.register({
     host: [
       /^xxx\.fopkodiak\.site$/,
       /^blameless\.work$/,
+      /^xaoutchouc\.live$/,
     ],
     path: /^\/img-/,
   },
