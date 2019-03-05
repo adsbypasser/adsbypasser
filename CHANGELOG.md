@@ -2,6 +2,7 @@
 
 * fixed
 * added
+    * imguur.pictures
 * removed
 
 ## v6.32.0
