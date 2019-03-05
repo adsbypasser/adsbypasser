@@ -451,12 +451,14 @@
     * by6dk.com
     * cashat.net
     * chrt.pw
+    * cl250.club
     * click2see.desi
     * clik.pw
     * clk.icu
     * clk.ink
     * clk.press
     * clk.sh
+    * clkpays.com
     * cll.press
     * coinlink.co
     * converthinks.xyz
@@ -525,6 +527,7 @@
     * iitjeemainguide.in
     * itiad.com
     * itiurl.co
+    * jainjinvani.com
     * jurl.io
     * khabratk.com
     * koylinks.win
@@ -549,6 +552,7 @@
     * linksad.net
     * linku.us
     * linkvip.tk
+    * ln11.xyz
     * loadurl.com
     * lopte.pro
     * lotechnocan.org
@@ -581,9 +585,11 @@
     * psl.pw
     * pss.pw
     * raolink.com
+    * reb7konline.com
     * royurls.bid
     * safelinkblogger.com
     * safelinku.net
+    * sh11.xyz
     * shink.xyz
     * shln.pw
     * short.pastewma.com
@@ -610,7 +616,9 @@
     * srtfly.com
     * stfly.press
     * szs.pw
+    * tabeikh.com
     * taive.in
+    * tarnwh2i.com
     * tech4utoday.com
     * techandreview.info
     * tiny.ec
@@ -649,6 +657,7 @@
     * worldhack.net
     * xemlink.net
     * yourtechguider.com
+    * yourw-ay.com
     * z2i.com
     * za.gl
     * zeiz.me
@@ -746,6 +755,7 @@
     * bilder-upload.eu
     * bildr.no
     * binbox.io
+    * blameless.work
     * casimages.com
     * catcut.net
     * cli.gs
@@ -760,6 +770,7 @@
     * directupload.net
     * dl-protect.com
     * durl.me
+    * elil.cc
     * embedupload.com
     * ewa.ac
     * filoops.info
@@ -859,6 +870,7 @@
     * sa.ae
     * safeurl.eu
     * screenlist.ru
+    * shaggyimg.pro
     * shortid.co
     * shrink-service.it
     * sht.io
@@ -893,6 +905,7 @@
     * vir.al
     * vzturl.com
     * won.pe
+    * xaoutchouc.live
     * xxx.fopkodiak.site
     * yep.it
     * yooclick.com
