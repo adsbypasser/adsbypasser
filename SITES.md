@@ -466,6 +466,7 @@
     * counsellingresult2016.in
     * crabcut.net
     * crus.io
+    * cu2.io
     * cuee.io
     * cuio.io
     * cuon.io
