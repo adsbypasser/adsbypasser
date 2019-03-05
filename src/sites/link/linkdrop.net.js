@@ -52,7 +52,7 @@
         /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11)\.xyz$/,
-        /^mlink\.club$/,
+        /^(mlink|cl250)\.club$/,
         /^(igram|gram)\.im$/,
         /^(clk|cll)\.(press|ink|sh|icu)$/,
         /^short\.pe$/,
