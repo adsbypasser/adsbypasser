@@ -4,6 +4,7 @@
     * oload.space
 * changed
     * path rule in reklama.js
+    * path rule in openload.co.js 
 * added
     * bakilink.com
     * blameless.work
