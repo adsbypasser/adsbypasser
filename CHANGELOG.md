@@ -1,15 +1,32 @@
 ## TBA
 
 * fixed
+    * oload.space
+* changed
+    * path rule in reklama.js
 * added
     * bakilink.com
+    * blameless.work
+    * cl250.club
     * click2see.desi
+    * clkpays.com
+    * elil.cc
     * empearn.com
     * empireshort.com
     * enewstalk.com
     * gossipcorners.com
+    * imguur.pictures
+    * jainjinvani.com
+    * ln11.xyz
     * newupdatesonline.com
+    * reb7konline.com
+    * sh11.xyz
+    * shaggyimg.pro
+    * tabeikh.com
+    * tarnwh2i.com
     * uptoos.com
+    * xaoutchouc.live
+    * yourw-ay.com
 * removed
 
 ## v6.32.0
