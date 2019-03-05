@@ -10,6 +10,7 @@
     * cl250.club
     * click2see.desi
     * clkpays.com
+    * cu2.io
     * elil.cc
     * empearn.com
     * empireshort.com
