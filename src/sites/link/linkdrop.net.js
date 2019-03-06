@@ -82,6 +82,7 @@
         /^earn\.theplusit\.ro$/,
         /^skip\.az$/,
         /^dutchycorp\.space$/,
+        /^click2see\.desi/,
       ],
     },
     async ready () {
