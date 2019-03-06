@@ -43,7 +43,7 @@
         /^(www\.)?lwt\.pw$/,
         // else
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide)\.in$/,
-        /^(petty|skips|tr|zutrox|flaz)\.link$/,
+        /^(petty|skips|tr|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65)\.me$/,
         /^payskip\.(me|org)$/,
@@ -97,6 +97,18 @@
     },
     async ready () {
       const handler = new InvisibleRecaptchaHandler();
+      await handler.call();
+    },
+  });
+
+  _.register({
+    rule: {
+      host: [
+        /^zutrox\.link$/,
+      ],
+    },
+    async ready () {
+      const handler = new NonDisabledRecaptchaHandler();
       await handler.call();
     },
   });
@@ -327,6 +339,25 @@
       if (click && !b.disabled) {
         _.info('clicking submit button, because recaptcha was empty');
         b.click();
+      }
+    }
+
+  }
+
+
+  class NonDisabledRecaptchaHandler extends RecaptchaHandler {
+
+    constructor () {
+      super();
+    }
+
+    async submitListen (b, f) {
+      while (true) {
+        await _.wait(500);
+        if (grecaptcha && grecaptcha.getResponse().length !== 0) {
+          b.click();
+          break;
+        }
       }
     }
 
