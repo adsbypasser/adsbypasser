@@ -167,6 +167,7 @@
         '#__random_class_name__',
         '#headlineatas',
         '#myModal',
+        '.opacity_wrapper',
       ].join(', ');
 
       // TODO extract to paramater
