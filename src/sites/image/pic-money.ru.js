@@ -3,6 +3,7 @@ _.register({
     host: [
       /^pic-money\.ru$/,
       /^shaggyimg\.pro$/,
+      /^imgazure\.com$/,
     ],
   },
   async ready () {
