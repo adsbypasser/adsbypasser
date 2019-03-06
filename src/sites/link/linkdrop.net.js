@@ -45,8 +45,7 @@
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide)\.in$/,
         /^(petty|skips|tr|zutrox|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
-        /^(adbilty|adpop|wicr|ujv|tpx|adsrt|2fly|lin65)\.me$/,
-        /^wi\.cr$/,
+        /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65)\.me$/,
         /^payskip\.(me|org)$/,
         /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
@@ -85,6 +84,19 @@
     },
     async ready () {
       const handler = new RecaptchaHandler();
+      await handler.call();
+    },
+  });
+
+  _.register({
+    rule: {
+      host: [
+        /^wi\.cr$/,
+        /^wicr\.me$/,
+      ],
+    },
+    async ready () {
+      const handler = new InvisibleRecaptchaHandler();
       await handler.call();
     },
   });
@@ -258,7 +270,13 @@
       if (!b) {
         return false;
       }
-      
+
+      await this.submitListen(b, f);
+
+      return false;
+    }
+
+    async submitListen (b, f) {
       const o = new MutationObserver(() => {
         if (!b.disabled) {
           b.click();
@@ -267,15 +285,6 @@
       o.observe(b, {
         attributes: true,
       });
-
-      await _.wait(1000);
-      const click = f.clientWidth === 0 || f.childNodes.length === 0;
-      if (click && !b.disabled) {
-        _.info('clicking submit button, because recaptcha was empty');
-        b.click();
-      }
-
-      return false;
     }
 
     async getMiddleware () {
@@ -300,6 +309,24 @@
         } catch (e) {
           _.warn(e);
         }
+      }
+    }
+
+  }
+
+
+  class InvisibleRecaptchaHandler extends RecaptchaHandler {
+
+    constructor () {
+      super();
+    }
+
+    async submitListen (b, f) {
+      await _.wait(1000);
+      const click = f.clientWidth === 0 || f.childNodes.length === 0;
+      if (click && !b.disabled) {
+        _.info('clicking submit button, because recaptcha was empty');
+        b.click();
       }
     }
 
@@ -388,7 +415,7 @@
 
   class ShortlyHandler extends AbstractHandler {
 
-    constructor() {
+    constructor () {
       super();
     }
 
