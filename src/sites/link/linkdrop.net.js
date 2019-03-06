@@ -283,12 +283,13 @@
         return false;
       }
 
+      // InvisibleRecaptchaHandler needs the f element
       await this.submitListen(b, f);
 
       return false;
     }
 
-    async submitListen (b, f) {
+    async submitListen (b) {
       const o = new MutationObserver(() => {
         if (!b.disabled) {
           b.click();
@@ -351,9 +352,10 @@
       super();
     }
 
-    async submitListen (b, f) {
+    async submitListen (b) {
       while (true) {
         await _.wait(500);
+        /*global grecaptcha*/
         if (grecaptcha && grecaptcha.getResponse().length !== 0) {
           b.click();
           break;
