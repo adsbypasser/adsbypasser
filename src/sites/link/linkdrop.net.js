@@ -30,7 +30,7 @@
         /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(www\.)?clkpays\.com$/,
-        /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls)\.com$/,
+        /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7)\.com$/,
         /^(cutpaid|smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro)\.com$/,
         /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi)\.com$/,
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger)\.com$/,
