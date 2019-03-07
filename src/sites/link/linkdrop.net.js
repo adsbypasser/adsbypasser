@@ -68,7 +68,7 @@
         /^lyon\.kim$/,
         /^(linkvip|4short)\.tk$/,
         /^stfly\.press$/,
-        /^(businessiss2|techandreview)\.info$/,
+        /^(businessiss2|techandreview|yesmoviesapp)\.info$/,
         /^eatings\.stream$/,
         /^8o\.ee$/,
         /^buyitonline\.store$/,
@@ -167,6 +167,7 @@
         '#__random_class_name__',
         '#headlineatas',
         '#myModal',
+        '.opacity_wrapper',
       ].join(', ');
 
       // TODO extract to paramater
