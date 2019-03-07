@@ -2,9 +2,11 @@
 
 * fixed
     * oload.space
+    * shrt10.com
 * changed
     * path rule in reklama.js
-    * path rule in openload.co.js 
+    * path rule in openload.co.js
+    * added new overlay remover in linkdrop.js
 * added
     * bakilink.com
     * blameless.work
@@ -16,7 +18,9 @@
     * empearn.com
     * empireshort.com
     * enewstalk.com
+    * factural.com
     * gossipcorners.com
+    * imgazure.com
     * imguur.pictures
     * jainjinvani.com
     * ln11.xyz
@@ -28,6 +32,7 @@
     * tarnwh2i.com
     * uptoos.com
     * xaoutchouc.live
+    * yesmoviesapp.info
     * yourw-ay.com
 * removed
 
