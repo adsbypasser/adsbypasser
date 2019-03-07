@@ -84,6 +84,7 @@
         /^skip\.az$/,
         /^dutchycorp\.space$/,
         /^click2see\.desi$/,
+        /^shorted\.id$/,
       ],
     },
     async ready () {
