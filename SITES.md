@@ -507,6 +507,7 @@
     * enewstalk.com
     * ershadat.com
     * fabsdeals.com
+    * factural.com
     * flaz.link
     * foxurl.net
     * geki.tech
@@ -657,6 +658,7 @@
     * wolink.in
     * worldhack.net
     * xemlink.net
+    * yesmoviesapp.info
     * yourtechguider.com
     * yourw-ay.com
     * z2i.com
@@ -805,6 +807,7 @@
     * imagezilla.net
     * img.3ezy.net
     * img1.imagilive.com
+    * imgazure.com
     * imgbar.net
     * imgbox.com
     * imgcarry.com
