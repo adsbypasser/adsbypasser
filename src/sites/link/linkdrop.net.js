@@ -44,7 +44,7 @@
         /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs)\.pw$/,
         /^(www\.)?lwt\.pw$/,
         // else
-        /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide)\.in$/,
+        /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
         /^(petty|skips|tr|zutrox|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
         /^(adbilty|adpop|wicr|ujv|tpx|adsrt|2fly|lin65)\.me$/,
