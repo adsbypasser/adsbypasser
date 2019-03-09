@@ -29,7 +29,7 @@
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls)\.com$/,
-        /^(smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro)\.com$/,
+        /^(smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro|shrt10)\.com$/,
         /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi)\.com$/,
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger)\.com$/,
         /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|icutlink)\.com$/,
@@ -66,7 +66,7 @@
         /^lyon\.kim$/,
         /^(linkvip|4short)\.tk$/,
         /^stfly\.press$/,
-        /^(businessiss2|techandreview)\.info$/,
+        /^(businessiss2|techandreview|yesmoviesapp)\.info$/,
         /^eatings\.stream$/,
         /^8o\.ee$/,
         /^buyitonline\.store$/,
@@ -152,7 +152,7 @@
     rule: {
       host: [
         // com
-        /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro)\.com$/,
+        /^(cut-urls|linclik|premiumzen|by6dk|mikymoons|man2pro)\.com$/,
         /^(link4win|loadurl|cut4link|raolink|adshorte)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
@@ -195,6 +195,7 @@
         '#__random_class_name__',
         '#headlineatas',
         '#myModal',
+        '.opacity_wrapper',
       ].join(', ');
 
       // TODO extract to paramater
