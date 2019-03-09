@@ -29,7 +29,7 @@
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls)\.com$/,
-        /^(cutpaid|smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro)\.com$/,
+        /^(smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro)\.com$/,
         /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi)\.com$/,
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger)\.com$/,
         /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|icutlink)\.com$/,
@@ -60,7 +60,6 @@
         /^(koylinks|buy-in-599rs)\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
-        /^(www\.)?shrink\.vip$/,
         /^(tny|tiny)\.ec$/,
         /^tl\.tc$/,
         /^e2s\.cc$/,
@@ -93,6 +92,8 @@
       host: [
         /^wi\.cr$/,
         /^wicr\.me$/,
+        /^linksoflife\.co$/,
+        /^linksof\.life$/,
       ],
     },
     async ready () {
@@ -104,7 +105,10 @@
   _.register({
     rule: {
       host: [
+        /^cutpaid\.com$/,
+        /^ctui\.in$/,
         /^zutrox\.link$/,
+        /^(www\.)?shrink\.vip$/,
       ],
     },
     async ready () {
