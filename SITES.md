@@ -137,6 +137,7 @@
     * euro-pic.eu
     * freeimage.us
     * holdthemoan.net
+    * imguur.pictures
     * imgz.pw
     * picfox.org
     * pixsor.com

@@ -32,7 +32,7 @@
         /^(vy\.)?adsvy\.com$/,
         /^(www\.)?clkpays\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7)\.com$/,
-        /^(cutpaid|smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro)\.com$/,
+        /^(smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro|shrt10)\.com$/,
         /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi|wishes2)\.com$/,
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger)\.com$/,
         /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|icutlink)\.com$/,
@@ -46,10 +46,9 @@
         /^(www\.)?lwt\.pw$/,
         // else
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
-        /^(petty|skips|tr|zutrox|flaz)\.link$/,
+        /^(petty|skips|tr|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
-        /^(adbilty|adpop|wicr|ujv|tpx|adsrt|2fly|lin65)\.me$/,
-        /^wi\.cr$/,
+        /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65)\.me$/,
         /^payskip\.(me|org)$/,
         /^(oke|cuon|cuio|cuee|cuus|cuto|cu2|linktor|flylink|uiz)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
@@ -64,14 +63,13 @@
         /^(koylinks|buy-in-599rs)\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
-        /^(www\.)?shrink\.vip$/,
         /^(tny|tiny)\.ec$/,
         /^tl\.tc$/,
         /^e2s\.cc$/,
         /^lyon\.kim$/,
         /^(linkvip|4short)\.tk$/,
         /^stfly\.press$/,
-        /^(businessiss2|techandreview)\.info$/,
+        /^(businessiss2|techandreview|yesmoviesapp)\.info$/,
         /^eatings\.stream$/,
         /^8o\.ee$/,
         /^buyitonline\.store$/,
@@ -90,6 +88,36 @@
     },
     async ready () {
       const handler = new RecaptchaHandler();
+      await handler.call();
+    },
+  });
+
+  _.register({
+    rule: {
+      host: [
+        /^wi\.cr$/,
+        /^wicr\.me$/,
+        /^linksoflife\.co$/,
+        /^linksof\.life$/,
+      ],
+    },
+    async ready () {
+      const handler = new InvisibleRecaptchaHandler();
+      await handler.call();
+    },
+  });
+
+  _.register({
+    rule: {
+      host: [
+        /^cutpaid\.com$/,
+        /^ctui\.in$/,
+        /^zutrox\.link$/,
+        /^(www\.)?shrink\.vip$/,
+      ],
+    },
+    async ready () {
+      const handler = new NonDisabledRecaptchaHandler();
       await handler.call();
     },
   });
@@ -129,7 +157,7 @@
     rule: {
       host: [
         // com
-        /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro)\.com$/,
+        /^(cut-urls|linclik|premiumzen|by6dk|mikymoons|man2pro)\.com$/,
         /^(link4win|loadurl|cut4link|raolink|adshorte)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
@@ -172,6 +200,7 @@
         '#__random_class_name__',
         '#headlineatas',
         '#myModal',
+        '.opacity_wrapper',
       ].join(', ');
 
       // TODO extract to paramater
@@ -263,7 +292,14 @@
       if (!b) {
         return false;
       }
-      
+
+      // InvisibleRecaptchaHandler needs the f element
+      await this.submitListen(b, f);
+
+      return false;
+    }
+
+    async submitListen (b) {
       const o = new MutationObserver(() => {
         if (!b.disabled) {
           b.click();
@@ -272,15 +308,6 @@
       o.observe(b, {
         attributes: true,
       });
-
-      await _.wait(1000);
-      const click = f.clientWidth === 0 || f.childNodes.length === 0;
-      if (click && !b.disabled) {
-        _.info('clicking submit button, because recaptcha was empty');
-        b.click();
-      }
-
-      return false;
     }
 
     async getMiddleware () {
@@ -304,6 +331,44 @@
           }
         } catch (e) {
           _.warn(e);
+        }
+      }
+    }
+
+  }
+
+
+  class InvisibleRecaptchaHandler extends RecaptchaHandler {
+
+    constructor () {
+      super();
+    }
+
+    async submitListen (b, f) {
+      await _.wait(1000);
+      const click = f.clientWidth === 0 || f.childNodes.length === 0;
+      if (click && !b.disabled) {
+        _.info('clicking submit button, because recaptcha was empty');
+        b.click();
+      }
+    }
+
+  }
+
+
+  class NonDisabledRecaptchaHandler extends RecaptchaHandler {
+
+    constructor () {
+      super();
+    }
+
+    async submitListen (b) {
+      while (true) {
+        await _.wait(500);
+        /*global grecaptcha*/
+        if (grecaptcha && grecaptcha.getResponse().length !== 0) {
+          b.click();
+          break;
         }
       }
     }
@@ -393,7 +458,7 @@
 
   class ShortlyHandler extends AbstractHandler {
 
-    constructor() {
+    constructor () {
       super();
     }
 
