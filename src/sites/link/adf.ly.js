@@ -67,6 +67,12 @@
       $.remove('iframe');
       // cheat the session
       $.setCookie('FLYSESSID', generateRandomSessionCookie(40));
+
+      const close = $.$('div[onclick="close_bar();"]');
+      if (close) {
+        close.click();
+      }
+
       let rv = await $.get(location.href, '', {
         'Origin': _.none,
         'Referer': _.none,
