@@ -111,7 +111,7 @@
     rule: {
       host: [
         /^cutpaid\.com$/,
-        /^ctui\.in$/,
+        /^(ctui|cuti)\.in$/,
         /^zutrox\.link$/,
         /^(www\.)?shrink\.vip$/,
       ],
