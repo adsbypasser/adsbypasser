@@ -29,7 +29,7 @@
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls)\.com$/,
-        /^(cutpaid|smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro|shrt10)\.com$/,
+        /^(smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro|shrt10)\.com$/,
         /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi)\.com$/,
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger)\.com$/,
         /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|icutlink)\.com$/,
@@ -43,10 +43,9 @@
         /^(www\.)?lwt\.pw$/,
         // else
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide)\.in$/,
-        /^(petty|skips|tr|zutrox|flaz)\.link$/,
+        /^(petty|skips|tr|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
-        /^(adbilty|adpop|wicr|ujv|tpx|adsrt|2fly|lin65)\.me$/,
-        /^wi\.cr$/,
+        /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65)\.me$/,
         /^payskip\.(me|org)$/,
         /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
@@ -61,7 +60,6 @@
         /^(koylinks|buy-in-599rs)\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
-        /^(www\.)?shrink\.vip$/,
         /^(tny|tiny)\.ec$/,
         /^tl\.tc$/,
         /^e2s\.cc$/,
@@ -85,6 +83,36 @@
     },
     async ready () {
       const handler = new RecaptchaHandler();
+      await handler.call();
+    },
+  });
+
+  _.register({
+    rule: {
+      host: [
+        /^wi\.cr$/,
+        /^wicr\.me$/,
+        /^linksoflife\.co$/,
+        /^linksof\.life$/,
+      ],
+    },
+    async ready () {
+      const handler = new InvisibleRecaptchaHandler();
+      await handler.call();
+    },
+  });
+
+  _.register({
+    rule: {
+      host: [
+        /^cutpaid\.com$/,
+        /^ctui\.in$/,
+        /^zutrox\.link$/,
+        /^(www\.)?shrink\.vip$/,
+      ],
+    },
+    async ready () {
+      const handler = new NonDisabledRecaptchaHandler();
       await handler.call();
     },
   });
@@ -259,7 +287,14 @@
       if (!b) {
         return false;
       }
-      
+
+      // InvisibleRecaptchaHandler needs the f element
+      await this.submitListen(b, f);
+
+      return false;
+    }
+
+    async submitListen (b) {
       const o = new MutationObserver(() => {
         if (!b.disabled) {
           b.click();
@@ -268,15 +303,6 @@
       o.observe(b, {
         attributes: true,
       });
-
-      await _.wait(1000);
-      const click = f.clientWidth === 0 || f.childNodes.length === 0;
-      if (click && !b.disabled) {
-        _.info('clicking submit button, because recaptcha was empty');
-        b.click();
-      }
-
-      return false;
     }
 
     async getMiddleware () {
@@ -300,6 +326,44 @@
           }
         } catch (e) {
           _.warn(e);
+        }
+      }
+    }
+
+  }
+
+
+  class InvisibleRecaptchaHandler extends RecaptchaHandler {
+
+    constructor () {
+      super();
+    }
+
+    async submitListen (b, f) {
+      await _.wait(1000);
+      const click = f.clientWidth === 0 || f.childNodes.length === 0;
+      if (click && !b.disabled) {
+        _.info('clicking submit button, because recaptcha was empty');
+        b.click();
+      }
+    }
+
+  }
+
+
+  class NonDisabledRecaptchaHandler extends RecaptchaHandler {
+
+    constructor () {
+      super();
+    }
+
+    async submitListen (b) {
+      while (true) {
+        await _.wait(500);
+        /*global grecaptcha*/
+        if (grecaptcha && grecaptcha.getResponse().length !== 0) {
+          b.click();
+          break;
         }
       }
     }
@@ -389,7 +453,7 @@
 
   class ShortlyHandler extends AbstractHandler {
 
-    constructor() {
+    constructor () {
       super();
     }
 
