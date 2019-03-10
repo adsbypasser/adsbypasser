@@ -34,7 +34,6 @@
     * xaoutchouc.live
     * yesmoviesapp.info
     * yourw-ay.com
-* removed
 
 ## v6.32.0
 
