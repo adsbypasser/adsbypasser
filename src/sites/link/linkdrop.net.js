@@ -249,10 +249,6 @@
 
   class NoRecaptchaHandler extends AbstractHandler {
 
-    constructor () {
-      super();
-    }
-
     prepare () {
       this.removeFrame();
       this.removeOverlay();
@@ -275,10 +271,6 @@
 
 
   class RecaptchaHandler extends AbstractHandler {
-
-    constructor () {
-      super();
-    }
 
     async prepare () {
       this.removeOverlay();
@@ -343,10 +335,6 @@
 
   class InvisibleRecaptchaHandler extends RecaptchaHandler {
 
-    constructor () {
-      super();
-    }
-
     async submitListen (b, f) {
       await _.wait(1000);
       const click = f.clientWidth === 0 || f.childNodes.length === 0;
@@ -360,10 +348,6 @@
 
 
   class NonDisabledRecaptchaHandler extends RecaptchaHandler {
-
-    constructor () {
-      super();
-    }
 
     async submitListen (b) {
       while (true) {
@@ -380,10 +364,6 @@
 
 
   class OURLHandler extends RecaptchaHandler {
-
-    constructor () {
-      super();
-    }
 
     async getMiddleware () {
       return {
@@ -402,10 +382,6 @@
 
   class LinkDropHandler extends RecaptchaHandler {
 
-    constructor () {
-      super();
-    }
-
     async getMiddleware () {
       return await getJQueryForm('#mylink1');
     }
@@ -414,10 +390,6 @@
 
 
   class StagedHandler extends AbstractHandler {
-
-    constructor () {
-      super();
-    }
 
     prepare () {
       this.removeFrame();
@@ -460,10 +432,6 @@
   }
 
   class ShortlyHandler extends AbstractHandler {
-
-    constructor () {
-      super();
-    }
 
     prepare () {
       return true;
