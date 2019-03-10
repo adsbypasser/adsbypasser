@@ -28,7 +28,7 @@
         /^(tmearn|payshorturl|urltips|shrinkearn|itiad|cutsouf|enewstalk)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link)\.com$/,
         /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural)\.com$/,
-        /^(shrinkbuck|clkpay)\.com$/,
+        /^(shrinkbuck|clkpay|linksht)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(www\.)?clkpays\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7)\.com$/,
@@ -209,6 +209,7 @@
       this._formSelector = [
         '#go-link',
         '.go-link',
+        '#originalLink.get-link',
         'form[action="/links/go"]',
         'form[action="/links/linkdropgo"]',
       ].join(', ');
@@ -282,7 +283,7 @@
     async prepare () {
       this.removeOverlay();
 
-      const f = $.$('#captchaShortlink');
+      const f = $.$('#captchaShortlink, div.g-recaptcha');
       if (!f) {
         return true;
       }
@@ -517,6 +518,10 @@
 
   function getURLFromJQueryForm (jForm) {
     return new Promise((resolve, reject) => {
+      if (jForm.is('a') && jForm.attr('href')) {
+        resolve(jForm.attr('href'));
+      }
+
       const jQuery = $.window.$;
       jQuery.ajax({
         dataType: 'json',
