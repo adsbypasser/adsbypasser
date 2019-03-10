@@ -22,6 +22,7 @@ _.register({
     path: /^\/files\//,
   },
   async ready () {
+    _.wait(1);
     const b = $('.col-sm.centered.highlight form button');
     b.click();
   },
