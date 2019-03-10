@@ -58,7 +58,7 @@
         /^(igram|gram)\.im$/,
         /^(clk|cll)\.(press|ink|sh|icu)$/,
         /^short\.pe$/,
-        /^urlcloud\.us$/,
+        /^(urlcloud|imageoptimizer)\.us$/,
         /^(icutit|earnbig|cutearn)\.ca$/,
         /^(adzurl|link2link)\.cf$/,
         /^(koylinks|buy-in-599rs)\.win$/,
