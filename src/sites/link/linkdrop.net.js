@@ -84,6 +84,7 @@
         /^dutchycorp\.space$/,
         /^click2see\.desi$/,
         /^shorted\.id$/,
+        /^zi\.ht$/,
       ],
     },
     async ready () {
@@ -201,6 +202,7 @@
         '#headlineatas',
         '#myModal',
         '.opacity_wrapper',
+        '#overlay',
       ].join(', ');
 
       // TODO extract to paramater
