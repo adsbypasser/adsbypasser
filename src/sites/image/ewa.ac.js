@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^ewa\.ac$/,
+    host: [
+      /^ewa\.ac$/,
+      /^elil\.cc$/,
+    ],
     path: /^\/(.*)$/,
   },
   async ready (m) {

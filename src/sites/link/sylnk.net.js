@@ -299,6 +299,17 @@ _.register({
 
 _.register({
   rule: {
+    host: /^url\.hulblog\.com$/,
+    path: /^\/[a-zA-Z0-9]+/,
+  },
+  async ready () {
+    const h = $.searchFromScripts(/"href='([^']+)'/);
+    await $.openLink(h[1]);
+  },
+});
+
+_.register({
+  rule: {
     host: [
       /^ww[23]\.picnictrans\.com$/,
       /^short\.awsubs\.(co|me)$/,

@@ -2,8 +2,43 @@
 
 * fixed
 * added
+
+## v6.33.0
+
+* fixed
+    * oload.space
+    * shrt10.com
+* changed
+    * path rule in reklama.js
+    * path rule in openload.co.js
+    * added new overlay remover in linkdrop.js
+* added
+    * bakilink.com
+    * blameless.work
+    * cl250.club
+    * click2see.desi
+    * clkpays.com
+    * cu2.io
+    * elil.cc
+    * empearn.com
+    * empireshort.com
+    * enewstalk.com
+    * factural.com
+    * gossipcorners.com
+    * imgazure.com
     * imguur.pictures
-* removed
+    * jainjinvani.com
+    * ln11.xyz
+    * newupdatesonline.com
+    * reb7konline.com
+    * sh11.xyz
+    * shaggyimg.pro
+    * tabeikh.com
+    * tarnwh2i.com
+    * uptoos.com
+    * xaoutchouc.live
+    * yesmoviesapp.info
+    * yourw-ay.com
 
 ## v6.32.0
 

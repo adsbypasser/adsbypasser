@@ -1,6 +1,10 @@
 _.register({
   rule: {
-    host: /^xxx\.fopkodiak\.site$/,
+    host: [
+      /^xxx\.fopkodiak\.site$/,
+      /^blameless\.work$/,
+      /^xaoutchouc\.live$/,
+    ],
     path: /^\/img-/,
   },
   async ready () {
