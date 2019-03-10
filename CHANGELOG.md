@@ -12,19 +12,25 @@
     * path rule in reklama.js
     * path rule in openload.co.js
     * added new overlay remover in linkdrop.js
+    * added two new handlers in linkdrop.js
 * added
     * bakilink.com
     * blameless.work
     * cl250.club
     * click2see.desi
+    * clkpay.com
     * clkpays.com
     * cu2.io
     * elil.cc
+    * ely-om7.com
     * empearn.com
     * empireshort.com
     * enewstalk.com
     * factural.com
     * gossipcorners.com
+    * healthhindigyan.in
+    * imageoptimizer.us
+    * imageshtorm.com
     * imgazure.com
     * imguur.pictures
     * jainjinvani.com
@@ -33,9 +39,14 @@
     * reb7konline.com
     * sh11.xyz
     * shaggyimg.pro
+    * shorted.id
+    * shrinkbuck.com
     * tabeikh.com
     * tarnwh2i.com
+    * tradeguru.xyz
     * uptoos.com
+    * url.hulblog.com
+    * wishes2.com
     * xaoutchouc.live
     * yesmoviesapp.info
     * yourw-ay.com
