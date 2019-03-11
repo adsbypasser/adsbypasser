@@ -3,6 +3,7 @@
 * fixed
     * mirrored.to
     * tmearn
+    * adf.ly (maranhesduve.club, uclaut.net)
 
 ## v6.33.0
 
