@@ -1,7 +1,9 @@
 ## TBA
 
 * fixed
+    * tmearn.com
 * added
+    * cuti.in
 
 ## v6.33.0
 
