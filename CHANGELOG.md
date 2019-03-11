@@ -1,9 +1,10 @@
 ## TBA
 
-* fixed
-    * tmearn.com
 * added
     * cuti.in
+    * linksht.com
+    * wikiall.org
+    * zi.ht
 
 ## v6.33.0
 
