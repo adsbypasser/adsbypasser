@@ -751,8 +751,8 @@
     * adfoc.us
     * adlot.us
     * admy.link
-    * ah.pe
     * ah-informatique.com
+    * ah.pe
     * aka.gr
     * akoam.net
     * bayimg.com
@@ -763,6 +763,7 @@
     * bildr.no
     * binbox.io
     * blameless.work
+    * blog.langw.web.id
     * casimages.com
     * catcut.net
     * cli.gs
