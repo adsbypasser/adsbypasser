@@ -76,7 +76,7 @@
         /^shortearn\.eu$/,
         /^(1921681254|geki)\.tech$/,
         /^123link\.(pw|vip)$/,
-        /^lotechnocan\.org$/,
+        /^(lotechnocan|updatetribun)\.org$/,
         /^tinylink\.run$/,
         /^btc\.ms$/,
         /^earn\.theplusit\.ro$/,
