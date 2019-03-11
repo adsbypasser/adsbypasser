@@ -171,7 +171,7 @@ _.register({
       /^stt\.awsubs\.co$/,
       /^wibuindo\.xyz$/,
     ],
-    query: /^\?id=([a-zA-Z0-9/=]+)$/,
+    query: /^\?(id|c)=([a-zA-Z0-9/=]+)$/,
   },
   async ready () {
     const f = $('form');
@@ -228,6 +228,7 @@ _.register({
       await $.openLink(s[2]);
       return;
     }
+
     s = atob(m.query[1]);
     await $.openLink(s);
   },
