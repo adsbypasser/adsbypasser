@@ -481,6 +481,7 @@
     * cut4links.com
     * cutadlink.net
     * cutearn.ca
+    * cuti.in
     * cutl.in
     * cuto.io
     * cutpaid.com
