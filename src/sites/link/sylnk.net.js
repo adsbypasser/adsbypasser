@@ -87,6 +87,10 @@ _.register({
       host: /^(www\.)?dukun-cit\.com$/,
       query: /^\?s=([a-zA-Z0-9/=]+)$/,
     },
+    {
+      host: /^ultimate\.turkdown\.com$/,
+      query: /^\?stepone=([a-zA-Z0-9/=]+)$/,
+    },
   ],
   async start (m) {
     const rawLink = atob(m.query[1]);
