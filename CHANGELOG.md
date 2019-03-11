@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * blog.langw.web.id
     * cuti.in
     * elsfile.org
     * linksht.com
