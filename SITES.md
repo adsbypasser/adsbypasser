@@ -554,6 +554,7 @@
     * linkorlink.com
     * linkrex.net
     * linksad.net
+    * linksht.com
     * linku.us
     * linkvip.tk
     * ln11.xyz
@@ -666,6 +667,7 @@
     * z2i.com
     * za.gl
     * zeiz.me
+    * zi.ht
     * zlshorte.net
     * zutrox.link
 * gsurl.me
@@ -910,6 +912,7 @@
     * viidii.info
     * vir.al
     * vzturl.com
+    * wikiall.org
     * won.pe
     * xaoutchouc.live
     * xxx.fopkodiak.site
