@@ -91,6 +91,11 @@ _.register({
       host: /^ultimate\.turkdown\.com$/,
       query: /^\?stepone=([a-zA-Z0-9/=]+)$/,
     },
+    {
+      host: /^leechpremium\.link$/,
+      path: /^\/cheat\//,
+      query: /^\?link=([a-zA-Z0-9/=]+)$/,
+    },
   ],
   async start (m) {
     const rawLink = atob(m.query[1]);
