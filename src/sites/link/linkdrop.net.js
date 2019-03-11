@@ -450,12 +450,11 @@
 
     async getURL (id) {
       while (true) {
-        const url = await $.post('getlink.php', {
-          id,
+        $.window.jQuery.post('getlink.php', {id: id}).done(function (url) {
+          if (url.match(/^http/)) {
+            $.openLink(url);
+          }
         });
-        if (url) {
-          return url;
-        }
         await _.wait(500);
       }
     }
