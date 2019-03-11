@@ -1,7 +1,10 @@
 ## TBA
 
 * fixed
+    * mirrored.to
+* changed
 * added
+* removed
 
 ## v6.33.0
 
