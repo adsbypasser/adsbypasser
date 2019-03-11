@@ -87,6 +87,15 @@ _.register({
       host: /^(www\.)?dukun-cit\.com$/,
       query: /^\?s=([a-zA-Z0-9/=]+)$/,
     },
+    {
+      host: /^ultimate\.turkdown\.com$/,
+      query: /^\?stepone=([a-zA-Z0-9/=]+)$/,
+    },
+    {
+      host: /^leechpremium\.link$/,
+      path: /^\/cheat\//,
+      query: /^\?link=([a-zA-Z0-9/=]+)$/,
+    },
   ],
   async start (m) {
     const rawLink = atob(m.query[1]);
@@ -294,6 +303,17 @@ _.register({
   async ready () {
     const dm = $.searchFromScripts(/a href='([^']+)'/);
     await $.openLink(dm[1]);
+  },
+});
+
+_.register({
+  rule: {
+    host: /^url\.hulblog\.com$/,
+    path: /^\/[a-zA-Z0-9]+/,
+  },
+  async ready () {
+    const h = $.searchFromScripts(/"href='([^']+)'/);
+    await $.openLink(h[1]);
   },
 });
 

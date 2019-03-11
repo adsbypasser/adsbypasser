@@ -137,6 +137,7 @@
     * euro-pic.eu
     * freeimage.us
     * holdthemoan.net
+    * imguur.pictures
     * imgz.pw
     * picfox.org
     * pixsor.com
@@ -480,6 +481,7 @@
     * cut4links.com
     * cutadlink.net
     * cutearn.ca
+    * cuti.in
     * cutl.in
     * cuto.io
     * cutpaid.com
@@ -507,6 +509,7 @@
     * enewstalk.com
     * ershadat.com
     * fabsdeals.com
+    * factural.com
     * flaz.link
     * foxurl.net
     * geki.tech
@@ -551,6 +554,7 @@
     * linkorlink.com
     * linkrex.net
     * linksad.net
+    * linksht.com
     * linku.us
     * linkvip.tk
     * ln11.xyz
@@ -657,11 +661,13 @@
     * wolink.in
     * worldhack.net
     * xemlink.net
+    * yesmoviesapp.info
     * yourtechguider.com
     * yourw-ay.com
     * z2i.com
     * za.gl
     * zeiz.me
+    * zi.ht
     * zlshorte.net
     * zutrox.link
 * gsurl.me
@@ -745,8 +751,8 @@
     * adfoc.us
     * adlot.us
     * admy.link
-    * ah.pe
     * ah-informatique.com
+    * ah.pe
     * aka.gr
     * akoam.net
     * bayimg.com
@@ -757,6 +763,7 @@
     * bildr.no
     * binbox.io
     * blameless.work
+    * blog.langw.web.id
     * casimages.com
     * catcut.net
     * cli.gs
@@ -772,6 +779,7 @@
     * dl-protect.com
     * durl.me
     * elil.cc
+    * elsfile.org
     * embedupload.com
     * ewa.ac
     * filoops.info
@@ -805,6 +813,7 @@
     * imagezilla.net
     * img.3ezy.net
     * img1.imagilive.com
+    * imgazure.com
     * imgbar.net
     * imgbox.com
     * imgcarry.com
@@ -905,6 +914,7 @@
     * viidii.info
     * vir.al
     * vzturl.com
+    * wikiall.org
     * won.pe
     * xaoutchouc.live
     * xxx.fopkodiak.site

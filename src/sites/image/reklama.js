@@ -7,7 +7,7 @@
       {
         host: [
           // com
-          /^(imagecorn|imagedecode|imageko)\.com$/,
+          /^(imagecorn|imagedecode|imageko|imageshtorm)\.com$/,
           /^(hosturimage|greasyimage|damimage)\.com$/,
           /^(imgicy|imgsavvy|imgtzar|imgtornado|imgkicks|img2share|imghit|imgmain)\.com$/,
           /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana|imgjazz)\.com$/,
@@ -49,7 +49,7 @@
           /^imagespublic\.tk$/,
           /^ecoimages\.xyz$/,
         ],
-        path: /^\/img-.*\.html/,
+        path: /\/img-.*\.html/,
       },
       {
         host: [

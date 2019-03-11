@@ -28,11 +28,12 @@
         /^(tmearn|payshorturl|urltips|shrinkearn|itiad|cutsouf|enewstalk)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link)\.com$/,
         /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural)\.com$/,
+        /^(shrinkbuck|clkpay|linksht)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(www\.)?clkpays\.com$/,
-        /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls)\.com$/,
-        /^(cutpaid|smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro)\.com$/,
-        /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi)\.com$/,
+        /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7)\.com$/,
+        /^(smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro|shrt10)\.com$/,
+        /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi|wishes2)\.com$/,
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger)\.com$/,
         /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|icutlink)\.com$/,
         /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners)\.com$/,
@@ -44,33 +45,31 @@
         /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs)\.pw$/,
         /^(www\.)?lwt\.pw$/,
         // else
-        /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide)\.in$/,
-        /^(petty|skips|tr|zutrox|flaz)\.link$/,
+        /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
+        /^(petty|skips|tr|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
-        /^(adbilty|adpop|wicr|ujv|tpx|adsrt|2fly|lin65)\.me$/,
-        /^wi\.cr$/,
+        /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65)\.me$/,
         /^payskip\.(me|org)$/,
         /^(oke|cuon|cuio|cuee|cuus|cuto|cu2|linktor|flylink|uiz)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
-        /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11)\.xyz$/,
+        /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru)\.xyz$/,
         /^(mlink|cl250)\.club$/,
         /^(igram|gram)\.im$/,
         /^(clk|cll)\.(press|ink|sh|icu)$/,
         /^short\.pe$/,
-        /^urlcloud\.us$/,
+        /^(urlcloud|imageoptimizer)\.us$/,
         /^(icutit|earnbig|cutearn)\.ca$/,
         /^(adzurl|link2link)\.cf$/,
         /^(koylinks|buy-in-599rs)\.win$/,
         /^lopte\.pro$/,
         /^(www\.)?pnd\.tl$/,
-        /^(www\.)?shrink\.vip$/,
         /^(tny|tiny)\.ec$/,
         /^tl\.tc$/,
         /^e2s\.cc$/,
         /^lyon\.kim$/,
         /^(linkvip|4short)\.tk$/,
         /^stfly\.press$/,
-        /^(businessiss2|techandreview)\.info$/,
+        /^(businessiss2|techandreview|yesmoviesapp)\.info$/,
         /^eatings\.stream$/,
         /^8o\.ee$/,
         /^buyitonline\.store$/,
@@ -84,10 +83,42 @@
         /^skip\.az$/,
         /^dutchycorp\.space$/,
         /^click2see\.desi$/,
+        /^shorted\.id$/,
+        /^zi\.ht$/,
       ],
     },
     async ready () {
       const handler = new RecaptchaHandler();
+      await handler.call();
+    },
+  });
+
+  _.register({
+    rule: {
+      host: [
+        /^wi\.cr$/,
+        /^wicr\.me$/,
+        /^linksoflife\.co$/,
+        /^linksof\.life$/,
+      ],
+    },
+    async ready () {
+      const handler = new InvisibleRecaptchaHandler();
+      await handler.call();
+    },
+  });
+
+  _.register({
+    rule: {
+      host: [
+        /^cutpaid\.com$/,
+        /^(ctui|cuti)\.in$/,
+        /^zutrox\.link$/,
+        /^(www\.)?shrink\.vip$/,
+      ],
+    },
+    async ready () {
+      const handler = new NonDisabledRecaptchaHandler();
       await handler.call();
     },
   });
@@ -127,7 +158,7 @@
     rule: {
       host: [
         // com
-        /^(cut-urls|linclik|premiumzen|shrt10|by6dk|mikymoons|man2pro)\.com$/,
+        /^(cut-urls|linclik|premiumzen|by6dk|mikymoons|man2pro)\.com$/,
         /^(link4win|loadurl|cut4link|raolink|adshorte)\.com$/,
         /^short\.pastewma\.com$/,
         /^linkfly\.gaosmedia\.com$/,
@@ -170,12 +201,15 @@
         '#__random_class_name__',
         '#headlineatas',
         '#myModal',
+        '.opacity_wrapper',
+        '#overlay',
       ].join(', ');
 
       // TODO extract to paramater
       this._formSelector = [
         '#go-link',
         '.go-link',
+        '#originalLink.get-link',
         'form[action="/links/go"]',
         'form[action="/links/linkdropgo"]',
       ].join(', ');
@@ -215,10 +249,6 @@
 
   class NoRecaptchaHandler extends AbstractHandler {
 
-    constructor () {
-      super();
-    }
-
     prepare () {
       this.removeFrame();
       this.removeOverlay();
@@ -242,14 +272,10 @@
 
   class RecaptchaHandler extends AbstractHandler {
 
-    constructor () {
-      super();
-    }
-
     async prepare () {
       this.removeOverlay();
 
-      const f = $.$('#captchaShortlink');
+      const f = $.$('#captchaShortlink, div.g-recaptcha');
       if (!f) {
         return true;
       }
@@ -261,7 +287,14 @@
       if (!b) {
         return false;
       }
-      
+
+      // InvisibleRecaptchaHandler needs the f element
+      await this.submitListen(b, f);
+
+      return false;
+    }
+
+    async submitListen (b) {
       const o = new MutationObserver(() => {
         if (!b.disabled) {
           b.click();
@@ -270,15 +303,6 @@
       o.observe(b, {
         attributes: true,
       });
-
-      await _.wait(1000);
-      const click = f.clientWidth === 0 || f.childNodes.length === 0;
-      if (click && !b.disabled) {
-        _.info('clicking submit button, because recaptcha was empty');
-        b.click();
-      }
-
-      return false;
     }
 
     async getMiddleware () {
@@ -309,11 +333,37 @@
   }
 
 
-  class OURLHandler extends RecaptchaHandler {
+  class InvisibleRecaptchaHandler extends RecaptchaHandler {
 
-    constructor () {
-      super();
+    async submitListen (b, f) {
+      await _.wait(1000);
+      const click = f.clientWidth === 0 || f.childNodes.length === 0;
+      if (click && !b.disabled) {
+        _.info('clicking submit button, because recaptcha was empty');
+        b.click();
+      }
     }
+
+  }
+
+
+  class NonDisabledRecaptchaHandler extends RecaptchaHandler {
+
+    async submitListen (b) {
+      while (true) {
+        await _.wait(500);
+        /*global grecaptcha*/
+        if (grecaptcha && grecaptcha.getResponse().length !== 0) {
+          b.click();
+          break;
+        }
+      }
+    }
+
+  }
+
+
+  class OURLHandler extends RecaptchaHandler {
 
     async getMiddleware () {
       return {
@@ -332,10 +382,6 @@
 
   class LinkDropHandler extends RecaptchaHandler {
 
-    constructor () {
-      super();
-    }
-
     async getMiddleware () {
       return await getJQueryForm('#mylink1');
     }
@@ -344,10 +390,6 @@
 
 
   class StagedHandler extends AbstractHandler {
-
-    constructor () {
-      super();
-    }
 
     prepare () {
       this.removeFrame();
@@ -390,10 +432,6 @@
   }
 
   class ShortlyHandler extends AbstractHandler {
-
-    constructor() {
-      super();
-    }
 
     prepare () {
       return true;
@@ -448,6 +486,10 @@
 
   function getURLFromJQueryForm (jForm) {
     return new Promise((resolve, reject) => {
+      if (jForm.is('a') && jForm.attr('href')) {
+        resolve(jForm.attr('href'));
+      }
+
       const jQuery = $.window.$;
       jQuery.ajax({
         dataType: 'json',
