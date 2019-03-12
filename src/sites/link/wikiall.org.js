@@ -10,7 +10,7 @@ _.register({
     const o = new MutationObserver(() => {
       const a = $.$('div#place.get-btn > a[href]');
       if (a && a.href) {
-        await $.openLink(a.href);
+        $.openLink(a.href);
       }
     });
     o.observe(div, {
