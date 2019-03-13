@@ -51,7 +51,7 @@
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65)\.me$/,
         /^payskip\.(me|org)$/,
         /^(oke|cuon|cuio|cuee|cuus|cuto|cu2|linktor|flylink|uiz)\.io$/,
-        /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
+        /^(3bst|coinlink|itiurl|coshink|link5s|curs|makeurl)\.co$/,
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru)\.xyz$/,
         /^(mlink|cl250)\.club$/,
         /^(igram|gram)\.im$/,
