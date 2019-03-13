@@ -4,7 +4,15 @@
     * blog.langw.web.id
     * cuti.in
     * elsfile.org
+    * filemedia.net
+    * haxrs.com
+    * k2nblog.com
+    * leechpremium.link
     * linksht.com
+    * makeurl.co
+    * turkdown.com
+    * updatetribun.org
+    * ux9.de
     * wikiall.org
     * zi.ht
 
