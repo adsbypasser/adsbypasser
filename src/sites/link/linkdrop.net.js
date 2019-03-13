@@ -28,7 +28,7 @@
         /^(tmearn|payshorturl|urltips|shrinkearn|itiad|cutsouf|enewstalk)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link)\.com$/,
         /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural)\.com$/,
-        /^(shrinkbuck|clkpay|linksht)\.com$/,
+        /^(shrinkbuck|clkpay|linksht|haxrs)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(www\.)?clkpays\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7)\.com$/,
