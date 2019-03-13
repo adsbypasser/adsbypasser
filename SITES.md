@@ -521,6 +521,7 @@
     * gocitlink
     * gossipcorners.com
     * gram.im
+    * haxrs.com
     * icutit.ca
     * icutlink.com
     * idsly.bid
@@ -564,6 +565,7 @@
     * lpe.pw
     * lwt.pw
     * lyon.kim
+    * makeurl.co
     * man2pro.com
     * marivelkece.xyz
     * megaurl.in
@@ -644,6 +646,7 @@
     * uiz.io
     * ujv.me
     * ulshare.net
+    * updatetribun.org
     * uptoos.com
     * urlcloud.us
     * urle.co
@@ -782,6 +785,7 @@
     * elsfile.org
     * embedupload.com
     * ewa.ac
+    * filemedia.net
     * filoops.info
     * flylink.io
     * fopkodiak.site
@@ -827,8 +831,10 @@
     * javlibrary.com
     * javtor.com
     * jheberg.net
+    * k2nblog.com
     * keptarolo.hu
     * kingofshrink.com
+    * leechpremium.link
     * lienscash.com
     * link.im
     * link.tl
@@ -909,6 +915,7 @@
     * urlms.com
     * urlv2.com
     * uskip.me
+    * ux9.de
     * vavi.co
     * vidto.me
     * viidii.info
