@@ -2,6 +2,8 @@
 
 * fixed
     * mirrored.to
+    * shortly.xyz
+    * sweetlantern.com
     * tmearn
     * adf.ly (maranhesduve.club, uclaut.net)
 
