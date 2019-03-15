@@ -453,6 +453,7 @@
     * cashat.net
     * chrt.pw
     * cl250.club
+    * click2-url.com
     * click2see.desi
     * clik.pw
     * clk.icu
@@ -574,8 +575,9 @@
     * mikymoons.com
     * mitly.us
     * mlink.club
-    * mykinggo.com
     * mrfourtech.com
+    * mykinggo.com
+    * newskart.xyz
     * newupdatesonline.com
     * niagoshort.com
     * oke.io
@@ -688,6 +690,7 @@
     * 10co.me
     * 10co.xyz
 * openload.co
+    * oladblock.services
     * oload.cc
     * oload.cloud
     * oload.club
