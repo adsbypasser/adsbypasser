@@ -1,11 +1,12 @@
 ## TBA
 
 * fixed
+    * adf.ly (maranhesduve.club, uclaut.net)
+    * imgbaron.com
     * mirrored.to
     * shortly.xyz
     * sweetlantern.com
     * tmearn
-    * adf.ly (maranhesduve.club, uclaut.net)
 
 ## v6.33.0
 
