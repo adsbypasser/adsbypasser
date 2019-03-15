@@ -2,6 +2,7 @@
 
 * added
     * blog.langw.web.id
+    * click2-url.com
     * cuti.in
     * elsfile.org
     * filemedia.net
@@ -10,6 +11,8 @@
     * leechpremium.link
     * linksht.com
     * makeurl.co
+    * newskart.xyz
+    * oladblock.services
     * turkdown.com
     * updatetribun.org
     * ux9.de
