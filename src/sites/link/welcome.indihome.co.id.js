@@ -1,7 +1,7 @@
 _.register({
   rule: {
-    host: /^welcome\.indihome\.co.id\/landing-page$/,
-    path: /^\/[a-zA-Z0-9]+/,
+    host: /^welcome\.indihome\.co\.id$/,
+    path: /^\/landing-page\//,
   },
   async ready () {
     const s = $('a');
