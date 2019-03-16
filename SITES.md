@@ -279,6 +279,8 @@
     * linkpoi.in
     * minidroid.net
 * sylnk.net
+    * ad4msan.ml
+    * ad4msan.win
     * akanosora.com
     * animeforce.stream
     * ani-share.com
@@ -536,6 +538,7 @@
     * jainjinvani.com
     * jurl.io
     * khabratk.com
+    * kidsors.xyz
     * koylinks.win
     * kuylink.com
     * l2s.io
@@ -604,6 +607,7 @@
     * short.pastewma.com
     * short.pe
     * short2win.com
+    * short2win.me
     * short2win.net
     * shortad.cf
     * shortearn.eu
