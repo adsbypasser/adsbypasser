@@ -57,6 +57,7 @@ _.register({
         /^unduh\.in/,
         /^(www\.)?drakorsafe\.tech$/,
         /^(omgmusik|omglyrics)\.com$/,
+        /^ad4msan\.win$/,
       ],
       query: [
         // id must be the first captured group
@@ -116,7 +117,7 @@ _.register({
         // safelinkreview.co
         /(^|\.)safelink(converter|reviewx?)\.com?$/,
         /^giga74\.com$/,
-        /^awsubsco\.ml$/,
+        /^(awsubsco|ad4msan)\.ml$/,
         /^nekopoi\.ga$/,
       ],
       query: /id=([\w\\]+=*)/,
