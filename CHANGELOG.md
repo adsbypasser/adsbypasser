@@ -1,6 +1,8 @@
 ## TBA
 
 * added
+    * ad4msan.ml
+    * ad4msan.win
     * blog.langw.web.id
     * click2-url.com
     * cuti.in
@@ -8,11 +10,13 @@
     * filemedia.net
     * haxrs.com
     * k2nblog.com
+    * kidsors.xyz
     * leechpremium.link
     * linksht.com
     * makeurl.co
     * newskart.xyz
     * oladblock.services
+    * short2win.me
     * turkdown.com
     * updatetribun.org
     * ux9.de
