@@ -33,6 +33,19 @@
   });
 
   _.register({
+    rule: {
+      query: /lp=adfly_allow&.*href=([^&]+)/,
+    },
+    async start (m) {
+      const url = decodeURIComponent(m.query[1]);
+      if (url.match(/^http/)) {
+        // absolute path
+        await $.openLink(url);
+      }
+    },
+  });
+
+  _.register({
     // generic pattern
     rule () {
       const h = $.$('html[id="main_html"]');
@@ -54,6 +67,12 @@
       $.remove('iframe');
       // cheat the session
       $.setCookie('FLYSESSID', generateRandomSessionCookie(40));
+
+      const close = $.$('div[onclick="close_bar();"]');
+      if (close) {
+        close.click();
+      }
+
       let rv = await $.get(location.href, '', {
         'Origin': _.none,
         'Referer': _.none,

@@ -57,6 +57,7 @@
     * imageon.org
     * imagerar.com
     * imagescanner.cc
+    * imageshtorm.com
     * imagespublic.tk
     * imageteam.org
     * img2share.com
@@ -374,6 +375,7 @@
     * tojros.tk
     * tout-debrid.net
     * unduh.in
+    * url.hulblog.com
     * wibuindo.xyz
     * ww2.awsubs.co
     * yametesenpai.xyz
@@ -463,6 +465,7 @@
     * clk.ink
     * clk.press
     * clk.sh
+    * clkpay.com
     * clkpays.com
     * cll.press
     * coinlink.co
@@ -508,6 +511,7 @@
     * earnmoneytalk.com
     * eatings.stream
     * eklink.net
+    * ely-om7.com
     * empearn.com
     * empireshort.com
     * enewstalk.com
@@ -526,6 +530,7 @@
     * gossipcorners.com
     * gram.im
     * haxrs.com
+    * healthhindigyan.in
     * icutit.ca
     * icutlink.com
     * idsly.bid
@@ -534,6 +539,7 @@
     * idsly.org
     * igram.im
     * iitjeemainguide.in
+    * imageoptimizer.us
     * itiad.com
     * itiurl.co
     * jainjinvani.com
@@ -612,10 +618,12 @@
     * short2win.net
     * shortad.cf
     * shortearn.eu
+    * shorted.id
     * shortglobal.com
     * shortit.ca
     * shortly.xyz
     * shrink.vip
+    * shrinkbuck.com
     * shrinkearn.com
     * shrt10.com
     * shrten.xyz
@@ -646,6 +654,7 @@
     * topurl.net
     * tpx.me
     * tr.link
+    * tradeguru.xyz
     * trlink.in
     * tui.click
     * twik.pw
@@ -668,6 +677,7 @@
     * wi.cr
     * wicr.me
     * win4cut.com
+    * wishes2.com
     * wolink.in
     * worldhack.net
     * xemlink.net
