@@ -1,5 +1,5 @@
 * adf.ly
-    * queuecosm.bid
+    * (universally handled)
 * linkbucks
     * allanalpass.com
     * drstickyfingers.com
