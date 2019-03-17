@@ -266,14 +266,14 @@ _.register({
 });
 
 _.register({
-	rule: {
-	  host: /^tout-debrid\.net$/,
+  rule: {
+    host: /^tout-debrid\.net$/,
     path: /^\/api\//,
-	},
-	async ready () {
-	  const t = $('.download-box > div > a');
-	  await $.openLink(t.href);
-	},
+  },
+  async ready () {
+    const t = $('.download-box > div > a');
+    await $.openLink(t.href);
+  },
 });
 
 _.register({
