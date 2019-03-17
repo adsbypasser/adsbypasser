@@ -17,6 +17,7 @@
     * newskart.xyz
     * oladblock.services
     * short2win.me
+    * tout-debrid.net
     * turkdown.com
     * updatetribun.org
     * ux9.de
