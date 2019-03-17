@@ -1,4 +1,4 @@
-## TBA
+## v6.34.0
 
 * fixed
     * adf.ly (maranhesduve.club, uclaut.net)
