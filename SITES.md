@@ -372,6 +372,7 @@
     * telolet.in
     * tetew.info
     * tojros.tk
+    * tout-debrid.net
     * unduh.in
     * wibuindo.xyz
     * ww2.awsubs.co
