@@ -86,6 +86,7 @@
         /^click2see\.desi$/,
         /^shorted\.id$/,
         /^zi\.ht$/,
+        /^funnyquiz\.blog$/,
       ],
     },
     async ready () {
