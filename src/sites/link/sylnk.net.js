@@ -172,7 +172,7 @@ _.register({
       /^stt\.awsubs\.co$/,
       /^wibuindo\.xyz$/,
     ],
-    query: /^\?(id|c)=([a-zA-Z0-9/=]+)$/,
+    query: /^\?(id|c|k)=([a-zA-Z0-9/=]+)$/,
   },
   async ready () {
     const f = $('form');
