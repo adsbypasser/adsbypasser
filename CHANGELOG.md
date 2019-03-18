@@ -1,6 +1,8 @@
 ## TBA
 
 * added
+    * techinhub.xyz
+    * viralnow.xyz
 
 ## v6.34.0
 
