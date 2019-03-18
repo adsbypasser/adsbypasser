@@ -42,7 +42,7 @@
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
         /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut)\.net$/,
         // pw
-        /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs)\.pw$/,
+        /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs|miniurl)\.pw$/,
         /^(www\.)?lwt\.pw$/,
         // else
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
