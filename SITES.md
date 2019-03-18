@@ -643,6 +643,7 @@
     * tarnwh2i.com
     * tech4utoday.com
     * techandreview.info
+    * techinhub.xyz
     * tiny.ec
     * tinylink.run
     * tinylinks.net
@@ -669,6 +670,7 @@
     * urlsamo.com
     * urltips.com
     * vinaurl.net
+    * viralnow.xyz
     * viralukk.com
     * vivads.net
     * vnurl.net
