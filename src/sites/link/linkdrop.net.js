@@ -38,7 +38,7 @@
         /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|icutlink)\.com$/,
         /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners)\.com$/,
         // net
-        /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
+        /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
         /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut)\.net$/,
         // pw
@@ -166,7 +166,7 @@
         /^(www\.)?niagoshort\.com$/,
         // net
         /^www\.worldhack\.net$/,
-        /^(eklink|vivads)\.net$/,
+        /^(eklink)\.net$/,
         // else
         /^(urle|adshort)\.co$/,
         /^(weefy|adbull|zeiz|link4|adcoin)\.me$/,
