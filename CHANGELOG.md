@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * sweetlantern.com
 
 ## v6.34.0
 
