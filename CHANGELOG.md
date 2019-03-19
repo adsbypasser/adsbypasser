@@ -2,6 +2,7 @@
 
 * fixed
     * sweetlantern.com
+    * vivads.net
 
 ## v6.34.0
 
