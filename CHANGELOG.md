@@ -1,6 +1,10 @@
 ## TBA
 
 * added
+    * cooltxtgen.com
+    * funnyquiz.blog
+    * miniurl.pw
+    * shophipro.xyz
     * techinhub.xyz
     * viralnow.xyz
 
