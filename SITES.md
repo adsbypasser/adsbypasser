@@ -470,6 +470,7 @@
     * cll.press
     * coinlink.co
     * converthinks.xyz
+    * cooltxtgen.com
     * coshink.co
     * counsellingresult2016.in
     * crabcut.net
@@ -520,6 +521,7 @@
     * factural.com
     * flaz.link
     * foxurl.net
+    * funnyquiz.blog
     * geki.tech
     * getlink.pw
     * gg-l.xyz
@@ -583,6 +585,7 @@
     * megaurl.link
     * met.bz
     * mikymoons.com
+    * miniurl.pw
     * mitly.us
     * mlink.club
     * mrfourtech.com
@@ -611,6 +614,7 @@
     * sh11.xyz
     * shink.xyz
     * shln.pw
+    * shophipro.xyz
     * short.pastewma.com
     * short.pe
     * short2win.com
