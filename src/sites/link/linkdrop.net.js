@@ -87,6 +87,7 @@
         /^shorted\.id$/,
         /^zi\.ht$/,
         /^funnyquiz\.blog$/,
+        /^sciencelife\.ga$/,
       ],
     },
     async ready () {
