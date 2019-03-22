@@ -25,7 +25,7 @@
       host: [
         // com
         /^(dz4link|gocitlink|3rabcut|short2win|adsrt|shortglobal|jainjinvani)\.com$/,
-        /^(payshorturl|urltips|shrinkearn|itiad|cutsouf|enewstalk|lnks4all)\.com$/,
+        /^(payshorturl|urltips|shrinkearn|itiad|cutsouf|enewstalk|lnks4all|jejaklagu)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link|coolmitten)\.com$/,
         /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural)\.com$/,
         /^(shrinkbuck|clkpay|linksht|haxrs|click2-url|cooltxtgen|arba7co)\.com$/,
