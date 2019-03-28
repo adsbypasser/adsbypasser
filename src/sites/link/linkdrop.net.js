@@ -90,6 +90,7 @@
         /^funnyquiz\.blog$/,
         /^sciencelife\.ga$/,
         /^thin\.at$/,
+        /^click2url\.online$/,
       ],
     },
     async ready () {
