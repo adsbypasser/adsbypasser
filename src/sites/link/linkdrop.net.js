@@ -85,6 +85,7 @@
         /^click2see\.desi$/,
         /^shorted\.id$/,
         /^zi\.ht$/,
+        /^za\.gl$/,
       ],
     },
     async ready () {
@@ -182,7 +183,6 @@
         /^shortit\.ca$/,
         /^spamlink\.org$/,
         /^royurls\.bid$/,
-        /^za\.gl$/,
         /^(1)?idsly\.(com|bid|net|org)$/,
       ],
     },
