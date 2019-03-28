@@ -88,6 +88,7 @@
         /^zi\.ht$/,
         /^funnyquiz\.blog$/,
         /^sciencelife\.ga$/,
+        /^thin\.at$/,
       ],
     },
     async ready () {
