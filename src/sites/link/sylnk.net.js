@@ -27,6 +27,7 @@ _.register({
     {
       host: [
         /^i\.gtaind\.com$/,
+        /^pebisnis-muda\.com$/,
         /^hikarinoakariost\.info$/,
       ],
       query: /^\?([a-zA-Z0-9/=]+)$/,
