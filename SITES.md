@@ -347,6 +347,7 @@
     * njiir.com
     * omglyrics.com
     * omgmusik.com
+    * pebisnis-muda.com
     * plantaheim.com
     * plantaheim.web.id
     * safelinkconverter.com
@@ -428,6 +429,7 @@
     * 4cut.io
     * 4short.tk
     * 8o.ee
+    * abouttech.space
     * adbilty.me
     * adbitly.in
     * adbull.me
@@ -444,6 +446,7 @@
     * adsvy.com
     * adurl.id
     * adzurl.cf
+    * arba7co.com
     * arba7kpro.com
     * autech.xyz
     * bakilink.com
@@ -460,6 +463,7 @@
     * cl250.club
     * click2-url.com
     * click2see.desi
+    * click2url.online
     * clik.pw
     * clk.icu
     * clk.ink
@@ -470,6 +474,7 @@
     * cll.press
     * coinlink.co
     * converthinks.xyz
+    * coolmitten.com
     * cooltxtgen.com
     * coshink.co
     * counsellingresult2016.in
@@ -523,6 +528,7 @@
     * foxurl.net
     * funnyquiz.blog
     * geki.tech
+    * getfreshcloud.xyz
     * getlink.pw
     * gg-l.xyz
     * gifsis.com
@@ -545,10 +551,12 @@
     * itiad.com
     * itiurl.co
     * jainjinvani.com
+    * jejaklagu.com
     * jurl.io
     * khabratk.com
     * kidsors.xyz
     * koylinks.win
+    * kpscthulasilogin.info
     * kuylink.com
     * l2s.io
     * lapak.link
@@ -572,6 +580,7 @@
     * linku.us
     * linkvip.tk
     * ln11.xyz
+    * lnks4all.com
     * loadurl.com
     * lopte.pro
     * lotechnocan.org
@@ -596,6 +605,7 @@
     * oke.io
     * oturl.com
     * ourl.io
+    * partqb2i.com
     * payshorturl.com
     * payskip.me
     * payskip.org
@@ -611,6 +621,7 @@
     * royurls.bid
     * safelinkblogger.com
     * safelinku.net
+    * sciencelife.ga
     * sh11.xyz
     * shink.xyz
     * shln.pw
@@ -625,6 +636,7 @@
     * shorted.id
     * shortglobal.com
     * shortit.ca
+    * shortlinko.com
     * shortly.xyz
     * shrink.vip
     * shrinkbuck.com
@@ -648,6 +660,8 @@
     * tech4utoday.com
     * techandreview.info
     * techinhub.xyz
+    * technocanvas.xyz
+    * thin.at
     * tiny.ec
     * tinylink.run
     * tinylinks.net
@@ -712,6 +726,7 @@
     * 10co.xyz
 * openload.co
     * oladblock.services
+    * oladblock.xyz
     * oload.cc
     * oload.cloud
     * oload.club
