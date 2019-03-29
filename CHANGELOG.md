@@ -3,6 +3,7 @@
 * fixed
     * sweetlantern.com
     * vivads.net
+    * za.gl
 
 ## v6.34.0
 
