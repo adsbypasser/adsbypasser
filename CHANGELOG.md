@@ -1,11 +1,26 @@
 ## TBA
 
 * added
+    * abouttech.space
+    * arba7co.com
+    * click2url.online
+    * coolmitten.com
     * cooltxtgen.com
     * funnyquiz.blog
+    * getfreshcloud.xyz
+    * jejaklagu.com
+    * kpscthulasilogin.info
+    * lnks4all.com
     * miniurl.pw
+    * oladblock.xyz
+    * partqb2i.com
+    * pebisnis-muda.com
+    * sciencelife.ga
     * shophipro.xyz
+    * shortlinko.com
     * techinhub.xyz
+    * technocanvas.xyz
+    * thin.at
     * viralnow.xyz
 
 ## v6.34.0
