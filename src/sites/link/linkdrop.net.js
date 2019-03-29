@@ -91,6 +91,7 @@
         /^sciencelife\.ga$/,
         /^thin\.at$/,
         /^click2url\.online$/,
+        /^sk-ip\.ru$/,
       ],
     },
     async ready () {
