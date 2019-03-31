@@ -56,7 +56,7 @@
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors)\.xyz$/,
         /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud)\.xyz$/,
         /^(mlink|cl250)\.club$/,
-        /^(igram|gram)\.im$/,
+        /^(igram|gram|pingit)\.im$/,
         /^(clk|cll)\.(press|ink|sh|icu)$/,
         /^short\.pe$/,
         /^(urlcloud|imageoptimizer)\.us$/,
