@@ -47,6 +47,7 @@
         /^(www\.)?lwt\.pw$/,
         // else
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
+        /^(utimetableresult)\.in$/,
         /^(petty|skips|tr|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win)\.me$/,
