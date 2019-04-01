@@ -4,6 +4,7 @@ _.register({
       /^al\.ly$/,
       /^ally\.sh$/,
       /^ally\.shortens\.co$/,
+      /^dausel\.co$/,
     ],
   },
   async ready () {
