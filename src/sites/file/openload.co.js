@@ -3,7 +3,7 @@ _.register({
     host: [
       /^openload\.(co|pw)$/,
       /^oload\.(stream|info|site|tv|win|download|cloud|cc|fun|club|live|space)$/,
-      /^oladblock\.(services|xyz)$/,
+      /^oladblock\.(services|xyz|me)$/,
     ],
     path: /^\/f\/.*/,
   },
