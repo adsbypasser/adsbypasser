@@ -116,6 +116,7 @@
         /^(ctui|cuti)\.in$/,
         /^zutrox\.link$/,
         /^(www\.)?shrink\.vip$/,
+        /^cutwin\.us$/,
       ],
     },
     async ready () {
@@ -179,7 +180,7 @@
         /^shortad\.cf$/,
         /^123link\.(io|co|press|pro)$/,
         /^git\.tc$/,
-        /^(adfu|linku|cutwin)\.us$/,
+        /^(adfu|linku)\.us$/,
         /^shortit\.ca$/,
         /^spamlink\.org$/,
         /^royurls\.bid$/,
