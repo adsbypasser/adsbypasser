@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * openload.co
     * sweetlantern.com
     * vivads.net
     * za.gl
