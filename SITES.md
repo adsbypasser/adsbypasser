@@ -435,6 +435,7 @@
     * adbull.me
     * adcoin.me
     * adfu.us
+    * adlpu.com
     * admew.com
     * adpop.me
     * adshort.co
@@ -446,6 +447,7 @@
     * adsvy.com
     * adurl.id
     * adzurl.cf
+    * amenitiees.com
     * arba7co.com
     * arba7kpro.com
     * autech.xyz
@@ -477,6 +479,7 @@
     * coolmitten.com
     * cooltxtgen.com
     * coshink.co
+    * cosmicmony.com
     * counsellingresult2016.in
     * crabcut.net
     * crus.io
@@ -554,6 +557,7 @@
     * jejaklagu.com
     * jurl.io
     * khabratk.com
+    * khraba.com
     * kidsors.xyz
     * koylinks.win
     * kpscthulasilogin.info
@@ -580,6 +584,7 @@
     * linku.us
     * linkvip.tk
     * ln11.xyz
+    * lnkjob.com
     * lnks4all.com
     * loadurl.com
     * lopte.pro
@@ -610,6 +615,7 @@
     * payskip.me
     * payskip.org
     * petty.link
+    * pingit.im
     * pinkhindi.com
     * pnd.tl
     * premiumzen.com
@@ -646,14 +652,17 @@
     * shrtfly.com
     * shrtfly.net
     * simaholina.xyz
+    * sk-ip.ru
     * skip.az
     * skips.link
     * skipurls.com
+    * slink.bid
     * smarteasystudy.com
     * spamlink.org
     * srtfly.com
     * stfly.press
     * szs.pw
+    * tabakhelo.com
     * tabeikh.com
     * taive.in
     * tarnwh2i.com
@@ -687,6 +696,7 @@
     * urle.co
     * urlsamo.com
     * urltips.com
+    * utimetableresult.in
     * vinaurl.net
     * viralnow.xyz
     * viralukk.com
@@ -701,6 +711,7 @@
     * wolink.in
     * worldhack.net
     * xemlink.net
+    * xpickle.club
     * yesmoviesapp.info
     * yourtechguider.com
     * yourw-ay.com
@@ -725,6 +736,7 @@
     * 10co.me
     * 10co.xyz
 * openload.co
+    * oladblock.me
     * oladblock.services
     * oladblock.xyz
     * oload.cc
@@ -745,6 +757,7 @@
     * al.ly
     * ally.sh
     * ally.shortens.co
+    * dausel.co
 * allkeyshop.com
     * allkeyshop.com
     * cshort.org
