@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * cutwin.us
     * openload.co
     * sweetlantern.com
     * vivads.net
