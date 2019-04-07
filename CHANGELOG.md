@@ -1,5 +1,11 @@
 ## TBA
 
+* fixed
+    * cutwin.us
+    * openload.co
+    * sweetlantern.com
+    * vivads.net
+    * za.gl
 * added
     * abouttech.space
     * adlpu.com

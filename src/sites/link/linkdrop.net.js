@@ -39,7 +39,7 @@
         /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|icutlink)\.com$/,
         /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners)\.com$/,
         // net
-        /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
+        /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
         /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut)\.net$/,
         // pw
@@ -95,6 +95,7 @@
         /^(click2url|ln435)\.online$/,
         /^sk-ip\.ru$/,
         /^slink\.bid$/,
+        /^za\.gl$/,
       ],
     },
     async ready () {
@@ -125,6 +126,7 @@
         /^(ctui|cuti)\.in$/,
         /^zutrox\.link$/,
         /^(www\.)?shrink\.vip$/,
+        /^cutwin\.us$/,
       ],
     },
     async ready () {
@@ -176,7 +178,7 @@
         /^(www\.)?niagoshort\.com$/,
         // net
         /^www\.worldhack\.net$/,
-        /^(eklink|vivads)\.net$/,
+        /^(eklink)\.net$/,
         // else
         /^(urle|adshort)\.co$/,
         /^(weefy|adbull|zeiz|link4|adcoin)\.me$/,
@@ -188,11 +190,10 @@
         /^shortad\.cf$/,
         /^123link\.(io|co|press|pro)$/,
         /^git\.tc$/,
-        /^(adfu|linku|cutwin)\.us$/,
+        /^(adfu|linku)\.us$/,
         /^shortit\.ca$/,
         /^spamlink\.org$/,
         /^royurls\.bid$/,
-        /^za\.gl$/,
         /^(1)?idsly\.(com|bid|net|org)$/,
       ],
     },
