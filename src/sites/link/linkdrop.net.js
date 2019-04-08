@@ -96,6 +96,7 @@
         /^sk-ip\.ru$/,
         /^slink\.bid$/,
         /^za\.gl$/,
+        /^el3id\.site$/,
       ],
     },
     async ready () {
