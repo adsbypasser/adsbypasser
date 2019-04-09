@@ -52,7 +52,7 @@
         /^megaurl\.(in|link)$/,
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri)\.me$/,
         /^payskip\.(me|org)$/,
-        /^(oke|cuon|cuio|cuee|cuus|cuto|cu2|linktor|flylink|uiz)\.io$/,
+        /^(oke|cuon|cuio|cuee|cuus|cuto|cu2|linktor|flylink|uiz|cu3)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs|makeurl)\.co$/,
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors)\.xyz$/,
         /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud)\.xyz$/,
