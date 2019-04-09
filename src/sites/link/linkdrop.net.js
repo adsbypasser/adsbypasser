@@ -5,7 +5,7 @@
       host: [
         /^ulshare\.net$/,
         /^adurl\.id$/,
-        /^(cutwin|earn-guide)\.com$/,
+        /^earn-guide\.com$/,
         /^(cutwi|cut-w|cutl|dmus)\.in$/,
         /^(www\.)?jurl\.io$/,
         /^mitly\.us$/,
@@ -126,7 +126,7 @@
         /^(ctui|cuti)\.in$/,
         /^zutrox\.link$/,
         /^(www\.)?shrink\.vip$/,
-        /^cutwin\.us$/,
+        /^cutwin\.(us|com)$/,
       ],
     },
     async ready () {
