@@ -98,6 +98,7 @@
         /^slink\.bid$/,
         /^za\.gl$/,
         /^el3id\.site$/,
+        /^royalown\.review$/,
       ],
     },
     async ready () {
