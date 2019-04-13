@@ -94,7 +94,6 @@
         /^thin\.at$/,
         /^(click2url|ln435)\.online$/,
         /^sk-ip\.ru$/,
-        /^slink\.bid$/,
         /^za\.gl$/,
       ],
     },
