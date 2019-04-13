@@ -30,7 +30,7 @@
         /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural)\.com$/,
         /^(shrinkbuck|clkpay|linksht|haxrs|click2-url|cooltxtgen|arba7co|shortlinko)\.com$/,
         /^(partqb2i|khraba|adlpu|tabakhelo|amenitiees|cosmicmony|ilinkshortx)\.com$/,
-        /^(advance-wishingjs|govtsmartjob|bloggingraja)\.com$/,
+        /^(advance-wishingjs|govtsmartjob|bloggingraja|techkti)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(www\.)?(clkpays|lnkjob)\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7)\.com$/,
@@ -41,7 +41,7 @@
         /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners)\.com$/,
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads)\.net$/,
-        /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
+        /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly|shortye)\.net$/,
         /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut)\.net$/,
         // pw
         /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs|miniurl)\.pw$/,
