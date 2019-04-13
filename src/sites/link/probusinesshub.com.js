@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^probusinesshub\.com$/,
+    host: [
+      /^probusinesshub\.com$/,
+      /^trackywe\.in$/,
+    ],
   },
   async ready () {
     let f = $.$('form[id$=-subscribe]');
