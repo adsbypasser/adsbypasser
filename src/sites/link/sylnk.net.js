@@ -313,6 +313,16 @@ _.register({
 
 _.register({
   rule: {
+    host: /^android-1\.com$/,
+  },
+  async ready () {
+    const a = $.searchFromScripts(/id=download><\/div><a href=([^>]+)>/);
+    await $.openLink(a[1]);
+  },
+});
+
+_.register({
+  rule: {
     host: /^download-mirror\.ga$/,
   },
   async ready () {
