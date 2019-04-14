@@ -2,7 +2,8 @@ _.register({
   rule: {
     host: [
       /^probusinesshub\.com$/,
-      /^trackywe\.in$/,
+      /^(trackywe|starvate)\.in$/,
+      /^technodia\.xyz$/,
     ],
   },
   async ready () {
