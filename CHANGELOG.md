@@ -1,6 +1,25 @@
 ## TBA
 
+* fixed
+    * cutwin.com
+    * icutlink.com
+    * slink.bid
 * added
+    * advance-wishingjs.com
+    * bloggingraja.com
+    * cu3.io
+    * daily-sale.in
+    * el3id.site
+    * govtsmartjob.com
+    * healthykk.com
+    * ilinkshortx.com
+    * mirrorace.com
+    * onle.co
+    * royalown.review
+    * shortye.net
+    * techkti.com
+    * trackywe.in
+    * uii.io
 
 ## v6.35.0
 
