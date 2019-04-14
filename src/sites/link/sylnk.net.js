@@ -59,6 +59,7 @@ _.register({
         /^(www\.)?drakorsafe\.tech$/,
         /^(omgmusik|omglyrics)\.com$/,
         /^ad4msan\.win$/,
+        /^nooyul\.co$/,
       ],
       query: [
         // id must be the first captured group
