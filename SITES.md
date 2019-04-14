@@ -446,6 +446,7 @@
     * adsrt.me
     * adsvy.com
     * adurl.id
+    * advance-wishingjs.com
     * adzurl.cf
     * amenitiees.com
     * arba7co.com
@@ -455,6 +456,7 @@
     * bit-url.com
     * bloggingdekh.xyz
     * blogginggyanbox.com
+    * bloggingraja.com
     * btc.ms
     * businessiss2.info
     * buy-in-599rs.win
@@ -484,6 +486,7 @@
     * crabcut.net
     * crus.io
     * cu2.io
+    * cu3.io
     * cuee.io
     * cuio.io
     * cuon.io
@@ -508,6 +511,7 @@
     * cutwin.us
     * cuus.io
     * cyahealth.com
+    * daily-sale.in
     * dmus.in
     * dutchycorp.space
     * dz4link.com
@@ -520,6 +524,7 @@
     * earnmoneytalk.com
     * eatings.stream
     * eklink.net
+    * el3id.site
     * ely-om7.com
     * empearn.com
     * empireshort.com
@@ -539,6 +544,7 @@
     * glory-link.com
     * gocitlink
     * gossipcorners.com
+    * govtsmartjob.com
     * gram.im
     * haxrs.com
     * healthhindigyan.in
@@ -550,6 +556,7 @@
     * idsly.org
     * igram.im
     * iitjeemainguide.in
+    * ilinkshortx.com
     * imageoptimizer.us
     * itiad.com
     * itiurl.co
@@ -624,6 +631,7 @@
     * pss.pw
     * raolink.com
     * reb7konline.com
+    * royalown.review
     * royurls.bid
     * safelinkblogger.com
     * safelinku.net
@@ -644,6 +652,7 @@
     * shortit.ca
     * shortlinko.com
     * shortly.xyz
+    * shortye.net
     * shrink.vip
     * shrinkbuck.com
     * shrinkearn.com
@@ -656,7 +665,6 @@
     * skip.az
     * skips.link
     * skipurls.com
-    * slink.bid
     * smarteasystudy.com
     * spamlink.org
     * srtfly.com
@@ -669,6 +677,7 @@
     * tech4utoday.com
     * techandreview.info
     * techinhub.xyz
+    * techkti.com
     * technocanvas.xyz
     * thin.at
     * tiny.ec
@@ -687,6 +696,7 @@
     * tui.click
     * twik.pw
     * u2s.io
+    * uii.io
     * uiz.io
     * ujv.me
     * ulshare.net
@@ -758,6 +768,7 @@
     * ally.sh
     * ally.shortens.co
     * dausel.co
+    * onle.co
 * allkeyshop.com
     * allkeyshop.com
     * cshort.org
@@ -850,6 +861,7 @@
     * goto.loncat.in
     * gsmzone.site
     * gunting.web.id
+    * healthykk.com
     * hostingpics.net
     * hotshorturl.com
     * ifotos.pl
@@ -898,6 +910,7 @@
     * lolinez.com
     * lostpic.net
     * mije.net
+    * mirrorace.com
     * mirrorcreator.com
     * mirrored.to
     * mirrorfilehost.com
@@ -944,6 +957,7 @@
     * sht.io
     * shtlink.co
     * similarsites.com
+    * slink.bid
     * spaste.com
     * st.wardhanime.net
     * sub2unlock.com
@@ -954,6 +968,7 @@
     * thinfi.com
     * tinyarrows.com
     * tinypic.com
+    * trackywe.in
     * turboimagehost.com
     * turkdown.com
     * ujv.al
