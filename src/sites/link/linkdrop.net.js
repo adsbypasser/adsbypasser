@@ -43,7 +43,7 @@
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly|shortye)\.net$/,
-        /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut)\.net$/,
+        /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut|directedlink)\.net$/,
         // pw
         /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs|miniurl)\.pw$/,
         /^(www\.)?lwt\.pw$/,
