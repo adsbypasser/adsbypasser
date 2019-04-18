@@ -4,14 +4,7 @@ _.register({
     path: /^\/image\//,
   },
   async ready () {
-    // Retrieve the normal-sized image
-    const a = $('#image_original');
-
-    // Grab its URL
-    const el = document.createElement('div');
-    el.innerHTML = a.value;
-    const img = $('img', el);
-
+    const img = $('#overflow-wrapper img.original');
     await $.openImage(img.src);
   },
 });
