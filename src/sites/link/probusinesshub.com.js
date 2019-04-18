@@ -3,7 +3,8 @@ _.register({
     host: [
       /^probusinesshub\.com$/,
       /^(trackywe|starvate)\.in$/,
-      /^technodia\.xyz$/,
+      /^viralcollect\.info$/,
+      /^(technodia|ourtechnoew|mutharammss|thanda|thinana)\.xyz$/,
     ],
   },
   async ready () {
