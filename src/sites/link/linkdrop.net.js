@@ -57,7 +57,7 @@
         /^(oke|cuon|cuio|cuee|cuus|cuto|cu2|linktor|flylink|uiz|cu3|uii)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs|makeurl|mooddisorder)\.co$/,
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors)\.xyz$/,
-        /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud)\.xyz$/,
+        /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy)\.xyz$/,
         /^(mlink|cl250|xpickle)\.club$/,
         /^(igram|gram|pingit)\.im$/,
         /^(clk|cll)\.(press|ink|sh|icu)$/,
