@@ -1,7 +1,10 @@
 ## TBA
 
 * fixed
+    * mylink.zone
     * pimpandhost.com
+* added
+    * openloed.co
 
 ## v6.35.0
 
