@@ -2,7 +2,6 @@
 
 * fixed
     * mylink.zone
-    * pimpandhost.com
 * added
     * openloed.co
 
