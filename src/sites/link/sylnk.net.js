@@ -57,7 +57,7 @@ _.register({
         /^micin\.online$/,
         /^unduh\.in/,
         /^(www\.)?drakorsafe\.tech$/,
-        /^(omgmusik|omglyrics)\.com$/,
+        /^(omgmusik|omglyrics|k2nblog)\.com$/,
         /^ad4msan\.win$/,
       ],
       query: [
