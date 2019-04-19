@@ -100,6 +100,7 @@
         /^za\.gl$/,
         /^el3id\.site$/,
         /^royalown\.review$/,
+        /^bestscholaeshipdegree\.date$/,
       ],
     },
     async ready () {
