@@ -10,11 +10,11 @@ _.register({
 });
 
 _.register({
-	rule: {
-	  host: /^(www\.)?pimpandhost\.com$/,
-	  path: /^\/image\/\d+/,
-	},
-	async start (m) {
-	  await $.openLink(m.path + '?size=original');
-	 },
+  rule: {
+    host: /^(www\.)?pimpandhost\.com$/,
+    path: /^\/image\/\d+/,
+    },
+    async start (m) {
+    await $.openLink(m.path + '?size=original');
+   },
 });
