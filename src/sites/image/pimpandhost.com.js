@@ -13,8 +13,8 @@ _.register({
   rule: {
     host: /^(www\.)?pimpandhost\.com$/,
     path: /^\/image\/\d+/,
-    },
-    async start (m) {
+  },
+  async start (m) {
     await $.openLink(m.path + '?size=original');
-   },
+  },
 });
