@@ -71,7 +71,7 @@ _.register({
     {
       host: [
         /^(sehatlega|davinsurance|healthtod|irisvera|akanosora)\.com$/,
-        /^(businessforyouand|lindung)\.me$/,
+        /^(businessforyouand|lindung|travelwithtricks)\.me$/,
         /^plantaheim(\.web\.id|\.com)$/,
         /^naturalhealthy\.xyz$/,
         /^(www\.)?starzone\.cc$/,
