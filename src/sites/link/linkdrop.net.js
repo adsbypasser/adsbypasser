@@ -94,7 +94,7 @@
         /^funnyquiz\.blog$/,
         /^sciencelife\.ga$/,
         /^thin\.at$/,
-        /^(click2url|ln435)\.online$/,
+        /^(click2url|ln435|merdekaid)\.online$/,
         /^sk-ip\.ru$/,
         /^slink\.bid$/,
         /^za\.gl$/,
