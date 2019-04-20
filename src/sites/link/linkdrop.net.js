@@ -102,6 +102,7 @@
         /^el3id\.site$/,
         /^royalown\.review$/,
         /^bestscholaeshipdegree\.date$/,
+        /^oko\.sh$/,
       ],
     },
     async ready () {
