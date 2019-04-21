@@ -1,7 +1,7 @@
 _.register({
   rule: {
     host: [
-      /^probusinesshub\.com$/,
+      /^(probusinesshub|tecnogb)\.com$/,
       /^(trackywe|starvate)\.in$/,
       /^viralcollect\.info$/,
       /^(technodia|ourtechnoew|mutharammss|thanda|thinana)\.xyz$/,
