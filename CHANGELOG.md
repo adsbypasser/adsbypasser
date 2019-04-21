@@ -5,35 +5,44 @@
     * icutlink.com
     * slink.bid
 * added
+    * 5brgedid.com
     * adpaytm.com
     * advance-wishingjs.com
     * android-1.com
+    * autocarsmagz.xyz
     * bestscholaeshipdegree.date
     * bloggingraja.com
     * cu3.io
     * daily-sale.in
+    * dailyimages.xyz
     * directedlink.net
     * downloaddoom.com
     * earnwithshortlink.com
     * efshort.com
     * el3id.site
+    * enrt.eu
     * gamemod.pro
+    * getpocket.xyz
     * govtsmartjob.com
     * healthykk.com
     * ilinkshortx.com
     * layarkaca21.vip
     * linkfay.com
+    * linksupto.com
+    * merdekaid.online
     * mirrorace.com
     * mooddisorder.co
     * multifilemirror.com
     * mutharammss.xyz
     * namiyt.com
     * nooyul.co
+    * oko.sh
     * oload.services
     * onle.co
     * ourtechnoew.xyz
     * profitstudy.xyz
     * pucuk.xyz
+    * realsht.mobi
     * royalown.review
     * shortye.net
     * shtme.co
@@ -46,8 +55,10 @@
     * thegyaanipoint.com
     * thinana.xyz
     * trackywe.in
+    * travelwithtricks.me
     * hello.tribuntekno.com
     * uii.io
+    * uplinkto.me
     * viralcollect.info
 
 ## v6.35.0
