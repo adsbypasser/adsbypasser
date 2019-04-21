@@ -378,6 +378,7 @@
     * tetew.info
     * tojros.tk
     * tout-debrid.net
+    * travelwithtricks.me
     * unduh.in
     * url.hulblog.com
     * wibuindo.xyz
@@ -431,6 +432,7 @@
     * 3rabcut.com
     * 4cut.io
     * 4short.tk
+    * 5brgedid.com
     * 8o.ee
     * abouttech.space
     * adbilty.me
@@ -456,6 +458,7 @@
     * arba7co.com
     * arba7kpro.com
     * autech.xyz
+    * autocarsmagz.xyz
     * bakilink.com
     * bestscholaeshipdegree.date
     * bit-url.com
@@ -538,6 +541,7 @@
     * empearn.com
     * empireshort.com
     * enewstalk.com
+    * enrt.eu
     * ershadat.com
     * fabsdeals.com
     * factural.com
@@ -547,6 +551,7 @@
     * geki.tech
     * getfreshcloud.xyz
     * getlink.pw
+    * getpocket.xyz
     * gg-l.xyz
     * gifsis.com
     * git.tc
@@ -614,6 +619,7 @@
     * marivelkece.xyz
     * megaurl.in
     * megaurl.link
+    * merdekaid.online
     * met.bz
     * mikymoons.com
     * miniurl.pw
@@ -626,6 +632,7 @@
     * newupdatesonline.com
     * niagoshort.com
     * oke.io
+    * oko.sh
     * oturl.com
     * ourl.io
     * partqb2i.com
@@ -864,6 +871,7 @@
     * comyonet.com
     * coolrom.com
     * cubeupload.com
+    * dailyimages.xyz
     * dawnstation.com
     * depic.me
     * directupload.net
@@ -933,6 +941,7 @@
     * linkdecode.com
     * linkplugapp.com
     * linksas.us
+    * linksupto.com
     * linktor.io
     * lolinez.com
     * lostpic.net
@@ -975,6 +984,7 @@
     * putlocker.com
     * qrrro.com
     * radikal.ru
+    * realsht.mobi
     * richlink.com
     * ron.vn
     * sa.ae
@@ -1004,6 +1014,7 @@
     * ujv.al
     * ulmt.in
     * unfake.it
+    * uplinkto.me
     * upmirror.info
     * url.fm
     * url.ie
