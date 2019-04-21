@@ -79,7 +79,7 @@
         /^eatings\.stream$/,
         /^8o\.ee$/,
         /^buyitonline\.store$/,
-        /^shortearn\.eu$/,
+        /^(shortearn|enrt)\.eu$/,
         /^(1921681254|geki)\.tech$/,
         /^123link\.(pw|vip)$/,
         /^123link\.carpartsviet97\.site$/,
