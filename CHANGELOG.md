@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * kakkoiisafe.us
     * mylink.zone
 * added
     * openloed.co
