@@ -73,6 +73,7 @@ _.register({
         /^(businessforyouand|lindung)\.me$/,
         /^plantaheim(\.web\.id|\.com)$/,
         /^naturalhealthy\.xyz$/,
+        /^(www\.)?kakkoiisafe\.us$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
