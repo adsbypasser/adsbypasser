@@ -103,6 +103,7 @@
         /^royalown\.review$/,
         /^bestscholaeshipdegree\.date$/,
         /^oko\.sh$/,
+        /^splashnews\.ooo$/,
       ],
     },
     async ready () {
