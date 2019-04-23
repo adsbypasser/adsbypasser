@@ -5,7 +5,7 @@
       host: [
         /^ulshare\.net$/,
         /^adurl\.id$/,
-        /^(cutwin|earn-guide)\.com$/,
+        /^earn-guide\.com$/,
         /^(cutwi|cut-w|cutl|dmus)\.in$/,
         /^(www\.)?jurl\.io$/,
         /^mitly\.us$/,
@@ -38,7 +38,7 @@
         /^(smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro|shrt10)\.com$/,
         /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi|wishes2)\.com$/,
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger)\.com$/,
-        /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|icutlink|earnwithshortlink)\.com$/,
+        /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|earnwithshortlink)\.com$/,
         /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners)\.com$/,
         // net
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads)\.net$/,
@@ -97,7 +97,6 @@
         /^thin\.at$/,
         /^(click2url|ln435|merdekaid)\.online$/,
         /^sk-ip\.ru$/,
-        /^slink\.bid$/,
         /^za\.gl$/,
         /^el3id\.site$/,
         /^royalown\.review$/,
@@ -130,11 +129,11 @@
   _.register({
     rule: {
       host: [
-        /^(cutpaid|tmearn)\.com$/,
+        /^(cutpaid|tmearn|icutlink)\.com$/,
         /^(ctui|cuti)\.in$/,
         /^zutrox\.link$/,
         /^(www\.)?shrink\.vip$/,
-        /^cutwin\.us$/,
+        /^cutwin\.(us|com)$/,
       ],
     },
     async ready () {

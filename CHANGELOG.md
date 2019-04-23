@@ -4,6 +4,8 @@
     * cutwin.com
     * icutlink.com
     * slink.bid
+    * kakkoiisafe.us
+    * mylink.zone
 * added
     * 5brgedid.com
     * adpaytm.com
@@ -26,6 +28,7 @@
     * getpocket.xyz
     * govtsmartjob.com
     * healthykk.com
+    * hello.tribuntekno.com
     * ilinkshortx.com
     * layarkaca21.vip
     * linkfay.com
@@ -40,6 +43,7 @@
     * oko.sh
     * oload.services
     * onle.co
+    * openloed.co
     * ourtechnoew.xyz
     * profitstudy.xyz
     * pucuk.xyz
@@ -57,7 +61,6 @@
     * thinana.xyz
     * trackywe.in
     * travelwithtricks.me
-    * hello.tribuntekno.com
     * uii.io
     * uplinkto.me
     * viralcollect.info
@@ -75,6 +78,7 @@
     * adlpu.com
     * amenitiees.com
     * arba7co.com
+    * 123link.carpartsviet97.site
     * click2url.online
     * coolmitten.com
     * cooltxtgen.com
@@ -85,6 +89,7 @@
     * jejaklagu.com
     * khraba.com
     * kpscthulasilogin.info
+    * ln435.online
     * lnkjob.com
     * lnks4all.com
     * miniurl.pw
@@ -98,6 +103,7 @@
     * shortlinko.com
     * sk-ip.ru
     * slink.bid
+    * suarankri.me
     * tabakhelo.com
     * techinhub.xyz
     * technocanvas.xyz
