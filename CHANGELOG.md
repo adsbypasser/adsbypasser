@@ -8,6 +8,7 @@
     * 5brgedid.com
     * adpaytm.com
     * advance-wishingjs.com
+    * agradarpan.com
     * android-1.com
     * autocarsmagz.xyz
     * bestscholaeshipdegree.date
