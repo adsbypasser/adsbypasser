@@ -1,4 +1,4 @@
-## TBA
+## v6.36.0
 
 * fixed
     * cutwin.com
