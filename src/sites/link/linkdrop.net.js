@@ -134,6 +134,7 @@
         /^zutrox\.link$/,
         /^(www\.)?shrink\.vip$/,
         /^cutwin\.(us|com)$/,
+        /^123short\.biz$/,
       ],
     },
     async ready () {
