@@ -1,7 +1,8 @@
 _.register({
   rule: {
     host: /^(www\.)?pimpandhost\.com$/,
-    path: /^\/image\/\d+\?size=original/,
+    path: /^\/image\/\d+/,
+    query: /^\?size=original/,
   },
   async ready () {
     const img = $('#overflow-wrapper img.original');
