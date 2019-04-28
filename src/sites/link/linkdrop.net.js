@@ -53,7 +53,7 @@
         /^(utimetableresult|daily-sale)\.in$/,
         /^(petty|skips|tr|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
-        /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri)\.me$/,
+        /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri|infotrendy)\.me$/,
         /^payskip\.(me|org)$/,
         /^(oke|cuon|cuio|cuee|cuus|cuto|cu2|linktor|flylink|uiz|cu3|uii)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs|makeurl|mooddisorder|cutls)\.co$/,
