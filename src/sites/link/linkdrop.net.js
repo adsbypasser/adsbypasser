@@ -32,7 +32,7 @@
         /^(partqb2i|khraba|adlpu|tabakhelo|amenitiees|cosmicmony|ilinkshortx)\.com$/,
         /^(advance-wishingjs|govtsmartjob|bloggingraja|techkti|sxtsquad|adpaytm)\.com$/,
         /^(thegyaanipoint|downloaddoom|linkfay|5brgedid|earthpiclover|adigp|tomient)\.com$/,
-        /^(techmen-world|razerflixs|gamesindians|dislooks|elkhbrel7sry)\.com$/,
+        /^(techmen-world|razerflixs|gamesindians|dislooks|elkhbrel7sry|onaah)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(www\.)?(clkpays|lnkjob|efshort)\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7)\.com$/,
