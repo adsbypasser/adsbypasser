@@ -5,6 +5,7 @@ _.register({
       /^(trackywe|starvate)\.in$/,
       /^viralcollect\.info$/,
       /^(technodia|ourtechnoew|mutharammss|thanda|thinana)\.xyz$/,
+      /^entretendonaweb\.ga$/,
     ],
   },
   async ready () {
