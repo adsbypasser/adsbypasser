@@ -86,7 +86,7 @@
         /^(1921681254|geki)\.tech$/,
         /^123link\.(pw|vip)$/,
         /^123link\.carpartsviet97\.site$/,
-        /^(lotechnocan|updatetribun)\.org$/,
+        /^(lotechnocan|updatetribun|templink)\.org$/,
         /^tinylink\.run$/,
         /^btc\.ms$/,
         /^earn\.theplusit\.ro$/,
