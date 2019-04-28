@@ -27,6 +27,7 @@ _.register({
     {
       host: [
         /^i\.gtaind\.com$/,
+        /^pebisnis-muda\.com$/,
         /^hikarinoakariost\.info$/,
       ],
       query: /^\?([a-zA-Z0-9/=]+)$/,
@@ -56,7 +57,9 @@ _.register({
         /^micin\.online$/,
         /^unduh\.in/,
         /^(www\.)?drakorsafe\.tech$/,
-        /^(omgmusik|omglyrics)\.com$/,
+        /^(omgmusik|omglyrics|k2nblog)\.com$/,
+        /^ad4msan\.win$/,
+        /^nooyul\.co$/,
       ],
       query: [
         // id must be the first captured group
@@ -68,9 +71,11 @@ _.register({
     {
       host: [
         /^(sehatlega|davinsurance|healthtod|irisvera|akanosora)\.com$/,
-        /^(businessforyouand|lindung)\.me$/,
+        /^(businessforyouand|lindung|travelwithtricks)\.me$/,
         /^plantaheim(\.web\.id|\.com)$/,
         /^naturalhealthy\.xyz$/,
+        /^(www\.)?starzone\.cc$/,
+        /^(www\.)?kakkoiisafe\.us$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
@@ -86,6 +91,15 @@ _.register({
     {
       host: /^(www\.)?dukun-cit\.com$/,
       query: /^\?s=([a-zA-Z0-9/=]+)$/,
+    },
+    {
+      host: /^ultimate\.turkdown\.com$/,
+      query: /^\?stepone=([a-zA-Z0-9/=]+)$/,
+    },
+    {
+      host: /^leechpremium\.link$/,
+      path: /^\/cheat\//,
+      query: /^\?link=([a-zA-Z0-9/=]+)$/,
     },
   ],
   async start (m) {
@@ -107,7 +121,7 @@ _.register({
         // safelinkreview.co
         /(^|\.)safelink(converter|reviewx?)\.com?$/,
         /^giga74\.com$/,
-        /^awsubsco\.ml$/,
+        /^(awsubsco|ad4msan)\.ml$/,
         /^nekopoi\.ga$/,
       ],
       query: /id=([\w\\]+=*)/,
@@ -162,7 +176,7 @@ _.register({
       /^stt\.awsubs\.co$/,
       /^wibuindo\.xyz$/,
     ],
-    query: /^\?id=([a-zA-Z0-9/=]+)$/,
+    query: /^\?(id|c|k)=([a-zA-Z0-9/=]+)$/,
   },
   async ready () {
     const f = $('form');
@@ -219,6 +233,7 @@ _.register({
       await $.openLink(s[2]);
       return;
     }
+
     s = atob(m.query[1]);
     await $.openLink(s);
   },
@@ -256,6 +271,17 @@ _.register({
 
 _.register({
   rule: {
+    host: /^tout-debrid\.net$/,
+    path: /^\/api\//,
+  },
+  async ready () {
+    const t = $('.download-box > div > a');
+    await $.openLink(t.href);
+  },
+});
+
+_.register({
+  rule: {
     host: /^kombatch\.loncat\.pw$/,
   },
   async ready () {
@@ -284,6 +310,16 @@ _.register({
   async ready () {
     const d = $.searchFromScripts(/window\.open\('([^']+)'\);/);
     await $.openLink(d[1]);
+  },
+});
+
+_.register({
+  rule: {
+    host: /^android-1\.com$/,
+  },
+  async ready () {
+    const a = $.searchFromScripts(/id=download><\/div><a href=([^>]+)>/);
+    await $.openLink(a[1]);
   },
 });
 

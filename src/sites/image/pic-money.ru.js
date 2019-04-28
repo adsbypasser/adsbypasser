@@ -4,6 +4,7 @@ _.register({
       /^pic-money\.ru$/,
       /^shaggyimg\.pro$/,
       /^imgazure\.com$/,
+      /^dailyimages\.xyz$/,
     ],
   },
   async ready () {

@@ -4,7 +4,7 @@ _.register({
   },
   async ready () {
     // the img ID is a random string
-    const o = $('.fr4me > div:nth-child(20) > a:nth-child(1) > img:nth-child(1)');
+    const o = $('#download_box img#imgpreview.pic');
     await $.openImage(o.src);
   },
 });

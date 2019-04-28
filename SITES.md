@@ -1,5 +1,5 @@
 * adf.ly
-    * queuecosm.bid
+    * (universally handled)
 * linkbucks
     * allanalpass.com
     * drstickyfingers.com
@@ -57,6 +57,7 @@
     * imageon.org
     * imagerar.com
     * imagescanner.cc
+    * imageshtorm.com
     * imagespublic.tk
     * imageteam.org
     * img2share.com
@@ -279,7 +280,10 @@
     * linkpoi.in
     * minidroid.net
 * sylnk.net
+    * ad4msan.ml
+    * ad4msan.win
     * akanosora.com
+    * android-1.com
     * animeforce.stream
     * ani-share.com
     * anjay.info
@@ -342,8 +346,10 @@
     * naturalhealthy.xyz
     * nekopoi.ga
     * njiir.com
+    * nooyul.co
     * omglyrics.com
     * omgmusik.com
+    * pebisnis-muda.com
     * plantaheim.com
     * plantaheim.web.id
     * safelinkconverter.com
@@ -362,6 +368,7 @@
     * speedcar.club
     * sports14.pw
     * srelink.com
+    * starzone.cc
     * stt.awsubs.co
     * sweetlantern.com
     * sylnk.net
@@ -370,7 +377,10 @@
     * telolet.in
     * tetew.info
     * tojros.tk
+    * tout-debrid.net
+    * travelwithtricks.me
     * unduh.in
+    * url.hulblog.com
     * wibuindo.xyz
     * ww2.awsubs.co
     * yametesenpai.xyz
@@ -409,6 +419,7 @@
     * shon.xyz
 * linkdrop.net
     * 123link.co
+    * 123link.carpartsviet97.site
     * 123link.io
     * 123link.press
     * 123link.pro
@@ -422,13 +433,17 @@
     * 3rabcut.com
     * 4cut.io
     * 4short.tk
+    * 5brgedid.com
     * 8o.ee
+    * abouttech.space
     * adbilty.me
     * adbitly.in
     * adbull.me
     * adcoin.me
     * adfu.us
+    * adlpu.com
     * admew.com
+    * adpaytm.com
     * adpop.me
     * adshort.co
     * adshorte.com
@@ -438,13 +453,20 @@
     * adsrt.me
     * adsvy.com
     * adurl.id
+    * advance-wishingjs.com
     * adzurl.cf
+    * agradarpan.com
+    * amenitiees.com
+    * arba7co.com
     * arba7kpro.com
     * autech.xyz
+    * autocarsmagz.xyz
     * bakilink.com
+    * bestscholaeshipdegree.date
     * bit-url.com
     * bloggingdekh.xyz
     * blogginggyanbox.com
+    * bloggingraja.com
     * btc.ms
     * businessiss2.info
     * buy-in-599rs.win
@@ -453,21 +475,28 @@
     * cashat.net
     * chrt.pw
     * cl250.club
+    * click2-url.com
     * click2see.desi
+    * click2url.online
     * clik.pw
     * clk.icu
     * clk.ink
     * clk.press
     * clk.sh
+    * clkpay.com
     * clkpays.com
     * cll.press
     * coinlink.co
     * converthinks.xyz
+    * coolmitten.com
+    * cooltxtgen.com
     * coshink.co
+    * cosmicmony.com
     * counsellingresult2016.in
     * crabcut.net
     * crus.io
     * cu2.io
+    * cu3.io
     * cuee.io
     * cuio.io
     * cuon.io
@@ -481,6 +510,7 @@
     * cut4links.com
     * cutadlink.net
     * cutearn.ca
+    * cuti.in
     * cutl.in
     * cuto.io
     * cutpaid.com
@@ -491,7 +521,10 @@
     * cutwin.us
     * cuus.io
     * cyahealth.com
+    * daily-sale.in
+    * directedlink.net
     * dmus.in
+    * downloaddoom.com
     * dutchycorp.space
     * dz4link.com
     * dzurl.ml
@@ -501,25 +534,36 @@
     * earn-url.com
     * earnbig.ca
     * earnmoneytalk.com
+    * earnwithshortlink.com
     * eatings.stream
+    * efshort.com
     * eklink.net
+    * el3id.site
+    * ely-om7.com
     * empearn.com
     * empireshort.com
     * enewstalk.com
+    * enrt.eu
     * ershadat.com
     * fabsdeals.com
     * factural.com
     * flaz.link
     * foxurl.net
+    * funnyquiz.blog
     * geki.tech
+    * getfreshcloud.xyz
     * getlink.pw
+    * getpocket.xyz
     * gg-l.xyz
     * gifsis.com
     * git.tc
     * glory-link.com
     * gocitlink
     * gossipcorners.com
+    * govtsmartjob.com
     * gram.im
+    * haxrs.com
+    * healthhindigyan.in
     * icutit.ca
     * icutlink.com
     * idsly.bid
@@ -528,12 +572,18 @@
     * idsly.org
     * igram.im
     * iitjeemainguide.in
+    * ilinkshortx.com
+    * imageoptimizer.us
     * itiad.com
     * itiurl.co
     * jainjinvani.com
+    * jejaklagu.com
     * jurl.io
     * khabratk.com
+    * khraba.com
+    * kidsors.xyz
     * koylinks.win
+    * kpscthulasilogin.info
     * kuylink.com
     * l2s.io
     * lapak.link
@@ -549,68 +599,91 @@
     * link5s.co
     * linkdrop.net
     * linkexa.com
+    * linkfay.com
     * linkfly.gaosmedia.com
     * linkorlink.com
     * linkrex.net
     * linksad.net
+    * linksht.com
     * linku.us
     * linkvip.tk
     * ln11.xyz
+    * ln435.online
+    * lnkjob.com
+    * lnks4all.com
     * loadurl.com
     * lopte.pro
     * lotechnocan.org
     * lpe.pw
     * lwt.pw
     * lyon.kim
+    * makeurl.co
     * man2pro.com
     * marivelkece.xyz
     * megaurl.in
     * megaurl.link
+    * merdekaid.online
     * met.bz
     * mikymoons.com
+    * miniurl.pw
     * mitly.us
     * mlink.club
-    * mykinggo.com
+    * mooddisorder.co
     * mrfourtech.com
+    * mykinggo.com
+    * newskart.xyz
     * newupdatesonline.com
     * niagoshort.com
     * oke.io
+    * oko.sh
     * oturl.com
     * ourl.io
+    * partqb2i.com
     * payshorturl.com
     * payskip.me
     * payskip.org
     * petty.link
+    * pingit.im
     * pinkhindi.com
     * pnd.tl
     * premiumzen.com
+    * profitstudy.xyz
     * programsfre.com
     * psl.pw
     * pss.pw
     * raolink.com
     * reb7konline.com
+    * royalown.review
     * royurls.bid
     * safelinkblogger.com
     * safelinku.net
+    * sciencelife.ga
     * sh11.xyz
     * shink.xyz
     * shln.pw
+    * shophipro.xyz
     * short.pastewma.com
     * short.pe
     * short2win.com
+    * short2win.me
     * short2win.net
     * shortad.cf
     * shortearn.eu
+    * shorted.id
     * shortglobal.com
     * shortit.ca
+    * shortlinko.com
     * shortly.xyz
+    * shortye.net
     * shrink.vip
+    * shrinkbuck.com
     * shrinkearn.com
     * shrt10.com
     * shrten.xyz
     * shrtfly.com
     * shrtfly.net
     * simaholina.xyz
+    * sk-ip.ru
     * skip.az
     * skips.link
     * skipurls.com
@@ -618,12 +691,20 @@
     * spamlink.org
     * srtfly.com
     * stfly.press
+    * suarankri.me
+    * sxtsquad.com
     * szs.pw
+    * tabakhelo.com
     * tabeikh.com
     * taive.in
     * tarnwh2i.com
     * tech4utoday.com
     * techandreview.info
+    * techinhub.xyz
+    * techkti.com
+    * technocanvas.xyz
+    * thegyaanipoint.com
+    * thin.at
     * tiny.ec
     * tinylink.run
     * tinylinks.net
@@ -635,19 +716,24 @@
     * topurl.net
     * tpx.me
     * tr.link
+    * tradeguru.xyz
     * trlink.in
     * tui.click
     * twik.pw
     * u2s.io
+    * uii.io
     * uiz.io
     * ujv.me
     * ulshare.net
+    * updatetribun.org
     * uptoos.com
     * urlcloud.us
     * urle.co
     * urlsamo.com
     * urltips.com
+    * utimetableresult.in
     * vinaurl.net
+    * viralnow.xyz
     * viralukk.com
     * vivads.net
     * vnurl.net
@@ -656,15 +742,18 @@
     * wi.cr
     * wicr.me
     * win4cut.com
+    * wishes2.com
     * wolink.in
     * worldhack.net
     * xemlink.net
+    * xpickle.club
     * yesmoviesapp.info
     * yourtechguider.com
     * yourw-ay.com
     * z2i.com
     * za.gl
     * zeiz.me
+    * zi.ht
     * zlshorte.net
     * zutrox.link
 * gsurl.me
@@ -682,6 +771,9 @@
     * 10co.me
     * 10co.xyz
 * openload.co
+    * oladblock.me
+    * oladblock.services
+    * oladblock.xyz
     * oload.cc
     * oload.cloud
     * oload.club
@@ -689,6 +781,7 @@
     * oload.fun
     * oload.info
     * oload.live
+    * oload.services
     * oload.site
     * oload.space
     * oload.stream
@@ -700,6 +793,8 @@
     * al.ly
     * ally.sh
     * ally.shortens.co
+    * dausel.co
+    * onle.co
 * allkeyshop.com
     * allkeyshop.com
     * cshort.org
@@ -721,6 +816,16 @@
 * prntscr.com
     * prnt.sc
     * prntscr.com
+* probusinesshub.com
+    * mutharammss.xyz
+    * ourtechnoew.xyz
+    * probusinesshub.com
+    * starvate.in
+    * technodia.xyz
+    * thanda.xyz
+    * thinana.xyz
+    * trackywe.in
+    * viralcollect.info
 * linkshrink.net
     * dwindly.io
     * linkshrink.net
@@ -748,8 +853,8 @@
     * adfoc.us
     * adlot.us
     * admy.link
-    * ah.pe
     * ah-informatique.com
+    * ah.pe
     * aka.gr
     * akoam.net
     * bayimg.com
@@ -760,6 +865,7 @@
     * bildr.no
     * binbox.io
     * blameless.work
+    * blog.langw.web.id
     * casimages.com
     * catcut.net
     * cli.gs
@@ -769,14 +875,17 @@
     * comyonet.com
     * coolrom.com
     * cubeupload.com
+    * dailyimages.xyz
     * dawnstation.com
     * depic.me
     * directupload.net
     * dl-protect.com
     * durl.me
     * elil.cc
+    * elsfile.org
     * embedupload.com
     * ewa.ac
+    * filemedia.net
     * filoops.info
     * flylink.io
     * fopkodiak.site
@@ -784,11 +893,13 @@
     * fotosik.pl
     * freeimgup.com
     * funkyimg.com
+    * gamemod.pro
     * gkurl.us
     * goimagehost.com
     * goto.loncat.in
     * gsmzone.site
     * gunting.web.id
+    * healthykk.com
     * hostingpics.net
     * hotshorturl.com
     * ifotos.pl
@@ -822,8 +933,11 @@
     * javlibrary.com
     * javtor.com
     * jheberg.net
+    * k2nblog.com
     * keptarolo.hu
     * kingofshrink.com
+    * layarkaca21.vip
+    * leechpremium.link
     * lienscash.com
     * link.im
     * link.tl
@@ -831,17 +945,21 @@
     * linkdecode.com
     * linkplugapp.com
     * linksas.us
+    * linksupto.com
     * linktor.io
     * lolinez.com
     * lostpic.net
     * mije.net
+    * mirrorace.com
     * mirrorcreator.com
     * mirrored.to
     * mirrorfilehost.com
     * moesubs.com
     * mrjh.org
+    * multifilemirror.com
     * my-link.pro
     * mylinkgen.com
+    * namiyt.com
     * nmac.to
     * noelshack.com
     * nsfw.in
@@ -865,11 +983,12 @@
     * pixxxels.cc
     * postimg.cc
     * preview.rlu.ru
-    * probusinesshub.com
     * pronpic.org
+    * pucuk.xyz
     * putlocker.com
     * qrrro.com
     * radikal.ru
+    * realsht.mobi
     * richlink.com
     * ron.vn
     * sa.ae
@@ -880,7 +999,9 @@
     * shrink-service.it
     * sht.io
     * shtlink.co
+    * shtme.co
     * similarsites.com
+    * slink.bid
     * spaste.com
     * st.wardhanime.net
     * sub2unlock.com
@@ -891,11 +1012,13 @@
     * thinfi.com
     * tinyarrows.com
     * tinypic.com
+    * tribuntekno.com
     * turboimagehost.com
     * turkdown.com
     * ujv.al
     * ulmt.in
     * unfake.it
+    * uplinkto.me
     * upmirror.info
     * url.fm
     * url.ie
@@ -904,11 +1027,13 @@
     * urlms.com
     * urlv2.com
     * uskip.me
+    * ux9.de
     * vavi.co
     * vidto.me
     * viidii.info
     * vir.al
     * vzturl.com
+    * wikiall.org
     * won.pe
     * xaoutchouc.live
     * xxx.fopkodiak.site

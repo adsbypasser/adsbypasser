@@ -2,7 +2,9 @@ _.register({
   rule: {
     host: [
       /^openload\.(co|pw)$/,
-      /^oload\.(stream|info|site|tv|win|download|cloud|cc|fun|club|live|space)$/,
+      /^openloed\.(co)$/,
+      /^oload\.(stream|info|site|tv|win|download|cloud|cc|fun|club|live|space|services)$/,
+      /^oladblock\.(services|xyz|me)$/,
     ],
     path: /^\/f\/.*/,
   },
@@ -21,7 +23,7 @@ _.register({
     dlCtn.style.display = 'inline-block';
 
     const dlBtn = $('a', dlCtn);
-    const ePath = $('#lqEH1');
+    const ePath = $('#DtsBlkVFQx');
     dlBtn.href = '/stream/' + ePath.textContent;
 
     const videoCtn = $.$('.videocontainer');

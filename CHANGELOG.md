@@ -1,7 +1,153 @@
 ## TBA
 
 * fixed
+
+## v6.36.0
+
+* fixed
+    * cutwin.com
+    * icutlink.com
+    * slink.bid
+    * kakkoiisafe.us
+    * mylink.zone
 * added
+    * 5brgedid.com
+    * adpaytm.com
+    * advance-wishingjs.com
+    * agradarpan.com
+    * android-1.com
+    * autocarsmagz.xyz
+    * bestscholaeshipdegree.date
+    * bloggingraja.com
+    * cu3.io
+    * daily-sale.in
+    * dailyimages.xyz
+    * directedlink.net
+    * downloaddoom.com
+    * earnwithshortlink.com
+    * efshort.com
+    * el3id.site
+    * enrt.eu
+    * gamemod.pro
+    * getpocket.xyz
+    * govtsmartjob.com
+    * healthykk.com
+    * hello.tribuntekno.com
+    * ilinkshortx.com
+    * layarkaca21.vip
+    * linkfay.com
+    * linksupto.com
+    * merdekaid.online
+    * mirrorace.com
+    * mooddisorder.co
+    * multifilemirror.com
+    * mutharammss.xyz
+    * namiyt.com
+    * nooyul.co
+    * oko.sh
+    * oload.services
+    * onle.co
+    * openloed.co
+    * ourtechnoew.xyz
+    * profitstudy.xyz
+    * pucuk.xyz
+    * realsht.mobi
+    * royalown.review
+    * shortye.net
+    * shtme.co
+    * starvate.in
+    * starzone.cc
+    * sxtsquad.com
+    * techkti.com
+    * technodia.xyz
+    * thanda.xyz
+    * thegyaanipoint.com
+    * thinana.xyz
+    * trackywe.in
+    * travelwithtricks.me
+    * uii.io
+    * uplinkto.me
+    * viralcollect.info
+
+## v6.35.0
+
+* fixed
+    * cutwin.us
+    * openload.co
+    * sweetlantern.com
+    * vivads.net
+    * za.gl
+* added
+    * abouttech.space
+    * adlpu.com
+    * amenitiees.com
+    * arba7co.com
+    * 123link.carpartsviet97.site
+    * click2url.online
+    * coolmitten.com
+    * cooltxtgen.com
+    * cosmicmony.com
+    * dausel.co
+    * funnyquiz.blog
+    * getfreshcloud.xyz
+    * jejaklagu.com
+    * khraba.com
+    * kpscthulasilogin.info
+    * ln435.online
+    * lnkjob.com
+    * lnks4all.com
+    * miniurl.pw
+    * oladblock.me
+    * oladblock.xyz
+    * partqb2i.com
+    * pebisnis-muda.com
+    * pingit.im
+    * sciencelife.ga
+    * shophipro.xyz
+    * shortlinko.com
+    * sk-ip.ru
+    * slink.bid
+    * suarankri.me
+    * tabakhelo.com
+    * techinhub.xyz
+    * technocanvas.xyz
+    * thin.at
+    * utimetableresult.in
+    * viralnow.xyz
+    * xpickle.club
+
+## v6.34.0
+
+* fixed
+    * adf.ly (maranhesduve.club, uclaut.net)
+    * imgbaron.com
+    * mirrored.to
+    * shortly.xyz
+    * sweetlantern.com
+    * tmearn
+* added
+    * ad4msan.ml
+    * ad4msan.win
+    * blog.langw.web.id
+    * click2-url.com
+    * cuti.in
+    * elsfile.org
+    * filemedia.net
+    * haxrs.com
+    * k2nblog.com
+    * kidsors.xyz
+    * leechpremium.link
+    * linksht.com
+    * makeurl.co
+    * newskart.xyz
+    * oladblock.services
+    * short2win.me
+    * tout-debrid.net
+    * turkdown.com
+    * updatetribun.org
+    * ux9.de
+    * wikiall.org
+    * zi.ht
 
 ## v6.33.0
 
@@ -12,19 +158,25 @@
     * path rule in reklama.js
     * path rule in openload.co.js
     * added new overlay remover in linkdrop.js
+    * added two new handlers in linkdrop.js
 * added
     * bakilink.com
     * blameless.work
     * cl250.club
     * click2see.desi
+    * clkpay.com
     * clkpays.com
     * cu2.io
     * elil.cc
+    * ely-om7.com
     * empearn.com
     * empireshort.com
     * enewstalk.com
     * factural.com
     * gossipcorners.com
+    * healthhindigyan.in
+    * imageoptimizer.us
+    * imageshtorm.com
     * imgazure.com
     * imguur.pictures
     * jainjinvani.com
@@ -33,9 +185,14 @@
     * reb7konline.com
     * sh11.xyz
     * shaggyimg.pro
+    * shorted.id
+    * shrinkbuck.com
     * tabeikh.com
     * tarnwh2i.com
+    * tradeguru.xyz
     * uptoos.com
+    * url.hulblog.com
+    * wishes2.com
     * xaoutchouc.live
     * yesmoviesapp.info
     * yourw-ay.com

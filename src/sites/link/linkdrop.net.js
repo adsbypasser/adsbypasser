@@ -5,7 +5,7 @@
       host: [
         /^ulshare\.net$/,
         /^adurl\.id$/,
-        /^(cutwin|earn-guide)\.com$/,
+        /^earn-guide\.com$/,
         /^(cutwi|cut-w|cutl|dmus)\.in$/,
         /^(www\.)?jurl\.io$/,
         /^mitly\.us$/,
@@ -24,37 +24,43 @@
     rule: {
       host: [
         // com
-        /^(dz4link|gocitlink|3rabcut|short2win|adsrt|shortglobal|jainjinvani)\.com$/,
-        /^(tmearn|payshorturl|urltips|shrinkearn|itiad|cutsouf|enewstalk)\.com$/,
-        /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link)\.com$/,
+        /^(dz4link|gocitlink|3rabcut|short2win|adsrt|shortglobal|jainjinvani|agradarpan)\.com$/,
+        /^(payshorturl|urltips|shrinkearn|itiad|cutsouf|enewstalk|lnks4all|jejaklagu)\.com$/,
+        /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link|coolmitten)\.com$/,
         /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural)\.com$/,
-        /^(shrinkbuck|clkpay)\.com$/,
+        /^(shrinkbuck|clkpay|linksht|haxrs|click2-url|cooltxtgen|arba7co|shortlinko)\.com$/,
+        /^(partqb2i|khraba|adlpu|tabakhelo|amenitiees|cosmicmony|ilinkshortx)\.com$/,
+        /^(advance-wishingjs|govtsmartjob|bloggingraja|techkti|sxtsquad|adpaytm)\.com$/,
+        /^(thegyaanipoint|downloaddoom|linkfay|5brgedid|earthpiclover|adigp)\.com$/,
         /^(vy\.)?adsvy\.com$/,
-        /^(www\.)?clkpays\.com$/,
+        /^(www\.)?(clkpays|lnkjob|efshort)\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7)\.com$/,
         /^(smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro|shrt10)\.com$/,
         /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi|wishes2)\.com$/,
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger)\.com$/,
-        /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|icutlink)\.com$/,
+        /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|earnwithshortlink)\.com$/,
         /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners)\.com$/,
         // net
-        /^(safelinku|tinylinks|licklink|linkrex|zlshorte)\.net$/,
-        /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly)\.net$/,
-        /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut)\.net$/,
+        /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads)\.net$/,
+        /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly|shortye)\.net$/,
+        /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut|directedlink)\.net$/,
         // pw
-        /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs)\.pw$/,
+        /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs|miniurl)\.pw$/,
         /^(www\.)?lwt\.pw$/,
         // else
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
+        /^(utimetableresult|daily-sale)\.in$/,
         /^(petty|skips|tr|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
-        /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65)\.me$/,
+        /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri)\.me$/,
         /^payskip\.(me|org)$/,
-        /^(oke|cuon|cuio|cuee|cuus|cuto|cu2|linktor|flylink|uiz)\.io$/,
-        /^(3bst|coinlink|itiurl|coshink|link5s|curs)\.co$/,
-        /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru)\.xyz$/,
-        /^(mlink|cl250)\.club$/,
-        /^(igram|gram)\.im$/,
+        /^(oke|cuon|cuio|cuee|cuus|cuto|cu2|linktor|flylink|uiz|cu3|uii)\.io$/,
+        /^(3bst|coinlink|itiurl|coshink|link5s|curs|makeurl|mooddisorder)\.co$/,
+        /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors)\.xyz$/,
+        /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy)\.xyz$/,
+        /^(autocarsmagz|getpocket)\.xyz$/,
+        /^(mlink|cl250|xpickle)\.club$/,
+        /^(igram|gram|pingit)\.im$/,
         /^(clk|cll)\.(press|ink|sh|icu)$/,
         /^short\.pe$/,
         /^(urlcloud|imageoptimizer)\.us$/,
@@ -69,21 +75,34 @@
         /^lyon\.kim$/,
         /^(linkvip|4short)\.tk$/,
         /^stfly\.press$/,
-        /^(businessiss2|techandreview|yesmoviesapp)\.info$/,
+        /^(businessiss2|techandreview|yesmoviesapp|kpscthulasilogin)\.info$/,
         /^eatings\.stream$/,
         /^8o\.ee$/,
         /^buyitonline\.store$/,
-        /^shortearn\.eu$/,
+        /^(shortearn|enrt)\.eu$/,
         /^(1921681254|geki)\.tech$/,
         /^123link\.(pw|vip)$/,
-        /^lotechnocan\.org$/,
+        /^123link\.carpartsviet97\.site$/,
+        /^(lotechnocan|updatetribun)\.org$/,
         /^tinylink\.run$/,
         /^btc\.ms$/,
         /^earn\.theplusit\.ro$/,
         /^skip\.az$/,
-        /^dutchycorp\.space$/,
+        /^(dutchycorp|abouttech)\.space$/,
         /^click2see\.desi$/,
         /^shorted\.id$/,
+        /^zi\.ht$/,
+        /^funnyquiz\.blog$/,
+        /^sciencelife\.ga$/,
+        /^thin\.at$/,
+        /^(click2url|ln435|merdekaid)\.online$/,
+        /^sk-ip\.ru$/,
+        /^za\.gl$/,
+        /^el3id\.site$/,
+        /^royalown\.review$/,
+        /^bestscholaeshipdegree\.date$/,
+        /^oko\.sh$/,
+        /^splashnews\.ooo$/,
       ],
     },
     async ready () {
@@ -110,10 +129,11 @@
   _.register({
     rule: {
       host: [
-        /^cutpaid\.com$/,
-        /^ctui\.in$/,
+        /^(cutpaid|tmearn|icutlink)\.com$/,
+        /^(ctui|cuti)\.in$/,
         /^zutrox\.link$/,
         /^(www\.)?shrink\.vip$/,
+        /^cutwin\.(us|com)$/,
       ],
     },
     async ready () {
@@ -165,7 +185,7 @@
         /^(www\.)?niagoshort\.com$/,
         // net
         /^www\.worldhack\.net$/,
-        /^(eklink|vivads)\.net$/,
+        /^(eklink)\.net$/,
         // else
         /^(urle|adshort)\.co$/,
         /^(weefy|adbull|zeiz|link4|adcoin)\.me$/,
@@ -177,11 +197,10 @@
         /^shortad\.cf$/,
         /^123link\.(io|co|press|pro)$/,
         /^git\.tc$/,
-        /^(adfu|linku|cutwin)\.us$/,
+        /^(adfu|linku)\.us$/,
         /^shortit\.ca$/,
         /^spamlink\.org$/,
         /^royurls\.bid$/,
-        /^za\.gl$/,
         /^(1)?idsly\.(com|bid|net|org)$/,
       ],
     },
@@ -201,12 +220,14 @@
         '#headlineatas',
         '#myModal',
         '.opacity_wrapper',
+        '#overlay',
       ].join(', ');
 
       // TODO extract to paramater
       this._formSelector = [
         '#go-link',
         '.go-link',
+        '#originalLink.get-link',
         'form[action="/links/go"]',
         'form[action="/links/linkdropgo"]',
       ].join(', ');
@@ -246,10 +267,6 @@
 
   class NoRecaptchaHandler extends AbstractHandler {
 
-    constructor () {
-      super();
-    }
-
     prepare () {
       this.removeFrame();
       this.removeOverlay();
@@ -273,14 +290,10 @@
 
   class RecaptchaHandler extends AbstractHandler {
 
-    constructor () {
-      super();
-    }
-
     async prepare () {
       this.removeOverlay();
 
-      const f = $.$('#captchaShortlink');
+      const f = $.$('#captchaShortlink, div.g-recaptcha');
       if (!f) {
         return true;
       }
@@ -340,10 +353,6 @@
 
   class InvisibleRecaptchaHandler extends RecaptchaHandler {
 
-    constructor () {
-      super();
-    }
-
     async submitListen (b, f) {
       await _.wait(1000);
       const click = f.clientWidth === 0 || f.childNodes.length === 0;
@@ -357,10 +366,6 @@
 
 
   class NonDisabledRecaptchaHandler extends RecaptchaHandler {
-
-    constructor () {
-      super();
-    }
 
     async submitListen (b) {
       while (true) {
@@ -377,10 +382,6 @@
 
 
   class OURLHandler extends RecaptchaHandler {
-
-    constructor () {
-      super();
-    }
 
     async getMiddleware () {
       return {
@@ -399,10 +400,6 @@
 
   class LinkDropHandler extends RecaptchaHandler {
 
-    constructor () {
-      super();
-    }
-
     async getMiddleware () {
       return await getJQueryForm('#mylink1');
     }
@@ -411,10 +408,6 @@
 
 
   class StagedHandler extends AbstractHandler {
-
-    constructor () {
-      super();
-    }
 
     prepare () {
       this.removeFrame();
@@ -458,10 +451,6 @@
 
   class ShortlyHandler extends AbstractHandler {
 
-    constructor () {
-      super();
-    }
-
     prepare () {
       return true;
     }
@@ -479,12 +468,11 @@
 
     async getURL (id) {
       while (true) {
-        const url = await $.post('getlink.php', {
-          id,
+        $.window.jQuery.post('getlink.php', {id: id}).done(function (url) {
+          if (url.match(/^http/)) {
+            $.openLink(url);
+          }
         });
-        if (url) {
-          return url;
-        }
         await _.wait(500);
       }
     }
@@ -515,6 +503,10 @@
 
   function getURLFromJQueryForm (jForm) {
     return new Promise((resolve, reject) => {
+      if (jForm.is('a') && jForm.attr('href')) {
+        resolve(jForm.attr('href'));
+      }
+
       const jQuery = $.window.$;
       jQuery.ajax({
         dataType: 'json',
