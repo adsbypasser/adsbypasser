@@ -282,6 +282,18 @@ _.register({
 
 _.register({
   rule: {
+    host: /^drivehub\.link$/,
+    path: /^\/file\.php/,
+    query: /^\?id=(.+)/,
+  },
+  async ready () {
+    const d = $('.infobox > center > b > a#proceed.btn.btn-danger');
+    await $.openLink(d.href);
+  },
+});
+
+_.register({
+  rule: {
     host: /^kombatch\.loncat\.pw$/,
   },
   async ready () {
