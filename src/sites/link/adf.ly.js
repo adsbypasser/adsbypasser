@@ -34,6 +34,20 @@
 
   _.register({
     rule: {
+      path: /pushredirect/,
+      query: /.*dest=([^&]+)/,
+    },
+    async start (m) {
+      const url = decodeURIComponent(m.query[1]);
+      if (url.match(/^http/)) {
+        // absolute path
+        await $.openLink(url);
+      }
+    },
+  });
+
+  _.register({
+    rule: {
       query: /lp=adfly_allow&.*href=([^&]+)/,
     },
     async start (m) {
