@@ -1,7 +1,28 @@
 ## TBA
 
 * added
+    * 123short.biz
+    * advancedautorepairtips.me
+    * ckk.ai
+    * clixg.com
+    * cutls.co
+    * dislooks.com
+    * drivehub.link
+    * elkhbrel7sry.com
+    * entretendonaweb.ga
+    * gamesindians.com
+    * infotrendy.me
+    * mawdok.com
     * oload.network
+    * ommantrameditation.com
+    * onaah.com
+    * razerflixs.com
+    * techfinda.com
+    * techmen-world.com
+    * templink.org
+    * tomient.com
+    * wrap-w0rld.com
+    * yasinews.xyz
 
 ## v6.36.0
 
