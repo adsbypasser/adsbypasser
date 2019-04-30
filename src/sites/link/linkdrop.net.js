@@ -193,7 +193,7 @@
         /^(eklink)\.net$/,
         // else
         /^(urle|adshort)\.co$/,
-        /^(weefy|adbull|zeiz|link4|adcoin)\.me$/,
+        /^(weefy|adbull|zeiz|link4|adcoin|jelajahinternet)\.me$/,
         /^(adbilty|taive)\.in$/,
         /^(twik|adslink)\.pw$/,
         /^(curs|crus|4cut|u2s|l2s)\.io$/,
