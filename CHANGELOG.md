@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * pimpandhost.com
 
 ## v6.36.0
 
