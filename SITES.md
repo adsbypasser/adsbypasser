@@ -305,6 +305,7 @@
     * designmyhomee.com
     * drakorsafe.tech
     * drivefiles.bid
+    * drivehub.link
     * drive.jepitkertas.com
     * download-mirror.ga
     * dukun-cit.com
@@ -425,6 +426,7 @@
     * 123link.pro
     * 123link.pw
     * 123link.vip
+    * 123short.biz
     * 1921681254.tech
     * 1idsly.com
     * 2fly.me
@@ -454,6 +456,7 @@
     * adsvy.com
     * adurl.id
     * advance-wishingjs.com
+    * advancedautorepairtips.me
     * adzurl.cf
     * agradarpan.com
     * amenitiees.com
@@ -474,11 +477,13 @@
     * by6dk.com
     * cashat.net
     * chrt.pw
+    * ckk.ai
     * cl250.club
     * click2-url.com
     * click2see.desi
     * click2url.online
     * clik.pw
+    * clixg.com
     * clk.icu
     * clk.ink
     * clk.press
@@ -512,6 +517,7 @@
     * cutearn.ca
     * cuti.in
     * cutl.in
+    * cutls.co
     * cuto.io
     * cutpaid.com
     * cutsouf.com
@@ -523,6 +529,7 @@
     * cyahealth.com
     * daily-sale.in
     * directedlink.net
+    * dislooks.com
     * dmus.in
     * downloaddoom.com
     * dutchycorp.space
@@ -539,6 +546,7 @@
     * efshort.com
     * eklink.net
     * el3id.site
+    * elkhbrel7sry.com
     * ely-om7.com
     * empearn.com
     * empireshort.com
@@ -550,6 +558,7 @@
     * flaz.link
     * foxurl.net
     * funnyquiz.blog
+    * gamesindians.com
     * geki.tech
     * getfreshcloud.xyz
     * getlink.pw
@@ -574,6 +583,7 @@
     * iitjeemainguide.in
     * ilinkshortx.com
     * imageoptimizer.us
+    * infotrendy.me
     * itiad.com
     * itiurl.co
     * jainjinvani.com
@@ -620,6 +630,7 @@
     * makeurl.co
     * man2pro.com
     * marivelkece.xyz
+    * mawdok.com
     * megaurl.in
     * megaurl.link
     * merdekaid.online
@@ -636,6 +647,8 @@
     * niagoshort.com
     * oke.io
     * oko.sh
+    * ommantrameditation.com
+    * onaah.com
     * oturl.com
     * ourl.io
     * partqb2i.com
@@ -652,6 +665,7 @@
     * psl.pw
     * pss.pw
     * raolink.com
+    * razerflixs.com
     * reb7konline.com
     * royalown.review
     * royurls.bid
@@ -700,9 +714,12 @@
     * tarnwh2i.com
     * tech4utoday.com
     * techandreview.info
+    * techfinda.com
     * techinhub.xyz
     * techkti.com
+    * techmen-world.com
     * technocanvas.xyz
+    * templink.org
     * thegyaanipoint.com
     * thin.at
     * tiny.ec
@@ -713,6 +730,7 @@
     * tny.ec
     * tocdo.in
     * tokenfly.pw
+    * tomient.com
     * topurl.net
     * tpx.me
     * tr.link
@@ -745,8 +763,10 @@
     * wishes2.com
     * wolink.in
     * worldhack.net
+    * wrap-w0rld.com
     * xemlink.net
     * xpickle.club
+    * yasinews.xyz
     * yesmoviesapp.info
     * yourtechguider.com
     * yourw-ay.com
@@ -818,6 +838,7 @@
     * prnt.sc
     * prntscr.com
 * probusinesshub.com
+    * entretendonaweb.ga
     * mutharammss.xyz
     * ourtechnoew.xyz
     * probusinesshub.com
