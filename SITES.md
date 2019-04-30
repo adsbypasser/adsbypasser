@@ -471,6 +471,7 @@
     * bloggingdekh.xyz
     * blogginggyanbox.com
     * bloggingraja.com
+    * boardgift.com
     * btc.ms
     * businessiss2.info
     * buy-in-599rs.win
@@ -554,6 +555,7 @@
     * enewstalk.com
     * enrt.eu
     * ershadat.com
+    * ez4link.org
     * fabsdeals.com
     * factural.com
     * flaz.link
@@ -589,6 +591,7 @@
     * itiurl.co
     * jainjinvani.com
     * jejaklagu.com
+    * jelajahinternet.me
     * jurl.io
     * khabratk.com
     * khraba.com
