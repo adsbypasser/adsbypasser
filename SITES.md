@@ -326,6 +326,7 @@
     * indexmovie.club
     * intercelestial.com
     * irisvera.com
+    * jaburalink.blogspot.com
     * kakkoiisafe.us
     * kombatch.loncat.pw
     * kurosafe.menantisenja.com
