@@ -3,6 +3,7 @@
 * added
     * 123short.biz
     * advancedautorepairtips.me
+    * boardgift.com
     * ckk.ai
     * clixg.com
     * cutls.co
@@ -10,8 +11,10 @@
     * drivehub.link
     * elkhbrel7sry.com
     * entretendonaweb.ga
+    * ez4link.org
     * gamesindians.com
     * infotrendy.me
+    * jelajahinternet.me
     * mawdok.com
     * oload.network
     * ommantrameditation.com
