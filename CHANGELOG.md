@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * oload.network
 
 ## v6.36.0
 
