@@ -781,6 +781,7 @@
     * oload.fun
     * oload.info
     * oload.live
+    * oload.network
     * oload.services
     * oload.site
     * oload.space
