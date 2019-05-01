@@ -466,6 +466,7 @@
     * autech.xyz
     * autocarsmagz.xyz
     * bakilink.com
+    * beast-birds.com
     * bestscholaeshipdegree.date
     * bit-url.com
     * bloggingdekh.xyz
@@ -715,6 +716,7 @@
     * tabakhelo.com
     * tabeikh.com
     * taive.in
+    * takeitfor.me
     * tarnwh2i.com
     * tech4utoday.com
     * techandreview.info
