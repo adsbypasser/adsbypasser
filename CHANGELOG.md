@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * naturalhealthy.xyz
     * pimpandhost.com
 
 ## v6.36.0
