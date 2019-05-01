@@ -73,7 +73,6 @@ _.register({
         /^(sehatlega|davinsurance|healthtod|irisvera|akanosora)\.com$/,
         /^(businessforyouand|lindung|travelwithtricks)\.me$/,
         /^plantaheim(\.web\.id|\.com)$/,
-        /^naturalhealthy\.xyz$/,
         /^(www\.)?starzone\.cc$/,
         /^(www\.)?kakkoiisafe\.us$/,
       ],
@@ -174,7 +173,7 @@ _.register({
       /^skyinsurance\.ml$/,
       /^(getinfos|sehatsegar|lonelymoon)\.net$/,
       /^stt\.awsubs\.co$/,
-      /^wibuindo\.xyz$/,
+      /^(wibuindo|naturalhealthy)\.xyz$/,
     ],
     query: /^\?(id|c|k)=([a-zA-Z0-9/=]+)$/,
   },
@@ -236,6 +235,16 @@ _.register({
 
     s = atob(m.query[1]);
     await $.openLink(s);
+  },
+});
+
+_.register({
+  rule: {
+    host: /^naturalhealthy\.xyz$/,
+  },
+  async ready () {
+    const n = $.searchFromScripts(/{a='([^']+)';window\.open/);
+    await $.openLink(n[1]);
   },
 });
 
