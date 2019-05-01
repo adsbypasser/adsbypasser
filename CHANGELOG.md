@@ -3,6 +3,7 @@
 * added
     * 123short.biz
     * advancedautorepairtips.me
+    * beast-birds.com
     * boardgift.com
     * ckk.ai
     * clixg.com
@@ -20,6 +21,7 @@
     * ommantrameditation.com
     * onaah.com
     * razerflixs.com
+    * takeitfor.me
     * techfinda.com
     * techmen-world.com
     * templink.org
