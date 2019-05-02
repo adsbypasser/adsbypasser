@@ -332,6 +332,7 @@
     * kurosafe.menantisenja.com
     * kurosafe.online
     * kurosafe.website
+    * kurosafety.menantisenja.com
     * landscapenature.pw
     * lewat.in
     * lewat.wibuindo.com
