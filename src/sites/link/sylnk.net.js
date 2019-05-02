@@ -60,6 +60,7 @@ _.register({
         /^(omgmusik|omglyrics|k2nblog)\.com$/,
         /^ad4msan\.win$/,
         /^nooyul\.co$/,
+        /^pafpaf\.info$/,
       ],
       query: [
         // id must be the first captured group
