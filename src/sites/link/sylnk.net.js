@@ -39,7 +39,7 @@ _.register({
         /\.blogspot\.com?/,
         /^(www\.)?designmyhomee\.com$/,
         /^(www\.)?losstor\.com$/,
-        /^kurosafe\.menantisenja\.com$/,
+        /^(kurosafe|kurosafety)\.menantisenja\.com$/,
         /^drive\.jepitkertas\.com$/,
         /^lewat\.wibuindo\.com$/,
         // xyz
