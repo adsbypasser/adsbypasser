@@ -16,6 +16,7 @@
     * gamesindians.com
     * infotrendy.me
     * jelajahinternet.me
+    * kurosafety.menantisenja.com
     * mawdok.com
     * oload.network
     * ommantrameditation.com
