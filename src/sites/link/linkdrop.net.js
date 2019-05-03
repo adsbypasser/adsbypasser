@@ -105,7 +105,7 @@
         /^(click2url|ln435|merdekaid)\.online$/,
         /^sk-ip\.ru$/,
         /^za\.gl$/,
-        /^el3id\.site$/,
+        /^(el3id|allreports)\.site$/,
         /^royalown\.review$/,
         /^bestscholaeshipdegree\.date$/,
         /^oko\.sh$/,
