@@ -18,11 +18,14 @@
     * jelajahinternet.me
     * kurosafety.menantisenja.com
     * mawdok.com
+    * newsinjules.com
     * oload.network
     * ommantrameditation.com
     * onaah.com
+    * pafpaf.info
     * razerflixs.com
     * takeitfor.me
+    * talkittechy.com
     * techfinda.com
     * techmen-world.com
     * templink.org
