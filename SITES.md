@@ -352,6 +352,7 @@
     * nooyul.co
     * omglyrics.com
     * omgmusik.com
+    * pafpaf.info
     * pebisnis-muda.com
     * plantaheim.com
     * plantaheim.web.id
@@ -648,6 +649,7 @@
     * mooddisorder.co
     * mrfourtech.com
     * mykinggo.com
+    * newsinjules.com
     * newskart.xyz
     * newupdatesonline.com
     * niagoshort.com
@@ -718,6 +720,7 @@
     * tabeikh.com
     * taive.in
     * takeitfor.me
+    * talkittechy.com
     * tarnwh2i.com
     * tech4utoday.com
     * techandreview.info
