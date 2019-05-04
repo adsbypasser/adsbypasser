@@ -3,6 +3,7 @@
 * added
     * 123short.biz
     * advancedautorepairtips.me
+    * allreports.site
     * beast-birds.com
     * boardgift.com
     * ckk.ai
