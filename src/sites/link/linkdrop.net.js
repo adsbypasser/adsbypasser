@@ -102,6 +102,7 @@
         /^funnyquiz\.blog$/,
         /^sciencelife\.ga$/,
         /^thin\.at$/,
+        /^(www\.)?bloggerworld\.online$/,
         /^(click2url|ln435|merdekaid)\.online$/,
         /^sk-ip\.ru$/,
         /^za\.gl$/,
