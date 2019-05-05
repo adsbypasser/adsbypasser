@@ -27,7 +27,7 @@
         /^(dz4link|gocitlink|3rabcut|short2win|adsrt|shortglobal|jainjinvani|agradarpan)\.com$/,
         /^(payshorturl|urltips|shrinkearn|itiad|cutsouf|enewstalk|lnks4all|jejaklagu)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link|coolmitten)\.com$/,
-        /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural)\.com$/,
+        /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural|akla4)\.com$/,
         /^(shrinkbuck|clkpay|linksht|haxrs|click2-url|cooltxtgen|arba7co|shortlinko)\.com$/,
         /^(partqb2i|khraba|adlpu|tabakhelo|amenitiees|cosmicmony|ilinkshortx)\.com$/,
         /^(advance-wishingjs|govtsmartjob|bloggingraja|techkti|sxtsquad|adpaytm)\.com$/,
