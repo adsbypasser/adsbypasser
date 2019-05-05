@@ -1,6 +1,8 @@
 ## TBA
 
 * fixed
+    * adf.ly
+    * mirrored.to
     * naturalhealthy.xyz
     * pimpandhost.com
 
