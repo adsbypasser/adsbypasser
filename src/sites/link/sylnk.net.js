@@ -77,6 +77,7 @@ _.register({
         /^naturalhealthy\.xyz$/,
         /^(www\.)?starzone\.cc$/,
         /^(www\.)?kakkoiisafe\.us$/,
+        /^yumechan\.club$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
