@@ -1,5 +1,10 @@
 ## TBA
 
+* fixed
+    * adf.ly
+    * mirrored.to
+    * naturalhealthy.xyz
+    * pimpandhost.com
 * added
     * 123short.biz
     * advancedautorepairtips.me

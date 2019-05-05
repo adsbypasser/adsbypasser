@@ -22,8 +22,19 @@ _.register({
     path: /^\/files\//,
   },
   async ready () {
-    _.wait(1);
-    const b = $('.col-sm.centered.highlight form button');
-    b.click();
+    $('#dl_form').style.display = 'none';
+
+    const res = $('#result');
+    res.style.display = 'block';
+
+    const o = new MutationObserver(() => {
+      res.style.display = 'block'; //never hide me again
+    });
+    o.observe(res, {
+      attributes: true,
+    });
+
+    await _.wait(1000);
+    $.window.start();
   },
 });
