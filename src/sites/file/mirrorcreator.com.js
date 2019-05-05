@@ -23,7 +23,6 @@ _.register({
   },
   async ready () {
     $('#dl_form').style.display = 'none';
-    setTimeout('start()', 1000);
 
     const res = $('#result');
     res.style.display = 'block';
@@ -35,5 +34,7 @@ _.register({
       attributes: true,
     });
 
+    await _.wait(1000);
+    $.window.start();
   },
 });
