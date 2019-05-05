@@ -7,6 +7,6 @@ import {
 
 
 export function clean () {
-  return gulp.src(output.path)
+  return gulp.src(output.path, { allowEmpty: true })
     .pipe(plugins.clean());
 }
