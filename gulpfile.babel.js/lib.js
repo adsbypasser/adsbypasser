@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 
 import _ from 'lodash';
 import findup from 'findup-sync';
@@ -12,7 +13,7 @@ const buildOptions = {
 };
 const packageJSON = parsePackageJSON();
 // Map `webpack-stream` to `webpack`, instead of `webpackStream`.
-const plugins = gulpLoadPlugins({
+export const plugins = gulpLoadPlugins({
   overridePattern: false,
   pattern: [
     'webpack-stream',
@@ -30,6 +31,22 @@ const plugins = gulpLoadPlugins({
     },
   },
 });
+export const source = {
+  get path () {
+    return path.resolve(__dirname, '..');
+  },
+  to (path_) {
+    return path.resolve(this.path, path_);
+  },
+};
+export const output = {
+  get path () {
+    return path.resolve(__dirname, '../dist');
+  },
+  to (path_) {
+    return path.resolve(this.path, path_);
+  },
+};
 
 
 function * cartesianProductOf (...args) {
@@ -48,13 +65,28 @@ function * cartesianProductOf (...args) {
 }
 
 
-function * allBuildOptions () {
+export function * allBuildOptions () {
   yield * cartesianProductOf(buildOptions.supportImage, buildOptions.supportLegacy);
 }
 
 
-function * imageBuildOptions () {
+export function * ecmaBuildOptions () {
+  yield * cartesianProductOf(buildOptions.supportLegacy);
+}
+
+
+export function * imageBuildOptions () {
   yield * cartesianProductOf(buildOptions.supportImage);
+}
+
+
+export function getEcmaName (supportLegacy) {
+  return supportLegacy ? 'es5' : 'es7';
+}
+
+
+export function getFeatureName (supportImage) {
+  return supportImage ? 'full' : 'lite';
 }
 
 
@@ -67,9 +99,9 @@ function parsePackageJSON () {
 }
 
 
-function finalizeMetadata (supportImage, supportLagacy, content) {
-  const featureName = supportImage ? 'full' : 'lite';
-  const ecmaName = supportLagacy ? 'es5' : 'es7';
+export function finalizeMetadata (supportImage, supportLagacy, content) {
+  const featureName = getFeatureName(supportImage);
+  const ecmaName = getEcmaName(supportLagacy);
   const featurePostfix = supportImage ? '' : ' Lite';
   const ecmaPostfix = !supportLagacy ? '' : ' Legacy';
 
@@ -89,7 +121,7 @@ function finalizeMetadata (supportImage, supportLagacy, content) {
 }
 
 
-function finalizeNamespace (supportImage, content) {
+export function finalizeNamespace (supportImage, content) {
   let s = _.template(content);
   s = s({
     supportImage,
@@ -98,19 +130,15 @@ function finalizeNamespace (supportImage, content) {
 }
 
 
-function finalizeHTML (options, content) {
+export function finalizeHTML (options, content) {
   let s = _.template(content);
   s = s(options);
   return s;
 }
 
 
-export {
-  allBuildOptions,
-  cartesianProductOf,
-  finalizeHTML,
-  finalizeMetadata,
-  finalizeNamespace,
-  imageBuildOptions,
-  plugins,
-};
+export function createNamedTask (name, task, ...args) {
+  const fn = _.partial(task, ...args);
+  fn.displayName = name;
+  return fn;
+}
