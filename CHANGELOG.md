@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * tout-debrid.net
 * added
 * removed
 
