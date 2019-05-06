@@ -2,6 +2,8 @@
 
 * fixed
 * added
+    * akla4.com
+    * bloggerworld.online
 * removed
 
 ## v7.0.0
