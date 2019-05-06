@@ -281,10 +281,16 @@ _.register({
 });
 
 _.register({
-  rule: {
-    host: /^tout-debrid\.net$/,
-    path: /^\/api\//,
-  },
+  rule: [
+    {
+      host: /^tout-debrid\.net$/,
+      path: /^\/api\//,
+    },
+    {
+      host: /^163\.172\.83\.145$/,
+      path: /^\/deb\//,
+    },
+  ],
   async ready () {
     const t = $('.download-box > div > a');
     await $.openLink(t.href);
