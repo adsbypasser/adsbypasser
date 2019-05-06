@@ -462,6 +462,7 @@
     * advancedautorepairtips.me
     * adzurl.cf
     * agradarpan.com
+    * akla4.com
     * allreports.site
     * amenitiees.com
     * arba7co.com
@@ -472,6 +473,7 @@
     * beast-birds.com
     * bestscholaeshipdegree.date
     * bit-url.com
+    * bloggerworld.online
     * bloggingdekh.xyz
     * blogginggyanbox.com
     * bloggingraja.com
