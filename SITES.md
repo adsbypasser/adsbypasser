@@ -564,6 +564,7 @@
     * ez4link.org
     * fabsdeals.com
     * factural.com
+    * fc.lc
     * flaz.link
     * foxurl.net
     * funnyquiz.blog
@@ -604,6 +605,7 @@
     * kidsors.xyz
     * koylinks.win
     * kpscthulasilogin.info
+    * kutpay.com
     * kuylink.com
     * l2s.io
     * lapak.link
@@ -656,6 +658,7 @@
     * newskart.xyz
     * newupdatesonline.com
     * niagoshort.com
+    * nikkarr.com
     * oke.io
     * oko.sh
     * ommantrameditation.com
@@ -703,6 +706,7 @@
     * shrink.vip
     * shrinkbuck.com
     * shrinkearn.com
+    * shrt8.com
     * shrt10.com
     * shrten.xyz
     * shrtfly.com
