@@ -288,7 +288,7 @@ _.register({
     },
     {
       host: /^163\.172\.83\.145$/,
-      path: /^\/deb\//,
+      path: /^\/deb\/api\//,
     },
   ],
   async ready () {
