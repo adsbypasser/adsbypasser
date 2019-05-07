@@ -4,6 +4,7 @@
 * added
     * akla4.com
     * bloggerworld.online
+    * oload.life
 * removed
 
 ## v7.0.0
