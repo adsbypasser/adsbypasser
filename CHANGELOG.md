@@ -4,7 +4,11 @@
 * added
     * akla4.com
     * bloggerworld.online
+    * fc.lc
+    * kutpay.com
+    * nikkarr.com
     * oload.life
+    * shrt8.com
 * removed
 
 ## v7.0.0
