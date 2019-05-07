@@ -9,6 +9,7 @@
     * nikkarr.com
     * oload.life
     * shrt8.com
+    * veblink.com
 * removed
 
 ## v7.0.0
