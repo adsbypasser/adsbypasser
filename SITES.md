@@ -439,7 +439,9 @@
     * 4cut.io
     * 4short.tk
     * 5brgedid.com
+    * 6aba2day.com
     * 8o.ee
+    * a-egy.com
     * abouttech.space
     * adbilty.me
     * adbitly.in
@@ -463,6 +465,7 @@
     * adzurl.cf
     * agradarpan.com
     * akla4.com
+    * al3amall.com
     * allreports.site
     * amenitiees.com
     * arba7co.com
@@ -506,6 +509,7 @@
     * coshink.co
     * cosmicmony.com
     * counsellingresult2016.in
+    * cpm4all.ga
     * crabcut.net
     * crus.io
     * cu2.io
