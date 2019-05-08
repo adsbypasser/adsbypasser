@@ -2,8 +2,12 @@
 
 * fixed
 * added
+    * 6aba2day.com
+    * a-egy.com
     * akla4.com
+    * al3amall.com
     * bloggerworld.online
+    * cpm4all.ga
     * fc.lc
     * kutpay.com
     * nikkarr.com
