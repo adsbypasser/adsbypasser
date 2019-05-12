@@ -1,4 +1,4 @@
-## TBA
+## v7.1.0
 
 * fixed
     * tout-debrid.net
