@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * tout-debrid.net
 * added
     * 6aba2day.com
     * a-egy.com
@@ -14,7 +15,6 @@
     * oload.life
     * shrt8.com
     * veblink.com
-* removed
 
 ## v7.0.0
 
