@@ -299,6 +299,7 @@
     * businessforyouand.me
     * compartiendofull.net
     * compul.in
+    * daunshorte.teknologilink.com
     * davinsurance.com
     * decrypt.safelinkconverter.com
     * decrypt2.safelinkconverter.com
@@ -377,7 +378,7 @@
     * sweetlantern.com
     * sylnk.net
     * technlab.com
-    * teknologilink.com
+    * teknosafe.teknologilink.com
     * telolet.in
     * tetew.info
     * tojros.tk
