@@ -1,7 +1,9 @@
 ## TBA
 
 * fixed
-
+    * daunshorte.teknologilink.com
+    * teknosafe.teknologilink.com
+    
 ## v7.1.0
 
 * fixed
