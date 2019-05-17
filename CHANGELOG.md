@@ -2,6 +2,7 @@
 
 * fixed
     * daunshorte.teknologilink.com
+    * imagebam.com
     * teknosafe.teknologilink.com
     
 ## v7.1.0
