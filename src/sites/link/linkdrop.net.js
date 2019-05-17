@@ -45,6 +45,7 @@
         /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners)\.com$/,
         /^shrt(8|10)\.com$/,
         // net
+        /^link\.akuno\.net$/,
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly|shortye)\.net$/,
         /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut|directedlink)\.net$/,
