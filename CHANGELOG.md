@@ -1,6 +1,22 @@
 ## TBA
 
 * added
+    * clickar.net
+    * direct-link.net
+    * dunyanews.xyz
+    * health-goood.com
+    * hen-tay.net
+    * link.akuno.net
+    * link-to.net
+    * linkwea.com
+    * menantisenja.com
+    * muhammadyoga.me
+    * oploverzhome.com
+    * skiplink.io
+    * surfsees.com
+    * ultraskora.com
+    * virtualdata.me
+    * weawp.com
 
 ## v7.1.0
 
