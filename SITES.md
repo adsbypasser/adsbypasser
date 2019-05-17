@@ -343,6 +343,7 @@
     * linkach.com
     * lonelymoon.net
     * losstor.com
+    * menantisenja.com
     * motonews.club
     * motosport.pw
     * naisho.lompat.in
@@ -367,6 +368,7 @@
     * short.awsubs.me
     * skinnycat.net
     * skinnycat.org
+    * skiplink.io
     * skyinsurance.ml
     * spacetica.com
     * speedcar.club
@@ -493,6 +495,7 @@
     * click2-url.com
     * click2see.desi
     * click2url.online
+    * clickar.net
     * clik.pw
     * clixg.com
     * clk.icu
@@ -544,6 +547,7 @@
     * dislooks.com
     * dmus.in
     * downloaddoom.com
+    * dunyanews.xyz
     * dutchycorp.space
     * dz4link.com
     * dzurl.ml
@@ -586,7 +590,9 @@
     * govtsmartjob.com
     * gram.im
     * haxrs.com
+    * health-goood.com
     * healthhindigyan.in
+    * hen-tay.net
     * icutit.ca
     * icutlink.com
     * idsly.bid
@@ -617,6 +623,7 @@
     * licklink.net
     * lin65.me
     * linclik.com
+    * link.akuno.net
     * link-zero.com
     * link2link.cf
     * link4.me
@@ -633,6 +640,7 @@
     * linksht.com
     * linku.us
     * linkvip.tk
+    * linkwea.com
     * ln11.xyz
     * ln435.online
     * lnkjob.com
@@ -657,6 +665,7 @@
     * mlink.club
     * mooddisorder.co
     * mrfourtech.com
+    * muhammadyoga.me
     * mykinggo.com
     * newsinjules.com
     * newskart.xyz
@@ -667,6 +676,7 @@
     * oko.sh
     * ommantrameditation.com
     * onaah.com
+    * oploverzhome.com
     * oturl.com
     * ourl.io
     * partqb2i.com
@@ -764,6 +774,7 @@
     * uiz.io
     * ujv.me
     * ulshare.net
+    * ultraskora.com
     * updatetribun.org
     * uptoos.com
     * urlcloud.us
@@ -775,9 +786,11 @@
     * vinaurl.net
     * viralnow.xyz
     * viralukk.com
+    * virtualdata.me
     * vivads.net
     * vnurl.net
     * vnurl.xyz
+    * weawp.com
     * weefy.me
     * wi.cr
     * wicr.me
@@ -923,6 +936,7 @@
     * dailyimages.xyz
     * dawnstation.com
     * depic.me
+    * direct-link.net
     * directupload.net
     * dl-protect.com
     * durl.me
@@ -986,6 +1000,7 @@
     * lienscash.com
     * link.im
     * link.tl
+    * link-to.net
     * link4ad.com
     * linkdecode.com
     * linkplugapp.com
@@ -1052,6 +1067,7 @@
     * sub2unlock.com
     * subirimagenes.com
     * supercheats.com
+    * surfsees.com
     * swzz.xyz
     * techfunda.net
     * thinfi.com
