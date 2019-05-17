@@ -39,7 +39,7 @@ _.register({
         /\.blogspot\.com?/,
         /^(www\.)?designmyhomee\.com$/,
         /^(www\.)?losstor\.com$/,
-        /^(kurosafe|kurosafety)\.menantisenja\.com$/,
+        /^((kurosafe|kurosafety)\.)?menantisenja\.com$/,
         /^drive\.jepitkertas\.com$/,
         /^lewat\.wibuindo\.com$/,
         // xyz
@@ -72,6 +72,7 @@ _.register({
     {
       host: [
         /^(sehatlega|davinsurance|healthtod|irisvera|akanosora)\.com$/,
+        /^(www\.)?menantisenja\.com$/,
         /^(businessforyouand|lindung|travelwithtricks)\.me$/,
         /^plantaheim(\.web\.id|\.com)$/,
         /^(www\.)?starzone\.cc$/,
