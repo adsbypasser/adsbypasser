@@ -7,7 +7,7 @@ _.register({
       /^(www\.)?croco\.(me|site)$/,
       /^cpmlink\.net$/,
     ],
-    path: /^\/\w+$/,
+    path: /^\/[a-zA-Z0-9/-]+$/,
   },
   async ready () {
     if (!$.$('#captcha')) {
@@ -51,7 +51,7 @@ _.register({
   rule: [
     {
       host: /^cpmlink\.net$/,
-      path: /^\/go\/\w+$/,
+      path: /^\/go\/[a-zA-Z0-9/-]+$/,
     },
     {
       host: /^(www\.)?croco\.(me|site)$/,
