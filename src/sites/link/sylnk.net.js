@@ -324,7 +324,21 @@ _.register({
 
 _.register({
   rule: {
-    host: /^(v1\.)?hexafile\.net$/,
+    host: /^skiplink\.io$/,
+    path: /^\/get\/link\//,
+  },
+  async ready () {
+    const s = $('.panel.panel-default.panel-body > center > center > a');
+    await $.openLink(s.href);
+  },
+});
+
+_.register({
+  rule: {
+    host: [
+      /^(v1\.)?hexafile\.net$/,
+      /^skiplink\.io$/,
+    ],
     path: /^\/[a-zA-Z0-9]+/,
   },
   async ready () {
