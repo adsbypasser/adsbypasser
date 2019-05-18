@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * cpmlink.net
     * daunshorte.teknologilink.com
     * imagebam.com
     * teknosafe.teknologilink.com
