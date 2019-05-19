@@ -11,6 +11,7 @@
     * linkwea.com
     * menantisenja.com
     * muhammadyoga.me
+    * oload.press
     * oploverzhome.com
     * skiplink.io
     * surfsees.com
