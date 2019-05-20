@@ -42,7 +42,7 @@
         /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi|wishes2|weawp)\.com$/,
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger|linkwea)\.com$/,
         /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|earnwithshortlink)\.com$/,
-        /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners)\.com$/,
+        /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners|slegle)\.com$/,
         /^shrt(8|10)\.com$/,
         // net
         /^link\.akuno\.net$/,
