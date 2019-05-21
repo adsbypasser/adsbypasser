@@ -5,7 +5,9 @@
     * direct-link.net
     * dunyanews.xyz
     * health-goood.com
+    * healthfary.com
     * hen-tay.net
+    * kooramubashir.com
     * link.akuno.net
     * link-to.net
     * linkwea.com
@@ -14,6 +16,7 @@
     * oload.press
     * oploverzhome.com
     * skiplink.io
+    * slegle.com
     * surfsees.com
     * ultraskora.com
     * virtualdata.me
