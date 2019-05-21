@@ -591,6 +591,7 @@
     * gram.im
     * haxrs.com
     * health-goood.com
+    * healthfary.com
     * healthhindigyan.in
     * hen-tay.net
     * icutit.ca
@@ -613,6 +614,7 @@
     * khabratk.com
     * khraba.com
     * kidsors.xyz
+    * kooramubashir.com
     * koylinks.win
     * kpscthulasilogin.info
     * kutpay.com
@@ -730,6 +732,7 @@
     * skip.az
     * skips.link
     * skipurls.com
+    * slegle.com
     * smarteasystudy.com
     * spamlink.org
     * srtfly.com
