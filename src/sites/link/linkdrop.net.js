@@ -62,7 +62,7 @@
         // xyz
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors)\.xyz$/,
         /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy)\.xyz$/,
-        /^(autocarsmagz|getpocket|yasinews|dunyanews)\.xyz$/,
+        /^(autocarsmagz|getpocket|yasinews|dunyanews|komiupdates)\.xyz$/,
         // else
         /^(petty|skips|tr|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
