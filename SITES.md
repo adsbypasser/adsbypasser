@@ -614,6 +614,7 @@
     * khabratk.com
     * khraba.com
     * kidsors.xyz
+    * komiupdates.xyz
     * kooramubashir.com
     * koylinks.win
     * kpscthulasilogin.info
