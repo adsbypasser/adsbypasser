@@ -7,6 +7,7 @@
     * health-goood.com
     * healthfary.com
     * hen-tay.net
+    * justlikeyojna.com
     * komiupdates.xyz
     * kooramubashir.com
     * link.akuno.net
