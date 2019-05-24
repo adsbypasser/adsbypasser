@@ -611,6 +611,7 @@
     * jejaklagu.com
     * jelajahinternet.me
     * jurl.io
+    * justlikeyojna.com
     * khabratk.com
     * khraba.com
     * kidsors.xyz
