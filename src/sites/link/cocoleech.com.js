@@ -3,7 +3,7 @@ _.register({
     host: /^cocoleech\.com$/,
   },
   async ready () {
-    const a = $('#download');
+    const a = $('.btn.btn-block.btn-success');
     await $.openLink(a.href);
   },
 });
