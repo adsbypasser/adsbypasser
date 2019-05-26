@@ -56,7 +56,7 @@
         /^(utimetableresult|daily-sale)\.in$/,
         // me
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri|infotrendy)\.me$/,
-        /^(advancedautorepairtips|takeitfor)\.me$/,
+        /^(advancedautorepairtips|takeitfor|jelajahinternet)\.me$/,
         // xyz
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors)\.xyz$/,
         /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy)\.xyz$/,
@@ -200,7 +200,7 @@
         /^(eklink)\.net$/,
         // else
         /^(urle|adshort)\.co$/,
-        /^(weefy|adbull|zeiz|link4|adcoin|jelajahinternet)\.me$/,
+        /^(weefy|adbull|zeiz|link4|adcoin)\.me$/,
         /^(adbilty|taive)\.in$/,
         /^(twik|adslink)\.pw$/,
         /^(curs|crus|4cut|u2s|l2s)\.io$/,
