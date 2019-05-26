@@ -72,7 +72,7 @@
         /^megaurl\.(in|link)$/,
         /^payskip\.(me|org)$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs|makeurl|mooddisorder|cutls)\.co$/,
-        /^(mlink|cl250|xpickle)\.club$/,
+        /^(mlink|cl250|xpickle|infosehatku)\.club$/,
         /^(igram|gram|pingit)\.im$/,
         /^(clk|cll)\.(press|ink|sh|icu)$/,
         /^short\.pe$/,
