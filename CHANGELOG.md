@@ -5,6 +5,7 @@
     * cpmlink.net
     * daunshorte.teknologilink.com
     * imagebam.com
+    * jelajahinternet.me
     * teknosafe.teknologilink.com
     
 ## v7.1.0
