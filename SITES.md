@@ -703,6 +703,7 @@
     * royurls.bid
     * safelinkblogger.com
     * safelinku.net
+    * sarkarijobsresultss.com
     * sciencelife.ga
     * sh11.xyz
     * shink.xyz
@@ -756,6 +757,7 @@
     * techmen-world.com
     * technocanvas.xyz
     * templink.org
+    * thefreech.com
     * thegyaanipoint.com
     * thin.at
     * tiny.ec
@@ -812,6 +814,7 @@
     * yourw-ay.com
     * z2i.com
     * za.gl
+    * zalipay.com
     * zeiz.me
     * zi.ht
     * zlshorte.net
