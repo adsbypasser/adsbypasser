@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * cocoleech.com
     * cpmlink.net
     * daunshorte.teknologilink.com
     * imagebam.com
