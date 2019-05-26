@@ -151,6 +151,7 @@
         /^(www\.)?shrink\.vip$/,
         /^cutwin\.(us|com)$/,
         /^123short\.biz$/,
+        /^techcraze\.online$/,
       ],
     },
     async ready () {
