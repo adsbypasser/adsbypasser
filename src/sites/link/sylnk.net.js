@@ -103,6 +103,10 @@ _.register({
       path: /^\/cheat\//,
       query: /^\?link=([a-zA-Z0-9/=]+)$/,
     },
+    {
+      host: /^closetopic\.site$/,
+      query: /^\?go=([a-zA-Z0-9/=]+)$/,
+    },
   ],
   async start (m) {
     const rawLink = atob(m.query[1]);
