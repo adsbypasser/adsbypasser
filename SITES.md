@@ -605,6 +605,7 @@
     * iitjeemainguide.in
     * ilinkshortx.com
     * imageoptimizer.us
+    * infosehatku.club
     * infotrendy.me
     * itiad.com
     * itiurl.co
@@ -752,6 +753,7 @@
     * tarnwh2i.com
     * tech4utoday.com
     * techandreview.info
+    * techcraze.online
     * techfinda.com
     * techinhub.xyz
     * techkti.com
@@ -1006,6 +1008,7 @@
     * keptarolo.hu
     * kingofshrink.com
     * layarkaca21.vip
+    * leechall.download
     * leechpremium.link
     * lienscash.com
     * link.im
