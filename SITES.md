@@ -472,6 +472,7 @@
     * amenitiees.com
     * arba7co.com
     * arba7kpro.com
+    * aristoderas.com
     * autech.xyz
     * autocarsmagz.xyz
     * bakilink.com
@@ -553,6 +554,8 @@
     * dz4link.com
     * dzurl.ml
     * e2s.cc
+    * e7kelyana.com
+    * ea-isly.com
     * earn.theplusit.ro
     * earn-guide.com
     * earn-url.com
@@ -595,6 +598,7 @@
     * healthfary.com
     * healthhindigyan.in
     * hen-tay.net
+    * hindibeen.com
     * icutit.ca
     * icutlink.com
     * idsly.bid
@@ -686,6 +690,7 @@
     * oturl.com
     * ourl.io
     * partqb2i.com
+    * pastekan.com
     * payshorturl.com
     * payskip.me
     * payskip.org
@@ -724,6 +729,7 @@
     * shortlinko.com
     * shortly.xyz
     * shortye.net
+    * shortzon.com
     * shrink.vip
     * shrinkbuck.com
     * shrinkearn.com
