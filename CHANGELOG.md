@@ -2,6 +2,7 @@
 
 * added
     * clickar.net
+    * cu5.io
     * direct-link.net
     * dunyanews.xyz
     * health-goood.com
