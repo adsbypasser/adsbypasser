@@ -1,16 +1,22 @@
 ## TBA
 
 * added
+    * aristoderas.com
     * clickar.net
     * cu5.io
     * direct-link.net
     * dunyanews.xyz
+    * e7kelyana.com
+    * ea-isly.com
     * health-goood.com
     * healthfary.com
     * hen-tay.net
+    * hindibeen.com
+    * infosehatku.club
     * justlikeyojna.com
     * komiupdates.xyz
     * kooramubashir.com
+    * leechall.download
     * link.akuno.net
     * link-to.net
     * linkwea.com
@@ -18,10 +24,13 @@
     * muhammadyoga.me
     * oload.press
     * oploverzhome.com
+    * pastekan.com
     * sarkarijobsresultss.com
+    * shortzon.com
     * skiplink.io
     * slegle.com
     * surfsees.com
+    * techcraze.online
     * thefreech.com
     * ultraskora.com
     * virtualdata.me
