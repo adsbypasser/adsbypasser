@@ -17,12 +17,15 @@
     * muhammadyoga.me
     * oload.press
     * oploverzhome.com
+    * sarkarijobsresultss.com
     * skiplink.io
     * slegle.com
     * surfsees.com
+    * thefreech.com
     * ultraskora.com
     * virtualdata.me
     * weawp.com
+    * zalipay.com
 
 ## v7.1.0
 
