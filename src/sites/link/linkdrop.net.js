@@ -63,11 +63,13 @@
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors)\.xyz$/,
         /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy)\.xyz$/,
         /^(autocarsmagz|getpocket|yasinews|dunyanews|komiupdates)\.xyz$/,
+        // io
+        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii)\.io$/,        
+        /^cu(2|3|5)\.io$/,
         // else
         /^(petty|skips|tr|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
         /^payskip\.(me|org)$/,
-        /^(oke|cuon|cuio|cuee|cuus|cuto|cu2|linktor|flylink|uiz|cu3|uii)\.io$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs|makeurl|mooddisorder|cutls)\.co$/,
         /^(mlink|cl250|xpickle)\.club$/,
         /^(igram|gram|pingit)\.im$/,
