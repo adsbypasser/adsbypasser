@@ -36,6 +36,7 @@
         /^(wrap-w0rld|ommantrameditation|mawdok|techfinda|clixg|boardgift|beast-birds)\.com$/,
         /^(talkittechy|newsinjules|kutpay|nikkarr|veblink|al3amall|6aba2day|oploverzhome)\.com$/,
         /^(kooramubashir|healthfary|justlikeyojna|sarkarijobsresultss|zalipay|thefreech)\.com$/,
+        /^(hindibeen|pastekan|e7kelyana|ea-isly|aristoderas)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(www\.)?(clkpays|lnkjob|efshort)\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7)\.com$/,
@@ -55,10 +56,10 @@
         /^(www\.)?lwt\.pw$/,
         // in
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
-        /^(utimetableresult|daily-sale)\.in$/,
+        /^(utimetableresult|daily-sale|linkszone)\.in$/,
         // me
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri|infotrendy)\.me$/,
-        /^(advancedautorepairtips|takeitfor|virtualdata|muhammadyoga)\.me$/,
+        /^(advancedautorepairtips|takeitfor|virtualdata|muhammadyoga|s2w)\.me$/,
         // xyz
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors)\.xyz$/,
         /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy)\.xyz$/,
