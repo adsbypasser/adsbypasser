@@ -35,7 +35,7 @@
         /^(techmen-world|razerflixs|gamesindians|dislooks|elkhbrel7sry|onaah|ultraskora)\.com$/,
         /^(wrap-w0rld|ommantrameditation|mawdok|techfinda|clixg|boardgift|beast-birds)\.com$/,
         /^(talkittechy|newsinjules|kutpay|nikkarr|veblink|al3amall|6aba2day|oploverzhome)\.com$/,
-        /^(kooramubashir|healthfary|justlikeyojna)\.com$/,
+        /^(kooramubashir|healthfary|justlikeyojna|sarkarijobsresultss)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(www\.)?(clkpays|lnkjob|efshort)\.com$/,
         /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7)\.com$/,
