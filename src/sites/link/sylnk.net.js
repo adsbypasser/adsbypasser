@@ -107,9 +107,13 @@ _.register({
       host: /^closetopic\.site$/,
       query: /^\?go=([a-zA-Z0-9/=]+)$/,
     },
+    {
+      host: /^infosia\.xyz$/,
+      query: /^\?kesehatan=([a-zA-Z0-9/=%]+)$/,
+    },
   ],
   async start (m) {
-    const rawLink = atob(m.query[1]);
+    const rawLink = atob(decodeURIComponent(m.query[1]));
     await $.openLink(rawLink);
   },
 });
