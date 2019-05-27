@@ -506,6 +506,7 @@
     * clkpay.com
     * clkpays.com
     * cll.press
+    * closetopic.site
     * coinlink.co
     * converthinks.xyz
     * coolmitten.com
