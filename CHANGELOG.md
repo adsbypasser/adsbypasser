@@ -3,6 +3,7 @@
 * added
     * aristoderas.com
     * clickar.net
+    * closetopic.site
     * cu5.io
     * direct-link.net
     * dunyanews.xyz
