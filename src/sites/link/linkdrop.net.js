@@ -56,7 +56,7 @@
         /^(www\.)?lwt\.pw$/,
         // in
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
-        /^(utimetableresult|daily-sale|linkszone)\.in$/,
+        /^(utimetableresult|daily-sale|linkszone|viraltechnical)\.in$/,
         // me
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri|infotrendy)\.me$/,
         /^(advancedautorepairtips|takeitfor|virtualdata|muhammadyoga|s2w)\.me$/,
