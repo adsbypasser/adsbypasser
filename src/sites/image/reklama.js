@@ -32,7 +32,7 @@
           /^hotimages\.eu$/,
           /(^|\.)55888\.eu$/,
           // site
-          /^picz\.site$/,
+          /^(picz|unporn)\.site$/,
           /^pic\.hotimg\.site$/,
           // else
           /^www\.hotimage\.uk$/,
