@@ -119,6 +119,7 @@
         /^splashnews\.ooo$/,
         /^ckk\.ai$/,
         /^fc\.lc$/,
+        /^pa4l\.esy\.es$/,
       ],
     },
     async ready () {
