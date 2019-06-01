@@ -473,6 +473,16 @@ _.register({
 
 _.register({
   rule: {
+    host: /^zap\.in$/,
+  },
+  async ready () {
+    const z = $('.panel-body button');
+    z.click();
+  },
+});
+
+_.register({
+  rule: {
     host: /^idnation\.net$/,
     query: /^\?page=/,
   },
