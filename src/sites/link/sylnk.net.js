@@ -185,6 +185,7 @@ _.register({
       /^(getinfos|sehatsegar|lonelymoon)\.net$/,
       /^stt\.awsubs\.co$/,
       /^(wibuindo|naturalhealthy)\.xyz$/,
+      /^waifusafe\.ooo$/,
     ],
     query: /^\?(id|c|k)=([a-zA-Z0-9/=]+)$/,
   },
@@ -251,7 +252,10 @@ _.register({
 
 _.register({
   rule: {
-    host: /^naturalhealthy\.xyz$/,
+    host: [
+      /^naturalhealthy\.xyz$/,
+      /^waifusafe\.ooo$/,
+    ],
   },
   async ready () {
     const n = $.searchFromScripts(/{a='([^']+)';window\.open/);
