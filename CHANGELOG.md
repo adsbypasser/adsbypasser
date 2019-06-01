@@ -2,6 +2,7 @@
 
 * added
     * aristoderas.com
+    * bluemediafiles.com
     * clickar.net
     * closetopic.site
     * cu5.io
@@ -14,6 +15,7 @@
     * hen-tay.net
     * hindibeen.com
     * infosehatku.club
+    * infosia.xyz
     * justlikeyojna.com
     * komiupdates.xyz
     * kooramubashir.com
@@ -25,6 +27,7 @@
     * muhammadyoga.me
     * oload.press
     * oploverzhome.com
+    * pa4l.esy.es
     * pastekan.com
     * sarkarijobsresultss.com
     * shortzon.com
@@ -33,6 +36,8 @@
     * surfsees.com
     * techcraze.online
     * thefreech.com
+    * trading-area.com
+    * unporn.site
     * ultraskora.com
     * virtualdata.me
     * weawp.com
