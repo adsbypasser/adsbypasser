@@ -4,7 +4,7 @@ _.register({
     path: /^\/p\//,
   },
   async ready () {
-    const i = $('#imageid');
+    const i = $('#uImage');
     await $.openImage(i.src);
   },
 });
