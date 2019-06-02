@@ -1,10 +1,12 @@
 ## TBA
 
 * added
+    * 1v.to
     * aristoderas.com
     * bluemediafiles.com
     * clickar.net
     * closetopic.site
+    * crockolinks.com
     * cu5.io
     * direct-link.net
     * dunyanews.xyz
@@ -38,10 +40,14 @@
     * thefreech.com
     * trading-area.com
     * unporn.site
+    * uploadhaven.com
     * ultraskora.com
+    * vcrypt.net
     * virtualdata.me
+    * waifusafe.ooo
     * weawp.com
     * zalipay.com
+    * zap.in
 
 ## v7.1.0
 
