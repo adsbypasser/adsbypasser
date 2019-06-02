@@ -388,9 +388,11 @@
     * travelwithtricks.me
     * unduh.in
     * url.hulblog.com
+    * waifusafe.ooo
     * wibuindo.xyz
     * ww2.awsubs.co
     * yametesenpai.xyz
+    * zap.in
 * segmentnext.com
     * segmentnext.com
     * videogameblogger.com
@@ -931,6 +933,7 @@
     * 1ink.info
     * 1pics.ru
     * 1tiny.net
+    * 1v.to
     * 4fun.tw
     * ad2links.com
     * ad4.fr
@@ -959,6 +962,7 @@
     * coinlink.co
     * comyonet.com
     * coolrom.com
+    * crockolinks.com
     * cubeupload.com
     * dailyimages.xyz
     * dawnstation.com
@@ -1108,6 +1112,7 @@
     * ulmt.in
     * unfake.it
     * uplinkto.me
+    * uploadhaven.com
     * upmirror.info
     * url.fm
     * url.ie
@@ -1118,6 +1123,7 @@
     * uskip.me
     * ux9.de
     * vavi.co
+    * vcrypt.net
     * vidto.me
     * viidii.info
     * vir.al
