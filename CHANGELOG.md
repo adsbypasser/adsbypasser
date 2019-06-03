@@ -16,6 +16,8 @@
     * healthfary.com
     * hen-tay.net
     * hindibeen.com
+    * indishare.me
+    * indishare.org
     * infosehatku.club
     * infosia.xyz
     * justlikeyojna.com
