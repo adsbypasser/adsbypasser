@@ -1016,6 +1016,8 @@
     * imgdollar.com
     * imgmass.com
     * imgvault.pw
+    * indishare.me
+    * indishare.org
     * insurance-waifu.cf
     * ipic.su
     * itw.me
