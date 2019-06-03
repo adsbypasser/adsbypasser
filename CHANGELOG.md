@@ -7,6 +7,7 @@
     * imagebam.com
     * jelajahinternet.me
     * teknosafe.teknologilink.com
+    * turboimagehost.com
     
 ## v7.1.0
 
