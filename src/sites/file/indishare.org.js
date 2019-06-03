@@ -3,6 +3,7 @@ _.register({
     host: [
       /^(www\.)?indishare\.(org|me)$/,
       /^bdupload\.(info|asia)$/,
+      /^upgrand\.site$/,
     ],
   },
   async ready () {
