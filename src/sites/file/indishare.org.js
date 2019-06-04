@@ -4,6 +4,7 @@ _.register({
       /^(www\.)?indishare\.(org|me)$/,
       /^bdupload\.(info|asia)$/,
       /^upgrand\.site$/,
+      /^3zfile\.net$/,
     ],
   },
   async ready () {
