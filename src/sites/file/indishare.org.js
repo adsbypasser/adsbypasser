@@ -5,6 +5,7 @@ _.register({
       /^bdupload\.(info|asia)$/,
       /^upgrand\.site$/,
       /^3zfile\.net$/,
+      /^uploadrar\.com$/,
     ],
   },
   async ready () {
