@@ -934,6 +934,7 @@
     * 1pics.ru
     * 1tiny.net
     * 1v.to
+    * 3zfile.net
     * 4fun.tw
     * ad2links.com
     * ad4.fr
@@ -945,6 +946,8 @@
     * aka.gr
     * akoam.net
     * bayimg.com
+    * bdupload.asia
+    * bdupload.info
     * beeimg.com
     * biglistofwebsites.com
     * bild.me
@@ -1113,8 +1116,10 @@
     * ujv.al
     * ulmt.in
     * unfake.it
+    * upgrand.site
     * uplinkto.me
     * uploadhaven.com
+    * uploadrar.com
     * upmirror.info
     * url.fm
     * url.ie
@@ -1136,3 +1141,4 @@
     * xxx.fopkodiak.site
     * yep.it
     * yooclick.com
+    * zupload.me
