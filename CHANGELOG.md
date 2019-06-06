@@ -2,8 +2,11 @@
 
 * added
     * 1v.to
+    * 3zfile.net
     * aristoderas.com
     * bluemediafiles.com
+    * bdupload.asia
+    * bdupload.info
     * clickar.net
     * closetopic.site
     * crockolinks.com
@@ -42,7 +45,9 @@
     * thefreech.com
     * trading-area.com
     * unporn.site
+    * upgrand.site
     * uploadhaven.com
+    * uploadrar.com
     * ultraskora.com
     * vcrypt.net
     * virtualdata.me
@@ -50,6 +55,7 @@
     * weawp.com
     * zalipay.com
     * zap.in
+    * zupload.me
 
 ## v7.1.0
 
