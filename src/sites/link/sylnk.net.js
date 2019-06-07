@@ -385,7 +385,11 @@ _.register({
   },
   async start () {
     const b = $('body').getAttribute('result');
-    await $.openLink(atob(b));
+    if (b) {
+      await $.openLink(atob(b));
+    } else {
+      return;
+    }
   },
 });
 
