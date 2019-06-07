@@ -381,6 +381,16 @@ _.register({
 
 _.register({
   rule: {
+    host: /^boost\.ink$/,
+  },
+  async start () {
+    const b = $('body').getAttribute('result');
+    await $.openLink(atob(b));
+  },
+});
+
+_.register({
+  rule: {
     host: /^download-mirror\.ga$/,
   },
   async ready () {
