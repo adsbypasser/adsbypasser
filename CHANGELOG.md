@@ -3,10 +3,13 @@
 * added
     * 1v.to
     * 3zfile.net
+    * alseoo.com
     * aristoderas.com
     * bluemediafiles.com
     * bdupload.asia
     * bdupload.info
+    * boost.ink
+    * brenhealth.com
     * clickar.net
     * closetopic.site
     * crockolinks.com
@@ -17,6 +20,7 @@
     * ea-isly.com
     * health-goood.com
     * healthfary.com
+    * healthinsider.online
     * hen-tay.net
     * hindibeen.com
     * indishare.me
