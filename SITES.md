@@ -777,6 +777,7 @@
     * techkti.com
     * techmen-world.com
     * technocanvas.xyz
+    * techtremendous.com
     * templink.org
     * thefreech.com
     * thegyaanipoint.com
@@ -875,6 +876,7 @@
     * oload.space
     * oload.stream
     * oload.tv
+    * oload.website
     * oload.win
     * openload.co
     * openload.pw
