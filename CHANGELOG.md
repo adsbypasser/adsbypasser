@@ -33,6 +33,7 @@
     * leechall.download
     * link.akuno.net
     * link-to.net
+    * linkduit.net
     * linkwea.com
     * menantisenja.com
     * muhammadyoga.me
