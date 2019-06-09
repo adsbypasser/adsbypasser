@@ -1,4 +1,4 @@
-## TBA
+## v7.2.0
 
 * fixed
     * cocoleech.com
