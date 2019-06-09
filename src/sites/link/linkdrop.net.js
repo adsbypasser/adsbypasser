@@ -60,13 +60,13 @@
         /^(utimetableresult|daily-sale|linkszone|viraltechnical)\.in$/,
         // me
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri|infotrendy)\.me$/,
-        /^(advancedautorepairtips|takeitfor|virtualdata|muhammadyoga|s2w)\.me$/,
+        /^(advancedautorepairtips|takeitfor|jelajahinternet|virtualdata|muhammadyoga|s2w)\.me$/,
         // xyz
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors)\.xyz$/,
         /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy)\.xyz$/,
         /^(autocarsmagz|getpocket|yasinews|dunyanews|komiupdates)\.xyz$/,
         // io
-        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii)\.io$/,        
+        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii)\.io$/,
         /^cu(2|3|5)\.io$/,
         // else
         /^(petty|skips|tr|flaz)\.link$/,
@@ -208,7 +208,7 @@
         /^(eklink)\.net$/,
         // else
         /^(urle|adshort)\.co$/,
-        /^(weefy|adbull|zeiz|link4|adcoin|jelajahinternet)\.me$/,
+        /^(weefy|adbull|zeiz|link4|adcoin)\.me$/,
         /^(adbilty|taive)\.in$/,
         /^(twik|adslink)\.pw$/,
         /^(curs|crus|4cut|u2s|l2s)\.io$/,

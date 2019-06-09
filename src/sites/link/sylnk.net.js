@@ -478,7 +478,7 @@ _.register({
     path: /^\/linkteknolink\/safelinkscript\.php$/,
   },
   async ready () {
-    const l = $('#templatemo_content > div:nth-child(4) > a:nth-child(4)');
+    const l = $('#templatemo_content > div > a');
     await $.openLink(l.href, {
       referer: false,
     });

@@ -1,13 +1,21 @@
 ## TBA
 
+* fixed
+    * cocoleech.com
+    * cpmlink.net
+    * daunshorte.teknologilink.com
+    * imagebam.com
+    * jelajahinternet.me
+    * teknosafe.teknologilink.com
+    * turboimagehost.com
 * added
     * 1v.to
     * 3zfile.net
     * alseoo.com
     * aristoderas.com
-    * bluemediafiles.com
     * bdupload.asia
     * bdupload.info
+    * bluemediafiles.com
     * boost.ink
     * brenhealth.com
     * clickar.net
@@ -31,8 +39,8 @@
     * komiupdates.xyz
     * kooramubashir.com
     * leechall.download
-    * link.akuno.net
     * link-to.net
+    * link.akuno.net
     * linkduit.net
     * linkwea.com
     * menantisenja.com
@@ -51,11 +59,11 @@
     * techtremendous.com
     * thefreech.com
     * trading-area.com
+    * ultraskora.com
     * unporn.site
     * upgrand.site
     * uploadhaven.com
     * uploadrar.com
-    * ultraskora.com
     * vcrypt.net
     * virtualdata.me
     * waifusafe.ooo
