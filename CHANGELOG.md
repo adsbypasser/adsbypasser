@@ -37,6 +37,7 @@
     * menantisenja.com
     * muhammadyoga.me
     * oload.press
+    * oload.website
     * oploverzhome.com
     * pa4l.esy.es
     * pastekan.com
@@ -46,6 +47,7 @@
     * slegle.com
     * surfsees.com
     * techcraze.online
+    * techtremendous.com
     * thefreech.com
     * trading-area.com
     * unporn.site
