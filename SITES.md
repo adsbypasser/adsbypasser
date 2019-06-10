@@ -994,6 +994,7 @@
     * freeimgup.com
     * funkyimg.com
     * gamemod.pro
+    * get.ujv.al
     * gkurl.us
     * goimagehost.com
     * goto.loncat.in
