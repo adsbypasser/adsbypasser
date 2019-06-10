@@ -121,6 +121,7 @@
         /^ckk\.ai$/,
         /^fc\.lc$/,
         /^pa4l\.esy\.es$/,
+        /^get\.ujv\.al$/,
       ],
     },
     async ready () {
