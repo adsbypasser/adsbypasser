@@ -27,7 +27,7 @@
           /^(imgserve|imgproject|imgpython|imgpix)\.net$/,
           /^img-view\.net$/,
           /^(naughtygate|gallerycloud)\.net$/,
-          /^(funimg|xximg)\.net$/,
+          /^(xximg)\.net$/,
           // eu
           /^hotimages\.eu$/,
           /(^|\.)55888\.eu$/,
@@ -160,6 +160,28 @@
     async start () {
       const path = window.location.href.replace('/imga-u', '/u').replace('.html', '');
       await $.openLink(path);
+    },
+  });
+  
+  _.register({
+    rule: {
+      host: /^funimg\.net$/,
+      path: /\/img-.*\.html/,
+    },
+    async start () {
+      const path = window.location.href.replace('/img-', '/img3-');
+      await $.openLink(path);
+    },
+  });
+  
+  _.register({
+    rule: {
+      host: /^funimg\.net$/,
+      path: /\/img3-.*\.html/,
+    },
+    async ready () {
+      const i = $('#continuetoimage img');
+      await $.openImage(i.src);
     },
   });
 
