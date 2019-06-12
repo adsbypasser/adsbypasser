@@ -5,6 +5,7 @@ _.register({
       /^corepix\.org$/,
       /^somnath2003\.xyz$/,
       /^(www\.)?xxximagetpb\.org$/,
+      /^pornbaker\.men$/,
     ],
     path: /^\/image\/.+$/,
   },
