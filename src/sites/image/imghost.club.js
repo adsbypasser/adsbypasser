@@ -3,6 +3,7 @@ _.register({
     host: [
       /^imghost\.(top|club)$/,
       /^corepix\.org$/,
+      /^somnath2003\.xyz$/,
     ],
     path: /^\/image\/.+$/,
   },
