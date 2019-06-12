@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^overdream\.cz$/,
+    host: [
+      /^overdream\.cz$/,
+      /^piclick\.org$/,
+    ],
     path: /^\/image\//,
   },
   async ready () {
