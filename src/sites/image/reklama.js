@@ -163,6 +163,17 @@
       await $.openLink(path);
     },
   });
+  
+  _.register({
+    rule: {
+      host: /^pornyfap\.com$/,
+      path: /\/pic\//,
+    },
+    async ready () {
+      const p = $('img#myImg');
+      await $.openImage(p.src);
+    },
+  });
 
   _.register({
     rule: {
