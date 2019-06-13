@@ -1,7 +1,20 @@
 ## TBA
 
 * added
+    * 46.166.167.16
+    * corepix.org
+    * freespinwins.com
+    * piclick.org
+    * pornbaker.men
+    * pornyfap.com
+    * sataniabatch.blogspot.com
+    * semprot.com
+    * somnath2003.xyz
+    * tetewlink.me
+    * u.to
     * underpic.club
+    * vehicle-techno.cf
+    * xxximagetpb.org
 
 ## v7.2.0
 
