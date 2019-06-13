@@ -497,6 +497,22 @@ _.register({
 
 _.register({
   rule: {
+    host: [
+      /^sataniabatch\.blogspot\.com$/,
+      /^(www\.)?vehicle-techno\.cf$/,
+      /^(www\.)?tetewlink\.me$/,
+    ],
+  },
+  async ready () {
+    const clbt = $('button#gotolink');
+    clbt.removeAttribute('disabled');
+    await _.wait(1);
+    clbt.click();
+  },
+});
+
+_.register({
+  rule: {
     host: /^idnation\.net$/,
     query: /^\?page=/,
   },
