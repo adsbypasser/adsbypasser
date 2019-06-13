@@ -253,13 +253,18 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^naturalhealthy\.xyz$/,
       /^waifusafe\.ooo$/,
+      /^naturalhealthy\.xyz$/,
     ],
   },
   async ready () {
-    const n = $.searchFromScripts(/{a='([^']+)';window\.open/);
-    await $.openLink(n[1]);
+    await _.wait(1000);
+    const ln = $('#landing.rurasafectrl .to a');
+    ln.click();
+    
+    await _.wait(1000);
+    const tl = $('.rurasafectrl img#showlink.spoint');
+    tl.click();
   },
 });
 
