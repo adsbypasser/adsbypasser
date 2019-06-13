@@ -217,7 +217,6 @@ _.register({
         /^(www\.)?bolaoke\.club$/,
         // else
         /^(ani-share|autolinkach)\.com$/,
-        /^sehatsegar\.net$/,
         /^(autofans|landscapenature)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
       ],
@@ -225,14 +224,14 @@ _.register({
     },
     {
       host: [
-        /^(gameinfo|apasih|autoride)\.pw$/,
+        /^(gameinfo)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
         /^speedcar\.club$/,
         /^(www\.)?bolaoke\.club$/,
-        /^(intercelestial|sweetlantern|linkach|autolinkach|davinsurance|technlab)\.com$/,
+        /^(autolinkach|davinsurance)\.com$/,
         /^awcar\.icu$/,
         /^skyinsurance\.ml$/,
-        /^(getinfos|sehatsegar|lonelymoon)\.net$/,
+        /^(getinfos)\.net$/,
         /^stt\.awsubs\.co$/,
         /^wibuindo\.xyz$/,
       ],
@@ -264,6 +263,24 @@ _.register({
     
     await _.wait(1000);
     const tl = $('.rurasafectrl img#showlink.spoint');
+    tl.click();
+  },
+});
+
+_.register({
+  rule: {
+    host: [
+      /^(sehatsegar|lonelymoon)\.net$/,
+      /^(intercelestial|sweetlantern)\.com$/,
+    ],
+  },
+  async ready () {
+    await _.wait(1000);
+    const ln = $('#landing.soractrl .to a');
+    ln.click();
+    
+    await _.wait(2000); //if someone has better solution than waiting these 2 seconds, send PR
+    const tl = $('.soractrl img#showlink.spoint');
     tl.click();
   },
 });
