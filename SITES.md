@@ -111,6 +111,7 @@
     * pixup.us
     * pop-img.info
     * porno-pirat.ru
+    * pornyfap.com
     * star-hentai.com
     * teenimage.org
     * teenshot.org
@@ -366,6 +367,7 @@
     * safelinkreview.com
     * safelinkreviewx.com
     * sardeath.com
+    * sataniabatch.blogspot.com
     * sehatlega.com
     * sehatsegar.net
     * short.awsubs.co
@@ -386,11 +388,13 @@
     * teknosafe.teknologilink.com
     * telolet.in
     * tetew.info
+    * tetewlink.me
     * tojros.tk
     * tout-debrid.net
     * travelwithtricks.me
     * unduh.in
     * url.hulblog.com
+    * vehicle-techno.cf
     * waifusafe.ooo
     * wibuindo.xyz
     * ww2.awsubs.co
@@ -400,9 +404,12 @@
     * segmentnext.com
     * videogameblogger.com
 * dailyss.net
-    * dailyss.net
-    * i.hentai-ddl.org
+    * corepix.org
+    * imghost.club
     * imghost.top
+    * pornbaker.men
+    * somnath2003.xyz
+    * xxximagetpb.org
 * adb.ug
     * adb.ug
     * adyou.co
@@ -588,6 +595,7 @@
     * fc.lc
     * flaz.link
     * foxurl.net
+    * freespinwins.com
     * funnyquiz.blog
     * gamesindians.com
     * geki.tech
@@ -935,6 +943,7 @@
     * fiuxy.bz
 * else
     * 01.nl
+    * 46.166.167.16
     * 1be.biz
     * 1dl.biz
     * 1ink.cc
@@ -1079,6 +1088,7 @@
     * pic-upload.de
     * piccash.net
     * picclock.ru
+    * piclick.org
     * picnictrans.com
     * picpic.online
     * picshare.geenza.com
@@ -1100,6 +1110,7 @@
     * sa.ae
     * safeurl.eu
     * screenlist.ru
+    * semprot.com
     * shaggyimg.pro
     * shortid.co
     * shrink-service.it
@@ -1122,6 +1133,7 @@
     * tribuntekno.com
     * turboimagehost.com
     * turkdown.com
+    * u.to
     * ujv.al
     * ulmt.in
     * unfake.it
