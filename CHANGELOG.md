@@ -1,7 +1,18 @@
 ## TBA
 
 * fixed
+    * apasih.pw
+    * autoride.pw
+    * funimg.net
+    * intercelestial.com
+    * linkach.com
+    * lonelymoon.net
+    * naturalhealthy.xyz
+    * sehatsegar.net
     * surfsees.com
+    * sweetlantern.com
+    * technlab.com
+    * waifusafe.ooo
 * added
     * get.ujv.al
 
