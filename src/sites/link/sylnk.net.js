@@ -287,6 +287,24 @@ _.register({
 
 _.register({
   rule: {
+    host: [
+      /^(linkach|technlab)\.com$/,
+      /^(apasih|autoride)\.pw$/,
+    ],
+  },
+  async ready () {
+    await _.wait(1000);
+    const ln = $('#landing.soractrl .to a');
+    ln.click();
+    
+    await _.wait(5000); //if someone has better solution than waiting these 5 seconds, send PR
+    const tl = $('.soractrl img#showlink.spoint');
+    tl.click();
+  },
+});
+
+_.register({
+  rule: {
     host: /^lewat\.in$/,
   },
   async ready () {
