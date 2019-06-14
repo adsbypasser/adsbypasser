@@ -594,6 +594,7 @@
     * factural.com
     * fc.lc
     * flaz.link
+    * foodpuff.com
     * foxurl.net
     * freespinwins.com
     * funnyquiz.blog
