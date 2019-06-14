@@ -4,6 +4,7 @@
     * 46.166.167.16
     * apkmodif.com
     * corepix.org
+    * foodpuff.com
     * freespinwins.com
     * piclick.org
     * pornbaker.men
