@@ -12,9 +12,11 @@
     * semprot.com
     * somnath2003.xyz
     * tetewlink.me
+    * timetoka.com
     * u.to
     * underpic.club
     * vehicle-techno.cf
+    * w-rajem.com
     * xxximagetpb.org
 
 ## v7.2.0
