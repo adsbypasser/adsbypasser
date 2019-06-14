@@ -792,6 +792,7 @@
     * thefreech.com
     * thegyaanipoint.com
     * thin.at
+    * timetoka.com
     * tiny.ec
     * tinylink.run
     * tinylinks.net
@@ -831,6 +832,7 @@
     * vivads.net
     * vnurl.net
     * vnurl.xyz
+    * w-rajem.com
     * weawp.com
     * weefy.me
     * wi.cr
