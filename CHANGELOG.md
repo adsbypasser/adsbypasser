@@ -6,6 +6,7 @@
     * corepix.org
     * foodpuff.com
     * freespinwins.com
+    * linksop.com
     * piclick.org
     * pornbaker.men
     * pornyfap.com
