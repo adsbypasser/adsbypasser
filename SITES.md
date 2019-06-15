@@ -597,7 +597,7 @@
     * gifsis.com
     * git.tc
     * glory-link.com
-    * gocitlink
+    * gocitlink.com
     * gossipcorners.com
     * govtsmartjob.com
     * gram.im
