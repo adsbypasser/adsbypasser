@@ -7,6 +7,7 @@
     * freean.us
     * linkbabes.com
     * linkbucks.com
+    * linksop.com
     * miniurls.co
     * poontown.net
     * qqc.co
