@@ -7,7 +7,6 @@
     * freean.us
     * linkbabes.com
     * linkbucks.com
-    * linksop.com
     * miniurls.co
     * poontown.net
     * qqc.co
@@ -669,6 +668,7 @@
     * linkrex.net
     * linksad.net
     * linksht.com
+    * linksop.com
     * linkszone.in
     * linku.us
     * linkvip.tk
