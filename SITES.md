@@ -619,6 +619,7 @@
     * healthinsider.online
     * hen-tay.net
     * hindibeen.com
+    * hosexx.com
     * icutit.ca
     * icutlink.com
     * idsly.bid
@@ -727,6 +728,7 @@
     * programsfre.com
     * psl.pw
     * pss.pw
+    * pustkala.com
     * raolink.com
     * razerflixs.com
     * reb7konline.com
