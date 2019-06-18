@@ -7,10 +7,12 @@
     * corepix.org
     * foodpuff.com
     * freespinwins.com
+    * hosexx.com
     * linksop.com
     * piclick.org
     * pornbaker.men
     * pornyfap.com
+    * pustkala.com
     * sataniabatch.blogspot.com
     * semprot.com
     * somnath2003.xyz
