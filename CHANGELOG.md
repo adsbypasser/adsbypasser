@@ -2,6 +2,7 @@
 
 * added
     * 46.166.167.16
+    * allapp.xyz
     * apkmodif.com
     * bollywooddramanews.com
     * corepix.org
