@@ -481,6 +481,7 @@
     * agradarpan.com
     * akla4.com
     * al3amall.com
+    * allapp.xyz
     * allreports.site
     * alseoo.com
     * amenitiees.com
