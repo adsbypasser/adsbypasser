@@ -5,6 +5,7 @@
     * allapp.xyz
     * apkmodif.com
     * bollywooddramanews.com
+    * cepmuzikindir.me
     * corepix.org
     * foodpuff.com
     * freespinwins.com
