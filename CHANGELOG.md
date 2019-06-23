@@ -1,5 +1,19 @@
 ## TBA
 
+* fixed
+    * apasih.pw
+    * autoride.pw
+    * funimg.net
+    * intercelestial.com
+    * linkach.com
+    * lonelymoon.net
+    * mirrorace.com
+    * naturalhealthy.xyz
+    * sehatsegar.net
+    * surfsees.com
+    * sweetlantern.com
+    * technlab.com
+    * waifusafe.ooo
 * added
     * 46.166.167.16
     * allapp.xyz
@@ -9,6 +23,7 @@
     * corepix.org
     * foodpuff.com
     * freespinwins.com
+    * get.ujv.al
     * hosexx.com
     * linksop.com
     * piclick.org
