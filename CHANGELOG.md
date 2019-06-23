@@ -1,4 +1,4 @@
-## TBA
+## v7.3.0
 
 * fixed
     * apasih.pw
