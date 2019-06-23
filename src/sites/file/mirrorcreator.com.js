@@ -28,8 +28,9 @@ _.register({
     res.style.display = 'block';
 
     const o = new MutationObserver(() => {
-      if(res.style.display != 'block')
+      if (res.style.display !== 'block') {
         res.style.display = 'block'; //never hide me again
+      }
     });
     o.observe(res, {
       attributes: true,
