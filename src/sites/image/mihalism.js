@@ -8,6 +8,7 @@
         /^funextra\.hostzi\.com$/,
         /^bilder\.nixhelp\.de$/,
         /^imagecurl\.(com|org)$/,
+        /^foto-pic\.net$/,
       ],
       path: /^\/viewer\.php$/,
       query: /file=([^&]+)/,
