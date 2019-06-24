@@ -2,6 +2,8 @@
 
 * added
     * foto-pic.net
+    * ourcareerblog.com
+    * stategossip.com
 
 ## v7.3.0
 
