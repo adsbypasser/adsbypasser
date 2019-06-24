@@ -715,6 +715,7 @@
     * onaah.com
     * oploverzhome.com
     * oturl.com
+    * ourcareerblog.com
     * ourl.io
     * pa4l.esy.es
     * partqb2i.com
@@ -777,6 +778,7 @@
     * spamlink.org
     * splashnews.ooo
     * srtfly.com
+    * stategossip.com
     * stfly.press
     * suarankri.me
     * sxtsquad.com
