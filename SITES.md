@@ -21,6 +21,7 @@
     * yyv.co
     * zatnawqy.net
 * Mihalism Multi Host
+    * foto-pic.net
     * funextra.hostzi.com
     * imagecurl.com
     * imagecurl.org
