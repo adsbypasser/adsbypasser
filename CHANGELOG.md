@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * foto-pic.net
 
 ## v7.3.0
 
