@@ -538,7 +538,7 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^sataniabatch\.blogspot\.com$/,
+      /^(sataniabatch|get-click2)\.blogspot\.com$/,
       /^(www\.)?vehicle-techno\.cf$/,
       /^(www\.)?tetewlink\.me$/,
     ],
