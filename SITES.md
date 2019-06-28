@@ -319,6 +319,7 @@
     * filmku.lompat.in
     * fmlawkers.club
     * gameinfo.pw
+    * get-click2.blogspot.com
     * getinfos.net
     * giga74.com
     * goou.in
