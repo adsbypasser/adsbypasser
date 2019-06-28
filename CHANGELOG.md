@@ -2,6 +2,7 @@
 
 * added
     * foto-pic.net
+    * get-click2.blogspot.com
     * ourcareerblog.com
     * stategossip.com
 
