@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * a5barfawria.com
     * foto-pic.net
     * get-click2.blogspot.com
     * ourcareerblog.com
