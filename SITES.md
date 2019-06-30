@@ -273,8 +273,8 @@
     * imgtown.pw
     * imgve.com
     * imgview.pw
-    * pic-maniac.com
     * picbaron.com
+    * pic-maniac.com
     * uimgshare.com
     * uploadrr.com
 * picexposed.com
@@ -309,11 +309,11 @@
     * decrypt.safelinkconverter.com
     * decrypt2.safelinkconverter.com
     * designmyhomee.com
+    * download-mirror.ga
     * drakorsafe.tech
+    * drive.jepitkertas.com
     * drivefiles.bid
     * drivehub.link
-    * drive.jepitkertas.com
-    * download-mirror.ga
     * dukun-cit.com
     * edogawa.lon.pw
     * filmku.lompat.in
@@ -328,8 +328,8 @@
     * henpoi.lompat.in
     * hexafile.net
     * hikarinoakariost.info
-    * id-securelink.xyz
     * idnation.net
+    * id-securelink.xyz
     * indexmovie.club
     * intercelestial.com
     * irisvera.com
@@ -439,8 +439,8 @@
     * shink.me
     * shon.xyz
 * linkdrop.net
-    * 123link.co
     * 123link.carpartsviet97.site
+    * 123link.co
     * 123link.io
     * 123link.press
     * 123link.pro
@@ -458,7 +458,6 @@
     * 5brgedid.com
     * 6aba2day.com
     * 8o.ee
-    * a-egy.com
     * a5barfawria.com
     * abouttech.space
     * adbilty.me
@@ -478,9 +477,10 @@
     * adsrt.me
     * adsvy.com
     * adurl.id
-    * advance-wishingjs.com
     * advancedautorepairtips.me
+    * advance-wishingjs.com
     * adzurl.cf
+    * a-egy.com
     * agradarpan.com
     * akla4.com
     * al3amall.com
@@ -514,8 +514,8 @@
     * chrt.pw
     * ckk.ai
     * cl250.club
-    * click2-url.com
     * click2see.desi
+    * click2-url.com
     * click2url.online
     * clickar.net
     * clik.pw
@@ -546,14 +546,11 @@
     * cuon.io
     * curs.co
     * curs.io
-    * cut-earn.com
-    * cut-urls.com
-    * cut-w.in
-    * cut-win.com
     * cut4link.com
     * cut4links.com
     * cutadlink.net
     * cutearn.ca
+    * cut-earn.com
     * cuti.in
     * cutl.in
     * cutls.co
@@ -561,8 +558,11 @@
     * cutpaid.com
     * cutsouf.com
     * cuturl.in
+    * cut-urls.com
+    * cut-w.in
     * cutwi.in
     * cutwin.com
+    * cut-win.com
     * cutwin.us
     * cuus.io
     * cyahealth.com
@@ -579,10 +579,10 @@
     * e7kelyana.com
     * ea-isly.com
     * earn.theplusit.ro
-    * earn-guide.com
-    * earn-url.com
     * earnbig.ca
+    * earn-guide.com
     * earnmoneytalk.com
+    * earn-url.com
     * earnwithshortlink.com
     * eatings.stream
     * efshort.com
@@ -618,8 +618,8 @@
     * govtsmartjob.com
     * gram.im
     * haxrs.com
-    * health-goood.com
     * healthfary.com
+    * health-goood.com
     * healthhindigyan.in
     * healthinsider.online
     * hen-tay.net
@@ -656,12 +656,10 @@
     * kuylink.com
     * l2s.io
     * lapak.link
-    * li-nkz.com
     * licklink.net
     * lin65.me
     * linclik.com
     * link.akuno.net
-    * link-zero.com
     * link2link.cf
     * link4.me
     * link4win.com
@@ -680,6 +678,8 @@
     * linku.us
     * linkvip.tk
     * linkwea.com
+    * li-nkz.com
+    * link-zero.com
     * ln11.xyz
     * ln435.online
     * lnkjob.com
@@ -765,14 +765,14 @@
     * shrink.vip
     * shrinkbuck.com
     * shrinkearn.com
-    * shrt8.com
     * shrt10.com
+    * shrt8.com
     * shrten.xyz
     * shrtfly.com
     * shrtfly.net
     * simaholina.xyz
-    * sk-ip.ru
     * skip.az
+    * sk-ip.ru
     * skips.link
     * skipurls.com
     * slegle.com
@@ -844,7 +844,6 @@
     * vivads.net
     * vnurl.net
     * vnurl.xyz
-    * w-rajem.com
     * weawp.com
     * weefy.me
     * wi.cr
@@ -853,6 +852,7 @@
     * wishes2.com
     * wolink.in
     * worldhack.net
+    * w-rajem.com
     * wrap-w0rld.com
     * xemlink.net
     * xpickle.club
@@ -957,7 +957,6 @@
     * fiuxy.bz
 * else
     * 01.nl
-    * 46.166.167.16
     * 1be.biz
     * 1dl.biz
     * 1ink.cc
@@ -966,14 +965,15 @@
     * 1tiny.net
     * 1v.to
     * 3zfile.net
+    * 46.166.167.16
     * 4fun.tw
     * ad2links.com
     * ad4.fr
     * adfoc.us
     * adlot.us
     * admy.link
-    * ah-informatique.com
     * ah.pe
+    * ah-informatique.com
     * aka.gr
     * akoam.net
     * apkmodif.com
@@ -1070,13 +1070,13 @@
     * lienscash.com
     * link.im
     * link.tl
-    * link-to.net
     * link4ad.com
     * linkdecode.com
     * linkduit.net
     * linkplugapp.com
     * linksas.us
     * linksupto.com
+    * link-to.net
     * linktor.io
     * lolinez.com
     * lostpic.net
@@ -1100,15 +1100,15 @@
     * p.pw
     * pasted.co
     * pdi2.net
-    * pic-money.ru
-    * pic-upload.de
     * piccash.net
     * picclock.ru
     * piclick.org
+    * pic-money.ru
     * picnictrans.com
     * picpic.online
     * picshare.geenza.com
     * picstream.tv
+    * pic-upload.de
     * pimpandhost.com
     * pixhost.to
     * pixroute.com
@@ -1179,3 +1179,4 @@
     * yep.it
     * yooclick.com
     * zupload.me
+
