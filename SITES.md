@@ -783,6 +783,7 @@
     * stategossip.com
     * stfly.press
     * suarankri.me
+    * swiggygold.com
     * sxtsquad.com
     * szs.pw
     * tabakhelo.com
