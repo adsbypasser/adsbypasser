@@ -6,6 +6,7 @@
     * get-click2.blogspot.com
     * ourcareerblog.com
     * stategossip.com
+    * swiggygold.com
 
 ## v7.3.0
 
