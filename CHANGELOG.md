@@ -1,4 +1,4 @@
-## TBA
+## v7.4.0
 
 * added
     * a5barfawria.com
