@@ -45,7 +45,7 @@
         /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi|wishes2|weawp|a5barfawria)\.com$/,
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger|linkwea|ourcareerblog)\.com$/,
         /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|earnwithshortlink|swiggygold)\.com$/,
-        /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners|slegle)\.com$/,
+        /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners|slegle|futurefoundationngo)\.com$/,
         /^shrt(8|10)\.com$/,
         // net
         /^link\.akuno\.net$/,
