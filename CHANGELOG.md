@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * fastpic.ru
 
 ## v7.4.0
 
