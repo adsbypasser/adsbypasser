@@ -4,8 +4,8 @@ _.register({
     path: /^\/view\//,
   },
   async ready () {
-    const img = $('#picContainer #image:last-child');
-    await $.openImage(img.src, {
+    const i = $('#picContainer img');
+    await $.openImage(i.src, {
       // prevent loopback if image not found
       referer: true,
     });
