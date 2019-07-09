@@ -604,6 +604,7 @@
     * foxurl.net
     * freespinwins.com
     * funnyquiz.blog
+    * futurefoundationngo.com
     * gamesindians.com
     * geki.tech
     * getfreshcloud.xyz
