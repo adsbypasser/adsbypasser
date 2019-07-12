@@ -686,6 +686,7 @@
     * lnkjob.com
     * lnks4all.com
     * loadurl.com
+    * loopdiet.com
     * lopte.pro
     * lotechnocan.org
     * lpe.pw
