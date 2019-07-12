@@ -2,6 +2,7 @@
 
 * added
     * futurefoundationngo.com
+    * loopdiet.com
 
 ## v7.4.0
 
