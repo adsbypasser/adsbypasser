@@ -1,10 +1,9 @@
 _.register({
   rule: {
     host: [
-      /^openload\.(co|pw)$/,
+      /^openload\.(co|io|link|pw)$/,
       /^openloed\.(co)$/,
-      /^oload\.(stream|info|site|tv|win|download|cloud|cc|fun|club|live|space|services|network|life|press)$/,
-      /^oload\.(website)$/,
+      /^oload\.(biz|cc|cloud|club|download|fun|info|life|live|network|press|services|site|space|stream|tv|win|website)$/,
       /^oladblock\.(services|xyz|me)$/,
     ],
     path: /^\/f\/.*/,
