@@ -10,9 +10,15 @@ _.register({
     path: /^\/f\/.*/,
   },
   async start () {
-    $.window.adblock = false;
-    $.window.adblock2 = false;
-    $.window.popAdsLoaded = true;
+    if ($.window.adblock !== false) {
+      $.window.adblock = false;
+    }
+    if ($.window.adblock2 !== false) {
+      $.window.adblock2 = false;
+    }
+    if ($.window.popAdsLoaded !== true) {
+      $.window.popAdsLoaded = true;
+    }
   },
   async ready () {
     await _.wait(500);
