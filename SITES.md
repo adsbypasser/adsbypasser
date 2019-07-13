@@ -635,6 +635,7 @@
     * idsly.org
     * igram.im
     * iitjeemainguide.in
+    * ijobanana.xyz
     * ilinkshortx.com
     * imageoptimizer.us
     * infosehatku.club
@@ -697,6 +698,7 @@
     * man2pro.com
     * marivelkece.xyz
     * mawdok.com
+    * mediakita.blog
     * megaurl.in
     * megaurl.link
     * merdekaid.online
@@ -711,6 +713,7 @@
     * mykinggo.com
     * newsinjules.com
     * newskart.xyz
+    * news-tech.xyz
     * newupdatesonline.com
     * niagoshort.com
     * nikkarr.com
