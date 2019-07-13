@@ -4,6 +4,7 @@
     * futurefoundationngo.com
     * loopdiet.com
     * smwebs.xyz
+    * subetenews.com
 
 ## v7.4.0
 
