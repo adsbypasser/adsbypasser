@@ -71,7 +71,7 @@ _.register({
     },
     {
       host: [
-        /^(sehatlega|davinsurance|healthtod|irisvera|akanosora)\.com$/,
+        /^(sehatlega|davinsurance|healthtod|irisvera|akanosora|subetenews)\.com$/,
         /^(www\.)?menantisenja\.com$/,
         /^(businessforyouand|lindung|travelwithtricks)\.me$/,
         /^plantaheim(\.web\.id|\.com)$/,
