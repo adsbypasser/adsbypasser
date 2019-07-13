@@ -3,6 +3,7 @@
 * added
     * futurefoundationngo.com
     * loopdiet.com
+    * smwebs.xyz
 
 ## v7.4.0
 
