@@ -384,6 +384,7 @@
     * srelink.com
     * starzone.cc
     * stt.awsubs.co
+    * subetenews.com
     * sweetlantern.com
     * sylnk.net
     * technlab.com
