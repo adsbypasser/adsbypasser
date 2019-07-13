@@ -779,6 +779,7 @@
     * skipurls.com
     * slegle.com
     * smarteasystudy.com
+    * smwebs.xyz
     * spamlink.org
     * splashnews.ooo
     * srtfly.com
