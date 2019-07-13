@@ -108,7 +108,7 @@
         /^click2see\.desi$/,
         /^shorted\.id$/,
         /^zi\.ht$/,
-        /^funnyquiz\.blog$/,
+        /^(funnyquiz|mediakita)\.blog$/,
         /^(sciencelife|cpm4all)\.ga$/,
         /^thin\.at$/,
         /^(www\.)?bloggerworld\.online$/,
