@@ -2,7 +2,10 @@
 
 * added
     * futurefoundationngo.com
+    * ijobanana.xyz
     * loopdiet.com
+    * mediakita.blog
+    * news-tech.xyz
     * smwebs.xyz
     * subetenews.com
 
