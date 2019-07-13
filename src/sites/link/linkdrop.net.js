@@ -65,8 +65,8 @@
         /^(cepmuzikindir)\.me$/,
         // xyz
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors)\.xyz$/,
-        /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy)\.xyz$/,
-        /^(autocarsmagz|getpocket|yasinews|dunyanews|komiupdates|allapp|smwebs)\.xyz$/,
+        /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy|ijobanana)\.xyz$/,
+        /^(autocarsmagz|getpocket|yasinews|dunyanews|komiupdates|allapp|smwebs|news-tech)\.xyz$/,
         // io
         /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii)\.io$/,
         /^cu(2|3|5)\.io$/,
