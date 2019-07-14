@@ -3,9 +3,9 @@ _.register({
     host: [
       /^openload\.(co|pw)$/,
       /^openloed\.(co)$/,
-      /^oload\.(stream|info|site|tv|win|download|cloud|cc|fun|club|live|space|services|network|life|press)$/,
-      /^oload\.(website)$/,
-      /^oladblock\.(services|xyz|me)$/,
+      /^oload\.(cc|cloud|club|download|fun|info|life|live|network|press|services|site|space|stream|tv)$/,
+      /^oload\.(website|win)$/,
+      /^oladblock\.(me|services|xyz)$/,
     ],
     path: /^\/f\/.*/,
   },
