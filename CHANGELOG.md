@@ -6,6 +6,9 @@
     * loopdiet.com
     * mediakita.blog
     * news-tech.xyz
+    * oload.biz
+    * openload.io
+    * openload.link
     * smwebs.xyz
     * subetenews.com
 
