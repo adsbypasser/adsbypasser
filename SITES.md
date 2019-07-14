@@ -893,6 +893,7 @@
     * oladblock.me
     * oladblock.services
     * oladblock.xyz
+    * oload.biz
     * oload.cc
     * oload.cloud
     * oload.club
@@ -911,6 +912,8 @@
     * oload.website
     * oload.win
     * openload.co
+    * openload.io
+    * openload.link
     * openload.pw
 * al.ly
     * al.ly
