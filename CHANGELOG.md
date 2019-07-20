@@ -3,6 +3,7 @@
 * added
     * futurefoundationngo.com
     * ijobanana.xyz
+    * kvador.com
     * loopdiet.com
     * mediakita.blog
     * news-tech.xyz
