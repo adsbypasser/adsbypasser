@@ -273,8 +273,9 @@
     * imgtown.pw
     * imgve.com
     * imgview.pw
-    * picbaron.com
+    * kvador.com
     * pic-maniac.com
+    * picbaron.com
     * uimgshare.com
     * uploadrr.com
 * picexposed.com
