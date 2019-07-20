@@ -102,6 +102,7 @@
         /^imgfiles\.org$/,
         /^picbaron\.com$/,
         /^imgbaron\.com$/,
+        /^kvador\.com$/,
       ],
       path: PATH_RULE,
     },
