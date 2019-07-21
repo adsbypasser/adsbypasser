@@ -1,5 +1,3 @@
-/* global cloneInto: false exportFunction: false GM: false */
-
 import {
   forEach,
   nop,
