@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * fastpic.ru
 * added
     * futurefoundationngo.com
     * ijobanana.xyz
