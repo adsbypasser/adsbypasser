@@ -274,8 +274,8 @@
     * imgve.com
     * imgview.pw
     * kvador.com
-    * pic-maniac.com
     * picbaron.com
+    * pic-maniac.com
     * uimgshare.com
     * uploadrr.com
 * picexposed.com
@@ -1191,4 +1191,3 @@
     * yep.it
     * yooclick.com
     * zupload.me
-
