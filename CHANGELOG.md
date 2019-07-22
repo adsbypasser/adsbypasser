@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * cu6.io
 
 ## v7.5.0
 
