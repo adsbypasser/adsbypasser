@@ -5,11 +5,10 @@
   _.register({
     rule: {
       host: [
-        /^(imgmonkey|imgtrex|imgve)\.com$/,
+        /^(imgmonkey|imgtrex|imgve|uploadrr|imageeer|pic-maniac|hulkimge)\.com$/,
+        /^www\.uimgshare\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
-        /^(uploadrr|imageeer|pic-maniac|hulkimge)\.com$/,
-        /^www\.uimgshare\.com$/,
       ],
       path: PATH_RULE,
     },
@@ -99,10 +98,8 @@
   _.register({
     rule: {
       host: [
+        /^(picbaron|imgbaron|kvador)\.com$/,
         /^imgfiles\.org$/,
-        /^picbaron\.com$/,
-        /^imgbaron\.com$/,
-        /^kvador\.com$/,
       ],
       path: PATH_RULE,
     },
