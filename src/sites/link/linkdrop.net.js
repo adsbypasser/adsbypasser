@@ -69,7 +69,7 @@
         /^(autocarsmagz|getpocket|yasinews|dunyanews|komiupdates|allapp|smwebs|news-tech)\.xyz$/,
         // io
         /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii)\.io$/,
-        /^cu(2|3|5)\.io$/,
+        /^cu(2|3|5|6)\.io$/,
         // else
         /^(petty|skips|tr|flaz)\.link$/,
         /^megaurl\.(in|link)$/,
