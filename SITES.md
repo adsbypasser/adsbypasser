@@ -544,6 +544,7 @@
     * cu3.io
     * cu5.io
     * cu6.io
+    * cu7.io
     * cuee.io
     * cuio.io
     * cuon.io
