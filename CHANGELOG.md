@@ -2,6 +2,7 @@
 
 * added
     * cu6.io
+    * cu7.io
 
 ## v7.5.0
 
