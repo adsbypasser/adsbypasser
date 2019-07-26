@@ -48,7 +48,8 @@
           /^xxx\.sexex\.xyz$/,
           /^imagespublic\.tk$/,
           /^ecoimages\.xyz$/,
-          /^underpic\.club$/
+          /^underpic\.club$/,
+          /^imageraven\.com$/,
         ],
         path: /\/img-.*\.html/,
       },
