@@ -3,7 +3,7 @@
   _.register({
     rule: {
       host: [
-        /^ulshare\.net$/,
+        /^(ulshare|urlike)\.net$/,
         /^adurl\.id$/,
         /^earn-guide\.com$/,
         /^(cutwi|cut-w|cutl|dmus)\.in$/,
