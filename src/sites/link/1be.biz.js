@@ -11,7 +11,7 @@ _.register({
 
 _.register({
   rule: {
-    host: /^1(be|dl)\.biz$/,
+    host: /^(1be|1dl)\.biz$/,
     path: /^\/[jt]\.php$/,
     query: /^\?s=/,
   },
