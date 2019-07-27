@@ -1,10 +1,12 @@
 _.register({
   rule: {
     host: [
-      /^imghost\.(top|club)$/,
+      // org
       /^corepix\.org$/,
-      /^somnath2003\.xyz$/,
       /^(www\.)?xxximagetpb\.org$/,
+      // else
+      /^imghost\.(top|club)$/,
+      /^somnath2003\.xyz$/,
       /^pornbaker\.men$/,
     ],
     path: /^\/image\/.+$/,
