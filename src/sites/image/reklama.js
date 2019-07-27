@@ -7,57 +7,45 @@
       {
         host: [
           // com
-          /^(imagecorn|imagedecode|imageko|imageshtorm)\.com$/,
-          /^(hosturimage|greasyimage|damimage)\.com$/,
+          /^(imagecorn|imagedecode|imageko|imageshtorm|imageraven)\.com$/,
           /^(imgicy|imgsavvy|imgtzar|imgtornado|imgkicks|img2share|imghit|imgmain)\.com$/,
-          /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana|imgjazz)\.com$/,
-          /^(i\.)?imgseeds?\.com$/,
-          /^(img-planet|img-pay)\.com$/,
+          /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana|imgjazz|img-planet|img-pay)\.com$/,
+          /^(hosturimage|greasyimage|damimage|xxxscreens|wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza)\.com$/,
           /^(www\.)?(imglemon|imageblinks)\.com$/,
           /^(www\.)?(multiimg)\.com$/,
-          /^xxxscreens\.com$/,
-          /^(wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
+          /^(i\.)?imgseeds?\.com$/,
           // org
-          /^(xxxwebdlxxx|teenshot)\.org$/,
-          /^(imageon|imageteam)\.org$/,
-          /^(voyeurimage|teenimage|megaimage)\.org$/,
+          /^(xxxwebdlxxx|teenshot|imageon|imageteam|voyeurimage|teenimage|megaimage)\.org$/,
           /^(imgstudio|imgspot)\.org$/,
           // net
-          /^(imgserve|imgproject|imgpython|imgpix)\.net$/,
-          /^img-view\.net$/,
-          /^(naughtygate|gallerycloud)\.net$/,
-          /^xximg\.net$/,
+          /^(imgserve|imgproject|imgpython|imgpix|naughtygate|gallerycloud|xximg|img-view)\.net$/,
           // eu
           /^hotimages\.eu$/,
           /(^|\.)55888\.eu$/,
           // site
           /^(picz|unporn)\.site$/,
           /^pic\.hotimg\.site$/,
+          // xyz
+          /^xxx\.(sexex|pornscreen)\.xyz$/,
+          /^ecoimages\.xyz$/,
           // else
           /^www\.hotimage\.uk$/,
           /^imgcloud\.co$/,
           /^pixup\.us$/,
           /^(pop-img|ads-img)\.info$/,
           /^(domaink|porno-pirat)\.ru$/,
-          /^xxx\.pornscreen\.xyz$/,
           /^darpix\.ga$/,
           /^ipicture\.su$/,
           /^acidimg\.cc$/,
           /^s\.imghost\.top$/,
-          /^xxx\.sexex\.xyz$/,
           /^imagespublic\.tk$/,
-          /^ecoimages\.xyz$/,
           /^underpic\.club$/,
-          /^imageraven\.com$/,
         ],
         path: /\/img-.*\.html/,
       },
       {
-        host: [
-          /^hentai-pop\.com$/,
-          /^star-hentai\.com$/,
-        ],
+        host: /^(hentai-pop|star-hentai)\.com$/,
         path: /^\/[ti]\/img-.*\.html/,
       },
       {
@@ -133,10 +121,7 @@
         path: /^\/imgs-.*\.html/,
       },
       {
-        host: [
-          /^imgkings\.com$/,
-          /^imagerar\.com$/,
-        ],
+        host: /^(imgkings|imagerar)\.com$/,
         path: /^\/img-.*\.html/,
       },
     ],
