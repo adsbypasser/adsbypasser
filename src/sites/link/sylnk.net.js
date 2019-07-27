@@ -73,7 +73,7 @@ _.register({
       host: [
         /^(sehatlega|davinsurance|healthtod|irisvera|akanosora|subetenews)\.com$/,
         /^(www\.)?menantisenja\.com$/,
-        /^(businessforyouand|lindung|travelwithtricks)\.me$/,
+        /^(businessforyouand|lindung|travelwithtricks|situsbaru)\.me$/,
         /^plantaheim(\.web\.id|\.com)$/,
         /^(www\.)?starzone\.cc$/,
         /^(www\.)?kakkoiisafe\.us$/,
