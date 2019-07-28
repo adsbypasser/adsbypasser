@@ -77,6 +77,7 @@ _.register({
         /^plantaheim\.(web\.id|com)$/,
         /^(www\.)?starzone\.cc$/,
         /^(www\.)?kakkoiisafe\.us$/,
+        /^(www\.)?polrec\.site$/,
         /^yumechan\.club$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
