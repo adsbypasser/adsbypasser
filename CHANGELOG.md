@@ -4,6 +4,7 @@
     * cu6.io
     * cu7.io
     * imageraven.com
+    * polrec.site
     * situsbaru.me
     * urlike.net
 
