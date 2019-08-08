@@ -602,6 +602,7 @@
     * enewstalk.com
     * enrt.eu
     * ershadat.com
+    * exe.io
     * ez4link.org
     * fabsdeals.com
     * factural.com
