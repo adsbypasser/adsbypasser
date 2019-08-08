@@ -3,6 +3,7 @@
 * added
     * cu6.io
     * cu7.io
+    * exe.io
     * imageraven.com
     * polrec.site
     * situsbaru.me
