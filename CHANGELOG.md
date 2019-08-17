@@ -1,4 +1,4 @@
-## TBA
+## v7.6.0
 
 * added
     * cu6.io
