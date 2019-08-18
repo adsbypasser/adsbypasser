@@ -113,7 +113,7 @@
         /^click2see\.desi$/,
         /^shorted\.id$/,
         /^zi\.ht$/,
-        /^(funnyquiz|mediakita)\.blog$/,
+        /^(funnyquiz|mediakita|kabarviral)\.blog$/,
         /^(sciencelife|cpm4all)\.ga$/,
         /^thin\.at$/,
         /^sk-ip\.ru$/,
