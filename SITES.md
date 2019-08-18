@@ -496,6 +496,7 @@
     * arba7co.com
     * arba7kpro.com
     * aristoderas.com
+    * atv.pw
     * autech.xyz
     * autocarsmagz.xyz
     * bakilink.com
