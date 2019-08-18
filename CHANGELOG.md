@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * lindung.in
 
 ## v7.6.0
 
