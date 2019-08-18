@@ -102,7 +102,7 @@
         /^8o\.ee$/,
         /^buyitonline\.store$/,
         /^(shortearn|enrt)\.eu$/,
-        /^(1921681254|geki)\.tech$/,
+        /^(1921681254|geki|wegner)\.tech$/,
         /^123link\.(pw|vip)$/,
         /^(lotechnocan|updatetribun|templink|ez4link)\.org$/,
         /^tinylink\.run$/,
