@@ -866,6 +866,7 @@
     * vnurl.xyz
     * weawp.com
     * weefy.me
+    * wegner.tech
     * wi.cr
     * wicr.me
     * win4cut.com
