@@ -5,6 +5,7 @@
     * infotaxco.com
     * kabarviral.blog
     * tips.atv.pw
+    * wegner.tech
 
 ## v7.6.0
 
