@@ -2,6 +2,7 @@
 
 * added
     * atv.pw
+    * infotaxco.com
     * kabarviral.blog
     * tips.atv.pw
 
