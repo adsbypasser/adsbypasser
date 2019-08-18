@@ -648,6 +648,7 @@
     * imageoptimizer.us
     * infosehatku.club
     * infosia.xyz
+    * infotaxco.com
     * infotrendy.me
     * itiad.com
     * itiurl.co
