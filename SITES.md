@@ -655,6 +655,7 @@
     * jelajahinternet.me
     * jurl.io
     * justlikeyojna.com
+    * kabarviral.blog
     * khabratk.com
     * khraba.com
     * kidsors.xyz
