@@ -126,7 +126,7 @@
         /^fc\.lc$/,
         /^pa4l\.esy\.es$/,
         /^get\.ujv\.al$/,
-        /^tips\.atv\.pw$/,
+        /^(tips\.)?atv\.pw$/,
       ],
     },
     async ready () {
