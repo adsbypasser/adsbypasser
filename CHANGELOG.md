@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * atv.pw
     * kabarviral.blog
     * tips.atv.pw
 
