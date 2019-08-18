@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * kabarviral.blog
     * tips.atv.pw
 
 ## v7.6.0
