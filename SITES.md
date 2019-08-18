@@ -823,6 +823,7 @@
     * tiny.ec
     * tinylink.run
     * tinylinks.net
+    * tips.atv.pw
     * tl.tc
     * tmearn.com
     * tny.ec
