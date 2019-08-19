@@ -304,6 +304,7 @@
     * bolaoke.club
     * boost.ink
     * businessforyouand.me
+    * ceklinku.xyz
     * compartiendofull.net
     * compul.in
     * daunshorte.teknologilink.com
@@ -406,6 +407,7 @@
     * wibuindo.xyz
     * ww2.awsubs.co
     * yametesenpai.xyz
+    * yumechan.club
     * zap.in
 * segmentnext.com
     * segmentnext.com
