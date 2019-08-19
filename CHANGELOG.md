@@ -5,6 +5,7 @@
     * ceklinku.xyz
     * infotaxco.com
     * kabarviral.blog
+    * remiyu.me
     * tips.atv.pw
     * wegner.tech
 
