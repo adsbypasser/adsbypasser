@@ -3,6 +3,7 @@
 * added
     * atv.pw
     * ceklinku.xyz
+    * hightech.web.id
     * infotaxco.com
     * kabarviral.blog
     * remiyu.me
