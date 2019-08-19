@@ -61,6 +61,7 @@ _.register({
         /^ad4msan\.win$/,
         /^nooyul\.co$/,
         /^pafpaf\.info$/,
+        /^hightech\.web\.id$/,
       ],
       query: [
         // id must be the first captured group
