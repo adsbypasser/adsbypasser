@@ -2,6 +2,7 @@
 
 * added
     * atv.pw
+    * ceklinku.xyz
     * infotaxco.com
     * kabarviral.blog
     * tips.atv.pw
