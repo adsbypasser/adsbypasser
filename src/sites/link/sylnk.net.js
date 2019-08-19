@@ -79,6 +79,7 @@ _.register({
         /^(www\.)?kakkoiisafe\.us$/,
         /^(www\.)?polrec\.site$/,
         /^yumechan\.club$/,
+        /^ceklinku\.xyz$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
