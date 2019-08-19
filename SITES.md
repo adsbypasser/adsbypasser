@@ -330,6 +330,7 @@
     * healthtod.com
     * henpoi.lompat.in
     * hexafile.net
+    * hightech.web.id
     * hikarinoakariost.info
     * idnation.net
     * id-securelink.xyz
