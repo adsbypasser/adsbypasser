@@ -113,6 +113,10 @@ _.register({
       host: /^infosia\.xyz$/,
       query: /^\?kesehatan=([a-zA-Z0-9/=%]+)$/,
     },
+    {
+      host: /^remiyu\.me$/,
+      query: /^\?reff=([a-zA-Z0-9/=]+)$/,
+    },
   ],
   async start (m) {
     const rawLink = atob(decodeURIComponent(m.query[1]));
