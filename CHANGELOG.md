@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * lindung.in
 * added
     * atv.pw
     * ceklinku.xyz

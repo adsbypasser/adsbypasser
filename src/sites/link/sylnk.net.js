@@ -74,13 +74,14 @@ _.register({
       host: [
         /^(sehatlega|davinsurance|healthtod|irisvera|akanosora|subetenews)\.com$/,
         /^(www\.)?menantisenja\.com$/,
-        /^(businessforyouand|lindung|travelwithtricks|situsbaru)\.me$/,
+        /^(businessforyouand|travelwithtricks|situsbaru)\.me$/,
         /^plantaheim\.(web\.id|com)$/,
         /^(www\.)?starzone\.cc$/,
         /^(www\.)?kakkoiisafe\.us$/,
         /^(www\.)?polrec\.site$/,
         /^yumechan\.club$/,
         /^ceklinku\.xyz$/,
+        /^lindung\.(in|me)$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
@@ -267,7 +268,7 @@ _.register({
     await _.wait(1000);
     const ln = $('#landing.rurasafectrl .to a');
     ln.click();
-    
+
     await _.wait(1000);
     const tl = $('.rurasafectrl img#showlink.spoint');
     tl.click();
@@ -285,7 +286,7 @@ _.register({
     await _.wait(1000);
     const ln = $('#landing.soractrl .to a');
     ln.click();
-    
+
     await _.wait(2000); //if someone has better solution than waiting these 2 seconds, send PR
     const tl = $('.soractrl img#showlink.spoint');
     tl.click();
@@ -303,7 +304,7 @@ _.register({
     await _.wait(1000);
     const ln = $('#landing.soractrl .to a');
     ln.click();
-    
+
     await _.wait(5000); //if someone has better solution than waiting these 5 seconds, send PR
     const tl = $('.soractrl img#showlink.spoint');
     tl.click();
