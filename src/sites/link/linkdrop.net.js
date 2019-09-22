@@ -142,6 +142,7 @@
         /^wicr\.me$/,
         /^linksoflife\.co$/,
         /^linksof\.life$/,
+        /^arabtvlink\.com$/,
       ],
     },
     async ready () {
