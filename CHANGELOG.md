@@ -1,4 +1,4 @@
-## TBA
+## v7.8.0
 
 * fixed
     * bc.vc
