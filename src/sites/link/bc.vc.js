@@ -210,7 +210,7 @@
       throw new _.AdsBypasserError('script changed');
     }
     jki = jki[1];
-    let rt = $('#recaptchaToken');
+    const rt = $('#recaptchaToken');
     while (!rt.value) {
       await _.wait(500);
     }
