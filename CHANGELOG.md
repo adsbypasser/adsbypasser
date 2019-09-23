@@ -1,6 +1,6 @@
 ## TBA
 
-* fixed
+* added
 
 ## v7.7.0
 
