@@ -22,19 +22,20 @@
     async ready () {
       $.remove('iframe');
 
-      const token = findAJAXToken();
+      const token = await findAJAXToken();
       const time = fakeAJAXToken();
-      const url = `/fly/ajax.php?wds=${token.wds}&time=${time}`;
+      const url = `/fly/ln.php?wds=${token.wds}&time=${time}`;
 
       await _.wait(5000);
       let rv = await $.post(url, {
         xdf: {
-          afg: $.window.tZ,
-          bfg: $.window.cW,
-          cfg: $.window.cH,
+          afg: 300,
+          bfg: 640,
+          cfg: 480,
           jki: token.jki,
-          dfg: $.window.sW,
-          efg: $.window.sH,
+          dfg: 640,
+          efg: 480,
+          rt: token.rt,
         },
         ojk: token.ojk,
       });
@@ -194,35 +195,35 @@
     }
   }
 
-  function findAJAXToken () {
-    const rv = $.searchFromScripts('/fly/ajax.php');
+  async function findAJAXToken () {
+    const rv = $.searchFromScripts('xyz');
     if (!rv) {
       throw new _.AdsBypasserError('script changed');
     }
-    let wds = rv.match(/\?wds=([^&]+)/);
+    let wds = rv.match(/xyz\s*=\s*'([^']+)'/);
     if (!wds) {
       throw new _.AdsBypasserError('script changed');
     }
     wds = wds[1];
-    let jki = rv.match(/jki:\s*'([^']+)'/);
+    let jki = rv.match(/tkn\s*=\s*'([^']+)'/);
     if (!jki) {
       throw new _.AdsBypasserError('script changed');
     }
     jki = jki[1];
-    let ojk = rv.match(/ojk:\s*'([^']+)'/);
-    if (!ojk) {
-      throw new _.AdsBypasserError('script changed');
+    const rt = $('#recaptchaToken');
+    while (!rt.value) {
+      await _.wait(500);
     }
-    ojk = ojk[1];
     return {
       wds: wds,
       jki: jki,
-      ojk: ojk,
+      ojk: 'jfhg',
+      rt: rt.value,
     };
   }
 
   function fakeAJAXToken () {
-    const skipAd = $('div.fly_head span#redirectin').parentElement;
+    const skipAd = $('#getLink').parentElement;
     const margin = 6;
     const fakePageX = skipAd.offsetLeft + margin + 50 + (Math.random() * 10);
     const fakePageY = skipAd.offsetTop + margin + 15 + (Math.random() * 1);
@@ -230,7 +231,7 @@
     const po = fakePageX + ',' + fakePageY;
     const posX = jQueryOffset(skipAd).left + margin;
     const posY = jQueryOffset(skipAd).top + margin;
-    const pos = (fakePageX - posX) + ',' + (fakePageY - posY);
+    const pos = Math.abs(fakePageX - posX) + ',' + Math.abs(fakePageY - posY);
     const tsta_ = Math.floor((5 + Math.random()) * 1000);
     const time = po + ':' + pos + ':' + tsta_;
 

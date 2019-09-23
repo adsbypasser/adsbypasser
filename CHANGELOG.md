@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * bc.vc
 * added
     * arabtvlink.com
 
