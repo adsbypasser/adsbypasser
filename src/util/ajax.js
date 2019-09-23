@@ -132,9 +132,8 @@ function toForm (data) {
     return data.toString();
   }
   const form = new FormData();
-  for (let [k, v] of flattenObject(data)) {
-    k = flattenKey(k);
-    form.append(k, v);
+  for (const [k, v] of flattenObject(data)) {
+    form.append(flattenKey(k), v);
   }
   return form;
 }
