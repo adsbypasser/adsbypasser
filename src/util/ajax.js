@@ -56,6 +56,32 @@ class AjaxError extends AdsBypasserError {
 }
 
 
+function * flattenObject (object) {
+  if (!object) {
+    return;
+  }
+  for (const [k, v] of Object.entries(object)) {
+    if (Array.isArray(v)) {
+      for (const v_ of v) {
+        yield [[k, ''], v_];
+      }
+    } else if (typeof v === 'object') {
+      for (const [k_, v_] of flattenObject(v)) {
+        yield [[k, ...k_], v_];
+      }
+    } else {
+      yield [[k], v];
+    }
+  }
+}
+
+
+function flattenKey (keyList) {
+  const [head, ...rest] = keyList;
+  return `${head}${rest.map(_ => `[${_}]`)}`;
+}
+
+
 function deepJoin (prefix, object) {
   const keys = Object.getOwnPropertyNames(object);
   const mapped = map(keys, (k) => {
@@ -94,6 +120,26 @@ function toQuery (data) {
 }
 
 
+function toForm (data) {
+  const type = typeof data;
+  if (data === null || (type !== 'string' && type !== 'object')) {
+    return '';
+  }
+  if (type === 'string') {
+    return data;
+  }
+  if (data instanceof String) {
+    return data.toString();
+  }
+  const form = new FormData();
+  for (let [k, v] of flattenObject(data)) {
+    k = flattenKey(k);
+    form.append(k, v);
+  }
+  return form;
+}
+
+
 function ajax (method, url, data, headers) {
   debug('ajax', method, url, data, headers);
 
@@ -122,6 +168,8 @@ function ajax (method, url, data, headers) {
   if (data) {
     if (headers['Content-Type'].indexOf('json') >= 0) {
       data = JSON.stringify(data);
+    } else if (headers['Content-Type'].indexOf('multipart') >= 0) {
+      data = toForm(data);
     } else {
       data = toQuery(data);
     }
