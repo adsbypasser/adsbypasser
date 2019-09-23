@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * arabtvlink.com
 
 ## v7.7.0
 
