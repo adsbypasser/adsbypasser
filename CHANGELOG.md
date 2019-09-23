@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * bc.vc
 
 ## v7.7.0
 
