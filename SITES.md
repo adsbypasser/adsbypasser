@@ -466,6 +466,7 @@
     * 5brgedid.com
     * 6aba2day.com
     * 8o.ee
+    * a-egy.com
     * a5barfawria.com
     * abouttech.space
     * adbilty.me
@@ -485,10 +486,9 @@
     * adsrt.me
     * adsvy.com
     * adurl.id
-    * advancedautorepairtips.me
     * advance-wishingjs.com
+    * advancedautorepairtips.me
     * adzurl.cf
-    * a-egy.com
     * agradarpan.com
     * akla4.com
     * al3amall.com
@@ -496,6 +496,7 @@
     * allreports.site
     * alseoo.com
     * amenitiees.com
+    * arabtvlink.com
     * arba7co.com
     * arba7kpro.com
     * aristoderas.com
