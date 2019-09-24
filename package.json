@@ -28,7 +28,6 @@
     "gulp-less": "^4.0.0",
     "gulp-load-plugins": "^2.0.0",
     "gulp-mocha": "^6.0.0",
-    "gulp-remove-empty-lines": "^0.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-strip-comments": "^2.5.1",
     "lodash": "^4.17.4",
