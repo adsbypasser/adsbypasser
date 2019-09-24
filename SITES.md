@@ -36,6 +36,7 @@
     * 22pixx.xyz
     * acidimg.cc
     * ads-img.info
+    * cubonaw.ml
     * damimage.com
     * darpix.ga
     * dimtus.com
