@@ -41,6 +41,7 @@
           /^s\.imghost\.top$/,
           /^imagespublic\.tk$/,
           /^underpic\.club$/,
+          /^cubonaw\.ml$/,
         ],
         path: /\/img-.*\.html/,
       },
