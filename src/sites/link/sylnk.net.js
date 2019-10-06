@@ -82,6 +82,7 @@ _.register({
         /^yumechan\.club$/,
         /^ceklinku\.xyz$/,
         /^lindung\.(in|me)$/,
+        /^(www\.)?bolaoke\.club$/,
       ],
       query: /^\?r=([a-zA-Z0-9/=]+)$/,
     },
