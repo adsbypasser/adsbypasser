@@ -779,6 +779,7 @@
     * short2win.net
     * shortad.cf
     * shortearn.eu
+    * shortearn.org
     * shorted.id
     * shortglobal.com
     * shortit.ca
