@@ -68,7 +68,7 @@
         /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy|ijobanana)\.xyz$/,
         /^(autocarsmagz|getpocket|yasinews|dunyanews|komiupdates|allapp|smwebs|news-tech)\.xyz$/,
         // io
-        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii|exe)\.io$/,
+        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii|exe|shrinkme)\.io$/,
         /^cu(2|3|5|6|7)\.io$/,
         // site
         /^(el3id|allreports)\.site$/,
