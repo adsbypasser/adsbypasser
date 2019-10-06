@@ -6,6 +6,7 @@
     * newsatfit.com
     * oload.monster
     * shrinkme.io
+    * shortearn.org
 
 ## v7.8.0
 
