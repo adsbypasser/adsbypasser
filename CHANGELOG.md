@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * bolaoke.club
 
 ## v7.8.0
 
