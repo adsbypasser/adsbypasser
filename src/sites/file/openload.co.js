@@ -4,7 +4,7 @@ _.register({
       /^openload\.(co|io|link|pw)$/,
       /^openloed\.(co)$/,
       /^oload\.(biz|cc|cloud|club|download|fun|info|life|live|network|press|services|site|space)$/,
-      /^oload\.(stream|tv|website|win)$/,
+      /^oload\.(stream|tv|website|win|monster)$/,
       /^oladblock\.(me|services|xyz)$/,
     ],
     path: /^\/f\/.*/,
