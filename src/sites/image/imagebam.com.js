@@ -3,8 +3,8 @@ _.register({
   async ready () {
     let o = $.$('.image-container img[id]');
     if (o) {
-      // somehow the server send image as an attachment
-      // so I replace whole document.body with single img
+      // somehow the server send image as an attachment or with content type
+      // text/plain, so I replace whole document.body with single img
       await $.openImage(o.src, {
         replace: true,
       });
