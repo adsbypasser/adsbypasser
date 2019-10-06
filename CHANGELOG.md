@@ -2,6 +2,7 @@
 
 * added
     * cubonaw.ml
+    * fullytech24.com
     * go99tech.com
     * newsatfit.com
     * oload.monster
