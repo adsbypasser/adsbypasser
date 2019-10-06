@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import stream from 'stream';
 
 import _ from 'lodash';
 import findup from 'findup-sync';
@@ -141,4 +142,23 @@ export function createNamedTask (name, task, ...args) {
   const fn = _.partial(task, ...args);
   fn.displayName = name;
   return fn;
+}
+
+
+class RemoveEmptyLines extends stream.Transform {
+
+  _transform (chunk, encoding, callback) {
+    let rv = chunk.contents.toString(encoding);
+    rv = rv.replace(/^\s*[\r\n]/gm, '');
+    chunk.contents = Buffer.from(rv, encoding);
+    callback(null, chunk);
+  }
+
+}
+
+
+export function removeEmptyLines () {
+  return new RemoveEmptyLines({
+    objectMode: true,
+  });
 }

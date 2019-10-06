@@ -1,5 +1,9 @@
 ## TBA
 
+* fixed
+    * bolaoke.club
+    * imagebam.com
+    * link-to.net
 * added
     * cubonaw.ml
     * fullytech24.com

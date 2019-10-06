@@ -11,6 +11,7 @@ import {
   imageBuildOptions,
   output,
   plugins,
+  removeEmptyLines,
   source,
 } from './lib.js';
 
@@ -88,7 +89,7 @@ function makeMeta (supportImage, supportLagacy) {
   return gulp.src(source.to('infra/userscript/metadata.template.js'))
     .pipe(plugins.change(_.partial(finalizeMetadata, supportImage, supportLagacy)))
     .pipe(plugins.rename(`adsbypasser.${featureName}.${ecmaName}.meta.js`))
-    .pipe(plugins.removeEmptyLines())
+    .pipe(removeEmptyLines())
     .pipe(gulp.dest(output.path));
 }
 
@@ -132,7 +133,7 @@ function makeBody (supportImage, supportLagacy) {
       },
     }))
     .pipe(plugins.stripComments())
-    .pipe(plugins.removeEmptyLines())
+    .pipe(removeEmptyLines())
     .pipe(plugins.rename(`${featureName}.${ecmaName}.js`))
     .pipe(gulp.dest(output.to('body')));
 }
