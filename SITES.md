@@ -921,6 +921,7 @@
     * oload.info
     * oload.life
     * oload.live
+    * oload.monster
     * oload.network
     * oload.press
     * oload.services
