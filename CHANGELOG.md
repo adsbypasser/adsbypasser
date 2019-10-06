@@ -3,6 +3,7 @@
 * added
     * cubonaw.ml
     * oload.monster
+    * shrinkme.io
 
 ## v7.8.0
 
