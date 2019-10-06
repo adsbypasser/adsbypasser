@@ -2,6 +2,7 @@
 
 * added
     * cubonaw.ml
+    * newsatfit.com
     * oload.monster
     * shrinkme.io
 
