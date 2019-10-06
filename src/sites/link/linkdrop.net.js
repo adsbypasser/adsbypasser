@@ -104,7 +104,7 @@
         /^(shortearn|enrt)\.eu$/,
         /^(1921681254|geki|wegner)\.tech$/,
         /^123link\.(pw|vip)$/,
-        /^(lotechnocan|updatetribun|templink|ez4link)\.org$/,
+        /^(lotechnocan|updatetribun|templink|ez4link|shortearn)\.org$/,
         /^tinylink\.run$/,
         /^btc\.ms$/,
         /^earn\.theplusit\.ro$/,
