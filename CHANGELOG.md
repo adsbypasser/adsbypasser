@@ -2,6 +2,7 @@
 
 * fixed
     * bolaoke.club
+    * imagebam.com
     * link-to.net
 
 ## v7.8.0
