@@ -617,6 +617,7 @@
     * foodpuff.com
     * foxurl.net
     * freespinwins.com
+    * fullytech24.com
     * funnyquiz.blog
     * futurefoundationngo.com
     * gamesindians.com
