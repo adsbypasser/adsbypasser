@@ -2,6 +2,7 @@
 
 * added
     * cubonaw.ml
+    * go99tech.com
     * newsatfit.com
     * oload.monster
     * shrinkme.io
