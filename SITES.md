@@ -726,6 +726,7 @@
     * mrfourtech.com
     * muhammadyoga.me
     * mykinggo.com
+    * newsatfit.com
     * newsinjules.com
     * newskart.xyz
     * news-tech.xyz
