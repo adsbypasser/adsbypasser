@@ -2,6 +2,7 @@
 
 * added
     * cubonaw.ml
+    * oload.monster
 
 ## v7.8.0
 
