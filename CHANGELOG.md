@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * exe.io
 
 ## v7.9.0
 
