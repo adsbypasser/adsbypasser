@@ -1159,6 +1159,7 @@
     * realsht.mobi
     * richlink.com
     * ron.vn
+    * s-jav.com
     * sa.ae
     * safeurl.eu
     * screenlist.ru
