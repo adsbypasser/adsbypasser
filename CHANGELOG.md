@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * s-jav.com
 
 ## v7.9.0
 
