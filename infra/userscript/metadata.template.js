@@ -29,7 +29,6 @@
 // @grant          unsafeWindow
 <% if (supportImage) { %>
 // @resource       alignCenter https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/resources/css/align_center.css
-// @resource       scaleImage https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/resources/css/scale_image.css
 // @resource       bgImage https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/resources/img/imagedoc-darknoise.png
 <% } %>
 // @run-at         document-start

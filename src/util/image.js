@@ -66,21 +66,84 @@ function checkScaling () {
 }
 
 
-async function scaleImage (i) {
-  const siURL = await GMAPI.getResourceUrl('scaleImage');
-  appendStyleURL(siURL);
-
-  if (i.naturalWidth && i.naturalHeight) {
-    checkScaling.call(i);
+async function scaleImage () {
+  var head = document.getElementsByTagName('head')[0];
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.innerHTML = `
+origImgSize = {};
+function getMouse (evt) {
+  return getOffsetRect({left: evt.clientX, top: evt.clientY});
+}
+function getInnerWindow () {
+  return {width: window.innerWidth, height: window.innerHeight};
+}
+function getDetailedBox (el) {
+  return {width: el.width, height: el.height, aspectRatio: el.width / el.height};
+}
+function getOffsetRect (box) {
+  var body = document.body;
+  var docEl = document.documentElement;
+  var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+  var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+  var clientTop = docEl.clientTop || body.clientTop || 0;
+  var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+  var top = box.top + scrollTop - clientTop;
+  var left = box.left + scrollLeft - clientLeft;
+  return {left: Math.round(left), top: Math.round(top)};
+}
+function toggleZoom (evt, el) {
+  var innerWin = getInnerWindow();
+  var detailedBox = {width: el.width, height: el.height, aspectRatio: origImgSize.aspectRatio};
+  if (!origImgSize.zoomedIn) {
+    var mouse = getMouse(evt);
+    var imgZoomedOutRect = getOffsetRect(el.getBoundingClientRect());
+    detailedBox.left = imgZoomedOutRect.left;
+    detailedBox.top = imgZoomedOutRect.top;
+    el.width = origImgSize.width;
+    el.height = origImgSize.height;
+    var imgZoomedInRect = getOffsetRect(el.getBoundingClientRect());
+    window.scrollTo(Math.round((mouse.left - detailedBox.left) / detailedBox.width * origImgSize.width - innerWin.width / 2 + imgZoomedInRect.left), Math.round((mouse.top - detailedBox.top) / detailedBox.height * origImgSize.height - innerWin.height / 2 + imgZoomedInRect.top));
+    origImgSize.zoomedIn = true;
+    el.style.cursor = 'zoom-out';
+  } else if (origImgSize.width < innerWin.width && origImgSize.height < innerWin.height) {
+    el.style.cursor = 'default';
   } else {
-    i.addEventListener('load', checkScaling);
+    resizeToFitIn(el, innerWin);
+    origImgSize.zoomedIn = false;
+    el.style.cursor = 'zoom-in';
   }
-
-  let h = 0;
-  window.addEventListener('resize', () => {
-    window.clearTimeout(h);
-    h = window.setTimeout(checkScaling.bind(i), 100);
-  });
+  scaled = Math.round(el.width / origImgSize.width * 100);
+  document.title = '(Image, ' + origImgSize.width + 'x' + origImgSize.height + ')' + (scaled === 100 ? '' : ' - Scaled ' + scaled + '%') + ' - AdsBypasser';
+}
+function resizeToFitIn (srcEl, dstEl) {
+  var srcDetailedBox = getDetailedBox(srcEl);
+  var dstDetailedBox = getDetailedBox(dstEl);
+  if (srcDetailedBox.aspectRatio < dstDetailedBox.aspectRatio) {
+    srcEl.width = Math.round(dstDetailedBox.height * srcDetailedBox.aspectRatio);
+    srcEl.height = dstDetailedBox.height;
+  } else {
+    srcEl.width = dstDetailedBox.width;
+    srcEl.height = Math.round(dstDetailedBox.width / srcDetailedBox.aspectRatio);
+  }
+}
+window.addEventListener('resize', () => {
+  if (!origImgSize.zoomedIn) {
+    origImgSize.zoomedIn = true;
+    toggleZoom(null, document.getElementById('adsbypasser-image'));
+  }
+});
+var el = document.getElementById('adsbypasser-image');
+el.setAttribute('onclick', 'toggleZoom(event, this)');
+el.style.cursor = 'zoom-out';
+var newImg = new Image();
+newImg.onload = function () {
+  origImgSize = {width: newImg.width, height: newImg.height, zoomedIn: true};
+  toggleZoom(null, document.getElementById('adsbypasser-image'));
+};
+newImg.src = document.getElementById('adsbypasser-image').src;
+  `;
+  head.appendChild(script);
 }
 
 
@@ -152,7 +215,7 @@ async function replaceBody (imgSrc) {
     await changeBackground();
   }
   if (si) {
-    await scaleImage(i);
+    await scaleImage();
   }
 }
 
