@@ -2,6 +2,7 @@
 
 * added
     * s-jav.com
+    * dalezobux.xyz
 
 ## v7.9.0
 
