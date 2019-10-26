@@ -27,6 +27,7 @@
           /^(picz|unporn)\.site$/,
           /^pic\.hotimg\.site$/,
           // xyz
+          /^dalezobux\.xyz$/,
           /^xxx\.(sexex|pornscreen)\.xyz$/,
           /^ecoimages\.xyz$/,
           // else
