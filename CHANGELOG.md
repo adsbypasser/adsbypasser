@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * image will not random become full size while resizing the window
 * added
     * s-jav.com
     * dalezobux.xyz

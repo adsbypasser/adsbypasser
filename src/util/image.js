@@ -57,7 +57,7 @@ function checkScaling () {
     this.classList.add('adsbypasser-shrinked');
 
     this.addEventListener('click', toggleShrinking);
-  } else {
+  } else if ((nw <= cw && nh <= ch) && this.classList.contains('adsbypasser-resizable')) {
     this.removeEventListener('click', toggleShrinking);
 
     this.classList.remove('adsbypasser-shrinked');

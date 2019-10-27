@@ -12,6 +12,7 @@ body {
   height: 100%;
   position: relative;
   text-align: center;
+  line-height: 0;
 }
 
 #adsbypasser-image {
