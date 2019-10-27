@@ -1,7 +1,7 @@
 ## v7.10.0
 
 * fixed
-    * image will not random become full size while resizing the window
+    * image will not randomly become full size while resizing the window
 * added
     * s-jav.com
     * dalezobux.xyz
