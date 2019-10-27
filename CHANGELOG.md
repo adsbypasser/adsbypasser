@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * image will not random become full size while resizing the window
 
 ## v7.9.0
 
