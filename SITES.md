@@ -914,33 +914,6 @@
     * 10co.co
     * 10co.me
     * 10co.xyz
-* openload.co
-    * oladblock.me
-    * oladblock.services
-    * oladblock.xyz
-    * oload.biz
-    * oload.cc
-    * oload.cloud
-    * oload.club
-    * oload.download
-    * oload.fun
-    * oload.info
-    * oload.life
-    * oload.live
-    * oload.monster
-    * oload.network
-    * oload.press
-    * oload.services
-    * oload.site
-    * oload.space
-    * oload.stream
-    * oload.tv
-    * oload.website
-    * oload.win
-    * openload.co
-    * openload.io
-    * openload.link
-    * openload.pw
 * al.ly
     * al.ly
     * ally.sh
