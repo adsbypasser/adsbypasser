@@ -2,7 +2,10 @@
 
 _.register({
   rule: {
-    host: /^link-to\.net$/,
+    host: [
+      /^link-to\.net$/,
+      /^linkvertise\.com$/,
+    ],
     query: /^\?r=([a-zA-Z0-9/=]+)$/,
   },
   async start (m) {
