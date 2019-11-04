@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * linkvertise.com
 * removed
     * oladblock.me
     * oladblock.services
