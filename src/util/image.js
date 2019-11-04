@@ -46,26 +46,6 @@ function toggleShrinking () {
   this.classList.toggle('adsbypasser-shrinked');
 }
 
-
-function checkScaling () {
-  const nw = this.naturalWidth;
-  const nh = this.naturalHeight;
-  const cw = document.documentElement.clientWidth;
-  const ch = document.documentElement.clientHeight;
-  if ((nw > cw || nh > ch) && !this.classList.contains('adsbypasser-resizable')) {
-    this.classList.add('adsbypasser-resizable');
-    this.classList.add('adsbypasser-shrinked');
-
-    this.addEventListener('click', toggleShrinking);
-  } else {
-    this.removeEventListener('click', toggleShrinking);
-
-    this.classList.remove('adsbypasser-shrinked');
-    this.classList.remove('adsbypasser-resizable');
-  }
-}
-
-
 async function scaleImage () {
   const head = document.getElementsByTagName('head')[0];
   const script = document.createElement('script');
