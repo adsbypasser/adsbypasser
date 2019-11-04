@@ -1088,6 +1088,7 @@
     * linksupto.com
     * link-to.net
     * linktor.io
+    * linkvertise.com
     * lolinez.com
     * lostpic.net
     * mije.net
