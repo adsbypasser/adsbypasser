@@ -30,6 +30,7 @@
           /^dalezobux\.xyz$/,
           /^xxx\.(sexex|pornscreen)\.xyz$/,
           /^ecoimages\.xyz$/,
+          /^uvonahaze\.xyz$/,
           // else
           /^www\.hotimage\.uk$/,
           /^imgcloud\.co$/,
