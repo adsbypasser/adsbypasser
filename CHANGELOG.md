@@ -3,6 +3,7 @@
 * added
     * dwrfslsqpdfqfwy.net
     * linkvertise.com
+    * uvonahaze.xyz
 * removed
     * oladblock.me
     * oladblock.services
