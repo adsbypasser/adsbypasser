@@ -8,7 +8,7 @@
     /^warning-this-linkcode-will-cease-working-soon\.www\.linkbucksdns\.com$/,
     // net
     /^(([\w]{8}|www)\.)?(filesonthe|poontown|seriousdeals|urlbeat)\.net$/,
-    /^(([\w]{8}|www)\.)?(zatnawqy|rhvgmritmziwcm)\.net$/,
+    /^(([\w]{8}|www)\.)?(zatnawqy|rhvgmritmziwcm|dwrfslsqpdfqfwy)\.net$/,
     // else
     /^(([\w]{8}|www)\.)?freean\.us$/,
     /^(([\w]{8}|www)\.)?(miniurls|qqc|rqq|tinylinks|yyv)\.co$/,
