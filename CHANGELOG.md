@@ -1,4 +1,4 @@
-## TBA
+## v7.11.0
 
 * added
     * dwrfslsqpdfqfwy.net
