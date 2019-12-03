@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * trueimg.xyz
 
 ## v7.11.0
 
