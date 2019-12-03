@@ -217,6 +217,17 @@
   });
 
   _.register({
+    rule: {
+      host: /^trueimg\.xyz$/,
+      path: /^\/u-b\/(.+)\.jpeg\.html/,
+    },
+    async start () {
+      const path = window.location.href.replace('/u', '/v');
+      await $.openLink(path);
+    },
+  });
+
+  _.register({
     rule: [
       {
         host: /^imagerar\.com$/,
