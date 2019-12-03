@@ -121,6 +121,7 @@
     * teenimage.org
     * teenshot.org
     * tinizo.com
+    * trueimg.xyz
     * underpic.club
     * unporn.site
     * uvonahaze.xyz
