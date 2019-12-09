@@ -222,7 +222,7 @@
       path: /^\/u-b\/(.+)\.jpeg\.html/,
     },
     async start () {
-      const path = window.location.href.replace('/u', '/v');
+      const path = window.location.href.replace('/u-', '/').replace('.html', '');
       await $.openLink(path);
     },
   });
