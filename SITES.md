@@ -769,6 +769,7 @@
     * remiyu.me
     * royalown.review
     * royurls.bid
+    * safeku.com
     * safelinkblogger.com
     * safelinku.net
     * sarkarijobsresultss.com
