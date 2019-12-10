@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * safeku.com
     * trueimg.xyz
 
 ## v7.11.0
