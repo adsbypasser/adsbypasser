@@ -1,4 +1,4 @@
-## TBA
+## v7.12.0
 
 * added
     * safeku.com
