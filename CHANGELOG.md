@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * safeku.com
 
 ## v7.12.0
 
