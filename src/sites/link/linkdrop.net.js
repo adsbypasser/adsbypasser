@@ -44,7 +44,7 @@
         /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger|linkwea|ourcareerblog)\.com$/,
         /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|earnwithshortlink|swiggygold)\.com$/,
         /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners|slegle|futurefoundationngo)\.com$/,
-        /^(loopdiet|infotaxco|newsatfit|go99tech|fullytech24|safeku)\.com$/,
+        /^(loopdiet|infotaxco|newsatfit|go99tech|fullytech24)\.com$/,
         /^(vy\.)?adsvy\.com$/,
         /^(www\.)?(clkpays|lnkjob|efshort)\.com$/,
         /^shrt(8|10)\.com$/,
@@ -142,7 +142,7 @@
         /^wicr\.me$/,
         /^linksoflife\.co$/,
         /^linksof\.life$/,
-        /^arabtvlink\.com$/,
+        /^(arabtvlink|safeku)\.com$/,
       ],
     },
     async ready () {
@@ -385,6 +385,8 @@
       const click = f.clientWidth === 0 || f.childNodes.length === 0;
       if (click && !b.disabled) {
         _.info('clicking submit button, because recaptcha was empty');
+        // remove event handler
+        b.setAttribute('onclick', '');
         b.click();
       }
     }

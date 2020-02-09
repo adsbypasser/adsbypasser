@@ -2,6 +2,11 @@
 
 * added
 
+## v7.12.1
+
+* fixed
+    * safeku.com
+
 ## v7.12.0
 
 * added
