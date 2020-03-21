@@ -1059,6 +1059,7 @@
     * imagezilla.net
     * img.3ezy.net
     * img1.imagilive.com
+    * imgair.net
     * imgazure.com
     * imgbar.net
     * imgbox.com
