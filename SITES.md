@@ -653,6 +653,7 @@
     * idsly.net
     * idsly.org
     * igram.im
+    * iir.ai
     * iitjeemainguide.in
     * ijobanana.xyz
     * ilinkshortx.com
@@ -838,6 +839,7 @@
     * thefreech.com
     * thegyaanipoint.com
     * thin.at
+    * tii.ai
     * timetoka.com
     * tiny.ec
     * tinylink.run
