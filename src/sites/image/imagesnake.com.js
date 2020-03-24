@@ -36,7 +36,10 @@
 
   _.register({
     rule: {
-      host: /^www\.imgcarry\.com$/,
+        host: [
+          /^www\.imgcarry\.com$/,
+          /^www\.pornbus\.org$/,
+        ],
       path: /^\/show\//,
     },
     ready: run2,
