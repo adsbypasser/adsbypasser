@@ -4,6 +4,7 @@
     * cloudgallery.net
     * iir.ai
     * imgair.net
+    * pornbus.org
     * tii.ai
 
 ## v7.12.1
