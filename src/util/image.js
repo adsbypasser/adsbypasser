@@ -92,22 +92,6 @@ function toggleZoom (evt, el) {
     resizeToFitIn(el, innerWin);
     origImgSize.zoomedIn = false;
     el.style.cursor = 'zoom-in';
-
-function checkScaling () {
-  const nw = this.naturalWidth;
-  const nh = this.naturalHeight;
-  const cw = document.documentElement.clientWidth;
-  const ch = document.documentElement.clientHeight;
-  if ((nw > cw || nh > ch) && !this.classList.contains('adsbypasser-resizable')) {
-    this.classList.add('adsbypasser-resizable');
-    this.classList.add('adsbypasser-shrinked');
-
-    this.addEventListener('click', toggleShrinking);
-  } else if ((nw <= cw && nh <= ch) && this.classList.contains('adsbypasser-resizable')) {
-    this.removeEventListener('click', toggleShrinking);
-
-    this.classList.remove('adsbypasser-shrinked');
-    this.classList.remove('adsbypasser-resizable');
   }
   scaled = Math.round(el.width / origImgSize.width * 100);
   document.title = '(Image, ' + origImgSize.width + 'x' + origImgSize.height + ')' + (scaled === 100 ? '' : ' - Scaled ' + scaled + '%') + ' - AdsBypasser';
