@@ -13,13 +13,21 @@ _.register({
 });
 
 _.register({
-  rule: {
-    host: [
-      /^www\.imagespicy\.site$/,
-      /^www\.(imgsky|imgfile|imgsee)\.net$/,
-    ],
-    path: /^\/[a-z|0-9]{4,10}$/,
-  },
+  rule: [
+    {
+      host: [
+        /^www\.imagespicy\.site$/,
+        /^www\.(imgsky|imgfile|imgsee)\.net$/,
+      ],
+      path: /^\/[a-z|0-9]{4,10}$/,
+    },
+    {
+      host: [
+        /^(www\.)?imgair\.net$/,
+        /^www\.cloudgallery\.net$/,
+      ],
+    },
+  ],
   async ready () {
     const matches = $.searchFromScripts(/document\.getElementById\("soDaBug"\)\.src = "([^"]+)";/);
     await $.openImage(matches[1]);
