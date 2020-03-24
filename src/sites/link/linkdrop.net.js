@@ -142,7 +142,7 @@
         /^wicr\.me$/,
         /^linksoflife\.co$/,
         /^linksof\.life$/,
-        /^arabtvlink\.com$/,
+        /^(arabtvlink|safeku)\.com$/,
       ],
     },
     async ready () {
@@ -385,6 +385,8 @@
       const click = f.clientWidth === 0 || f.childNodes.length === 0;
       if (click && !b.disabled) {
         _.info('clicking submit button, because recaptcha was empty');
+        // remove event handler
+        b.setAttribute('onclick', '');
         b.click();
       }
     }

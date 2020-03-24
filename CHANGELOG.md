@@ -2,6 +2,59 @@
 
 * fixed
 
+## v7.12.1
+
+* fixed
+    * safeku.com
+
+## v7.12.0
+
+* added
+    * safeku.com
+    * trueimg.xyz
+
+## v7.11.0
+
+* added
+    * dwrfslsqpdfqfwy.net
+    * linkvertise.com
+    * uvonahaze.xyz
+* removed
+    * oladblock.me
+    * oladblock.services
+    * oladblock.xyz
+    * oload.biz
+    * oload.cc
+    * oload.cloud
+    * oload.club
+    * oload.download
+    * oload.fun
+    * oload.info
+    * oload.life
+    * oload.live
+    * oload.monster
+    * oload.network
+    * oload.press
+    * oload.services
+    * oload.site
+    * oload.space
+    * oload.stream
+    * oload.tv
+    * oload.website
+    * oload.win
+    * openload.co
+    * openload.io
+    * openload.link
+    * openload.pw
+
+## v7.10.0
+
+* fixed
+    * image will not randomly become full size while resizing the window
+* added
+    * s-jav.com
+    * dalezobux.xyz
+
 ## v7.9.0
 
 * fixed

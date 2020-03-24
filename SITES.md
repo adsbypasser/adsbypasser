@@ -3,6 +3,7 @@
 * linkbucks
     * allanalpass.com
     * drstickyfingers.com
+    * dwrfslsqpdfqfwy.net
     * filesonthe.net
     * freean.us
     * linkbabes.com
@@ -37,6 +38,7 @@
     * acidimg.cc
     * ads-img.info
     * cubonaw.ml
+    * dalezobux.xyz
     * damimage.com
     * darpix.ga
     * dimtus.com
@@ -119,8 +121,10 @@
     * teenimage.org
     * teenshot.org
     * tinizo.com
+    * trueimg.xyz
     * underpic.club
     * unporn.site
+    * uvonahaze.xyz
     * voyeurimage.org
     * wpc8.com
     * xximg.net
@@ -765,6 +769,7 @@
     * remiyu.me
     * royalown.review
     * royurls.bid
+    * safeku.com
     * safelinkblogger.com
     * safelinku.net
     * sarkarijobsresultss.com
@@ -913,33 +918,6 @@
     * 10co.co
     * 10co.me
     * 10co.xyz
-* openload.co
-    * oladblock.me
-    * oladblock.services
-    * oladblock.xyz
-    * oload.biz
-    * oload.cc
-    * oload.cloud
-    * oload.club
-    * oload.download
-    * oload.fun
-    * oload.info
-    * oload.life
-    * oload.live
-    * oload.monster
-    * oload.network
-    * oload.press
-    * oload.services
-    * oload.site
-    * oload.space
-    * oload.stream
-    * oload.tv
-    * oload.website
-    * oload.win
-    * openload.co
-    * openload.io
-    * openload.link
-    * openload.pw
 * al.ly
     * al.ly
     * ally.sh
@@ -1114,6 +1092,7 @@
     * linksupto.com
     * link-to.net
     * linktor.io
+    * linkvertise.com
     * lolinez.com
     * lostpic.net
     * mije.net
@@ -1159,6 +1138,7 @@
     * realsht.mobi
     * richlink.com
     * ron.vn
+    * s-jav.com
     * sa.ae
     * safeurl.eu
     * screenlist.ru
