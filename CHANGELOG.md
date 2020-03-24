@@ -1,6 +1,8 @@
 ## TBA
 
 * added
+    * cloudgallery.net
+    * imgair.net
 
 ## v7.12.1
 
