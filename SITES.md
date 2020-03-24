@@ -928,7 +928,9 @@
     * allkeyshop.com
     * cshort.org
 * imgvip.net
+    * cloudgallery.net
     * imagespicy.site
+    * imgair.net
     * imgfile.net
     * imgsee.net
     * imgsky.net
