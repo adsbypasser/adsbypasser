@@ -122,7 +122,7 @@
         /^bestscholaeshipdegree\.date$/,
         /^oko\.sh$/,
         /^splashnews\.ooo$/,
-        /^ckk\.ai$/,
+        /^(ckk|iir|tii)\.ai$/,
         /^fc\.lc$/,
         /^pa4l\.esy\.es$/,
         /^get\.ujv\.al$/,
