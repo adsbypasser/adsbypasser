@@ -2,7 +2,9 @@
 
 * added
     * cloudgallery.net
+    * iir.ai
     * imgair.net
+    * tii.ai
 
 ## v7.12.1
 
