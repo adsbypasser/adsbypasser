@@ -199,6 +199,7 @@
     * imagesnake.org
     * imgcarry.com
     * imgshots.com
+    * pornbus.org
 * imagetwist
     * imagenpic.com
     * imageshimage.com
