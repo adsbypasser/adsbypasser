@@ -41,11 +41,6 @@ function enableScrolling () {
   o.style.overflow = '';
 }
 
-
-function toggleShrinking () {
-  this.classList.toggle('adsbypasser-shrinked');
-}
-
 async function scaleImage () {
   const head = document.getElementsByTagName('head')[0];
   const script = document.createElement('script');
