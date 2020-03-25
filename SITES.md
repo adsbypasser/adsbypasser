@@ -479,6 +479,7 @@
     * adbitly.in
     * adbull.me
     * adcoin.me
+    * adflyurl.com
     * adfu.us
     * adlpu.com
     * admew.com
