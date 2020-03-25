@@ -120,7 +120,7 @@
         /^za\.gl$/,
         /^royalown\.review$/,
         /^bestscholaeshipdegree\.date$/,
-        /^oko\.sh$/,
+        /^(oko|aii)\.sh$/,
         /^splashnews\.ooo$/,
         /^(ckk|iir|tii)\.ai$/,
         /^fc\.lc$/,
