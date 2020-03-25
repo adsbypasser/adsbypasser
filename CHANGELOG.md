@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * adflyurl.com
     * aii.sh
     * cloudgallery.net
     * iir.ai
