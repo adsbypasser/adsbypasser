@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * aii.sh
     * cloudgallery.net
     * iir.ai
     * imgair.net
