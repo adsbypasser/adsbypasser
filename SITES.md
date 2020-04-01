@@ -475,6 +475,7 @@
     * a-egy.com
     * a5barfawria.com
     * abouttech.space
+    * ac-mo.com
     * adbilty.me
     * adbitly.in
     * adbull.me
@@ -844,6 +845,7 @@
     * techkti.com
     * techmen-world.com
     * technocanvas.xyz
+    * techsapparel.com
     * techtremendous.com
     * templink.org
     * thefreech.com
@@ -881,9 +883,11 @@
     * urle.co
     * urlike.net
     * urlsamo.com
+    * urlshortx.com
     * urltips.com
     * utimetableresult.in
     * veblink.com
+    * ventax.net
     * vinaurl.net
     * viralnow.xyz
     * viraltechnical.in
@@ -892,6 +896,7 @@
     * vivads.net
     * vnurl.net
     * vnurl.xyz
+    * voxc.org
     * weawp.com
     * weefy.me
     * wegner.tech
