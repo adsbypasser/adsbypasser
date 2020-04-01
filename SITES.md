@@ -518,6 +518,7 @@
     * bakilink.com
     * beast-birds.com
     * bestscholaeshipdegree.date
+    * birdurls.com
     * bit-url.com
     * bloggerworld.online
     * bloggingdekh.xyz
@@ -819,6 +820,7 @@
     * simaholina.xyz
     * skip.az
     * sk-ip.ru
+    * sk-ip.tech
     * skips.link
     * skipurls.com
     * slegle.com
