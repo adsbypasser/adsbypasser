@@ -24,7 +24,7 @@
     rule: {
       host: [
         // com
-        /^(dz4link|gocitlink|3rabcut|short2win|adsrt|shortglobal|jainjinvani|agradarpan)\.com$/,
+        /^(dz4link|gocitlink|3rabcut|short2win|adsrt|shortglobal|jainjinvani|agradarpan|birdurls)\.com$/,
         /^(payshorturl|urltips|shrinkearn|itiad|cutsouf|enewstalk|lnks4all|jejaklagu|urlshortx)\.com$/,
         /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link|coolmitten|hosexx)\.com$/,
         /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural|akla4|techsapparel)\.com$/,
@@ -117,7 +117,7 @@
         /^(funnyquiz|mediakita|kabarviral)\.blog$/,
         /^(sciencelife|cpm4all)\.ga$/,
         /^thin\.at$/,
-        /^sk-ip\.ru$/,
+        /^sk-ip\.(ru|tech)$/,
         /^za\.gl$/,
         /^royalown\.review$/,
         /^bestscholaeshipdegree\.date$/,
