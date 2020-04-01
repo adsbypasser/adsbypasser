@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * ac-mo.com
     * adbull.org
     * adflyurl.com
     * adsrt.org
@@ -14,7 +15,11 @@
     * pornbus.org
     * rifurl.com
     * shrtit.tech
+    * techsapparel.com
     * tii.ai
+    * urlshortx.com
+    * ventax.net
+    * voxc.org
     * xz2.xyz
 
 ## v7.12.1
