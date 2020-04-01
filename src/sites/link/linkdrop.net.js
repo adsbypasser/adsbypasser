@@ -143,7 +143,7 @@
         /^wicr\.me$/,
         /^linksoflife\.co$/,
         /^linksof\.life$/,
-        /^(arabtvlink|safeku)\.com$/,
+        /^(arabtvlink|safeku|dz4link)\.com$/,
         /^shrtit\.tech$/,
       ],
     },
