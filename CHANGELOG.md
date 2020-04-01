@@ -4,9 +4,11 @@
     * ac-mo.com
     * adbull.org
     * adflyurl.com
+    * adsafelink.com
     * adsrt.org
     * aii.sh
     * cloudgallery.net
+    * ez4linkss.com
     * freebcc.org
     * iir.ai
     * imgair.net
