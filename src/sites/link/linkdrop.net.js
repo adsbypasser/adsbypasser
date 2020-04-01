@@ -143,6 +143,7 @@
         /^linksoflife\.co$/,
         /^linksof\.life$/,
         /^(arabtvlink|safeku)\.com$/,
+        /^shrtit\.tech$/,
       ],
     },
     async ready () {
