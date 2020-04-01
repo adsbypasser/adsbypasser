@@ -478,6 +478,7 @@
     * adbilty.me
     * adbitly.in
     * adbull.me
+    * adbull.org
     * adcoin.me
     * adflyurl.com
     * adfu.us
@@ -491,6 +492,7 @@
     * adslink.pw
     * adsrt.com
     * adsrt.me
+    * adsrt.org
     * adsvy.com
     * adurl.id
     * advance-wishingjs.com
@@ -623,6 +625,7 @@
     * flaz.link
     * foodpuff.com
     * foxurl.net
+    * freebcc.org
     * freespinwins.com
     * fullytech24.com
     * funnyquiz.blog
@@ -673,6 +676,7 @@
     * jurl.io
     * justlikeyojna.com
     * kabarviral.blog
+    * kekolink.com
     * khabratk.com
     * khraba.com
     * kidsors.xyz
@@ -747,6 +751,7 @@
     * oko.sh
     * ommantrameditation.com
     * onaah.com
+    * oneurls.org
     * oploverzhome.com
     * oturl.com
     * ourcareerblog.com
@@ -771,6 +776,7 @@
     * razerflixs.com
     * reb7konline.com
     * remiyu.me
+    * rifurl.com
     * royalown.review
     * royurls.bid
     * safeku.com
@@ -897,6 +903,7 @@
     * w-rajem.com
     * wrap-w0rld.com
     * xemlink.net
+    * xz2.xyz
     * xpickle.club
     * yasinews.xyz
     * yesmoviesapp.info
