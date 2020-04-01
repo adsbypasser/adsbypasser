@@ -7,6 +7,7 @@
     * adsafelink.com
     * adsrt.org
     * aii.sh
+    * birdurls.com
     * cloudgallery.net
     * ez4linkss.com
     * freebcc.org
@@ -17,6 +18,7 @@
     * pornbus.org
     * rifurl.com
     * shrtit.tech
+    * sk-ip.tech
     * stfly.io
     * techsapparel.com
     * tii.ai
