@@ -96,7 +96,7 @@
         /^e2s\.cc$/,
         /^lyon\.kim$/,
         /^(linkvip|4short)\.tk$/,
-        /^stfly\.press$/,
+        /^stfly\.(io|press)$/,
         /^(businessiss2|techandreview|yesmoviesapp|kpscthulasilogin)\.info$/,
         /^eatings\.stream$/,
         /^8o\.ee$/,
