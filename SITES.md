@@ -812,6 +812,7 @@
     * shrten.xyz
     * shrtfly.com
     * shrtfly.net
+    * shrtit.tech
     * simaholina.xyz
     * skip.az
     * sk-ip.ru
