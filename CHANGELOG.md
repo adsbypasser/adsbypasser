@@ -1,13 +1,20 @@
 ## TBA
 
 * added
+    * adbull.org
     * adflyurl.com
+    * adsrt.org
     * aii.sh
     * cloudgallery.net
+    * freebcc.org
     * iir.ai
     * imgair.net
+    * kekolink.com
+    * oneurls.org
     * pornbus.org
+    * rifurl.com
     * tii.ai
+    * xz2.xyz
 
 ## v7.12.1
 
