@@ -13,6 +13,7 @@
     * oneurls.org
     * pornbus.org
     * rifurl.com
+    * shrtit.tech
     * tii.ai
     * xz2.xyz
 
