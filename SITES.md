@@ -487,6 +487,7 @@
     * admew.com
     * adpaytm.com
     * adpop.me
+    * adsafelink.com
     * adshort.co
     * adshorte.com
     * adskipme.com
@@ -620,6 +621,7 @@
     * ershadat.com
     * exe.io
     * ez4link.org
+    * ez4linkss.com
     * fabsdeals.com
     * factural.com
     * fc.lc
