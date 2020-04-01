@@ -15,6 +15,7 @@
     * pornbus.org
     * rifurl.com
     * shrtit.tech
+    * stfly.io
     * techsapparel.com
     * tii.ai
     * urlshortx.com
