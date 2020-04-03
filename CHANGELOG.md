@@ -9,6 +9,7 @@
     * aii.sh
     * birdurls.com
     * cloudgallery.net
+    * cutdl.xyz
     * ez4linkss.com
     * freebcc.org
     * iir.ai
