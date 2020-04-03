@@ -575,6 +575,7 @@
     * cut4link.com
     * cut4links.com
     * cutadlink.net
+    * cutdl.xyz
     * cutearn.ca
     * cut-earn.com
     * cuti.in
