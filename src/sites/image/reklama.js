@@ -7,7 +7,7 @@
       {
         host: [
           // com
-          /^(imagecorn|imagedecode|imageko|imageshtorm|imageraven)\.com$/,
+          /^(imagecorn|imagedecode|imageko|imageshtorm|imageraven|imgixxx)\.com$/,
           /^(imgicy|imgsavvy|imgtzar|imgtornado|imgkicks|img2share|imghit|imgmain)\.com$/,
           /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana|imgjazz|img-planet|img-pay)\.com$/,
           /^(hosturimage|greasyimage|damimage|xxxscreens|wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza)\.com$/,
