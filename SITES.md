@@ -76,6 +76,7 @@
     * imghit.com
     * imghost.top (variation)
     * imgicy.com
+    * imgixxx.com
     * imgjazz.com
     * imgkicks.com
     * imgking.co
