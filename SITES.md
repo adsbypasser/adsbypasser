@@ -600,6 +600,7 @@
     * downloaddoom.com
     * dunyanews.xyz
     * dutchycorp.space
+    * dz4invest.com
     * dz4link.com
     * dzurl.ml
     * e2s.cc
