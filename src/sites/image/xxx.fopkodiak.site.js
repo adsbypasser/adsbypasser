@@ -1,9 +1,9 @@
 _.register({
   rule: {
     host: [
+      /^xaoutchouc\.live$/,
       /^xxx\.fopkodiak\.site$/,
       /^blameless\.work$/,
-      /^xaoutchouc\.live$/,
     ],
     path: /^\/img-/,
   },
