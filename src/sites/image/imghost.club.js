@@ -6,8 +6,8 @@ _.register({
       /^(www\.)?xxximagetpb\.org$/,
       // else
       /^imghost\.(top|club)$/,
-      /^somnath2003\.xyz$/,
       /^pornbaker\.men$/,
+      /^somnath2003\.xyz$/,
     ],
     path: /^\/image\/.+$/,
   },
