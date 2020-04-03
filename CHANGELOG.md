@@ -13,6 +13,7 @@
     * freebcc.org
     * iir.ai
     * imgair.net
+    * imgixxx.com
     * kekolink.com
     * oneurls.org
     * pornbus.org
