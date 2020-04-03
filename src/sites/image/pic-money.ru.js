@@ -1,9 +1,9 @@
 _.register({
   rule: {
     host: [
-      /^pic-money\.ru$/,
-      /^shaggyimg\.pro$/,
       /^imgazure\.com$/,
+      /^shaggyimg\.pro$/,
+      /^pic-money\.ru$/,
       /^dailyimages\.xyz$/,
     ],
   },
