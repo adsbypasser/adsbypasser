@@ -733,6 +733,7 @@
     * marivelkece.xyz
     * mawdok.com
     * mediakita.blog
+    * megalink.pro
     * megaurl.in
     * megaurl.link
     * merdekaid.online
