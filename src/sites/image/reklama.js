@@ -14,14 +14,14 @@
           /^(www\.)?(imglemon|imageblinks|multiimg)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           /^(i\.)?imgseeds?\.com$/,
-          // org
-          /^(xxxwebdlxxx|teenshot|imageon|imageteam|voyeurimage|teenimage|megaimage)\.org$/,
-          /^(imgstudio|imgspot)\.org$/,
-          // net
-          /^(imgserve|imgproject|imgpython|imgpix|naughtygate|gallerycloud|xximg|img-view)\.net$/,
           // eu
           /^hotimages\.eu$/,
           /(^|\.)55888\.eu$/,
+          // net
+          /^(imgserve|imgproject|imgpython|imgpix|naughtygate|gallerycloud|xximg|img-view)\.net$/,
+          // org
+          /^(xxxwebdlxxx|teenshot|imageon|imageteam|voyeurimage|teenimage|megaimage)\.org$/,
+          /^(imgstudio|imgspot)\.org$/,
           // site
           /^(picz|unporn)\.site$/,
           /^pic\.hotimg\.site$/,
@@ -29,18 +29,18 @@
           /^(dalezobux|ecoimages|uvonahaze)\.xyz$/,
           /^xxx\.(sexex|pornscreen)\.xyz$/,
           // else
-          /^www\.hotimage\.uk$/,
-          /^imgcloud\.co$/,
-          /^pixup\.us$/,
-          /^(pop-img|ads-img)\.info$/,
-          /^(domaink|porno-pirat)\.ru$/,
-          /^darpix\.ga$/,
-          /^ipicture\.su$/,
           /^acidimg\.cc$/,
-          /^s\.imghost\.top$/,
-          /^imagespublic\.tk$/,
           /^underpic\.club$/,
+          /^imgcloud\.co$/,
+          /^darpix\.ga$/,
+          /^(pop-img|ads-img)\.info$/,
           /^cubonaw\.ml$/,
+          /^(domaink|porno-pirat)\.ru$/,
+          /^ipicture\.su$/,
+          /^imagespublic\.tk$/,
+          /^s\.imghost\.top$/,
+          /^www\.hotimage\.uk$/,
+          /^pixup\.us$/,
         ],
         path: /\/img-.*\.html/,
       },
