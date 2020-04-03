@@ -10,6 +10,7 @@
     * birdurls.com
     * cloudgallery.net
     * cutdl.xyz
+    * dz4invest.com
     * ez4linkss.com
     * freebcc.org
     * iir.ai
