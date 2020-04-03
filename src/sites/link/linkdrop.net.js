@@ -89,7 +89,7 @@
         /^(icutit|earnbig|cutearn)\.ca$/,
         /^(adzurl|link2link)\.cf$/,
         /^(koylinks|buy-in-599rs)\.win$/,
-        /^lopte\.pro$/,
+        /^(lopte|megalink)\.pro$/,
         /^(www\.)?pnd\.tl$/,
         /^(tny|tiny)\.ec$/,
         /^tl\.tc$/,
