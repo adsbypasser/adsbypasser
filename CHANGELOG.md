@@ -15,6 +15,7 @@
     * imgair.net
     * imgixxx.com
     * kekolink.com
+    * megalink.pro
     * oneurls.org
     * pornbus.org
     * rifurl.com
