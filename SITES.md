@@ -655,6 +655,7 @@
     * gocitlink.com
     * gossipcorners.com
     * govtsmartjob.com
+    * gpshort.tech
     * gram.im
     * haxrs.com
     * healthfary.com
