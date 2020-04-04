@@ -124,7 +124,7 @@
         /^buyitonline\.store$/,
         /^eatings\.stream$/,
         /^tl\.tc$/,
-        /^(1921681254|geki|wegner)\.tech$/,
+        /^(1921681254|geki|wegner|gpshort)\.tech$/,
         /^(linkvip|4short)\.tk$/,
         /^(www\.)?pnd\.tl$/,
         /^get\.ujv\.al$/,
