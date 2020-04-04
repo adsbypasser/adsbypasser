@@ -71,7 +71,7 @@
         /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii|exe|shrinkme)\.io$/,
         /^cu(2|3|5|6|7)\.io$/,
         // site
-        /^(el3id|allreports)\.site$/,
+        /^(el3id|allreports|clickskaro)\.site$/,
         /^123link\.carpartsviet97\.site$/,
         // online
         /^(click2url|ln435|merdekaid)\.online$/,
