@@ -142,7 +142,7 @@
         /^(arabtvlink|safeku|dz4link)\.com$/,
         /^linksoflife\.co$/,
         /^wi\.cr$/,
-        /^bitcoinly\.in$/,
+        /^(bitcoinly|cashurl)\.in$/,
         /^linksof\.life$/,
         /^wicr\.me$/,
         /^shrtit\.tech$/,
