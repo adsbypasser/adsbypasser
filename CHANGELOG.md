@@ -19,6 +19,7 @@
     * dz4invest.com
     * express-cut.ovh
     * ez4linkss.com
+    * fireshorts.tk
     * freebcc.org
     * gpshort.tech
     * iir.ai
