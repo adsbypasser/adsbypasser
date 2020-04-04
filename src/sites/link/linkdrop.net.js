@@ -123,6 +123,7 @@
         /^bestscholaeshipdegree\.date$/,
         /^(oko|aii)\.sh$/,
         /^splashnews\.ooo$/,
+        /^express-cut\.ovh$/,
         /^(ckk|iir|tii)\.ai$/,
         /^fc\.lc$/,
         /^pa4l\.esy\.es$/,
