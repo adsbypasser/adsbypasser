@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * mitly.us
 * added
     * ac-mo.com
     * adbull.org
