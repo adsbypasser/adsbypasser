@@ -3,15 +3,14 @@
   _.register({
     rule: {
       host: [
-        /^(ulshare|urlike)\.net$/,
-        /^adurl\.id$/,
+        /^met\.bz$/,
+        /^tui\.click$/,
         /^earn-guide\.com$/,
+        /^adurl\.id$/,
         /^(cutwi|cut-w|cutl|dmus)\.in$/,
         /^(www\.)?jurl\.io$/,
-        /^mitly\.us$/,
-        /^tui\.click$/,
-        /^met\.bz$/,
         /^lapak\.link$/,
+        /^(ulshare|urlike)\.net$/,
       ],
     },
     async ready () {
@@ -147,6 +146,7 @@
         /^linksof\.life$/,
         /^wicr\.me$/,
         /^shrtit\.tech$/,
+        /^mitly\.us$/,
       ],
     },
     async ready () {
