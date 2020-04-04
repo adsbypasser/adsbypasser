@@ -13,6 +13,7 @@
     * birdurls.com
     * bitcoinly.in
     * cashurl.in
+    * clickskaro.site
     * cloudgallery.net
     * cutdl.xyz
     * dz4invest.com
