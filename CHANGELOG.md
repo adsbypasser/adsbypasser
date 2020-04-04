@@ -20,6 +20,7 @@
     * express-cut.ovh
     * ez4linkss.com
     * freebcc.org
+    * gpshort.tech
     * iir.ai
     * imgair.net
     * imgixxx.com
