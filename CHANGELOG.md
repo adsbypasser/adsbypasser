@@ -9,6 +9,7 @@
     * adsafelink.com
     * adsrt.org
     * aii.sh
+    * bigb0ss.net
     * birdurls.com
     * bitcoinly.in
     * cloudgallery.net
