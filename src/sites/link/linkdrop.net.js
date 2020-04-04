@@ -49,7 +49,7 @@
         /^shrt(8|10)\.com$/,
         // net
         /^link\.akuno\.net$/,
-        /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads|clickar)\.net$/,
+        /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads|clickar|bigb0ss)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly|shortye|ventax)\.net$/,
         /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut|directedlink)\.net$/,
         // pw
