@@ -12,6 +12,7 @@
     * bigb0ss.net
     * birdurls.com
     * bitcoinly.in
+    * cashurl.in
     * cloudgallery.net
     * cutdl.xyz
     * dz4invest.com
