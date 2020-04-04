@@ -17,6 +17,7 @@
     * cloudgallery.net
     * cutdl.xyz
     * dz4invest.com
+    * express-cut.ovh
     * ez4linkss.com
     * freebcc.org
     * iir.ai
