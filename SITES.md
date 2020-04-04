@@ -634,6 +634,7 @@
     * fabsdeals.com
     * factural.com
     * fc.lc
+    * fireshorts.tk
     * flaz.link
     * foodpuff.com
     * foxurl.net
