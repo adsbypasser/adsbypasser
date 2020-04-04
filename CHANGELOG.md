@@ -8,6 +8,7 @@
     * adsrt.org
     * aii.sh
     * birdurls.com
+    * bitcoinly.in
     * cloudgallery.net
     * cutdl.xyz
     * dz4invest.com
