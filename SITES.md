@@ -545,6 +545,7 @@
     * click2-url.com
     * click2url.online
     * clickar.net
+    * clickskaro.site
     * clik.pw
     * clixg.com
     * clk.icu
