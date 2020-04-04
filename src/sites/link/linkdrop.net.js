@@ -148,6 +148,7 @@
         /^linksof\.life$/,
         /^wicr\.me$/,
         /^shrtit\.tech$/,
+        /^fireshorts\.tk$/,
         /^mitly\.us$/,
       ],
     },
