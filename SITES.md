@@ -628,6 +628,7 @@
     * enrt.eu
     * ershadat.com
     * exe.io
+    * express-cut.ovh
     * ez4link.org
     * ez4linkss.com
     * fabsdeals.com
