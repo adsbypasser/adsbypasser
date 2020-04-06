@@ -61,7 +61,7 @@
         /^link\.akuno\.net$/,
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads|clickar|bigb0ss)\.net$/,
         /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly|shortye|ventax)\.net$/,
-        /^(link4win|linksad|topurl|xemlink|cutadlink|crabcut|directedlink)\.net$/,
+        /^(link4win|linksad|topurl|xemlink|crabcut|directedlink)\.net$/,
         // online
         /^(click2url|ln435|merdekaid)\.online$/,
         /^(www\.)?bloggerworld\.online$/,
