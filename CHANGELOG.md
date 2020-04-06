@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * click-paid.com
 
 ## v7.13.0
 
