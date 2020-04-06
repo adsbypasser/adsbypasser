@@ -565,7 +565,6 @@
     * cosmicmony.com
     * counsellingresult2016.in
     * cpm4all.ga
-    * crabcut.net
     * crus.io
     * cu2.io
     * cu3.io
