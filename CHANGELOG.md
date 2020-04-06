@@ -2,6 +2,8 @@
 
 * added
     * click-paid.com
+* removed
+    * cutadlink.net
 
 ## v7.13.0
 
