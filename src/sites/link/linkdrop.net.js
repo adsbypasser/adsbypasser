@@ -32,7 +32,7 @@
         /^(advance-wishingjs|govtsmartjob|bloggingraja|techkti|sxtsquad|adpaytm|pustkala)\.com$/,
         /^(thegyaanipoint|downloaddoom|linkfay|5brgedid|earthpiclover|adigp|tomient|dz4invest)\.com$/,
         /^(techmen-world|razerflixs|gamesindians|dislooks|elkhbrel7sry|onaah|ultraskora)\.com$/,
-        /^(wrap-w0rld|ommantrameditation|mawdok|techfinda|clixg|boardgift|beast-birds)\.com$/,
+        /^(wrap-w0rld|ommantrameditation|mawdok|techfinda|clixg|boardgift|beast-birds|click-paid)\.com$/,
         /^(talkittechy|newsinjules|kutpay|nikkarr|veblink|al3amall|6aba2day|oploverzhome)\.com$/,
         /^(kooramubashir|healthfary|justlikeyojna|sarkarijobsresultss|zalipay|thefreech)\.com$/,
         /^(hindibeen|pastekan|e7kelyana|ea-isly|aristoderas|shortzon|trading-area|alseoo)\.com$/,
