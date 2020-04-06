@@ -3,6 +3,7 @@
 * added
     * click-paid.com
 * removed
+    * crabcut.net
     * cutadlink.net
 
 ## v7.13.0
