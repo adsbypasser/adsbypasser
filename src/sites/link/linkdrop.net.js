@@ -51,7 +51,7 @@
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
         /^(utimetableresult|daily-sale|linkszone|viraltechnical)\.in$/,
         // io
-        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii|exe|shrinkme)\.io$/,
+        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii|exe|shrinkme|shotly)\.io$/,
         /^cu(2|3|5|6|7)\.io$/,
         // me
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri|infotrendy)\.me$/,
