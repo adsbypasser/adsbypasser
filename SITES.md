@@ -817,6 +817,7 @@
     * shortly.xyz
     * shortye.net
     * shortzon.com
+    * shotly.io
     * shrink.vip
     * shrinkbuck.com
     * shrinkearn.com
