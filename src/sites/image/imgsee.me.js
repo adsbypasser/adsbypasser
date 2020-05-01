@@ -7,6 +7,7 @@
       host: [
         /^(imgmonkey|imgtrex|imgve|uploadrr|imageeer|pic-maniac|hulkimge)\.com$/,
         /^www\.uimgshare\.com$/,
+        /^(kropic)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
       ],
@@ -323,7 +324,7 @@
       return;
     }
 
-    i = $.$('img.picview');
+    i = $.$('img.picview, img.pic');
     if (i) {
       // second stage
       await $.openImage(i.src);
