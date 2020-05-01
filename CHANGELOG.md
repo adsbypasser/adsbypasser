@@ -2,6 +2,7 @@
 
 * added
     * click-paid.com
+    * kropic.com
     * shotly.io
 * removed
     * crabcut.net
