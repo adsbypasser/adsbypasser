@@ -22,21 +22,6 @@ _.register({
     path: /^\/files\//,
   },
   async ready () {
-    $('#dl_form').style.display = 'none';
-
-    const res = $('#result');
-    res.style.display = 'block';
-
-    const o = new MutationObserver(() => {
-      if (res.style.display !== 'block') {
-        res.style.display = 'block'; //never hide me again
-      }
-    });
-    o.observe(res, {
-      attributes: true,
-    });
-
-    await _.wait(1000);
-    $.window.start();
+    $('#dl_form').submit();
   },
 });
