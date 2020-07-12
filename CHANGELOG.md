@@ -1,3 +1,9 @@
+## TBA
+
+* fixed
+    * mirrored.to
+    * mirrorace.com
+
 ## v7.14.0
 
 * added
