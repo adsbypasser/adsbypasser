@@ -755,10 +755,10 @@
     * mrfourtech.com
     * muhammadyoga.me
     * mykinggo.com
+    * news-tech.xyz
     * newsatfit.com
     * newsinjules.com
     * newskart.xyz
-    * news-tech.xyz
     * newupdatesonline.com
     * niagoshort.com
     * nikkarr.com
@@ -812,6 +812,7 @@
     * shortearn.eu
     * shortearn.org
     * shorted.id
+    * shorten.sh
     * shortglobal.com
     * shortit.ca
     * shortlinko.com
