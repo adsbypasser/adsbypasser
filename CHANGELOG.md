@@ -1,5 +1,8 @@
 ## TBA
 
+* fixed
+    * mirrored.to
+    * mirrorace.com
 * added
     * shorten.sh
 
