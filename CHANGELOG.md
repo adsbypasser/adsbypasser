@@ -1,3 +1,8 @@
+## TBA
+
+* added
+    * shorten.sh
+
 ## v7.14.0
 
 * added
