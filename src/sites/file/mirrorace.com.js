@@ -4,7 +4,7 @@ _.register({
     path: /^\/m\//,
   },
   async ready () {
-    const ma = $('a.uk-button.uk-button-large.uk-button-primary');
+    const ma = $('a.uk-button:nth-child(2)');
     await $.openLink(ma.href);
   },
 });
