@@ -965,6 +965,7 @@
     * cshort.org
 * imgvip.net
     * cloudgallery.net
+    * imageking.xyz
     * imagespicy.site
     * imgair.net
     * imgfile.net
