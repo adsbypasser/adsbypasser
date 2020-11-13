@@ -970,6 +970,7 @@
     * imgfile.net
     * imgsee.net
     * imgsky.net
+    * imgweng.xyz
 * pics-money.ru
     * p0xpicmoney.ru
     * picker-click.ru
