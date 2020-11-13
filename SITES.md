@@ -285,6 +285,7 @@
     * kvador.com
     * pic-maniac.com
     * picbaron.com
+    * picdollar.com
     * uimgshare.com
     * uploadrr.com
 * picexposed.com
