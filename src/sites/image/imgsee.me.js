@@ -7,7 +7,7 @@
       host: [
         /^(imgmonkey|imgtrex|imgve|uploadrr|imageeer|pic-maniac|hulkimge)\.com$/,
         /^www\.uimgshare\.com$/,
-        /^(kropic)\.com$/,
+        /^(kropic|picdollar)\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^imgclick\.net$/,
       ],
