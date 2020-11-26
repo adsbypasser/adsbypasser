@@ -24,14 +24,8 @@
   });
 
   async function run (rp) {
-    // dirty hack, prevent scripts appending elements
-    if ($.window.jQuery) {
-      $.window.jQuery.prototype.append = undefined;
-    }
     const i = $('img.pic');
-    await $.openImage(i.src, {
-      replace: rp,
-    });
+    await $.openImage(i.src);
   }
 
 })();
