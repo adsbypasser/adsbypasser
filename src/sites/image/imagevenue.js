@@ -1,11 +1,9 @@
-// I don't think these sites are the same
 _.register({
   rule: [
-    'http://*.imagevenue.com/img.php?*',
-    'http://hotchyx.com/d/adult-image-hosting-view-08.php?id=*',
+    'https://*.imagevenue.com/view/o/?*',
   ],
   async ready () {
-    const i = $('#thepic');
+    const i = $('a[title] img');
     await $.openImage(i.src);
   },
 });
