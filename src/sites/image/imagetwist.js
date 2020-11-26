@@ -9,6 +9,9 @@
       {
         host: /^imagetwist\.com$/,
       },
+      {
+        host: /^vipr\.im$/,
+      },
     ],
     ready: _.partial(run, true),
   });

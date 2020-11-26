@@ -1,3 +1,7 @@
+## 7.15.1
+
+* added
+    * vipr.im
 ## v7.15.0
 
 * fixed
