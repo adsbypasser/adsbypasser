@@ -1,6 +1,6 @@
 _.register({
   rule: [
-    'https://*.imagevenue.com/view/o/?*',
+    'https://*.imagevenue.com/*',
   ],
   async ready () {
     const i = $('a[title] img');
