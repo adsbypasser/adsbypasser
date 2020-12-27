@@ -1,10 +1,10 @@
 ## TBA
 
 * added
-    * picdollar.com
     * imgsen.com
     * imgsto.com
     * kvador.com
+    * picdollar.com
 
 ## v7.15.0
 
