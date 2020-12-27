@@ -3,6 +3,7 @@
 * added
     * picdollar.com
     * imgsen.com
+    * imgsto.com
 
 ## v7.15.0
 
