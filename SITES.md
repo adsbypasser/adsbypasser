@@ -279,11 +279,12 @@
     * imgrock.pw
     * imgsee.me
     * imgsen.com
+    * imgsto.com
     * imgtown.pw
     * imgve.com
-    * imgsto.com
     * imgview.pw
     * kropic.com
+    * kvador.com
     * kvador.com
     * pic-maniac.com
     * picbaron.com
