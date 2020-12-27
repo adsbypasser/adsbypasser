@@ -281,6 +281,7 @@
     * imgsen.com
     * imgtown.pw
     * imgve.com
+    * imgsto.com
     * imgview.pw
     * kropic.com
     * kvador.com
