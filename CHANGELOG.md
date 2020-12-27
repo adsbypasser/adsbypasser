@@ -4,6 +4,7 @@
     * picdollar.com
     * imgsen.com
     * imgsto.com
+    * kvador.com
 
 ## v7.15.0
 
