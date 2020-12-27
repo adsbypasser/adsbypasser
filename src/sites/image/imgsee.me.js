@@ -6,7 +6,7 @@
     rule: {
       host: [
         /^(imgmonkey|imgtrex|imgve|uploadrr|imageeer|pic-maniac)\.com$/,
-        /^(hulkimge|imgsen|imgsto)\.com$/,
+        /^(hulkimge|imgsen|imgsto|kvador)\.com$/,
         /^www\.uimgshare\.com$/,
         /^(kropic|picdollar)\.com$/,
         /^(www\.)?imgsee\.me$/,
