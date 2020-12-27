@@ -1,3 +1,9 @@
+## TBA
+
+* added
+    * picdollar.com
+    * imgsen.com
+
 ## v7.15.0
 
 * fixed
