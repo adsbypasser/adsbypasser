@@ -7,10 +7,12 @@
       {
         host: [
           // com
-          /^(imagecorn|imagedecode|imageko|imageshtorm|imageraven|imgixxx)\.com$/,
-          /^(imgicy|imgsavvy|imgtzar|imgtornado|imgkicks|img2share|imghit|imgmain)\.com$/,
-          /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana|imgjazz|img-planet|img-pay)\.com$/,
-          /^(hosturimage|greasyimage|damimage|xxxscreens|wpc8|dimtus|tinizo|erimge|nimzshare|hdmoza)\.com$/,
+          /^(imagecorn|imagedecode|imageko|imageshtorm|imageraven)\.com$/,
+          /^(imgicy|imgsavvy|imgtzar|imgtornado|imgkicks|img2share)\.com$/,
+          /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana|imgjazz)\.com$/,
+          /^(hosturimage|greasyimage|damimage|xxxscreens|wpc8|dimtus)\.com$/,
+          /^(imgixxx|imghit|imgmain|img-planet|img-pay)\.com$/,
+          /^(tinizo|erimge|nimzshare|hdmoza)\.com$/,
           /^(www\.)?(imglemon|imageblinks|multiimg)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           /^(i\.)?imgseeds?\.com$/,
