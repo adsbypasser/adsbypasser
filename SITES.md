@@ -289,6 +289,7 @@
     * pic-maniac.com
     * picbaron.com
     * picdollar.com
+    * picrok.com
     * uimgshare.com
     * uploadrr.com
 * picexposed.com
