@@ -304,11 +304,13 @@
         table.set(c, true);
       }
     }
+    /* eslint-disable no-unused-vars */
     return Array.from(table.entries()).filter(([_, unique]) => {
       return unique;
     }).map(([_, c]) => {
       return c;
     });
+    /* eslint-enable no-unused-vars */
   }
 
   function findVisibleForm (classes) {
