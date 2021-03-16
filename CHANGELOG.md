@@ -5,6 +5,7 @@
     * imgsto.com
     * kvador.com
     * picdollar.com
+    * picrok.com
 
 ## v7.15.0
 
