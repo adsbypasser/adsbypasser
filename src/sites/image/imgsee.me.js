@@ -68,6 +68,27 @@
 
   _.register({
     rule: {
+      host: /^picrok\.com$/,
+      path: PATH_RULE,
+    },
+    async ready () {
+      const i = $.$('img.picview');
+      if (i) {
+        // second stage
+        await $.openImage(i.src);
+        return;
+      }
+      const node = await getAmbiguousForm('body > div > div[id] > style', (node) => {
+        return node.parentElement;
+      });
+      node.click();
+      node.click();
+      node.click();
+    },
+  });
+
+  _.register({
+    rule: {
       host: /^imgoutlet\.pw$/,
       path: PATH_RULE,
     },
