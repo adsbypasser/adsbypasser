@@ -304,9 +304,9 @@
         table.set(c, true);
       }
     }
-    return Array.from(table.entries()).filter((unique) => {
+    return Array.from(table.entries()).filter(([_, unique]) => {
       return unique;
-    }).map((_, c) => {
+    }).map(([_, c]) => {
       return c;
     });
   }
@@ -317,7 +317,10 @@
       if (!form) {
         continue;
       }
-      const button = $.$('input[type="button"], button[type="button"]', form);
+      const button = $.$('input[type="button"], button[type="button"], button[class]', form);
+      if (!button) {
+        continue;
+      }
       const v = getComputedStyle(button).getPropertyValue('visibility');
       if (v !== 'visible') {
         continue;
