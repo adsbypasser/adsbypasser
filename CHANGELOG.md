@@ -1,4 +1,4 @@
-## TBA
+## v7.16.0
 
 * added
     * imgsen.com
