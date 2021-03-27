@@ -24,11 +24,16 @@ const isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Con
 
 
 function disableWindowOpen () {
-  usw.open = function () {
-    return {
-      closed: false,
+  // If ad blockers already hijacked window.open, this will fail
+  try {
+    usw.open = function () {
+      return {
+        closed: false,
+      };
     };
-  };
+  } catch (e) {
+    warn('cannot mock window.open');
+  }
   usw.alert = nop;
   usw.confirm = nop;
 }
