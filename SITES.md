@@ -1012,6 +1012,10 @@
 * fiuxy.co
     * fiuxy.co
     * fiuxy.bz
+* ewa.ac
+    * elil.cc
+    * ewa.ac
+    * imgviv.xyz
 * else
     * 01.nl
     * 1be.biz
@@ -1063,10 +1067,8 @@
     * directupload.net
     * dl-protect.com
     * durl.me
-    * elil.cc
     * elsfile.org
     * embedupload.com
-    * ewa.ac
     * filemedia.net
     * filoops.info
     * flylink.io
