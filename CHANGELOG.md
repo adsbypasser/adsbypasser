@@ -3,6 +3,7 @@
 * added
     * imgsen.com
     * imgsto.com
+    * imgviv.xyz
     * kvador.com
     * picdollar.com
     * picrok.com
