@@ -291,6 +291,7 @@
     * picdollar.com
     * picrok.com
     * pics4you.net
+    * silverpic.com
     * uimgshare.com
     * uploadrr.com
 * picexposed.com
