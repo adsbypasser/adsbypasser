@@ -3,6 +3,7 @@
 * added
     * imgfsh.xyz
     * pics4you.net
+    * silverpic.com
 
 ## v7.16.0
 
