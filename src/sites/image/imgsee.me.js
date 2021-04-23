@@ -10,7 +10,7 @@
         /^www\.uimgshare\.com$/,
         /^(kropic|picdollar)\.com$/,
         /^(www\.)?imgsee\.me$/,
-        /^imgclick\.net$/,
+        /^(imgclick|pics4you)\.net$/,
       ],
       path: PATH_RULE,
     },
