@@ -1242,4 +1242,5 @@
     * xxx.fopkodiak.site
     * yep.it
     * yooclick.com
+    * zeefiles.download
     * zupload.me
