@@ -5,6 +5,7 @@
     * imagetwist.com
     * imagevenue.com
 * added
+    * fotokiz.com
     * imgfsh.xyz
     * imgweng.xyz
     * imgxen.xyz
