@@ -218,7 +218,6 @@
     * freakimage.com
     * hostpic.org
 * imagevenue
-    * hotchyx.com
     * imagevenue.com
 * imgfantasy
     * 0img.net
