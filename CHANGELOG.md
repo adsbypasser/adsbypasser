@@ -5,6 +5,8 @@
     * imagevenue.com
 * added
     * imgfsh.xyz
+    * imgweng.xyz
+    * imgxen.xyz
     * mirrorace.org
     * pics4you.net
     * silverpic.com
