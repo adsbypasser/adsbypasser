@@ -12,7 +12,7 @@
           /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana|imgjazz)\.com$/,
           /^(hosturimage|greasyimage|damimage|xxxscreens|wpc8|dimtus)\.com$/,
           /^(imgixxx|imghit|imgmain|img-planet|img-pay)\.com$/,
-          /^(tinizo|erimge|nimzshare|hdmoza)\.com$/,
+          /^(tinizo|erimge|nimzshare|hdmoza|imgdawgknuttz)\.com$/,
           /^(www\.)?(imglemon|imageblinks|multiimg)\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
           /^(i\.)?imgseeds?\.com$/,
