@@ -99,7 +99,7 @@
   _.register({
     rule: {
       host: [
-        /^(picbaron|imgbaron|kvador|imgsen|imgsto|fotokiz)\.com$/,
+        /^(picbaron|imgbaron|kvador|fotokiz)\.com$/,
         /^imgfiles\.org$/,
         /^pics4you\.net$/,
       ],
