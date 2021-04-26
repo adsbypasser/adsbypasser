@@ -6,7 +6,7 @@
     * imagevenue.com
 * added
     * fotokiz.com
-    * imgdawgknuttz
+    * imgdawgknuttz.com
     * imgfsh.xyz
     * imgweng.xyz
     * imgxen.xyz
