@@ -24,6 +24,7 @@ _.register({
     {
       host: [
         /^(www\.)?imgair\.net$/,
+        /^(www\.)?imageking\.xyz$/,
         /^www\.cloudgallery\.net$/,
       ],
     },
