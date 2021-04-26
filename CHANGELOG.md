@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * 22pixx.xyz
     * imagevenue.com
 * added
     * imgfsh.xyz
