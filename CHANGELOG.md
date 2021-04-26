@@ -1,11 +1,15 @@
 ## TBA
 
+* fixed
+    * imagevenue.com
 * added
     * imgfsh.xyz
     * mirrorace.org
     * pics4you.net
     * silverpic.com
     * zeefiles.download
+* removed
+    * hotchyx.com
 
 ## v7.16.0
 
