@@ -2,6 +2,7 @@
 
 * fixed
     * 22pixx.xyz
+    * imagetwist.com
     * imagevenue.com
 * added
     * imgfsh.xyz
@@ -10,6 +11,7 @@
     * mirrorace.org
     * pics4you.net
     * silverpic.com
+    * vipr.im
     * zeefiles.download
 * removed
     * hotchyx.com
