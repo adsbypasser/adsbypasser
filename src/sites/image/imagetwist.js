@@ -7,10 +7,10 @@
         path: /^\/.*\/.+\.html?$/,
       },
       {
-        host: /^imagetwist\.com$/,
-      },
-      {
-        host: /^vipr\.im$/,
+        host: [
+          /^imagetwist\.com$/,
+          /^vipr\.im$/,
+        ]
       },
     ],
     ready: run,
