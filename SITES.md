@@ -263,6 +263,7 @@
     * all-poster.ru
     * bunnyforum.org
 * imgsee.me
+    * fotokiz.com
     * hulkimge.com
     * imageeer.com
     * imgant.com
