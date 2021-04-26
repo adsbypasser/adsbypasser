@@ -1,8 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^mirrorace\.(com|org)$/,
-    ],
+    host: /^mirrorace\.(com|org)$/,
     path: /^\/m\/.+\/\d+/,
   },
   async ready () {
