@@ -2,6 +2,7 @@
 
 * added
     * imgfsh.xyz
+    * mirrorace.org
     * pics4you.net
     * silverpic.com
 
