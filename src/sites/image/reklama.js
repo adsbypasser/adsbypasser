@@ -206,6 +206,17 @@
       await $.openLink(path);
     },
   });
+  
+    _.register({
+    rule: {
+      host: /^22pixx\.xyz$/,
+      path: /^\/y-o\/(.+)\.jpeg\.html/,
+    },
+    async start () {
+      const path = window.location.href.replace('/y-', '/').replace('.html', '');
+      await $.openLink(path);
+    },
+  });
 
   _.register({
     rule: {
