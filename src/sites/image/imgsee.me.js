@@ -123,7 +123,6 @@
       host: [
         /^(picbaron|imgbaron|kvador|fotokiz)\.com$/,
         /^imgfiles\.org$/,
-        /^pics4you\.net$/,
       ],
       path: PATH_RULE,
     },
