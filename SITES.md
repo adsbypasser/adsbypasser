@@ -70,6 +70,7 @@
     * imgbalana.com
     * imgcloud.co
     * imgcloud.pw
+    * imgdawgknuttz.com
     * imgdrive.net
     * imgfapper.com
     * imgfresh.info
