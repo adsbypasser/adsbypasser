@@ -1,6 +1,9 @@
 _.register({
   rule: {
-    host: /^zupload\.me$/,
+    host: [
+      /^zupload\.me$/,
+      /^zeefiles\.download$/,
+    ],
   },
   async ready () {
     const z = $('button#link_button');
