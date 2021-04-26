@@ -1,9 +1,3 @@
-## 7.15.1
-
-* fixed
-    * imagetwist.com
-* added
-    * vipr.im
 ## v7.15.0
 
 * fixed
