@@ -207,7 +207,6 @@
     * imagetwist.com
     * imagexport.com
     * imgtrex.com
-    * vipr.im
 * fullimg.com
     * freeimgup.com
     * fullimg.com
