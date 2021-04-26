@@ -5,6 +5,7 @@
     * mirrorace.org
     * pics4you.net
     * silverpic.com
+    * zeefiles.download
 
 ## v7.16.0
 
