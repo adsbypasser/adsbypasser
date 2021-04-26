@@ -1,8 +1,7 @@
 _.register({
   rule: {
     host: [
-      /^mirrorace\.com$/,
-      /^mirrorace\.org$/,
+      /^mirrorace\.(com|org)$/,
     ],
     path: /^\/m\/.+\/\d+/,
   },
