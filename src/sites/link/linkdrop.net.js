@@ -56,7 +56,7 @@
         // me
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri|infotrendy)\.me$/,
         /^(advancedautorepairtips|takeitfor|jelajahinternet|virtualdata|muhammadyoga|s2w)\.me$/,
-        /^(cepmuzikindir)\.me$/,
+        /^(cepmuzikindir|shrinke)\.me$/,
         // net
         /^link\.akuno\.net$/,
         /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads|clickar|bigb0ss)\.net$/,
