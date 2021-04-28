@@ -131,6 +131,7 @@
         /^(urlcloud|imageoptimizer)\.us$/,
         /^(koylinks|buy-in-599rs)\.win$/,
         /^exe\.(io|app)$/,
+        /^slink\.bid$/,
       ],
     },
     async ready () {
