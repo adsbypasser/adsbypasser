@@ -636,7 +636,9 @@
     * enewstalk.com
     * enrt.eu
     * ershadat.com
+    * exe.app
     * exe.io
+    * exey.io
     * express-cut.ovh
     * ez4link.org
     * ez4linkss.com
