@@ -51,7 +51,7 @@
         /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
         /^(utimetableresult|daily-sale|linkszone|viraltechnical)\.in$/,
         // io
-        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii|exe|shrinkme|shotly)\.io$/,
+        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii|exey|shrinkme|shotly)\.io$/,
         /^cu(2|3|5|6|7)\.io$/,
         // me
         /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri|infotrendy)\.me$/,
@@ -130,6 +130,7 @@
         /^get\.ujv\.al$/,
         /^(urlcloud|imageoptimizer)\.us$/,
         /^(koylinks|buy-in-599rs)\.win$/,
+        /^exe\.(io|app)$/,
       ],
     },
     async ready () {
