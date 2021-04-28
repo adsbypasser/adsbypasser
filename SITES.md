@@ -684,6 +684,7 @@
     * igram.im
     * iir.ai
     * iitjeemainguide.in
+    * illink.net
     * ijobanana.xyz
     * ilinkshortx.com
     * imageoptimizer.us
