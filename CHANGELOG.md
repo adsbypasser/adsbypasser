@@ -15,6 +15,7 @@
     * imgxen.xyz
     * mirrorace.org
     * pics4you.net
+    * shrinke.me
     * silverpic.com
     * vipr.im
     * zeefiles.download
