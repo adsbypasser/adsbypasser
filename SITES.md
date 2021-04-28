@@ -835,6 +835,7 @@
     * shrink.vip
     * shrinkbuck.com
     * shrinkearn.com
+    * shrinke.me
     * shrinkme.io
     * shrt10.com
     * shrt8.com
