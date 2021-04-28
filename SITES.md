@@ -519,6 +519,7 @@
     * allreports.site
     * alseoo.com
     * amenitiees.com
+    * apkshrt.com
     * arabtvlink.com
     * arba7co.com
     * arba7kpro.com
