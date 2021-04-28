@@ -4,7 +4,9 @@
     * 22pixx.xyz
     * imagetwist.com
     * imagevenue.com
+    * slink.bid
 * added
+    * apkshrt.com
     * exe.app
     * exey.io
     * fotokiz.com
