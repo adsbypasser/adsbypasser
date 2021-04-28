@@ -5,6 +5,8 @@
     * imagetwist.com
     * imagevenue.com
 * added
+    * exe.app
+    * exey.io
     * fotokiz.com
     * illink.net
     * imgdawgknuttz.com
