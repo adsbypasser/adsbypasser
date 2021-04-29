@@ -984,6 +984,7 @@
     * imgfile.net
     * imgsee.net
     * imgsky.net
+    * imgtiger.xyz
     * imgweng.xyz
     * imgxen.xyz
 * pics-money.ru
