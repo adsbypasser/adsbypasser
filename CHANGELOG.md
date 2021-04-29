@@ -13,6 +13,7 @@
     * illink.net
     * imgdawgknuttz.com
     * imgfsh.xyz
+    * imgtiger.xyz
     * imgweng.xyz
     * imgxen.xyz
     * mirrorace.org
