@@ -14,6 +14,7 @@
     * imgdawgknuttz.com
     * imgfsh.xyz
     * imgtiger.xyz
+    * imgvivo.xyz
     * imgweng.xyz
     * imgxen.xyz
     * mirrorace.org
