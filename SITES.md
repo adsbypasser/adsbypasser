@@ -981,6 +981,7 @@
     * cloudgallery.net
     * imagespicy.site
     * imgair.net
+    * imgbrd.xyz
     * imgfile.net
     * imgsee.net
     * imgsky.net
