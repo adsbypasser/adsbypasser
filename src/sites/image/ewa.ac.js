@@ -20,10 +20,7 @@ _.register({
 
 _.register({
   rule: {
-    host: [
-      /^img(viv|fsh)\.xyz$/,
-      /^imgbrd\.xyz$/,
-    ],
+    host: /^img(viv|fsh|brd)\.xyz$/,
     path: /^\/.*$/,
   },
   async ready () {
