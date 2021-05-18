@@ -1,3 +1,12 @@
+---
+name: Request Site
+about: let us know which SITE you would like to be SUPPORTED
+title: "[Request] <site domain>"
+labels: enhancement
+assignees: ''
+
+---
+
 <!--
 ** AdsBypasser DOES NOT bypass reCAPTCHA **
 
@@ -11,16 +20,8 @@ DO NOT open a NEW ticket for the same site.
 - if NO:
 DO open a NEW ticket, with the following information:
 
-2) FULL LINK in the description, where issue happens.
-
-3) Put the title as:
-[Bug] <site domain>      : Supported site is not working.
+2. In the ticket title, please put the "site domain"
 [Request] <site domain>  : Request a site to be supported.
-[Retire] <site domain>   : Request a site to be removed, due to domain expire.
-
-Note:
-- To use [Bug], the site MUST appear in the list:
-https://github.com/adsbypasser/adsbypasser/blob/master/SITES.md
 -->
 
 **Description**

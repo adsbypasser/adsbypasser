@@ -1,3 +1,12 @@
+---
+name: Retire Site
+about: let us know which SUPPORTED SITE should NO LONGER be SUPPORTED
+title: "[Retire] <site domain>"
+labels: retired
+assignees: ''
+
+---
+
 <!--
 ** AdsBypasser DOES NOT bypass reCAPTCHA **
 
@@ -11,16 +20,8 @@ DO NOT open a NEW ticket for the same site.
 - if NO:
 DO open a NEW ticket, with the following information:
 
-2) FULL LINK in the description, where issue happens.
-
-3) Put the title as:
-[Bug] <site domain>      : Supported site is not working.
-[Request] <site domain>  : Request a site to be supported.
+2. In the ticket title, please put the "site domain"
 [Retire] <site domain>   : Request a site to be removed, due to domain expire.
-
-Note:
-- To use [Bug], the site MUST appear in the list:
-https://github.com/adsbypasser/adsbypasser/blob/master/SITES.md
 -->
 
 **Description**

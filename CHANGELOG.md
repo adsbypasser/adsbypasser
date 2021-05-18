@@ -11,6 +11,7 @@
     * exey.io
     * fotokiz.com
     * illink.net
+    * imageking.xyz
     * imgbrd.xyz
     * imgdawgknuttz.com
     * imgfsh.xyz
