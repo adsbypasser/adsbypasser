@@ -981,7 +981,6 @@
     * cloudgallery.net
     * imagespicy.site
     * imgair.net
-    * imgbrd.xyz
     * imgfile.net
     * imgsee.net
     * imgsky.net
@@ -1029,9 +1028,10 @@
 * ewa.ac
     * elil.cc
     * ewa.ac
+    * imgbrd.xyz
     * imgfsh.xyz
-    * imgviv.xyz
     * imgkor.xyz
+    * imgviv.xyz
 * else
     * 01.nl
     * 1be.biz
