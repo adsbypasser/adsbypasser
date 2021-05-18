@@ -1031,6 +1031,7 @@
     * ewa.ac
     * imgfsh.xyz
     * imgviv.xyz
+    * imgkor.xyz
 * else
     * 01.nl
     * 1be.biz
