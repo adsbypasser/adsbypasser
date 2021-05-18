@@ -14,6 +14,7 @@
     * imgbrd.xyz
     * imgdawgknuttz.com
     * imgfsh.xyz
+    * imgkor.xyz
     * imgtiger.xyz
     * imgvivo.xyz
     * imgweng.xyz
