@@ -988,6 +988,7 @@
     * imgtiger.xyz
     * imgvivo.xyz
     * imgweng.xyz
+    * imgwewo.xyz
     * imgxen.xyz
 * pics-money.ru
     * p0xpicmoney.ru
