@@ -18,7 +18,7 @@ _.register({
       host: [
         /^www\.(imgsky|imgfile|imgsee)\.net$/,
         /^www\.imagespicy\.site$/,
-        /^(imgxen|imgweng|imgtiger|imgvivo)\.xyz$/,
+        /^(imgxen|imgweng|imgtiger|imgvivo|imgwewo)\.xyz$/,
       ],
       path: /^\/[a-z|0-9]{4,10}$/,
     },
