@@ -983,6 +983,7 @@
     * imagespicy.site
     * imgair.net
     * imgfile.net
+    * imgflyer.xyz
     * imgsee.net
     * imgsky.net
     * imgtiger.xyz
