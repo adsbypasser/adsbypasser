@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * imgflyer.xyz
     * imgwewo.xyz
 
 ## v7.17.0
