@@ -15,13 +15,6 @@
         path: /^\/show\//,
       },
       {
-        host: [
-          /^www\.imagesnake\.(com|org)$/,
-          /^www\.imagefruit\.com$/,
-        ],
-        path: /^\/(img|show)\/.+/,
-      },
-      {
         host: /^imageban\.(ru|net)$/,
         path: /^\/show\/\d{4}\/\d{2}\/\d{2}\/.+/,
       },
@@ -37,10 +30,11 @@
   _.register({
     rule: {
       host: [
-        /^www\.imgcarry\.com$/,
+        /^www\.(imgcarry|imagefruit)\.com$/,
         /^www\.pornbus\.org$/,
+        /^www\.imagesnake\.(com|org)$/,
       ],
-      path: /^\/show\//,
+      path: /^\/(img|show)\//,
     },
     ready: run2,
   });
