@@ -1,5 +1,8 @@
 ## TBA
 
+* fixed
+    * imagefruit.com
+    * imagesnake.com
 * added
     * imgflyer.xyz
     * imgwewo.xyz
