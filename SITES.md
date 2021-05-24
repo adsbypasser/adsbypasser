@@ -991,6 +991,7 @@
     * imgweng.xyz
     * imgwewo.xyz
     * imgxen.xyz
+    * kekolangti.com
 * pics-money.ru
     * p0xpicmoney.ru
     * picker-click.ru
