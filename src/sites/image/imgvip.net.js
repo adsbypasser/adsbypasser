@@ -27,6 +27,7 @@ _.register({
         /^(www\.)?imgair\.net$/,
         /^(www\.)?imageking\.xyz$/,
         /^www\.cloudgallery\.net$/,
+        /^kekolangti\.com$/,
       ],
     },
   ],
