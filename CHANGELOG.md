@@ -6,6 +6,7 @@
 * added
     * imgflyer.xyz
     * imgwewo.xyz
+    * kekolangti.com
 
 ## v7.17.0
 
