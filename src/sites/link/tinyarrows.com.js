@@ -7,7 +7,7 @@ _.register({
     },
     {
       host: /^www\.javlibrary\.com$/,
-      query: /url=(.+)$/,
+      query: /url=([^&]+)/,
     },
   ],
   async start (m) {
