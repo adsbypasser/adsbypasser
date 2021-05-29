@@ -3,6 +3,7 @@
 * fixed
     * imagefruit.com
     * imagesnake.com
+    * javlibrary.com
 * added
     * imgflyer.xyz
     * imgwewo.xyz
