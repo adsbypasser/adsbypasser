@@ -1,7 +1,7 @@
 // @name           <%= title %>
 // @namespace      AdsBypasser
 // @description    Bypass Ads
-// @copyright      2012+, Wei-Cheng Pan (legnaleurc)
+// @copyright      2012+, Wei-Cheng Pan, https://adsbypasser.github.io/
 // @version        <%= version %>
 // @license        BSD
 // @homepageURL    https://adsbypasser.github.io/
