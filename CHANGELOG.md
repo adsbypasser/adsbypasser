@@ -6,6 +6,7 @@
     * javlibrary.com
 * added
     * imgflyer.xyz
+    * imgkia.buzz
     * imgwewo.xyz
     * kekolangti.com
 
