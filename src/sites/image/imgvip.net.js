@@ -28,6 +28,7 @@ _.register({
         /^(www\.)?imageking\.xyz$/,
         /^www\.cloudgallery\.net$/,
         /^kekolangti\.com$/,
+        /^imgkia\.buzz$/,
       ],
     },
   ],
