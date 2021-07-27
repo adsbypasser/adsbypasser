@@ -6,6 +6,7 @@
     * javlibrary.com
 * added
     * 3xplanet.com
+    * fastpic.org
     * imgflyer.xyz
     * imgkia.buzz
     * imgwewo.xyz
