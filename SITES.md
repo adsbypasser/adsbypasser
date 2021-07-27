@@ -1089,6 +1089,7 @@
     * direct-link.net
     * directupload.net
     * dl-protect.com
+    * drlink.online
     * durl.me
     * elsfile.org
     * embedupload.com
