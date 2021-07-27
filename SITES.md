@@ -160,6 +160,7 @@
     * imgzap.com
 * abload
     * abload.de
+    * fastpic.org
     * fastpic.ru
     * imageup.ru
 * bc.vc
