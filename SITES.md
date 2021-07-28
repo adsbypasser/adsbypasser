@@ -986,6 +986,7 @@
     * imgfile.net
     * imgflyer.xyz
     * imgkia.buzz
+    * imgkuiw.xyz
     * imgsee.net
     * imgsky.net
     * imgtiger.xyz
