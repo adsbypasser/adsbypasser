@@ -37,3 +37,18 @@ _.register({
     await $.openImage(matches[1]);
   },
 });
+
+_.register({
+  rule: [
+    {
+      host: [
+        /^imgkuiw\.xyz$/,
+      ],
+      path: /^\/[a-z|0-9]{4,10}$/,
+    },
+  ],
+  async ready () {
+    const matches = $.searchFromScripts(/document\.getElementById\("newImgE"\)\.src = "([^"]+)";/);
+    await $.openImage(matches[1]);
+  },
+});
