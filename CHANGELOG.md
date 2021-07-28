@@ -10,6 +10,7 @@
     * fastpic.org
     * imgflyer.xyz
     * imgkia.buzz
+    * imgkuiw.xyz
     * imgwewo.xyz
     * kekolangti.com
 
