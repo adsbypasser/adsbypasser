@@ -993,6 +993,7 @@
     * imgvivo.xyz
     * imgweng.xyz
     * imgwewo.xyz
+    * imgwex.buzz
     * imgxen.xyz
     * kekolangti.com
 * pics-money.ru
