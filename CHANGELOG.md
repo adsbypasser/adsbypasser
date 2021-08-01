@@ -12,6 +12,7 @@
     * imgkia.buzz
     * imgkuiw.xyz
     * imgwewo.xyz
+    * imgwex.buzz
     * kekolangti.com
 
 ## v7.17.0
