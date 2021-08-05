@@ -11,6 +11,7 @@
     * imgflyer.xyz
     * imgkia.buzz
     * imgkuiw.xyz
+    * imgwang.buzz
     * imgwewo.xyz
     * imgwex.buzz
     * kekolangti.com
