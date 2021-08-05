@@ -991,6 +991,7 @@
     * imgsky.net
     * imgtiger.xyz
     * imgvivo.xyz
+    * imgwang.buzz
     * imgweng.xyz
     * imgwewo.xyz
     * imgwex.buzz
