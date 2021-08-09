@@ -1,4 +1,4 @@
-## TBA
+## v7.18.0
 
 * fixed
     * imagefruit.com
