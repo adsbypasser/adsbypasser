@@ -39,8 +39,8 @@ Combined userscript will be `dist/adsbypasser.full.es7.user.js`.
 For more information, please see [Wiki].
 
 [1]: https://adsbypasser.github.io/
-[6]: https://travis-ci.org/adsbypasser/adsbypasser.png?branch=master,develop
-[7]: https://travis-ci.org/adsbypasser/adsbypasser
+[6]: https://github.com/adsbypasser/adsbypasser/actions/workflows/core.yaml/badge.svg
+[7]: https://github.com/adsbypasser/adsbypasser/actions
 [8]: https://adsbypasser.github.io/configure.html
 [9]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
 [Node.js]: https://nodejs.org/
