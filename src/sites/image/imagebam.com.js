@@ -9,7 +9,7 @@ _.register({
       await $.openImage(o.href);
       return;
     }
-    o = $('#app > main > div > h2 > a');
+    const o = $('#app > main > div > h2 > a');
     await $.openLink(o.href);
   },
 });
