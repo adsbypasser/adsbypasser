@@ -1,17 +1,15 @@
 _.register({
-  rule: 'http://www.imagebam.com/image/*',
+  rule: {
+    host: /^www\.imagebam\.com$/,
+    path: /^\/(view|image)\/.*$/,
+  },
   async ready () {
-    let o = $.$('.image-container img[id]');
+    let o = $.$('div.view-navigation > a:nth-child(3)');
     if (o) {
-      // somehow the server send image as an attachment or with content type
-      // text/plain, so I replace whole document.body with single img
-      await $.openImage(o.src, {
-        replace: true,
-      });
+      await $.openImage(o.href);
       return;
     }
-
-    o = $('body > div > div > a');
+    const o = $('#app > main > div > h2 > a');
     await $.openLink(o.href);
   },
 });
