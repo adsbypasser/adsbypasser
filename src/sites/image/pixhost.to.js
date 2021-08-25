@@ -17,7 +17,7 @@ _.register({
       o.style.display = '';
     }
 
-    const o = $('#show_image, #image');
+    let o = $('#show_image, #image');
     await $.openImage(o.src);
   },
 });
