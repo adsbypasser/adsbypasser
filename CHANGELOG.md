@@ -2,6 +2,8 @@
 
 * fixed
     * imagebam.com
+* added
+    * tinyurl.is
 
 ## v7.18.0
 
