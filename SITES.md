@@ -229,6 +229,7 @@
     * imgfantasy.com
     * imgnemo.com
     * imgsay.com
+    * imgwav.buzz
 * imgbabes
     * imgbabes.com
     * imgflare.com
