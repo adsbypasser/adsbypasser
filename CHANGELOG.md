@@ -4,6 +4,7 @@
     * imagebam.com
     * imgmeno.buzz
 * added
+    * imgwav.buzz
     * tinyurl.is
 
 ## v7.18.0
