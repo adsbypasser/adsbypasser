@@ -3,9 +3,10 @@
 * fixed
     * imagebam.com
     * imgmeno.buzz
-    * imgxvd.buzz
 * added
+    * imgbbd.buzz
     * imgwav.buzz
+    * imgxvd.buzz
     * tinyurl.is
 
 ## v7.18.0
