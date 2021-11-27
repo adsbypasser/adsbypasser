@@ -229,7 +229,6 @@
     * imgfantasy.com
     * imgnemo.com
     * imgsay.com
-    * imgwav.buzz
 * imgbabes
     * imgbabes.com
     * imgflare.com
@@ -689,9 +688,9 @@
     * igram.im
     * iir.ai
     * iitjeemainguide.in
-    * illink.net
     * ijobanana.xyz
     * ilinkshortx.com
+    * illink.net
     * imageoptimizer.us
     * infosehatku.club
     * infosia.xyz
@@ -944,8 +943,8 @@
     * w-rajem.com
     * wrap-w0rld.com
     * xemlink.net
-    * xz2.xyz
     * xpickle.club
+    * xz2.xyz
     * yasinews.xyz
     * yesmoviesapp.info
     * yourtechguider.com
@@ -985,6 +984,7 @@
     * imageking.xyz
     * imagespicy.site
     * imgair.net
+    * imgbbd.buzz
     * imgfile.net
     * imgflyer.xyz
     * imgkia.buzz
@@ -995,6 +995,7 @@
     * imgtiger.xyz
     * imgvivo.xyz
     * imgwang.buzz
+    * imgwav.buzz
     * imgweng.xyz
     * imgwewo.xyz
     * imgwex.buzz
@@ -1036,8 +1037,8 @@
     * mylink.zone
     * onepiece-ex.com.br
 * fiuxy.co
-    * fiuxy.co
     * fiuxy.bz
+    * fiuxy.co
 * ewa.ac
     * elil.cc
     * ewa.ac
