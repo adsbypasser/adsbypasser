@@ -5,6 +5,7 @@
     * imgmeno.buzz
 * added
     * imgbbd.buzz
+    * imgqte.buzz
     * imgwav.buzz
     * imgxvd.buzz
     * tinyurl.is
