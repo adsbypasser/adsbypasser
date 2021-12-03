@@ -990,6 +990,7 @@
     * imgkia.buzz
     * imgkuiw.xyz
     * imgmeno.buzz
+    * imgqte.buzz
     * imgsee.net
     * imgsky.net
     * imgtiger.xyz
