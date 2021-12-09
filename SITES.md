@@ -466,10 +466,6 @@
     * shon.xyz
 * linkdrop.net
     * 123link.carpartsviet97.site
-    * 123link.co
-    * 123link.io
-    * 123link.press
-    * 123link.pro
     * 123link.pw
     * 123link.vip
     * 123short.biz
