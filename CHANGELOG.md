@@ -3,6 +3,7 @@
 * fixed
     * imagebam.com
     * imgmeno.buzz
+    * pixxxels.cc
     * turboimagehost.com
 * added
     * imgbbd.buzz
