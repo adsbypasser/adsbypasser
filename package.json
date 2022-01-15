@@ -31,7 +31,7 @@
     "gulp-rename": "^2.0.0",
     "gulp-strip-comments": "^2.5.1",
     "lodash": "^4.17.19",
-    "marked": "^2.0.0",
+    "marked": "^4.0.10",
     "mocha": "^8.0.1",
     "webpack": "^4.43.0",
     "webpack-stream": "5.0.0"
