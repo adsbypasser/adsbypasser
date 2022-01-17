@@ -6,7 +6,7 @@ import fs from 'fs';
 import path from 'path';
 
 import _ from 'lodash';
-import marked  from 'marked';
+import { marked }  from 'marked';
 
 
 const CHANGELOG_PATH = toAbsolutePath('../../CHANGELOG.md');
