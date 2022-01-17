@@ -1,4 +1,4 @@
-## TBA
+## v7.19.0
 
 * fixed
     * imagebam.com
