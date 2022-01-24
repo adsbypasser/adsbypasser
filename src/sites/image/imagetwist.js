@@ -25,7 +25,9 @@
 
   async function run () {
     const i = $('img.pic');
-    await $.openImage(i.src);
+    await $.openImage(i.src, {
+      replace: true,
+    });
   }
 
 })();
