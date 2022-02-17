@@ -2,6 +2,8 @@
 
 * fixed
     * imagetwist.com
+* added
+    * imgkorle.buzz
 
 ## v7.19.0
 
