@@ -4,6 +4,7 @@
     * imagetwist.com
 * added
     * imgkorle.buzz
+    * imgwia.buzz
 
 ## v7.19.0
 
