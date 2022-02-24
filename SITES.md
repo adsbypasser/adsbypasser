@@ -1116,6 +1116,7 @@
     * gsmzone.site
     * gunting.web.id
     * healthykk.com
+    * hello.tribuntekno.com
     * hostingpics.net
     * hotshorturl.com
     * ifotos.pl
@@ -1238,7 +1239,6 @@
     * thinfi.com
     * tinyarrows.com
     * tinypic.com
-    * tribuntekno.com
     * turboimagehost.com
     * turkdown.com
     * u.to
