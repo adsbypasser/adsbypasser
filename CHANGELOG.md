@@ -5,6 +5,7 @@
 * added
     * imgkorle.buzz
     * imgwia.buzz
+    * starimage.club
 
 ## v7.19.0
 
