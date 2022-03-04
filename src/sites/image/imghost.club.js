@@ -8,6 +8,7 @@ _.register({
       /^imghost\.(top|club)$/,
       /^pornbaker\.men$/,
       /^somnath2003\.xyz$/,
+      /^starimage\.club$/,
     ],
     path: /^\/image\/.+$/,
   },
