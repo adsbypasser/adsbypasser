@@ -5,6 +5,7 @@
 * added
     * imgkorle.buzz
     * imgwia.buzz
+    * pspic.org
     * starimage.club
 
 ## v7.19.0
