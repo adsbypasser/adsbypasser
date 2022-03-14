@@ -119,6 +119,7 @@
     * pop-img.info
     * porno-pirat.ru
     * pornyfap.com
+    * pspic.org
     * star-hentai.com
     * teenimage.org
     * teenshot.org
