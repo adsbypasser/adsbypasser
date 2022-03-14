@@ -315,7 +315,13 @@
   });
 
   _.register({
-    rule: 'https://imgcloud.pw/image/*',
+    rule: {
+      host: [
+        /^imgcloud\.pw$/,
+        /^pspic\.org$/,
+      ],
+      path: /^\/image\/.*/,
+    },
     async ready () {
       const l = $('link[rel="image_src"]');
       await $.openImage(l.href);
