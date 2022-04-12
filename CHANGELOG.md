@@ -2,6 +2,7 @@
 
 * fixed
     * imagetwist.com
+    * tinyurl.is
 * added
     * imgkorle.buzz
     * imgwia.buzz
