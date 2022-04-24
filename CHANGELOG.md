@@ -5,6 +5,7 @@
     * tinyurl.is
 * added
     * imgkorle.buzz
+    * imgstar.eu
     * imgwia.buzz
     * pspic.org
     * starimage.club
