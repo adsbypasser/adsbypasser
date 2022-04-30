@@ -210,7 +210,7 @@
   _.register({
     rule: {
       host: /^22pixx\.xyz$/,
-      path: /^\/y-o\/(.+)\.jpeg\.html/,
+      path: /^\/y-[ao]\/(.+)\.jpeg\.html/,
     },
     async start () {
       const path = window.location.href.replace('/y-', '/').replace('.html', '');
