@@ -4,6 +4,7 @@
     * imagetwist.com
     * tinyurl.is
 * added
+    * imgizx.buzz
     * imgkorle.buzz
     * imgstar.eu
     * imgwia.buzz
