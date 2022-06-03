@@ -199,21 +199,10 @@
   _.register({
     rule: {
       host: /^22pixx\.xyz$/,
-      path: /^\/x-o\/(.+)\.jpeg\.html/,
+      path: /^\/x-[or]\/(.+)\.jpeg\.html/,
     },
     async start () {
       const path = window.location.href.replace('/x-', '/').replace('.html', '');
-      await $.openLink(path);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^22pixx\.xyz$/,
-      path: /^\/x-r\/(.+)\.jpeg\.html/,
-    },
-    async start () {
-      const path = window.location.href.replace('/x-', '/ib-');
       await $.openLink(path);
     },
   });
