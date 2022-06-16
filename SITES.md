@@ -282,6 +282,7 @@
     * imgrock.pw
     * imgsee.me
     * imgsen.com
+    * imgstar.eu
     * imgsto.com
     * imgtown.pw
     * imgve.com
