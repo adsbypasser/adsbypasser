@@ -8,6 +8,7 @@
     * imgkorle.buzz
     * imgstar.eu
     * imgwia.buzz
+    * img.javstore.net
     * pspic.org
     * starimage.club
 
