@@ -1140,6 +1140,7 @@
     * imageupper.com
     * imagezilla.net
     * img.3ezy.net
+    * img.javstore.net
     * img1.imagilive.com
     * imgazure.com
     * imgbar.net
