@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * imgizw.buzz
     * imgowk.buzz
 
 ## v7.20.0
