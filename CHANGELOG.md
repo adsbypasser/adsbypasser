@@ -3,6 +3,7 @@
 * added
     * imgizw.buzz
     * imgowk.buzz
+    * imgxaqq.buzz
 
 ## v7.20.0
 
