@@ -984,6 +984,7 @@
     * imagespicy.site
     * imgair.net
     * imgbbd.buzz
+    * imgewe.buzz
     * imgfile.net
     * imgflyer.xyz
     * imgizw.buzz
