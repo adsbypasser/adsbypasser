@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * imgbew.buzz
     * imgewe.buzz
     * imgizw.buzz
     * imgowk.buzz
