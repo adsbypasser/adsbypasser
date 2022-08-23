@@ -44,6 +44,7 @@ _.register({
       host: [
         /^imgkuiw\.xyz$/,
         /^img[a-z]{2,6}\.buzz$/,
+        /^hfneiott\.buzz$/,
       ],
       path: /^\/[a-z|0-9]{4,10}$/,
     },
