@@ -980,6 +980,7 @@
     * cshort.org
 * imgvip.net
     * cloudgallery.net
+    * hfneiott.buzz
     * imageking.xyz
     * imagespicy.site
     * imgair.net
@@ -1011,6 +1012,7 @@
     * imgxen.xyz
     * imgxvd.buzz
     * kekolangti.com
+    * lgjreelqq.buzz
 * pics-money.ru
     * p0xpicmoney.ru
     * picker-click.ru
