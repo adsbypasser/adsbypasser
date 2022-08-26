@@ -1,11 +1,9 @@
 ## TBA
 
 * added
-    * imgbew.buzz
-    * imgewe.buzz
-    * imgizw.buzz
-    * imgowk.buzz
-    * imgxaqq.buzz
+    * hfneiott.buzz
+    * img*.buzz
+    * lgjreelqq.buzz
 
 ## v7.20.0
 
