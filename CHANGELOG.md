@@ -4,6 +4,7 @@
     * hfneiott.buzz
     * img*.buzz
     * lgjreelqq.buzz
+    * pyotinle.buzz
 
 ## v7.20.0
 
