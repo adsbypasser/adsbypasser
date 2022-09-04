@@ -1013,6 +1013,7 @@
     * imgxvd.buzz
     * kekolangti.com
     * lgjreelqq.buzz
+    * pyotinle.buzz
 * pics-money.ru
     * p0xpicmoney.ru
     * picker-click.ru
