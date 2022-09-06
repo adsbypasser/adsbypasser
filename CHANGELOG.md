@@ -5,6 +5,7 @@
     * img*.buzz
     * lgjreelqq.buzz
     * pyotinle.buzz
+    * try2link.com
 
 ## v7.20.0
 
