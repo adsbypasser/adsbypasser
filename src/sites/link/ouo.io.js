@@ -4,7 +4,7 @@ _.register({
       /^(www\.)?ouo\.(io|press)$/,
       /^(sloomp|novaenreta)\.space$/,
     ],
-    path: /^\/go\/\w+$/,
+    path: /(^\/\w+$|^\/go\/\w+$)/,
   },
   async ready () {
     $('form').submit();
