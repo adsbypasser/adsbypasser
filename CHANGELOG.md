@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * ouo.io
 * added
     * hfneiott.buzz
     * img*.buzz
