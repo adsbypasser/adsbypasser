@@ -133,6 +133,7 @@
         /^(koylinks|buy-in-599rs)\.win$/,
         /^exe\.(io|app)$/,
         /^slink\.bid$/,
+        /^try2link\.com$/,
       ],
     },
     async ready () {
