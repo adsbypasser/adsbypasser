@@ -93,8 +93,7 @@ Typical feature types are:
 
 ## Pull Request
 
-If it is a bug fix, please send to `master` branch. Any other types should send
-to `develop` branch.
+Please send the Pull Request (PR) to the `develop` branch.
 
 There is something you should keep in mind:
 
