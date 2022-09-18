@@ -6,6 +6,7 @@
     * hfneiott.buzz
     * img*.buzz
     * lgjreelqq.buzz
+    * optiye.buzz
     * pixmtke.buzz
     * pyotinle.buzz
     * try2link.com
