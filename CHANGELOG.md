@@ -5,6 +5,7 @@
 * added
     * hfneiott.buzz
     * img*.buzz
+    * imgpuloki.online
     * lgjreelqq.buzz
     * optiye.buzz
     * pixmtke.buzz
