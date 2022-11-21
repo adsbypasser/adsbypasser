@@ -45,6 +45,7 @@ _.register({
         /^imgkuiw\.xyz$/,
         /^img[a-z]{2,6}\.buzz$/,
         /^(hfneiott|lgjreelqq|pyotinle|pixmtke|optiye)\.buzz$/,
+        /^imgpuloki\.online$/,
       ],
       path: /^\/[a-z|0-9]{4,10}$/,
     },
