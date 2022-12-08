@@ -1015,6 +1015,7 @@
     * kekolangti.com
     * lgjreelqq.buzz
     * optiye.buzz
+    * picuekr.site
     * pixmtke.buzz
     * pyotinle.buzz
 * pics-money.ru
