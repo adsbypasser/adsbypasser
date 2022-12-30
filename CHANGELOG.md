@@ -2,6 +2,7 @@
 
 * added
     * imglekw.site
+    * imgneor.store
     * picuekr.site
 
 ## v7.21.0
