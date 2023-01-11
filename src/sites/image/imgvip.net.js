@@ -48,6 +48,7 @@ _.register({
         /^imgpuloki\.online$/,
         /^(picuekr|imglekw|imgpukxxr)\.site/,
         /^imgneor\.store$/,
+        /^imgsdi\.website$/,
       ],
       path: /^\/[a-z|0-9]{4,10}$/,
     },
