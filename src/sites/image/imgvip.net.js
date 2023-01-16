@@ -46,7 +46,7 @@ _.register({
         /^img[a-z]{2,6}\.buzz$/,
         /^(hfneiott|lgjreelqq|pyotinle|pixmtke|optiye)\.buzz$/,
         /^imgpuloki\.online$/,
-        /^(picuekr|imglekw|imgpukxxr)\.site/,
+        /^(picuekr|imglekw|imgpukxxr|imgsxo)\.site/,
         /^imgneor\.store$/,
         /^imgsdi\.website$/,
       ],
