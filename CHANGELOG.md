@@ -5,6 +5,7 @@
     * imgneor.store
     * imgpukxxr.site
     * imgsdi.website
+    * imgsxo.site
     * picuekr.site
 
 ## v7.21.0
