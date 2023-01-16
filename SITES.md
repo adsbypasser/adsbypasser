@@ -1004,6 +1004,7 @@
     * imgqte.buzz
     * imgsdi.website
     * imgsee.net
+    * imgsxo.site
     * imgsky.net
     * imgtiger.xyz
     * imgvivo.xyz
