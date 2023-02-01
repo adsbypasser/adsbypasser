@@ -47,7 +47,7 @@ _.register({
         /^(hfneiott|lgjreelqq|pyotinle|pixmtke|optiye)\.buzz$/,
         /^imgpuloki\.online$/,
         /^(picuekr|imglekw|imgpukxxr|imgsxo)\.site/,
-        /^imgneor\.store$/,
+        /^(imgneor|imgotw)\.store$/,
         /^imgsdi\.website$/,
       ],
       path: /^\/[a-z|0-9]{4,10}$/,
