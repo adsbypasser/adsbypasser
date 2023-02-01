@@ -3,6 +3,7 @@
 * added
     * imglekw.site
     * imgneor.store
+    * imgotw.store
     * imgpukxxr.site
     * imgsdi.website
     * imgsxo.site
