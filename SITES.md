@@ -1121,6 +1121,7 @@
     * dl-protect.com
     * drlink.online
     * durl.me
+    * earnlink.io
     * elsfile.org
     * embedupload.com
     * filemedia.net
