@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * earnlink.io
     * imglekw.site
     * imgneor.store
     * imgotw.store
