@@ -43,7 +43,7 @@ _.register({
     {
       host: [
         /^imgkuiw\.xyz$/,
-        /^img[a-z]{2,6}\.(buzz|site|store|online|s|website)$/,
+        /^img[a-z]{2,6}\.(buzz|site|store|online|website)$/,
         /^(hfneiott|lgjreelqq|pyotinle|pixmtke|optiye)\.buzz$/,
         /^picuekr\.site/,
       ],
