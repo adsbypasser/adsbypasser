@@ -8,6 +8,7 @@
     * imgpukxxr.site
     * imgsdi.website
     * imgsxo.site
+    * piclerz.store
     * picuekr.site
 
 ## v7.21.0
