@@ -4,6 +4,7 @@
     * earnlink.io
     * imglekw.site
     * imgneor.store
+    * imgnmh.cfd
     * imgotw.store
     * imgpukxxr.site
     * imgsdi.website
