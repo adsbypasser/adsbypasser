@@ -42,7 +42,7 @@ _.register({
   rule: [
     {
       host: [
-        /^img[a-z]{2,6}\.(buzz|site|store|online|website|xyz|cfd)$/,
+        /^img[a-z]{2,6}\.(buzz|site|store|online|website|xyz|cfd|sbs)$/,
         /^(hfneiott|lgjreelqq|pyotinle|pixmtke|optiye)\.buzz$/,
         /^picuekr\.site/,
         /^piclerz\.store/,
