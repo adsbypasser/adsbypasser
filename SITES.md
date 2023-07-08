@@ -1159,6 +1159,7 @@
     * imageno.com
     * imageshack.us
     * imageshost.ru
+    * imagetwist.netlify.app
     * imageupper.com
     * imagezilla.net
     * img.3ezy.net
