@@ -15,7 +15,7 @@ _.register({
   },
   async ready (m) {
     const i = $('input[id][name]');
-    await $.openLink(//adshnk.com/${m.path[1]});
+    await $.openLink(`//adshnk.com/${m.path[1]}`);
   },
 });
 
