@@ -19,7 +19,7 @@ _.register({
 
     const path_id = m.path[1];
 
-    const API_URL = `https://www.shrink-service.it/v3/api/prototype/init?req=init&uri=https://adshnk.com/`+path_id;
+    const API_URL = `//www.shrink-service.it/v3/api/prototype/init?req=init&uri=https://adshnk.com/`+path_id;
 
     let linkInfo = await $.get(API_URL, false, {
       Origin: _.none,
