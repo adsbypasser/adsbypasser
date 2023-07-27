@@ -11,6 +11,17 @@ _.register({
 _.register({
   rule: {
     host: /^www\.shrink-service\.it$/,
+    path: /^\/btn\/(.+)/,
+  },
+  async ready (m) {
+    const i = $('input[id][name]');
+    await $.openLink(//adshnk.com/${m.path[1]});
+  },
+});
+
+_.register({
+  rule: {
+    host: /^www\.shrink-service\.it$/,
     path: /^\/shrinked\//,
   },
   async ready () {
