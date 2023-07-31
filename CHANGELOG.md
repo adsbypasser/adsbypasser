@@ -1,5 +1,7 @@
 ## TBA
 
+* fixed
+    * shrink-service.it
 * added
     * earnlink.io
     * imagetwist.netlify.app
