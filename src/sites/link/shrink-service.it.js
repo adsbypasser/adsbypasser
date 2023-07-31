@@ -15,11 +15,9 @@ _.register({
   },
   async ready (m) {
 
-    const sjcl = $.window.sjcl;
-
     const path_id = m.path[1];
 
-    const API_URL = `//www.shrink-service.it/v3/api/prototype/init?req=init&uri=https://adshnk.com/`+path_id;
+    const API_URL = '//www.shrink-service.it/v3/api/prototype/init?req=init&uri=https://adshnk.com/'+path_id;
 
     let linkInfo = await $.get(API_URL, false, {
       Origin: _.none,
@@ -30,12 +28,12 @@ _.register({
     });
     linkInfo = JSON.parse(linkInfo);
     if (!linkInfo.success) {
-      throw new _ADSBYPASSER_NAMESPACE___WEBPACK_IMPORTED_MODULE_0__["_"].AdsBypasserError('error when getting api information');
+      throw new $.AdsBypasserError('error when getting api information');
     }
 
-    let urlInfo = JSON.parse(linkInfo["0"].metadata);
+    const urlInfo = JSON.parse(linkInfo['0'].metadata);
     if (urlInfo.url) {
-      await _ADSBYPASSER_NAMESPACE___WEBPACK_IMPORTED_MODULE_0__["$"].openLink(urlInfo.url);
+      await $.openLink(urlInfo.url);
       return;
     }
   },
