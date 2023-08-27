@@ -13,6 +13,7 @@
     * imgsdi.website
     * imgsxo.site
     * imguthes.sbs
+    * kimochi.info
     * piclerz.store
     * picuekr.site
 
