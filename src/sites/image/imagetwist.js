@@ -26,4 +26,5 @@
     const i = $('img.pic');
     await $.openImage(i.src);
   }
+  
 })();
