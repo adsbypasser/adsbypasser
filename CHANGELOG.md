@@ -14,6 +14,7 @@
     * imgsxo.site
     * imguthes.sbs
     * kimochi.info
+    * pacific.picturedent.org
     * piclerz.store
     * picuekr.site
 
