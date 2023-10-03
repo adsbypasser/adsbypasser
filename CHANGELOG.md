@@ -16,6 +16,7 @@
     * kimochi.info
     * pacific.picturedent.org
     * piclerz.store
+    * picnew.space
     * picuekr.site
     * pilot007.org
     * xxxwebdlxxx.top
