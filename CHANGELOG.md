@@ -17,6 +17,7 @@
     * pacific.picturedent.org
     * piclerz.store
     * picuekr.site
+    * pilot007.org
     * xxxwebdlxxx.top
 
 ## v7.21.0
