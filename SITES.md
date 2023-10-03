@@ -116,6 +116,7 @@
     * picmoza.com
     * picstate.com
     * picz.site
+    * pilot007.org
     * pixup.us
     * pop-img.info
     * porno-pirat.ru
