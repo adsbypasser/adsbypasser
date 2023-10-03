@@ -1229,6 +1229,7 @@
     * picclock.ru
     * piclick.org
     * pic-money.ru
+    * picnew.space
     * picnictrans.com
     * picpic.online
     * picshare.geenza.com
