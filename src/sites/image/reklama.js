@@ -22,7 +22,7 @@
           // net
           /^(imgserve|imgproject|imgpython|imgpix|naughtygate|gallerycloud|xximg|img-view)\.net$/,
           // org
-          /^(xxxwebdlxxx|teenshot|imageon|imageteam|voyeurimage|teenimage|megaimage)\.org$/,
+          /^(teenshot|imageon|imageteam|voyeurimage|teenimage|megaimage)\.org$/,
           /^(imgstudio|imgspot)\.org$/,
           // site
           /^(picz|unporn)\.site$/,
@@ -43,6 +43,7 @@
           /^s\.imghost\.top$/,
           /^www\.hotimage\.uk$/,
           /^pixup\.us$/,
+          /^xxxwebdlxxx\.(org|top)$/,
         ],
         path: /\/img-.*\.html/,
       },
