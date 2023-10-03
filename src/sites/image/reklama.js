@@ -331,6 +331,7 @@
       host: [
         /^imgcloud\.pw$/,
         /^pspic\.org$/,
+        /^pilot007\.org$/,
       ],
       path: /^\/image\/.*/,
     },
