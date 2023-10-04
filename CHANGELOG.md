@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * imagetwist.com
     * shrink-service.it
 * added
     * earnlink.io
