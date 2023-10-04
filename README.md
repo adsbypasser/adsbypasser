@@ -27,11 +27,11 @@ For more information, please see [here][9].
 
 ## How To Build
 
-Please install [Node.js] and [yarn], then run:
+Please install [Node.js], then run:
 
 ```
-yarn install
-yarn build
+npm install
+npm run build
 ```
 
 Combined userscript will be `dist/adsbypasser.full.es7.user.js`.
@@ -44,7 +44,6 @@ For more information, please see [Wiki].
 [8]: https://adsbypasser.github.io/configure.html
 [9]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
 [Node.js]: https://nodejs.org/
-[yarn]: https://yarnpkg.com/
 [RedirectionHelper]: https://userscripts-mirror.org/scripts/show/69797
 [SuYS]: https://userscripts-mirror.org/users/SuYS.html
 [Wiki]: https://github.com/adsbypasser/adsbypasser/wiki
