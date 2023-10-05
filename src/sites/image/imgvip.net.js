@@ -24,7 +24,6 @@ _.register({
     },
     {
       host: [
-        /^(www\.)?imgair\.net$/,
         /^(www\.)?imageking\.xyz$/,
         /^www\.cloudgallery\.net$/,
         /^kekolangti\.com$/,
@@ -42,6 +41,7 @@ _.register({
   rule: [
     {
       host: [
+        /^(www\.)?imgair\.net$/,
         /^img[a-z]{2,6}\.(buzz|site|store|online|website|xyz|cfd|sbs)$/,
         /^(hfneiott|lgjreelqq|pyotinle|pixmtke|optiye)\.buzz$/,
         /^picuekr\.site/,
