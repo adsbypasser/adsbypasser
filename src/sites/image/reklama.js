@@ -22,7 +22,7 @@
           // net
           /^(imgserve|imgproject|imgpython|imgpix|naughtygate|gallerycloud|xximg|img-view)\.net$/,
           // org
-          /^(xxxwebdlxxx|teenshot|imageon|imageteam|voyeurimage|teenimage|megaimage)\.org$/,
+          /^(teenshot|imageon|imageteam|voyeurimage|teenimage|megaimage)\.org$/,
           /^(imgstudio|imgspot)\.org$/,
           // site
           /^(picz|unporn)\.site$/,
@@ -43,6 +43,7 @@
           /^s\.imghost\.top$/,
           /^www\.hotimage\.uk$/,
           /^pixup\.us$/,
+          /^xxxwebdlxxx\.(org|top)$/,
         ],
         path: /\/img-.*\.html/,
       },
@@ -221,7 +222,7 @@
   _.register({
     rule: {
       host: /^22pixx\.xyz$/,
-      path: /^\/y-[ao]\/(.+)\.jpeg\.html/,
+      path: /^\/y-[ao1]\/(.+)\.jpeg\.html/,
     },
     async start () {
       const path = window.location.href.replace('/y-', '/').replace('.html', '');
@@ -330,6 +331,7 @@
       host: [
         /^imgcloud\.pw$/,
         /^pspic\.org$/,
+        /^pilot007\.org$/,
       ],
       path: /^\/image\/.*/,
     },

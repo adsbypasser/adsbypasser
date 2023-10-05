@@ -48,6 +48,16 @@
   });
 
   _.register({
+    rule: [
+      'https://pacific.picturedent.org/image/*',
+    ],
+    async ready () {
+      const i = $('#full_img');
+      await $.openImage(i.src);
+    },
+  });
+
+  _.register({
     rule: {
       host: /^xxxhost\.me$/,
       path: /^\/viewer\d+\.php$/,

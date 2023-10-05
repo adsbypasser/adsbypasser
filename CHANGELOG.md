@@ -1,3 +1,27 @@
+## v7.22.0
+
+* fixed
+    * imagetwist.com
+    * shrink-service.it
+* added
+    * earnlink.io
+    * imagetwist.netlify.app
+    * imglekw.site
+    * imgneor.store
+    * imgnmh.cfd
+    * imgotw.store
+    * imgpukxxr.site
+    * imgsdi.website
+    * imgsxo.site
+    * imguthes.sbs
+    * kimochi.info
+    * pacific.picturedent.org
+    * piclerz.store
+    * picnew.space
+    * picuekr.site
+    * pilot007.org
+    * xxxwebdlxxx.top
+
 ## v7.21.0
 
 * fixed

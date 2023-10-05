@@ -42,10 +42,10 @@ _.register({
   rule: [
     {
       host: [
-        /^imgkuiw\.xyz$/,
-        /^img[a-z]{2,6}\.buzz$/,
+        /^img[a-z]{2,6}\.(buzz|site|store|online|website|xyz|cfd|sbs)$/,
         /^(hfneiott|lgjreelqq|pyotinle|pixmtke|optiye)\.buzz$/,
-        /^imgpuloki\.online$/,
+        /^picuekr\.site/,
+        /^piclerz\.store/,
       ],
       path: /^\/[a-z|0-9]{4,10}$/,
     },

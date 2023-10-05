@@ -1,5 +1,4 @@
 (function () {
-
   _.register({
     rule: [
       {
@@ -25,9 +24,7 @@
 
   async function run () {
     const i = $('img.pic');
-    await $.openImage(i.src, {
-      replace: true,
-    });
+    await $.openImage(i.src);
   }
 
 })();
