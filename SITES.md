@@ -158,10 +158,6 @@
     * imgz.pw
     * picfox.org
     * pixsor.com
-* imgdino
-    * imgdino.com
-    * imgtiger.com
-    * imgzap.com
 * abload
     * abload.de
     * fastpic.org
@@ -233,15 +229,9 @@
     * imgfantasy.com
     * imgnemo.com
     * imgsay.com
-* imgbabes
-    * imgbabes.com
-    * imgflare.com
 * 2i.cz
     * 2i.cz
     * 2i.sk
-* pic4you.ru
-    * pic4you.ru
-    * pic5you.ru
 * easyurl.net
     * atu.ca
     * clickthru.ca
@@ -302,9 +292,6 @@
     * silverpic.com
     * uimgshare.com
     * uploadrr.com
-* picexposed.com
-    * croea.com
-    * picexposed.com
 * minidroid.net
     * linkpoi.in
     * minidroid.net
@@ -981,55 +968,6 @@
 * allkeyshop.com
     * allkeyshop.com
     * cshort.org
-* imgvip.net
-    * cloudgallery.net
-    * hfneiott.buzz
-    * imageking.xyz
-    * imagespicy.site
-    * imgair.net
-    * imgbbd.buzz
-    * imgbew.buzz
-    * imgewe.buzz
-    * imgfile.net
-    * imgflyer.xyz
-    * imgizw.buzz
-    * imgizx.buzz
-    * imgkia.buzz
-    * imgkoc.buzz
-    * imgkorle.buzz
-    * imgkuiw.xyz
-    * imglekw.site
-    * imgmeno.buzz
-    * imgneor.store
-    * imgnmh.cfd
-    * imgotw.store
-    * imgowk.buzz
-    * imgpukxxr.site
-    * imgpuloki.online
-    * imgqte.buzz
-    * imgsdi.website
-    * imgsee.net
-    * imgsxo.site
-    * imgsky.net
-    * imgtiger.xyz
-    * imguthes.sbs
-    * imgvivo.xyz
-    * imgwang.buzz
-    * imgwav.buzz
-    * imgweng.xyz
-    * imgwewo.xyz
-    * imgwex.buzz
-    * imgwia.buzz
-    * imgxaqq.buzz
-    * imgxen.xyz
-    * imgxvd.buzz
-    * kekolangti.com
-    * lgjreelqq.buzz
-    * optiye.buzz
-    * piclerz.store
-    * picuekr.site
-    * pixmtke.buzz
-    * pyotinle.buzz
 * pics-money.ru
     * p0xpicmoney.ru
     * picker-click.ru
@@ -1133,15 +1071,9 @@
     * filemedia.net
     * filoops.info
     * flylink.io
-    * fopkodiak.site
-    * fotolink.su
-    * fotosik.pl
-    * freeimgup.com
-    * funkyimg.com
     * gamemod.pro
     * get.ujv.al
     * gkurl.us
-    * goimagehost.com
     * goto.loncat.in
     * gsmzone.site
     * gunting.web.id
@@ -1151,9 +1083,6 @@
     * hotshorturl.com
     * ifotos.pl
     * iiv.pl
-    * ima.so
-    * imadul.com
-    * image2you.ru
     * imagebam.com
     * imageban.net
     * imageban.ru
@@ -1161,20 +1090,13 @@
     * imagenetz.de
     * imageno.com
     * imageshack.us
-    * imageshost.ru
     * imagetwist.netlify.app
     * imageupper.com
-    * imagezilla.net
-    * img.3ezy.net
-    * img.javstore.net
-    * img1.imagilive.com
+    * imgair.net
     * imgazure.com
-    * imgbar.net
     * imgbox.com
     * imgcarry.com
     * imgdollar.com
-    * imgmass.com
-    * imgvault.pw
     * indishare.me
     * indishare.org
     * insurance-waifu.cf
@@ -1182,10 +1104,8 @@
     * itw.me
     * ity.im
     * javlibrary.com
-    * javtor.com
     * jheberg.net
     * k2nblog.com
-    * keptarolo.hu
     * kimochi.info
     * kingofshrink.com
     * layarkaca21.vip
@@ -1217,22 +1137,17 @@
     * mylinkgen.com
     * namiyt.com
     * nmac.to
-    * noelshack.com
     * nsfw.in
     * nutshellurl.com
     * oni.vn
-    * overdream.cz
     * p.pw
     * pasted.co
     * pdi2.net
-    * piccash.net
     * picclock.ru
-    * piclick.org
     * pic-money.ru
     * picnew.space
     * picnictrans.com
     * picpic.online
-    * picshare.geenza.com
     * picstream.tv
     * pic-upload.de
     * pimpandhost.com
@@ -1244,15 +1159,12 @@
     * pronpic.org
     * pucuk.xyz
     * putlocker.com
-    * qrrro.com
-    * radikal.ru
     * realsht.mobi
     * richlink.com
     * ron.vn
     * s-jav.com
     * sa.ae
     * safeurl.eu
-    * screenlist.ru
     * semprot.com
     * shaggyimg.pro
     * shortid.co
@@ -1265,7 +1177,6 @@
     * spaste.com
     * st.wardhanime.net
     * sub2unlock.com
-    * subirimagenes.com
     * supercheats.com
     * surfsees.com
     * swzz.xyz
@@ -1302,7 +1213,6 @@
     * wikiall.org
     * won.pe
     * xaoutchouc.live
-    * xxx.fopkodiak.site
     * yep.it
     * yooclick.com
     * zeefiles.download
