@@ -1182,6 +1182,7 @@
     * ipic.su
     * itw.me
     * ity.im
+    * javball.com
     * javlibrary.com
     * javtenshi.com
     * javtor.com
