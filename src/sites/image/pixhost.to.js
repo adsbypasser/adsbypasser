@@ -5,7 +5,10 @@ _.register({
       path: /^\/show\//,
     },
     {
-      host: /^(3xplanet|javtenshi)\.com$/,
+      host: [
+        /^3xplanet\.(com|net)$/,
+        /^javtenshi\.com$/,
+      ],
       path: /^\/viewimage\//,
     },
   ],
