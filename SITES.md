@@ -1182,6 +1182,7 @@
     * itw.me
     * ity.im
     * javlibrary.com
+    * javtenshi.com
     * javtor.com
     * jheberg.net
     * k2nblog.com
