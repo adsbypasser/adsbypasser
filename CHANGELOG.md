@@ -2,6 +2,7 @@
 
 * added
     * javtenshi.com
+    * pig69.com
 
 
 ## v7.22.0
