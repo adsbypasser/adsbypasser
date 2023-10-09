@@ -5,6 +5,7 @@ _.register({
     'https://pixxxels.cc/*',
     'https://img.javstore.net/image/*',
     'https://picnew.space/image/*',
+    'https://pig69.com/*'
   ],
   async ready () {
     const m = $('meta[property="og:image"]');
