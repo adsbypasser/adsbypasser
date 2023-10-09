@@ -2,6 +2,7 @@
 
 * added
     * 3xplanet.net
+    * javball.com
     * javtenshi.com
     * pig69.com
 
