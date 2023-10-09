@@ -1,6 +1,7 @@
 ## TBA
 
 * added
+    * 3xplanet.net
     * javtenshi.com
     * pig69.com
 
