@@ -1,7 +1,10 @@
 ## TBA
 
+* fixed
+    * imgair.net
 * added
     * 3xplanet.net
+    * imgstar.eu
     * javball.com
     * javtenshi.com
     * pig69.com
