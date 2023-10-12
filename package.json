@@ -6,6 +6,10 @@
     "type": "git",
     "url": "https://github.com/adsbypasser/adsbypasser.git"
   },
+  "engines": {
+    "node": ">=18.x",
+    "npm": ">=8.x"
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
