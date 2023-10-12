@@ -123,7 +123,6 @@
       host: [
         /^(picbaron|imgbaron|kvador|fotokiz)\.com$/,
         /^imgfiles\.org$/,
-        /^imgstar\.eu$/,
       ],
       path: PATH_RULE,
     },
