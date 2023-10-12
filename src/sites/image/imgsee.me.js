@@ -10,7 +10,7 @@
         /^www\.uimgshare\.com$/,
         /^(www\.)?imgsee\.me$/,
         /^(imgclick|pics4you)\.net$/,
-        /^(imgstar)\.eu$/,
+        /^imgstar\.eu$/,
       ],
       path: PATH_RULE,
     },
