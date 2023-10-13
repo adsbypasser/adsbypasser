@@ -158,10 +158,6 @@
     * imgz.pw
     * picfox.org
     * pixsor.com
-* imgdino
-    * imgdino.com
-    * imgtiger.com
-    * imgzap.com
 * abload
     * abload.de
     * fastpic.org
@@ -233,15 +229,9 @@
     * imgfantasy.com
     * imgnemo.com
     * imgsay.com
-* imgbabes
-    * imgbabes.com
-    * imgflare.com
 * 2i.cz
     * 2i.cz
     * 2i.sk
-* pic4you.ru
-    * pic4you.ru
-    * pic5you.ru
 * easyurl.net
     * atu.ca
     * clickthru.ca
@@ -265,9 +255,6 @@
 * seomafia.net
     * apploadz.ru
     * seomafia.net
-* all-poster.ru
-    * all-poster.ru
-    * bunnyforum.org
 * imgsee.me
     * fotokiz.com
     * hulkimge.com
@@ -1138,11 +1125,9 @@
     * fotolink.su
     * fotosik.pl
     * freeimgup.com
-    * funkyimg.com
     * gamemod.pro
     * get.ujv.al
     * gkurl.us
-    * goimagehost.com
     * goto.loncat.in
     * gsmzone.site
     * gunting.web.id
@@ -1153,7 +1138,6 @@
     * ifotos.pl
     * iiv.pl
     * ima.so
-    * imadul.com
     * image2you.ru
     * imagebam.com
     * imageban.net
@@ -1165,7 +1149,6 @@
     * imageshost.ru
     * imagetwist.netlify.app
     * imageupper.com
-    * imagezilla.net
     * img.3ezy.net
     * img.javstore.net
     * img1.imagilive.com
@@ -1174,8 +1157,6 @@
     * imgbox.com
     * imgcarry.com
     * imgdollar.com
-    * imgmass.com
-    * imgvault.pw
     * indishare.me
     * indishare.org
     * insurance-waifu.cf
@@ -1185,7 +1166,6 @@
     * javball.com
     * javlibrary.com
     * javtenshi.com
-    * javtor.com
     * jheberg.net
     * k2nblog.com
     * keptarolo.hu
@@ -1235,7 +1215,6 @@
     * picnew.space
     * picnictrans.com
     * picpic.online
-    * picshare.geenza.com
     * picstream.tv
     * pic-upload.de
     * pig69.com
@@ -1249,7 +1228,6 @@
     * pucuk.xyz
     * putlocker.com
     * qrrro.com
-    * radikal.ru
     * realsht.mobi
     * richlink.com
     * ron.vn
@@ -1269,7 +1247,6 @@
     * spaste.com
     * st.wardhanime.net
     * sub2unlock.com
-    * subirimagenes.com
     * supercheats.com
     * surfsees.com
     * swzz.xyz
