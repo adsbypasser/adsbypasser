@@ -67,7 +67,7 @@
         /^(click2url|ln435|merdekaid)\.online$/,
         /^(www\.)?bloggerworld\.online$/,
         // org
-        /^(lotechnocan|updatetribun|templink|ez4link|shortearn|adbull|oneurls|adsrt|freebcc)\.org$/,
+        /^(lotechnocan|updatetribun|templink|ez4link|shortearn|adbull|oneurls|adsrt)\.org$/,
         /^voxc\.org$/,
         // pw
         /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs|miniurl)\.pw$/,
