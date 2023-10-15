@@ -13,8 +13,11 @@
     * goimagehost.com
     * imadul.com
     * imagezilla.net
+    * imgdino.com
     * imgmass.com
+    * imgtiger.com
     * imgvault.pw
+    * imgzap.com
     * javtor.com
     * picshare.geenza.com
     * radikal.ru
