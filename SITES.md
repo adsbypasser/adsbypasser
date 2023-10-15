@@ -890,7 +890,6 @@
     * tiny.ec
     * tinylink.run
     * tinylinks.net
-    * tinyurl.is
     * tips.atv.pw
     * tl.tc
     * tmearn.com
