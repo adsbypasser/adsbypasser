@@ -9,6 +9,16 @@
     * pig69.com
 * retired
     * freebcc.org
+    * funkyimg.com
+    * goimagehost.com
+    * imadul.com
+    * imagezilla.net
+    * imgmass.com
+    * imgvault.pw
+    * javtor.com
+    * picshare.geenza.com
+    * radikal.ru
+    * subirimagenes.com
 
 
 ## v7.22.0
