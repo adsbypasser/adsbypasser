@@ -158,10 +158,6 @@
     * imgz.pw
     * picfox.org
     * pixsor.com
-* imgdino
-    * imgdino.com
-    * imgtiger.com
-    * imgzap.com
 * abload
     * abload.de
     * fastpic.org
