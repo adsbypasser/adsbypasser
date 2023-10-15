@@ -841,8 +841,6 @@
     * shrtit.tech
     * simaholina.xyz
     * skip.az
-    * sk-ip.ru
-    * sk-ip.tech
     * skips.link
     * skipurls.com
     * slegle.com
