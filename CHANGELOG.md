@@ -13,7 +13,9 @@
     * goimagehost.com
     * imadul.com
     * imagezilla.net
+    * imgbabes.com
     * imgdino.com
+    * imgflare.com
     * imgmass.com
     * imgtiger.com
     * imgvault.pw
