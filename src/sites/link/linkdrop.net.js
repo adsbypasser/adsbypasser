@@ -120,7 +120,6 @@
         /^123link\.(pw|vip)$/,
         /^royalown\.review$/,
         /^earn\.theplusit\.ro$/,
-        /^sk-ip\.(ru|tech)$/,
         /^tinylink\.run$/,
         /^(oko|aii|shorten)\.sh$/,
         /^(dutchycorp|abouttech)\.space$/,
