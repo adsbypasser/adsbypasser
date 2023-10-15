@@ -19,6 +19,7 @@
     * picshare.geenza.com
     * radikal.ru
     * subirimagenes.com
+    * tinyurl.is
 
 
 ## v7.22.0
