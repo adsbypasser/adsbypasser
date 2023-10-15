@@ -229,9 +229,6 @@
     * imgfantasy.com
     * imgnemo.com
     * imgsay.com
-* imgbabes
-    * imgbabes.com
-    * imgflare.com
 * 2i.cz
     * 2i.cz
     * 2i.sk
