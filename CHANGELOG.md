@@ -7,6 +7,8 @@
     * javball.com
     * javtenshi.com
     * pig69.com
+* retired
+    * freebcc.org
 
 
 ## v7.22.0
