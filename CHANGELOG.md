@@ -23,6 +23,8 @@
     * javtor.com
     * picshare.geenza.com
     * radikal.ru
+    * sk-ip.ru
+    * sk-ip.tech
     * subirimagenes.com
     * tinyurl.is
 
