@@ -91,7 +91,6 @@
         /^(icutit|earnbig|cutearn)\.ca$/,
         /^e2s\.cc$/,
         /^(adzurl|link2link)\.cf$/,
-        /^(mlink|cl250|xpickle|infosehatku)\.club$/,
         /^(3bst|coinlink|itiurl|coshink|link5s|curs|makeurl|mooddisorder|cutls)\.co$/,
         /^bestscholaeshipdegree\.date$/,
         /^click2see\.desi$/,
