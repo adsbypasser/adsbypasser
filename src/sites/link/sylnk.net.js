@@ -184,7 +184,6 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^(gameinfo|apasih|autoride)\.pw$/,
       /^(www\.)?lifesurance\.info$/,
       /^speedcar\.club$/,
       /^(www\.)?bolaoke\.club$/,
@@ -296,7 +295,6 @@ _.register({
   rule: {
     host: [
       /^(linkach|technlab)\.com$/,
-      /^(apasih|autoride)\.pw$/,
     ],
   },
   async ready () {
