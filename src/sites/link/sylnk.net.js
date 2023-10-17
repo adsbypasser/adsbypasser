@@ -193,7 +193,6 @@ _.register({
       /^skyinsurance\.ml$/,
       /^(getinfos|sehatsegar|lonelymoon)\.net$/,
       /^stt\.awsubs\.co$/,
-      /^(wibuindo|naturalhealthy)\.xyz$/,
       /^waifusafe\.ooo$/,
     ],
     query: /^\?(id|c|k)=([a-zA-Z0-9/=]+)$/,
