@@ -120,7 +120,6 @@
         /^royalown\.review$/,
         /^earn\.theplusit\.ro$/,
         /^tinylink\.run$/,
-        /^(oko|aii|shorten)\.sh$/,
         /^buyitonline\.store$/,
         /^eatings\.stream$/,
         /^tl\.tc$/,
