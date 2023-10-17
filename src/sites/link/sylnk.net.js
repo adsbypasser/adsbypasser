@@ -482,8 +482,6 @@ _.register({
       // info
       /^(www\.)?anjay\.info$/,
       /^(www\.)?tetew\.info$/,
-      // else
-      /^www\.njiir\.com$/,
     ],
   },
   async ready () {
