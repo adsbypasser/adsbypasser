@@ -122,7 +122,6 @@
         /^earn\.theplusit\.ro$/,
         /^tinylink\.run$/,
         /^(oko|aii|shorten)\.sh$/,
-        /^(dutchycorp|abouttech)\.space$/,
         /^buyitonline\.store$/,
         /^eatings\.stream$/,
         /^tl\.tc$/,
