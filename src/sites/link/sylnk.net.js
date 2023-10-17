@@ -226,7 +226,6 @@ _.register({
         /^(www\.)?bolaoke\.club$/,
         // else
         /^(ani-share|autolinkach)\.com$/,
-        /^(autofans|landscapenature)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
       ],
       query: /get=([^&]+)/,
