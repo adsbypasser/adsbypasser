@@ -169,7 +169,6 @@
         /^zutrox\.link$/,
         /^(techcraze|healthinsider)\.online$/,
         /^cutwin\.(us|com)$/,
-        /^(www\.)?shrink\.vip$/,
       ],
     },
     async ready () {
