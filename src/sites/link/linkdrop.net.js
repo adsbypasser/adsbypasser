@@ -123,6 +123,7 @@
         /^sk-ip\.(ru|tech)$/,
         /^tinylink\.run$/,
         /^(oko|aii|shorten)\.sh$/,
+        /^tii\.la$/,
         /^(dutchycorp|abouttech)\.space$/,
         /^buyitonline\.store$/,
         /^eatings\.stream$/,
