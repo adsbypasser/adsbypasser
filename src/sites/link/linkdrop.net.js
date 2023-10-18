@@ -125,7 +125,6 @@
         /^tl\.tc$/,
         /^(1921681254|geki|wegner|gpshort)\.tech$/,
         /^(linkvip|4short)\.tk$/,
-        /^(www\.)?pnd\.tl$/,
         /^(urlcloud|imageoptimizer)\.us$/,
         /^(koylinks|buy-in-599rs)\.win$/,
         /^exe\.(io|app)$/,
