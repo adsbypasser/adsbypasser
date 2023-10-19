@@ -1119,7 +1119,6 @@
     * durl.me
     * earnlink.io
     * elsfile.org
-    * embedupload.com
     * filemedia.net
     * filoops.info
     * flylink.io
@@ -1181,7 +1180,6 @@
     * link.tl
     * link4ad.com
     * linkdecode.com
-    * linkduit.net
     * linkplugapp.com
     * linksas.us
     * linksupto.com
