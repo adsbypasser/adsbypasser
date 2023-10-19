@@ -473,7 +473,6 @@
     * 8o.ee
     * a-egy.com
     * a5barfawria.com
-    * abouttech.space
     * ac-mo.com
     * adbilty.me
     * adbitly.in
@@ -500,7 +499,6 @@
     * advancedautorepairtips.me
     * adzurl.cf
     * agradarpan.com
-    * aii.sh
     * akla4.com
     * al3amall.com
     * allapp.xyz
@@ -539,7 +537,6 @@
     * cepmuzikindir.me
     * chrt.pw
     * ckk.ai
-    * cl250.club
     * click2see.desi
     * click2-url.com
     * click2url.online
@@ -601,7 +598,6 @@
     * dmus.in
     * downloaddoom.com
     * dunyanews.xyz
-    * dutchycorp.space
     * dz4invest.com
     * dz4link.com
     * dzurl.ml
@@ -678,7 +674,6 @@
     * ilinkshortx.com
     * illink.net
     * imageoptimizer.us
-    * infosehatku.club
     * infosia.xyz
     * infotaxco.com
     * infotrendy.me
@@ -750,7 +745,6 @@
     * mikymoons.com
     * miniurl.pw
     * mitly.us
-    * mlink.club
     * mooddisorder.co
     * mrfourtech.com
     * muhammadyoga.me
@@ -763,7 +757,6 @@
     * niagoshort.com
     * nikkarr.com
     * oke.io
-    * oko.sh
     * ommantrameditation.com
     * onaah.com
     * oneurls.org
@@ -780,7 +773,6 @@
     * petty.link
     * pingit.im
     * pinkhindi.com
-    * pnd.tl
     * premiumzen.com
     * profitstudy.xyz
     * programsfre.com
@@ -812,7 +804,6 @@
     * shortearn.eu
     * shortearn.org
     * shorted.id
-    * shorten.sh
     * shortglobal.com
     * shortit.ca
     * shortlinko.com
@@ -820,7 +811,6 @@
     * shortye.net
     * shortzon.com
     * shotly.io
-    * shrink.vip
     * shrinkbuck.com
     * shrinkearn.com
     * shrinke.me
@@ -926,7 +916,6 @@
     * w-rajem.com
     * wrap-w0rld.com
     * xemlink.net
-    * xpickle.club
     * xz2.xyz
     * yasinews.xyz
     * yesmoviesapp.info
