@@ -10,12 +10,17 @@
 * retired
     * abouttech.space
     * aii.sh
+    * allanalpass.com
     * apasih.pw
     * autofans.pw
     * autoride.pw
     * cl250.club
+    * drstickyfingers.com
     * dutchycorp.space
+    * dwrfslsqpdfqfwy.net
     * embedupload.com
+    * filesonthe.net
+    * freean.us
     * freebcc.org
     * funextra.hostzi.com
     * funkyimg.com
@@ -38,23 +43,38 @@
     * infosehatku.club
     * javtor.com
     * landscapenature.pw
+    * linkbabes.com
+    * linkbucks.com
     * linkduit.net
+    * miniurls.co
     * mlink.club
     * naturalhealthy.xyz
     * njiir.com
     * oko.sh
     * picshare.geenza.com
     * pnd.tl
+    * poontown.net
+    * qqc.co
     * radikal.ru
+    * rhvgmritmziwcm.net
+    * rqq.co
+    * seriousdeals.net
     * shorten.sh
     * shrink.vip
     * sk-ip.ru
     * sk-ip.tech
     * subirimagenes.com
+    * theseblogs.com
+    * tinylinks.co
     * tinyurl.is
+    * urlbeat.net
+    * whackyvidz.com
     * wibuindo.xyz
     * xpickle.club
     * xxxhost.me
+    * youfap.me
+    * yyv.co
+    * zatnawqy.net
 
 
 ## v7.22.0
