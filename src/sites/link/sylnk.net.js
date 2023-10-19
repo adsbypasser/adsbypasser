@@ -184,7 +184,6 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^(gameinfo|apasih|autoride)\.pw$/,
       /^(www\.)?lifesurance\.info$/,
       /^speedcar\.club$/,
       /^(www\.)?bolaoke\.club$/,
@@ -193,7 +192,6 @@ _.register({
       /^skyinsurance\.ml$/,
       /^(getinfos|sehatsegar|lonelymoon)\.net$/,
       /^stt\.awsubs\.co$/,
-      /^(wibuindo|naturalhealthy)\.xyz$/,
       /^waifusafe\.ooo$/,
     ],
     query: /^\?(id|c|k)=([a-zA-Z0-9/=]+)$/,
@@ -226,7 +224,6 @@ _.register({
         /^(www\.)?bolaoke\.club$/,
         // else
         /^(ani-share|autolinkach)\.com$/,
-        /^(autofans|landscapenature)\.pw$/,
         /^(www\.)?lifesurance\.info$/,
       ],
       query: /get=([^&]+)/,
@@ -298,7 +295,6 @@ _.register({
   rule: {
     host: [
       /^(linkach|technlab)\.com$/,
-      /^(apasih|autoride)\.pw$/,
     ],
   },
   async ready () {
@@ -482,8 +478,6 @@ _.register({
       // info
       /^(www\.)?anjay\.info$/,
       /^(www\.)?tetew\.info$/,
-      // else
-      /^www\.njiir\.com$/,
     ],
   },
   async ready () {
