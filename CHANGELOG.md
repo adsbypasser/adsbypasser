@@ -8,6 +8,7 @@
     * javtenshi.com
     * pig69.com
 * retired
+    * embedupload.com
     * freebcc.org
     * funkyimg.com
     * goimagehost.com
@@ -21,6 +22,7 @@
     * imgvault.pw
     * imgzap.com
     * javtor.com
+    * linkduit.net
     * picshare.geenza.com
     * radikal.ru
     * sk-ip.ru
