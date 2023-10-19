@@ -8,9 +8,13 @@
     * javtenshi.com
     * pig69.com
 * retired
+    * apasih.pw
+    * autofans.pw
+    * autoride.pw
     * embedupload.com
     * freebcc.org
     * funkyimg.com
+    * gameinfo.pw
     * goimagehost.com
     * imadul.com
     * imagezilla.net
@@ -22,13 +26,17 @@
     * imgvault.pw
     * imgzap.com
     * javtor.com
+    * landscapenature.pw
     * linkduit.net
+    * naturalhealthy.xyz
+    * njiir.com
     * picshare.geenza.com
     * radikal.ru
     * sk-ip.ru
     * sk-ip.tech
     * subirimagenes.com
     * tinyurl.is
+    * wibuindo.xyz
 
 
 ## v7.22.0
