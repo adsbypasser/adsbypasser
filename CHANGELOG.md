@@ -17,15 +17,21 @@
     * dutchycorp.space
     * embedupload.com
     * freebcc.org
+    * funextra.hostzi.com
     * funkyimg.com
     * gameinfo.pw
     * goimagehost.com
     * imadul.com
+    * imagecurl.com
+    * imagecurl.org
     * imagezilla.net
     * imgbabes.com
+    * imgcentral.com
     * imgdino.com
     * imgflare.com
     * imgmass.com
+    * imgnip.com
+    * imgsin.com
     * imgtiger.com
     * imgvault.pw
     * imgzap.com
@@ -48,6 +54,7 @@
     * tinyurl.is
     * wibuindo.xyz
     * xpickle.club
+    * xxxhost.me
 
 
 ## v7.22.0
