@@ -309,10 +309,7 @@
     * animeforce.stream
     * ani-share.com
     * anjay.info
-    * apasih.pw
-    * autofans.pw
     * autolinkach.com
-    * autoride.pw
     * awcar.icu
     * awsubsco.ml
     * azhie.net
@@ -337,7 +334,6 @@
     * edogawa.lon.pw
     * filmku.lompat.in
     * fmlawkers.club
-    * gameinfo.pw
     * get-click2.blogspot.com
     * getinfos.net
     * giga74.com
@@ -360,7 +356,6 @@
     * kurosafe.online
     * kurosafe.website
     * kurosafety.menantisenja.com
-    * landscapenature.pw
     * lewat.in
     * lewat.wibuindo.com
     * lifesurance.info
@@ -374,9 +369,7 @@
     * motonews.club
     * motosport.pw
     * naisho.lompat.in
-    * naturalhealthy.xyz
     * nekopoi.ga
-    * njiir.com
     * nooyul.co
     * omglyrics.com
     * omgmusik.com
@@ -421,7 +414,6 @@
     * url.hulblog.com
     * vehicle-techno.cf
     * waifusafe.ooo
-    * wibuindo.xyz
     * ww2.awsubs.co
     * yametesenpai.xyz
     * yumechan.club
