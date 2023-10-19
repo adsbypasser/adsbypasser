@@ -8,9 +8,13 @@
     * javtenshi.com
     * pig69.com
 * retired
+    * abouttech.space
+    * aii.sh
     * apasih.pw
     * autofans.pw
     * autoride.pw
+    * cl250.club
+    * dutchycorp.space
     * embedupload.com
     * freebcc.org
     * funkyimg.com
@@ -25,18 +29,25 @@
     * imgtiger.com
     * imgvault.pw
     * imgzap.com
+    * infosehatku.club
     * javtor.com
     * landscapenature.pw
     * linkduit.net
+    * mlink.club
     * naturalhealthy.xyz
     * njiir.com
+    * oko.sh
     * picshare.geenza.com
+    * pnd.tl
     * radikal.ru
+    * shorten.sh
+    * shrink.vip
     * sk-ip.ru
     * sk-ip.tech
     * subirimagenes.com
     * tinyurl.is
     * wibuindo.xyz
+    * xpickle.club
 
 
 ## v7.22.0
