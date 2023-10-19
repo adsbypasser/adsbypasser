@@ -23,17 +23,10 @@
     * zatnawqy.net
 * Mihalism Multi Host
     * foto-pic.net
-    * funextra.hostzi.com
-    * imagecurl.com
-    * imagecurl.org
-    * imgcentral.com
-    * imgnip.com
-    * imgsin.com
     * miragepics.com
     * nixhelp.de
     * overpic.net
     * pacific.picturedent.org
-    * xxxhost.me
 * reklama
     * 22pixx.xyz
     * acidimg.cc
