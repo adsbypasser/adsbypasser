@@ -1,26 +1,5 @@
 * adf.ly
     * (universally handled)
-* linkbucks
-    * allanalpass.com
-    * drstickyfingers.com
-    * dwrfslsqpdfqfwy.net
-    * filesonthe.net
-    * freean.us
-    * linkbabes.com
-    * linkbucks.com
-    * miniurls.co
-    * poontown.net
-    * qqc.co
-    * rhvgmritmziwcm.net
-    * rqq.co
-    * seriousdeals.net
-    * theseblogs.com
-    * tinylinks.co
-    * urlbeat.net
-    * whackyvidz.com
-    * youfap.me
-    * yyv.co
-    * zatnawqy.net
 * Mihalism Multi Host
     * foto-pic.net
     * miragepics.com
