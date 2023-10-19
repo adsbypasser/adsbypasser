@@ -111,25 +111,7 @@
     * xxxwebdlxxx.org
     * xxxwebdlxxx.top
 * imageporter
-    * imagecarry.com
-    * imagedunk.com
-    * imageporter.com
-    * imageswitch.com
     * imgspice.com
-    * piclambo.net
-    * picleet.com
-    * picturedip.com
-    * pictureturn.com
-    * yankoimages.net
-* picfox
-    * amateurfreak.org
-    * euro-pic.eu
-    * freeimage.us
-    * holdthemoan.net
-    * imguur.pictures
-    * imgz.pw
-    * picfox.org
-    * pixsor.com
 * abload
     * abload.de
     * fastpic.org
@@ -145,12 +127,6 @@
     * xafox.com
     * ysear.ch
     * zpoz.net
-* coinurl
-    * coinurl.com
-    * cur.lv
-* lnkco
-    * lnk.co
-    * rdlnk.co
 * urlcash
     * bat5.com
     * celebclk.com
