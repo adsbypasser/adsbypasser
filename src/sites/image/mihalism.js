@@ -5,9 +5,7 @@
     rule: {
       host: [
         /^miragepics\.com$/,
-        /^funextra\.hostzi\.com$/,
         /^bilder\.nixhelp\.de$/,
-        /^imagecurl\.(com|org)$/,
         /^foto-pic\.net$/,
       ],
       path: /^\/viewer\.php$/,
@@ -18,18 +16,7 @@
 
   _.register({
     rule: {
-      host: /^imgsin\.com$/,
-      path: /^\/viewer\.php$/,
-      query: /file=([^&]+)/,
-    },
-    async start (m) {
-      await $.openImage('/files/' + m.query[1]);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^(imgnip|imgcentral|imgcream)\.com$/,
+      host: /^imgcream\.com$/,
       path: /^\/viewerr.*\.php$/,
       query: /file=([^&]+)/,
     },
@@ -54,17 +41,6 @@
     async ready () {
       const i = $('#full_img');
       await $.openImage(i.src);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^xxxhost\.me$/,
-      path: /^\/viewer\d+\.php$/,
-      query: /file=([^&]+)/,
-    },
-    async start (m) {
-      await $.openImage('files/' + m.query[1]);
     },
   });
 
