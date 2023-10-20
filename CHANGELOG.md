@@ -10,6 +10,7 @@
 * retired
     * abouttech.space
     * aii.sh
+    * akoam.net
     * allanalpass.com
     * amateurfreak.org
     * apasih.pw
@@ -17,12 +18,16 @@
     * autoride.pw
     * cl250.club
     * coinurl.com
+    * coolrom.com
     * cur.lv
+    * dl-protect.com
     * drstickyfingers.com
     * dutchycorp.space
     * dwrfslsqpdfqfwy.net
+    * elsfile.org
     * embedupload.com
     * euro-pic.eu
+    * fileproject.com.br
     * filesonthe.net
     * freean.us
     * freebcc.org
@@ -53,7 +58,9 @@
     * imgz.pw
     * imgzap.com
     * infosehatku.club
+    * insurance-waifu.cf
     * javtor.com
+    * jheberg.net
     * landscapenature.pw
     * linkbabes.com
     * linkbucks.com
@@ -61,6 +68,9 @@
     * lnk.co
     * miniurls.co
     * mlink.club
+    * multifilemirror.com
+    * multiupfile.com
+    * mylinkgen.com
     * naturalhealthy.xyz
     * njiir.com
     * oko.sh
@@ -74,6 +84,7 @@
     * pixsor.com
     * pnd.tl
     * poontown.net
+    * putlocker.com
     * qqc.co
     * radikal.ru
     * rdlnk.co
@@ -88,7 +99,9 @@
     * theseblogs.com
     * tinylinks.co
     * tinyurl.is
+    * upmirror.info
     * urlbeat.net
+    * vidto.me
     * whackyvidz.com
     * wibuindo.xyz
     * xpickle.club
@@ -97,6 +110,8 @@
     * youfap.me
     * yyv.co
     * zatnawqy.net
+    * zeefiles.download
+    * zupload.me
 
 
 ## v7.22.0
