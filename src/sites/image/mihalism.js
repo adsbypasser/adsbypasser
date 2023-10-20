@@ -23,17 +23,6 @@
     start: helper,
   });
 
-  // overpic.net
-  _.register({
-    rule: [
-      'http://www.overpic.net/viewer.php?file=*',
-    ],
-    async ready () {
-      const i = $('#main_img');
-      await $.openImage(i.src);
-    },
-  });
-
   _.register({
     rule: [
       'https://pacific.picturedent.org/image/*',
