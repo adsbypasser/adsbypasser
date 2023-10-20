@@ -4,7 +4,6 @@
     * foto-pic.net
     * miragepics.com
     * nixhelp.de
-    * overpic.net
     * pacific.picturedent.org
 * reklama
     * 22pixx.xyz
