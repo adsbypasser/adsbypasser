@@ -1002,7 +1002,6 @@
     * 1v.to
     * 3xplanet.com
     * 3xplanet.net
-    * 3zfile.net
     * 46.166.167.16
     * 4fun.tw
     * ad2links.com
@@ -1015,8 +1014,6 @@
     * aka.gr
     * apkmodif.com
     * bayimg.com
-    * bdupload.asia
-    * bdupload.info
     * beeimg.com
     * biglistofwebsites.com
     * bild.me
@@ -1082,7 +1079,6 @@
     * imgbox.com
     * imgcarry.com
     * imgdollar.com
-    * indishare.me
     * indishare.org
     * ipic.su
     * itw.me
@@ -1180,7 +1176,6 @@
     * ujv.al
     * ulmt.in
     * unfake.it
-    * upgrand.site
     * uplinkto.me
     * uploadhaven.com
     * uploadrar.com
