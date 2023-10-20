@@ -8,6 +8,7 @@
     * javtenshi.com
     * pig69.com
 * retired
+    * 3zfile.net
     * abouttech.space
     * aii.sh
     * akoam.net
@@ -16,6 +17,8 @@
     * apasih.pw
     * autofans.pw
     * autoride.pw
+    * bdupload.asia
+    * bdupload.info
     * cl250.club
     * coinurl.com
     * coolrom.com
@@ -57,6 +60,7 @@
     * imgvault.pw
     * imgz.pw
     * imgzap.com
+    * indishare.me
     * infosehatku.club
     * insurance-waifu.cf
     * javtor.com
@@ -99,6 +103,7 @@
     * theseblogs.com
     * tinylinks.co
     * tinyurl.is
+    * upgrand.site
     * upmirror.info
     * urlbeat.net
     * vidto.me
