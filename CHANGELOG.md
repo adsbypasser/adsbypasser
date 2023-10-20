@@ -40,6 +40,7 @@
     * embedupload.com
     * erimge.com
     * euro-pic.eu
+    * fastpic.ru
     * fileproject.com.br
     * filesonthe.net
     * freean.us
