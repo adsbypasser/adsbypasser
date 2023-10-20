@@ -8,105 +8,20 @@
 * reklama
     * 22pixx.xyz
     * acidimg.cc
-    * ads-img.info
-    * cubonaw.ml
-    * dalezobux.xyz
-    * damimage.com
-    * darpix.ga
-    * dimtus.com
-    * domaink.ru
-    * ecoimages.xyz
-    * erimge.com
-    * funimg.net
-    * gallerycloud.net
-    * greasyimage.com
-    * hdmoza.com
-    * hentai-pop.com
-    * hosturimage.com
-    * hotimage.uk
-    * hotimages.eu
-    * ima.gy
-    * imageblinks.com
-    * imagecorn.com
-    * imagedecode.com
-    * imageko.com
-    * imageon.org
-    * imagerar.com
-    * imageraven.com
-    * imagescanner.cc
-    * imageshtorm.com
-    * imagespublic.tk
-    * imageteam.org
-    * img2share.com
     * imgadult.com
-    * imgbalana.com
-    * imgcloud.co
     * imgcloud.pw
     * imgdawgknuttz.com
     * imgdrive.net
-    * imgfapper.com
-    * imgfresh.info
     * imghit.com
-    * imghost.top (variation)
-    * imgicy.com
-    * imgixxx.com
-    * imgjazz.com
-    * imgkicks.com
     * imgking.co
     * imgkings.com
-    * imglemon.com
-    * imgmain.com
-    * imgpart.com
-    * img-pay.com
-    * imgpix.net
-    * img-planet.com
     * imgprime.com
-    * imgproject.net
-    * imgpython.net
-    * imgrat.com
-    * imgreputa.com
-    * imgsavvy.com
-    * imgseed.com
-    * imgseeds.com
-    * imgserve.net
-    * imgspot.org
-    * imgstudio.org
     * imgtaxi.com
-    * imgtornado.com
-    * imgtrial.com
-    * imgtzar.com
-    * img-view.net
     * imgwallet.com
     * imx.to
-    * ipicture.su
-    * megaimage.org
-    * multiimg.com
-    * naughtygate.net
-    * nimzshare.com
-    * pic.hotimg.site
-    * picmoza.com
     * picstate.com
     * picz.site
     * pilot007.org
-    * pixup.us
-    * pop-img.info
-    * porno-pirat.ru
-    * pornyfap.com
-    * pspic.org
-    * star-hentai.com
-    * teenimage.org
-    * teenshot.org
-    * tinizo.com
-    * trueimg.xyz
-    * underpic.club
-    * unporn.site
-    * uvonahaze.xyz
-    * voyeurimage.org
-    * wpc8.com
-    * xximg.net
-    * xxx.pornscreen.xyz
-    * xxx.sexex.xyz
-    * xxxscreens.com
     * xxxwebdlxxx.org
     * xxxwebdlxxx.top
 * imageporter
