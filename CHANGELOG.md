@@ -11,6 +11,7 @@
 * retired
     * 3zfile.net
     * abouttech.space
+    * ads-img.info
     * aii.sh
     * akoam.net
     * allanalpass.com
@@ -23,13 +24,21 @@
     * cl250.club
     * coinurl.com
     * coolrom.com
+    * cubonaw.ml
     * cur.lv
+    * dalezobux.xyz
+    * damimage.com
+    * darpix.ga
+    * dimtus.com
     * dl-protect.com
+    * domaink.ru
     * drstickyfingers.com
     * dutchycorp.space
     * dwrfslsqpdfqfwy.net
+    * ecoimages.xyz
     * elsfile.org
     * embedupload.com
+    * erimge.com
     * euro-pic.eu
     * fileproject.com.br
     * filesonthe.net
@@ -37,33 +46,82 @@
     * freebcc.org
     * freeimage.us
     * funextra.hostzi.com
+    * funimg.net
     * funkyimg.com
+    * gallerycloud.net
     * gameinfo.pw
     * goimagehost.com
+    * greasyimage.com
+    * hdmoza.com
+    * hentai-pop.com
     * holdthemoan.net
+    * hosturimage.com
+    * hotimage.uk
+    * hotimages.eu
+    * ima.gy
     * imadul.com
+    * imageblinks.com
     * imagecarry.com
+    * imagecorn.com
     * imagecurl.com
     * imagecurl.org
+    * imagedecode.com
     * imagedunk.com
+    * imageko.com
+    * imageon.org
     * imageporter.com
+    * imagerar.com
+    * imageraven.com
+    * imagescanner.cc
+    * imageshtorm.com
+    * imagespublic.tk
     * imageswitch.com
+    * imageteam.org
     * imagezilla.net
+    * img2share.com
     * imgbabes.com
+    * imgbalana.com
     * imgcentral.com
+    * imgcloud.co
     * imgdino.com
+    * imgfapper.com
     * imgflare.com
+    * imgfresh.info
+    * imgicy.com
+    * imgixxx.com
+    * imgjazz.com
+    * imgkicks.com
+    * imglemon.com
+    * imgmain.com
     * imgmass.com
     * imgnip.com
+    * imgpart.com
+    * img-pay.com
+    * imgpix.net
+    * img-planet.com
+    * imgproject.net
+    * imgpython.net
+    * imgrat.com
+    * imgreputa.com
+    * imgsavvy.com
+    * imgseeds.com
+    * imgserve.net
     * imgsin.com
+    * imgspot.org
+    * imgstudio.org
     * imgtiger.com
+    * imgtornado.com
+    * imgtrial.com
+    * imgtzar.com
     * imguur.pictures
     * imgvault.pw
+    * img-view.net
     * imgz.pw
     * imgzap.com
     * indishare.me
     * infosehatku.club
     * insurance-waifu.cf
+    * ipicture.su
     * javtor.com
     * jheberg.net
     * landscapenature.pw
@@ -71,47 +129,73 @@
     * linkbucks.com
     * linkduit.net
     * lnk.co
+    * megaimage.org
     * miniurls.co
     * mlink.club
     * multifilemirror.com
+    * multiimg.com
     * multiupfile.com
     * mylinkgen.com
     * naturalhealthy.xyz
+    * naughtygate.net
+    * nimzshare.com
     * njiir.com
     * oko.sh
     * overpic.net
+    * pic.hotimg.site
     * picfox.org
-    * picshare.geenza.com
     * piclambo.net
     * picleet.com
+    * picmoza.com
+    * picshare.geenza.com
     * picturedip.com
     * pictureturn.com
     * pixsor.com
+    * pixup.us
     * pnd.tl
     * poontown.net
+    * pop-img.info
+    * porno-pirat.ru
+    * pornyfap.com
+    * pspic.org
     * putlocker.com
     * qqc.co
     * radikal.ru
     * rdlnk.co
     * rhvgmritmziwcm.net
     * rqq.co
+    * s.imghost.top
     * seriousdeals.net
     * shorten.sh
     * shrink.vip
     * sk-ip.ru
     * sk-ip.tech
+    * star-hentai.com
     * subirimagenes.com
+    * teenimage.org
+    * teenshot.org
     * theseblogs.com
+    * tinizo.com
     * tinylinks.co
     * tinyurl.is
+    * trueimg.xyz
+    * underpic.club
+    * unporn.site
     * upgrand.site
     * upmirror.info
     * urlbeat.net
+    * uvonahaze.xyz
     * vidto.me
+    * voyeurimage.org
     * whackyvidz.com
     * wibuindo.xyz
+    * wpc8.com
     * xpickle.club
+    * xximg.net
+    * xxx.pornscreen.xyz
+    * xxx.sexex.xyz
     * xxxhost.me
+    * xxxscreens.com
     * yankoimages.net
     * youfap.me
     * yyv.co
