@@ -4,6 +4,7 @@
     * imgair.net
 * added
     * 3xplanet.net
+    * img.trafficimage.club
     * javball.com
     * javtenshi.com
     * pig69.com
