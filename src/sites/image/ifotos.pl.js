@@ -1,8 +1,6 @@
 _.register({
   rule: [
     'http://ifotos.pl/zobacz/*',
-    'https://postimg.cc/*',
-    'https://pixxxels.cc/*',
     'https://img.javstore.net/image/*',
     'https://picnew.space/image/*',
     'https://pig69.com/*',
