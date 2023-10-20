@@ -1073,6 +1073,7 @@
     * imageupper.com
     * img.3ezy.net
     * img.javstore.net
+    * img.trafficimage.club
     * img1.imagilive.com
     * imgazure.com
     * imgbar.net
