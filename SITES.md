@@ -1013,7 +1013,6 @@
     * ah.pe
     * ah-informatique.com
     * aka.gr
-    * akoam.net
     * apkmodif.com
     * bayimg.com
     * bdupload.asia
@@ -1034,7 +1033,6 @@
     * cocoleech.com
     * coinlink.co
     * comyonet.com
-    * coolrom.com
     * crockolinks.com
     * cubeupload.com
     * dailyimages.xyz
@@ -1042,11 +1040,9 @@
     * depic.me
     * direct-link.net
     * directupload.net
-    * dl-protect.com
     * drlink.online
     * durl.me
     * earnlink.io
-    * elsfile.org
     * filemedia.net
     * filoops.info
     * flylink.io
@@ -1088,14 +1084,12 @@
     * imgdollar.com
     * indishare.me
     * indishare.org
-    * insurance-waifu.cf
     * ipic.su
     * itw.me
     * ity.im
     * javball.com
     * javlibrary.com
     * javtenshi.com
-    * jheberg.net
     * k2nblog.com
     * keptarolo.hu
     * kimochi.info
@@ -1123,9 +1117,7 @@
     * mirrorfilehost.com
     * moesubs.com
     * mrjh.org
-    * multifilemirror.com
     * my-link.pro
-    * mylinkgen.com
     * namiyt.com
     * nmac.to
     * noelshack.com
@@ -1154,7 +1146,6 @@
     * preview.rlu.ru
     * pronpic.org
     * pucuk.xyz
-    * putlocker.com
     * qrrro.com
     * realsht.mobi
     * richlink.com
@@ -1193,7 +1184,6 @@
     * uplinkto.me
     * uploadhaven.com
     * uploadrar.com
-    * upmirror.info
     * url.fm
     * url.ie
     * urlgator.com
@@ -1204,7 +1194,6 @@
     * ux9.de
     * vavi.co
     * vcrypt.net
-    * vidto.me
     * viidii.info
     * vir.al
     * vzturl.com
@@ -1214,5 +1203,3 @@
     * xxx.fopkodiak.site
     * yep.it
     * yooclick.com
-    * zeefiles.download
-    * zupload.me
