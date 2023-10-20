@@ -7,114 +7,26 @@
       {
         host: [
           // com
-          /^(imagecorn|imagedecode|imageko|imageshtorm|imageraven)\.com$/,
-          /^(imgicy|imgsavvy|imgtzar|imgtornado|imgkicks|img2share)\.com$/,
-          /^(imgtrial|imgreputa|imgfapper|imgpart|imgbalana|imgjazz)\.com$/,
-          /^(hosturimage|greasyimage|damimage|xxxscreens|wpc8|dimtus)\.com$/,
-          /^(imgixxx|imghit|imgmain|img-planet|img-pay)\.com$/,
-          /^(tinizo|erimge|nimzshare|hdmoza|imgdawgknuttz)\.com$/,
-          /^(www\.)?(imglemon|imageblinks|multiimg)\.com$/,
+          /^imghit\.com$/,
+          /^imgdawgknuttz\.com$/,
           /^(i|xxx)\.hentaiyoutube\.com$/,
-          /^(i\.)?imgseeds?\.com$/,
           // eu
-          /^hotimages\.eu$/,
           /(^|\.)55888\.eu$/,
-          // net
-          /^(imgserve|imgproject|imgpython|imgpix|naughtygate|gallerycloud|xximg|img-view)\.net$/,
-          // org
-          /^(teenshot|imageon|imageteam|voyeurimage|teenimage|megaimage)\.org$/,
-          /^(imgstudio|imgspot)\.org$/,
           // site
-          /^(picz|unporn)\.site$/,
-          /^pic\.hotimg\.site$/,
-          // xyz
-          /^(dalezobux|ecoimages|uvonahaze)\.xyz$/,
-          /^xxx\.(sexex|pornscreen)\.xyz$/,
+          /^picz\.site$/,
           // else
           /^acidimg\.cc$/,
-          /^underpic\.club$/,
-          /^imgcloud\.co$/,
-          /^darpix\.ga$/,
-          /^(pop-img|ads-img)\.info$/,
-          /^cubonaw\.ml$/,
-          /^(domaink|porno-pirat)\.ru$/,
-          /^ipicture\.su$/,
-          /^imagespublic\.tk$/,
           /^s\.imghost\.top$/,
-          /^www\.hotimage\.uk$/,
-          /^pixup\.us$/,
           /^xxxwebdlxxx\.(org|top)$/,
         ],
         path: /\/img-.*\.html/,
       },
       {
-        host: /^(hentai-pop|star-hentai)\.com$/,
-        path: /^\/[ti]\/img-.*\.html/,
-      },
-      {
         host: /^imgking\.co$/,
         path: /^\/img4?-.*\.html/,
       },
-      {
-        host: /^ima\.gy$/,
-        path: /^\/i\/.+$/,
-      },
-      {
-        host: /^picmoza\.com$/,
-        path: /^\/\/?img-.*\.html$/,
-      },
     ],
     ready: defaultAction,
-  });
-
-  _.register({
-    rule: {
-      host: /^imgrat\.com$/,
-      path: /^\/img-.*\.html/,
-    },
-    ready: _.partial(action, '#close', '#main_image img.center-block.img-responsive'),
-  });
-
-  // TODO need to refactor the cookie rule
-  _.register({
-    rule: {
-      host: /^(www\.)?imgfresh\.info$/,
-      path: /^\/img-.*\.html$/,
-    },
-    async ready () {
-      $.remove('iframe');
-
-      let node = $.$('#continuetoimage > form input');
-      if (node) {
-        // first pass
-        node.click();
-        // somehow imgrun.net need to click twice
-        node.click();
-        return;
-      }
-
-      // the cookies are shared in the whole domain
-      // we have to reset cookies to prevent wrong state
-      $.resetCookies();
-
-      // second pass
-      node = $.$('img[class^=centred]');
-      if (node) {
-        await $.openImage(node.src);
-        return;
-      }
-
-      // simulate session
-      await $.post(window.location.href.toString(), {
-        cti: 1,
-        ref: '',
-        rc: 1,
-        rp: 1,
-        bt: 0,
-        bw: 'edge',
-      });
-      window.location.reload();
-    },
   });
 
   _.register({
@@ -124,7 +36,7 @@
         path: /^\/imgs-.*\.html/,
       },
       {
-        host: /^(imgkings|imagerar)\.com$/,
+        host: /^imgkings\.com$/,
         path: /^\/img-.*\.html/,
       },
     ],
@@ -150,39 +62,6 @@
     async start () {
       const path = window.location.href.replace('/imga-u', '/u').replace('.html', '');
       await $.openLink(path);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^pornyfap\.com$/,
-      path: /\/pic\//,
-    },
-    async ready () {
-      const p = $('img#myImg');
-      await $.openImage(p.src);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^funimg\.net$/,
-      path: /\/img-.*\.html/,
-    },
-    async start () {
-      const path = window.location.href.replace('/img-', '/img3-');
-      await $.openLink(path);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^funimg\.net$/,
-      path: /\/img3-.*\.html/,
-    },
-    async ready () {
-      const i = $('#continuetoimage img');
-      await $.openImage(i.src);
     },
   });
 
@@ -242,22 +121,7 @@
   });
 
   _.register({
-    rule: {
-      host: /^trueimg\.xyz$/,
-      path: /^\/u-b\/(.+)\.jpeg\.html/,
-    },
-    async start () {
-      const path = window.location.href.replace('/u-', '/').replace('.html', '');
-      await $.openLink(path);
-    },
-  });
-
-  _.register({
     rule: [
-      {
-        host: /^imagerar\.com$/,
-        path: /^\/img2-/,
-      },
       {
         host: /^imgking\.co$/,
         path: /^\/img[v3]-.*\.html/,
@@ -317,20 +181,8 @@
 
   _.register({
     rule: {
-      host: /^imagescanner\.cc$/,
-      path: /^\/.*\.jpg\.html/,
-    },
-    async start () {
-      const path = window.location.href.replace('.html', '');
-      await $.openLink(path);
-    },
-  });
-
-  _.register({
-    rule: {
       host: [
         /^imgcloud\.pw$/,
-        /^pspic\.org$/,
         /^pilot007\.org$/,
       ],
       path: /^\/image\/.*/,
