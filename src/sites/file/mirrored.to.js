@@ -1,7 +1,6 @@
 _.register({
   rule: {
     host: [
-      /^(www\.)?mirrorcreator\.com$/,
       /^(www\.)?mirrored\.to$/,
     ],
     path: /^\/downlink\//,
@@ -12,11 +11,9 @@ _.register({
   },
 });
 
-
 _.register({
   rule: {
     host: [
-      /^(www\.)?mirrorcreator\.com$/,
       /^(www\.)?mirrored\.to$/,
     ],
     path: /^\/files\//,
