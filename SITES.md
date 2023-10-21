@@ -1010,7 +1010,6 @@
     * mije.net
     * mirrorace.com
     * mirrorace.org
-    * mirrorcreator.com
     * mirrored.to
     * mirrorfilehost.com
     * moesubs.com
