@@ -60,6 +60,7 @@
     * hosturimage.com
     * hotimage.uk
     * hotimages.eu
+    * ifotos.pl
     * ima.gy
     * imadul.com
     * imageblinks.com
