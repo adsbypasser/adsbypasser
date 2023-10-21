@@ -22,10 +22,13 @@
     * apasih.pw
     * autofans.pw
     * autoride.pw
+    * bat5.com
     * bdupload.asia
     * bdupload.info
     * bilder.nixhelp.de
+    * celebclk.com
     * cl250.club
+    * clb1.com
     * coinurl.com
     * coolrom.com
     * cubonaw.ml
@@ -40,6 +43,7 @@
     * dutchycorp.space
     * dwrfslsqpdfqfwy.net
     * ecoimages.xyz
+    * eightteen.com
     * elsfile.org
     * embedupload.com
     * erimge.com
@@ -148,6 +152,7 @@
     * njiir.com
     * oko.sh
     * overpic.net
+    * peekatmygirlfriend.com
     * pic.hotimg.site
     * picfox.org
     * piclambo.net
@@ -191,6 +196,7 @@
     * upgrand.site
     * upmirror.info
     * urlbeat.net
+    * urlcash.net
     * uvonahaze.xyz
     * vidto.me
     * voyeurimage.org
