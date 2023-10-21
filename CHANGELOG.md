@@ -2,6 +2,7 @@
 
 * fixed
     * imgair.net
+    * postimg.cc
 * added
     * 3xplanet.net
     * img.trafficimage.club
