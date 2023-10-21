@@ -142,6 +142,7 @@
     * lnk.co
     * megaimage.org
     * miniurls.co
+    * mirrorcreator.com
     * mlink.club
     * multifilemirror.com
     * multiimg.com
