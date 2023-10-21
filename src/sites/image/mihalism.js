@@ -5,7 +5,6 @@
     rule: {
       host: [
         /^miragepics\.com$/,
-        /^bilder\.nixhelp\.de$/,
         /^foto-pic\.net$/,
       ],
       path: /^\/viewer\.php$/,
