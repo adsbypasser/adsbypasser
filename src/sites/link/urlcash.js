@@ -1,8 +1,8 @@
 _.register({
   rule: {
     host: [
-      /(^|\.)urlcash\.(com|net|org)$/,
-      /^(bat5|detonating|celebclk|eightteen|smilinglinks|peekatmygirlfriend|pornyhost|clb1|urlgalleries)\.com$/,
+      /(^|\.)urlcash\.(com|org)$/,
+      /^(detonating|smilinglinks|pornyhost|urlgalleries)\.com$/,
       /^looble\.net$/,
       /^xxxs\.org$/,
     ],
