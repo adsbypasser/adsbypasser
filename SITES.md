@@ -31,14 +31,8 @@
     * fastpic.org
     * imageup.ru
 * bc.vc
-    * ad5.eu
-    * adjet.eu
     * bc.vc
     * mylink.us
-    * shrink.gs
-    * tr5.in
-    * xafox.com
-    * ysear.ch
     * zpoz.net
 * urlcash
     * bat5.com
