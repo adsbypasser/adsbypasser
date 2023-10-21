@@ -12,6 +12,8 @@
 * retired
     * 3zfile.net
     * abouttech.space
+    * ad5.eu
+    * adjet.eu
     * ads-img.info
     * aii.sh
     * akoam.net
@@ -181,6 +183,7 @@
     * tinizo.com
     * tinylinks.co
     * tinyurl.is
+    * tr5.in
     * trueimg.xyz
     * underpic.club
     * unporn.site
@@ -193,6 +196,7 @@
     * whackyvidz.com
     * wibuindo.xyz
     * wpc8.com
+    * xafox.com
     * xpickle.club
     * xximg.net
     * xxx.pornscreen.xyz
@@ -201,6 +205,7 @@
     * xxxscreens.com
     * yankoimages.net
     * youfap.me
+    * ysear.ch
     * yyv.co
     * zatnawqy.net
     * zeefiles.download
