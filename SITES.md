@@ -35,17 +35,11 @@
     * mylink.us
     * zpoz.net
 * urlcash
-    * bat5.com
-    * celebclk.com
-    * clb1.com
     * detonating.com
-    * eightteen.com
     * looble.net
-    * peekatmygirlfriend.com
     * pornyhost.com
     * smilinglinks.com
     * urlcash.com
-    * urlcash.net
     * urlcash.org
     * urlgalleries.com
     * xxxs.org
