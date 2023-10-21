@@ -971,7 +971,6 @@
     * hello.tribuntekno.com
     * hostingpics.net
     * hotshorturl.com
-    * ifotos.pl
     * iiv.pl
     * ima.so
     * image2you.ru
