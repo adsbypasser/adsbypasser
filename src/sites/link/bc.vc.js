@@ -51,76 +51,11 @@
     rule: {
       host: [
         /^mylink\.us$/,
-        /^xafox\.com$/,
         /^zpoz\.net$/,
-        /^www\.adjet\.eu$/,
       ],
       path: /^\/.+/,
     },
     ready: run,
-  });
-
-  _.register({
-    rule: {
-      host: /^ysear\.ch$/,
-      path: /^\/.+/,
-    },
-    async ready () {
-      const a = $.$('div.fly_head a.close');
-      const f = $.$('iframe.fly_frame');
-      // the iframe may be an ad link
-      // so also check the close button
-      if (a && f) {
-        await $.openLink(f.src);
-      } else {
-        await run();
-      }
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^ad5\.eu$/,
-      path: /^\/[^.]+$/,
-    },
-    async ready () {
-      $.remove('iframe');
-      const s = searchScript(true);
-
-      // Find the form
-      let m = s.script.match(/(<form name="form1"method="post".*(?!<\\form>)<\/form>)/);
-      if (!m) {
-        return;
-      }
-      m = m[1];
-
-      // Set the correct timezone
-      const tz = -(new Date().getTimezoneOffset() / 60);
-      m = m.replace('\'+timezone+\'', tz);
-
-      // Wrap the form into a useless div
-      const d = document.createElement('div');
-      d.setAttribute('id', 'AdsBypasserFTW');
-      d.setAttribute('style', 'display:none;');
-
-      // Feed with the right form
-      d.innerHTML = m;
-      document.body.appendChild(d);
-
-      // Redirect to next page
-      $('#AdsBypasserFTW > form[name=form1]').submit();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^tr5\.in$/,
-      path: /^\/.+/,
-    },
-    async ready () {
-      // Malformed JSON
-      await run(true);
-    },
   });
 
   function decompress (script, unzip) {
