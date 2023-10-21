@@ -2,8 +2,8 @@
     * (universally handled)
 * Mihalism Multi Host
     * foto-pic.net
+    * imgcream.com
     * miragepics.com
-    * nixhelp.de
     * pacific.picturedent.org
 * reklama
     * 22pixx.xyz
