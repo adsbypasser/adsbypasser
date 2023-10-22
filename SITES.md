@@ -962,7 +962,6 @@
     * ima.so
     * image2you.ru
     * imagebam.com
-    * imageban.net
     * imageban.ru
     * imagehousing.com
     * imagenetz.de
