@@ -1,11 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^al\.ly$/,
-      /^ally\.sh$/,
-      /^ally\.shortens\.co$/,
-      /^(dausel|onle)\.co$/,
-    ],
+    host: /^al\.ly$/,
   },
   async ready () {
     let i = $.$('#html_element');
