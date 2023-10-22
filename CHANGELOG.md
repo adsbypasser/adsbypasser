@@ -269,7 +269,7 @@
     * zupload.me
 
 
-## v7.22.0
+## v7.22.0 - 2023-10-04
 
 * fixed
     * imagetwist.com
@@ -293,7 +293,7 @@
     * pilot007.org
     * xxxwebdlxxx.top
 
-## v7.21.0
+## v7.21.0 - 2022-12-04
 
 * fixed
     * ouo.io
@@ -307,7 +307,7 @@
     * pyotinle.buzz
     * try2link.com
 
-## v7.20.0
+## v7.20.0 - 2022-06-26
 
 * fixed
     * imagetwist.com
@@ -321,7 +321,7 @@
     * pspic.org
     * starimage.club
 
-## v7.19.0
+## v7.19.0 - 2022-01-17
 
 * fixed
     * imagebam.com
@@ -336,7 +336,7 @@
     * imgxvd.buzz
     * tinyurl.is
 
-## v7.18.0
+## v7.18.0 - 2021-08-09
 
 * fixed
     * imagefruit.com
@@ -354,7 +354,7 @@
     * imgwex.buzz
     * kekolangti.com
 
-## v7.17.0
+## v7.17.0 - 2021-05-18
 
 * fixed
     * 22pixx.xyz
@@ -385,7 +385,7 @@
 * removed
     * hotchyx.com
 
-## v7.16.0
+## v7.16.0 - 2021-03-27
 
 * added
     * imgsen.com
@@ -395,7 +395,7 @@
     * picdollar.com
     * picrok.com
 
-## v7.15.0
+## v7.15.0 - 2020-07-13
 
 * fixed
     * mirrored.to
@@ -403,7 +403,7 @@
 * added
     * shorten.sh
 
-## v7.14.0
+## v7.14.0 - 2020-05-25
 
 * added
     * click-paid.com
@@ -413,7 +413,7 @@
     * crabcut.net
     * cutadlink.net
 
-## v7.13.0
+## v7.13.0 - 2020-04-06
 
 * fixed
     * mitly.us
@@ -455,18 +455,18 @@
     * voxc.org
     * xz2.xyz
 
-## v7.12.1
+## v7.12.1 - 2020-02-10
 
 * fixed
     * safeku.com
 
-## v7.12.0
+## v7.12.0 - 2019-12-23
 
 * added
     * safeku.com
     * trueimg.xyz
 
-## v7.11.0
+## v7.11.0 - 2019-11-25
 
 * added
     * dwrfslsqpdfqfwy.net
@@ -500,7 +500,7 @@
     * openload.link
     * openload.pw
 
-## v7.10.0
+## v7.10.0 - 2019-10-27
 
 * fixed
     * image will not randomly become full size while resizing the window
@@ -508,7 +508,7 @@
     * s-jav.com
     * dalezobux.xyz
 
-## v7.9.0
+## v7.9.0 - 2019-10-07
 
 * fixed
     * bolaoke.club
@@ -523,14 +523,14 @@
     * shrinkme.io
     * shortearn.org
 
-## v7.8.0
+## v7.8.0 - 2019-09-24
 
 * fixed
     * bc.vc
 * added
     * arabtvlink.com
 
-## v7.7.0
+## v7.7.0 - 2019-09-05
 
 * fixed
     * lindung.in
@@ -544,7 +544,7 @@
     * tips.atv.pw
     * wegner.tech
 
-## v7.6.0
+## v7.6.0 - 2019-08-17
 
 * added
     * cu6.io
@@ -555,7 +555,7 @@
     * situsbaru.me
     * urlike.net
 
-## v7.5.0
+## v7.5.0 - 2019-07-22
 
 * fixed
     * fastpic.ru
@@ -572,7 +572,7 @@
     * smwebs.xyz
     * subetenews.com
 
-## v7.4.0
+## v7.4.0 -  2019-07-08
 
 * added
     * a5barfawria.com
@@ -582,7 +582,7 @@
     * stategossip.com
     * swiggygold.com
 
-## v7.3.0
+## v7.3.0 - 2019-06-23
 
 * fixed
     * apasih.pw
@@ -625,7 +625,7 @@
     * w-rajem.com
     * xxximagetpb.org
 
-## v7.2.0
+## v7.2.0 - 2019-06-10
 
 * fixed
     * cocoleech.com
@@ -699,7 +699,7 @@
     * zap.in
     * zupload.me
 
-## v7.1.0
+## v7.1.0 - 2019-05-13
 
 * fixed
     * tout-debrid.net
@@ -717,7 +717,7 @@
     * shrt8.com
     * veblink.com
 
-## v7.0.0
+## v7.0.0 - 2019-05-05
 
 * fixed
     * adf.ly
@@ -758,7 +758,7 @@
     * wrap-w0rld.com
     * yasinews.xyz
 
-## v6.36.0
+## v6.36.0 - 2019-04-24
 
 * fixed
     * cutwin.com
@@ -825,7 +825,7 @@
     * uplinkto.me
     * viralcollect.info
 
-## v6.35.0
+## v6.35.0 - 2019-04-07
 
 * fixed
     * cutwin.us
@@ -872,7 +872,7 @@
     * viralnow.xyz
     * xpickle.club
 
-## v6.34.0
+## v6.34.0 - 2019-03-18
 
 * fixed
     * adf.ly (maranhesduve.club, uclaut.net)
@@ -905,7 +905,7 @@
     * wikiall.org
     * zi.ht
 
-## v6.33.0
+## v6.33.0 - 2019-03-11
 
 * fixed
     * oload.space
@@ -953,7 +953,7 @@
     * yesmoviesapp.info
     * yourw-ay.com
 
-## v6.32.0
+## v6.32.0 - 2019-03-02
 
 * fixed
     * hexafile.net
@@ -964,7 +964,7 @@
     * imgsee.net
     * oload.space
 
-## v6.31.0
+## v6.31.0 - 2019-02-26
 
 * fixed
     * idsly.bid
@@ -1001,7 +1001,7 @@
     * urlsamo.com
     * yametesenpai.xyz
 
-## v6.30.0
+## v6.30.0 - 2019-02-14
 
 * fixed
     * imgfile.net
@@ -1044,7 +1044,7 @@
     * wibuindo.xyz
     * xxx.fopkodiak.site
 
-## v6.29.0
+## v6.29.0 - 2019-01-29
 
 * fixed
     * 22pixx.xyz
@@ -1076,7 +1076,7 @@
     * srtfly.com
     * yourtechguider.com
 
-## v6.28.0
+## v6.28.0 - 2019-01-07
 
 * fixed
     * greget.space
@@ -1098,7 +1098,7 @@
     * safelinkreviewer.com
     * safelinksreview.com
 
-## v6.27.0
+## v6.27.0 - 2018-12-24
 
 * fixed
     * linkdrop.net
@@ -1112,7 +1112,7 @@
     * smarteasystudy.com
     * stt.awsubs.co
 
-## v6.26.0
+## v6.26.0 - 2018-12-17
 
 * fixed
     * imgfile.net
@@ -1127,7 +1127,7 @@
     * probusinesshub.com
     * pss.pw
 
-## v6.25.0
+## v6.25.0 - 2018-11-26
 
 * fixed
     * 22pixx.xyz
@@ -1143,7 +1143,7 @@
     * teknologilink.com
     * zutrox.link
 
-## v6.24.0
+## v6.24.0 - 2018-11-12
 
 * added
     * 1ink.info
@@ -1151,7 +1151,7 @@
     * healthtod.com
     * shortly.xyz
 
-## v6.23.0
+## v6.23.0 - 2018-11-06
 
 * fixed
     * fastpic.ru
@@ -1160,7 +1160,7 @@
     * shtlink.co
     * won.pe
 
-## v6.22.0
+## v6.22.0 - 2018-10-22
 
 * fixed
     * imgoutlet.pw
@@ -1175,7 +1175,7 @@
     * vnurl.xyz
     * xxx.sexex.xyz
 
-## v6.21.0
+## v6.21.0 - 2018-10-02
 
 * fixed
     * beeimg.com
@@ -1189,7 +1189,7 @@
     * oload.cloud
     * topurl.net
 
-## v6.20.0
+## v6.20.0 - 2018-09-18
 
 * fixed
     * adsrt.com
@@ -1206,7 +1206,7 @@
 * removed
     * akoam.com
 
-## v6.19.0
+## v6.19.0 - 2018-09-04
 
 * fixed
     * autolinkach.com
@@ -1232,7 +1232,7 @@
 * removed
     * susutinv2.com
 
-## v6.18.0
+## v6.18.0 - 2018-08-21
 
 * fixed
     * itiad.com
@@ -1255,7 +1255,7 @@
     * ujv.me
     * win4cut.com
 
-## v6.17.0
+## v6.17.0 - 2018-08-05
 
 * fixed
     * linkdrop.net
@@ -1279,7 +1279,7 @@
     * imgtown.net
     * imgview.net
 
-## v6.16.0
+## v6.16.0 - 2018-07-24
 
 * fixed
     * coshink.co
@@ -1295,7 +1295,7 @@
     * skips.link
     * za.gl
 
-## v6.15.0
+## v6.15.0 - 2018-06-24
 
 * fixed
     * cut-earn.com
@@ -1317,7 +1317,7 @@
     * vivads.net
     * wicr.me
 
-## v6.14.0
+## v6.14.0 - 2018-06-11
 
 * fixed
     * anjay.info
@@ -1349,7 +1349,7 @@
     * lix.in
     * zintata.com
 
-## v6.13.0
+## v6.13.0 - 2018-05-30
 
 * fixed
     * earnbig.ca
@@ -1443,7 +1443,7 @@
     * zbqhfbetlmni.net
     * zff.co
 
-## v6.12.0
+## v6.12.0 - 2018-05-13
 
 * fixed
     * videogamesblogger.com
@@ -1778,7 +1778,7 @@
     * kokemoon.com
     * top9space.com
 
-## v6.11.0
+## v6.11.0 - 2018-05-07
 
 * fixed
     * adf.ly
@@ -1860,7 +1860,7 @@
     * mypixxx.lonestarnaughtygirls.com
     * h-animes.info
 
-## v6.10.0
+## v6.10.0 - 2018-04-14
 
 * fixed
     * mirrorcreator.com
@@ -1894,7 +1894,7 @@
     * susutin.com
     * shortit.in
 
-## v6.9.0
+## v6.9.0 - 2018-03-26
 
 * fixed
     * openload.co
@@ -1922,7 +1922,7 @@
     * img.yt
     * pixhost.org
 
-## v6.8.0
+## v6.8.0 - 2018-02-23
 
 * fixed
     * imagepearl.com
@@ -1946,7 +1946,7 @@
 * removed
     * jzrputtbut.net
 
-## v6.7.0
+## v6.7.0 - 2018-01-08
 
 * fixed
     * imgprime.com
@@ -2005,7 +2005,7 @@
     * zez.io
     * coshurl.co
 
-## v6.6.0
+## v6.6.0 - 2017-11-20
 
 * fixed
     * clictune.com
@@ -2024,7 +2024,7 @@
     * imgoutlet.co
     * link.tl
 
-## v6.5.0
+## v6.5.0 - 2017-11-14
 
 * fixed
     * linkdrop.net
@@ -2036,12 +2036,12 @@
 * removed
     * zytpirwai.net
 
-## v6.4.1
+## v6.4.1 - 2017-11-13
 
 * fixed
     * lite edition bug
 
-## v6.4.0
+## v6.4.0 - 2017-10-26
 
 * fixed
     * ally.sh
@@ -2062,7 +2062,7 @@
 * removed
     * adshort.co
 
-## v6.3.0
+## v6.3.0 - 2017-10-02
 
 * fixed
     * imgrock.info
@@ -2079,13 +2079,13 @@
 * removed
     * 123link.top
 
-## v6.2.1
+## v6.2.1 - 2017-09-25
 
 * fixed
     * mirrorcreator.com
     * configuration page
 
-## v6.2.0
+## v6.2.0 - 2017-09-16
 
 * fixed
     * sipkur.us
@@ -2101,23 +2101,23 @@
     * adshort.co
     * adshorte.com
 
-## v6.1.4
+## v6.1.4 - 2017-09-14
 
 * fixed
     * legacy browser support
 
-## v6.1.3
+## v6.1.3 - 2017-09-13
 
 * fixed
     * adf.ly
 
-## v6.1.2
+## v6.1.2 - 2017-09-12
 
 * fixed
     * bc.vc
     * jzrputtbut.net
 
-## v6.1.1
+## v6.1.1 - 2017-09-11
 
 * fixed
     * configuration page
@@ -2125,7 +2125,7 @@
     * ouo.io
     * spaste.com
 
-## v6.1.0
+## v6.1.0 - 2017-09-04
 
 * changed
     * Trying to fix compatibility to Violentmonkey
@@ -2143,7 +2143,7 @@
 * removed
     * imgrock.net
 
-## v6.0.0
+## v6.0.0 - 2017-07-10
 
 * changed
     * rewrite to ES7
