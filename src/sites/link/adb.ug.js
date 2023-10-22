@@ -2,11 +2,7 @@
 
   _.register({
     rule: {
-      host: [
-        /^(www\.)?adb\.ug$/,
-        /^(www\.)?lynk\.my$/,
-        /^(www\.)?adyou\.(co|me)$/,
-      ],
+      host: /^(www\.)?adb\.ug$/,
       // Match everything but empty, privacy, terms, contact, contact/whatever or path beginning with #
       path: /^(?!\/(?:privacy|terms|contact(\/.*)?|#.*)?$).*$/,
     },
