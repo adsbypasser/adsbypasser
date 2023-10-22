@@ -44,14 +44,8 @@
     * urlgalleries.com
     * xxxs.org
 * imagesnake
-    * freebunker.com
-    * imagefruit.com
     * imageshots.com
-    * imagesnake.com
-    * imagesnake.org
     * imgcarry.com
-    * imgshots.com
-    * pornbus.org
 * imagetwist
     * imagenpic.com
     * imageshimage.com
@@ -61,23 +55,11 @@
     * vipr.im
 * fullimg.com
     * freeimgup.com
-    * fullimg.com
-    * imagep2p.com
-* fotoo
-    * fotoo.pl
-    * imagestime.com
 * freakimage
     * freakimage.com
     * hostpic.org
 * imagevenue
     * imagevenue.com
-* imgfantasy
-    * 0img.net
-    * imagedomino.com
-    * imgcurl.com
-    * imgfantasy.com
-    * imgnemo.com
-    * imgsay.com
 * 2i.cz
     * 2i.cz
     * 2i.sk
@@ -107,9 +89,6 @@
 * seomafia.net
     * apploadz.ru
     * seomafia.net
-* all-poster.ru
-    * all-poster.ru
-    * bunnyforum.org
 * imgsee.me
     * fotokiz.com
     * hulkimge.com
@@ -886,13 +865,6 @@
 * fiuxy.co
     * fiuxy.bz
     * fiuxy.co
-* ewa.ac
-    * elil.cc
-    * ewa.ac
-    * imgbrd.xyz
-    * imgfsh.xyz
-    * imgkor.xyz
-    * imgviv.xyz
 * else
     * 1be.biz
     * 1dl.biz
@@ -918,10 +890,8 @@
     * beeimg.com
     * biglistofwebsites.com
     * bild.me
-    * bilder-upload.eu
     * bildr.no
     * binbox.io
-    * blameless.work
     * blog.langw.web.id
     * bluemediafiles.com
     * casimages.com
@@ -933,7 +903,6 @@
     * comyonet.com
     * crockolinks.com
     * cubeupload.com
-    * dailyimages.xyz
     * dawnstation.com
     * depic.me
     * direct-link.net
@@ -945,7 +914,6 @@
     * filoops.info
     * flylink.io
     * fopkodiak.site
-    * fotolink.su
     * fotosik.pl
     * freeimgup.com
     * gamemod.pro
@@ -959,25 +927,17 @@
     * hostingpics.net
     * hotshorturl.com
     * iiv.pl
-    * ima.so
-    * image2you.ru
     * imagebam.com
     * imageban.ru
     * imagehousing.com
     * imagenetz.de
     * imageno.com
     * imageshack.us
-    * imageshost.ru
     * imagetwist.netlify.app
     * imageupper.com
-    * img.3ezy.net
     * img.javstore.net
     * img.trafficimage.club
-    * img1.imagilive.com
-    * imgazure.com
-    * imgbar.net
     * imgbox.com
-    * imgcarry.com
     * imgdollar.com
     * indishare.org
     * ipic.su
@@ -1005,7 +965,6 @@
     * linktor.io
     * linkvertise.com
     * lolinez.com
-    * lostpic.net
     * mije.net
     * mirrorace.com
     * mirrorace.org
@@ -1020,18 +979,14 @@
     * nsfw.in
     * nutshellurl.com
     * oni.vn
-    * overdream.cz
     * p.pw
     * pasted.co
     * pdi2.net
     * piccash.net
     * picclock.ru
-    * piclick.org
-    * pic-money.ru
     * picnew.space
     * picnictrans.com
     * picpic.online
-    * picstream.tv
     * pic-upload.de
     * pig69.com
     * pimpandhost.com
@@ -1042,7 +997,6 @@
     * preview.rlu.ru
     * pronpic.org
     * pucuk.xyz
-    * qrrro.com
     * realsht.mobi
     * richlink.com
     * ron.vn
@@ -1051,7 +1005,6 @@
     * safeurl.eu
     * screenlist.ru
     * semprot.com
-    * shaggyimg.pro
     * shortid.co
     * shrink-service.it
     * sht.io
@@ -1094,7 +1047,5 @@
     * vzturl.com
     * wikiall.org
     * won.pe
-    * xaoutchouc.live
-    * xxx.fopkodiak.site
     * yep.it
     * yooclick.com
