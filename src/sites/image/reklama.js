@@ -7,17 +7,11 @@
       {
         host: [
           // com
-          /^imghit\.com$/,
-          /^imgdawgknuttz\.com$/,
-          /^(i|xxx)\.hentaiyoutube\.com$/,
-          // eu
-          /(^|\.)55888\.eu$/,
-          // site
-          /^picz\.site$/,
+          /^(imghit|imgdawgknuttz)\.com$/,
           // else
           /^acidimg\.cc$/,
-          /^s\.imghost\.top$/,
           /^xxxwebdlxxx\.(org|top)$/,
+          /^picz\.site$/,
         ],
         path: /\/img-.*\.html/,
       },
