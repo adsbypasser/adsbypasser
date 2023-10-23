@@ -212,12 +212,14 @@
     * pictureturn.com
     * pixsor.com
     * pixup.us
+    * pixxxels.cc
     * pnd.tl
     * poontown.net
     * pop-img.info
     * pornbus.org
     * porno-pirat.ru
     * pornyfap.com
+    * postimg.cc
     * prntscr.com
     * pspic.org
     * putlocker.com
