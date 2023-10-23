@@ -216,6 +216,7 @@
     * pornbus.org
     * porno-pirat.ru
     * pornyfap.com
+    * prntscr.com
     * pspic.org
     * putlocker.com
     * qqc.co
