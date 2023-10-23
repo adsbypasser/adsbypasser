@@ -1,7 +1,6 @@
 _.register({
   rule: {
     host: [
-      /^prntscr\.com$/,
       /^prnt\.sc$/,
     ],
     path: /\.html$/,
@@ -11,7 +10,6 @@ _.register({
 _.register({
   rule: {
     host: [
-      /^prntscr\.com$/,
       /^prnt\.sc$/,
     ],
   },
