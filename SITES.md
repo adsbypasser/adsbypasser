@@ -989,8 +989,6 @@
     * pimpandhost.com
     * pixhost.to
     * pixroute.com
-    * pixxxels.cc
-    * postimg.cc
     * preview.rlu.ru
     * pronpic.org
     * pucuk.xyz
