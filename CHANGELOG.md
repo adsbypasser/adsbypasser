@@ -12,16 +12,33 @@
 * retired
     * 01.nl
     * 0img.net
+    * 10co.biz
+    * 10co.co
+    * 10co.me
+    * 10co.xyz
+    * 1be.biz
+    * 1dl.biz
+    * 1ink.info
+    * 1tiny.net
     * 3zfile.net
     * 55888.eu
     * abouttech.space
+    * ad2links.com
     * ad5.eu
     * adjet.eu
+    * adlot.us
+    * admy.link
     * ads-img.info
+    * adyou.co
+    * adyou.me
+    * ah.pe
     * aii.sh
+    * aka.gr
     * akoam.net
     * allanalpass.com
     * all-poster.ru
+    * ally.sh
+    * ally.shortens.co
     * amateurfreak.org
     * apasih.pw
     * autofans.pw
@@ -31,24 +48,37 @@
     * bdupload.info
     * bilder.nixhelp.de
     * bilder-upload.eu
+    * bildr.no
     * binbox.io
     * blameless.work
+    * blog.langw.web.id
+    * bluemediafiles.com
     * bunnyforum.org
     * celebclk.com
     * cl250.club
     * clb1.com
+    * cli.gs
+    * clk.im
+    * coeg.in
     * coinurl.com
+    * comyonet.com
     * coolrom.com
+    * crockolinks.com
     * cubonaw.ml
     * cur.lv
     * dailyimages.xyz
     * dalezobux.xyz
     * damimage.com
     * darpix.ga
+    * dausel.co
+    * dawnstation.com
     * dimtus.com
+    * disingkat.in
+    * dl.layarkaca21.vip
     * dl-protect.com
     * domaink.ru
     * drstickyfingers.com
+    * durl.me
     * dutchycorp.space
     * dwrfslsqpdfqfwy.net
     * ecoimages.xyz
@@ -62,6 +92,8 @@
     * fastpic.ru
     * fileproject.com.br
     * filesonthe.net
+    * fiuxy.bz
+    * fiuxy.co
     * fotolink.su
     * fotoo.pl
     * freean.us
@@ -74,9 +106,14 @@
     * funkyimg.com
     * gallerycloud.net
     * gameinfo.pw
+    * gamemod.pro
     * goimagehost.com
+    * goto.loncat.in
     * greasyimage.com
+    * greget.space
+    * gunting.web.id
     * hdmoza.com
+    * healthykk.com
     * hentai-pop.com
     * holdthemoan.net
     * hosturimage.com
@@ -173,30 +210,50 @@
     * infosehatku.club
     * insurance-waifu.cf
     * ipicture.su
+    * itw.me
+    * ity.im
     * javtor.com
     * jheberg.net
     * landscapenature.pw
+    * lienscash.com
+    * link.im
+    * link4ad.com
     * linkbabes.com
     * linkbucks.com
     * linkduit.net
+    * linkpoi.in
+    * linksas.us
+    * linksupto.com
     * lnk.co
     * lostpic.net
+    * lynk.my
     * megaimage.org
+    * mije.net
+    * minidroid.net
     * miniurls.co
     * mirrorcreator.com
     * mlink.club
+    * moesubs.com
     * multifilemirror.com
     * multiimg.com
     * multiupfile.com
+    * my-link.pro
+    * mylink.zone
     * mylinkgen.com
     * naturalhealthy.xyz
     * naughtygate.net
     * nimzshare.com
     * njiir.com
+    * nsfw.in
+    * nutshellurl.com
     * oko.sh
+    * onepiece-ex.com.br
+    * onle.co
     * overdream.cz
     * overpic.net
+    * p.pw
     * pasted.co
+    * pdi2.net
     * peekatmygirlfriend.com
     * pic.hotimg.site
     * pic.s-jav.com
@@ -212,14 +269,12 @@
     * pictureturn.com
     * pixsor.com
     * pixup.us
-    * pixxxels.cc
     * pnd.tl
     * poontown.net
     * pop-img.info
     * pornbus.org
     * porno-pirat.ru
     * pornyfap.com
-    * postimg.cc
     * prntscr.com
     * pspic.org
     * putlocker.com
@@ -228,35 +283,65 @@
     * radikal.ru
     * rdlnk.co
     * rhvgmritmziwcm.net
+    * richlink.com
+    * ron.vn
     * rqq.co
     * s.imghost.top
+    * s.yukisubs.com
+    * sa.ae
+    * safeurl.eu
     * seriousdeals.net
     * shaggyimg.pro
     * shorten.sh
+    * shorti.ga
+    * shortid.co
     * shrink.vip
+    * sht.io
+    * shtlink.co
+    * shtme.co
+    * siherp.com
+    * siotong.com
+    * sipkur.net
     * sk-ip.ru
     * sk-ip.tech
+    * st.kurogaze.net
+    * st.wardhanime.net
     * star-hentai.com
     * subirimagenes.com
     * teenimage.org
     * teenshot.org
+    * telondasmu.com
     * theseblogs.com
     * tinizo.com
     * tinylinks.co
     * tinyurl.is
+    * totaldebrid.org
     * tr5.in
     * trueimg.xyz
     * underpic.club
+    * unfake.it
     * unporn.site
     * upgrand.site
+    * uplinkto.me
     * upmirror.info
+    * url.fm
     * urlbeat.net
     * urlcash.net
+    * urlinn.com
+    * urlms.com
+    * urlv2.com
+    * uskip.me
     * uvonahaze.xyz
+    * vavi.co
+    * vcrypt.net
     * vidto.me
+    * viidii.info
+    * vir.al
     * voyeurimage.org
     * whackyvidz.com
     * wibuindo.xyz
+    * wikiall.org
+    * won.pe
     * wpc8.com
     * xafox.com
     * xaoutchouc.live
@@ -269,6 +354,8 @@
     * xxxhost.me
     * xxxscreens.com
     * yankoimages.net
+    * yep.it
+    * yooclick.com
     * youfap.me
     * ysear.ch
     * yyv.co
