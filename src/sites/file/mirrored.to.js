@@ -1,24 +1,8 @@
 _.register({
-  rule: {
-    host: [
-      /^(www\.)?mirrored\.to$/,
-    ],
-    path: /^\/downlink\//,
-  },
+  rule: 'https://www.mirrored.to/files/*',
   async ready () {
-    const a = $('.col-sm.centered.highlight a');
+    const a = $('.col-sm.centered.extra-top a');
     await $.openLink(a.href);
   },
 });
 
-_.register({
-  rule: {
-    host: [
-      /^(www\.)?mirrored\.to$/,
-    ],
-    path: /^\/files\//,
-  },
-  async ready () {
-    $('#dl_form').submit();
-  },
-});
