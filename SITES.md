@@ -838,9 +838,8 @@
 * ur.ly
     * ur.ly
     * urly.mobi
-* prntscr.com
+* prnt.sc
     * prnt.sc
-    * prntscr.com
 * probusinesshub.com
     * entretendonaweb.ga
     * mutharammss.xyz
