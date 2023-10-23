@@ -891,7 +891,6 @@
     * biglistofwebsites.com
     * bild.me
     * bildr.no
-    * binbox.io
     * blog.langw.web.id
     * bluemediafiles.com
     * casimages.com
@@ -980,7 +979,6 @@
     * nutshellurl.com
     * oni.vn
     * p.pw
-    * pasted.co
     * pdi2.net
     * piccash.net
     * picclock.ru
