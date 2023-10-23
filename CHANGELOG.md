@@ -30,6 +30,7 @@
     * bdupload.info
     * bilder.nixhelp.de
     * bilder-upload.eu
+    * binbox.io
     * blameless.work
     * bunnyforum.org
     * celebclk.com
@@ -193,6 +194,7 @@
     * oko.sh
     * overdream.cz
     * overpic.net
+    * pasted.co
     * peekatmygirlfriend.com
     * pic.hotimg.site
     * pic.s-jav.com
