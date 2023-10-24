@@ -1,11 +1,8 @@
 _.register({
   rule: {
     host: [
-      /^(www\.)?shink\.me$/,
-      /^(shon|likn)\.xyz$/,
-      /^fas\.li$/,
-      /^(www\.)?croco\.(me|site)$/,
-      /^cpmlink\.net$/,
+      /^shink\.me$/,
+      /^shon\.xyz$/,
     ],
     path: /^\/[\w-]+$/,
   },
@@ -48,34 +45,15 @@ _.register({
 });
 
 _.register({
-  rule: [
+  rule: 
     {
       host: /^cpmlink\.net$/,
       path: /^\/go\/[\w-]+$/,
     },
-    {
-      host: /^(www\.)?croco\.(me|site)$/,
-      path: /^\/ok\/\w+$/,
-    },
-  ],
   async ready () {
     let a = $('#btn-main');
     const i = a.href.lastIndexOf('http');
     a = a.href.substr(i);
     await $.openLink(a);
-  },
-});
-
-_.register({
-  rule: {
-    host: [
-      /^fas\.li$/,
-      /^(www\.)?shink\.me$/,
-    ],
-    path: /^\/go\/\w+$/,
-  },
-  async ready () {
-    const f = $('#skip');
-    f.submit();
   },
 });
