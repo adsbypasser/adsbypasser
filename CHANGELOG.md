@@ -2,6 +2,7 @@
 
 * fixed
     * imgair.net
+    * mirrored.to
     * postimg.cc
 * added
     * 3xplanet.net
