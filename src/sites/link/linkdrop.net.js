@@ -79,7 +79,6 @@
         /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors|xz2)\.xyz$/,
         /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy|ijobanana)\.xyz$/,
         /^(autocarsmagz|getpocket|yasinews|dunyanews|komiupdates|allapp|smwebs|news-tech)\.xyz$/,
-        /^cutdl\.xyz$/,
         // else
         /^(ckk|iir|tii)\.ai$/,
         /^get\.ujv\.al$/,
