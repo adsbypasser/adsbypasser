@@ -1,12 +1,12 @@
 _.register({
   rule: {
     host: [
-      /^www\.namiyt\.com$/,
+      /^vyvmedia\.my\.id$/,
       /^realsht\.mobi$/,
     ],
   },
   async ready () {
-    const n = $('#section1 form input#section1');
+    const n = $('#download_link');
     n.click();
   },
 });
