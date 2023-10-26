@@ -10,6 +10,7 @@
     * javball.com
     * javtenshi.com
     * pig69.com
+    * yvmedia.my.id
 * retired
     * 01.nl
     * 0img.net
@@ -241,6 +242,7 @@
     * my-link.pro
     * mylink.zone
     * mylinkgen.com
+    * namiyt.com
     * naturalhealthy.xyz
     * naughtygate.net
     * nimzshare.com
