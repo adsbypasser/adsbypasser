@@ -909,7 +909,6 @@
     * mirrored.to
     * mirrorfilehost.com
     * mrjh.org
-    * namiyt.com
     * nmac.to
     * noelshack.com
     * oni.vn
@@ -954,3 +953,4 @@
     * urlgator.com
     * ux9.de
     * vzturl.com
+    * yvmedia.my.id
