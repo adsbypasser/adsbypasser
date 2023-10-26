@@ -1,9 +1,12 @@
 _.register({
   rule: {
-    host: /^realsht\.mobi$/,
+    host: [
+      /^vyvmedia\.my\.id$/,
+      /^realsht\.mobi$/,
+    ],
   },
   async ready () {
-    const n = $('#section1 form input#section1');
+    const n = $('#download_link');
     n.click();
   },
 });

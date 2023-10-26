@@ -10,6 +10,7 @@
     * javball.com
     * javtenshi.com
     * pig69.com
+    * yvmedia.my.id
 * retired
     * 01.nl
     * 0img.net
@@ -67,6 +68,7 @@
     * crockolinks.com
     * cubonaw.ml
     * cur.lv
+    * cutdl.xyz
     * dailyimages.xyz
     * dalezobux.xyz
     * damimage.com
@@ -241,6 +243,7 @@
     * my-link.pro
     * mylink.zone
     * mylinkgen.com
+    * namiyt.com
     * naturalhealthy.xyz
     * naughtygate.net
     * nimzshare.com

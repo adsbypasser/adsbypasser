@@ -388,7 +388,6 @@
     * curs.io
     * cut4link.com
     * cut4links.com
-    * cutdl.xyz
     * cutearn.ca
     * cut-earn.com
     * cuti.in
@@ -909,7 +908,6 @@
     * mirrored.to
     * mirrorfilehost.com
     * mrjh.org
-    * namiyt.com
     * nmac.to
     * noelshack.com
     * oni.vn
@@ -954,3 +952,4 @@
     * urlgator.com
     * ux9.de
     * vzturl.com
+    * yvmedia.my.id
