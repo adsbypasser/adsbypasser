@@ -388,7 +388,6 @@
     * curs.io
     * cut4link.com
     * cut4links.com
-    * cutdl.xyz
     * cutearn.ca
     * cut-earn.com
     * cuti.in
