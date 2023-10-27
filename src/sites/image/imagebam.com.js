@@ -4,12 +4,6 @@ _.register({
     path: /^\/(view|image)\/.*$/,
   },
   async ready () {
-    let o = $.$('div.view-navigation > a:nth-child(3)');
-    if (o) {
-      await $.openImage(o.href);
-      return;
-    }
-    o = $('#app > main > div > h2 > a');
-    await $.openLink(o.href);
-  },
+    const img = (_ADSBYPASSER_NAMESPACE___WEBPACK_IMPORTED_MODULE_0__["$"])('img.main-image');
+    await _ADSBYPASSER_NAMESPACE___WEBPACK_IMPORTED_MODULE_0__["$"].openImage(img.src);
 });
