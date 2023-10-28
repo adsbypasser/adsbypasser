@@ -127,122 +127,14 @@
     * croea.com
     * picexposed.com
 * sylnk.net
-    * ad4msan.ml
-    * ad4msan.win
-    * akanosora.com
-    * android-1.com
-    * animeforce.stream
-    * ani-share.com
-    * anjay.info
-    * autolinkach.com
-    * awcar.icu
-    * awsubsco.ml
-    * azhie.net
-    * blogspot.com
-    * bolaoke.club
     * boost.ink
-    * businessforyouand.me
-    * ceklinku.xyz
-    * compartiendofull.net
-    * compul.in
-    * daunshorte.teknologilink.com
-    * davinsurance.com
-    * decrypt.safelinkconverter.com
-    * decrypt2.safelinkconverter.com
-    * designmyhomee.com
-    * download-mirror.ga
-    * drakorsafe.tech
-    * drive.jepitkertas.com
-    * drivefiles.bid
-    * drivehub.link
-    * dukun-cit.com
-    * edogawa.lon.pw
-    * filmku.lompat.in
-    * fmlawkers.club
     * get-click2.blogspot.com
-    * getinfos.net
-    * giga74.com
-    * goou.in
-    * gtaind.com
-    * healthtod.com
-    * henpoi.lompat.in
-    * hexafile.net
-    * hightech.web.id
-    * hikarinoakariost.info
-    * idnation.net
-    * id-securelink.xyz
-    * indexmovie.club
     * intercelestial.com
-    * irisvera.com
-    * jaburalink.blogspot.com
-    * kakkoiisafe.us
-    * kombatch.loncat.pw
-    * kurosafe.menantisenja.com
-    * kurosafe.online
-    * kurosafe.website
-    * kurosafety.menantisenja.com
-    * lewat.in
-    * lewat.wibuindo.com
-    * lifesurance.info
-    * lindung.in
-    * lindung.me
-    * link.safelinkconverter.com
-    * linkach.com
     * lonelymoon.net
-    * losstor.com
-    * menantisenja.com
-    * motonews.club
-    * motosport.pw
-    * naisho.lompat.in
-    * nekopoi.ga
-    * nooyul.co
-    * omglyrics.com
-    * omgmusik.com
-    * pafpaf.info
-    * pebisnis-muda.com
-    * plantaheim.com
-    * plantaheim.web.id
-    * polrec.site
-    * safelinkconverter.com
     * safelinkreview.co
-    * safelinkreview.com
-    * safelinkreviewx.com
-    * sardeath.com
-    * sataniabatch.blogspot.com
-    * sehatlega.com
-    * sehatsegar.net
-    * short.awsubs.co
-    * short.awsubs.me
-    * situsbaru.me
-    * skinnycat.net
-    * skinnycat.org
-    * skiplink.io
-    * skyinsurance.ml
-    * spacetica.com
-    * speedcar.club
-    * sports14.pw
     * srelink.com
-    * starzone.cc
-    * stt.awsubs.co
-    * subetenews.com
     * sweetlantern.com
-    * sylnk.net
-    * technlab.com
-    * teknosafe.teknologilink.com
-    * telolet.in
-    * tetew.info
-    * tetewlink.me
-    * tojros.tk
-    * tout-debrid.net
-    * travelwithtricks.me
-    * unduh.in
-    * url.hulblog.com
-    * vehicle-techno.cf
-    * waifusafe.ooo
     * ww2.awsubs.co
-    * yametesenpai.xyz
-    * yumechan.club
-    * zap.in
 * segmentnext.com
     * segmentnext.com
     * videogameblogger.com
@@ -325,7 +217,6 @@
     * arba7kpro.com
     * aristoderas.com
     * atv.pw
-    * autech.xyz
     * autocarsmagz.xyz
     * bakilink.com
     * beast-birds.com
@@ -366,9 +257,7 @@
     * clkpay.com
     * clkpays.com
     * cll.press
-    * closetopic.site
     * coinlink.co
-    * converthinks.xyz
     * coolmitten.com
     * cooltxtgen.com
     * coshink.co
@@ -487,7 +376,6 @@
     * ilinkshortx.com
     * illink.net
     * imageoptimizer.us
-    * infosia.xyz
     * infotaxco.com
     * infotrendy.me
     * itiad.com
@@ -547,7 +435,6 @@
     * lyon.kim
     * makeurl.co
     * man2pro.com
-    * marivelkece.xyz
     * mawdok.com
     * mediakita.blog
     * megalink.pro
@@ -595,7 +482,6 @@
     * raolink.com
     * razerflixs.com
     * reb7konline.com
-    * remiyu.me
     * rifurl.com
     * royalown.review
     * royurls.bid
@@ -634,7 +520,6 @@
     * shrtfly.com
     * shrtfly.net
     * shrtit.tech
-    * simaholina.xyz
     * skip.az
     * skips.link
     * skipurls.com
@@ -891,7 +776,6 @@
     * javball.com
     * javlibrary.com
     * javtenshi.com
-    * k2nblog.com
     * keptarolo.hu
     * kimochi.info
     * kingofshrink.com
@@ -916,7 +800,6 @@
     * piccash.net
     * picclock.ru
     * picnew.space
-    * picnictrans.com
     * picpic.online
     * pic-upload.de
     * pig69.com
