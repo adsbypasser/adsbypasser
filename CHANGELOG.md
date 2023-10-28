@@ -6,10 +6,12 @@
     * mirrored.to
     * postimg.cc
 * added
+    * 1link.club
     * 3xplanet.net
     * img.trafficimage.club
     * javball.com
     * javtenshi.com
+    * multiup.io
     * pig69.com
     * yvmedia.my.id
 * retired
