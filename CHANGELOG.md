@@ -21,6 +21,7 @@
     * 10co.co
     * 10co.me
     * 10co.xyz
+    * 163.172.83.145
     * 1be.biz
     * 1dl.biz
     * 1ink.info
@@ -29,6 +30,8 @@
     * 55888.eu
     * abouttech.space
     * ad2links.com
+    * ad4msan.ml
+    * ad4msan.win
     * ad5.eu
     * adjet.eu
     * adlot.us
@@ -39,15 +42,26 @@
     * ah.pe
     * aii.sh
     * aka.gr
+    * akanosora.com
     * akoam.net
     * allanalpass.com
     * all-poster.ru
     * ally.sh
     * ally.shortens.co
     * amateurfreak.org
+    * android-1.com
+    * animeforce.stream
+    * ani-share.com
+    * anjay.info
     * apasih.pw
+    * autech.xyz
     * autofans.pw
+    * autolinkach.com
     * autoride.pw
+    * awcar.icu
+    * awsubs.co
+    * awsubsco.ml
+    * azhie.net
     * bat5.com
     * bdupload.asia
     * bdupload.info
@@ -57,16 +71,24 @@
     * binbox.io
     * blameless.work
     * blog.langw.web.id
+    * blogspot.com
     * bluemediafiles.com
+    * bolaoke.club
     * bunnyforum.org
+    * businessforyouand.me
+    * ceklinku.xyz
     * celebclk.com
     * cl250.club
     * clb1.com
     * cli.gs
     * clk.im
+    * closetopic.site
     * coeg.in
     * coinurl.com
+    * compartiendofull.net
+    * compul.in
     * comyonet.com
+    * converthinks.xyz
     * coolrom.com
     * crockolinks.com
     * cubonaw.ml
@@ -76,18 +98,28 @@
     * dalezobux.xyz
     * damimage.com
     * darpix.ga
+    * daunshorte.teknologilink.com
     * dausel.co
+    * davinsurance.com
     * dawnstation.com
+    * designmyhomee.com
     * dimtus.com
     * disingkat.in
     * dl.layarkaca21.vip
     * dl-protect.com
     * domaink.ru
+    * download-mirror.ga
+    * drakorsafe.tech
+    * drive.jepitkertas.com
+    * drivefiles.bid
+    * drivehub.link
     * drstickyfingers.com
+    * dukun-cit.com
     * durl.me
     * dutchycorp.space
     * dwrfslsqpdfqfwy.net
     * ecoimages.xyz
+    * edogawa.lon.pw
     * eightteen.com
     * elil.cc
     * elsfile.org
@@ -98,8 +130,10 @@
     * fastpic.ru
     * fileproject.com.br
     * filesonthe.net
+    * filmku.lompat.in
     * fiuxy.bz
     * fiuxy.co
+    * fmlawkers.club
     * fotolink.su
     * fotoo.pl
     * freean.us
@@ -112,20 +146,32 @@
     * funkyimg.com
     * gallerycloud.net
     * gameinfo.pw
+    * gameinfo.pw
     * gamemod.pro
+    * getinfos.net
+    * giga74.com
     * goimagehost.com
+    * goou.in
     * goto.loncat.in
     * greasyimage.com
     * greget.space
     * gunting.web.id
     * hdmoza.com
+    * healthtod.com
     * healthykk.com
+    * henpoi.lompat.in
     * hentai-pop.com
+    * hexafile.net
+    * hightech.web.id
+    * hikarinoakariost.info
     * holdthemoan.net
     * hosturimage.com
     * hotimage.uk
     * hotimages.eu
+    * i.gtaind.com
     * i.hentaiyoutube.com
+    * idnation.net
+    * id-securelink.xyz
     * ifotos.pl
     * ima.gy
     * ima.so
@@ -212,18 +258,34 @@
     * imgviv.xyz
     * imgz.pw
     * imgzap.com
+    * indexmovie.club
     * indishare.me
     * infosehatku.club
+    * infosia.xyz
     * insurance-waifu.cf
     * ipicture.su
+    * irisvera.com
     * itw.me
     * ity.im
     * javtor.com
     * jheberg.net
+    * k2nblog.com
+    * kakkoiisafe.us
+    * kombatch.loncat.pw
+    * kurosafe.menantisenja.com
+    * kurosafe.online
+    * kurosafe.website
+    * kurosafety.menantisenja.com
     * landscapenature.pw
+    * lewat.in
+    * lewat.wibuindo.com
     * lienscash.com
+    * lifesurance.info
+    * lindung.in
+    * lindung.me
     * link.im
     * link4ad.com
+    * linkach.com
     * linkbabes.com
     * linkbucks.com
     * linkduit.net
@@ -231,36 +293,50 @@
     * linksas.us
     * linksupto.com
     * lnk.co
+    * losstor.com
     * lostpic.net
     * lynk.my
+    * marivelkece.xyz
     * megaimage.org
+    * menantisenja.com
+    * micin.online
     * mije.net
     * minidroid.net
     * miniurls.co
     * mirrorcreator.com
     * mlink.club
     * moesubs.com
+    * motonews.club
+    * motosport.pw
     * multifilemirror.com
     * multiimg.com
     * multiupfile.com
     * my-link.pro
     * mylink.zone
     * mylinkgen.com
+    * naisho.lompat.in
     * namiyt.com
     * naturalhealthy.xyz
+    * naturalhealthy.xyz
     * naughtygate.net
+    * nekopoi.ga
     * nimzshare.com
     * njiir.com
+    * nooyul.co
     * nsfw.in
     * nutshellurl.com
     * oko.sh
+    * omglyrics.com
+    * omgmusik.com
     * onepiece-ex.com.br
     * onle.co
     * overdream.cz
     * overpic.net
     * p.pw
+    * pafpaf.info
     * pasted.co
     * pdi2.net
+    * pebisnis-muda.com
     * peekatmygirlfriend.com
     * pic.hotimg.site
     * pic.s-jav.com
@@ -270,13 +346,17 @@
     * piclick.org
     * pic-money.ru
     * picmoza.com
+    * picnictrans.com
     * picshare.geenza.com
     * picstream.tv
     * picturedip.com
     * pictureturn.com
     * pixsor.com
     * pixup.us
+    * plantaheim.com
+    * plantaheim.web.id
     * pnd.tl
+    * polrec.site
     * poontown.net
     * pop-img.info
     * pornbus.org
@@ -289,6 +369,7 @@
     * qrrro.com
     * radikal.ru
     * rdlnk.co
+    * remiyu.me
     * rhvgmritmziwcm.net
     * richlink.com
     * ron.vn
@@ -296,9 +377,18 @@
     * s.imghost.top
     * s.yukisubs.com
     * sa.ae
+    * safelinkconverter.com
+    * safelinkreview.com
+    * safelinkreviewx.com
     * safeurl.eu
+    * sardeath.com
+    * sataniabatch.blogspot.com
+    * sehatlega.com
+    * sehatsegar.net
     * seriousdeals.net
     * shaggyimg.pro
+    * short.awsubs.co
+    * short.awsubs.me
     * shorten.sh
     * shorti.ga
     * shortid.co
@@ -307,31 +397,55 @@
     * shtlink.co
     * shtme.co
     * siherp.com
+    * simaholina.xyz
     * siotong.com
     * sipkur.net
+    * situsbaru.me
+    * skinnycat.net
+    * skinnycat.org
     * sk-ip.ru
     * sk-ip.tech
+    * skiplink.io
+    * skyinsurance.ml
+    * spacetica.com
+    * speedcar.club
+    * sports14.pw
     * st.kurogaze.net
     * st.wardhanime.net
     * star-hentai.com
+    * starzone.cc
+    * stt.awsubs.co
+    * subetenews.com
     * subirimagenes.com
+    * sylnk.net
+    * technlab.com
     * teenimage.org
     * teenshot.org
+    * teknosafe.teknologilink.com
+    * telolet.in
     * telondasmu.com
+    * tetew.info
+    * tetewlink.me
     * theseblogs.com
     * tinizo.com
     * tinylinks.co
     * tinyurl.is
+    * tojros.tk
     * totaldebrid.org
+    * tout-debrid.net
     * tr5.in
+    * travelwithtricks.me
     * trueimg.xyz
+    * ultimate.turkdown.com
     * underpic.club
+    * unduh.in
     * unfake.it
     * unporn.site
     * upgrand.site
     * uplinkto.me
     * upmirror.info
     * url.fm
+    * url.hulblog.com
     * urlbeat.net
     * urlcash.net
     * urlinn.com
@@ -341,11 +455,14 @@
     * uvonahaze.xyz
     * vavi.co
     * vcrypt.net
+    * vehicle-techno.cf
     * vidto.me
     * viidii.info
     * vir.al
     * voyeurimage.org
+    * waifusafe.ooo
     * whackyvidz.com
+    * wibuindo.xyz
     * wibuindo.xyz
     * wikiall.org
     * won.pe
@@ -360,12 +477,15 @@
     * xxx.sexex.xyz
     * xxxhost.me
     * xxxscreens.com
+    * yametesenpai.xyz
     * yankoimages.net
     * yep.it
     * yooclick.com
     * youfap.me
     * ysear.ch
+    * yumechan.club
     * yyv.co
+    * zap.in
     * zatnawqy.net
     * zeefiles.download
     * zupload.me
