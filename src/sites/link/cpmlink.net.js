@@ -18,7 +18,7 @@ _.register({
   rule: {
     host: [
       /^shon\.xyz$/,
-      /^(www\.)?shink\.me$/,
+      /^shink\.me$/,
     ],
     path: /^\/[\w-]+$/,
   },
