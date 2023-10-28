@@ -1,6 +1,7 @@
 ## TBA
 
 * fixed
+    * imagebam.com
     * imgair.net
     * mirrored.to
     * postimg.cc
