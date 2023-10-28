@@ -836,6 +836,7 @@
     * postimg.cc
 * else
     * 1ink.cc
+    * 1link.club
     * 1pics.ru
     * 1v.to
     * 3xplanet.com
@@ -908,6 +909,7 @@
     * mirrored.to
     * mirrorfilehost.com
     * mrjh.org
+    * multiup.io
     * nmac.to
     * noelshack.com
     * oni.vn
