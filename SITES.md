@@ -619,7 +619,6 @@
 * skips.link
 * skipurls.com
 * slegle.com
-* slink.bid
 * smarteasystudy.com
 * smilinglinks.com
 * smwebs.xyz
