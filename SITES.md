@@ -66,7 +66,6 @@
 * allreports.site
 * alseoo.com
 * amenitiees.com
-* apkmodif.com
 * apkshrt.com
 * arabtvlink.com
 * arba7co.com
