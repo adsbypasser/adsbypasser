@@ -408,6 +408,7 @@
     * sk-ip.tech
     * skiplink.io
     * skyinsurance.ml
+    * slink.bid
     * spacetica.com
     * speedcar.club
     * sports14.pw
