@@ -1,9 +1,6 @@
 _.register({
   rule: {
-    host: [
-      /^(www\.)?ouo\.(io|press)$/,
-      /^(sloomp|novaenreta)\.space$/,
-    ],
+    host: /^(www\.)?ouo\.(io|press)$/,
     path: /(^\/\w+$|^\/go\/\w+$)/,
   },
   async ready () {
