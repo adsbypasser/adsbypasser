@@ -5,6 +5,7 @@
     * imgair.net
     * mirrored.to
     * postimg.cc
+    * spaste.com
 * added
     * 1link.club
     * 3xplanet.net
