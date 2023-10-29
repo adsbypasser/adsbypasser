@@ -130,7 +130,6 @@
 * cloudgallery.net
 * cocoleech.com
 * coinlink.co
-* coinlink.co
 * coolmitten.com
 * cooltxtgen.com
 * corepix.org
@@ -233,7 +232,6 @@
 * fotosik.pl
 * foxurl.net
 * freakimage.com
-* freeimgup.com
 * freeimgup.com
 * freespinwins.com
 * fullytech24.com
@@ -414,7 +412,6 @@
 * kropic.com
 * kutpay.com
 * kuylink.com
-* kvador.com
 * kvador.com
 * l2s.io
 * lapak.link
