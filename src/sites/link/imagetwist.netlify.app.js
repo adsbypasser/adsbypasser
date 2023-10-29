@@ -3,7 +3,7 @@ _.register({
     host: /^imagetwist\.netlify\.app$/,
   },
   async ready () {
-    const a = $('form a');
+    const a = $('.btn.btn-dark');
     await $.openLink(a.href);
   },
 });
