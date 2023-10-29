@@ -86,9 +86,6 @@
     * sh.st
     * viid.me
     * wiid.me
-* seomafia.net
-    * apploadz.ru
-    * seomafia.net
 * imgsee.me
     * fotokiz.com
     * hulkimge.com
@@ -149,16 +146,10 @@
 * adb.ug
     * adb.ug
 * ouo.io
-    * novaenreta.space
     * ouo.io
     * ouo.press
-    * sloomp.space
 * fas.li
     * cpmlink.net
-    * croco.me
-    * croco.site
-    * fas.li
-    * likn.xyz
     * shink.me
     * shon.xyz
 * linkdrop.net
@@ -626,19 +617,9 @@
     * zi.ht
     * zlshorte.net
     * zutrox.link
-* gsurl.me
-    * g5u.pw
-    * getsl.me
-    * glinks.me
-    * gsul.me
-    * gsur.in
-    * gsurl.in
-    * gsurl.me
-    * gurl.ly
 * al.ly
     * al.ly
-* allkeyshop.com
-    * allkeyshop.com
+* cshort.org
     * cshort.org
 * imgvip.net
     * cloudgallery.net
@@ -696,26 +677,10 @@
 * short.am
     * short.am
     * srt.am
-* ur.ly
-    * ur.ly
-    * urly.mobi
 * prnt.sc
     * prnt.sc
-* probusinesshub.com
-    * entretendonaweb.ga
-    * mutharammss.xyz
-    * ourtechnoew.xyz
-    * probusinesshub.com
-    * starvate.in
-    * technodia.xyz
-    * thanda.xyz
-    * thinana.xyz
-    * trackywe.in
-    * viralcollect.info
 * linkshrink.net
-    * dwindly.io
     * linkshrink.net
-    * lnkshrnk.net
 * postimg
     * pixxxels.cc
     * postimg.cc
@@ -755,7 +720,6 @@
     * get.ujv.al
     * gkurl.us
     * gsmzone.site
-    * hello.tribuntekno.com
     * hostingpics.net
     * hotshorturl.com
     * iiv.pl
@@ -823,7 +787,6 @@
     * swzz.xyz
     * techfunda.net
     * thinfi.com
-    * tinyarrows.com
     * tinypic.com
     * try2link.com
     * turboimagehost.com
