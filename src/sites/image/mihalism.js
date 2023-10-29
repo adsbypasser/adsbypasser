@@ -14,15 +14,6 @@
   });
 
   _.register({
-    rule: {
-      host: /^imgcream\.com$/,
-      path: /^\/viewerr.*\.php$/,
-      query: /file=([^&]+)/,
-    },
-    start: helper,
-  });
-
-  _.register({
     rule: [
       'https://pacific.picturedent.org/image/*',
     ],
