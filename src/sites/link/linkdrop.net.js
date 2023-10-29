@@ -85,7 +85,6 @@
         /^thin\.at$/,
         /^(tips\.)?atv\.pw$/,
         /^skip\.az$/,
-        /^slink\.bid$/,
         /^(funnyquiz|mediakita|kabarviral)\.blog$/,
         /^(icutit|earnbig|cutearn)\.ca$/,
         /^e2s\.cc$/,
