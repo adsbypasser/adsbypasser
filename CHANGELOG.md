@@ -2,6 +2,7 @@
 
 * fixed
     * imagebam.com
+    * imagetwist.netlify.app
     * imgair.net
     * mirrored.to
     * postimg.cc
