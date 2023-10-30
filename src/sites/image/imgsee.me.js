@@ -80,42 +80,6 @@
     });
   }
 
-  // Used when the form's shell does not exist when page loaded.
-  // Wait for the given selector, and normalize matched element by normalizer.
-  function waitFormShell (selector, normalizer) {
-    return new Promise((resolve) => {
-      const handle = setInterval(() => {
-        let shell = $.$(selector);
-        if (!shell) {
-          return;
-        }
-        clearInterval(handle);
-        shell = normalizer(shell);
-        resolve(shell);
-      }, 500);
-    });
-  }
-
-  function parseStyle (style) {
-    style = style.textContent;
-    const pattern = /\.(\w+)\{visibility:initial;\}/g;
-    let rv = null;
-    const classes = [];
-    while ((rv = pattern.exec(style)) !== null) {
-      classes.push(rv[1]);
-    }
-    return classes;
-  }
-
-  function filterDuplicated (classes) {
-    const table = new Map();
-    for (const c of classes) {
-      if (table.has(c)) {
-        table.set(c, false);
-      } else {
-        table.set(c, true);
-      }
-    }
     /* eslint-disable no-unused-vars */
     return Array.from(table.entries()).filter(([_, unique]) => {
       return unique;
@@ -123,25 +87,6 @@
       return c;
     });
     /* eslint-enable no-unused-vars */
-  }
-
-  function findVisibleForm (classes) {
-    for (const class_ of classes) {
-      const form = $.$(`form.${class_}`);
-      if (!form) {
-        continue;
-      }
-      const button = $.$('input[type="button"], button[type="button"], button[class]', form);
-      if (!button) {
-        continue;
-      }
-      const v = getComputedStyle(button).getPropertyValue('visibility');
-      if (v !== 'visible') {
-        continue;
-      }
-      return button;
-    }
-    return null;
   }
 
   function getNext1 (i) {
