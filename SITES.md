@@ -131,7 +131,6 @@
 * coinlink.co
 * coolmitten.com
 * cooltxtgen.com
-* corepix.org
 * corneey.com
 * coshink.co
 * cosmicmony.com
@@ -181,7 +180,6 @@
 * dislooks.com
 * dmus.in
 * downloaddoom.com
-* drlink.online
 * dunyanews.xyz
 * dz4invest.com
 * dz4link.com
@@ -314,7 +312,6 @@
 * imgcarry.com
 * imgclick.net
 * imgcloud.pw
-* imgcream.com
 * imgdawgknuttz.com
 * imgdew.pw
 * imgdollar.com
@@ -325,8 +322,6 @@
 * imgfiles.org
 * imgflyer.xyz
 * imghit.com
-* imghost.club
-* imghost.top
 * imgizw.buzz
 * imgizx.buzz
 * imgkia.buzz
@@ -520,14 +515,12 @@
 * pic5you.ru
 * picbaron.com
 * piccash.net
-* picclock.ru
 * picdollar.com
 * picexposed.com
 * picker-click.ru
 * piclerz.store
 * pic-maniac.com
 * picnew.space
-* picpic.online
 * picrok.com
 * pics4you.net
 * pics-money.ru
@@ -544,7 +537,6 @@
 * pixmtke.buzz
 * pixroute.com
 * pixxxels.cc
-* pornbaker.men
 * pornyhost.com
 * postimg.cc
 * premiumzen.com
@@ -621,7 +613,6 @@
 * smarteasystudy.com
 * smilinglinks.com
 * smwebs.xyz
-* somnath2003.xyz
 * spamlink.org
 * spaste.com
 * splashnews.ooo
@@ -744,7 +735,6 @@
 * wrap-w0rld.com
 * ww2.awsubs.co
 * xemlink.net
-* xxximagetpb.org
 * xxxs.org
 * xxxwebdlxxx.org
 * xxxwebdlxxx.top
