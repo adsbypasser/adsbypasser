@@ -5,10 +5,8 @@
   _.register({
     rule: {
       host: [
-        /^(imgmonkey|imgtrex|imgve|uploadrr|imageeer|pic-maniac)\.com$/,
-        /^(hulkimge|imgsen|imgsto|kvador|kropic|picdollar|silverpic)\.com$/,
-        /^www\.uimgshare\.com$/,
-        /^(www\.)?imgsee\.me$/,
+        /^imgmonkey\.com$/,
+        /^(imgsen|imgsto|kvador|kropic|picdollar|silverpic)\.com$/,
         /^(imgclick|pics4you)\.net$/,
         /^imgstar\.eu$/,
       ],
@@ -42,88 +40,7 @@
 
   _.register({
     rule: {
-      host: /^imgrock\.info$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      const i = $.$('img.picview');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-
-      // disable devtools blocker
-      $.window._0x337c4b = null;
-
-      const node = await getAmbiguousForm('div[id] + div[id] > style', (node) => {
-        return node.parentElement;
-      });
-      // it will replace the token on 'click hover', so just emulate this action
-      node.click();
-      node.click();
-      node.click();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^picrok\.com$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      const i = $.$('img.picview');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-      const node = await getAmbiguousForm('body > div > div[id] > style', (node) => {
-        return node.parentElement;
-      });
-      node.click();
-      node.click();
-      node.click();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^imgoutlet\.pw$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      const i = $.$('img.picview');
-      if (i) {
-        // second stage
-
-        // disable devtools blocker
-        $.window._0x5b50b7 = null;
-
-        await $.openImage(i.src);
-        return;
-      }
-
-      // disable devtools blocker
-      $.window._0x5b50b7 = null;
-
-      let node = null;
-      while (!node) {
-        await _.wait(500);
-        node = $.$('button[name="next"]');
-      }
-      node.click();
-      node.click();
-      node.click();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: [
-        /^(picbaron|imgbaron|kvador|fotokiz)\.com$/,
-        /^imgfiles\.org$/,
-      ],
+      host: /^(picbaron|imgbaron|kvador|fotokiz)\.com$/
       path: PATH_RULE,
     },
     async ready () {
@@ -139,97 +56,7 @@
     },
   });
 
-  _.register({
-    rule: /^http:\/\/imgdragon\.com\/(getfil\.php|dl)$/,
-    async ready () {
-      const i = $.$('img.pic');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-
-      await _.wait(500);
-      const f = $('#ContinueFRM');
-      f.submit();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^imgrock\.pw$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      const i = $.$('img.picview');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-
-      const node = await getAmbiguousForm(
-        'div[id] + div[id] > input:not([style])',
-        (node) => {
-          const d = node.parentElement;
-          // first click the input element, then the ambiguous forms will show
-          node.click();
-          return d;
-        });
-      node.click();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^(imgview|imgtown|imgmaze|imgdew)\.pw$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      $.remove('iframe');
-
-      const i = $.$('img.picview');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-
-      $.window._0x58ff35 = null;
-
-      const node = await getAmbiguousForm(
-        'script + div[id] > input:not([style])',
-        (node) => {
-          const d = node.parentElement;
-          // first click the input element, then the ambiguous forms will show
-          node.click();
-          return d;
-        });
-      node.click();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^imgant\.com$/,
-      path: /^\/img-(\d+)\.html$/,
-    },
-    async start (m) {
-      await $.openLink(`imgview-${m.path[1]}.html`);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^imgant\.com$/,
-      path: /^\/imgview-\d+\.html$/,
-    },
-    async ready () {
-      const i = $('#picView');
-      await $.openImage(i.src);
-    },
-  });
-
+ 
   function waitDOM (element, fn) {
     return new Promise((resolve) => {
       const observer = new MutationObserver((mutations) => {
@@ -251,21 +78,6 @@
         childList: true,
       });
     });
-  }
-
-  // Used when the form's shell does not exist when page loaded.
-  async function getAmbiguousForm (selector, shellNormalizer) {
-    const d = await waitFormShell(selector, shellNormalizer);
-    const style = $('style', d);
-    let visibleClasses = parseStyle(style);
-    visibleClasses = filterDuplicated(visibleClasses);
-    while (true) {
-      const button = findVisibleForm(visibleClasses);
-      if (button) {
-        return button;
-      }
-      await _.wait(500);
-    }
   }
 
   // Used when the form's shell does not exist when page loaded.
