@@ -40,7 +40,7 @@
 
   _.register({
     rule: {
-      host: /^(picbaron|imgbaron|kvador|fotokiz)\.com$/
+      host: /^(picbaron|imgbaron|kvador|fotokiz)\.com$/,
       path: PATH_RULE,
     },
     async ready () {
