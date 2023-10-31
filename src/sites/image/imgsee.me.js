@@ -5,10 +5,8 @@
   _.register({
     rule: {
       host: [
-        /^(imgmonkey|imgtrex|imgve|uploadrr|imageeer|pic-maniac)\.com$/,
-        /^(hulkimge|imgsen|imgsto|kvador|kropic|picdollar|silverpic)\.com$/,
-        /^www\.uimgshare\.com$/,
-        /^(www\.)?imgsee\.me$/,
+        /^imgmonkey\.com$/,
+        /^(imgsen|imgsto|kvador|kropic|picdollar|silverpic)\.com$/,
         /^(imgclick|pics4you)\.net$/,
         /^imgstar\.eu$/,
       ],
@@ -89,41 +87,7 @@
 
   _.register({
     rule: {
-      host: /^imgoutlet\.pw$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      const i = $.$('img.picview');
-      if (i) {
-        // second stage
-
-        // disable devtools blocker
-        $.window._0x5b50b7 = null;
-
-        await $.openImage(i.src);
-        return;
-      }
-
-      // disable devtools blocker
-      $.window._0x5b50b7 = null;
-
-      let node = null;
-      while (!node) {
-        await _.wait(500);
-        node = $.$('button[name="next"]');
-      }
-      node.click();
-      node.click();
-      node.click();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: [
-        /^(picbaron|imgbaron|kvador|fotokiz)\.com$/,
-        /^imgfiles\.org$/,
-      ],
+      host: /^(picbaron|imgbaron|kvador|fotokiz)\.com$/,
       path: PATH_RULE,
     },
     async ready () {
@@ -135,22 +99,6 @@
       }
 
       const f = $('form');
-      f.submit();
-    },
-  });
-
-  _.register({
-    rule: /^http:\/\/imgdragon\.com\/(getfil\.php|dl)$/,
-    async ready () {
-      const i = $.$('img.pic');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-
-      await _.wait(500);
-      const f = $('#ContinueFRM');
       f.submit();
     },
   });
@@ -206,27 +154,6 @@
           return d;
         });
       node.click();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^imgant\.com$/,
-      path: /^\/img-(\d+)\.html$/,
-    },
-    async start (m) {
-      await $.openLink(`imgview-${m.path[1]}.html`);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^imgant\.com$/,
-      path: /^\/imgview-\d+\.html$/,
-    },
-    async ready () {
-      const i = $('#picView');
-      await $.openImage(i.src);
     },
   });
 
