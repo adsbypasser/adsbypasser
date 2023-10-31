@@ -15,6 +15,7 @@
     * javtenshi.com
     * multiup.io
     * pig69.com
+    * tezzpic.com
     * yvmedia.my.id
 * retired
     * 01.nl
