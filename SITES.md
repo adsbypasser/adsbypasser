@@ -650,6 +650,7 @@
 * techsapparel.com
 * techtremendous.com
 * templink.org
+* tezzpic.com
 * thefreech.com
 * thegyaanipoint.com
 * thin.at
