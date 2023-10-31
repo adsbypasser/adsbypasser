@@ -19,27 +19,6 @@
 
   _.register({
     rule: {
-      host: /^imgoutlet\.com$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      const i = $.$('img.pic');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-
-      const d = $('div[id^="imageviewi"]');
-      const node = await waitDOM(d, (node) => {
-        return node.nodeName === 'FORM' && $.$('input[name="id"]', node);
-      });
-      node.submit();
-    },
-  });
-
-  _.register({
-    rule: {
       host: /^(picbaron|imgbaron|kvador|fotokiz)\.com$/,
       path: PATH_RULE,
     },
@@ -55,29 +34,6 @@
       f.submit();
     },
   });
-
-  function waitDOM (element, fn) {
-    return new Promise((resolve) => {
-      const observer = new MutationObserver((mutations) => {
-        mutations.forEach((mutation) => {
-          if (mutation.type !== 'childList') {
-            return;
-          }
-          const [k, , r] = _.find(mutation.addedNodes, (child) => {
-            return fn(child) ? child : _.none;
-          });
-          if (k === _.none) {
-            return;
-          }
-          observer.disconnect();
-          resolve(r);
-        });
-      });
-      observer.observe(element, {
-        childList: true,
-      });
-    });
-  }
 
   function getNext1 (i) {
     return i.value;
