@@ -40,53 +40,6 @@
 
   _.register({
     rule: {
-      host: /^imgrock\.info$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      const i = $.$('img.picview');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-
-      // disable devtools blocker
-      $.window._0x337c4b = null;
-
-      const node = await getAmbiguousForm('div[id] + div[id] > style', (node) => {
-        return node.parentElement;
-      });
-      // it will replace the token on 'click hover', so just emulate this action
-      node.click();
-      node.click();
-      node.click();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^picrok\.com$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      const i = $.$('img.picview');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-      const node = await getAmbiguousForm('body > div > div[id] > style', (node) => {
-        return node.parentElement;
-      });
-      node.click();
-      node.click();
-      node.click();
-    },
-  });
-
-  _.register({
-    rule: {
       host: /^(picbaron|imgbaron|kvador|fotokiz)\.com$/,
       path: PATH_RULE,
     },
@@ -100,60 +53,6 @@
 
       const f = $('form');
       f.submit();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^imgrock\.pw$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      const i = $.$('img.picview');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-
-      const node = await getAmbiguousForm(
-        'div[id] + div[id] > input:not([style])',
-        (node) => {
-          const d = node.parentElement;
-          // first click the input element, then the ambiguous forms will show
-          node.click();
-          return d;
-        });
-      node.click();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^(imgview|imgtown|imgmaze|imgdew)\.pw$/,
-      path: PATH_RULE,
-    },
-    async ready () {
-      $.remove('iframe');
-
-      const i = $.$('img.picview');
-      if (i) {
-        // second stage
-        await $.openImage(i.src);
-        return;
-      }
-
-      $.window._0x58ff35 = null;
-
-      const node = await getAmbiguousForm(
-        'script + div[id] > input:not([style])',
-        (node) => {
-          const d = node.parentElement;
-          // first click the input element, then the ambiguous forms will show
-          node.click();
-          return d;
-        });
-      node.click();
     },
   });
 
@@ -178,85 +77,6 @@
         childList: true,
       });
     });
-  }
-
-  // Used when the form's shell does not exist when page loaded.
-  async function getAmbiguousForm (selector, shellNormalizer) {
-    const d = await waitFormShell(selector, shellNormalizer);
-    const style = $('style', d);
-    let visibleClasses = parseStyle(style);
-    visibleClasses = filterDuplicated(visibleClasses);
-    while (true) {
-      const button = findVisibleForm(visibleClasses);
-      if (button) {
-        return button;
-      }
-      await _.wait(500);
-    }
-  }
-
-  // Used when the form's shell does not exist when page loaded.
-  // Wait for the given selector, and normalize matched element by normalizer.
-  function waitFormShell (selector, normalizer) {
-    return new Promise((resolve) => {
-      const handle = setInterval(() => {
-        let shell = $.$(selector);
-        if (!shell) {
-          return;
-        }
-        clearInterval(handle);
-        shell = normalizer(shell);
-        resolve(shell);
-      }, 500);
-    });
-  }
-
-  function parseStyle (style) {
-    style = style.textContent;
-    const pattern = /\.(\w+)\{visibility:initial;\}/g;
-    let rv = null;
-    const classes = [];
-    while ((rv = pattern.exec(style)) !== null) {
-      classes.push(rv[1]);
-    }
-    return classes;
-  }
-
-  function filterDuplicated (classes) {
-    const table = new Map();
-    for (const c of classes) {
-      if (table.has(c)) {
-        table.set(c, false);
-      } else {
-        table.set(c, true);
-      }
-    }
-    /* eslint-disable no-unused-vars */
-    return Array.from(table.entries()).filter(([_, unique]) => {
-      return unique;
-    }).map(([_, c]) => {
-      return c;
-    });
-    /* eslint-enable no-unused-vars */
-  }
-
-  function findVisibleForm (classes) {
-    for (const class_ of classes) {
-      const form = $.$(`form.${class_}`);
-      if (!form) {
-        continue;
-      }
-      const button = $.$('input[type="button"], button[type="button"], button[class]', form);
-      if (!button) {
-        continue;
-      }
-      const v = getComputedStyle(button).getPropertyValue('visibility');
-      if (v !== 'visible') {
-        continue;
-      }
-      return button;
-    }
-    return null;
   }
 
   function getNext1 (i) {
