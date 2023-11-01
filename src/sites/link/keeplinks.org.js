@@ -1,4 +1,4 @@
-_register({
+_.register({
   rule: {
     host: /^(www\.)?keeplinks\.org$/,
   },
