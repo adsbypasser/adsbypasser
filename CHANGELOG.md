@@ -16,7 +16,9 @@
     * keeplinks.org
     * multiup.io
     * pig69.com
+    * shortlinkto.site
     * tezzpic.com
+    * uplinkto.hair
     * yvmedia.my.id
 * retired
     * 01.nl
