@@ -589,6 +589,7 @@
 * shortglobal.com
 * shortit.ca
 * shortlinko.com
+* shortlinkto.site
 * shortly.xyz
 * shortye.net
 * shortzon.com
@@ -691,6 +692,7 @@
 * ulshare.net
 * ultraskora.com
 * updatetribun.org
+* uplinkto.hair
 * uploadhaven.com
 * uploadrar.com
 * uploadrr.com
