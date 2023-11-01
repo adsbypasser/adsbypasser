@@ -155,7 +155,6 @@
     * funkyimg.com
     * gallerycloud.net
     * gameinfo.pw
-    * gameinfo.pw
     * gamemod.pro
     * getinfos.net
     * giga74.com
@@ -177,6 +176,7 @@
     * hosturimage.com
     * hotimage.uk
     * hotimages.eu
+    * hulkimge.com
     * i.gtaind.com
     * i.hentaiyoutube.com
     * idnation.net
@@ -187,7 +187,6 @@
     * imadul.com
     * image2you.ru
     * imageban.net
-    * imageban.net
     * imageblinks.com
     * imagecarry.com
     * imagecorn.com
@@ -196,6 +195,7 @@
     * imagedecode.com
     * imagedomino.com
     * imagedunk.com
+    * imageeer.com
     * imagefruit.com
     * imageko.com
     * imageon.org
@@ -216,6 +216,7 @@
     * img.3ezy.net
     * img1.imagilive.com
     * img2share.com
+    * imgant.com
     * imgazure.com
     * imgbabes.com
     * imgbalana.com
@@ -224,11 +225,14 @@
     * imgcarry.com
     * imgcentral.com
     * imgcloud.co
-    * imgcurl.com
     * imgcream.com
+    * imgcurl.com
+    * imgdew.pw
     * imgdino.com
+    * imgdragon.com
     * imgfantasy.com
     * imgfapper.com
+    * imgfiles.org
     * imgflare.com
     * imgfresh.info
     * imgfsh.xyz
@@ -242,8 +246,11 @@
     * imglemon.com
     * imgmain.com
     * imgmass.com
+    * imgmaze.pw
     * imgnemo.com
     * imgnip.com
+    * imgoutlet.com
+    * imgoutlet.pw
     * imgpart.com
     * img-pay.com
     * imgpix.net
@@ -252,8 +259,11 @@
     * imgpython.net
     * imgrat.com
     * imgreputa.com
+    * imgrock.info
+    * imgrock.pw
     * imgsavvy.com
     * imgsay.com
+    * imgsee.me
     * imgseeds.com
     * imgserve.net
     * imgshots.com
@@ -262,11 +272,15 @@
     * imgstudio.org
     * imgtiger.com
     * imgtornado.com
+    * imgtown.pw
+    * imgtrex.com
     * imgtrial.com
     * imgtzar.com
     * imguur.pictures
     * imgvault.pw
+    * imgve.com
     * img-view.net
+    * imgview.pw
     * imgviv.xyz
     * imgz.pw
     * imgzap.com
@@ -329,7 +343,6 @@
     * naisho.lompat.in
     * namiyt.com
     * naturalhealthy.xyz
-    * naturalhealthy.xyz
     * naughtygate.net
     * nekopoi.ga
     * nimzshare.com
@@ -357,10 +370,12 @@
     * piclambo.net
     * picleet.com
     * piclick.org
+    * pic-maniac.com
     * pic-money.ru
     * picmoza.com
     * picnictrans.com
     * picpic.online
+    * picrok.com
     * picshare.geenza.com
     * picstream.tv
     * picturedip.com
@@ -453,6 +468,7 @@
     * tr5.in
     * travelwithtricks.me
     * trueimg.xyz
+    * uimgshare.com
     * ultimate.turkdown.com
     * underpic.club
     * unduh.in
@@ -460,6 +476,7 @@
     * unporn.site
     * upgrand.site
     * uplinkto.me
+    * uploadrr.com
     * upmirror.info
     * url.fm
     * url.hulblog.com
@@ -479,7 +496,6 @@
     * voyeurimage.org
     * waifusafe.ooo
     * whackyvidz.com
-    * wibuindo.xyz
     * wibuindo.xyz
     * wikiall.org
     * won.pe
@@ -507,7 +523,6 @@
     * zatnawqy.net
     * zeefiles.download
     * zupload.me
-
 
 ## v7.22.0 - 2023-10-04
 
