@@ -24,6 +24,7 @@
 * 5brgedid.com
 * 6aba2day.com
 * 8o.ee
+* a2zapk.io
 * a5barfawria.com
 * abload.de
 * acidimg.cc
@@ -67,6 +68,7 @@
 * alseoo.com
 * amenitiees.com
 * apkshrt.com
+* apunkasoftware.net
 * arabtvlink.com
 * arba7co.com
 * arba7kpro.com
@@ -482,6 +484,7 @@
 * multiup.io
 * mykinggo.com
 * mylink.us
+* n.fcd.su
 * newsatfit.com
 * newsinjules.com
 * newskart.xyz
@@ -503,6 +506,7 @@
 * ouo.press
 * ourcareerblog.com
 * ourl.io
+* outletpic.com
 * p0xpicmoney.ru
 * pa4l.esy.es
 * pacific.picturedent.org
@@ -591,6 +595,7 @@
 * shortlinko.com
 * shortlinkto.site
 * shortly.xyz
+* shortmoz.link
 * shortye.net
 * shortzon.com
 * shotly.io
@@ -653,6 +658,7 @@
 * techtremendous.com
 * templink.org
 * tezzpic.com
+* thefileslocker.net
 * thefreech.com
 * thegyaanipoint.com
 * thin.at
