@@ -1,9 +1,12 @@
 _.register({
   rule: {
-    host: /^tezzpic\.com$/,
+    host: [
+      /^outletpic\.com$/,
+      /^tezzpic\.com$/,
+    ],  
   },
   async ready () {
-    const img = $('img.picview');
+    const img = $('center > img.picview');
     await $.openImage(img.src);
   },
 });
