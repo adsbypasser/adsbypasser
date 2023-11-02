@@ -10,14 +10,20 @@
 * added
     * 1link.club
     * 3xplanet.net
+    * a2zapk.io
+    * apunkasoftware.net
     * img.trafficimage.club
     * javball.com
     * javtenshi.com
     * keeplinks.org
     * multiup.io
+    * n.fcd.su
+    * outletpic.com
     * pig69.com
     * shortlinkto.site
+    * shortmoz.link
     * tezzpic.com
+    * thefileslocker.net
     * uplinkto.hair
     * yvmedia.my.id
 * retired
