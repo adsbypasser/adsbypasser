@@ -231,6 +231,7 @@
         /^(twik|adslink)\.pw$/,
         /^git\.tc$/,
         /^(adfu|linku)\.us$/,
+        /^aylink\.co$/,
       ],
     },
     async ready () {
