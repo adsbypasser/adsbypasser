@@ -5,12 +5,8 @@
       host: [
         /^met\.bz$/,
         /^tui\.click$/,
-        /^earn-guide\.com$/,
-        /^adurl\.id$/,
-        /^(cutwi|cut-w|cutl|dmus)\.in$/,
-        /^(www\.)?jurl\.io$/,
-        /^lapak\.link$/,
-        /^(ulshare|urlike)\.net$/,
+        /^cutl\.in$/,
+        /^urlike\.net$/,
       ],
     },
     async ready () {
@@ -23,109 +19,49 @@
     rule: {
       host: [
         // com
-        /^(dz4link|gocitlink|3rabcut|short2win|adsrt|shortglobal|jainjinvani|agradarpan|birdurls)\.com$/,
-        /^(payshorturl|urltips|shrinkearn|itiad|cutsouf|enewstalk|lnks4all|jejaklagu|urlshortx)\.com$/,
-        /^(earn-url|bit-url|cut-win|link-zero|cut-earn|oturl|glory-link|coolmitten|hosexx)\.com$/,
-        /^(empireshort|empearn|tarnwh2i|tabeikh|yourw-ay|reb7konline|factural|akla4|techsapparel)\.com$/,
-        /^(shrinkbuck|clkpay|linksht|haxrs|click2-url|cooltxtgen|arba7co|shortlinko|ez4linkss)\.com$/,
-        /^(partqb2i|khraba|adlpu|tabakhelo|amenitiees|cosmicmony|ilinkshortx|a-egy|adsafelink)\.com$/,
-        /^(advance-wishingjs|govtsmartjob|bloggingraja|techkti|sxtsquad|adpaytm|pustkala)\.com$/,
-        /^(thegyaanipoint|downloaddoom|linkfay|5brgedid|earthpiclover|adigp|tomient|dz4invest)\.com$/,
-        /^(techmen-world|razerflixs|gamesindians|dislooks|elkhbrel7sry|onaah|ultraskora)\.com$/,
-        /^(wrap-w0rld|ommantrameditation|mawdok|techfinda|clixg|boardgift|beast-birds|click-paid)\.com$/,
-        /^(talkittechy|newsinjules|kutpay|nikkarr|veblink|al3amall|6aba2day|oploverzhome)\.com$/,
-        /^(kooramubashir|healthfary|justlikeyojna|sarkarijobsresultss|zalipay|thefreech)\.com$/,
-        /^(hindibeen|pastekan|e7kelyana|ea-isly|aristoderas|shortzon|trading-area|alseoo)\.com$/,
-        /^(techtremendous|freespinwins|w-rajem|timetoka|foodpuff|linksop|bollywooddramanews)\.com$/,
-        /^(linkexa|admew|shrtfly|kuylink|cut4links|adskipme|skipurls|ely-om7|brenhealth)\.com$/,
-        /^(smarteasystudy|cyahealth|ershadat|z2i|srtfly|arba7kpro|health-goood|stategossip)\.com$/,
-        /^(blogginggyanbox|yourtechguider|gifsis|3rab-cash|pinkhindi|wishes2|weawp|a5barfawria)\.com$/,
-        /^(mykinggo|li-nkz|win4cut|khabratk|programsfre|safelinkblogger|linkwea|ourcareerblog)\.com$/,
-        /^(linkorlink|mrfourtech|fabsdeals|tech4utoday|urlsamo|earnwithshortlink|swiggygold)\.com$/,
-        /^(earnmoneytalk|newupdatesonline|uptoos|bakilink|gossipcorners|slegle|futurefoundationngo)\.com$/,
-        /^(loopdiet|infotaxco|newsatfit|go99tech|fullytech24|adflyurl|kekolink|rifurl|ac-mo)\.com$/,
-        /^(apkshrt|try2link)\.com$/,
-        /^(vy\.)?adsvy\.com$/,
-        /^(www\.)?(clkpays|lnkjob|efshort)\.com$/,
-        /^shrt(8|10)\.com$/,
+        /^birdurls\.com$/,
+        /^urlshortx\.com$/,
+        /^shrinkearn\.com$/,
+        /^(dz4link|ez4linkss|glory-link)\.com$/,
+        /^adsafelink\.com$/,
+        /^(linkmoni|shrinkbuck)\.com$/,
+        /^linksop\.com$/,
+        /^shrtfly\.com$/,
+        /^try2link\.com$/,
+        /^shrt10\.com$/,
+        /^clicksfly\.com$/,
         // in
-        /^(trlink|wolink|tocdo|cuturl|counsellingresult2016|iitjeemainguide|healthhindigyan)\.in$/,
-        /^(utimetableresult|daily-sale|linkszone|viraltechnical)\.in$/,
+        /^megaurl\.in$/,
+        /^trlink\.in$/,
         // io
-        /^(oke|cuon|cuio|cuee|cuus|cuto|linktor|flylink|uiz|uii|exey|shrinkme|shotly)\.io$/,
-        /^cu(2|3|5|6|7)\.io$/,
+        /^oke\.io$/,
+        /^uii\.io$/,
+        /^(exe|exey)\.io$/,
+        /^shrinkme\.io$/,
+        /^miniurl\.io$/,
         // me
-        /^(adbilty|adpop|ujv|tpx|adsrt|2fly|lin65|short2win|suarankri|infotrendy)\.me$/,
-        /^(advancedautorepairtips|takeitfor|jelajahinternet|virtualdata|muhammadyoga|s2w)\.me$/,
-        /^(cepmuzikindir|shrinke)\.me$/,
+        /^stfly\.me$/,
         // net
-        /^link\.akuno\.net$/,
-        /^(safelinku|tinylinks|licklink|linkrex|zlshorte|vivads|clickar|bigb0ss)\.net$/,
-        /^(vnurl|vinaurl|foxurl|short2win|cashat|shrtfly|shortye|ventax)\.net$/,
-        /^(link4win|linksad|topurl|xemlink|directedlink|illink)\.net$/,
-        // online
-        /^(click2url|ln435|merdekaid)\.online$/,
-        /^(www\.)?bloggerworld\.online$/,
+        /^linkrex\.net$/,
+        /^vinaurl\.net$/,
+        /^illink\.net$/,
         // org
-        /^(lotechnocan|updatetribun|templink|ez4link|shortearn|adbull|oneurls|adsrt)\.org$/,
-        /^voxc\.org$/,
+        /^ez4link\.org$/,
+        /^payskip\.org$/,
         // pw
-        /^(clik|tokenfly|getlink|psl|pss|shln|lpe|chrt|szs|miniurl)\.pw$/,
-        /^(www\.)?lwt\.pw$/,
-        // site
-        /^(el3id|allreports|clickskaro)\.site$/,
-        /^123link\.carpartsviet97\.site$/,
+        /^clik\.pw$/,
+        /^lwt\.pw$/,
         // xyz
-        /^(shink|shrten|gg-l|vnurl|bloggingdekh|ln11|sh11|tradeguru|newskart|kidsors|xz2)\.xyz$/,
-        /^(techinhub|viralnow|shophipro|technocanvas|getfreshcloud|profitstudy|ijobanana)\.xyz$/,
-        /^(autocarsmagz|getpocket|yasinews|dunyanews|komiupdates|allapp|smwebs|news-tech)\.xyz$/,
+        /^smwebs\.xyz$/,
         // else
-        /^(ckk|iir|tii)\.ai$/,
-        /^get\.ujv\.al$/,
-        /^thin\.at$/,
-        /^(tips\.)?atv\.pw$/,
-        /^skip\.az$/,
-        /^(funnyquiz|mediakita|kabarviral)\.blog$/,
-        /^(icutit|earnbig|cutearn)\.ca$/,
-        /^e2s\.cc$/,
-        /^(adzurl|link2link)\.cf$/,
-        /^(3bst|coinlink|itiurl|coshink|link5s|curs|makeurl|mooddisorder|cutls)\.co$/,
-        /^bestscholaeshipdegree\.date$/,
-        /^click2see\.desi$/,
-        /^(tny|tiny)\.ec$/,
-        /^8o\.ee$/,
-        /^pa4l\.esy\.es$/,
-        /^(shortearn|enrt)\.eu$/,
-        /^(sciencelife|cpm4all)\.ga$/,
         /^za\.gl$/,
-        /^zi\.ht$/,
-        /^shorted\.id$/,
-        /^(igram|gram|pingit)\.im$/,
-        /^megaurl\.(in|link)$/,
-        /^(businessiss2|techandreview|yesmoviesapp|kpscthulasilogin)\.info$/,
-        /^stfly\.(io|press)$/,
-        /^lyon\.kim$/,
+        /^pingit\.im$/,
         /^fc\.lc$/,
-        /^(petty|skips|tr|flaz)\.link$/,
-        /^payskip\.(me|org)$/,
-        /^btc\.ms$/,
-        /^splashnews\.ooo$/,
-        /^express-cut\.ovh$/,
+        /^tr\.link$/,
         /^short\.pe$/,
-        /^(clk|cll)\.(press|ink|sh|icu)$/,
-        /^(lopte|megalink)\.pro$/,
-        /^123link\.(pw|vip)$/,
-        /^royalown\.review$/,
-        /^earn\.theplusit\.ro$/,
-        /^tinylink\.run$/,
-        /^buyitonline\.store$/,
-        /^eatings\.stream$/,
+        /^clk\.sh$/,
+        /^megalink\.pro$/,
         /^tl\.tc$/,
-        /^(1921681254|geki|wegner|gpshort)\.tech$/,
-        /^(linkvip|4short)\.tk$/,
-        /^(urlcloud|imageoptimizer)\.us$/,
-        /^(koylinks|buy-in-599rs)\.win$/,
-        /^exe\.(io|app)$/,
       ],
     },
     async ready () {
@@ -137,14 +73,7 @@
   _.register({
     rule: {
       host: [
-        /^(arabtvlink|safeku|dz4link)\.com$/,
-        /^linksoflife\.co$/,
-        /^wi\.cr$/,
-        /^(bitcoinly|cashurl)\.in$/,
-        /^linksof\.life$/,
-        /^wicr\.me$/,
-        /^shrtit\.tech$/,
-        /^fireshorts\.tk$/,
+        /^dz4link\.com$/,
         /^mitly\.us$/,
       ],
     },
@@ -157,26 +86,12 @@
   _.register({
     rule: {
       host: [
-        /^123short\.biz$/,
         /^(cutpaid|tmearn|icutlink)\.com$/,
-        /^(ctui|cuti)\.in$/,
-        /^zutrox\.link$/,
-        /^(techcraze|healthinsider)\.online$/,
         /^cutwin\.(us|com)$/,
       ],
     },
     async ready () {
       const handler = new NonDisabledRecaptchaHandler();
-      await handler.call();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^(www\.)?ourl\.io$/,
-    },
-    async ready () {
-      const handler = new OURLHandler();
       await handler.call();
     },
   });
@@ -205,32 +120,10 @@
   _.register({
     rule: {
       host: [
-        // com
-        /^(cut-urls|linclik|premiumzen|by6dk|mikymoons|man2pro)\.com$/,
-        /^(link4win|loadurl|cut4link|raolink|adshorte)\.com$/,
-        /^short\.pastewma\.com$/,
-        /^linkfly\.gaosmedia\.com$/,
-        /^(www\.)?viralukk\.com$/,
-        /^(www\.)?niagoshort\.com$/,
-        // net
-        /^www\.worldhack\.net$/,
-        /^(eklink)\.net$/,
-        // else
-        /^royurls\.bid$/,
-        /^shortit\.ca$/,
-        /^(urle|adshort)\.co$/,
-        /^(1)?idsly\.(com|bid|net|org)$/,
-        /^shortad\.cf$/,
-        /^(adbilty|taive)\.in$/,
-        /^(curs|crus|4cut|u2s|l2s)\.io$/,
-        /^123link\.(io|co|press|pro)$/,
-        /^petty\.link$/,
-        /^(weefy|adbull|zeiz|link4|adcoin)\.me$/,
-        /^dzurl\.ml$/,
-        /^spamlink\.org$/,
-        /^(twik|adslink)\.pw$/,
-        /^git\.tc$/,
-        /^(adfu|linku)\.us$/,
+        /^(cut-urls|linclik)\.com$/,
+        /^adshort\.co$/,
+        /^(adbull|zeiz)\.me$/,
+        /^adslink\.pw$/,
       ],
     },
     async ready () {
@@ -407,23 +300,6 @@
           break;
         }
       }
-    }
-
-  }
-
-
-  class OURLHandler extends RecaptchaHandler {
-
-    async getMiddleware () {
-      return {
-        verify: await getJQueryForm('#get-link'),
-        go: await getJQueryForm(this._formSelector),
-      };
-    }
-
-    async getURL (jFormObject) {
-      await getURLFromJQueryForm(jFormObject.verify);
-      return await getURLFromJQueryForm(jFormObject.go);
     }
 
   }
