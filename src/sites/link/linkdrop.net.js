@@ -121,7 +121,7 @@
     rule: {
       host: [
         /^(cut-urls|linclik)\.com$/,
-        /^adshort\.co$/,
+        /^(adshort|aylink)\.co$/,
         /^(adbull|zeiz)\.me$/,
         /^adslink\.pw$/,
       ],
