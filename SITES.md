@@ -51,6 +51,7 @@
 * atu.ca
 * atv.pw
 * autocarsmagz.xyz
+* aylink.co
 * bayimg.com
 * bc.vc
 * beeimg.com
