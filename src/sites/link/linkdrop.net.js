@@ -36,7 +36,6 @@
         // io
         /^oke\.io$/,
         /^uii\.io$/,
-        /^(exe|exey)\.io$/,
         /^shrinkme\.io$/,
         /^miniurl\.io$/,
         // me
