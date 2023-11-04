@@ -12,6 +12,7 @@
     * 3xplanet.net
     * a2zapk.io
     * apunkasoftware.net
+    * aylink.co
     * img.trafficimage.club
     * javball.com
     * javtenshi.com
