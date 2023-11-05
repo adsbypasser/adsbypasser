@@ -13,6 +13,7 @@
     * a2zapk.io
     * apunkasoftware.net
     * aylink.co
+    * exeo.app
     * img.trafficimage.club
     * javball.com
     * javtenshi.com
@@ -214,6 +215,8 @@
     * ershadat.com
     * euro-pic.eu
     * ewa.ac
+    * exe.io
+    * exey.io
     * fabsdeals.com
     * factural.com
     * fastpic.ru
