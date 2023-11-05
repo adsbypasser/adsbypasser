@@ -63,8 +63,7 @@
 * dz4link.com
 * earnlink.io
 * easyurl.net
-* exe.io
-* exey.io
+* exeo.app
 * ez4link.org
 * ez4linkss.com
 * fastpic.org
