@@ -55,7 +55,6 @@
         // else
         /^za\.gl$/,
         /^pingit\.im$/,
-        /^fc\.lc$/,
         /^tr\.link$/,
         /^short\.pe$/,
         /^clk\.sh$/,
@@ -74,6 +73,7 @@
       host: [
         /^dz4link\.com$/,
         /^mitly\.us$/,
+        /^fc-lc\.(com|xyz)$/,
       ],
     },
     async ready () {
