@@ -15,6 +15,7 @@
     * aylink.co
     * exeo.app
     * img.trafficimage.club
+    * imgbase.ru
     * javball.com
     * javtenshi.com
     * keeplinks.org
