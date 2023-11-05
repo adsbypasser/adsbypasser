@@ -116,6 +116,7 @@
 * imgair.net
 * imgant.com
 * imgbaron.com
+* imgbase.ru
 * imgbbd.buzz
 * imgbew.buzz
 * imgbox.com
