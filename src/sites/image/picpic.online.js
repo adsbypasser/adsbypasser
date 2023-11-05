@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^(drlink|picpic)\.online$/,
-      /^picclock\.ru$/,
+      /^(picclock|imgbase)\.ru$/,
     ],
     path: /^\/\d+\/\d+\/$/,
   },
