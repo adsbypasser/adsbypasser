@@ -67,7 +67,8 @@
 * ez4link.org
 * ez4linkss.com
 * fastpic.org
-* fc.lc
+* fc-lc.com
+* fc-lc.xyz
 * festyy.com
 * filemedia.net
 * filoops.info
@@ -205,9 +206,11 @@
 * linclik.com
 * link.tl
 * link.turkdown.com
+* link1s.com
 * linkdecode.com
 * linkdrop.net
 * linkplugapp.com
+* linkpoi.me
 * linkrex.net
 * linkshrink.net
 * linksop.com
