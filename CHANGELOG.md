@@ -14,12 +14,16 @@
     * apunkasoftware.net
     * aylink.co
     * exeo.app
+    * fc-lc.com
+    * fc-lc.xyz
     * img.trafficimage.club
     * imgbase.ru
     * javball.com
     * javtenshi.com
     * keeplinks.org
     * link.turkdown.com
+    * link1s.com
+    * linkpoi.me
     * multiup.io
     * n.fcd.su
     * outletpic.com
@@ -221,6 +225,7 @@
     * fabsdeals.com
     * factural.com
     * fastpic.ru
+    * fc.lc
     * fileproject.com.br
     * filesonthe.net
     * filmku.lompat.in
