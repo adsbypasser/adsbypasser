@@ -35,7 +35,6 @@
 * birdurls.com
 * boost.ink
 * casimages.com
-* catcut.net
 * ceesty.com
 * clickthru.ca
 * clik.pw
@@ -318,9 +317,7 @@
 * tinypic.com
 * tips.atv.pw
 * tl.tc
-* tmearn.com
-* tr.link
-* trlink.in
+* tmearn.net
 * try2link.com
 * tui.click
 * turboimagehost.com
