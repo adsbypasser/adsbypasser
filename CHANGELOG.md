@@ -32,6 +32,7 @@
     * shortmoz.link
     * tezzpic.com
     * thefileslocker.net
+    * tmearn.net
     * uplinkto.hair
     * yvmedia.my.id
 * retired
@@ -131,6 +132,7 @@
     * brenhealth.com
     * bunnyforum.org
     * businessforyouand.me
+    * catcut.net
     * ceklinku.xyz
     * celebclk.com
     * cl250.club
@@ -646,10 +648,13 @@
     * tomient.com
     * totaldebrid.org
     * tout-debrid.net
+    * tr.link
     * tr5.in
     * trading-area.com
     * travelwithtricks.me
+    * trlink.in
     * trueimg.xyz
+    * tmearn.com
     * uimgshare.com
     * ulshare.net
     * ultimate.turkdown.com
