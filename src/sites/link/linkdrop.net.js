@@ -32,7 +32,6 @@
         /^clicksfly\.com$/,
         // in
         /^megaurl\.in$/,
-        /^trlink\.in$/,
         // io
         /^oke\.io$/,
         /^uii\.io$/,
@@ -55,7 +54,6 @@
         // else
         /^za\.gl$/,
         /^pingit\.im$/,
-        /^tr\.link$/,
         /^short\.pe$/,
         /^clk\.sh$/,
         /^megalink\.pro$/,
@@ -71,8 +69,10 @@
   _.register({
     rule: {
       host: [
+        /^aylink\.co$/,
         /^dz4link\.com$/,
         /^mitly\.us$/,
+        /^tmearn\.net$/,
         /^fc-lc\.(com|xyz)$/,
       ],
     },
@@ -85,7 +85,7 @@
   _.register({
     rule: {
       host: [
-        /^(cutpaid|tmearn|icutlink)\.com$/,
+        /^(cutpaid|icutlink)\.com$/,
         /^cutwin\.(us|com)$/,
       ],
     },
