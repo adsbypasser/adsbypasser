@@ -45,8 +45,10 @@
 
   _.register({
     rule: {
-      host: [
+      host: [       
+        /^met\.bz/,
         /^aylink\.co$/,
+        /^cutpaid\.com$/,
         /^dz4link\.com$/,
         /^mitly\.us$/,
         /^tmearn\.net$/,
