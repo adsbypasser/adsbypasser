@@ -3,30 +3,13 @@
   _.register({
     rule: {
       host: [
-        /^met\.bz$/,
-        /^tui\.click$/,
-        /^cutl\.in$/,
-        /^urlike\.net$/,
-      ],
-    },
-    async ready () {
-      const handler = new NoRecaptchaHandler();
-      await handler.call();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: [
         // com
         /^birdurls\.com$/,
         /^urlshortx\.com$/,
         /^shrinkearn\.com$/,
-        /^(dz4link|ez4linkss|glory-link)\.com$/,
         /^adsafelink\.com$/,
         /^(linkmoni|shrinkbuck)\.com$/,
-        /^linksop\.com$/,
-        /^shrtfly\.com$/,
+        /^go.linksop\.com$/,
         /^try2link\.com$/,
         /^shrt10\.com$/,
         /^clicksfly\.com$/,
@@ -37,22 +20,16 @@
         /^uii\.io$/,
         /^shrinkme\.io$/,
         /^miniurl\.io$/,
-        // me
-        /^stfly\.me$/,
         // net
         /^linkrex\.net$/,
         /^vinaurl\.net$/,
         /^illink\.net$/,
         // org
-        /^ez4link\.org$/,
         /^payskip\.org$/,
         // pw
         /^clik\.pw$/,
-        /^lwt\.pw$/,
-        // xyz
-        /^smwebs\.xyz$/,
         // else
-        /^za\.gl$/,
+        /^stfly\.(me|xyz)$/
         /^pingit\.im$/,
         /^short\.pe$/,
         /^clk\.sh$/,
@@ -84,19 +61,6 @@
 
   _.register({
     rule: {
-      host: [
-        /^(cutpaid|icutlink)\.com$/,
-        /^cutwin\.(us|com)$/,
-      ],
-    },
-    async ready () {
-      const handler = new NonDisabledRecaptchaHandler();
-      await handler.call();
-    },
-  });
-
-  _.register({
-    rule: {
       host: /^(www\.)?linkdrop\.net$/,
     },
     async ready () {
@@ -107,21 +71,10 @@
 
   _.register({
     rule: {
-      host: /^www\.shortly\.xyz$/,
-      path: /^\/link$/,
-    },
-    async ready () {
-      const handler = new ShortlyHandler();
-      await handler.call();
-    },
-  });
-
-  _.register({
-    rule: {
       host: [
-        /^(cut-urls|linclik)\.com$/,
-        /^(adshort|aylink)\.co$/,
-        /^(adbull|zeiz)\.me$/,
+        /^linclik\.com$/,
+        /^adshort.co$/,
+        /^adbull\.me$/,
         /^adslink\.pw$/,
       ],
     },
@@ -181,29 +134,6 @@
 
       const url = await this.getURL(mw);
       await $.openLink(url);
-    }
-
-  }
-
-
-  class NoRecaptchaHandler extends AbstractHandler {
-
-    prepare () {
-      this.removeFrame();
-      this.removeOverlay();
-      return true;
-    }
-
-    async getMiddleware () {
-      return await getJQueryForm(this._formSelector);
-    }
-
-    withoutMiddleware () {
-      _.info('no form');
-    }
-
-    async getURL (jForm) {
-      return await getURLFromJQueryForm(jForm);
     }
 
   }
@@ -288,22 +218,6 @@
   }
 
 
-  class NonDisabledRecaptchaHandler extends RecaptchaHandler {
-
-    async submitListen (b) {
-      while (true) {
-        await _.wait(500);
-        /*global grecaptcha*/
-        if (grecaptcha && grecaptcha.getResponse().length !== 0) {
-          b.click();
-          break;
-        }
-      }
-    }
-
-  }
-
-
   class LinkDropHandler extends RecaptchaHandler {
 
     async getMiddleware () {
@@ -353,35 +267,6 @@
       throw new _.AdsBypasserError('wrong data');
     }
 
-  }
-
-  class ShortlyHandler extends AbstractHandler {
-
-    prepare () {
-      return true;
-    }
-
-    async getMiddleware () {
-      // the id has been hidden, find it from links
-      let a = $('#myModal .btn-primary');
-      a = a.pathname.match(/^\/r\/(.+)/);
-      return a[1];
-    }
-
-    withoutMiddleware () {
-      _.info('no page');
-    }
-
-    async getURL (id) {
-      while (true) {
-        $.window.jQuery.post('getlink.php', {id: id}).done(function (url) {
-          if (url.match(/^http/)) {
-            $.openLink(url);
-          }
-        });
-        await _.wait(500);
-      }
-    }
   }
 
 
