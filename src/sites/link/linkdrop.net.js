@@ -29,7 +29,7 @@
         // pw
         /^clik\.pw$/,
         // else
-        /^stfly\.(me|xyz)$/
+        /^stfly\.(me|xyz)$/,
         /^pingit\.im$/,
         /^short\.pe$/,
         /^clk\.sh$/,
