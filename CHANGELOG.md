@@ -20,6 +20,7 @@
     * imgbase.ru
     * javball.com
     * javtenshi.com
+    * katfile.com
     * keeplinks.org
     * link.turkdown.com
     * link1s.com
@@ -34,6 +35,7 @@
     * thefileslocker.net
     * tmearn.net
     * uplinkto.hair
+    * usersdrive.com
     * yvmedia.my.id
 * retired
     * 01.nl
