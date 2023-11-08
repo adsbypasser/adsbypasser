@@ -192,6 +192,7 @@
 * javlibrary.com
 * javtenshi.com
 * jnw0.com
+* katfile.com
 * keeplinks.org
 * kekolangti.com
 * keptarolo.hu
@@ -338,6 +339,7 @@
 * urlgator.com
 * urlike.net
 * urlshortx.com
+* usersdrive.com
 * ux9.de
 * videogameblogger.com
 * viid.me
