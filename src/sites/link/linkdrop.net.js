@@ -75,7 +75,7 @@
     rule: {
       host: [
         /^linclik\.com$/,
-        /^adshort.co$/,
+        /^adshort\.co$/,
         /^adbull\.me$/,
         /^adslink\.pw$/,
       ],
