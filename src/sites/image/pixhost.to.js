@@ -1,17 +1,9 @@
 _.register({
-  rule: [
+  rule: 
     {
       host: /^(www\.)?pixhost\.to$/,
       path: /^\/show\//,
     },
-    {
-      host: [
-        /^3xplanet\.(com|net)$/,
-        /^javtenshi\.com$/,
-      ],
-      path: /^\/viewimage\//,
-    },
-  ],
   async ready () {
     $.remove('iframe, #ad');
 
