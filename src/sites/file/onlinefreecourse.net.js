@@ -1,5 +1,5 @@
 _.register({
-rule: {
+  rule: {
     host: /^www\.onlinefreecourse\.net$/,
   },
   async ready () {
