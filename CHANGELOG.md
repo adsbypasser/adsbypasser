@@ -11,11 +11,15 @@
     * 1link.club
     * 3xplanet.net
     * a2zapk.io
+    * ak.sv
     * apunkasoftware.net
     * aylink.co
+    * cutpaid.com
     * exeo.app
     * fc-lc.com
     * fc-lc.xyz
+    * getthot.com
+    * go.linksop.com
     * img.trafficimage.club
     * imgbase.ru
     * javball.com
@@ -27,10 +31,13 @@
     * linkpoi.me
     * multiup.io
     * n.fcd.su
+    * onlinefreecourse.net
     * outletpic.com
     * pig69.com
+    * sfile.mobi
     * shortlinkto.site
     * shortmoz.link
+    * stfly.xyz
     * tezzpic.com
     * thefileslocker.net
     * tmearn.net
@@ -165,10 +172,14 @@
     * cut4links.com
     * cutdl.xyz
     * cut-earn.com
+    * cutl.in
     * cutsouf.com
     * cuturl.in
+    * cut-urls.com
     * cut-w.in
     * cutwi.in
+    * cutwin.com
+    * cutwin.us
     * cut-win.com
     * cyahealth.com
     * dailyimages.xyz
@@ -201,6 +212,7 @@
     * dutchycorp.space
     * dwrfslsqpdfqfwy.net
     * dz4invest.com
+    * dz4link.com
     * e7kelyana.com
     * ea-isly.com
     * earn-guide.com
@@ -226,6 +238,8 @@
     * ewa.ac
     * exe.io
     * exey.io
+    * ez4link.org
+    * ez4linkss.com
     * fabsdeals.com
     * factural.com
     * fastpic.ru
@@ -257,6 +271,7 @@
     * getinfos.net
     * gifsis.com
     * giga74.com
+    * glory-link.com
     * go99tech.com
     * gocitlink.com
     * goimagehost.com
@@ -288,6 +303,7 @@
     * hulkimge.com
     * i.gtaind.com
     * i.hentaiyoutube.com
+    * icutlink.com
     * idnation.net
     * id-securelink.xyz
     * ifotos.pl
@@ -445,6 +461,7 @@
     * linkpoi.in
     * linksas.us
     * linksht.com
+    * linksop.com
     * linksupto.com
     * linkszone.in
     * linkwea.com
@@ -456,6 +473,7 @@
     * loopdiet.com
     * losstor.com
     * lostpic.net
+    * lwt.pw
     * lynk.my
     * marivelkece.xyz
     * mawdok.com
@@ -583,9 +601,11 @@
     * shorti.ga
     * shortid.co
     * shortlinko.com
+    * shortly.xyz
     * shortzon.com
     * shrink.vip
     * shrt8.com
+    * shrtfly.com
     * sht.io
     * shtlink.co
     * shtme.co
@@ -604,6 +624,7 @@
     * slegle.com
     * slink.bid
     * smarteasystudy.com
+    * smwebs.xyz
     * somnath2003.xyz
     * spacetica.com
     * speedcar.club
@@ -657,6 +678,7 @@
     * trlink.in
     * trueimg.xyz
     * tmearn.com
+    * tui.click
     * uimgshare.com
     * ulshare.net
     * ultimate.turkdown.com
@@ -674,6 +696,7 @@
     * url.hulblog.com
     * urlbeat.net
     * urlcash.net
+    * urlike.net
     * urlinn.com
     * urlms.com
     * urlsamo.com
@@ -725,10 +748,12 @@
     * yumechan.club
     * yyv.co
     * z2i.com
+    * za.gl
     * zalipay.com
     * zap.in
     * zatnawqy.net
     * zeefiles.download
+    * zeiz.me
     * zupload.me
 
 ## v7.22.0 - 2023-10-04
