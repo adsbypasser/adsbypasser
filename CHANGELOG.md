@@ -18,6 +18,7 @@
     * exeo.app
     * fc-lc.com
     * fc-lc.xyz
+    * fir3.net
     * getthot.com
     * go.linksop.com
     * img.trafficimage.club
@@ -41,6 +42,7 @@
     * stfly.xyz
     * tezzpic.com
     * thefileslocker.net
+    * tii.la
     * tmearn.net
     * uplinkto.hair
     * usersdrive.com
@@ -72,6 +74,7 @@
     * ad4msan.ml
     * ad4msan.win
     * ad5.eu
+    * adf.ly
     * adflyurl.com
     * adigp.com
     * adjet.eu
@@ -196,6 +199,7 @@
     * dawnstation.com
     * designmyhomee.com
     * dimtus.com
+    * direct-link.net
     * disingkat.in
     * dislooks.com
     * dl.layarkaca21.vip
@@ -247,6 +251,7 @@
     * factural.com
     * fastpic.ru
     * fc.lc
+    * filemedia.net
     * fileproject.com.br
     * filesonthe.net
     * filmku.lompat.in
@@ -485,8 +490,10 @@
     * linksop.com
     * linksupto.com
     * linkszone.in
+    * linkvertise.com
     * linkwea.com
     * li-nkz.com
+    * link-to.net
     * link-zero.com
     * lnk.co
     * lnkjob.com
