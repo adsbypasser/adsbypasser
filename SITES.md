@@ -15,7 +15,6 @@
 * adb.ug
 * adbitly.in
 * adbull.me
-* adf.ly (universally handled)
 * adfoc.us
 * adsafelink.com
 * adshort.co
@@ -53,7 +52,6 @@
 * depic.me
 * destyy.com
 * detonating.com
-* direct-link.net
 * directupload.net
 * earnlink.io
 * easyurl.net
@@ -62,8 +60,8 @@
 * fc-lc.com
 * fc-lc.xyz
 * festyy.com
-* filemedia.net
 * filoops.info
+* fir3.net
 * fotokiz.com
 * foto-pic.net
 * fotosik.pl
@@ -189,8 +187,6 @@
 * linkpoi.me
 * linkrex.net
 * linkshrink.net
-* link-to.net
-* linkvertise.com
 * lolinez.com
 * lonelymoon.net
 * looble.net
@@ -284,6 +280,7 @@
 * tezzpic.com
 * thefileslocker.net
 * thinfi.com
+* tii.la
 * tinypic.com
 * tips.atv.pw
 * tl.tc
