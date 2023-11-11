@@ -31,6 +31,7 @@
         // else
         /^stfly\.(me|xyz)$/,
         /^pingit\.im$/,
+        /^tii\.la$/,
         /^short\.pe$/,
         /^clk\.sh$/,
         /^megalink\.pro$/,
