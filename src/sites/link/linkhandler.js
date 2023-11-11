@@ -4,37 +4,37 @@
     rule: {
       host: [
         // com
-        /^birdurls\.com$/,
-        /^urlshortx\.com$/,
-        /^shrinkearn\.com$/,
         /^adsafelink\.com$/,
-        /^(linkmoni|shrinkbuck)\.com$/,
-        /^go.linksop\.com$/,
-        /^try2link\.com$/,
-        /^shrt10\.com$/,
+        /^birdurls\.com$/,
         /^clicksfly\.com$/,
+        /^linkmoni\.com$/,
+        /^go.linksop\.com$/,
+        /^shrinkearn\.com$/,
+        /^shrt10\.com$/,
+        /^try2link\.com$/,
+        /^urlshortx\.com$/,
         // in
         /^megaurl\.in$/,
         // io
-        /^oke\.io$/,
-        /^uii\.io$/,
-        /^shrinkme\.io$/,
         /^miniurl\.io$/,
+        /^oke\.io$/,
+        /^shrinkme\.io$/,
+        /^uii\.io$/,
         // net
+        /^illink\.net$/,
         /^linkrex\.net$/,
         /^vinaurl\.net$/,
-        /^illink\.net$/,
         // org
         /^payskip\.org$/,
         // pw
         /^clik\.pw$/,
         // else
-        /^stfly\.(me|xyz)$/,
-        /^pingit\.im$/,
-        /^tii\.la$/,
-        /^short\.pe$/,
         /^clk\.sh$/,
         /^megalink\.pro$/,
+        /^pingit\.im$/,
+        /^short\.pe$/,
+        /^stfly\.(me|xyz)$/,
+        /^tii\.la$/,
         /^tl\.tc$/,
       ],
     },
@@ -46,14 +46,14 @@
 
   _.register({
     rule: {
-      host: [       
-        /^met\.bz/,
+      host: [  
         /^aylink\.co$/,
         /^cutpaid\.com$/,
         /^dz4link\.com$/,
+        /^fc-lc\.(com|xyz)$/,
+        /^met\.bz/,
         /^mitly\.us$/,
         /^tmearn\.net$/,
-        /^fc-lc\.(com|xyz)$/,
       ],
     },
     async ready () {
@@ -64,21 +64,11 @@
 
   _.register({
     rule: {
-      host: /^(www\.)?linkdrop\.net$/,
-    },
-    async ready () {
-      const handler = new LinkDropHandler();
-      await handler.call();
-    },
-  });
-
-  _.register({
-    rule: {
       host: [
-        /^linclik\.com$/,
-        /^adshort\.co$/,
         /^adbull\.me$/,
+        /^adshort\.co$/,
         /^adslink\.pw$/,
+        /^linclik\.com$/,
       ],
     },
     async ready () {
@@ -106,7 +96,6 @@
         '.go-link',
         '#originalLink.get-link',
         'form[action="/links/go"]',
-        'form[action="/links/linkdropgo"]',
       ].join(', ');
     }
 
@@ -221,15 +210,6 @@
   }
 
 
-  class LinkDropHandler extends RecaptchaHandler {
-
-    async getMiddleware () {
-      return await getJQueryForm('#mylink1');
-    }
-
-  }
-
-
   class StagedHandler extends AbstractHandler {
 
     prepare () {
@@ -262,9 +242,6 @@
       let data = await $.post(url, args);
       data = JSON.parse(data);
       if (data && data.url) {
-        // nuke for bol.tl, somehow it will interfere click event
-        $.nuke(data.url);
-
         return data.url;
       }
       throw new _.AdsBypasserError('wrong data');
