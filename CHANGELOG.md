@@ -20,7 +20,9 @@
     * fc-lc.xyz
     * fir3.net
     * getthot.com
+    * go.linksly.co
     * go.linksop.com
+    * go.tnshort.net
     * img.trafficimage.club
     * imgbase.ru
     * imgfrost.net
@@ -31,6 +33,7 @@
     * link.turkdown.com
     * link1s.com
     * linkpoi.me
+    * linksly.co
     * multiup.io
     * n.fcd.su
     * onlinefreecourse.net
@@ -40,10 +43,12 @@
     * shortlinkto.site
     * shortmoz.link
     * stfly.xyz
+    * techgeek.digital
     * tezzpic.com
     * thefileslocker.net
     * tii.la
     * tmearn.net
+    * tribuntekno.com
     * uplinkto.hair
     * usersdrive.com
     * yvmedia.my.id
@@ -480,6 +485,7 @@
     * linkach.com
     * linkbabes.com
     * linkbucks.com
+    * linkdrop.net
     * linkduit.net
     * linkexa.com
     * linkfay.com
@@ -637,6 +643,7 @@
     * shortly.xyz
     * shortzon.com
     * shrink.vip
+    * shrinkbuck.com
     * shrt8.com
     * shrtfly.com
     * sht.io
