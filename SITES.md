@@ -70,7 +70,9 @@
 * get-click2.blogspot.com
 * getthot.com
 * gkurl.us
+* go.linksly.co
 * go.linksop.com
+* go.tnshort.net
 * goshrink.com
 * gsmzone.site
 * hen-tay.net
@@ -182,10 +184,10 @@
 * link.turkdown.com
 * link1s.com
 * linkdecode.com
-* linkdrop.net
 * linkplugapp.com
 * linkpoi.me
 * linkrex.net
+* linksly.co
 * linkshrink.net
 * lolinez.com
 * lonelymoon.net
@@ -257,7 +259,6 @@
 * short.pe
 * shortlinkto.site
 * shortmoz.link
-* shrinkbuck.com
 * shrinkearn.com
 * shrinkme.io
 * shrink-service.it
@@ -277,6 +278,7 @@
 * sweetlantern.com
 * swzz.xyz
 * techfunda.net
+* techgeek.digital
 * tezzpic.com
 * thefileslocker.net
 * thinfi.com
@@ -285,6 +287,7 @@
 * tips.atv.pw
 * tl.tc
 * tmearn.net
+* tribuntekno.com
 * try2link.com
 * turboimagehost.com
 * turkdown.com
