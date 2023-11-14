@@ -34,6 +34,7 @@
     * link1s.com
     * linkpoi.me
     * linksly.co
+    * mangalist.org
     * multiup.io
     * n.fcd.su
     * onlinefreecourse.net
