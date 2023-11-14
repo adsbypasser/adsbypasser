@@ -2,9 +2,7 @@
 
   _.register({
     rule: {
-      host: [
-        /^(www\.)?imgspice\.com$/,
-      ],
+      host: /^imgspice\.com$/,
     },
     ready: run,
   });
