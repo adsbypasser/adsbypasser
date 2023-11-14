@@ -1,15 +1,11 @@
-(function () {
+_.register({
+  rule: {
+    host: /^imgspice\.com$/,
+  },
 
-  _.register({
-    rule: {
-      host: /^imgspice\.com$/,
-    },
-    ready: run,
-  });
-
-  async function run () {
-    const o = $('#download_box img[id]');
+  async ready () {
+    const o = $('#imgpreview.pic');
     await $.openImage(o.src);
   }
 
-})();
+});
