@@ -192,6 +192,7 @@
 * lolinez.com
 * lonelymoon.net
 * looble.net
+* mangalist.org
 * megalink.pro
 * megaurl.in
 * met.bz
