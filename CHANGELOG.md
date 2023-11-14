@@ -23,6 +23,7 @@
     * go.linksly.co
     * go.linksop.com
     * go.tnshort.net
+    * imagehaha.com
     * img.trafficimage.club
     * imgbase.ru
     * imgfrost.net
