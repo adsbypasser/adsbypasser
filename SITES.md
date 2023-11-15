@@ -209,6 +209,8 @@
 * n.fcd.su
 * nmac.to
 * noelshack.com
+* noriskdomain.com
+* noweconomy.live
 * oke.io
 * oni.vn
 * onlinefreecourse.net
