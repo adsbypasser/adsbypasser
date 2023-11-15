@@ -4,6 +4,7 @@
     * imagebam.com
     * imagetwist.netlify.app
     * imgair.net
+    * imgspice.com
     * mirrored.to
     * postimg.cc
     * spaste.com
@@ -38,6 +39,8 @@
     * mangalist.org
     * multiup.io
     * n.fcd.su
+    * noriskdomain.com
+    * noweconomy.live
     * onlinefreecourse.net
     * outletpic.com
     * pig69.com
