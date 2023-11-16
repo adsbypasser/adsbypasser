@@ -1,8 +1,10 @@
 _.register({
-  rule: [
-    'http://*.abload.de/image.php?img=*',
-    'http://www.imageup.ru/*/*/*.html',
-  ],
+  rule: {
+    host: [
+      /^abload\.de$/,
+      /^www\.imageup\.ru$/,
+    ],
+  },
   async ready () {
     const i = $('#image');
     await $.openImage(i.src);
