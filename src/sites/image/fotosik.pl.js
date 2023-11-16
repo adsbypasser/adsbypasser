@@ -1,7 +1,7 @@
 _.register({
-  rule: 'http://www.fotosik.pl/pokaz_obrazek/pelny/*.html',
+  rule: 'https://www.fotosik.pl/*',
   async ready () {
-    const i = $('a.noborder img');
+    const i = $('#full-photo a img');
     await $.openImage(i.src);
   },
 });
