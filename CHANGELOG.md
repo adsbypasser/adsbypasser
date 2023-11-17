@@ -1,11 +1,17 @@
 ## TBA
 
 * fixed
+    * casimages.com
+    * cubeupload.com
+    * directupload.net
+    * fotosik.pl
     * imagebam.com
     * imagetwist.netlify.app
     * imgair.net
     * imgspice.com
+    * ipic.su
     * mirrored.to
+    * pic-upload.de
     * postimg.cc
     * spaste.com
 * added
@@ -25,6 +31,7 @@
     * go.linksop.com
     * go.tnshort.net
     * imagehaha.com
+    * imagehost.at
     * img.trafficimage.club
     * imgbase.ru
     * imgfrost.net
@@ -56,6 +63,7 @@
     * tribuntekno.com
     * uplinkto.hair
     * usersdrive.com
+    * xpshort.com
     * yvmedia.my.id
 * retired
     * 01.nl
@@ -345,6 +353,7 @@
     * imagedunk.com
     * imageeer.com
     * imagefruit.com
+    * imagehousing.com
     * imageking.xyz
     * imageko.com
     * imageon.org
@@ -710,6 +719,7 @@
     * timetoka.com
     * tinizo.com
     * tinylinks.co
+    * tinypic.com
     * tinyurl.is
     * tmearn.com
     * tocdo.in
