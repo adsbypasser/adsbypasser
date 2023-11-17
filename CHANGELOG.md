@@ -175,6 +175,7 @@
     * click-paid.com
     * clixg.com
     * clk.im
+    * clkme.me
     * clkpay.com
     * clkpays.com
     * closetopic.site
