@@ -37,7 +37,6 @@
 * clickthru.ca
 * clik.pw
 * clk.sh
-* clkme.me
 * clkmein.com
 * cllkme.com
 * cloudgallery.net
