@@ -1,7 +1,9 @@
 _.register({
-  rule: 'http://www.casimages.com/img.php?*',
+  rule: {
+    host: /^www\.casimages\.com$/,
+  },
   async ready () {
-    const img = $('td a img');
+    const img = $('div.logo a img');
     await $.openImage(img.src);
   },
 });
