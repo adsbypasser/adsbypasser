@@ -86,7 +86,7 @@
 * imageban.ru
 * imageeer.com
 * imagehaha.com
-* imagehousing.com
+* imagehost.at
 * imagenetz.de
 * imageno.com
 * imagenpic.com
@@ -287,7 +287,6 @@
 * thefileslocker.net
 * thinfi.com
 * tii.la
-* tinypic.com
 * tips.atv.pw
 * tl.tc
 * tmearn.net
@@ -319,9 +318,9 @@
 * vzturl.com
 * wiid.me
 * ww2.awsubs.co
+* xpshort.com
 * xxxs.org
 * xxxwebdlxxx.org
 * xxxwebdlxxx.top
 * yvmedia.my.id
 * zpoz.net
-
