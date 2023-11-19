@@ -30,6 +30,7 @@
 * beeimg.com
 * biglistofwebsites.com
 * bild.me
+* bioskopkeren.boo
 * birdurls.com
 * boost.ink
 * casimages.com
@@ -218,6 +219,7 @@
 * outletpic.com
 * p0xpicmoney.ru
 * pacific.picturedent.org
+* paylinnk.com
 * payskip.org
 * picbaron.com
 * piccash.net
