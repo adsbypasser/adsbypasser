@@ -21,6 +21,7 @@
     * ak.sv
     * apunkasoftware.net
     * aylink.co
+    * bioskopkeren.boo
     * cutpaid.com
     * exeo.app
     * fc-lc.com
@@ -50,6 +51,7 @@
     * noweconomy.live
     * onlinefreecourse.net
     * outletpic.com
+    * paylinnk.com
     * pig69.com
     * sfile.mobi
     * shortlinkto.site
