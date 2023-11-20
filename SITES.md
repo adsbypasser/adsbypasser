@@ -19,6 +19,7 @@
 * adsafelink.com
 * adshort.co
 * adslink.pw
+* adz7short.space
 * ah-informatique.com
 * ak.sv
 * al.ly
@@ -62,6 +63,7 @@
 * festyy.com
 * filoops.info
 * fir3.net
+* forex-trnd.com
 * fotokiz.com
 * foto-pic.net
 * fotosik.pl
@@ -74,6 +76,7 @@
 * go.linksop.com
 * go.tnshort.net
 * goshrink.com
+* gplinks.co
 * gsmzone.site
 * hen-tay.net
 * hostingpics.net
