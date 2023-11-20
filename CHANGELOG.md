@@ -18,6 +18,7 @@
     * 1link.club
     * 3xplanet.net
     * a2zapk.io
+    * adz7short.space
     * ak.sv
     * apunkasoftware.net
     * aylink.co
@@ -27,10 +28,12 @@
     * fc-lc.com
     * fc-lc.xyz
     * fir3.net
+    * forex-trnd.com
     * getthot.com
     * go.linksly.co
     * go.linksop.com
     * go.tnshort.net
+    * gplinks.co
     * imagehaha.com
     * imagehost.at
     * img.trafficimage.club
