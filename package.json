@@ -6,6 +6,10 @@
     "type": "git",
     "url": "https://github.com/adsbypasser/adsbypasser.git"
   },
+  "engines": {
+    "node": ">=18.x",
+    "npm": ">=8.x"
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
     "@babel/core": "^7.10.4",
@@ -33,8 +37,8 @@
     "lodash": "^4.17.19",
     "marked": "^4.0.10",
     "mocha": "^8.0.1",
-    "webpack": "^4.43.0",
-    "webpack-stream": "5.0.0"
+    "webpack": "^5.88.2",
+    "webpack-stream": "^7.0.0"
   },
   "scripts": {
     "build": "gulp",
