@@ -5,6 +5,7 @@
     * tutwuri.id
 * retired
     * ad4.fr
+    * al.ly
     * atu.ca
     * bild.me
     * clickthru.ca
@@ -12,10 +13,15 @@
     * easyurl.net
     * filoops.info
     * gkurl.us
+    * go.linksop.com
     * goshrink.com
+    * gsmzone.site
+    * jnw0.com
     * link.tl
     * linkdecode.com
     * linkplugapp.com
+    * p0xpicmoney.ru
+    * picker-click.ru
     * pucuk.xyz
     * readthis.ca
     * redirects.ca
@@ -23,6 +29,8 @@
     * surfsees.com
     * u.to
     * ux9.de
+    * wiid.me
+    * yvmedia.my.id
 
 # v7.23.0 - 2023-11-21
 
