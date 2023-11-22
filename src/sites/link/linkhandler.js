@@ -8,7 +8,6 @@
         /^birdurls\.com$/,
         /^clicksfly\.com$/,
         /^linkmoni\.com$/,
-        /^go.linksop\.com$/,
         /^shrinkearn\.com$/,
         /^shrt10\.com$/,
         /^try2link\.com$/,
