@@ -2,7 +2,7 @@
 
   const hostRules = [
     // com
-    /^(jnw0|cllkme|clkmein|corneey|ceesty)\.com$/,
+    /^(cllkme|clkmein|corneey|ceesty)\.com$/,
     /^(destyy|festyy|gestyy)\.com$/,
     // else
     /^sh\.st$/,
