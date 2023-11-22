@@ -1,3 +1,29 @@
+# TBA - 20xx-xx-xx
+
+* added
+    * icerik.site
+    * tutwuri.id
+* retired
+    * ad4.fr
+    * atu.ca
+    * bild.me
+    * clickthru.ca
+    * cshort.org
+    * easyurl.net
+    * filoops.info
+    * gkurl.us
+    * goshrink.com
+    * link.tl
+    * linkdecode.com
+    * linkplugapp.com
+    * pucuk.xyz
+    * readthis.ca
+    * redirects.ca
+    * sub2unlock.com
+    * surfsees.com
+    * u.to
+    * ux9.de
+
 # v7.23.0 - 2023-11-21
 
 * fixed
