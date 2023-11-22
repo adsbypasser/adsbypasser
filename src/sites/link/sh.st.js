@@ -6,7 +6,7 @@
     /^(destyy|festyy|gestyy)\.com$/,
     // else
     /^sh\.st$/,
-    /^(viid|wiid)\.me$/,
+    /^viid\.me$/,
   ];
 
   _.register({
