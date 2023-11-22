@@ -1,7 +1,6 @@
 _.register({
   rule: {
     host: [
-      /^vyvmedia\.my\.id$/,
       /^realsht\.mobi$/,
     ],
   },
