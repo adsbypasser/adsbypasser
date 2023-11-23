@@ -3,6 +3,7 @@
 * added
     * icerik.site
     * icutlink.com
+    * imgsaqe.sbs
     * tutwuri.id
     * zegtrends.com
 * retired
