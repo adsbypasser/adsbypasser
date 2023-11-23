@@ -68,6 +68,7 @@
 * hostpic.org
 * hotshorturl.com
 * icerik.site
+* icutlink.com
 * iiv.pl
 * illink.net
 * imagebam.com
@@ -267,4 +268,5 @@
 * xxxs.org
 * xxxwebdlxxx.org
 * xxxwebdlxxx.top
+* zegtrends.com
 * zpoz.net
