@@ -2,7 +2,9 @@
 
 * added
     * icerik.site
+    * icutlink.com
     * tutwuri.id
+    * zegtrends.com
 * retired
     * ad4.fr
     * al.ly
