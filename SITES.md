@@ -231,6 +231,7 @@
 * srelink.com
 * srt.am
 * starimage.club
+* stfly.me
 * stfly.xyz
 * supercheats.com
 * sweetlantern.com
