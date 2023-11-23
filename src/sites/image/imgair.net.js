@@ -5,6 +5,7 @@ _.register({
         /^imgair\.net$/,
         /^imgfrost\.net$/,
         /^www\.cloudgallery\.net$/,
+        /^imgsaqe\.sbs$/,
       ],
       path: /^\/[a-z|0-9]{4,10}$/,
     },
