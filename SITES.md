@@ -40,7 +40,6 @@
 * croea.com
 * cubeupload.com
 * cutpaid.com
-* cutpaid.com
 * depic.me
 * destyy.com
 * detonating.com
