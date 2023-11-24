@@ -1,9 +1,14 @@
 # TBA - 20xx-xx-xx
 
 * added
+    * ai18.pics
+    * cnpics.org
+    * cnxx.me
+    * cosplay18.pics
     * icerik.site
     * icutlink.com
     * imgsaqe.sbs
+    * porn4f.com
     * tutwuri.id
     * zegtrends.com
 * retired
