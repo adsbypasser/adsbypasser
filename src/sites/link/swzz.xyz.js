@@ -1,10 +1,10 @@
 _.register({
   rule: {
     host: /^swzz\.xyz$/,
-    path: /^\/link\/\w+\/$/,
+    path: /^\/link\//,
   },
   async ready () {
-    const g = $('a.btn-wrapper.link');
+    const g = $('a.btn.btn-primary');
     await $.openLink(g.href);
   },
 });
