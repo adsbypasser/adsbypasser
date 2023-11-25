@@ -4,7 +4,7 @@ _.register({
   },
   async ready () {
     await _.wait(8000);
-    const a = $('.btn.btn-success.btn-lg.get-link');
+    const a = $('.btn-success.btn-lg.get-link');
     a.click();
   },
 });
