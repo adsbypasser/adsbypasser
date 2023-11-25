@@ -156,6 +156,7 @@
 * linkrex.net
 * linkshrink.net
 * linksly.co
+* lnk2.cc
 * lolinez.com
 * lonelymoon.net
 * looble.net
