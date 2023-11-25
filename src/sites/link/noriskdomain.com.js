@@ -4,13 +4,10 @@ _.register({
   },
   async ready () {
     await _.wait(10000);
-    const b = $('.uk-button.uk-button-large.uk-button-primary.go-to-button');
-    if (b) {
-      b.click();
-    }
-    const a = $('.uk-button.uk-button-large.uk-button-primary.go-to-button');
-    if (a) {
-      a.click();
-    }
+    const b = $('.uk-button-primary.go-to-button');
+    b.click();
+    await _.wait(1000);
+    const a = $('.uk-button-primary.go-to-button');
+    a.click();
   },
 });
