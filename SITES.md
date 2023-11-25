@@ -4,8 +4,6 @@
 * 22pixx.xyz
 * 2i.cz
 * 2i.sk
-* 46.166.167.16
-* 4fun.tw
 * a2zapk.io
 * abload.de
 * acidimg.cc
@@ -16,7 +14,6 @@
 * adshort.co
 * adslink.pw
 * adz7short.space
-* ah-informatique.com
 * ai18.pics
 * ak.sv
 * apunkasoftware.net
@@ -147,7 +144,6 @@
 * kingofshrink.com
 * kropic.com
 * kvador.com
-* leechall.download
 * leechpremium.link
 * linclik.com
 * link.turkdown.com
@@ -168,7 +164,6 @@
 * mirrorace.com
 * mirrorace.org
 * mirrored.to
-* mirrorfilehost.com
 * mitly.us
 * mrjh.org
 * multiup.io
@@ -217,7 +212,6 @@
 * realsht.mobi
 * screenlist.ru
 * segmentnext.com
-* semprot.com
 * sfile.mobi
 * sh.st
 * shink.me
@@ -242,7 +236,6 @@
 * supercheats.com
 * sweetlantern.com
 * swzz.xyz
-* techfunda.net
 * techgeek.digital
 * tezzpic.com
 * thefileslocker.net
@@ -260,15 +253,12 @@
 * uplinkto.hair
 * uploadhaven.com
 * uploadrar.com
-* url.ie
 * urlcash.com
 * urlcash.org
 * urlgalleries.com
 * urlgator.com
 * urlshortx.com
 * usersdrive.com
-* videogameblogger.com
-* viid.me
 * vinaurl.net
 * vipr.im
 * vzturl.com
