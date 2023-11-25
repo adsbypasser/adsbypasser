@@ -47,7 +47,6 @@
     rule: {
       host: [  
         /^aylink\.co$/,
-        /^cutpaid\.com$/,
         /^dz4link\.com$/,
         /^fc-lc\.(com|xyz)$/,
         /^met\.bz/,
