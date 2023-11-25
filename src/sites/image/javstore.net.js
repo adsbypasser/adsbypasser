@@ -9,6 +9,7 @@ _.register({
     'https://cnpics.org/upload/en/*',
     'https://cosplay18.pics/upload/en/*',
     'https://porn4f.com/upload/en/*',
+    'https://ovabee.com/upload/en/*',
   ],
   async ready () {
     const m = $('meta[property="og:image"]');
