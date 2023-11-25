@@ -8,6 +8,7 @@
     * icerik.site
     * icutlink.com
     * imgsaqe.sbs
+    * lnk2.cc
     * ovabee.com
     * porn4f.com
     * tutwuri.id
