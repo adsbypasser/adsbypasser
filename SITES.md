@@ -183,6 +183,7 @@
 * ouo.io
 * ouo.press
 * outletpic.com
+* ovabee.com
 * pacific.picturedent.org
 * paylinnk.com
 * payskip.org
