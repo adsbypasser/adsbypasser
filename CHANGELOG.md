@@ -1,5 +1,7 @@
 # TBA - 20xx-xx-xx
 
+* fixed
+    * swzz.xyz
 * added
     * ai18.pics
     * cnpics.org
@@ -14,7 +16,10 @@
     * tutwuri.id
     * zegtrends.com
 * retired
+    * 46.166.167.16
+    * 4fun.tw
     * ad4.fr
+    * ah-informatique.com
     * al.ly
     * atu.ca
     * bild.me
@@ -27,18 +32,25 @@
     * goshrink.com
     * gsmzone.site
     * jnw0.com
+    * leechall.download
     * link.tl
     * linkdecode.com
     * linkplugapp.com
+    * mirrorfilehost.com
     * p0xpicmoney.ru
     * picker-click.ru
     * pucuk.xyz
     * readthis.ca
     * redirects.ca
+    * semprot.com
     * sub2unlock.com
     * surfsees.com
+    * techfunda.net
     * u.to
+    * url.ie
     * ux9.de
+    * videogamesblogger.com
+    * viid.me
     * wiid.me
     * yvmedia.my.id
 
