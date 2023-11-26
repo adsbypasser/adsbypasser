@@ -3,7 +3,7 @@ _.register({
     host: /^usersdrive\.com$/,
   },
   async ready () {
-    const a = $('a[class="btn btn-download"]');
+    const a = $('.btn-download');
     await $.openLink(a.href);
   },
 });
