@@ -10,6 +10,7 @@ _.register({
     'https://cosplay18.pics/upload/en/*',
     'https://porn4f.com/upload/en/*',
     'https://ovabee.com/upload/en/*',
+    'https://idol69.net/upload/en/*',
   ],
   async ready () {
     const m = $('meta[property="og:image"]');
