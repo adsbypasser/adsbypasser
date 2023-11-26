@@ -4,7 +4,7 @@ _.register({
   },
   async ready () {
     await _.wait(1000);
-    const b = $('[class="btn btn-primary url text-center center-block"]');
+    const b = $('.btn-primary.url.text-center');
     b.click();
   },
 });

@@ -4,7 +4,7 @@ _.register({
       /^a2zapk\.io$/,
   },
   async ready () {
-    const a = $('#dlbtn > li:nth-child(3) > a:nth-child(1)');
+    const a = $('#dlbtn li a');
     await $.openLink(a.href);
   },
 });
