@@ -4,7 +4,7 @@ _.register({
       /^multiup\.io$/,
   },
   async ready () {
-    const b = $('button[class="btn btn-info btn-lg btn-block p-xlg hvr-shutter-out-horizontal"]');
+    const b = $('.btn-info.btn-lg.btn-block');
     b.click();
   },
 });
