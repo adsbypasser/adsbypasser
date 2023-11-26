@@ -9,6 +9,7 @@
     * cosplay18.pics
     * icerik.site
     * icutlink.com
+    * idol69.net
     * imgsaqe.sbs
     * lnk2.cc
     * ovabee.com

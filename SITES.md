@@ -69,6 +69,7 @@
 * hotshorturl.com
 * icerik.site
 * icutlink.com
+* idol69.net
 * iiv.pl
 * illink.net
 * imagebam.com
