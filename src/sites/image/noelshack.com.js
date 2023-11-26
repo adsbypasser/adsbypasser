@@ -3,7 +3,7 @@ _.register({
     host: /^www\.noelshack\.com$/,
   },
   async ready () {
-    const i = $('#elt_to_aff');
-    await $.openImage(i.src);
+    const i = $('meta[property="og:image"]');
+    await $.openImage(i.content);
   },
 });
