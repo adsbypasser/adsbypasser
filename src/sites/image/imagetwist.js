@@ -1,30 +1,17 @@
-(function () {
-  _.register({
-    rule: [
-      {
-        host: /^imagenpic\.com$/,
-        path: /^\/.*\/.+\.html?$/,
-      },
-      {
-        host: [
-          /^imagetwist\.com$/,
-          /^vipr\.im$/,
-        ]
-      },
-    ],
-    ready: run,
-  });
-
-  _.register({
-    rule: {
-      host: /^(imagexport|imageshimage)\.com$/,
+_.register({
+  rule:
+    {
+      host: [
+        /^imagetwist\.com$/,
+        /^imagenpic\.com$/,
+        /^imagexport\.com$/,
+        /^imageshimage\.com$/,
+        /^croea\.com$/,
+        /^vipr\.im$/,
+      ]
     },
-    ready: run,
-  });
-
-  async function run () {
+  async ready () {
     const i = $('img.pic');
     await $.openImage(i.src);
   }
-
-})();
+});
