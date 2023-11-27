@@ -32,14 +32,20 @@
     * go.linksop.com
     * goshrink.com
     * gsmzone.site
+    * imgtorrnt.in
     * jnw0.com
     * leechall.download
     * link.tl
     * linkdecode.com
     * linkplugapp.com
+    * mirrorace.com
+    * mirrorace.org
     * mirrorfilehost.com
     * p0xpicmoney.ru
+    * piccash.net
+    * picexposed.com
     * picker-click.ru
+    * pics-money.ru
     * pucuk.xyz
     * readthis.ca
     * redirects.ca
