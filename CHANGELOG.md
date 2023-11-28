@@ -10,7 +10,7 @@
     * icerik.site
     * icutlink.com
     * idol69.net
-    * imgsaqe.sbs
+    * imgblaze.net
     * lnk2.cc
     * ovabee.com
     * porn4f.com
