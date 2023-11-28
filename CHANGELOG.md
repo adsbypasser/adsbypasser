@@ -7,6 +7,7 @@
     * cnpics.org
     * cnxx.me
     * cosplay18.pics
+    * go.bitcosite.com
     * icerik.site
     * icutlink.com
     * idol69.net
