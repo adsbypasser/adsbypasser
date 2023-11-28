@@ -94,6 +94,7 @@
 * imgant.com
 * imgbaron.com
 * imgbase.ru
+* imgblaze.net
 * imgbox.com
 * imgclick.net
 * imgcloud.pw
@@ -116,7 +117,6 @@
 * imgprime.com
 * imgpukxxr.site
 * imgpuloki.online
-* imgsaqe.sbs
 * imgsdi.website
 * imgsee.me
 * imgsen.com
