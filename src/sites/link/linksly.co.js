@@ -10,7 +10,10 @@ _.register({
 
 _.register({
   rule: {
-    host: /^go\.linksly\.co$/,
+    host: [
+      /^go\.linksly\.co$/,
+      /^go\.bitcosite\.com$/,
+    ],
   },
   async ready () {
     await _.wait(8000);
