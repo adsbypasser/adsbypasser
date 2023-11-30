@@ -24,6 +24,7 @@
 * biglistofwebsites.com
 * bioskopkeren.boo
 * birdurls.com
+* blogbux.net
 * boost.ink
 * casimages.com
 * ceesty.com
@@ -229,11 +230,11 @@
 * srt.am
 * starimage.club
 * stfly.me
-* stfly.xyz
 * supercheats.com
 * sweetlantern.com
 * swzz.xyz
 * techgeek.digital
+* techtrendmakers.com
 * tezzpic.com
 * thefileslocker.net
 * thinfi.com
