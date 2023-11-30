@@ -32,7 +32,6 @@
         /^megalink\.pro$/,
         /^pingit\.im$/,
         /^short\.pe$/,
-        /^stfly\.(me|xyz)$/,
         /^tii\.la$/,
         /^tl\.tc$/,
       ],
