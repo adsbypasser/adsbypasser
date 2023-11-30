@@ -53,7 +53,6 @@
     * readthis.ca
     * redirects.ca
     * semprot.com
-    * stfly.xyz
     * sub2unlock.com
     * surfsees.com
     * techfunda.net
