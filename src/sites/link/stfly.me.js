@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^stfly\.me$/,
+    host: /^stfly\.(me|xyz)$/,
   },
   async ready () {
     const b = $('.btn-captcha.m-2.form-send');
