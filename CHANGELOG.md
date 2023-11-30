@@ -4,6 +4,7 @@
     * swzz.xyz
 * added
     * ai18.pics
+    * blogbux.net
     * cnpics.org
     * cnxx.me
     * cosplay18.pics
@@ -15,6 +16,7 @@
     * lnk2.cc
     * ovabee.com
     * porn4f.com
+    * techtrendmakers.com
     * tutwuri.id
     * zegtrends.com
 * retired
@@ -51,6 +53,7 @@
     * readthis.ca
     * redirects.ca
     * semprot.com
+    * stfly.xyz
     * sub2unlock.com
     * surfsees.com
     * techfunda.net
