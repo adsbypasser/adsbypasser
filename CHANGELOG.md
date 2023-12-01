@@ -12,11 +12,13 @@
     * icerik.site
     * icutlink.com
     * idol69.net
+    * im.ge
     * imgblaze.net
     * lnk2.cc
     * ovabee.com
     * porn4f.com
     * techtrendmakers.com
+    * trafficimage.club
     * tutwuri.id
     * zegtrends.com
 * retired
