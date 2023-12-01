@@ -74,6 +74,7 @@
 * idol69.net
 * iiv.pl
 * illink.net
+* im.ge
 * imagebam.com
 * imageban.ru
 * imagehaha.com
@@ -242,6 +243,7 @@
 * tii.la
 * tl.tc
 * tmearn.net
+* trafficimage.club
 * tribuntekno.com
 * try2link.com
 * turboimagehost.com
