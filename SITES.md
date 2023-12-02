@@ -48,6 +48,7 @@
 * directupload.net
 * earnlink.io
 * exeo.app
+* everest.picturedent.org
 * fastpic.org
 * fc-lc.com
 * fc-lc.xyz
@@ -192,6 +193,7 @@
 * picnew.space
 * pics4you.net
 * picstate.com
+* picturedent.org
 * picuekr.site
 * pic-upload.de
 * picz.site
