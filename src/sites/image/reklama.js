@@ -1,23 +1,17 @@
 (function () {
 
   const defaultAction = _.partial(action, '#continuetoimage > form input', 'img[class^=centred]');
+  const defaultAction2 = _.partial(action, '#continuebutton, #continuetoimage input[type="submit"]', 'img[class^=centred]');
 
   _.register({
     rule: [
       {
         host: [
-          // com
-          /^(imghit|imgdawgknuttz)\.com$/,
-          // else
+          /^imgdawgknuttz\.com$/,
           /^acidimg\.cc$/,
           /^xxxwebdlxxx\.(org|top)$/,
-          /^picz\.site$/,
         ],
         path: /\/img-.*\.html/,
-      },
-      {
-        host: /^imgking\.co$/,
-        path: /^\/img4?-.*\.html/,
       },
     ],
     ready: defaultAction,
@@ -41,84 +35,17 @@
   });
 
   _.register({
-    rule: {
-      host: /^imgkings\.com$/,
-      path: /^\/img2-.*\.html/,
-    },
-    ready: defaultAction,
-  });
-
-  _.register({
-    rule: {
-      host: /^imgprime\.com$/,
-      path: /^\/imga-u\/(.+)\.jpeg\.html/,
-    },
-    async start () {
-      const path = window.location.href.replace('/imga-u', '/u').replace('.html', '');
-      await $.openLink(path);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^22pixx\.xyz$/,
-      path: /^\/ia-[io]\/(.+)\.jpeg\.html/,
-    },
-    async start () {
-      const path = window.location.href.replace('/ia-', '/').replace('.html', '');
-      await $.openLink(path);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^22pixx\.xyz$/,
-      path: /^\/i-a\/(.+)\.jpeg\.html/,
-    },
-    async start () {
-      const path = window.location.href.replace('/i-', '/').replace('.html', '');
-      await $.openLink(path);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^22pixx\.xyz$/,
-      path: /^\/x-[or]\/(.+)\.jpeg\.html/,
-    },
-    async start () {
-      const path = window.location.href.replace('/x-', '/').replace('.html', '');
-      await $.openLink(path);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^22pixx\.xyz$/,
-      path: /^\/y-[ao1]\/(.+)\.jpeg\.html/,
-    },
-    async start () {
-      const path = window.location.href.replace('/y-', '/').replace('.html', '');
-      await $.openLink(path);
-    },
-  });
-
-  _.register({
-    rule: {
-      host: /^22pixx\.xyz$/,
-      path: /^\/x-i\/(.+)\.jpeg\.html/,
-    },
-    async start () {
-      const path = window.location.href.replace('/x', '/y');
-      await $.openLink(path);
-    },
-  });
-
-  _.register({
     rule: [
       {
         host: /^imgking\.co$/,
-        path: /^\/img[v3]-.*\.html/,
+        path: [
+          /^\/img[v3]-.*\.html/,
+          /^\/img4?-.*\.html/,
+        ],
+      },
+      {
+        host: /^imgkings\.com$/,
+        path: /^\/img2-.*\.html/,
       },
       {
         host: /^picstate\.com$/,
@@ -155,7 +82,7 @@
         /^\/i\/.*/,
       ],
     },
-    ready: _.partial(action, '#continuebutton, #continuetoimage input[type="submit"]', 'img[class^=centred]'),
+    ready: defaultAction2,
   });
 
   _.register({
@@ -178,6 +105,7 @@
       host: [
         /^imgcloud\.pw$/,
         /^pilot007\.org$/,
+        /^www\.imghit\.com$/,
       ],
       path: /^\/image\/.*/,
     },
