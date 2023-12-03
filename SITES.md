@@ -11,6 +11,7 @@
 * adbull.me
 * adfoc.us
 * adsafelink.com
+* adshnk.com
 * adshort.co
 * adslink.pw
 * adz7short.space
@@ -100,7 +101,6 @@
 * imgbase.ru
 * imgblaze.net
 * imgbox.com
-* imgclick.net
 * imgcloud.pw
 * imgdawgknuttz.com
 * imgdew.pw
@@ -113,7 +113,6 @@
 * imgkings.com
 * imglekw.site
 * imgmaze.pw
-* imgmonkey.com
 * imgneor.store
 * imgnmh.cfd
 * imgotw.store
@@ -191,6 +190,7 @@
 * piclerz.store
 * pic-maniac.com
 * picnew.space
+* pics4upload.com
 * pics4you.net
 * picstate.com
 * picturedent.org
@@ -211,7 +211,6 @@
 * prnt.sc
 * pronpic.org
 * realsht.mobi
-* screenlist.ru
 * segmentnext.com
 * sfile.mobi
 * sh.st
