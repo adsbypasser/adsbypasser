@@ -3,6 +3,7 @@
 * fixed
     * swzz.xyz
 * added
+    * adshnk.com
     * ai18.pics
     * blogbux.net
     * cnpics.org
@@ -17,6 +18,7 @@
     * imgblaze.net
     * lnk2.cc
     * ovabee.com
+    * pics4upload.com
     * picturedent.org
     * porn4f.com
     * techtrendmakers.com
@@ -39,6 +41,8 @@
     * go.linksop.com
     * goshrink.com
     * gsmzone.site
+    * imgclick.net
+    * imgmonkey.com
     * imgtorrnt.in
     * jnw0.com
     * leechall.download
@@ -56,6 +60,7 @@
     * pucuk.xyz
     * readthis.ca
     * redirects.ca
+    * screenlist.ru
     * semprot.com
     * sub2unlock.com
     * surfsees.com
