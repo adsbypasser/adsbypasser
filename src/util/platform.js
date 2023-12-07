@@ -65,7 +65,6 @@ function getGreaseMonkeyAPI () {
   } else {
     gm.xmlHttpRequest = GM.xmlHttpRequest;
   }
-  // GreaseMonkey v4.0 removed this function.
   if (typeof GM_registerMenuCommand === 'function') {
     gm.registerMenuCommand = GM_registerMenuCommand;
   } else {
@@ -98,19 +97,6 @@ function getUnsafeWindowProxy () {
     set (target, key, value) {
       if (key === MAGIC_KEY) {
         return false;
-      }
-      // GreaseMonkey 2.1 has a bug
-      // unsafeWindow.open will become read-only after modifying
-      // so we have to explicitly assign property descriptor
-      if (target === unsafeWindow && key === 'open') {
-        const d = Object.getOwnPropertyDescriptor(target, key);
-        // wrap the returned object back so that content script can see
-        // through the object
-        d.value = clone(function () {
-          const rv = value();
-          return cloneInto(rv, unsafeWindow);
-        });
-        Object.defineProperty(target, key, d);
       } else {
         target[key] = clone(value);
       }
