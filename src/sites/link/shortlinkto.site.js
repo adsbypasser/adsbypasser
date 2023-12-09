@@ -1,12 +1,12 @@
 _.register({
   rule: {
     host: [
-      /^shortlinkto\.site$/,
+      /^shortlinkto\.biz$/,
       /^uplinkto\.hair$/,
     ],  
   },
   async ready () {
-    const b = $('.btn.btn-primary.btn-block');
-    b.click();
+    const a = $('.view-well a');
+    await $.openLink(a.href);
   },
 });
