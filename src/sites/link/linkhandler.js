@@ -6,71 +6,29 @@
         // com
         /^adsafelink\.com$/,
         /^birdurls\.com$/,
-        /^clicksfly\.com$/,
-        /^linkmoni\.com$/,
-        /^shrinkearn\.com$/,
+        /^cutpaid\.com$/,
+        /^(linkmoni|shrinkcash)\.com$/,
         /^shrt10\.com$/,
-        /^try2link\.com$/,
-        /^urlshortx\.com$/,
-        // in
-        /^megaurl\.in$/,
-        // io
-        /^miniurl\.io$/,
-        /^oke\.io$/,
-        /^shrinkme\.io$/,
-        /^uii\.io$/,
         // net
-        /^illink\.net$/,
-        /^linkrex\.net$/,
+        /^tmearn\.net$/,
         /^vinaurl\.net$/,
         // org
         /^payskip\.org$/,
         // pw
         /^clik\.pw$/,
+        /^miniurl\.pw$/,
         // else
-        /^clk\.sh$/,
+        /^aylink\.co$/,
+        /^(clk|oko)\.sh$/,
         /^megalink\.pro$/,
+        /^met\.bz/,
+        /^mitly\.us$/,
+        /^oke\.io$/,
         /^pingit\.im$/,
-        /^short\.pe$/,
-        /^tii\.la$/,
-        /^tl\.tc$/,
       ],
     },
     async ready () {
       const handler = new RecaptchaHandler();
-      await handler.call();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: [  
-        /^aylink\.co$/,
-        /^cutpaid\.com$/,
-        /^dz4link\.com$/,
-        /^fc-lc\.(com|xyz)$/,
-        /^met\.bz/,
-        /^mitly\.us$/,
-        /^tmearn\.net$/,
-      ],
-    },
-    async ready () {
-      const handler = new InvisibleRecaptchaHandler();
-      await handler.call();
-    },
-  });
-
-  _.register({
-    rule: {
-      host: [
-        /^adbull\.me$/,
-        /^adshort\.co$/,
-        /^adslink\.pw$/,
-        /^linclik\.com$/,
-      ],
-    },
-    async ready () {
-      const handler = new StagedHandler();
       await handler.call();
     },
   });
@@ -100,7 +58,7 @@
     removeOverlay () {
       $.remove(this._overlaySelector);
       $.block(this._overlaySelector, document.body);
-      // oturl.com will set overflow to hidden
+
       setInterval(() => {
         document.body.style.overflow = 'initial';
       }, 500);
@@ -146,11 +104,6 @@
       if (!b) {
         return false;
       }
-
-      // InvisibleRecaptchaHandler needs the f element
-      await this.submitListen(b, f);
-
-      return false;
     }
 
     async submitListen (b) {
@@ -169,8 +122,7 @@
     }
 
     withoutMiddleware () {
-      // TODO This line was added for sflnk.me, but the domain is gone.
-      // Need to confirm if this is still work for the rest sites.
+      // Not sure if this is still needed.
       const f = $('#link-view');
       f.submit();
     }
@@ -189,71 +141,6 @@
       }
     }
 
-  }
-
-
-  class InvisibleRecaptchaHandler extends RecaptchaHandler {
-
-    async submitListen (b, f) {
-      await _.wait(1000);
-      const click = f.clientWidth === 0 || f.childNodes.length === 0;
-      if (click && !b.disabled) {
-        _.info('clicking submit button, because recaptcha was empty');
-        // remove event handler
-        b.setAttribute('onclick', '');
-        b.click();
-      }
-    }
-
-  }
-
-
-  class StagedHandler extends AbstractHandler {
-
-    prepare () {
-      this.removeFrame();
-      this.removeOverlay();
-      return true;
-    }
-
-    async getMiddleware () {
-      const f = $.$('#link-view');
-      if (!f) {
-        return document;
-      }
-
-      const args = extractArgument(f);
-      const url = f.getAttribute('action');
-      let page = await $.post(url, args);
-      page = $.toDOM(page);
-      return page;
-    }
-
-    withoutMiddleware () {
-      _.info('no page');
-    }
-
-    async getURL (page) {
-      const f = $('#go-link', page);
-      const args = extractArgument(f);
-      const url = f.getAttribute('action');
-      let data = await $.post(url, args);
-      data = JSON.parse(data);
-      if (data && data.url) {
-        return data.url;
-      }
-      throw new _.AdsBypasserError('wrong data');
-    }
-
-  }
-
-
-  function extractArgument (form) {
-    const args = {};
-    _.forEach($.$$('input', form), (v) => {
-      args[v.name] = v.value;
-    });
-    return args;
   }
 
 
