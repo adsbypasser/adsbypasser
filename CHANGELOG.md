@@ -5,6 +5,7 @@
 * added
     * adshnk.com
     * ai18.pics
+    * bcvc.ink
     * blogbux.net
     * cnpics.org
     * cnxx.me
@@ -21,6 +22,7 @@
     * pics4upload.com
     * picturedent.org
     * porn4f.com
+    * shortlinkto.biz
     * techtrendmakers.com
     * trafficimage.club
     * tutwuri.id
@@ -29,14 +31,17 @@
     * 46.166.167.16
     * 4fun.tw
     * ad4.fr
+    * adb.ug
     * ah-informatique.com
     * al.ly
     * atu.ca
+    * bc.vc
     * bild.me
     * clickthru.ca
     * cshort.org
     * easyurl.net
     * filoops.info
+    * get.shrink-service.it
     * gkurl.us
     * go.linksop.com
     * goshrink.com
@@ -62,6 +67,8 @@
     * redirects.ca
     * screenlist.ru
     * semprot.com
+    * shortlinkto.site
+    * shrink-service.it
     * sub2unlock.com
     * surfsees.com
     * techfunda.net
@@ -72,6 +79,7 @@
     * viid.me
     * wiid.me
     * yvmedia.my.id
+    * zpoz.net
 
 # v7.23.0 - 2023-11-21
 
