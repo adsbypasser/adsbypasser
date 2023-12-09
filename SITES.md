@@ -7,7 +7,6 @@
 * a2zapk.io
 * abload.de
 * acidimg.cc
-* adb.ug
 * adbull.me
 * adfoc.us
 * adsafelink.com
@@ -20,7 +19,7 @@
 * apunkasoftware.net
 * aylink.co
 * bayimg.com
-* bc.vc
+* bcvc.ink
 * beeimg.com
 * biglistofwebsites.com
 * bioskopkeren.boo
@@ -218,11 +217,10 @@
 * shon.xyz
 * short.am
 * short.pe
-* shortlinkto.site
+* shortlinkto.biz
 * shortmoz.link
 * shrinkearn.com
 * shrinkme.io
-* shrink-service.it
 * shrt10.com
 * silverpic.com
 * similarsites.com
@@ -269,4 +267,3 @@
 * xxxwebdlxxx.org
 * xxxwebdlxxx.top
 * zegtrends.com
-* zpoz.net
