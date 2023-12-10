@@ -27,18 +27,27 @@
     * trafficimage.club
     * tutwuri.id
     * zegtrends.com
+    * loaninsurehub.com
+    * miniurl.pw
+    * oko.sh
+    * shrinkcash.com
 * retired
     * 46.166.167.16
     * 4fun.tw
     * ad4.fr
     * adb.ug
+    * adbull.me
+    * adshort.co
+    * adslink.pw
     * ah-informatique.com
     * al.ly
     * atu.ca
     * bc.vc
     * bild.me
+    * clicksfly.com
     * clickthru.ca
     * cshort.org
+    * dz4link.com
     * easyurl.net
     * filoops.info
     * get.shrink-service.it
@@ -46,14 +55,19 @@
     * go.linksop.com
     * goshrink.com
     * gsmzone.site
+    * illink.net
     * imgclick.net
     * imgmonkey.com
     * imgtorrnt.in
     * jnw0.com
     * leechall.download
+    * linclik.com
     * link.tl
     * linkdecode.com
     * linkplugapp.com
+    * linkrex.net
+    * megaurl.in
+    * miniurl.io
     * mirrorace.com
     * mirrorace.org
     * mirrorfilehost.com
@@ -67,13 +81,21 @@
     * redirects.ca
     * screenlist.ru
     * semprot.com
+    * short.pe
     * shortlinkto.site
+    * shrinkearn.com
+    * shrinkme.io
     * shrink-service.it
     * sub2unlock.com
     * surfsees.com
     * techfunda.net
+    * tii.la
+    * tl.tc
+    * try2link.com
     * u.to
+    * uii.io
     * url.ie
+    * urlshortx.com
     * ux9.de
     * videogamesblogger.com
     * viid.me
