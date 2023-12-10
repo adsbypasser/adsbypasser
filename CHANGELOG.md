@@ -18,19 +18,19 @@
     * im.ge
     * imgblaze.net
     * lnk2.cc
+    * loaninsurehub.com
+    * miniurl.pw
+    * oko.sh
     * ovabee.com
     * pics4upload.com
     * picturedent.org
     * porn4f.com
     * shortlinkto.biz
+    * shrinkcash.com
     * techtrendmakers.com
     * trafficimage.club
     * tutwuri.id
     * zegtrends.com
-    * loaninsurehub.com
-    * miniurl.pw
-    * oko.sh
-    * shrinkcash.com
 * retired
     * 46.166.167.16
     * 4fun.tw
