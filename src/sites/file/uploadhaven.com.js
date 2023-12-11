@@ -4,8 +4,8 @@ _.register({
     path: /^\/download\//,
   },
   async ready () {
-    await _.wait(5000);
-    const f = $('.contactForm #downloadNowBtn.btn.btn-primary');
+    await _.wait(18000);
+    const f = $('.btn-submit-free.btn-download-free');
     f.click();
   },
 });
