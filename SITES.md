@@ -55,7 +55,6 @@
 * fotokiz.com
 * foto-pic.net
 * fotosik.pl
-* freeimgup.com
 * gestyy.com
 * get-click2.blogspot.com
 * getthot.com
