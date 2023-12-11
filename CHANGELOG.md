@@ -2,6 +2,7 @@
 
 * fixed
     * swzz.xyz
+    * uploadhaven.com
 * added
     * adshnk.com
     * ai18.pics
@@ -50,6 +51,7 @@
     * dz4link.com
     * easyurl.net
     * filoops.info
+    * freeimgup.com
     * get.shrink-service.it
     * gkurl.us
     * go.linksop.com
