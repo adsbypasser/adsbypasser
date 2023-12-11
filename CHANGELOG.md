@@ -4,6 +4,8 @@
     * swzz.xyz
     * uploadhaven.com
 * added
+    * 3xplanet.com
+    * 3xplanet.net
     * adshnk.com
     * ai18.pics
     * bcvc.ink
@@ -18,6 +20,8 @@
     * idol69.net
     * im.ge
     * imgblaze.net
+    * javtenshi.com
+    * jav-load.com
     * lnk2.cc
     * loaninsurehub.com
     * miniurl.pw
