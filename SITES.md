@@ -4,6 +4,8 @@
 * 22pixx.xyz
 * 2i.cz
 * 2i.sk
+* 3xplanet.com
+* 3xplanet.net
 * a2zapk.io
 * abload.de
 * acidimg.cc
@@ -135,6 +137,8 @@
 * ipic.su
 * javball.com
 * javlibrary.com
+* javtenshi.com
+* jav-load.com
 * katfile.com
 * keeplinks.org
 * keptarolo.hu
