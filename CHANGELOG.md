@@ -18,7 +18,6 @@
     * icerik.site
     * icutlink.com
     * idol69.net
-    * iiv.pl
     * im.ge
     * imgblaze.net
     * imgrehd.shop
@@ -64,6 +63,7 @@
     * go.linksop.com
     * goshrink.com
     * gsmzone.site
+    * iiv.pl
     * illink.net
     * imgclick.net
     * imgmonkey.com
