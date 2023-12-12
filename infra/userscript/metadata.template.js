@@ -32,6 +32,7 @@
 // @resource       scaleImage https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/resources/css/scale_image.css
 // @resource       bgImage https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/resources/img/imagedoc-darknoise.png
 <% } %>
+// @noframes
 // @run-at         document-start
 // @include        http://*
 // @include        https://*
