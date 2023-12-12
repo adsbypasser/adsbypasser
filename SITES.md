@@ -71,7 +71,6 @@
 * icerik.site
 * icutlink.com
 * idol69.net
-* iiv.pl
 * im.ge
 * imagebam.com
 * imageban.ru
