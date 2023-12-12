@@ -20,6 +20,7 @@
     * idol69.net
     * im.ge
     * imgblaze.net
+    * imgrehd.shop
     * javtenshi.com
     * jav-load.com
     * lnk2.cc
