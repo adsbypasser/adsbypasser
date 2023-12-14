@@ -6,6 +6,7 @@
         // com
         /^adsafelink\.com$/,
         /^birdurls\.com$/,
+        /^dz4link\.com$/,
         /^(linkmoni|shrinkcash)\.com$/,
         /^shrt10\.com$/,
         // net
