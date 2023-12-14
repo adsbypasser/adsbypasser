@@ -1,6 +1,4 @@
 (function () {
-
-  // mihalism v1
   _.register({
     rule: {
       host: [
@@ -12,9 +10,7 @@
     },
     start: helper,
   });
-
   async function helper (m) {
     await $.openImage('/images/' + m.query[1]);
   }
-
 })();
