@@ -1,6 +1,8 @@
 # TBA - 20xx-xx-xx
 
 * fixed
+    * cutpaid.com
+    * imagebam.com
     * swzz.xyz
     * uploadhaven.com
 * added
@@ -13,6 +15,7 @@
     * cnpics.org
     * cnxx.me
     * cosplay18.pics
+    * dz4link.com
     * everest.picturedent.org
     * go.bitcosite.com
     * icerik.site
