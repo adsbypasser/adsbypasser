@@ -45,6 +45,7 @@
 * destyy.com
 * detonating.com
 * directupload.net
+* dz4link.com
 * earnlink.io
 * everest.picturedent.org
 * exeo.app
