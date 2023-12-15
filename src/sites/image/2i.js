@@ -1,9 +1,9 @@
 _.register({
   rule: {
-    host: /^www\.2i\.(sk|cz)$/,
+    host: /^2i\.(sk|cz)$/,
   },
   async ready () {
-    const img = $('#wrap3 img');
-    await $.openImage(img.src);
+    const m = $('meta[property="og:image"]');
+    await $.openImage(m.content);
   },
 });
