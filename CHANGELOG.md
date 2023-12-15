@@ -1,8 +1,11 @@
 # TBA - 20xx-xx-xx
 
 * fixed
+    * 2i.cz
+    * 2i.sk
     * cutpaid.com
     * imagebam.com
+    * keptarolo.hu
     * swzz.xyz
     * uploadhaven.com
 * added
