@@ -115,6 +115,7 @@
 * imgprime.com
 * imgpukxxr.site
 * imgpuloki.online
+* imgqklw.shop
 * imgrehd.shop
 * imgsdi.website
 * imgsee.me
