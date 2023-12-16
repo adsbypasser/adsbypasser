@@ -45,6 +45,7 @@
 * destyy.com
 * detonating.com
 * directupload.net
+* dpic.me
 * dz4link.com
 * earnlink.io
 * everest.picturedent.org
@@ -66,7 +67,6 @@
 * go.tnshort.net
 * gplinks.co
 * hen-tay.net
-* hostingpics.net
 * hostpic.org
 * hotshorturl.com
 * icerik.site
@@ -84,7 +84,6 @@
 * imageshimage.com
 * imagetwist.com
 * imagetwist.netlify.app
-* imageup.ru
 * imageupper.com
 * imagevenue.com
 * imagexport.com
@@ -135,7 +134,6 @@
 * imx.to
 * indishare.org
 * intercelestial.com
-* ipic.su
 * javball.com
 * javlibrary.com
 * javtenshi.com
