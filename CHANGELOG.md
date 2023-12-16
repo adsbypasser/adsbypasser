@@ -5,6 +5,7 @@
     * 2i.sk
     * cutpaid.com
     * imagebam.com
+    * imageban.ru
     * keptarolo.hu
     * swzz.xyz
     * uploadhaven.com
@@ -18,6 +19,7 @@
     * cnpics.org
     * cnxx.me
     * cosplay18.pics
+    * dpic.me
     * dz4link.com
     * everest.picturedent.org
     * go.bitcosite.com
@@ -69,11 +71,14 @@
     * go.linksop.com
     * goshrink.com
     * gsmzone.site
+    * hostingpics.net
     * iiv.pl
     * illink.net
+    * imageup.ru
     * imgclick.net
     * imgmonkey.com
     * imgtorrnt.in
+    * ipic.su
     * jnw0.com
     * leechall.download
     * linclik.com
