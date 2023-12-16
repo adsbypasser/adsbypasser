@@ -5,6 +5,7 @@ _.register({
         /^imgair\.net$/,
         /^imgblaze\.net$/,
         /^imgfrost\.net$/,
+        /^imgqklw\.shop$/,
         /^imgrehd\.shop$/,
         /^www\.cloudgallery\.net$/,
       ],
