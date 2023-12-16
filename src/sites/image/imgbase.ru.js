@@ -1,9 +1,8 @@
 _.register({
   rule: {
     host: [
-      /^imgbase\.ru$/,
+      /^(imgbase|picforall)\.ru$/,
     ],
-    path: /^\/\d+\/\d+\/$/,
   },
   async ready () {
     let i = $('#pay_thumb_img img');
