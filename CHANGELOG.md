@@ -28,6 +28,7 @@
     * idol69.net
     * im.ge
     * imgblaze.net
+    * imgqklw.shop
     * imgrehd.shop
     * javtenshi.com
     * jav-load.com
