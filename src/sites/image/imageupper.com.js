@@ -1,5 +1,7 @@
 _.register({
-  rule: 'http://imageupper.com/i/?*',
+  rule: {
+    host: /^imageupper\.com$/,
+  },
   async ready () {
     const i = $('#img');
     await $.openImage(i.src);
