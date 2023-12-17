@@ -3,7 +3,7 @@ _.register({
     host: /^www\.imagevenue.com$/,
   },
   async ready () {
-    const i = $('a[title] img#main-image');
+    const i = $('#main-image');
     await $.openImage(i.src);
   },
 });
