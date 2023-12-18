@@ -1,10 +1,9 @@
 _.register({
   rule: {
     host: /^beeimg\.com$/,
-    path: /\/view\/.*/,
   },
   async ready () {
-    const img = $('[id="beeimage"]');
+    const img = $('#beeimage');
     await $.openImage(img.src);
   },
 });

@@ -1,5 +1,7 @@
 _.register({
-  rule: 'https://cubeupload.com/im/*',
+  rule: {
+    host: /^cubeupload.com$/,
+  },
   async ready () {
     const img = $('img.galleryBigImg');
     await $.openImage(img.src);

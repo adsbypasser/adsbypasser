@@ -1,5 +1,7 @@
 _.register({
-  rule: 'https://*.directupload.net/file/*.htm',
+  rule: {
+    host: /^www\.directupload.net$/,
+  },
   async ready () {
     const i = $('#ImgFrame');
     await $.openImage(i.src);

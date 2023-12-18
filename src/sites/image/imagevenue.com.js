@@ -1,9 +1,9 @@
 _.register({
   rule: {
-    host: /^imgbox\.com$/,
+    host: /^www\.imagevenue.com$/,
   },
   async ready () {
-    const i = $('#img');
+    const i = $('#main-image');
     await $.openImage(i.src);
   },
 });

@@ -1,9 +1,10 @@
 _.register({
   rule: {
-    host: /^imgbox\.com$/,
+    host: /^imageshack\.com$/,
+    path: /^\/i\//,
   },
   async ready () {
-    const i = $('#img');
+    const i = $('#lp-image');
     await $.openImage(i.src);
   },
 });
