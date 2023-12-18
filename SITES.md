@@ -78,13 +78,13 @@
 * imagehaha.com
 * imagehost.at
 * imagenetz.de
-* imageno.com
 * imagenpic.com
-* imageshack.us
+* imageshack.com
 * imageshimage.com
 * imagetwist.com
 * imagetwist.netlify.app
 * imageupper.com
+* imageup.ru
 * imagevenue.com
 * imagexport.com
 * img.javstore.net
@@ -185,6 +185,7 @@
 * payskip.org
 * picbaron.com
 * picdollar.com
+* picforall.ru
 * piclerz.store
 * pic-maniac.com
 * picnew.space
