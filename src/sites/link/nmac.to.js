@@ -1,10 +1,10 @@
 _.register({
   rule: {
     host: /^nmac\.to$/,
-    path: /^\/download\/(.+)/,
+    path: /^\/dl\/(.+)/,
   },
-  async start (m) {
-    const url = atob(m.path[1]);
-    await $.openLink(url);
+  async ready () {
+    const a = $('.btn-medium.btn-block');
+    await $.openLink(a.href);
   },
 });
