@@ -3,7 +3,9 @@
 * fixed
     * 2i.cz
     * 2i.sk
+    * beeimg.com
     * cutpaid.com
+    * hostpic.org
     * imagebam.com
     * imageban.ru
     * keptarolo.hu
@@ -27,6 +29,8 @@
     * icutlink.com
     * idol69.net
     * im.ge
+    * imageshack.com
+    * imageup.ru
     * imgblaze.net
     * imgqklw.shop
     * imgrehd.shop
@@ -37,6 +41,7 @@
     * miniurl.pw
     * oko.sh
     * ovabee.com
+    * picforall.ru
     * pics4upload.com
     * picturedent.org
     * porn4f.com
@@ -75,6 +80,8 @@
     * hostingpics.net
     * iiv.pl
     * illink.net
+    * imageno.com
+    * imageshack.us
     * imageup.ru
     * imgclick.net
     * imgmonkey.com
