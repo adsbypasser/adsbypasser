@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^www\.imagevenue.com$/,
+    host: /^www\.imagevenue\.com$/,
   },
   async ready () {
     const i = $('#main-image');
