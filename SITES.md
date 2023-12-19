@@ -134,7 +134,6 @@
 * imgwia.buzz
 * imx.to
 * indishare.org
-* intercelestial.com
 * javball.com
 * javlibrary.com
 * javtenshi.com
@@ -155,7 +154,6 @@
 * lnk2.cc
 * loaninsurehub.com
 * lolinez.com
-* lonelymoon.net
 * looble.net
 * mangalist.org
 * megalink.pro
@@ -230,7 +228,6 @@
 * stfly.me
 * stfly.xyz
 * supercheats.com
-* sweetlantern.com
 * swzz.xyz
 * techgeek.digital
 * techtrendmakers.com
