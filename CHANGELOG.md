@@ -86,6 +86,7 @@
     * imgclick.net
     * imgmonkey.com
     * imgtorrnt.in
+    * intercelestial.com
     * ipic.su
     * jnw0.com
     * leechall.download
@@ -94,6 +95,7 @@
     * linkdecode.com
     * linkplugapp.com
     * linkrex.net
+    * lonelymoon.net
     * megaurl.in
     * miniurl.io
     * mirrorace.com
@@ -116,6 +118,7 @@
     * shrink-service.it
     * sub2unlock.com
     * surfsees.com
+    * sweetlantern.com
     * techfunda.net
     * tii.la
     * tl.tc
