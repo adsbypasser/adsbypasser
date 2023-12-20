@@ -145,7 +145,6 @@
 * kingofshrink.com
 * kropic.com
 * kvador.com
-* leechpremium.link
 * link.turkdown.com
 * link1s.com
 * linkpoi.me
