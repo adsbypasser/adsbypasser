@@ -1,6 +1,7 @@
 # TBA - 20xx-xx-xx
 
 * fixed
+    * 1ink.cc
     * 2i.cz
     * 2i.sk
     * beeimg.com
@@ -56,6 +57,7 @@
     * 46.166.167.16
     * 4fun.tw
     * ad4.fr
+    * ad7.biz
     * adb.ug
     * adbull.me
     * adshort.co
@@ -90,6 +92,7 @@
     * ipic.su
     * jnw0.com
     * leechall.download
+    * leechpremium.link
     * linclik.com
     * link.tl
     * linkdecode.com
