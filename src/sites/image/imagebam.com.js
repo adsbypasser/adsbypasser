@@ -3,7 +3,11 @@ _.register({
     host: /^www\.imagebam\.com$/,
   },
   async ready () {
-    const img = $('img.main-image');
-    await $.openImage(img.src);
+    let a = $('#continue > a');
+    if (a) {
+      a.click();
+    }
+    a = $('.main-image');
+    await $.openImage(a.src);
   },
 });
