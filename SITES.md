@@ -8,7 +8,6 @@
 * 3xplanet.net
 * a2zapk.io
 * abload.de
-* acidimg.cc
 * adfoc.us
 * adsafelink.com
 * adshnk.com
