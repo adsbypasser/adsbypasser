@@ -1,4 +1,4 @@
-# TBA
+# v7.24.1 - 2023-12-27
 
 * fixed
     * fixed script error for GreaseMonkey
