@@ -1,12 +1,9 @@
 _.register({
   rule: {
-    host: [
-      /^acidimg\.cc$/,
-      /^imgdawgknuttz\.com$/,
-    ],
+    host: /^imgdawgknuttz\.com$/,
   },
   async ready () {
-    let a = $('.button');
+    let a = $('.button.blue');
     if (a) {
       a.click();
     }

@@ -1,3 +1,11 @@
+# TBA - 20xx-xx-xx
+
+* added
+    * imgtgd.shop
+
+* retired
+    * acidimg.cc
+ 
 # v7.24.1 - 2023-12-27
 
 * fixed

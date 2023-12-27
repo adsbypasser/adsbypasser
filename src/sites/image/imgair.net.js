@@ -7,7 +7,8 @@ _.register({
         /^imgfrost\.net$/,
         /^imgqklw\.shop$/,
         /^imgrehd\.shop$/,
-        /^www\.cloudgallery\.net$/,
+        /^imgtgd\.shop$/,
+        /^cloudgallery\.net$/,
       ],
     },
   async ready () {

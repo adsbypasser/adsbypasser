@@ -8,7 +8,6 @@
 * 3xplanet.net
 * a2zapk.io
 * abload.de
-* acidimg.cc
 * adfoc.us
 * adsafelink.com
 * adshnk.com
@@ -125,6 +124,7 @@
 * imgsto.com
 * imgsxo.site
 * imgtaxi.com
+* imgtgd.shop
 * imgtrex.com
 * imguthes.sbs
 * imgve.com
