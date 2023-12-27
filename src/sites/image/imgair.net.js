@@ -2,13 +2,13 @@ _.register({
   rule:
     {
       host: [
+        /^cloudgallery\.net$/,
         /^imgair\.net$/,
         /^imgblaze\.net$/,
         /^imgfrost\.net$/,
         /^imgqklw\.shop$/,
         /^imgrehd\.shop$/,
         /^imgtgd\.shop$/,
-        /^cloudgallery\.net$/,
       ],
     },
   async ready () {
