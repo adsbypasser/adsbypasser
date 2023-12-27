@@ -11,7 +11,7 @@
 * fixed
     * fixed script error for GreaseMonkey
 
-# v7.24.0 - 2023-12-2
+# v7.24.0 - 2023-12-24
 
 * fixed
     * 1ink.cc
