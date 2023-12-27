@@ -1,3 +1,8 @@
+# TBA
+
+* fixed
+    * fixed script error for GreaseMonkey
+
 # v7.24.0 - 2023-12-24
 
 * fixed
