@@ -253,6 +253,7 @@
 * vipr.im
 * vzturl.com
 * xpshort.com
+* xxxaddicted.top
 * xxxs.org
 * xxxwebdlxxx.org
 * xxxwebdlxxx.top
