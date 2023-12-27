@@ -1,10 +1,11 @@
 import {
+  forEach,
   nop,
 } from 'util/core';
 
 
 const rawUSW = getUnsafeWindow();
-const usw = rawUSW;
+const usw = getUnsafeWindowProxy();
 const GMAPI = getGreaseMonkeyAPI();
 
 
@@ -78,6 +79,120 @@ function getGreaseMonkeyAPI () {
     gm.getResourceUrl = GM.getResourceUrl;
   }
   return gm;
+}
+
+
+function getGMInfo () {
+  if (typeof GM_info === 'object' && GM_info) {
+    return GM_info;
+  } else if (typeof GM === 'object' && GM && GM.info) {
+    return GM.info;
+  } else {
+    return {};
+  }
+}
+
+
+// magic property to get the original object
+const MAGIC_KEY = '__adsbypasser_reverse_proxy__';
+
+
+function getUnsafeWindowProxy () {
+  const isGreaseMonkey = getGMInfo().scriptHandler === 'Greasemonkey';
+  // Only GreaseMonkey need this wrapper
+  if (!isGreaseMonkey) {
+    return rawUSW;
+  }
+
+  const decorator = {
+    set (target, key, value) {
+      if (key === MAGIC_KEY) {
+        return false;
+      } else {
+        target[key] = clone(value);
+      }
+      return true;
+    },
+    get (target, key) {
+      if (key === MAGIC_KEY) {
+        return target;
+      }
+      const value = target[key];
+      const type = typeof value;
+      if (value === null || (type !== 'function' && type !== 'object')) {
+        // primitive values does not need this
+        return value;
+      }
+      return new Proxy(value, decorator);
+    },
+    apply (target, self, args) {
+      args = Array.prototype.slice.call(args);
+
+      // special hack for Object.defineProperty
+      if (target === unsafeWindow.Object.defineProperty) {
+        args[0] = args[0][MAGIC_KEY];
+      }
+      // special hack for Function.apply
+      if (target === unsafeWindow.Function.apply) {
+        self = self[MAGIC_KEY];
+        args[1] = Array.prototype.slice.call(args[1]);
+      }
+      // special hack for querySelector
+      if (target === unsafeWindow.document.querySelector) {
+        self = self[MAGIC_KEY];
+      }
+      // special hack for write
+      if (target === unsafeWindow.document.write) {
+        self = self[MAGIC_KEY];
+      }
+
+      const usargs = clone(args);
+
+      return target.apply(self, usargs);
+    },
+    construct (target, args) {
+      args = Array.prototype.slice.call(args);
+      // insert this argument
+      args.unshift(undefined);
+      const usargs = clone(args);
+      const bind = unsafeWindow.Function.prototype.bind;
+      return new (bind.apply(target, usargs));
+    },
+  };
+  return new Proxy(unsafeWindow, decorator);
+}
+
+
+// Firefox only
+// cloneInto is too buggy
+// TODO Date, Regexp, subclasses
+function clone (safe) {
+  if (safe === null || !(safe instanceof Object)) {
+    return safe;
+  }
+  if (safe === unsafeWindow) {
+    return safe;
+  }
+  if (safe instanceof String) {
+    return safe.toString();
+  }
+  if (safe instanceof Function) {
+    return exportFunction(safe, unsafeWindow, {
+      allowCrossOriginArguments: true,
+    });
+  }
+  if (safe instanceof Array) {
+    const unsafe = new unsafeWindow.Array();
+    for (let i = 0; i < safe.length; ++i) {
+      unsafe.push(clone(safe[i]));
+    }
+    return unsafe;
+  }
+  const unsafe = new unsafeWindow.Object();
+  forEach(safe, (v, k) => {
+    unsafe[k] = clone(v);
+  });
+  return unsafe;
 }
 
 
