@@ -83,7 +83,7 @@ function getGreaseMonkeyAPI () {
 
 
 function getGMInfo () {
-  if (typeof GM_info === "object" && GM_info) {
+  if (typeof GM_info === 'object' && GM_info) {
     return GM_info;
   } else if (typeof GM === 'object' && GM && GM.info) {
     return GM.info;
