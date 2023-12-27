@@ -2,6 +2,7 @@
 
 * added
     * imgtgd.shop
+    * xxxaddicted.top
 
 * retired
     * acidimg.cc
