@@ -81,15 +81,26 @@ function getGreaseMonkeyAPI () {
   return gm;
 }
 
+
+function getGMInfo () {
+  if (typeof GM_info === "object" && GM_info) {
+    return GM_info;
+  } else if (typeof GM === 'object' && GM && GM.info) {
+    return GM.info;
+  } else {
+    return {};
+  }
+}
+
+
 // magic property to get the original object
 const MAGIC_KEY = '__adsbypasser_reverse_proxy__';
 
 
 function getUnsafeWindowProxy () {
-  const isFirefox = typeof InstallTrigger !== 'undefined';
-  // Violentmonkey does not need the wrapper
-  if (!isFirefox) {
-    // other browsers does not need this
+  const isGreaseMonkey = getGMInfo().scriptHandler === 'Greasemonkey';
+  // Only GreaseMonkey need this wrapper
+  if (!isGreaseMonkey) {
     return rawUSW;
   }
 

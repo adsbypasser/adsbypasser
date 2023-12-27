@@ -14,6 +14,7 @@
 // @grant          GM_getResourceURL
 <% } %>
 // @grant          GM_getValue
+// @grant          GM_info
 // @grant          GM_openInTab
 // @grant          GM_registerMenuCommand
 // @grant          GM_setValue
@@ -23,6 +24,7 @@
 // @grant          GM.getResourceUrl
 <% } %>
 // @grant          GM.getValue
+// @grant          GM.info
 // @grant          GM.openInTab
 // @grant          GM.setValue
 // @grant          GM.xmlHttpRequest
