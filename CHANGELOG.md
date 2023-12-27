@@ -1,9 +1,17 @@
 # TBA - 20xx-xx-xx
 
+* added
+    * imgtgd.shop
+
 * retired
     * acidimg.cc
+ 
+# v7.24.1 - 2023-12-27
 
-# v7.24.0 - 2023-12-24
+* fixed
+    * fixed script error for GreaseMonkey
+
+# v7.24.0 - 2023-12-2
 
 * fixed
     * 1ink.cc
