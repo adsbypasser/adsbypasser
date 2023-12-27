@@ -11,6 +11,7 @@ _.register({
     'https://picnew.space/image/*',
     'https://pig69.com/upload/en/*',
     'https://porn4f.com/upload/en/*',
+    'https://xxxaddicted.top/image/*',
   ],
   async ready () {
     const m = $('meta[property="og:image"]');
