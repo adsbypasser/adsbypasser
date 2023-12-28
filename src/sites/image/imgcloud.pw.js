@@ -1,6 +1,7 @@
 _.register({
   rule: {
     host: [
+      /^37xpics\.space$/,
       /^imgcloud\.pw$/,
       /^pilot007\.org$/,
       /^www\.imghit\.com$/,
