@@ -4,6 +4,7 @@
 * 22pixx.xyz
 * 2i.cz
 * 2i.sk
+* 37xpics.space
 * 3xplanet.com
 * 3xplanet.net
 * a2zapk.io
