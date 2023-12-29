@@ -3,7 +3,7 @@ _.register({
     host: /^www\.imagebam\.com$/,
   },
   async ready () {
-    let a = $('#continue > a');
+    let a = $.$('#continue > a');
     if (a) {
       a.click();
     }
