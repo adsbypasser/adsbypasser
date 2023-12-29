@@ -3,7 +3,8 @@ _.register({
     host: /^imgdawgknuttz\.com$/,
   },
   async ready () {
-    let a = $('.button.blue');
+    await _.wait(1000);
+    let a = $.$('.button');
     if (a) {
       a.click();
     }
