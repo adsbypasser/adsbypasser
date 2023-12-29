@@ -1,13 +1,12 @@
-# TBA - 20xx-xx-xx
+# v7.25.0 - 2023-12-29
 
 * added
     * 37xpics.space
     * imgtgd.shop
     * xxxaddicted.top
-
 * retired
     * acidimg.cc
- 
+
 # v7.24.1 - 2023-12-27
 
 * fixed
