@@ -1,7 +1,7 @@
 _.register({
   rule: {
     host: /^22pixx\.xyz$/,
-    path: /^\/ia-[io]\/(.+)\.jpeg\.html/,
+    path: /^\/ia-[aio]\/(.+)\.jpeg\.html/,
   },
   async start () {
     const path = window.location.href.replace('/ia-', '/').replace('.html', '');
@@ -12,7 +12,7 @@ _.register({
 _.register({
   rule: {
     host: /^22pixx\.xyz$/,
-    path: /^\/i-a\/(.+)\.jpeg\.html/,
+    path: /^\/i-[1a]\/(.+)\.jpeg\.html/,
   },
   async start () {
     const path = window.location.href.replace('/i-', '/').replace('.html', '');
@@ -23,7 +23,7 @@ _.register({
 _.register({
   rule: {
     host: /^22pixx\.xyz$/,
-    path: /^\/x-[or]\/(.+)\.jpeg\.html/,
+    path: /^\/x-[ior]\/(.+)\.jpeg\.html/,
   },
   async start () {
     const path = window.location.href.replace('/x-', '/').replace('.html', '');
@@ -38,17 +38,6 @@ _.register({
   },
   async start () {
     const path = window.location.href.replace('/y-', '/').replace('.html', '');
-    await $.openLink(path);
-  },
-});
-
-_.register({
-  rule: {
-    host: /^22pixx\.xyz$/,
-    path: /^\/x-i\/(.+)\.jpeg\.html/,
-  },
-  async start () {
-    const path = window.location.href.replace('/x', '/y');
     await $.openLink(path);
   },
 });
