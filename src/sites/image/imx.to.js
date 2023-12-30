@@ -3,7 +3,7 @@ _.register({
     host: /^imx\.to$/,
   },
   async ready () {
-    let a = $('#continuebutton');
+    let a = $.$('#continuebutton, .button');
     if (a) {
       a.click();
     }
