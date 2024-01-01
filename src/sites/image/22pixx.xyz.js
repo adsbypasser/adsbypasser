@@ -1,7 +1,7 @@
 _.register({
   rule: {
     host: /^22pixx\.xyz$/,
-    path: /^\/ia-[io]\/(.+)\.jpeg\.html/,
+    path: /^\/ia-[aio]\/(.+)\.jpeg\.html/,
   },
   async start () {
     const path = window.location.href.replace('/ia-', '/').replace('.html', '');
