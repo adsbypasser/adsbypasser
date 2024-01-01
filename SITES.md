@@ -209,6 +209,7 @@
 * prnt.sc
 * pronpic.org
 * realsht.mobi
+* rintor.space
 * segmentnext.com
 * sfile.mobi
 * sh.st
