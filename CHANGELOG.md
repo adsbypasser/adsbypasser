@@ -2,6 +2,7 @@
 
 * added
     * imgtraffic.com
+    * rintor.space
 
 # v7.25.0 - 2023-12-29
 
