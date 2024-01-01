@@ -126,6 +126,7 @@
 * imgsxo.site
 * imgtaxi.com
 * imgtgd.shop
+* imgtraffic.com
 * imgtrex.com
 * imguthes.sbs
 * imgve.com
