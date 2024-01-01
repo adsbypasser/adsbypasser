@@ -7,6 +7,7 @@ _.register({
       /^pilot007\.org$/,
       /^img\.javstore\.net$/,
       /^www\.imghit\.com$/,
+      /^xxxaddicted\.top$/,
     ],
     path: /^\/(image|i)\/.*/,
   },
