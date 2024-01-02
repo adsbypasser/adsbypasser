@@ -6,9 +6,8 @@ _.register({
         /^imgair\.net$/,
         /^imgblaze\.net$/,
         /^imgfrost\.net$/,
-        /^imgqklw\.shop$/,
-        /^imgrehd\.shop$/,
-        /^imgtgd\.shop$/,
+        /^img[a-z]{2,6}\.shop$/,
+        /^img[a-z]{2,6}\.sbs$/,
       ],
     },
   async ready () {
