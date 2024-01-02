@@ -8,3 +8,14 @@ _.register({
     await $.openLink(path);
   },
 });
+
+_.register({
+  rule: {
+    host: /^imgtraffic\.com$/,
+    path: /^\/i-1\/(.+)\.jpeg\.html/,
+  },
+  async start () {
+    const path = window.location.href.replace('/i-', '/').replace('.html', '');
+    await $.openLink(path);
+  },
+});
