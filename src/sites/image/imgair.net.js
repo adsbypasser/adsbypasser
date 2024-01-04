@@ -8,6 +8,7 @@ _.register({
         /^imgfrost\.net$/,
         /^img[a-z]{2,6}\.shop$/,
         /^img[a-z]{2,6}\.sbs$/,
+        /^pic[a-z]{2,6}\.shop$/,
       ],
     },
   async ready () {
