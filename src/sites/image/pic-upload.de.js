@@ -1,7 +1,9 @@
 _.register({
-  rule: 'https://www.pic-upload.de/view-*.html',
+    rule: {
+      host: /^www\.pic-upload\.de$/,
+  },
   async ready () {
-    const i = $('img.preview_picture_2b');
+    const i = $('.preview_picture_2b');
     await $.openImage(i.src);
   },
 });
