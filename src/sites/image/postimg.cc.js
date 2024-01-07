@@ -1,9 +1,9 @@
 _.register({
   rule: {
     host: [
-      /^postimg.cc$/,
-      /^postlmg.cc$/,
-      /^pixxxels.cc$/,
+      /^postimg\.cc$/,
+      /^postlmg\.cc$/,
+      /^pixxxels\.cc$/,
     ],
   },
   async ready () {
