@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^www\.fotosik.pl$/,
+    host: /^www\.fotosik\.pl$/,
   },
   async ready () {
     const i = $('.simple-photo img');
