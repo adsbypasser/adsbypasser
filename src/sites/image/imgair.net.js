@@ -7,8 +7,9 @@ _.register({
         /^imgblaze\.net$/,
         /^imgfrost\.net$/,
         /^img[a-z]{2,6}\.shop$/,
-        /^img[a-z]{2,6}\.sbs$/,
         /^pic[a-z]{2,6}\.shop$/,
+        /^img[a-z]{2,6}\.sbs$/,
+        /^pix[a-z]{2,6}\.sbs$/,
       ],
     },
   async ready () {
