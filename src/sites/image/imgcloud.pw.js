@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^2i\.(cz|sk)$/,
-      /^(37xpics|picnew|rintor)\.space$/,
+      /^(13xpics|37xpics|picnew|rintor)\.space$/,
       /^imgcloud\.pw$/,
       /^pilot007\.org$/,
       /^img\.javstore\.net$/,
