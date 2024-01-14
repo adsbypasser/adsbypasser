@@ -2,6 +2,7 @@
 
 * added
     * 13xpics.space
+    * ibb.co
     * imgtraffic.com
     * rintor.space
 
