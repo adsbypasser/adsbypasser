@@ -3,6 +3,7 @@
 * added
     * 13xpics.space
     * ibb.co
+    * imgbb.com
     * imgtraffic.com
     * rintor.space
 
