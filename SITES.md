@@ -96,6 +96,7 @@
 * imgant.com
 * imgbaron.com
 * imgbase.ru
+* imgbb.com
 * imgblaze.net
 * imgbox.com
 * imgcloud.pw
