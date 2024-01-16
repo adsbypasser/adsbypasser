@@ -2,6 +2,7 @@
 
 * added
     * 13xpics.space
+    * ctr.sh
     * ibb.co
     * imgbb.com
     * imgtraffic.com
