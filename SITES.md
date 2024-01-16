@@ -40,6 +40,7 @@
 * cosplay18.pics
 * cpmlink.net
 * croea.com
+* ctr.sh
 * cubeupload.com
 * cutpaid.com
 * depic.me
