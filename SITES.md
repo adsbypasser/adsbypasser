@@ -144,6 +144,7 @@
 * javlibrary.com
 * javtenshi.com
 * jav-load.com
+* k2s.cc
 * katfile.com
 * keeplinks.org
 * keptarolo.hu
