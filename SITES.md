@@ -241,6 +241,7 @@
 * tezzpic.com
 * thefileslocker.net
 * thinfi.com
+* thotimg.xyz
 * tmearn.net
 * trafficimage.club
 * tribuntekno.com
