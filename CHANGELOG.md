@@ -8,6 +8,7 @@
     * imgtraffic.com
     * k2s.cc
     * rintor.space
+    * thotimg.xyz
 
 # v7.25.0 - 2023-12-29
 
