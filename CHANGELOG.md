@@ -3,6 +3,7 @@
 * added
     * 13xpics.space
     * ctr.sh
+    * dlink3.com
     * ibb.co
     * imgbb.com
     * imgtraffic.com
