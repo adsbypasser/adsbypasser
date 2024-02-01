@@ -47,6 +47,7 @@
 * destyy.com
 * detonating.com
 * directupload.net
+* dlink3.com
 * dpic.me
 * dz4link.com
 * earnlink.io
