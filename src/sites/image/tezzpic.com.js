@@ -1,7 +1,9 @@
 _.register({
   rule: {
     host: [
+      /^dewimg\.com$/,
       /^outletpic\.com$/,
+      /^pictwn\.com$/,
       /^tezzpic\.com$/,
     ],  
   },
