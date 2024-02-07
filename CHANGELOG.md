@@ -3,11 +3,13 @@
 * added
     * 13xpics.space
     * ctr.sh
+    * dewimg.com
     * dlink3.com
     * ibb.co
     * imgbb.com
     * imgtraffic.com
     * k2s.cc
+    * pictwn.com
     * rintor.space
     * thotimg.xyz
 
