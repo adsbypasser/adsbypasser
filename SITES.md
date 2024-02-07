@@ -46,6 +46,7 @@
 * depic.me
 * destyy.com
 * detonating.com
+* dewimg.com
 * directupload.net
 * dlink3.com
 * dpic.me
@@ -198,6 +199,7 @@
 * pics4you.net
 * picstate.com
 * picturedent.org
+* pictwn.com
 * picuekr.site
 * pic-upload.de
 * picz.site
