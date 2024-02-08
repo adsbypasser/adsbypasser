@@ -9,6 +9,7 @@
     * imgbb.com
     * imgtraffic.com
     * k2s.cc
+    * otomi-games.com
     * pictwn.com
     * rintor.space
     * thotimg.xyz
