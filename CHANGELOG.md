@@ -1,4 +1,4 @@
-# TBA - 2024-xx-xx
+# v7.26.0 - 2024-02-21
 
 * added
     * 13xpics.space
