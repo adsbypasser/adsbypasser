@@ -25,6 +25,7 @@
         /^mitly\.us$/,
         /^oke\.io$/,
         /^pingit\.im$/,
+        /^thotpacks.xyz$/,
       ],
     },
     async ready () {
