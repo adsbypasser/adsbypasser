@@ -3,7 +3,7 @@ _.register({
     host: /^xxxwebdlxxx\.(org|top)$/,
   },
   async ready () { 
-    const a = $('.centred, .centred_resize');
+    const a = $('.centred, .centred_resized');
     await $.openImage(a.src);
   },
 });
