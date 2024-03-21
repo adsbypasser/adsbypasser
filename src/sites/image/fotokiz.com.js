@@ -11,6 +11,7 @@ _.register({
       /^picdollar\.com$/,
       /^pics4upload\.com$/,
       /^silverpic\.com$/,
+      /^barbit\.net$/,
       /^pics4you\.net$/,
       /^imgstar\.eu$/,
       /^www\.fappic\.com$/,
