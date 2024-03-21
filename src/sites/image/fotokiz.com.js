@@ -1,6 +1,7 @@
 _.register({
   rule: {
     host: [
+      /^crownimg\.com$/,
       /^fotokiz\.com$/,
       /^imgbaron\.com$/,
       /^imgsen\.com$/,
