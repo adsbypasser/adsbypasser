@@ -13,6 +13,7 @@ _.register({
       /^silverpic\.com$/,
       /^pics4you\.net$/,
       /^imgstar\.eu$/,
+      /^www\.fappic\.com$/,
     ],
   },
   async ready () {
