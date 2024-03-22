@@ -1,6 +1,7 @@
 _.register({
   rule: {
     host: [
+      /^crownimg\.com$/,
       /^fotokiz\.com$/,
       /^imgbaron\.com$/,
       /^imgsen\.com$/,
@@ -11,8 +12,10 @@ _.register({
       /^picdollar\.com$/,
       /^pics4upload\.com$/,
       /^silverpic\.com$/,
+      /^barbit\.net$/,
       /^pics4you\.net$/,
       /^imgstar\.eu$/,
+      /^www\.fappic\.com$/,
     ],
   },
   async ready () {
