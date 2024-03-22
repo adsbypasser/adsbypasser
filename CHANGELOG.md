@@ -1,6 +1,11 @@
 # TBA - xxxx-xx-xx
 * added
+    * acidimg.cc
+    * barbit.net
+    * crownimg.com
+    * fappic.com
     * linegee.net
+    * picyield.com
 
 # v7.26.0 - 2024-02-21
 

@@ -10,6 +10,7 @@
 * 3xplanet.net
 * a2zapk.io
 * abload.de
+* acidimg.cc
 * adfoc.us
 * adsafelink.com
 * adshnk.com
@@ -18,6 +19,7 @@
 * ak.sv
 * apunkasoftware.net
 * aylink.co
+* barbit.net
 * bayimg.com
 * bcvc.ink
 * beeimg.com
@@ -40,6 +42,7 @@
 * cosplay18.pics
 * cpmlink.net
 * croea.com
+* crownimg.com
 * ctr.sh
 * cubeupload.com
 * cutpaid.com
@@ -54,6 +57,7 @@
 * earnlink.io
 * everest.picturedent.org
 * exeo.app
+* fappic.com
 * fastpic.org
 * fc-lc.com
 * fc-lc.xyz
@@ -204,6 +208,7 @@
 * pictwn.com
 * picuekr.site
 * pic-upload.de
+* picyield.com
 * picz.site
 * pig69.com
 * pilot007.org

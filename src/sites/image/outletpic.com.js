@@ -4,6 +4,7 @@ _.register({
       /^dewimg\.com$/,
       /^outletpic\.com$/,
       /^pictwn\.com$/,
+      /^picyield\.com$/,
       /^tezzpic\.com$/,
     ],  
   },
