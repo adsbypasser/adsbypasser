@@ -7,6 +7,7 @@
     * linegee.net
     * picyield.com
     * spacetica.com
+    * thotpacks.xyz
 
 # v7.26.0 - 2024-02-21
 
