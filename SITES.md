@@ -238,6 +238,7 @@
 * silverpic.com
 * similarsites.com
 * smilinglinks.com
+* spacetica.com
 * spaste.com
 * srelink.com
 * srt.am
