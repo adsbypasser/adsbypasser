@@ -92,8 +92,8 @@
 * imageshimage.com
 * imagetwist.com
 * imagetwist.netlify.app
-* imageupper.com
 * imageup.ru
+* imageupper.com
 * imagevenue.com
 * imagexport.com
 * img.javstore.net
@@ -148,8 +148,8 @@
 * indishare.org
 * javball.com
 * javlibrary.com
-* javtenshi.com
 * jav-load.com
+* javtenshi.com
 * k2s.cc
 * katfile.com
 * keeplinks.org
