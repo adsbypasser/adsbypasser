@@ -20,6 +20,8 @@
         // else
         /^aylink\.co$/,
         /^(clk|oko)\.sh$/,
+        /^cpmlink\.pro$/,
+        /^gitlink\.pro$/,
         /^megalink\.pro$/,
         /^met\.bz/,
         /^mitly\.us$/,
