@@ -2,8 +2,10 @@
 * added
     * acidimg.cc
     * barbit.net
+    * cpmlink.pro
     * crownimg.com
     * fappic.com
+    * gitlink.pro
     * linegee.net
     * picyield.com
     * spacetica.com
