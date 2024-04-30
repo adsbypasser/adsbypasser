@@ -1,3 +1,7 @@
+# TBA - xxxx-xx-xx
+* fixed
+    * spacetica.com
+
 # v7.27.0 - 2024-04-07
 * added
     * acidimg.cc
