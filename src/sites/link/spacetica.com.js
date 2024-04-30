@@ -3,7 +3,7 @@ _.register({
     host: /^spacetica\.com$/,
   },
   async ready () {
-    const b = $('center a');
+    const b = $('.btn.btn-primary.btn-xs');
     b.click();
   },
 });
