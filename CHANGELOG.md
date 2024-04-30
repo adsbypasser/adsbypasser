@@ -1,9 +1,11 @@
-# TBA - xxxx-xx-xx
+# v7.27.0 - 2024-04-07
 * added
     * acidimg.cc
     * barbit.net
+    * cpmlink.pro
     * crownimg.com
     * fappic.com
+    * gitlink.pro
     * linegee.net
     * picyield.com
     * spacetica.com

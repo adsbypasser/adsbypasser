@@ -41,6 +41,7 @@
 * corneey.com
 * cosplay18.pics
 * cpmlink.net
+* cpmlink.pro
 * croea.com
 * crownimg.com
 * ctr.sh
@@ -70,6 +71,7 @@
 * gestyy.com
 * get-click2.blogspot.com
 * getthot.com
+* gitlink.pro
 * go.bitcosite.com
 * go.linksly.co
 * go.tnshort.net
