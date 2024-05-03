@@ -3,6 +3,7 @@ _.register({
     host: [
       /^(www\.)?imgdrive\.net$/,
       /^(www\.)?(imgtaxi|imgwallet|imgadult)\.com$/,
+      /^postimg\.cc$/,
     ],
   },
   async ready () {
