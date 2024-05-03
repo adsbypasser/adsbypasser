@@ -1,6 +1,7 @@
 _.register({
   rule: {
     host: [
+      /^postimg\.cc$/,
       /^postlmg\.cc$/,
       /^pixxxels\.cc$/,
     ],
