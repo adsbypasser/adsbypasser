@@ -195,6 +195,7 @@
 * outletpic.com
 * ovabee.com
 * pacific.picturedent.org
+* pahe.plus
 * paylinnk.com
 * payskip.org
 * picbaron.com
