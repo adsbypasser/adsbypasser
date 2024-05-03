@@ -1,5 +1,6 @@
 # TBA - xxxx-xx-xx
 * fixed
+    * postimg.cc
     * spacetica.com
 
 # v7.27.0 - 2024-04-07
