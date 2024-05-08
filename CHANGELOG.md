@@ -1,6 +1,8 @@
 # TBA - xxxx-xx-xx
 * fixed
     * spacetica.com
+* added
+    * pahe.plus
 
 # v7.27.0 - 2024-04-07
 * added

@@ -26,6 +26,7 @@
         /^met\.bz/,
         /^mitly\.us$/,
         /^oke\.io$/,
+        /^pahe\.plus$/,
         /^pingit\.im$/,
         /^thotpacks\.xyz$/,
       ],
