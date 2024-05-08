@@ -6,9 +6,9 @@ _.register({
         /^imgair\.net$/,
         /^imgblaze\.net$/,
         /^imgfrost\.net$/,
-        /^img[a-z]{2,6}\.(sbs|shop)$/,
-        /^pic[a-z]{2,6}\.(sbs|shop)$/,
-        /^pix[a-z]{2,6}\.sbs$/,
+        /^img[a-z]{2,10}\.(sbs|shop)$/,
+        /^pic[a-z]{2,10}\.(sbs|shop)$/,
+        /^pix[a-z]{2,10}\.sbs$/,
       ],
     },
   async ready () {
