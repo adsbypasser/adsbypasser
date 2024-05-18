@@ -1,4 +1,5 @@
-# TBA - xxxx-xx-xx
+# v7.28.0 - 2024-05-18
+
 * fixed
     * spacetica.com
 * added
@@ -6,6 +7,7 @@
     * pahe.plus
 
 # v7.27.0 - 2024-04-07
+
 * added
     * acidimg.cc
     * barbit.net
