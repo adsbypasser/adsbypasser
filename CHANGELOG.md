@@ -2,6 +2,7 @@
 * fixed
     * spacetica.com
 * added
+    * 555fap.com
     * pahe.plus
 
 # v7.27.0 - 2024-04-07
