@@ -1,3 +1,9 @@
+# TBA - yyyy-mm-dd
+
+* added
+    * dlupload.com
+    * imgflip.com
+
 # v7.28.0 - 2024-05-18
 
 * fixed
