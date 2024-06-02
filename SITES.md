@@ -54,6 +54,7 @@
 * dewimg.com
 * directupload.net
 * dlink3.com
+* dlupload.com
 * dpic.me
 * dz4link.com
 * earnlink.io
@@ -115,6 +116,7 @@
 * imgdollar.com
 * imgdrive.net
 * imgfiles.org
+* imgflip.com
 * imgfrost.net
 * imghit.com
 * imgking.co
