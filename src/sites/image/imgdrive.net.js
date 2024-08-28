@@ -3,7 +3,7 @@ _.register({
     host: [
       /^(www\.)?imgdrive\.net$/,
       /^(www\.)?(imgtaxi|imgwallet|imgadult)\.com$/,
-      /^47xpics\.space$/,
+      /^(14xpics|47xpics)\.space$/,
     ],
   },
   async ready () {
