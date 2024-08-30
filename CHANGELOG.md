@@ -5,6 +5,7 @@
     * 47xpics.space
     * dlupload.com
     * imgflip.com
+    * infidrive.net
     * kin8-av.com
 
 # v7.28.0 - 2024-05-18
