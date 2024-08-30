@@ -1,6 +1,6 @@
 _.register({
   rule: {
-    host: /^urlbluemedia.shop$/,
+    host: /^urlbluemedia\.shop$/,
   },
   async ready () {
     await _.wait(7000);
