@@ -153,6 +153,7 @@
 * imgwia.buzz
 * imx.to
 * indishare.org
+* infidrive.net
 * javball.com
 * javlibrary.com
 * jav-load.com
