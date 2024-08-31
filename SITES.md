@@ -275,6 +275,7 @@
 * uplinkto.hair
 * uploadhaven.com
 * uploadrar.com
+* urlbluemedia.shop
 * urlcash.com
 * urlcash.org
 * urlgalleries.com
