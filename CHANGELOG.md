@@ -7,6 +7,7 @@
     * imgflip.com
     * infidrive.net
     * kin8-av.com
+    * urlbluemedia.shop
 
 # v7.28.0 - 2024-05-18
 
