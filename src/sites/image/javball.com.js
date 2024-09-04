@@ -7,6 +7,7 @@ _.register({
     'https://cosplay18.pics/upload/en/*',
     'https://idol69.net/upload/en/*',
     'https://javball.com/upload/en/*',
+    'https://javsunday.com/upload/en/*',
     'https://kin8-av.com/upload/en/*',
     'https://ovabee.com/upload/en/*',
     'https://pig69.com/upload/en/*',
