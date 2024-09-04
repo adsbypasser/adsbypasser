@@ -10,6 +10,7 @@
 * 3xplanet.com
 * 3xplanet.net
 * 47xpics.space
+* 4fuk.me
 * 555fap.com
 * a2zapk.io
 * abload.de
