@@ -154,9 +154,10 @@
 * imx.to
 * indishare.org
 * infidrive.net
+* jav-load.com
 * javball.com
 * javlibrary.com
-* jav-load.com
+* javsunday.com
 * javtenshi.com
 * k2s.cc
 * katfile.com

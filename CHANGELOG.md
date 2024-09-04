@@ -6,6 +6,7 @@
     * dlupload.com
     * imgflip.com
     * infidrive.net
+    * javsunday.com
     * kin8-av.com
     * urlbluemedia.shop
 
