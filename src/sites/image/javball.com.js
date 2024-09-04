@@ -1,5 +1,6 @@
 _.register({
   rule: [
+    'https://4fuk.me/upload/en/*',
     'https://555fap.com/upload/en/*',
     'https://ai18.pics/upload/en/*',
     'https://cnpics.org/upload/en/*',
