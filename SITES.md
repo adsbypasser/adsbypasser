@@ -261,6 +261,7 @@
 * swzz.xyz
 * techgeek.digital
 * techtrendmakers.com
+* teenyxo.com
 * tezzpic.com
 * thefileslocker.net
 * thinfi.com
