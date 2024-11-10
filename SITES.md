@@ -245,6 +245,7 @@
 * short.am
 * shortlinkto.biz
 * shortmoz.link
+* shotcan.com
 * shrinkcash.com
 * shrt10.com
 * silverpic.com
