@@ -1,6 +1,7 @@
 # v7.30.0 - xxxx-xx-xx
 
 * added
+    * lookmyimg.com
     * shotcan.com
     * teenyxo.com
 
