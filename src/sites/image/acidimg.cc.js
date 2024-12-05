@@ -9,6 +9,11 @@ _.register({
     let a = $.$('#continuebutton, .button');
     if (a) {
       a.click();
+    } else {
+      a = $.$('#imgContinue, .button');
+      if (a) {
+        a.click();
+      }
     }
     a = $('.centred');
     await $.openImage(a.src);
