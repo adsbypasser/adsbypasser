@@ -1,5 +1,7 @@
 # v7.30.0 - xxxx-xx-xx
 
+* fixed
+    * imx.to
 * added
     * lookmyimg.com
     * shotcan.com
