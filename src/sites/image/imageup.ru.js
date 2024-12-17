@@ -1,9 +1,7 @@
 _.register({
   rule: {
-    host: [
-      /^abload\.de$/,
+    host:
       /^imageup\.ru$/,
-    ],
   },
   async ready () {
     const i = $('#image');
