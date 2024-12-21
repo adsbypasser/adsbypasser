@@ -13,7 +13,6 @@
 * 4fuk.me
 * 555fap.com
 * a2zapk.io
-* abload.de
 * acidimg.cc
 * adfoc.us
 * adsafelink.com
@@ -122,8 +121,6 @@
 * imgflip.com
 * imgfrost.net
 * imghit.com
-* imgking.co
-* imgkings.com
 * imglekw.site
 * imgmaze.pw
 * imgneor.store
@@ -267,7 +264,6 @@
 * tezzpic.com
 * thefileslocker.net
 * thinfi.com
-* thotimg.xyz
 * thotpacks.xyz
 * tmearn.net
 * trafficimage.club
