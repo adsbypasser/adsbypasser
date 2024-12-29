@@ -235,6 +235,7 @@
 * pronpic.org
 * realsht.mobi
 * rintor.space
+* ryuugames.com
 * segmentnext.com
 * sfile.mobi
 * sh.st
@@ -259,6 +260,7 @@
 * supercheats.com
 * swzz.xyz
 * techgeek.digital
+* techstudify.com
 * techtrendmakers.com
 * teenyxo.com
 * tezzpic.com
