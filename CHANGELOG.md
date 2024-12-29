@@ -7,7 +7,9 @@
     * starimage.club
 * added
     * lookmyimg.com
+    * ryuugames.com
     * shotcan.com
+    * techstudify.com
     * teenyxo.com
 * retired
     * abload.de
