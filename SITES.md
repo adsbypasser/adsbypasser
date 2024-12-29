@@ -2,7 +2,6 @@
 * 14xpics.space
 * 1ink.cc
 * 1link.club
-* 1v.to
 * 22pixx.xyz
 * 2i.cz
 * 2i.sk
@@ -47,7 +46,6 @@
 * cpmlink.pro
 * croea.com
 * crownimg.com
-* ctr.sh
 * cubeupload.com
 * cutpaid.com
 * depic.me
@@ -186,11 +184,9 @@
 * mitly.us
 * mrjh.org
 * multiup.io
-* mylink.us
 * n.fcd.su
 * nmac.to
 * noelshack.com
-* noriskdomain.com
 * noweconomy.live
 * oke.io
 * oko.sh
@@ -203,7 +199,6 @@
 * ovabee.com
 * pacific.picturedent.org
 * pahe.plus
-* paylinnk.com
 * payskip.org
 * picbaron.com
 * picdollar.com
@@ -239,8 +234,6 @@
 * segmentnext.com
 * sfile.mobi
 * sh.st
-* shink.me
-* shon.xyz
 * short.am
 * shortlinkto.biz
 * shortmoz.link
