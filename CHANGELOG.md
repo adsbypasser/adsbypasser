@@ -12,9 +12,17 @@
     * techstudify.com
     * teenyxo.com
 * retired
+    * 1v.to
     * abload.de
+    * ctr.sh
     * imgking.co
     * imgkings.com
+    * mylink.us
+    * noriskdomain.com
+    * paylinnk.com
+    * shink.me
+    * shon.xyz
+    * shortly.xyz
     * thotimg.xyz
 
 # v7.29.0 - 2024-09-30
