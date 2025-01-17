@@ -1,6 +1,6 @@
 {
   "name": "adsbypasser",
-  "version": "7.28.0",
+  "version": "7.29.0",
   "license": "BSD-2-Clause",
   "repository": {
     "type": "git",
@@ -37,7 +37,7 @@
     "lodash": "^4.17.19",
     "marked": "^4.0.10",
     "mocha": "^8.0.1",
-    "webpack": "^5.88.2",
+    "webpack": "^5.94.0",
     "webpack-stream": "^7.0.0"
   },
   "scripts": {

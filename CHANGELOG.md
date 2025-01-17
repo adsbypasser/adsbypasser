@@ -1,3 +1,16 @@
+# v7.29.0 - 2024-09-30
+
+* added
+    * 14xpics.space
+    * 47xpics.space
+    * 4fuk.me
+    * dlupload.com
+    * imgflip.com
+    * infidrive.net
+    * javsunday.com
+    * kin8-av.com
+    * urlbluemedia.shop
+
 # v7.28.0 - 2024-05-18
 
 * fixed
