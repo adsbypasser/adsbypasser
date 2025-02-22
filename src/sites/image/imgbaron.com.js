@@ -11,6 +11,7 @@ _.register({
     const i = $.$('img.pic');
     if (i) {
       await $.openImage(i.src);
+      return;
     }
 
     const f = $('form');
