@@ -21,7 +21,6 @@
 * ak.sv
 * apunkasoftware.net
 * aylink.co
-* barbit.net
 * bayimg.com
 * bcvc.ink
 * beeimg.com
@@ -45,7 +44,6 @@
 * cpmlink.net
 * cpmlink.pro
 * croea.com
-* crownimg.com
 * cubeupload.com
 * cutpaid.com
 * depic.me
@@ -67,7 +65,6 @@
 * festyy.com
 * fir3.net
 * forex-trnd.com
-* fotokiz.com
 * foto-pic.net
 * fotosik.pl
 * gestyy.com
@@ -132,9 +129,7 @@
 * imgrehd.shop
 * imgsdi.website
 * imgsee.me
-* imgsen.com
 * imgspice.com
-* imgstar.eu
 * imgsto.com
 * imgsxo.site
 * imgtaxi.com
@@ -162,8 +157,6 @@
 * kimochi.info
 * kin8-av.com
 * kingofshrink.com
-* kropic.com
-* kvador.com
 * linegee.net
 * link.turkdown.com
 * link1s.com
@@ -200,14 +193,10 @@
 * pacific.picturedent.org
 * pahe.plus
 * payskip.org
-* picbaron.com
-* picdollar.com
 * picforall.ru
 * piclerz.store
 * pic-maniac.com
 * picnew.space
-* pics4upload.com
-* pics4you.net
 * picstate.com
 * picturedent.org
 * pictwn.com
