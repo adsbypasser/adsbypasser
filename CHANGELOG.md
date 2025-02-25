@@ -14,12 +14,23 @@
 * retired
     * 1v.to
     * abload.de
+    * barbit.net
+    * crownimg.com
     * ctr.sh
+    * fotokiz.com
     * imgking.co
     * imgkings.com
+    * imgsen.com
+    * imgstar.eu
+    * kropic.com
+    * kvador.com
     * mylink.us
     * noriskdomain.com
     * paylinnk.com
+    * picbaron.com
+    * picdollar.com
+    * pics4upload.com
+    * pics4you.net
     * shink.me
     * shon.xyz
     * shortly.xyz
