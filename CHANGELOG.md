@@ -11,6 +11,12 @@
     * shotcan.com
     * techstudify.com
     * teenyxo.com
+    * 3minx.com
+    * fikfok.net
+    * hentaicovid.com
+    * hentaipig.com
+    * porn4f.org
+    * sweetie-fox.com
 * retired
     * 1v.to
     * abload.de

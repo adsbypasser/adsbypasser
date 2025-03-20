@@ -6,6 +6,7 @@
 * 2i.cz
 * 2i.sk
 * 37xpics.space
+* 3minx.com
 * 3xplanet.com
 * 3xplanet.net
 * 47xpics.space
@@ -63,6 +64,7 @@
 * fc-lc.com
 * fc-lc.xyz
 * festyy.com
+* fikfok.net
 * fir3.net
 * forex-trnd.com
 * foto-pic.net
@@ -76,6 +78,8 @@
 * go.tnshort.net
 * gplinks.co
 * hen-tay.net
+* hentaicovid.com
+* hentaipig.com
 * hostpic.org
 * hotshorturl.com
 * ibb.co
@@ -193,15 +197,15 @@
 * pacific.picturedent.org
 * pahe.plus
 * payskip.org
+* pic-maniac.com
+* pic-upload.de
 * picforall.ru
 * piclerz.store
-* pic-maniac.com
 * picnew.space
 * picstate.com
 * picturedent.org
 * pictwn.com
 * picuekr.site
-* pic-upload.de
 * picyield.com
 * picz.site
 * pig69.com
@@ -212,6 +216,7 @@
 * pixroute.com
 * pixxxels.cc
 * porn4f.com
+* porn4f.org
 * pornyhost.com
 * postimg.cc
 * preview.rlu.ru
@@ -240,6 +245,7 @@
 * stfly.me
 * stfly.xyz
 * supercheats.com
+* sweetie-fox.com
 * swzz.xyz
 * techgeek.digital
 * techstudify.com
