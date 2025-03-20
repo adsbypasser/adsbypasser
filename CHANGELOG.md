@@ -1,4 +1,4 @@
-# v7.30.0 - xxxx-xx-xx
+# v7.30.0 - 2025-03-20
 
 * fixed
     * directupload.net
