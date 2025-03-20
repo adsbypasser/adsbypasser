@@ -151,6 +151,7 @@
 * infidrive.net
 * jav-load.com
 * javball.com
+* javbee.vip
 * javlibrary.com
 * javsunday.com
 * javtenshi.com
