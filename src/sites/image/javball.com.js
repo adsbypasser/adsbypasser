@@ -19,6 +19,14 @@ _.register({
     'https://porn4f.com/upload/en/*',
     'https://porn4f.org/upload/en/*',
     'https://sweetie-fox.com/upload/en/*',
+    'https://porn-pig.com/upload/en/*',
+    'https://kin8-jav.com/upload/en/*',
+    'https://blackwidof.org/upload/en/*',
+    'https://xcamcovid.com/upload/en/*',
+    'https://hentai4f.com/upload/en/*',
+    'https://javtele.net/upload/en/*',
+    'https://fc2ppv.stream/upload/en/*',
+    'https://hentaicovid.org/upload/en/*',
   ],
   async ready () {
     const m = $('meta[property="og:image"]');
