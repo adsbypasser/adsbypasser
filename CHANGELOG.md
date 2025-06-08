@@ -1,3 +1,22 @@
+# TBA - xxxx-xx-xx
+* added
+    * anime-jav.com
+    * blackwidof.org
+    * chinese-pics.com
+    * cn-av.com
+    * cosplay-xxx.com
+    * fc2ppv.stream
+    * hentai4f.com
+    * hentaicovid.org
+    * hentai-sub.com
+    * hentaixnx.com
+    * javtele.net
+    * kin8-jav.com
+    * kr-av.com
+    * porn-pig.com
+    * xcamcovid.com
+    * xxpics.org
+
 # v7.30.0 - 2025-03-20
 
 * fixed
