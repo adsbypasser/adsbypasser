@@ -82,6 +82,7 @@
 * go.bitcosite.com
 * go.linksly.co
 * go.tnshort.net
+* gofile.download
 * gplinks.co
 * hentai4f.com
 * hentaicovid.com
