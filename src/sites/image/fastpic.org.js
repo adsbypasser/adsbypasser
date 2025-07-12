@@ -4,7 +4,11 @@ _.register({
     path: /^\/view\//,
   },
   async ready () {
-    const i = $('#picContainer img');
+    const a = $('#imglink');
+    await $.openLink(a.src);
+  },
+  async ready () {
+    const i = $('.image');
     await $.openImage(i.src);
   },
 });
