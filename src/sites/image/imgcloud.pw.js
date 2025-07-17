@@ -7,6 +7,7 @@ _.register({
       /^imgcloud\.pw$/,
       /^pilot007\.org$/,
       /^img\.javstore\.net$/,
+      /^(lookmyimg|shotcan|teenyxo)\.com$/,
       /^www\.imghit\.com$/,
       /^xxxaddicted\.top$/,
     ],

@@ -4,7 +4,7 @@ _.register({
     path: /^\/image\/.+$/,
   },
   async ready () {
-    const i = $('input#embed-code-2.text-input').getAttribute('value');
-    await $.openImage(i);
+    const i = $('img.no-select.cursor-zoom-in');
+    await $.openImage(i.src);
   },
 });

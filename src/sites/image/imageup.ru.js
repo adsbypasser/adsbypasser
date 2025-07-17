@@ -1,9 +1,10 @@
 _.register({
   rule: {
-    host: /^www\.directupload\.net$/,
+    host:
+      /^imageup\.ru$/,
   },
   async ready () {
-    const i = $('#ImgFrame');
+    const i = $('#image');
     await $.openImage(i.src);
   },
 });

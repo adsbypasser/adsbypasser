@@ -1,3 +1,48 @@
+# v7.30.0 - 2025-03-20
+
+* fixed
+    * directupload.net
+    * imgbase.ru
+    * imx.to
+    * starimage.club
+* added
+    * 3minx.com
+    * fikfok.net
+    * hentaicovid.com
+    * hentaipig.com
+    * javbee.vip
+    * lookmyimg.com
+    * porn4f.org
+    * ryuugames.com
+    * shotcan.com
+    * sweetie-fox.com
+    * techstudify.com
+    * teenyxo.com
+* retired
+    * 1v.to
+    * abload.de
+    * barbit.net
+    * crownimg.com
+    * ctr.sh
+    * fotokiz.com
+    * imgking.co
+    * imgkings.com
+    * imgsen.com
+    * imgstar.eu
+    * kropic.com
+    * kvador.com
+    * mylink.us
+    * noriskdomain.com
+    * paylinnk.com
+    * picbaron.com
+    * picdollar.com
+    * pics4upload.com
+    * pics4you.net
+    * shink.me
+    * shon.xyz
+    * shortly.xyz
+    * thotimg.xyz
+
 # v7.29.0 - 2024-09-30
 
 * added
