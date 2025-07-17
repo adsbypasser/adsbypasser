@@ -14,6 +14,7 @@ _.register({
     'https://cosplay-xxx.com/upload/en/*',
     'https://fc2ppv.stream/upload/en/*',
     'https://fikfok.net/upload/en/*',
+    'https://gofile.download/upload/en/*',
     'https://hentai4f.com/upload/en/*',
     'https://hentaicovid.com/uploads/en/*',
     'https://hentaicovid.org/upload/en/*',

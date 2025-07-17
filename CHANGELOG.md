@@ -6,6 +6,7 @@
     * cn-av.com
     * cosplay-xxx.com
     * fc2ppv.stream
+    * gofile.download
     * hentai4f.com
     * hentaicovid.org
     * hentai-sub.com
