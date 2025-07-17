@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: [
       /^exeo\.app$/,
-      /^exe-links.com$/,
+      /^exe-links\.com$/,
     ],
   },
   async ready () {
