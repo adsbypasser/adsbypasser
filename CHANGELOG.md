@@ -1,10 +1,15 @@
 # TBA - xxxx-xx-xx
+
+* fixed
+    * fastpic.org
+
 * added
     * anime-jav.com
     * blackwidof.org
     * chinese-pics.com
     * cn-av.com
     * cosplay-xxx.com
+    * exe-links.com
     * fc2ppv.stream
     * gofile.download
     * hentai4f.com
