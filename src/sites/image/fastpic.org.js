@@ -1,10 +1,14 @@
 _.register({
   rule: {
     host: /^fastpic\.org$/,
-    path: /^\/view\//,
   },
   async ready () {
-    const i = $('#picContainer img');
-    await $.openImage(i.src);
+    let a = $.$('#imglink');
+    if (a) {
+      await $.openLink(a.href);
+      return;
+    }
+    a = $('.image');
+    await $.openImage(a.src);
   },
 });
