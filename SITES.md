@@ -63,6 +63,7 @@
 * dz4link.com
 * earnlink.io
 * everest.picturedent.org
+* exe-links.com
 * exeo.app
 * fappic.com
 * fastpic.org
