@@ -161,10 +161,11 @@
 * imx.to
 * indishare.org
 * infidrive.net
+* jav-load.com
 * javball.com
 * javbee.vip
 * javlibrary.com
-* jav-load.com
+* javring.com
 * javsunday.com
 * javtele.net
 * javtenshi.com

@@ -12,10 +12,11 @@
     * exe-links.com
     * fc2ppv.stream
     * gofile.download
+    * hentai-sub.com
     * hentai4f.com
     * hentaicovid.org
-    * hentai-sub.com
     * hentaixnx.com
+    * javring.com
     * javtele.net
     * kin8-jav.com
     * kr-av.com
