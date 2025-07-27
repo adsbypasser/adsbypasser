@@ -1,6 +1,7 @@
 # vX.XX.X - 2025-XX-XX
 
 * fixed
+    * fastpic.org
 
 # v7.31.0 - 2025-07-21
 
