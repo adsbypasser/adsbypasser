@@ -8,7 +8,7 @@ _.register({
       await $.openLink(a.href);
       return;
     }
-    a = $('.image');
-    await $.openImage(a.src);
+    const directUrl = $.searchFromScripts(/loading_img = '([^"]+)';/);
+    await $.openLink(directUrl[1]);
   },
 });
