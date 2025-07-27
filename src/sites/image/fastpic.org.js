@@ -3,7 +3,7 @@ _.register({
     host: /^fastpic\.org$/,
   },
   async ready () {
-    let a = $.$('#imglink');
+    const a = $.$('#imglink');
     if (a) {
       await $.openLink(a.href);
       return;
