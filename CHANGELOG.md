@@ -1,3 +1,8 @@
+# vX.XX.X - 2025-XX-XX
+
+* added
+    * javtele.net
+
 # v7.31.0 - 2025-07-21
 
 * fixed
