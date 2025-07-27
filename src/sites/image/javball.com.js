@@ -25,6 +25,7 @@ _.register({
     'https://javball.com/upload/en/*',
     'https://javring.com/upload/en/*',
     'https://javsunday.com/upload/en/*',
+    'https://javtele.net/upload/en/*',
     'https://kin8-av.com/upload/en/*',
     'https://kin8-jav.com/upload/en/*',
     'https://kr-av.com/upload/en/*',
