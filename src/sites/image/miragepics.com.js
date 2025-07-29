@@ -1,10 +1,7 @@
 (function () {
   _.register({
     rule: {
-      host: [
-        /^miragepics\.com$/,
-        /^foto-pic\.net$/,
-      ],
+      host: /^miragepics\.com$/,
       path: /^\/viewer\.php$/,
       query: /file=([^&]+)/,
     },
