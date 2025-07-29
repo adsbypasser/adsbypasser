@@ -74,7 +74,6 @@
 * fikfok.net
 * fir3.net
 * forex-trnd.com
-* foto-pic.net
 * fotosik.pl
 * gestyy.com
 * get-click2.blogspot.com
@@ -138,7 +137,6 @@
 * imgnmh.cfd
 * imgotw.store
 * imgoutlet.com
-* imgprime.com
 * imgpukxxr.site
 * imgpuloki.online
 * imgqklw.shop
@@ -196,7 +194,6 @@
 * miragepics.com
 * mirrored.to
 * mitly.us
-* mrjh.org
 * multiup.io
 * n.fcd.su
 * nmac.to
@@ -217,7 +214,6 @@
 * picforall.ru
 * piclerz.store
 * pic-maniac.com
-* picnew.space
 * picstate.com
 * picturedent.org
 * pictwn.com
@@ -239,7 +235,6 @@
 * postimg.cc
 * preview.rlu.ru
 * prnt.sc
-* pronpic.org
 * realsht.mobi
 * rintor.space
 * ryuugames.com
@@ -268,7 +263,6 @@
 * techgeek.digital
 * techstudify.com
 * techtrendmakers.com
-* teenyxo.com
 * tezzpic.com
 * thefileslocker.net
 * thinfi.com
@@ -296,7 +290,6 @@
 * xcamcovid.com
 * xpshort.com
 * xxpics.org
-* xxxaddicted.top
 * xxxs.org
 * xxxwebdlxxx.org
 * xxxwebdlxxx.top
