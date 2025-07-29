@@ -5893,9 +5893,9 @@
     * adf.ly
         * remove iframe
     * gzvd.info
-        * don't redirect if picture was retired
+        * don't redirect if picture was removed.
     * hentaita.com
-        * don't redirect if picture was retired
+        * don't redirect if picture was removed.
 * changed
     * introduced more rules to match sites
 
