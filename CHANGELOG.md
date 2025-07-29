@@ -2,12 +2,19 @@
 
 * fixed
     * fastpic.org
+* retired
+    * foto-pic.net
+    * imgprime.com
+    * mrjh.org
+    * picnew.space
+    * pronpic.org
+    * teenyxo.com
+    * xxxaddicted.top
 
 # v7.31.0 - 2025-07-21
 
 * fixed
     * fastpic.org
-
 * added
     * anime-jav.com
     * blackwidof.org
@@ -1210,7 +1217,7 @@
     * silverpic.com
     * vipr.im
     * zeefiles.download
-* removed
+* retired
     * hotchyx.com
 
 ## v7.16.0 - 2021-03-27
@@ -1237,7 +1244,7 @@
     * click-paid.com
     * kropic.com
     * shotly.io
-* removed
+* retired
     * crabcut.net
     * cutadlink.net
 
@@ -1300,7 +1307,7 @@
     * dwrfslsqpdfqfwy.net
     * linkvertise.com
     * uvonahaze.xyz
-* removed
+* retired
     * oladblock.me
     * oladblock.services
     * oladblock.xyz
@@ -1920,7 +1927,7 @@
     * safelinkreviewx.com
     * xemlink.net
     * z2i.com
-* removed
+* retired
     * pixsense.net
     * safelinkconverter2.com
     * safelinkreviewer.com
@@ -2031,7 +2038,7 @@
     * link4win.net
     * linksad.net
     * swzz.xyz
-* removed
+* retired
     * akoam.com
 
 ## v6.19.0 - 2018-09-04
@@ -2057,7 +2064,7 @@
     * spacetica.com
     * speedcar.club
     * telolet.in
-* removed
+* retired
     * susutinv2.com
 
 ## v6.18.0 - 2018-08-21
@@ -2101,7 +2108,7 @@
     * imgview.pw
     * onepiece-ex.com.br
     * s.yukisubs.com
-* removed
+* retired
     * imgdew.com
     * imgmaze.com
     * imgtown.net
@@ -2173,7 +2180,7 @@
     * sehatsegar.net
     * tetew.info
     * tokenfly.pw
-* removed
+* retired
     * lix.in
     * zintata.com
 
@@ -2214,7 +2221,7 @@
     * tny.ec
     * tojros.tk
     * turkdown.com
-* removed
+* retired
     * 244pix.com
     * adlock.org
     * b4he.com
@@ -2306,7 +2313,7 @@
     * urltips.com
     * raolink.com
     * imgbalana.com
-* removed
+* retired
     * x.pixfarm.net
     * vvcap.net
     * imageontime.com
@@ -2628,7 +2635,7 @@
     * iiv.pl
     * animeforce.stream
     * oload.win
-* removed
+* retired
     * freegaysitepass.com
     * fuestfka.com
     * deb.gs
@@ -2717,7 +2724,7 @@
     * 3rabcut.com
 * changed
     * recaptcha for spaste.com
-* removed
+* retired
     * clictune.com
     * susutin.com
     * shortit.in
@@ -2745,7 +2752,7 @@
     * urly.mobi
     * apasih.pw
     * ewa.ac
-* removed
+* retired
     * pixxxels.org
     * img.yt
     * pixhost.org
@@ -2771,7 +2778,7 @@
     * greget.space
     * shrinkearn.com
     * petty.link
-* removed
+* retired
     * jzrputtbut.net
 
 ## v6.7.0 - 2018-01-08
@@ -2829,7 +2836,7 @@
     * 1ink.cc
     * jurl.io
     * adslink.pw
-* removed
+* retired
     * zez.io
     * coshurl.co
 
@@ -2848,7 +2855,7 @@
     * imgsky.net
     * picker-click.ru
     * imgoutlet.pw
-* removed
+* retired
     * imgoutlet.co
     * link.tl
 
@@ -2861,7 +2868,7 @@
     * oke.io
     * susutinv2.com
     * njiir.com
-* removed
+* retired
     * zytpirwai.net
 
 ## v6.4.1 - 2017-11-13
@@ -2887,7 +2894,7 @@
     * clik.pw
     * weefy.me
     * coshurl.co
-* removed
+* retired
     * adshort.co
 
 ## v6.3.0 - 2017-10-02
@@ -2904,7 +2911,7 @@
     * shink.me
     * oload.info
     * 123link.io
-* removed
+* retired
     * 123link.top
 
 ## v6.2.1 - 2017-09-25
@@ -2968,7 +2975,7 @@
     * idsly.com
 * added
     * imgrock.info
-* removed
+* retired
     * imgrock.net
 
 ## v6.0.0 - 2017-07-10
@@ -3000,7 +3007,7 @@
     * imgwallet.com
 * added
     * imgoutlet.co
-* removed
+* retired
     * igg-games.com
 
 ## v5.71.0
@@ -3025,7 +3032,7 @@
     * destyy.com
     * festyy.com
     * gestyy.com
-* removed
+* retired
     * leechpremium.space
     * empireload.com
     * loadsanook.com
@@ -3043,7 +3050,7 @@
 * added
     * imgtorrnt.in
     * mylink.us
-* removed
+* retired
     * mirrorupload.net
     * dewaurl.com
     * imageberyl.com
@@ -3165,7 +3172,7 @@
     * xiw34.com
     * sipkur.us
     * fiuxy.co
-* removed
+* retired
     * fiuxy.net
 
 ## v5.63.2
@@ -3230,7 +3237,7 @@
     * gsurl.me
     * g5u.pw
     * azhie.net
-* removed
+* retired
     * eafyfsuh.net
     * sasontnwc.net
 
@@ -3272,7 +3279,7 @@
     * short.est
     * ulshare.net
     * imgshots.com
-* removed
+* retired
     * postimg.org
 
 ## 5.60.6
@@ -3351,7 +3358,7 @@
     * imgcurl.com
     * short.am
     * smll.io
-* removed
+* retired
     * awet.in
     * sortir.in
     * st.benfile.com
@@ -3369,7 +3376,7 @@
     * ipicture.su
     * urlgo.gs
     * amankan.link
-* removed
+* retired
     * linc.ml
 
 ## 5.57.0
@@ -3405,7 +3412,7 @@
     * insurance1.tech
     * imgzizi.xyz
     * linkpaid.net
-* removed
+* retired
     * pornprimehd.com
 
 ## 5.56.2
@@ -3449,7 +3456,7 @@
     * getcomics.gq
     * imgz.pw
     * sipkur.net
-* removed
+* retired
     * bk-ddl.net
 
 ## 5.55.0
@@ -3495,7 +3502,7 @@
     * i.hentai-ddl.org
     * picangel.in
     * picstream.tv
-* removed
+* retired
     * picstate.com.alsohe.com
 
 ## 5.53.0
@@ -3546,7 +3553,7 @@
     * imgsoo.net
     * imgwallet.com
     * awaremmxv.com
-* removed
+* retired
     * imagepong.info
 
 ## 5.50.0
@@ -3671,7 +3678,7 @@
     * sxpics.nl
     * xximg.net
     * dewaurl.com
-* removed
+* retired
     * alabout.com
 
 ## 5.44.0
@@ -3704,7 +3711,7 @@
     * sht.io
     * img2share.com
     * akoam.com
-* removed
+* retired
     * 4shared.com
 
 ## 5.42.0
@@ -3825,7 +3832,7 @@
 
 ## 5.35.0
 
-* removed
+* retired
     * imageback.info
     * imgrill.com
 * added
@@ -3887,7 +3894,7 @@
     * eafyfsuh.net
     * shortskip.com
     * forbes.com
-* removed
+* retired
     * photoup.biz
 
 ## 5.31.1
@@ -3908,7 +3915,7 @@
     * img24.org
     * picturescream.com
     * imgbeer.com
-* removed
+* retired
     * img.acianetmedia.com
 
 ## 5.30.0
@@ -3961,7 +3968,7 @@
     * victly.com
     * link.im
     * boxcash.net
-* removed
+* retired
     * coin-ads.com
     * shortin.tk
 
@@ -3998,7 +4005,7 @@
     * imgtwyti.com
     * linkdecode.com
     * empireload.com
-* removed
+* retired
     * urlcow.com
     * miniurl.com
 * added
@@ -4015,7 +4022,7 @@
 
 ## 5.24.0
 
-* removed
+* retired
     * steamcommunity.com
 * fixed
     * gca.sh
@@ -4037,7 +4044,7 @@
 
 * changed
     * new configuration to change log level
-* removed
+* retired
     * urlz.so
 * added
     * awet.in
@@ -4063,7 +4070,7 @@
     * imgban.com
     * imgmonkey.com
     * goimge.com
-* removed
+* retired
     * microtec.com.sg
 
 ## 5.21.0
@@ -4130,7 +4137,7 @@
 * fixed
     * empireload.com
     * a.pomf.se
-* removed
+* retired
     * imagelook.org
     * ouo.io
     * ref.so
@@ -4152,7 +4159,7 @@
 * fixed
     * shortenurl.tk
     * adf.ly
-* removed
+* retired
     * catpic.biz
     * pic.apollon-fervor.com
     * imgking.us
@@ -4334,7 +4341,7 @@
     * ericsony.com
     * imgbanana.com
     * imgtwyti.com
-* removed
+* retired
     * imgdollar.com
     * pic.re
     * imagebucks.com
@@ -4401,7 +4408,7 @@
     * 1dl.biz
     * anonymbucks.com
     * mantap.in
-* removed
+* retired
     * imgskull.info
 
 ## 4.41.0
@@ -4443,7 +4450,7 @@
 * added
     * img-view.net
     * mt0.org
-* removed
+* retired
     * pixpal.net
     * images.woh.to
 
@@ -4502,7 +4509,7 @@
     * ad7.biz
     * strip comments in production code
     * resource loading issue
-* removed
+* retired
     * cloudimg.net
 * added
     * imgmega.com
@@ -4529,7 +4536,7 @@
     * dh10thbvu.com
 * added
     * theholycross.link2dollar.com
-* removed
+* retired
     * linkbucksmedia.com
     * shr77.com
 
@@ -4545,7 +4552,7 @@
 * added
     * imglocker.com
     * imgrex.com
-* removed
+* retired
     * imgcorn.com
     * hornyimage.com
     * fotohosting.net
@@ -4584,7 +4591,7 @@
     * shr55.com
     * cpv.acb.im
     * adf.animechiby.com
-* removed
+* retired
     * xlocker.net
     * gallery.jpavgod.com
 
@@ -4613,7 +4620,7 @@
     * pixsor.com
     * postimg.org
     * postimg.net
-* removed
+* retired
     * adli.pw
     * short.pk
 
@@ -4671,7 +4678,7 @@
     * ddl.animesave.com
     * u.shareme.in
     * dh10thbvu.com
-* removed
+* retired
     * rapeit.net
 
 ## 4.27.0
@@ -4698,7 +4705,7 @@
     * my-link.pro
     * pic.apollon-fervor.com
     * adf.tuhoctoan.net
-* removed
+* retired
     * zpag.es
     * adultf.ly
     * cliquesbr.com.br
@@ -4803,7 +4810,7 @@
     * ay.gy
     * adjet.biz
     * linkbucksmedia.com
-* removed
+* retired
     * iiiii.in
     * ulmt.in
     * urlgator.com
@@ -4865,7 +4872,7 @@
     * onlinepic.net
     * imgstudio.org
     * coin-ads.com
-* removed
+* retired
     * flickimg.com
     * hotimg.com
     * imgonion.com
@@ -4889,7 +4896,7 @@
     * viidii.info
     * urlcow.com
     * miniurl.com
-* removed
+* retired
     * imagebanana.com
     * adfro.gs
     * juuh.de
@@ -4971,7 +4978,7 @@
     * cliquesbr.com.br
     * imageview.me
     * 244pix.com
-* removed
+* retired
     * pornpicuploader.com
     * preview.jpavgod.com
     * sangjkay.biz
@@ -5072,7 +5079,7 @@
 
 ## 4.4.0
 
-* removed
+* retired
     * bridgeurl.com
 * added
     * sangjkay.biz
@@ -5089,7 +5096,7 @@
     * ddp.net
     * hit.us
     * urlwiz.com
-* removed
+* retired
     * u.bb
 
 ## 4.2.1
@@ -5144,7 +5151,7 @@
 
 ## 3.24.1
 
-* removed
+* retired
     * urlvisa.com
 * fixed
     * remove onbeforeunload event for every sites
@@ -5191,7 +5198,7 @@
 
 ## 3.20.0
 
-* removed
+* retired
     * imgjav.tk
 * added
     * images.woh.to
@@ -5249,7 +5256,7 @@
     * dwimg.com
     * emptypix.com
     * reffbux.com
-* removed
+* retired
     * imgboo.me
     * imgpay.me
     * imageback.info
@@ -5260,7 +5267,7 @@
 * fixed
     * bilder-space.de
     * funkyimg.com
-* removed
+* retired
     * hostpics.info
 * added
     * imagecherry.com
@@ -5364,7 +5371,7 @@
     * sexyimg.com
     * sometimes TamperMonkey may not work
     * adf.ly lock page
-* removed
+* retired
     * imagecherry.com
     * ref.so
 * added
@@ -5378,7 +5385,7 @@
 
 * fixed
     * cookie issues
-* removed
+* retired
     * adf.my.id
     * 4ks.net
     * mhz.me
@@ -5451,7 +5458,7 @@
 
 ## 3.0.0
 
-* removed
+* retired
     * gzvd.info
     * image.torrentjav.net
     * youfap.com
@@ -5503,7 +5510,7 @@
     * javelite.tk
 * added
     * go.phpnulledscripts.com
-* removed
+* retired
     * advertisingg.com
 
 ## 2.23.0
@@ -5533,7 +5540,7 @@
     * freebunker.com
     * ibunker.us
     * picshare.geenza.com
-* removed
+* retired
     * adjoin.me
     * linkbee.com
     * shortit.in
@@ -5638,7 +5645,7 @@
 * fixed
     * adf.ly
     * adcrun.ch
-* removed
+* retired
     * imagerabbit.com
     * s21.imgtube.us
 
@@ -5707,7 +5714,7 @@
     * imgtube.net
 * fixed
     * imgcloud.co
-* removed
+* retired
     * 2owl.net
     * kissdown.com
 
@@ -5729,7 +5736,6 @@
     * games8y.com
     * kissdown.com
 
-
 ## 2.9.0
 
 * added
@@ -5739,13 +5745,11 @@
     * imgpo.st
     * imgserve.net
 
-
 ## 2.8.1
 
 * fixed
     * fix wrapped body style
     * imgah.com
-
 
 ## 2.8.0
 
@@ -5762,25 +5766,21 @@
     * remove timer event for wrapped body
     * run at document start
 
-
 ## 2.7.3
 
 * fixed
     * imgah.com
-
 
 ## 2.7.2
 
 * change
     * Always disable popup windows
 
-
 ## 2.7.1
 
 * fixed
     * image69.us
     * zonezeedimage.com
-
 
 ## 2.7.0
 
@@ -5795,19 +5795,16 @@
     * Add log on error
     * indention style changed
 
-
 ## 2.6.2
 
 * fixed
     * picjav.net
     * image69.us
 
-
 ## 2.6.1
 
 * fixed
     * GreaseMonkey auto update problem
-
 
 ## 2.6.0
 
@@ -5817,7 +5814,6 @@
     * imgwoot.com
 * fixed
     * imagedecode.com
-
 
 ## 2.5.0
 
@@ -5830,7 +5826,6 @@
 * changed
     * redirect to image itself for some sites
 
-
 ## 2.4.0
 
 * added
@@ -5839,7 +5834,6 @@
     * jpdown.info
 * changed
     * redirect to image itself for some sites
-
 
 ## 2.3.0
 
@@ -5850,7 +5844,6 @@
     * imgah.com
 * fixed
     * 4owl.info
-
 
 ## 2.2.0
 
@@ -5863,18 +5856,15 @@
 * fixed
     * 4owl.info
 
-
 ## 2.1.2
 
 * fixed
     * really fix url patterns in metadata block
 
-
 ## 2.1.1
 
 * fixed
     * GreaseMonkey install problem
-
 
 ## 2.1.0
 
@@ -5886,7 +5876,6 @@
     * adf.ly
 * changed
     * use match instead of include
-
 
 ## 2.0.1
 
@@ -5904,24 +5893,21 @@
     * adf.ly
         * remove iframe
     * gzvd.info
-        * don't redirect if picture was removed
+        * don't redirect if picture was retired
     * hentaita.com
-        * don't redirect if picture was removed
+        * don't redirect if picture was retired
 * changed
     * introduced more rules to match sites
-
 
 ## 1.1.2
 
 * fixed
     * picjav.net
 
-
 ## 1.1.1
 
 * fixed
     * picjav.net/picjav2
-
 
 ## 1.1.0
 
@@ -5942,7 +5928,6 @@
     * pass captured RegExp strings into action
     * use strict mode in whole script
 
-
 ## 1.0.1
 
 * added
@@ -5954,7 +5939,6 @@
         * remove fullscreen overlay
 * changed
     * add @updateURL and @downloadURL in metadata
-
 
 ## 1.0.0
 
