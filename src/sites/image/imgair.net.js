@@ -13,6 +13,6 @@ _.register({
     },
   async ready () {
     const matches = $.searchFromScripts(/imgbg\.src = "([^"]+)";/);
-    await $.openImage(matches[1]);
+    await $.openImage(matches[1], { referer: true });
   },
 });
