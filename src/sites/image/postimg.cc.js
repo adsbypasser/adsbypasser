@@ -7,7 +7,8 @@ _.register({
     ],
   },
   async ready () {
-    const img = $('#main-image');
-    await $.openImage(img.src);
+    const ele = $('#download');
+    const img = ele.href.replace('?dl=1', '');
+    await $.openImage(img);
   },
 });
