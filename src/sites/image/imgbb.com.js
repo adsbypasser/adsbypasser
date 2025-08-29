@@ -6,7 +6,7 @@ _.register({
     ],
   },
   async ready () {
-    const img = $('.image-viewer-container img');
-    await $.openImage(img.src);
+    const img = $('meta[property="og:image"]');
+    await $.openImage(img.content);
   },
 });
