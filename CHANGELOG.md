@@ -2,6 +2,8 @@
 
 * fixed
     * fastpic.org
+    * i.ibb.co
+    * postimg.cc
 * retired
     * foto-pic.net
     * imgprime.com
