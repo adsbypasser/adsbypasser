@@ -122,7 +122,6 @@ function makeHandlers (supportImage) {
   const handlers = [
     'src/sites/file/*.js',
     'src/sites/link/*.js',
-    'src/sites/paste/*.js',
   ];
   if (supportImage) {
     handlers.push('src/sites/image/*.js');
