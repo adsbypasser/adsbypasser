@@ -8,8 +8,8 @@
   },
   "type": "module",
   "engines": {
-    "node": ">=18.x",
-    "npm": ">=8.x"
+    "node": ">=20.19.0",
+    "npm": ">=10.0.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.5",
