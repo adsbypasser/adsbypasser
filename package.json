@@ -43,7 +43,6 @@
   "scripts": {
     "build": "gulp",
     "clean": "gulp clean",
-    "start": "babel-node infra/building/server.babel.js",
     "test": "gulp clean && gulp test",
     "ghpages": "gulp clean && gulp ghpages"
   }
