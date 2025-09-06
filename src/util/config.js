@@ -1,14 +1,14 @@
 import {
   AdsBypasserError,
   every,
-} from 'util/core';
+} from 'util/core.js';
 import {
   register,
-} from 'util/dispatcher';
+} from 'util/dispatcher.js';
 import {
   usw,
   GMAPI,
-} from 'util/platform';
+} from 'util/platform.js';
 
 
 const MANIFEST = [

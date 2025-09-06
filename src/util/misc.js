@@ -1,12 +1,12 @@
 import {
   nop,
-} from 'util/core';
+} from 'util/core.js';
 import {
   usw,
-} from 'util/platform';
+} from 'util/platform.js';
 import {
   warn,
-} from 'util/logger';
+} from 'util/logger.js';
 
 
 function removeAllTimer () {

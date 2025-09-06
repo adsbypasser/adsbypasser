@@ -2,11 +2,11 @@ import {
   isString,
   wait,
   forEach,
-} from 'util/core';
+} from 'util/core.js';
 import {
   info,
   warn,
-} from 'util/logger';
+} from 'util/logger.js';
 
 
 function prepare (e) {

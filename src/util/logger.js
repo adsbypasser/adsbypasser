@@ -1,6 +1,6 @@
 import {
   isString,
-} from 'util/core';
+} from 'util/core.js';
 
 
 const quiet = false;

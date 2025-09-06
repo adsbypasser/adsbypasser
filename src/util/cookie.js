@@ -2,7 +2,7 @@ import {
   none,
   forEach,
   find,
-} from 'util/core';
+} from 'util/core.js';
 
 
 function setCookie (key, value) {

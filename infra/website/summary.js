@@ -1,13 +1,12 @@
-export {
-  getSummaryForGitHubPages,
-};
-
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
 import _ from 'lodash';
 import { marked }  from 'marked';
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const CHANGELOG_PATH = toAbsolutePath('../../CHANGELOG.md');
 const SITES_PATH = toAbsolutePath('../../SITES.md');
@@ -144,3 +143,7 @@ class SitesParser {
   }
 
 }
+
+export {
+  getSummaryForGitHubPages,
+};

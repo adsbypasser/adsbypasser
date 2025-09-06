@@ -3,10 +3,8 @@ import gulp from 'gulp';
 
 import {
   createNamedTask,
-  ecmaBuildOptions,
   finalizeMetadata,
   finalizeNamespace,
-  getEcmaName,
   getFeatureName,
   imageBuildOptions,
   output,
@@ -104,6 +102,18 @@ function makeBody (supportImage) {
         modules: [
           source.to('src'),
           'node_modules',
+        ],
+        extensions: ['.js', '.json'],
+        fullySpecified: false,
+      },
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            resolve: {
+              fullySpecified: false,
+            },
+          },
         ],
       },
     }))

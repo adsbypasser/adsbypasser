@@ -1,7 +1,7 @@
 import {
   forEach,
   nop,
-} from 'util/core';
+} from 'util/core.js';
 
 
 const rawUSW = getUnsafeWindow();

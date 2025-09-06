@@ -1,22 +1,22 @@
 import {
   nop,
-} from 'util/core';
+} from 'util/core.js';
 import {
   findHandler,
-} from 'util/dispatcher';
+} from 'util/dispatcher.js';
 import {
   rawUSW,
   GMAPI,
   usw,
-} from 'util/platform';
+} from 'util/platform.js';
 import {
   dumpConfig,
   loadConfig,
-} from 'util/config';
+} from 'util/config.js';
 import {
   warn,
   info,
-} from 'util/logger';
+} from 'util/logger.js';
 import '__ADSBYPASSER_HANDLERS__';
 
 

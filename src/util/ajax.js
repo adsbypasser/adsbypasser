@@ -3,13 +3,13 @@ import {
   map,
   forEach,
   none,
-} from 'util/core';
+} from 'util/core.js';
 import {
   GMAPI,
-} from 'util/platform';
+} from 'util/platform.js';
 import {
   debug,
-} from 'util/logger';
+} from 'util/logger.js';
 
 
 class AjaxError extends AdsBypasserError {

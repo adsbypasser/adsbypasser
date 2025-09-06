@@ -4,10 +4,10 @@ import {
   forEach,
   find,
   none,
-} from 'util/core';
+} from 'util/core.js';
 import {
   debug,
-} from 'util/logger';
+} from 'util/logger.js';
 
 
 class DomNotFoundError extends AdsBypasserError {

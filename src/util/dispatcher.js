@@ -7,7 +7,7 @@ import {
   isString,
   map,
   every,
-} from 'util/core';
+} from 'util/core.js';
 
 
 const patterns = [];

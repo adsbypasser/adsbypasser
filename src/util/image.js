@@ -1,19 +1,19 @@
 import {
   openLink,
-} from 'util/link';
+} from 'util/link.js';
 import {
   remove,
-} from 'util/dom';
+} from 'util/dom.js';
 import {
   warn,
   info,
-} from 'util/logger';
+} from 'util/logger.js';
 import {
   removeAllTimer,
-} from 'util/misc';
+} from 'util/misc.js';
 import {
   GMAPI,
-} from 'util/platform';
+} from 'util/platform.js';
 
 
 async function openImage (imgSrc, options) {

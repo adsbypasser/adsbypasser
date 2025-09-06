@@ -1,36 +1,43 @@
 import fs from 'fs';
 import path from 'path';
 import stream from 'stream';
+import { fileURLToPath } from 'url';
 
 import _ from 'lodash';
 import findup from 'findup-sync';
-import gulpLoadPlugins from 'gulp-load-plugins';
 import webpack from 'webpack';
+import webpackStream from 'webpack-stream';
+import gulpChange from 'gulp-change';
+import gulpConcat from 'gulp-concat';
+import gulpEslint from 'gulp-eslint';
+import gulpInjectString from 'gulp-inject-string';
+import gulpLess from 'gulp-less';
+import gulpRename from 'gulp-rename';
+import gulpStripComments from 'gulp-strip-comments';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 
 const buildOptions = {
   supportImage: [true, false],
 };
 const packageJSON = parsePackageJSON();
-// Map `webpack-stream` to `webpack`, instead of `webpackStream`.
-export const plugins = gulpLoadPlugins({
-  overridePattern: false,
-  pattern: [
-    'webpack-stream',
-  ],
-  rename: {
-    'webpack-stream': 'webpack',
+
+// Direct plugin exports for ES modules
+export const plugins = {
+  change: gulpChange,
+  concat: gulpConcat,
+  eslint: gulpEslint,
+  injectString: gulpInjectString,
+  less: gulpLess,
+  rename: gulpRename,
+  stripComments: gulpStripComments,
+  webpack: (arg) => {
+    arg.mode = 'none';
+    return webpackStream(arg, webpack);
   },
-  // Tell `webpack-stream` to use latest webpack.
-  postRequireTransforms: {
-    webpack (owp) {
-      return (arg) => {
-        arg.mode = 'none';
-        return owp(arg, webpack);
-      };
-    },
-  },
-});
+};
 export const source = {
   get path () {
     return path.resolve(__dirname, '..');
