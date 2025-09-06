@@ -35,32 +35,28 @@ export function createUserscriptTasks () {
     );
     const namespaceAndHandlers = gulp.parallel(namespaceTask, handlersTask);
 
-    for (const [supportLagacy] of ecmaBuildOptions()) {
-      const ecmaName = getEcmaName(supportLagacy);
+    const bodyTask = createNamedTask(
+      `userscript:body:${featureName}`,
+      makeBody,
+      supportImage,
+    );
+    const body = gulp.series(namespaceAndHandlers, bodyTask);
 
-      const bodyTask = createNamedTask(
-        `userscript:body:${featureName}:${ecmaName}`,
-        makeBody,
-        supportImage, supportLagacy,
-      );
-      const body = gulp.series(namespaceAndHandlers, bodyTask);
+    const metaTask = createNamedTask(
+      `userscript:meta:${featureName}`,
+      makeMeta,
+      supportImage,
+    );
+    const metaAndBody = gulp.parallel(metaTask, body);
 
-      const metaTask = createNamedTask(
-        `userscript:meta:${featureName}:${ecmaName}`,
-        makeMeta,
-        supportImage, supportLagacy,
-      );
-      const metaAndBody = gulp.parallel(metaTask, body);
+    const linkTask = createNamedTask(
+      `userscript:${featureName}`,
+      linkFiles,
+      supportImage,
+    );
 
-      const linkTask = createNamedTask(
-        `userscript:${featureName}:${ecmaName}`,
-        linkFiles,
-        supportImage, supportLagacy,
-      );
-
-      const task = gulp.series(metaAndBody, linkTask);
-      tasks.push(task);
-    }
+    const task = gulp.series(metaAndBody, linkTask);
+    tasks.push(task);
   }
 
   return gulp.parallel(...tasks);
@@ -68,53 +64,35 @@ export function createUserscriptTasks () {
 
 
 // combine meta and body to userscript
-function linkFiles (supportImage, supportLagacy) {
+function linkFiles (supportImage) {
   const featureName = supportImage ? 'full' : 'lite';
-  const ecmaName = supportLagacy ? 'es5' : 'es7';
 
   return gulp.src([
-    output.to(`adsbypasser.${featureName}.${ecmaName}.meta.js`),
-    output.to(`body/${featureName}.${ecmaName}.js`),
+    output.to(`adsbypasser.${featureName}.meta.js`),
+    output.to(`body/${featureName}.js`),
   ])
-    .pipe(plugins.concat(`adsbypasser.${featureName}.${ecmaName}.user.js`))
+    .pipe(plugins.concat(`adsbypasser.${featureName}.user.js`))
     .pipe(gulp.dest(output.path));;
 }
 
 
 // generate meta.js
-function makeMeta (supportImage, supportLagacy) {
+function makeMeta (supportImage) {
   const featureName = supportImage ? 'full' : 'lite';
-  const ecmaName = supportLagacy ? 'es5' : 'es7';
 
   return gulp.src(source.to('infra/userscript/metadata.template.js'))
-    .pipe(plugins.change(_.partial(finalizeMetadata, supportImage, supportLagacy)))
-    .pipe(plugins.rename(`adsbypasser.${featureName}.${ecmaName}.meta.js`))
+    .pipe(plugins.change(_.partial(finalizeMetadata, supportImage)))
+    .pipe(plugins.rename(`adsbypasser.${featureName}.meta.js`))
     .pipe(removeEmptyLines())
     .pipe(gulp.dest(output.path));
 }
 
 
 // generate body script
-function makeBody (supportImage, supportLagacy) {
+function makeBody (supportImage) {
   const featureName = supportImage ? 'full' : 'lite';
-  const ecmaName = supportLagacy ? 'es5' : 'es7';
   const namespacePath = output.to(`namespace/${featureName}.js`);
   const handlersPath = output.to(`handlers/${featureName}.js`);
-  const compileRules = [];
-
-  if (supportLagacy) {
-    compileRules.push({
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          plugins: ['@babel/plugin-transform-runtime'],
-          presets: ['@babel/preset-env'],
-        },
-      },
-    });
-  }
 
   return gulp.src(source.to('src/util/main.js'))
     .pipe(plugins.webpack({
@@ -128,13 +106,10 @@ function makeBody (supportImage, supportLagacy) {
           'node_modules',
         ],
       },
-      module: {
-        rules: compileRules,
-      },
     }))
     .pipe(plugins.stripComments())
     .pipe(removeEmptyLines())
-    .pipe(plugins.rename(`${featureName}.${ecmaName}.js`))
+    .pipe(plugins.rename(`${featureName}.js`))
     .pipe(gulp.dest(output.to('body')));
 }
 

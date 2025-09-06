@@ -11,7 +11,6 @@ import {
 import {
   allBuildOptions,
   finalizeHTML,
-  getEcmaName,
   getFeatureName,
   output,
   plugins,
@@ -39,11 +38,10 @@ function makeHtml () {
     summary: getSummaryForGitHubPages(),
     urls: {},
   };
-  for (const [supportImage, supportLagacy] of allBuildOptions()) {
+  for (const [supportImage] of allBuildOptions()) {
     const featureName = getFeatureName(supportImage);
-    const ecmaName = getEcmaName(supportLagacy);
-    const js = `adsbypasser.${featureName}.${ecmaName}.user.js`;
-    options.urls[`${featureName}_${ecmaName}`] = js;
+    const js = `adsbypasser.${featureName}.user.js`;
+    options.urls[featureName] = js;
   }
   const outPath = output.to('ghpages');
 
@@ -83,12 +81,11 @@ copyFiles.displayName = 'ghpages:copy:files';
 
 function copyReleases () {
   const files = [];
-  for (const [supportImage, supportLagacy] of allBuildOptions()) {
+  for (const [supportImage] of allBuildOptions()) {
     const featureName = supportImage ? 'full' : 'lite';
-    const ecmaName = supportLagacy ? 'es5' : 'es7';
-    let js = output.to(`adsbypasser.${featureName}.${ecmaName}.user.js`);
+    let js = output.to(`adsbypasser.${featureName}.user.js`);
     files.push(js);
-    js = output.to(`adsbypasser.${featureName}.${ecmaName}.meta.js`);
+    js = output.to(`adsbypasser.${featureName}.meta.js`);
     files.push(js);
   }
   return gulp.src(files)

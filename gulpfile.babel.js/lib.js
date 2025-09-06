@@ -10,7 +10,6 @@ import webpack from 'webpack';
 
 const buildOptions = {
   supportImage: [true, false],
-  supportLegacy: [false, true],
 };
 const packageJSON = parsePackageJSON();
 // Map `webpack-stream` to `webpack`, instead of `webpackStream`.
@@ -67,22 +66,12 @@ function * cartesianProductOf (...args) {
 
 
 export function * allBuildOptions () {
-  yield * cartesianProductOf(buildOptions.supportImage, buildOptions.supportLegacy);
-}
-
-
-export function * ecmaBuildOptions () {
-  yield * cartesianProductOf(buildOptions.supportLegacy);
+  yield * cartesianProductOf(buildOptions.supportImage);
 }
 
 
 export function * imageBuildOptions () {
   yield * cartesianProductOf(buildOptions.supportImage);
-}
-
-
-export function getEcmaName (supportLegacy) {
-  return supportLegacy ? 'es5' : 'es7';
 }
 
 
@@ -100,18 +89,16 @@ function parsePackageJSON () {
 }
 
 
-export function finalizeMetadata (supportImage, supportLagacy, content) {
+export function finalizeMetadata (supportImage, content) {
   const featureName = getFeatureName(supportImage);
-  const ecmaName = getEcmaName(supportLagacy);
   const featurePostfix = supportImage ? '' : ' Lite';
-  const ecmaPostfix = !supportLagacy ? '' : ' Legacy';
 
   let s = _.template(content);
   s = s({
     version: packageJSON.version,
-    title: `AdsBypasser${featurePostfix}${ecmaPostfix}`,
+    title: `AdsBypasser${featurePostfix}`,
     supportImage,
-    buildName: `${featureName}.${ecmaName}`,
+    buildName: featureName,
   });
   s = [
     '// ==UserScript==\n',
