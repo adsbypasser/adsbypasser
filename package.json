@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.5",
-    "eslint": "^8.7.0",
+    "eslint": "^9.0.0",
     "findup-sync": "^5.0.0",
     "gulp": "^5.0.0",
     "gulp-change": "^1.0.0",

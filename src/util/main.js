@@ -31,7 +31,7 @@ function disableWindowOpen () {
         closed: false,
       };
     };
-  } catch (e) {
+  } catch (e) { // eslint-disable-line no-unused-vars
     warn('cannot mock window.open');
   }
   usw.alert = nop;

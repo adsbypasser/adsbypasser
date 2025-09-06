@@ -16,7 +16,6 @@ function log (method, args) {
   } else {
     args.unshift('AdsBypasser:');
   }
-  // eslint-disable-next-line no-console
   const f = console[method];
   if (typeof f === 'function') {
     f.apply(console, args);

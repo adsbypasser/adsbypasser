@@ -38,13 +38,7 @@ function createEslintPlugin() {
           try {
             if (!eslint) {
               eslint = new ESLint({
-                useEslintrc: true,
                 cwd: process.cwd(),
-                overrideConfig: {
-                  parserOptions: {
-                    requireConfigFile: false,
-                  },
-                },
               });
             }
             
@@ -69,13 +63,7 @@ function createEslintPlugin() {
             try {
               if (!eslint) {
                 eslint = new ESLint({
-                  useEslintrc: true,
                   cwd: process.cwd(),
-                  overrideConfig: {
-                    parserOptions: {
-                      requireConfigFile: false,
-                    },
-                  },
                 });
               }
               const formatter = await eslint.loadFormatter('stylish');

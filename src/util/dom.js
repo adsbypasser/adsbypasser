@@ -38,7 +38,7 @@ function querySelector (selector, context) {
 function querySelectorOrNull (selector, context) {
   try {
     return querySelector(selector, context);
-  } catch (e) {
+  } catch (e) { // eslint-disable-line no-unused-vars
     return null;
   }
 }
@@ -58,7 +58,7 @@ function toDOM (rawHTML) {
     const parser = new DOMParser();
     const DOMHTML = parser.parseFromString(rawHTML, 'text/html');
     return DOMHTML;
-  } catch (e) {
+  } catch (e) { // eslint-disable-line no-unused-vars
     throw new AdsBypasserError('could not parse HTML to DOM');
   }
 }

@@ -13,12 +13,11 @@ function getUnsafeWindow () {
   let w = null;
   try {
     w = unsafeWindow;
-  } catch (e) {
+  } catch (e) { // eslint-disable-line no-unused-vars
     try {
       // eslint-disable-next-line no-eval
       w = (0, eval)('this').global;
-    } catch (e) {
-      // eslint-disable-next-line no-empty
+    } catch (e) { // eslint-disable-line no-unused-vars
     }
   }
   // eslint-disable-next-line no-eval
