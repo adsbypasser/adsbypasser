@@ -18,7 +18,7 @@ function lint () {
   return gulp.src([
     source.to('src/**/*.js'),
   ])
-    .pipe(plugins.eslint())
+    .pipe(plugins.eslint.eslint())
     .pipe(plugins.eslint.format())
     .pipe(plugins.eslint.failAfterError());
 }
