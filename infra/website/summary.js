@@ -73,16 +73,17 @@ class ChangeLogParser {
     if (node.type === 'heading') {
       const m = '#'.repeat(node.depth);
       this._block_text += `${m} ${node.text}\n\n`;
-    } else if (node.type === 'list_start') {
+    } else if (node.type === 'list') {
       this._list_level += 1;
-    } else if (node.type === 'list_end') {
-      this._list_level -= 1;
-      if (this._list_level === 0) {
+      if (node.items && node.items.length > 0) {
+        for (const item of node.items) {
+          if (item.type === 'list_item') {
+            const i = ' '.repeat(4 * (this._list_level - 1));
+            this._block_text += `${i}* ${item.text}\n`;
+          }
+        }
         this._first_block_ended = true;
       }
-    } else if (node.type === 'text') {
-      const i = ' '.repeat(4 * (this._list_level - 1));
-      this._block_text += `${i}* ${node.text}\n`;
     }
   }
 
@@ -119,17 +120,20 @@ class SitesParser {
   }
 
   feed (node) {
-    if (node.type === 'list_start') {
+    if (node.type === 'list') {
       this._list_level += 1;
-    } else if (node.type === 'list_end') {
-      this._list_level -= 1;
-    } else if (node.type === 'text') {
-      if (this._list_level === 1) {
-        if (node.text !== 'else') {
-          this._groups += `* ${node.text}\n`;
+      if (node.items && node.items.length > 0) {
+        for (const item of node.items) {
+          if (item.type === 'list_item') {
+            if (this._list_level === 1) {
+              if (item.text !== 'else') {
+                this._groups += `* ${item.text}\n`;
+              }
+            } else if (this._list_level === 2) {
+              this._sites += 1;
+            }
+          }
         }
-      } else if (this._list_level === 2) {
-        this._sites += 1;
       }
     }
   }
