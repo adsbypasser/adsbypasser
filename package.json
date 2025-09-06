@@ -16,7 +16,6 @@
     "@babel/plugin-transform-modules-commonjs": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/register": "^7.10.4",
-    "chai": "^4.1.1",
     "eslint": "^8.7.0",
     "gulp": "^5.0.0",
     "gulp-change": "^1.0.0",
@@ -27,19 +26,20 @@
     "gulp-inject-string": "^1.1.0",
     "gulp-less": "^5.0.0",
     "gulp-load-plugins": "^2.0.3",
-    "gulp-mocha": "^8.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-strip-comments": "^2.5.1",
     "lodash": "^4.17.19",
     "marked": "^4.0.10",
-    "mocha": "^8.0.1",
+    "vitest": "^1.0.0",
     "webpack": "^5.94.0",
     "webpack-stream": "^7.0.0"
   },
   "scripts": {
     "build": "gulp",
     "clean": "gulp clean",
-    "test": "gulp clean && gulp test",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:gulp": "gulp clean && gulp test",
     "ghpages": "gulp clean && gulp ghpages"
   }
 }

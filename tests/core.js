@@ -1,4 +1,4 @@
-import chai from 'chai';
+import { describe, it, expect } from 'vitest';
 
 import {
   AdsBypasserError,
@@ -11,87 +11,84 @@ import {
 } from 'util/core';
 
 
-chai.should();
+describe('core', () => {
 
+  describe('partial', () => {
 
-describe('core', function () {
-
-  describe('partial', function () {
-
-    it('should takes function as first parameter', function () {
-      partial.should.throw(AdsBypasserError);
-      (function () {
+    it('should takes function as first parameter', () => {
+      expect(() => partial()).toThrow(AdsBypasserError);
+      expect(() => {
         partial(0);
-      }).should.throw(AdsBypasserError);
+      }).toThrow(AdsBypasserError);
     });
 
-    it('should returns a function', function () {
-      partial(function () {
-      }).should.be.a('function');
+    it('should returns a function', () => {
+      expect(partial(function () {
+      })).toBeTypeOf('function');
     });
 
-    it('should receives arguments', function () {
+    it('should receives arguments', () => {
       let p = partial(function (a, b, c) {
-        a.should.equals(1);
-        b.should.equals(2);
-        c.should.equals(3);
+        expect(a).toBe(1);
+        expect(b).toBe(2);
+        expect(c).toBe(3);
       }, 1, 2);
       p(3);
     });
 
-    it('should returns correct value', function () {
+    it('should returns correct value', () => {
       let p = partial(function () {
         return '__MAGIC__';
       });
-      p().should.equals('__MAGIC__');
+      expect(p()).toBe('__MAGIC__');
     });
 
   });
 
-  describe('collection', function () {
+  describe('collection', () => {
 
-    it('every [1, 2, 3] are numbers should be true', function () {
-      every([1, 2, 3], function (v) {
+    it('every [1, 2, 3] are numbers should be true', () => {
+      expect(every([1, 2, 3], function (v) {
         return typeof v === 'number';
-      }).should.be.true;
+      })).toBe(true);
     });
 
-    it('every [1, 2, 3] are odd numbers should be false', function () {
-      every([1, 2, 3], function (v) {
+    it('every [1, 2, 3] are odd numbers should be false', () => {
+      expect(every([1, 2, 3], function (v) {
         return v % 2 === 1;
-      }).should.be.false;
+      })).toBe(false);
     });
 
     it('the first even number in [1, 2, 3] should be 2', () => {
       const [k, v, r] = find([1, 2, 3], (v) => {
         return v % 2 === 0 ? true : none;
       });
-      k.should.equals(1);
-      v.should.equals(2);
-      r.should.equals(true);
+      expect(k).toBe(1);
+      expect(v).toBe(2);
+      expect(r).toBe(true);
     });
 
-    it('0 should not be found in [1, 2, 3]', function () {
+    it('0 should not be found in [1, 2, 3]', () => {
       const [k, v, r] = find([1, 2, 3], function (v) {
         return v === 0 ? 0 : none;
       });
-      k.should.equals(none);
-      v.should.equals(none);
-      r.should.equals(none);
+      expect(k).toBe(none);
+      expect(v).toBe(none);
+      expect(r).toBe(none);
     });
 
-    it('should iterate all items', function () {
+    it('should iterate all items', () => {
       let sum = 0;
       forEach([1, 2, 4], function (v) {
         sum += v;
       });
-      sum.should.equals(7);
+      expect(sum).toBe(7);
     });
 
-    it('should change all items', function () {
-      map([1, 2, 3], function (v) {
+    it('should change all items', () => {
+      expect(map([1, 2, 3], function (v) {
         return v % 2 === 0;
-      }).should.be.deep.equals([false, true, false]);
+      })).toEqual([false, true, false]);
     });
 
   });

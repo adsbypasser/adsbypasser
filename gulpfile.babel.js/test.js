@@ -1,15 +1,16 @@
 import gulp from 'gulp';
+import { exec } from 'child_process';
+import { promisify } from 'util';
 
 import {
-  output,
   plugins,
   source,
 } from './lib.js';
 
+const execAsync = promisify(exec);
 
 export function createTestTasks () {
-  const mochaTask = gulp.series(mochaCore, mocha);
-  return gulp.parallel(lint, mochaTask);
+  return gulp.parallel(lint, vitest);
 }
 
 
@@ -24,26 +25,15 @@ function lint () {
 lint.displayName = 'test:lint';
 
 
-function mocha () {
-  return gulp.src(output.to('tests/core.js'))
-    .pipe(plugins.mocha({
-      reporter: 'spec',
-    }));
+function vitest () {
+  return new Promise((resolve, reject) => {
+    execAsync('npx vitest run')
+      .then(() => {
+        resolve();
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
 }
-mocha.displayName = 'test:mocha';
-
-
-function mochaCore () {
-  return gulp.src(source.to('tests/core.js'))
-    .pipe(plugins.webpack({
-      resolve: {
-        modules: [
-          source.to('src'),
-          'node_modules',
-        ],
-      },
-    }))
-    .pipe(plugins.rename(`core.js`))
-    .pipe(gulp.dest(output.to('tests')));
-}
-mochaCore.displayName = 'test:mocha:core';
+vitest.displayName = 'test:vitest';
