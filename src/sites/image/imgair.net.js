@@ -6,6 +6,7 @@ _.register({
         /^imgair\.net$/,
         /^imgblaze\.net$/,
         /^imgfrost\.net$/,
+        /^imgfira\.cc$/,
         /^img[a-z]{2,10}\.(sbs|shop)$/,
         /^pic[a-z]{2,10}\.(sbs|shop)$/,
         /^pix[a-z]{2,10}\.sbs$/,
