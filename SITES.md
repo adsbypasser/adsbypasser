@@ -128,6 +128,7 @@
 * imgdollar.com
 * imgdrive.net
 * imgfiles.org
+* imgfira.cc
 * imgflip.com
 * imgfrost.net
 * imghit.com
