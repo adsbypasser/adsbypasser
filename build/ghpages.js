@@ -36,7 +36,10 @@ export function createGhpagesTasks (userscriptTask) {
 function makeHtml () {
   const options = {
     summary: getSummaryForGitHubPages(),
-    urls: {},
+    urls: {
+      full: 'adsbypasser.full.user.js',
+      lite: 'adsbypasser.lite.user.js',
+    },
   };
   for (const [supportImage] of allBuildOptions()) {
     const featureName = getFeatureName(supportImage);
