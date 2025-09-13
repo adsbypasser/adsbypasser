@@ -1,30 +1,28 @@
-import childProcess from 'child_process';
+import childProcess from "child_process";
 
-import gulp from 'gulp';
+import gulp from "gulp";
 
-
-export function createCheckTasks () {
+export function createCheckTasks() {
   return gulp.series(checkGit);
 }
 
-
 // to ensure there is no experimental code
-function checkGit () {
+function checkGit() {
   return new Promise((resolve, reject) => {
-    const git = childProcess.spawn('git', ['status', '--porcelain']);
-    git.stdout.on('data', (data) => {
-      let uncleanFiles = data.toString('utf8');
+    const git = childProcess.spawn("git", ["status", "--porcelain"]);
+    git.stdout.on("data", (data) => {
+      let uncleanFiles = data.toString("utf8");
       uncleanFiles = uncleanFiles.trim();
-      uncleanFiles = uncleanFiles.split('\n');
+      uncleanFiles = uncleanFiles.split("\n");
       if (uncleanFiles.length > 0) {
-        reject(new Error('work tree is dirty'));
+        reject(new Error("work tree is dirty"));
         return;
       }
     });
-    git.on('error', (error) => {
+    git.on("error", (error) => {
       reject(error);
     });
-    git.on('exit', (code, signal) => {
+    git.on("exit", (code, signal) => {
       if (code !== 0) {
         reject(new Error(`code: ${code}, signal: ${signal}`));
       }
@@ -32,4 +30,4 @@ function checkGit () {
     });
   });
 }
-checkGit.displayName = 'check:git';
+checkGit.displayName = "check:git";

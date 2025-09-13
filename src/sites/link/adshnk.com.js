@@ -2,9 +2,11 @@ _.register({
   rule: {
     host: /^adshnk\.com$/,
   },
-  async ready () {
+  async ready() {
     await _.wait(16000);
-    const b = $('button[class="ui right labeled icon button primary huge fluid"]');
+    const b = $(
+      'button[class="ui right labeled icon button primary huge fluid"]',
+    );
     b.click();
 
     await _.wait(18000);

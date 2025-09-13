@@ -3,8 +3,8 @@ _.register({
     host: /^imgflip\.com$/,
   },
 
-  async ready () {
-    const i = $('#im');
+  async ready() {
+    const i = $("#im");
     await $.openImage(i.src);
-  }
+  },
 });

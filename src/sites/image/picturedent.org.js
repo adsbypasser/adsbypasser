@@ -7,8 +7,8 @@ _.register({
     ],
     path: /^\/image\//,
   },
-  async ready () {
-    const i = $('#full_img');
+  async ready() {
+    const i = $("#full_img");
     await $.openImage(i.src);
   },
 });

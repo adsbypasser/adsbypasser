@@ -2,9 +2,9 @@ _.register({
   rule: {
     host: /^forex-trnd\.com$/,
   },
-  async ready () {
+  async ready() {
     await _.wait(10000);
-    const a = $('.get-link');
+    const a = $(".get-link");
     a.click();
   },
 });

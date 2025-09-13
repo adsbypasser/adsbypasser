@@ -12,17 +12,17 @@ _.register({
         /^uncenav\.com$/,
       ],
       path: /^\/viewimage\//,
-    }
+    },
   ],
-  async ready () {
-    $.remove('iframe, #ad');
+  async ready() {
+    $.remove("iframe, #ad");
 
-    let o = $.$('#all');
+    let o = $.$("#all");
     if (o) {
-      o.style.display = '';
+      o.style.display = "";
     }
 
-    o = $('#show_image, #image');
+    o = $("#show_image, #image");
     await $.openImage(o.src);
   },
 });

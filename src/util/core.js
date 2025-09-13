@@ -1,17 +1,14 @@
 class AdsBypasserError extends Error {
-
-  constructor (message) {
+  constructor(message) {
     super(message);
   }
 
-  get name () {
-    return 'AdsBypasserError';
+  get name() {
+    return "AdsBypasserError";
   }
-
 }
 
-
-function forEach (collection, fn) {
+function forEach(collection, fn) {
   if (isArrayLike(collection)) {
     return Array.prototype.forEach.call(collection, fn);
   }
@@ -20,8 +17,7 @@ function forEach (collection, fn) {
   });
 }
 
-
-function every (collection, fn) {
+function every(collection, fn) {
   if (isArrayLike(collection)) {
     return Array.prototype.every.call(collection, fn);
   }
@@ -30,8 +26,7 @@ function every (collection, fn) {
   });
 }
 
-
-function map (collection, fn) {
+function map(collection, fn) {
   if (isArrayLike(collection)) {
     return Array.prototype.map.call(collection, fn);
   }
@@ -42,8 +37,7 @@ function map (collection, fn) {
   return mapped;
 }
 
-
-function find (collection, fn) {
+function find(collection, fn) {
   for (const [k, v] of enumerate(collection)) {
     const r = fn(v, k, collection);
     if (r !== none) {
@@ -53,10 +47,9 @@ function find (collection, fn) {
   return [none, none, none];
 }
 
-
-function * enumerate (collection) {
+function* enumerate(collection) {
   if (isArrayLike(collection)) {
-    yield * Array.prototype.entries.call(collection);
+    yield* Array.prototype.entries.call(collection);
     return;
   }
   const keys = Object.getOwnPropertyNames(collection);
@@ -65,20 +58,17 @@ function * enumerate (collection) {
   }
 }
 
-
-function isArrayLike (collection) {
+function isArrayLike(collection) {
   return Array.isArray(collection) || isNodeList(collection);
 }
 
-
-function isNodeList (collection) {
-  return collection.constructor.name === 'NodeList';
+function isNodeList(collection) {
+  return collection.constructor.name === "NodeList";
 }
 
-
-function partial (fn, ...args) {
-  if (typeof fn !== 'function') {
-    throw new AdsBypasserError('must give a function');
+function partial(fn, ...args) {
+  if (typeof fn !== "function") {
+    throw new AdsBypasserError("must give a function");
   }
   // NOTE need to preserve *this* context?
   return (...innerArgs) => {
@@ -86,27 +76,21 @@ function partial (fn, ...args) {
   };
 }
 
-
-function isString (value) {
-  return (typeof value === 'string') || (value instanceof String);
+function isString(value) {
+  return typeof value === "string" || value instanceof String;
 }
 
-
-function nop () {
-}
-
+function nop() {}
 
 const none = nop;
 
-
-function wait (msDelay) {
+function wait(msDelay) {
   return new Promise((resolve) => {
     setTimeout(resolve, msDelay);
   });
 }
 
-
-function tryEvery (msInterval, fn) {
+function tryEvery(msInterval, fn) {
   return new Promise((resolve) => {
     const handle = setInterval(function () {
       const result = fn();
@@ -117,7 +101,6 @@ function tryEvery (msInterval, fn) {
     }, msInterval);
   });
 }
-
 
 export {
   AdsBypasserError,

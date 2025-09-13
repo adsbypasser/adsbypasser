@@ -1,10 +1,10 @@
 _.register({
   rule: {
     host: /^www\.ryuugames\.com$/,
-    query: /^\?eroge=/
+    query: /^\?eroge=/,
   },
-  async ready () {
-    const ma = $('#wpsafe-link a');
+  async ready() {
+    const ma = $("#wpsafe-link a");
     await $.openLink(ma.href);
   },
 });

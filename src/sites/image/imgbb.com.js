@@ -1,11 +1,8 @@
 _.register({
   rule: {
-    host: [
-      /^imgbb\.com$/,
-      /^ibb\.co$/,
-    ],
+    host: [/^imgbb\.com$/, /^ibb\.co$/],
   },
-  async ready () {
+  async ready() {
     const img = $('meta[property="og:image"]');
     await $.openImage(img.content);
   },

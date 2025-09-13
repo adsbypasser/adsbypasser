@@ -2,8 +2,8 @@ _.register({
   rule: {
     host: /^fastpic\.org$/,
   },
-  async ready () {
-    const a = $.$('#imglink');
+  async ready() {
+    const a = $.$("#imglink");
     if (a) {
       await $.openLink(a.href);
       return;

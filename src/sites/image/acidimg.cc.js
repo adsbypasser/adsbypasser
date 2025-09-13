@@ -1,21 +1,18 @@
 _.register({
   rule: {
-    host: [
-      /^acidimg\.cc$/,
-      /^imx\.to$/,
-    ],
+    host: [/^acidimg\.cc$/, /^imx\.to$/],
   },
-  async ready () {
-    let a = $.$('#continuebutton, .button');
+  async ready() {
+    let a = $.$("#continuebutton, .button");
     if (a) {
       a.click();
     } else {
-      a = $.$('#imgContinue, .button');
+      a = $.$("#imgContinue, .button");
       if (a) {
         a.click();
       }
     }
-    a = $('.centred');
+    a = $(".centred");
     await $.openImage(a.src);
   },
 });

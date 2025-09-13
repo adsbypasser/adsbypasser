@@ -7,14 +7,14 @@ _.register({
       /^www\.fappic\.com$/,
     ],
   },
-  async ready () {
-    const i = $.$('img.pic');
+  async ready() {
+    const i = $.$("img.pic");
     if (i) {
       await $.openImage(i.src);
       return;
     }
 
-    const f = $('form');
+    const f = $("form");
     f.submit();
   },
 });

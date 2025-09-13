@@ -2,9 +2,9 @@ _.register({
   rule: {
     host: /^xpshort\.com$/,
   },
-  async ready () {
+  async ready() {
     await _.wait(8000);
-    const a = $('.btn-success.btn-lg.get-link');
+    const a = $(".btn-success.btn-lg.get-link");
     a.click();
   },
 });

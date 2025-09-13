@@ -3,7 +3,7 @@ _.register({
     host: /^www\.hostpic\.org$/,
   },
   async ready() {
-    const i = $('#photo');
+    const i = $("#photo");
     await $.openImage(i.src);
   },
 });

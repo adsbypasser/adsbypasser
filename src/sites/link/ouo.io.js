@@ -3,7 +3,7 @@ _.register({
     host: /^(www\.)?ouo\.(io|press)$/,
     path: /(^\/\w+$|^\/go\/\w+$)/,
   },
-  async ready () {
-    $('form').submit();
+  async ready() {
+    $("form").submit();
   },
 });

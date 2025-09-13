@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: /^techgeek\.digital$/,
   },
-  async ready () {
+  async ready() {
     const b = $('[class="btn-main get-link"]');
     if (b) {
       b.click();

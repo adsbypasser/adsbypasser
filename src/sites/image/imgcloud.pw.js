@@ -12,7 +12,7 @@ _.register({
     ],
     path: /^\/(image|i)\/.*/,
   },
-  async ready () {
+  async ready() {
     const l = $('link[rel="image_src"]');
     await $.openImage(l.href);
   },

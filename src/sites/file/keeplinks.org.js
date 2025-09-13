@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: /^(www\.)?keeplinks\.org$/,
   },
-  async ready () {
+  async ready() {
     const button = $('[id="btnproceedsubmit"]');
     button.click();
   },

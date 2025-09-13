@@ -2,9 +2,9 @@ _.register({
   rule: {
     host: /^urlbluemedia\.shop$/,
   },
-  async ready () {
+  async ready() {
     await _.wait(7000);
-    const a = $('input#nut');
+    const a = $("input#nut");
     a.click();
   },
 });

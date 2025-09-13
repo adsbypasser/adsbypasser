@@ -4,7 +4,7 @@ _.register({
     path: /^\/interstitial\.html$/,
     query: /(?:\?|&)oldurl=([^&]+)(?:$|&)/,
   },
-  async start (m) {
+  async start(m) {
     await $.openLink(m.query[1]);
   },
 });

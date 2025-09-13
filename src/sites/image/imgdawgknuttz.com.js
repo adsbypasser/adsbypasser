@@ -2,13 +2,13 @@ _.register({
   rule: {
     host: /^imgdawgknuttz\.com$/,
   },
-  async ready () {
+  async ready() {
     await _.wait(1000);
-    let a = $.$('.button');
+    let a = $.$(".button");
     if (a) {
       a.click();
     }
-    a = $('.centred');
+    a = $(".centred");
     await $.openImage(a.src);
   },
 });

@@ -3,8 +3,8 @@ _.register({
     host: /^imageshack\.com$/,
     path: /^\/i\//,
   },
-  async ready () {
-    const i = $('#lp-image');
+  async ready() {
+    const i = $("#lp-image");
     await $.openImage(i.src);
   },
 });

@@ -5,9 +5,9 @@ _.register({
       /^(www\.)?(imgtaxi|imgwallet|imgadult)\.com$/,
     ],
   },
-  async ready () {
+  async ready() {
     let m = $('meta[property="og:image"]');
-    m = m.content.replace('small', 'big');
+    m = m.content.replace("small", "big");
     await $.openImage(m);
   },
 });

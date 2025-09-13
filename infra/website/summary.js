@@ -1,29 +1,30 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
-import _ from 'lodash';
-import { marked }  from 'marked';
+import _ from "lodash";
+import { marked } from "marked";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CHANGELOG_PATH = toAbsolutePath('../../CHANGELOG.md');
-const SITES_PATH = toAbsolutePath('../../SITES.md');
-const TEMPLATE_PATH = toAbsolutePath('./summary.template.md');
+const CHANGELOG_PATH = toAbsolutePath("../../CHANGELOG.md");
+const SITES_PATH = toAbsolutePath("../../SITES.md");
+const TEMPLATE_PATH = toAbsolutePath("./summary.template.md");
 const MESSAGE_GHPAGES = `**Lite edition** removes image-hosting site support from **Full edition**.
 If you prefer to use other userscripts to deal with image-hosting sites, you can use the Lite edition.
 `;
-const MESSAGE_FULL = 'If you do not need image-hosting site support, please see [Lite edition]({url}).';
-const MESSAGE_LITE = 'Lite edition does not support image-hosting sites. If you want full-featured edition, please see [here]({url}).';
+const MESSAGE_FULL =
+  "If you do not need image-hosting site support, please see [Lite edition]({url}).";
+const MESSAGE_LITE =
+  "Lite edition does not support image-hosting sites. If you want full-featured edition, please see [here]({url}).";
 
-
-function getSummaryForGitHubPages () {
+function getSummaryForGitHubPages() {
   const changeLog = parseChangeLog();
   const sites = parseSites();
 
   let data = fs.readFileSync(TEMPLATE_PATH, {
-    encoding: 'utf-8',
+    encoding: "utf-8",
   });
   data = _.template(data);
   data = data({
@@ -37,16 +38,14 @@ function getSummaryForGitHubPages () {
   return data;
 }
 
-
-function toAbsolutePath (path_) {
+function toAbsolutePath(path_) {
   return path.resolve(__dirname, path_);
 }
 
-
 // Find the latest version's change log.
-function parseChangeLog () {
+function parseChangeLog() {
   let data = fs.readFileSync(CHANGELOG_PATH, {
-    encoding: 'utf-8',
+    encoding: "utf-8",
   });
   data = marked.lexer(data);
   const parser = new ChangeLogParser();
@@ -56,29 +55,27 @@ function parseChangeLog () {
   return parser.block_text;
 }
 
-
 class ChangeLogParser {
-
-  constructor () {
+  constructor() {
     this._first_block_ended = false;
-    this._block_text = '';
+    this._block_text = "";
     this._list_level = 0;
   }
 
-  feed (node) {
+  feed(node) {
     if (this._first_block_ended) {
       return;
     }
 
-    if (node.type === 'heading') {
-      const m = '#'.repeat(node.depth);
+    if (node.type === "heading") {
+      const m = "#".repeat(node.depth);
       this._block_text += `${m} ${node.text}\n\n`;
-    } else if (node.type === 'list') {
+    } else if (node.type === "list") {
       this._list_level += 1;
       if (node.items && node.items.length > 0) {
         for (const item of node.items) {
-          if (item.type === 'list_item') {
-            const i = ' '.repeat(4 * (this._list_level - 1));
+          if (item.type === "list_item") {
+            const i = " ".repeat(4 * (this._list_level - 1));
             this._block_text += `${i}* ${item.text}\n`;
           }
         }
@@ -87,17 +84,15 @@ class ChangeLogParser {
     }
   }
 
-  get block_text () {
+  get block_text() {
     return this._block_text;
   }
-
 }
 
-
 // Find sites groups, and counts total supported sites.
-function parseSites () {
+function parseSites() {
   let data = fs.readFileSync(SITES_PATH, {
-    encoding: 'utf-8',
+    encoding: "utf-8",
   });
   data = marked.lexer(data);
   const parser = new SitesParser();
@@ -110,23 +105,21 @@ function parseSites () {
   };
 }
 
-
 class SitesParser {
-
-  constructor () {
+  constructor() {
     this._list_level = 0;
-    this._groups = '';
+    this._groups = "";
     this._sites = 0;
   }
 
-  feed (node) {
-    if (node.type === 'list') {
+  feed(node) {
+    if (node.type === "list") {
       this._list_level += 1;
       if (node.items && node.items.length > 0) {
         for (const item of node.items) {
-          if (item.type === 'list_item') {
+          if (item.type === "list_item") {
             if (this._list_level === 1) {
-              if (item.text !== 'else') {
+              if (item.text !== "else") {
                 this._groups += `* ${item.text}\n`;
               }
             } else if (this._list_level === 2) {
@@ -138,16 +131,13 @@ class SitesParser {
     }
   }
 
-  get groups () {
+  get groups() {
     return this._groups;
   }
 
-  get sites () {
+  get sites() {
     return this._sites;
   }
-
 }
 
-export {
-  getSummaryForGitHubPages,
-};
+export { getSummaryForGitHubPages };

@@ -1,21 +1,20 @@
 window.render = null;
-window.commit = function commit () {};
+window.commit = function commit() {};
 (function () {
-  'use strict';
+  "use strict";
 
   var view = {
-    panel: $('#panel'),
-    options: $('#options'),
-    save: $('#save'),
-    msg: $('#msg'),
-    installHint: $('#install-hint'),
+    panel: $("#panel"),
+    options: $("#options"),
+    save: $("#save"),
+    msg: $("#msg"),
+    installHint: $("#install-hint"),
   };
   var template = {
-    checkbox: _.template($('#template-checkbox').text()),
-    select: _.template($('#template-select').text()),
+    checkbox: _.template($("#template-checkbox").text()),
+    select: _.template($("#template-select").text()),
   };
   var factory = {
-
     checkbox: function (key, data) {
       var html = template.checkbox({
         key: key,
@@ -36,14 +35,12 @@ window.commit = function commit () {};
       });
       return $.parseHTML(html);
     },
-
   };
-
 
   window.render = function (data) {
     clearTimeout(detection);
 
-    view.msg.addClass('animated');
+    view.msg.addClass("animated");
 
     _.each(data.options, function (v, k) {
       var createUI = factory[v.type];
@@ -56,13 +53,13 @@ window.commit = function commit () {};
       view.options.append(d);
     });
 
-    view.panel.css('display', 'block');
+    view.panel.css("display", "block");
 
-    view.msg.on('transitionend webkitTransitionEnd', function () {
-      view.msg.removeClass('dismissed');
+    view.msg.on("transitionend webkitTransitionEnd", function () {
+      view.msg.removeClass("dismissed");
     });
 
-    view.save.on('click', function (event) {
+    view.save.on("click", function (event) {
       event.preventDefault();
 
       var data = {};
@@ -72,7 +69,7 @@ window.commit = function commit () {};
         data[v.name] = v.checked;
       });
       // select
-      view.options.find('select').each(function (k, v) {
+      view.options.find("select").each(function (k, v) {
         // TODO not always integer
         data[v.name] = parseInt(v.value, 10);
       });
@@ -81,17 +78,15 @@ window.commit = function commit () {};
       // TODO this returns a promise.
       commit(data);
 
-      view.msg.addClass('dismissed');
+      view.msg.addClass("dismissed");
     });
   };
 
-
   var detection = setTimeout(function () {
-    view.installHint.addClass('animated');
+    view.installHint.addClass("animated");
     view.installHint.css({
-      'opacity': 1,
-      'display': 'block',
+      opacity: 1,
+      display: "block",
     });
   }, 1000);
-
 })();

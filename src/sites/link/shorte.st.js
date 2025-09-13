@@ -1,5 +1,4 @@
 (function () {
-
   const hostRules = [
     /^(cllkme|clkmein|corneey|ceesty)\.com$/,
     /^(destyy|festyy|gestyy)\.com$/,
@@ -12,8 +11,8 @@
       host: hostRules,
       path: /^\/[\d\w]+/,
     },
-    async ready () {
-      $.remove('iframe');
+    async ready() {
+      $.remove("iframe");
       $.removeAllTimer();
 
       const m = $.searchFromScripts(/sessionId: "([\d\w]+)",/);
@@ -38,7 +37,7 @@
     },
   });
 
-  function afterGotSessionId (sessionId) {
+  function afterGotSessionId(sessionId) {
     const X_NewRelic_ID = $.searchFromScripts(/xpid:"([^"]+)"/);
 
     const data = {
@@ -46,17 +45,17 @@
     };
 
     const header = {
-      Accept: 'application/json, text/javascript',
+      Accept: "application/json, text/javascript",
     };
 
     if (X_NewRelic_ID) {
-      header['X-NewRelic-ID'] = X_NewRelic_ID;
+      header["X-NewRelic-ID"] = X_NewRelic_ID;
     }
 
     const i = setInterval(function () {
-      $.get('/shortest-url/end-adsession', data, header).then(function (text) {
+      $.get("/shortest-url/end-adsession", data, header).then(function (text) {
         const r = JSON.parse(text);
-        if (r.status == 'ok' && r.destinationUrl) {
+        if (r.status == "ok" && r.destinationUrl) {
           clearInterval(i);
           $.removeAllTimer();
           const url = decodeURIComponent(r.destinationUrl);

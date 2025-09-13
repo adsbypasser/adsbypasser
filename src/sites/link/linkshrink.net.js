@@ -3,12 +3,12 @@ _.register({
     host: /^linkshrink\.net$/,
     path: /^\/[a-zA-Z0-9]+$/,
   },
-  async start () {
+  async start() {
     $.window._impspcabe = 0;
   },
-  async ready () {
+  async ready() {
     let l = $.searchFromScripts(/revC\("([^"]+)"\)/);
     l = atob(l[1]);
-    await $.openLink('/' + l);
+    await $.openLink("/" + l);
   },
 });

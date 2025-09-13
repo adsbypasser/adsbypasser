@@ -7,7 +7,7 @@ _.register({
       /^xxxs\.org$/,
     ],
   },
-  async ready () {
+  async ready() {
     if ($.window && $.window.linkDestUrl) {
       await $.openLink($.window.linkDestUrl);
       return;

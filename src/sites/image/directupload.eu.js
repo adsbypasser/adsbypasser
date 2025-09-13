@@ -2,7 +2,7 @@ _.register({
   rule: {
     host: /^www\.directupload\.eu$/,
   },
-  async ready () {
+  async ready() {
     const i = $('meta[property="og:image"]');
     await $.openImage(i.content);
   },

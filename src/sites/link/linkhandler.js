@@ -1,5 +1,4 @@
 (function () {
-
   _.register({
     rule: {
       host: [
@@ -31,48 +30,46 @@
         /^thotpacks\.xyz$/,
       ],
     },
-    async ready () {
+    async ready() {
       const handler = new RecaptchaHandler();
       await handler.call();
     },
   });
 
-
   class AbstractHandler {
-
-    constructor () {
+    constructor() {
       this._overlaySelector = [
         '[class$="Overlay"]',
-        '#__random_class_name__',
-        '#headlineatas',
-        '#myModal',
-        '.opacity_wrapper',
-        '#overlay',
-      ].join(', ');
+        "#__random_class_name__",
+        "#headlineatas",
+        "#myModal",
+        ".opacity_wrapper",
+        "#overlay",
+      ].join(", ");
 
       // TODO extract to paramater
       this._formSelector = [
-        '#go-link',
-        '.go-link',
-        '#originalLink.get-link',
+        "#go-link",
+        ".go-link",
+        "#originalLink.get-link",
         'form[action="/links/go"]',
-      ].join(', ');
+      ].join(", ");
     }
 
-    removeOverlay () {
+    removeOverlay() {
       $.remove(this._overlaySelector);
       $.block(this._overlaySelector, document.body);
 
       setInterval(() => {
-        document.body.style.overflow = 'initial';
+        document.body.style.overflow = "initial";
       }, 500);
     }
 
-    removeFrame () {
-      $.remove('iframe');
+    removeFrame() {
+      $.remove("iframe");
     }
 
-    async call () {
+    async call() {
       const ok = await this.prepare();
       if (!ok) {
         return;
@@ -87,30 +84,27 @@
       const url = await this.getURL(mw);
       await $.openLink(url);
     }
-
   }
 
-
   class RecaptchaHandler extends AbstractHandler {
-
-    async prepare () {
+    async prepare() {
       this.removeOverlay();
 
-      const f = $.$('#captchaShortlink, div.g-recaptcha');
+      const f = $.$("#captchaShortlink, div.g-recaptcha");
       if (!f) {
         return true;
       }
-      _.info('recaptcha detected, stop');
+      _.info("recaptcha detected, stop");
 
       // press the button after recaptcha
-      _.info('trying to listen submit button');
-      const b = $.$('#invisibleCaptchaShortlink');
+      _.info("trying to listen submit button");
+      const b = $.$("#invisibleCaptchaShortlink");
       if (!b) {
         return false;
       }
     }
 
-    async submitListen (b) {
+    async submitListen(b) {
       const o = new MutationObserver(() => {
         if (!b.disabled) {
           b.click();
@@ -121,17 +115,17 @@
       });
     }
 
-    async getMiddleware () {
+    async getMiddleware() {
       return await getJQueryForm(this._formSelector);
     }
 
-    withoutMiddleware () {
+    withoutMiddleware() {
       // Not sure if this is still needed.
-      const f = $('#link-view');
+      const f = $("#link-view");
       f.submit();
     }
 
-    async getURL (jForm) {
+    async getURL(jForm) {
       while (true) {
         await _.wait(1000);
         try {
@@ -144,11 +138,9 @@
         }
       }
     }
-
   }
 
-
-  async function getJQueryForm (selector) {
+  async function getJQueryForm(selector) {
     let jQuery = $.window.$;
     while (!jQuery) {
       await _.wait(50);
@@ -161,17 +153,17 @@
     return null;
   }
 
-  function getURLFromJQueryForm (jForm) {
+  function getURLFromJQueryForm(jForm) {
     return new Promise((resolve, reject) => {
-      if (jForm.is('a') && jForm.attr('href')) {
-        resolve(jForm.attr('href'));
+      if (jForm.is("a") && jForm.attr("href")) {
+        resolve(jForm.attr("href"));
       }
 
       const jQuery = $.window.$;
       jQuery.ajax({
-        dataType: 'json',
-        type: 'POST',
-        url: jForm.attr('action'),
+        dataType: "json",
+        type: "POST",
+        url: jForm.attr("action"),
         data: jForm.serialize(),
         success: (result) => {
           if (result.url) {
@@ -182,10 +174,9 @@
         },
         error: (xhr, status, error) => {
           _.warn(xhr, status, error);
-          reject(new _.AdsBypasserError('request error'));
+          reject(new _.AdsBypasserError("request error"));
         },
       });
     });
   }
-
 })();

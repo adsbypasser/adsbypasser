@@ -3,9 +3,8 @@ _.register({
     host: /^imgspice\.com$/,
   },
 
-  async ready () {
-    const o = $('#imgpreview.pic');
+  async ready() {
+    const o = $("#imgpreview.pic");
     await $.openImage(o.src);
-  }
-
+  },
 });

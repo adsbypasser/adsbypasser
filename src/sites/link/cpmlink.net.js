@@ -1,9 +1,9 @@
 _.register({
-  rule:{
+  rule: {
     host: /^cpmlink\.net$/,
   },
-  async ready () {
-    const a = $('#btn-main');
+  async ready() {
+    const a = $("#btn-main");
     await $.openLink(a.href);
   },
 });

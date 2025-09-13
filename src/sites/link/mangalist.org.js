@@ -2,9 +2,9 @@ _.register({
   rule: {
     host: /^mangalist\.org$/,
   },
-  async ready () {
+  async ready() {
     await _.wait(1000);
-    const b = $('.btn-primary.url.text-center');
+    const b = $(".btn-primary.url.text-center");
     b.click();
   },
 });

@@ -1,10 +1,10 @@
 _.register({
   rule: {
     host: /^otomi-games\.com$/,
-    path: /^\/go\//
+    path: /^\/go\//,
   },
-  async ready () {
-    const ma = $('#wpsafe-link a');
+  async ready() {
+    const ma = $("#wpsafe-link a");
     await $.openLink(ma.href);
   },
 });

@@ -2,9 +2,9 @@ _.register({
   rule: {
     host: /^bcvc\.ink$/,
   },
-  async ready () {
+  async ready() {
     await _.wait(5000);
-    const b = $('#getLink');
+    const b = $("#getLink");
     b.click();
   },
 });

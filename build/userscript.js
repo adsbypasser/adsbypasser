@@ -1,5 +1,5 @@
-import _ from 'lodash';
-import gulp from 'gulp';
+import _ from "lodash";
+import gulp from "gulp";
 
 import {
   createNamedTask,
@@ -11,11 +11,10 @@ import {
   plugins,
   removeEmptyLines,
   source,
-} from './lib.js';
-
+} from "./lib.js";
 
 // generate userscripts for all configurations
-export function createUserscriptTasks () {
+export function createUserscriptTasks() {
   const tasks = [];
 
   for (const [supportImage] of imageBuildOptions()) {
@@ -60,95 +59,91 @@ export function createUserscriptTasks () {
   return gulp.parallel(...tasks);
 }
 
-
 // combine meta and body to userscript
-function linkFiles (supportImage) {
+function linkFiles(supportImage) {
   const featureName = getFeatureName(supportImage);
 
-  return gulp.src([
-    output.to(`adsbypasser.${featureName}.meta.js`),
-    output.to(`body/${featureName}.js`),
-  ])
+  return gulp
+    .src([
+      output.to(`adsbypasser.${featureName}.meta.js`),
+      output.to(`body/${featureName}.js`),
+    ])
     .pipe(plugins.concat(`adsbypasser.${featureName}.user.js`))
-    .pipe(gulp.dest(output.path));;
+    .pipe(gulp.dest(output.path));
 }
 
-
 // generate meta.js
-function makeMeta (supportImage) {
+function makeMeta(supportImage) {
   const featureName = getFeatureName(supportImage);
 
-  return gulp.src(source.to('infra/userscript/metadata.template.js'))
+  return gulp
+    .src(source.to("infra/userscript/metadata.template.js"))
     .pipe(plugins.change(_.partial(finalizeMetadata, supportImage)))
     .pipe(plugins.rename(`adsbypasser.${featureName}.meta.js`))
     .pipe(removeEmptyLines())
     .pipe(gulp.dest(output.path));
 }
 
-
 // generate body script
-function makeBody (supportImage) {
+function makeBody(supportImage) {
   const featureName = getFeatureName(supportImage);
   const namespacePath = output.to(`namespace/${featureName}.js`);
   const handlersPath = output.to(`handlers/${featureName}.js`);
 
-  return gulp.src(source.to('src/util/main.js'))
-    .pipe(plugins.webpack({
-      resolve: {
-        alias: {
-          '__ADSBYPASSER_NAMESPACE__': namespacePath,
-          '__ADSBYPASSER_HANDLERS__': handlersPath,
-        },
-        modules: [
-          source.to('src'),
-          'node_modules',
-        ],
-        extensions: ['.js', '.json'],
-        fullySpecified: false,
-      },
-      module: {
-        rules: [
-          {
-            test: /\.js$/,
-            resolve: {
-              fullySpecified: false,
-            },
+  return gulp
+    .src(source.to("src/util/main.js"))
+    .pipe(
+      plugins.webpack({
+        resolve: {
+          alias: {
+            __ADSBYPASSER_NAMESPACE__: namespacePath,
+            __ADSBYPASSER_HANDLERS__: handlersPath,
           },
-        ],
-      },
-    }))
+          modules: [source.to("src"), "node_modules"],
+          extensions: [".js", ".json"],
+          fullySpecified: false,
+        },
+        module: {
+          rules: [
+            {
+              test: /\.js$/,
+              resolve: {
+                fullySpecified: false,
+              },
+            },
+          ],
+        },
+      }),
+    )
     .pipe(plugins.stripComments())
     .pipe(removeEmptyLines())
     .pipe(plugins.rename(`${featureName}.js`))
-    .pipe(gulp.dest(output.to('body')));
+    .pipe(gulp.dest(output.to("body")));
 }
-
 
 // combine handlers
-function makeHandlers (supportImage) {
+function makeHandlers(supportImage) {
   const featureName = getFeatureName(supportImage);
-  const namespaceScript = 'import { _, $ } from \'__ADSBYPASSER_NAMESPACE__\';\n';
+  const namespaceScript = "import { _, $ } from '__ADSBYPASSER_NAMESPACE__';\n";
 
-  const handlers = [
-    'src/sites/file/*.js',
-    'src/sites/link/*.js',
-  ];
+  const handlers = ["src/sites/file/*.js", "src/sites/link/*.js"];
   if (supportImage) {
-    handlers.push('src/sites/image/*.js');
+    handlers.push("src/sites/image/*.js");
   }
-  return gulp.src(handlers.map(source.to.bind(source)))
+  return gulp
+    .src(handlers.map(source.to.bind(source)))
     .pipe(plugins.concat(`${featureName}.js`))
     .pipe(plugins.injectString.prepend(namespaceScript))
-    .pipe(gulp.dest(output.to('handlers')));
+    .pipe(gulp.dest(output.to("handlers")));
 }
 
-
 // generate namespace
-function makeNamespace (supportImage) {
+function makeNamespace(supportImage) {
   const featureName = getFeatureName(supportImage);
 
-  return gulp.src(source.to('infra/userscript/namespace.template.js'))
+  return gulp
+    .src(source.to("infra/userscript/namespace.template.js"))
     .pipe(plugins.change(_.partial(finalizeNamespace, supportImage)))
     .pipe(plugins.rename(`${featureName}.js`))
-    .pipe(gulp.dest(output.to('namespace')));
+    .pipe(gulp.dest(output.to("namespace")));
 }

@@ -3,8 +3,8 @@ _.register({
     host: /^picstate\.com$/,
     path: /^\/view\/full\/.*/,
   },
-  async ready () {
-    const i = $('#image_container a img');
+  async ready() {
+    const i = $("#image_container a img");
     await $.openImage(i.src);
   },
 });

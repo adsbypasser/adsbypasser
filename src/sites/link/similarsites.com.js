@@ -1,12 +1,12 @@
 _.register({
   rule: {
     host: /^(www\.)?similarsites\.com$/,
-    path: /^\/goto\/([^?]+)/
+    path: /^\/goto\/([^?]+)/,
   },
-  async start (m) {
+  async start(m) {
     let l = m.path[1];
     if (!/^https?:\/\//.test(l)) {
-      l = 'http://' + l;
+      l = "http://" + l;
     }
     await $.openLink(l);
   },

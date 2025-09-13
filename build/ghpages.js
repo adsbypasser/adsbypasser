@@ -1,13 +1,11 @@
-import childProcess from 'child_process';
-import fs from 'fs';
-import util from 'util';
+import childProcess from "child_process";
+import fs from "fs";
+import util from "util";
 
-import _ from 'lodash';
-import gulp from 'gulp';
+import _ from "lodash";
+import gulp from "gulp";
 
-import {
-  getSummaryForGitHubPages,
-} from '../infra/website/summary.js';
+import { getSummaryForGitHubPages } from "../infra/website/summary.js";
 import {
   allBuildOptions,
   finalizeHTML,
@@ -15,13 +13,11 @@ import {
   output,
   plugins,
   source,
-} from './lib.js';
+} from "./lib.js";
 
+const ghpagesRepoURL = "git@github.com:adsbypasser/adsbypasser.github.io.git";
 
-const ghpagesRepoURL = 'git@github.com:adsbypasser/adsbypasser.github.io.git';
-
-
-export function createGhpagesTasks (userscriptTask) {
+export function createGhpagesTasks(userscriptTask) {
   const copyReleasesTask = gulp.series(userscriptTask, copyReleases);
   const ghpagesTasks = gulp.parallel(
     makeHtml,
@@ -32,13 +28,12 @@ export function createGhpagesTasks (userscriptTask) {
   return gulp.series(clone, ghpagesTasks);
 }
 
-
-function makeHtml () {
+function makeHtml() {
   const options = {
     summary: getSummaryForGitHubPages(),
     urls: {
-      full: 'adsbypasser.full.user.js',
-      lite: 'adsbypasser.lite.user.js',
+      full: "adsbypasser.full.user.js",
+      lite: "adsbypasser.lite.user.js",
     },
   };
   for (const [supportImage] of allBuildOptions()) {
@@ -46,43 +41,41 @@ function makeHtml () {
     const js = `adsbypasser.${featureName}.user.js`;
     options.urls[featureName] = js;
   }
-  const outPath = output.to('ghpages');
+  const outPath = output.to("ghpages");
 
-  return gulp.src([
-    source.to('infra/ghpages/index.template.html'),
-  ])
+  return gulp
+    .src([source.to("infra/ghpages/index.template.html")])
     .pipe(plugins.change(_.partial(finalizeHTML, options)))
-    .pipe(plugins.rename((path_) => {
-      path_.basename = path_.basename.replace('.template', '');
-    }))
+    .pipe(
+      plugins.rename((path_) => {
+        path_.basename = path_.basename.replace(".template", "");
+      }),
+    )
     .pipe(gulp.dest(outPath));
 }
-makeHtml.displayName = 'ghpages:html';
+makeHtml.displayName = "ghpages:html";
 
-
-function makeLess () {
-  return gulp.src([
-    source.to('infra/ghpages/**/*.less'),
-  ])
+function makeLess() {
+  return gulp
+    .src([source.to("infra/ghpages/**/*.less")])
     .pipe(plugins.less({}))
-    .pipe(gulp.dest(output.to('ghpages')));
+    .pipe(gulp.dest(output.to("ghpages")));
 }
-makeLess.displayName = 'ghpages:less';
+makeLess.displayName = "ghpages:less";
 
-
-function copyFiles () {
+function copyFiles() {
   const files = [
-    'infra/ghpages/**/*.css',
-    'infra/ghpages/**/*.js',
-    'infra/ghpages/configure.html',
+    "infra/ghpages/**/*.css",
+    "infra/ghpages/**/*.js",
+    "infra/ghpages/configure.html",
   ];
-  return gulp.src(files.map(source.to.bind(source)))
-    .pipe(gulp.dest(output.to('ghpages')));
+  return gulp
+    .src(files.map(source.to.bind(source)))
+    .pipe(gulp.dest(output.to("ghpages")));
 }
-copyFiles.displayName = 'ghpages:copy:files';
+copyFiles.displayName = "ghpages:copy:files";
 
-
-function copyReleases () {
+function copyReleases() {
   const files = [];
   for (const [supportImage] of allBuildOptions()) {
     const featureName = getFeatureName(supportImage);
@@ -91,14 +84,12 @@ function copyReleases () {
     js = output.to(`adsbypasser.${featureName}.meta.js`);
     files.push(js);
   }
-  return gulp.src(files)
-    .pipe(gulp.dest(output.to('ghpages/releases')));
+  return gulp.src(files).pipe(gulp.dest(output.to("ghpages/releases")));
 }
-copyReleases.displayName = 'ghpages:copy:releases';
+copyReleases.displayName = "ghpages:copy:releases";
 
-
-async function clone () {
-  const repoPath = output.to('ghpages');
+async function clone() {
+  const repoPath = output.to("ghpages");
 
   const stat = util.promisify(fs.stat);
   try {
@@ -111,16 +102,16 @@ async function clone () {
   }
 
   const cloneTask = new Promise((resolve, reject) => {
-    const p = childProcess.spawn('git', [
-      'clone',
+    const p = childProcess.spawn("git", [
+      "clone",
       ghpagesRepoURL,
-      '-b',
-      'master',
+      "-b",
+      "master",
       repoPath,
     ]);
-    p.on('exit', (code) => {
+    p.on("exit", (code) => {
       if (code !== 0) {
-        reject(new Error('process error'));
+        reject(new Error("process error"));
       }
       resolve();
     });
@@ -128,4 +119,4 @@ async function clone () {
 
   return await cloneTask;
 }
-clone.displayName = 'ghpages:clone';
+clone.displayName = "ghpages:clone";

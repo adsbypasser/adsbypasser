@@ -7,19 +7,16 @@ import {
   isString,
   map,
   every,
-} from 'util/core.js';
-
+} from "util/core.js";
 
 const patterns = [];
 
-
-function register (pattern) {
+function register(pattern) {
   patterns.push(pattern);
 }
 
-
 // TODO support String for each part?
-function dispatchByObject (rule, url_6) {
+function dispatchByObject(rule, url_6) {
   const matched = map(rule, (pattern, part) => {
     if (pattern instanceof RegExp) {
       return url_6[part].match(pattern);
@@ -32,7 +29,7 @@ function dispatchByObject (rule, url_6) {
       });
       return r !== none ? r : null;
     }
-    throw new AdsBypasserError('invalid rule');
+    throw new AdsBypasserError("invalid rule");
   });
 
   const passed = every(matched, (v) => {
@@ -42,13 +39,11 @@ function dispatchByObject (rule, url_6) {
   return passed ? matched : null;
 }
 
-
-function dispatchByRegExp (rule, url_1) {
+function dispatchByRegExp(rule, url_1) {
   return url_1.match(rule);
 }
 
-
-function dispatchByArray (rules, url_1, url_3, url_6) {
+function dispatchByArray(rules, url_1, url_3, url_6) {
   const [, , r] = find(rules, (rule) => {
     const m = dispatch(rule, url_1, url_3, url_6);
     return m ? m : none;
@@ -56,8 +51,7 @@ function dispatchByArray (rules, url_1, url_3, url_6) {
   return r !== none ? r : null;
 }
 
-
-function dispatchByString (rule, url_3) {
+function dispatchByString(rule, url_3) {
   // <scheme> := '*' | 'http' | 'https' | 'file' | 'ftp' | 'chrome-extension'
   let scheme = /\*|https?|file|ftp|chrome-extension/;
   // <host> := '*' | '*.' <any char except '/' and '*'>+
@@ -79,14 +73,14 @@ function dispatchByString (rule, url_3) {
   const sd = matched[4];
   path = matched[5];
 
-  if (scheme === '*' && !/https?/.test(url_3.scheme)) {
+  if (scheme === "*" && !/https?/.test(url_3.scheme)) {
     return null;
   }
   if (scheme !== url_3.scheme) {
     return null;
   }
 
-  if (scheme !== 'file' && host !== '*') {
+  if (scheme !== "file" && host !== "*") {
     if (wc) {
       up = url_3.host.indexOf(sd);
       if (up < 0 || up + sd.length !== url_3.host.length) {
@@ -98,10 +92,10 @@ function dispatchByString (rule, url_3) {
   }
 
   tmp = path.replace(/[*.[\]?+#]/g, (c) => {
-    if (c === '*') {
-      return '.*';
+    if (c === "*") {
+      return ".*";
     }
-    return '\\' + c;
+    return "\\" + c;
   });
   path = new RegExp(`^${tmp}$`);
   if (!path.test(url_3.path)) {
@@ -111,20 +105,18 @@ function dispatchByString (rule, url_3) {
   return url_3;
 }
 
-
-function dispatchByFunction (rule, url_1, url_3, url_6) {
+function dispatchByFunction(rule, url_1, url_3, url_6) {
   return rule(url_1, url_3, url_6);
 }
 
-
-function dispatch (rule, url_1, url_3, url_6) {
+function dispatch(rule, url_1, url_3, url_6) {
   // recursively dispatching
   if (Array.isArray(rule)) {
     return dispatchByArray(rule, url_1, url_3, url_6);
   }
 
   // dispatch by HTML content
-  if (typeof rule === 'function') {
+  if (typeof rule === "function") {
     return dispatchByFunction(rule, url_1, url_3, url_6);
   }
 
@@ -138,14 +130,14 @@ function dispatch (rule, url_1, url_3, url_6) {
   return dispatchByObject(rule, url_6);
 }
 
-
-function findHandler () {
+function findHandler() {
   const url_1 = window.location.toString();
   // <scheme>://<host><path>
   const url_3 = {
     scheme: window.location.protocol.slice(0, -1),
     host: window.location.host,
-    path: window.location.pathname + window.location.search + window.location.hash,
+    path:
+      window.location.pathname + window.location.search + window.location.hash,
   };
   // <scheme>//<host>:<port><path><query><hash>
   const url_6 = {
@@ -177,8 +169,4 @@ function findHandler () {
   };
 }
 
-
-export {
-  register,
-  findHandler,
-};
+export { register, findHandler };

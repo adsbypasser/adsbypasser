@@ -1,15 +1,8 @@
-import {
-  nop,
-} from 'util/core.js';
-import {
-  usw,
-} from 'util/platform.js';
-import {
-  warn,
-} from 'util/logger.js';
+import { nop } from "util/core.js";
+import { usw } from "util/platform.js";
+import { warn } from "util/logger.js";
 
-
-function removeAllTimer () {
+function removeAllTimer() {
   let handle = window.setInterval(nop, 10);
   while (handle > 0) {
     window.clearInterval(handle--);
@@ -20,29 +13,28 @@ function removeAllTimer () {
   }
 }
 
-
-function nuke (url) {
+function nuke(url) {
   try {
-    usw.document.write('nuked by AdsBypasser, leading to ...<br/>');
+    usw.document.write("nuked by AdsBypasser, leading to ...<br/>");
   } catch (e) {
-    warn('nuke failed', e);
+    warn("nuke failed", e);
   }
-  const a = document.createElement('a');
+  const a = document.createElement("a");
   a.href = url;
   a.textContent = url;
   document.body.appendChild(a);
 }
 
-
-function generateRandomIP () {
-  return [0, 0, 0, 0].map(() => {
-    return Math.floor(Math.random() * 256);
-  }).join('.');
+function generateRandomIP() {
+  return [0, 0, 0, 0]
+    .map(() => {
+      return Math.floor(Math.random() * 256);
+    })
+    .join(".");
 }
 
-
 // This is not typo, I mean it. A naive approach though, patch is welcome.
-function evil (script) {
+function evil(script) {
   /* eslint-disable no-unused-vars */
   return ((
     GM,
@@ -62,10 +54,4 @@ function evil (script) {
   /* eslint-enable no-unused-vars */
 }
 
-
-export {
-  removeAllTimer,
-  nuke,
-  generateRandomIP,
-  evil,
-};
+export { removeAllTimer, nuke, generateRandomIP, evil };

@@ -3,9 +3,9 @@ _.register({
     host: /^icerik\.site$/,
     path: /^\/go/,
   },
-  async ready () {
+  async ready() {
     await _.wait(500);
-    const button = $('#get_link_btn');
+    const button = $("#get_link_btn");
     button.click();
   },
 });

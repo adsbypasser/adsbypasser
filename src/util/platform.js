@@ -1,57 +1,54 @@
-import {
-  forEach,
-  nop,
-} from 'util/core.js';
-
+import { forEach, nop } from "util/core.js";
 
 const rawUSW = getUnsafeWindow();
 const usw = getUnsafeWindowProxy();
 const GMAPI = getGreaseMonkeyAPI();
 
-
-function getUnsafeWindow () {
+function getUnsafeWindow() {
   let w = null;
   try {
     w = unsafeWindow;
-  } catch (e) { // eslint-disable-line no-unused-vars
+  } catch (e) {
+    // eslint-disable-line no-unused-vars
     try {
       // eslint-disable-next-line no-eval
-      w = (0, eval)('this').global;
-    } catch (e) { // eslint-disable-line no-unused-vars
+      w = (0, eval)("this").global;
+    } catch (e) {
+      // eslint-disable-line no-unused-vars
     }
   }
   // eslint-disable-next-line no-eval
-  return w ? w : (0, eval)('this').window;
+  return w ? w : (0, eval)("this").window;
 }
 
-function getGreaseMonkeyAPI () {
+function getGreaseMonkeyAPI() {
   // This is not ready for Node.js yet.
   if (rawUSW.global) {
     return null;
   }
   const gm = {};
   // GreaseMonkey 4.0 uses different API.
-  if (typeof GM_openInTab === 'function') {
+  if (typeof GM_openInTab === "function") {
     gm.openInTab = GM_openInTab;
   } else {
     gm.openInTab = GM.openInTab;
   }
   // GreaseMonkey v4.0 changed these functions to async.
-  if (typeof GM_getValue === 'function') {
+  if (typeof GM_getValue === "function") {
     gm.getValue = (name, default_) => {
       return Promise.resolve(GM_getValue(name, default_));
     };
   } else {
     gm.getValue = GM.getValue;
   }
-  if (typeof GM_setValue === 'function') {
+  if (typeof GM_setValue === "function") {
     gm.setValue = (name, value) => {
       return Promise.resolve(GM_setValue(name, value));
     };
   } else {
     gm.setValue = GM.setValue;
   }
-  if (typeof GM_deleteValue === 'function') {
+  if (typeof GM_deleteValue === "function") {
     gm.deleteValue = (name) => {
       return Promise.resolve(GM_deleteValue(name));
     };
@@ -59,52 +56,49 @@ function getGreaseMonkeyAPI () {
     gm.deleteValue = GM.deleteValue;
   }
   // NOTE The capital.
-  if (typeof GM_xmlhttpRequest === 'function') {
+  if (typeof GM_xmlhttpRequest === "function") {
     gm.xmlHttpRequest = GM_xmlhttpRequest;
   } else {
     gm.xmlHttpRequest = GM.xmlHttpRequest;
   }
-  if (typeof GM_registerMenuCommand === 'function') {
+  if (typeof GM_registerMenuCommand === "function") {
     gm.registerMenuCommand = GM_registerMenuCommand;
   } else {
     gm.registerMenuCommand = nop;
   }
   // Lite edition does not use this function.
-  if (typeof GM_getResourceURL === 'function') {
+  if (typeof GM_getResourceURL === "function") {
     gm.getResourceUrl = (resourceName) => {
       return Promise.resolve(GM_getResourceURL(resourceName));
     };
-  } else if (typeof GM === 'object' && GM && GM.getResourceUrl) {
+  } else if (typeof GM === "object" && GM && GM.getResourceUrl) {
     gm.getResourceUrl = GM.getResourceUrl;
   }
   return gm;
 }
 
-
-function getGMInfo () {
-  if (typeof GM_info === 'object' && GM_info) {
+function getGMInfo() {
+  if (typeof GM_info === "object" && GM_info) {
     return GM_info;
-  } else if (typeof GM === 'object' && GM && GM.info) {
+  } else if (typeof GM === "object" && GM && GM.info) {
     return GM.info;
   } else {
     return {};
   }
 }
 
-
 // magic property to get the original object
-const MAGIC_KEY = '__adsbypasser_reverse_proxy__';
+const MAGIC_KEY = "__adsbypasser_reverse_proxy__";
 
-
-function getUnsafeWindowProxy () {
-  const isGreaseMonkey = getGMInfo().scriptHandler === 'Greasemonkey';
+function getUnsafeWindowProxy() {
+  const isGreaseMonkey = getGMInfo().scriptHandler === "Greasemonkey";
   // Only GreaseMonkey need this wrapper
   if (!isGreaseMonkey) {
     return rawUSW;
   }
 
   const decorator = {
-    set (target, key, value) {
+    set(target, key, value) {
       if (key === MAGIC_KEY) {
         return false;
       } else {
@@ -112,19 +106,19 @@ function getUnsafeWindowProxy () {
       }
       return true;
     },
-    get (target, key) {
+    get(target, key) {
       if (key === MAGIC_KEY) {
         return target;
       }
       const value = target[key];
       const type = typeof value;
-      if (value === null || (type !== 'function' && type !== 'object')) {
+      if (value === null || (type !== "function" && type !== "object")) {
         // primitive values does not need this
         return value;
       }
       return new Proxy(value, decorator);
     },
-    apply (target, self, args) {
+    apply(target, self, args) {
       args = Array.prototype.slice.call(args);
 
       // special hack for Object.defineProperty
@@ -149,23 +143,22 @@ function getUnsafeWindowProxy () {
 
       return target.apply(self, usargs);
     },
-    construct (target, args) {
+    construct(target, args) {
       args = Array.prototype.slice.call(args);
       // insert this argument
       args.unshift(undefined);
       const usargs = clone(args);
       const bind = unsafeWindow.Function.prototype.bind;
-      return new (bind.apply(target, usargs));
+      return new (bind.apply(target, usargs))();
     },
   };
   return new Proxy(unsafeWindow, decorator);
 }
 
-
 // Firefox only
 // cloneInto is too buggy
 // TODO Date, Regexp, subclasses
-function clone (safe) {
+function clone(safe) {
   if (safe === null || !(safe instanceof Object)) {
     return safe;
   }
@@ -194,9 +187,4 @@ function clone (safe) {
   return unsafe;
 }
 
-
-export {
-  rawUSW,
-  usw,
-  GMAPI,
-};
+export { rawUSW, usw, GMAPI };

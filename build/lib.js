@@ -1,19 +1,19 @@
-import fs from 'fs';
-import path from 'path';
-import stream from 'stream';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import stream from "stream";
+import { fileURLToPath } from "url";
 
-import _ from 'lodash';
-import findup from 'findup-sync';
-import webpack from 'webpack';
-import webpackStream from 'webpack-stream';
-import { ESLint } from 'eslint';
-import gulpChange from 'gulp-change';
-import gulpConcat from 'gulp-concat';
-import gulpInjectString from 'gulp-inject-string';
-import gulpLess from 'gulp-less';
-import gulpRename from 'gulp-rename';
-import gulpStripComments from 'gulp-strip-comments';
+import _ from "lodash";
+import findup from "findup-sync";
+import webpack from "webpack";
+import webpackStream from "webpack-stream";
+import { ESLint } from "eslint";
+import gulpChange from "gulp-change";
+import gulpConcat from "gulp-concat";
+import gulpInjectString from "gulp-inject-string";
+import gulpLess from "gulp-less";
+import gulpRename from "gulp-rename";
+import gulpStripComments from "gulp-strip-comments";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,44 +21,48 @@ const __dirname = path.dirname(__filename);
 // Custom ESLint function to replace gulp-eslint
 function createEslintPlugin() {
   let eslint;
-  
+
   return {
-    eslint: function() {
+    eslint: function () {
       return new stream.Transform({
         objectMode: true,
-        transform: async function(file, encoding, callback) {
+        transform: async function (file, encoding, callback) {
           if (file.isNull()) {
             return callback(null, file);
           }
-          
+
           if (file.isStream()) {
-            return callback(new Error('Streaming not supported'));
+            return callback(new Error("Streaming not supported"));
           }
-          
+
           try {
             if (!eslint) {
               eslint = new ESLint({
                 cwd: process.cwd(),
               });
             }
-            
+
             const results = await eslint.lintText(file.contents.toString(), {
               filePath: file.path,
             });
-            
-            file.eslint = results[0] || { messages: [], errorCount: 0, warningCount: 0 };
+
+            file.eslint = results[0] || {
+              messages: [],
+              errorCount: 0,
+              warningCount: 0,
+            };
             callback(null, file);
           } catch (error) {
             callback(error);
           }
-        }
+        },
       });
     },
-    
-    format: function() {
+
+    format: function () {
       return new stream.Transform({
         objectMode: true,
-        transform: async function(file, encoding, callback) {
+        transform: async function (file, encoding, callback) {
           if (file.eslint) {
             try {
               if (!eslint) {
@@ -66,33 +70,35 @@ function createEslintPlugin() {
                   cwd: process.cwd(),
                 });
               }
-              const formatter = await eslint.loadFormatter('stylish');
+              const formatter = await eslint.loadFormatter("stylish");
               const output = formatter.format([file.eslint]);
               if (output) {
                 console.log(output);
               }
             } catch (error) {
-              console.error('ESLint formatting error:', error);
+              console.error("ESLint formatting error:", error);
             }
           }
           callback(null, file);
-        }
+        },
       });
     },
-    
-    failAfterError: function() {
+
+    failAfterError: function () {
       return new stream.Transform({
         objectMode: true,
-        transform: function(file, encoding, callback) {
+        transform: function (file, encoding, callback) {
           if (file.eslint && file.eslint.errorCount > 0) {
-            const error = new Error(`ESLint found ${file.eslint.errorCount} error(s)`);
+            const error = new Error(
+              `ESLint found ${file.eslint.errorCount} error(s)`,
+            );
             error.showStack = false;
             return callback(error);
           }
           callback(null, file);
-        }
+        },
       });
-    }
+    },
   };
 }
 
@@ -114,29 +120,28 @@ export const plugins = {
   rename: gulpRename,
   stripComments: gulpStripComments,
   webpack: (arg) => {
-    arg.mode = 'none';
+    arg.mode = "none";
     return webpackStream(arg, webpack);
   },
 };
 export const source = {
-  get path () {
-    return path.resolve(__dirname, '..');
+  get path() {
+    return path.resolve(__dirname, "..");
   },
-  to (path_) {
+  to(path_) {
     return path.resolve(this.path, path_);
   },
 };
 export const output = {
-  get path () {
-    return path.resolve(__dirname, '../dist');
+  get path() {
+    return path.resolve(__dirname, "../dist");
   },
-  to (path_) {
+  to(path_) {
     return path.resolve(this.path, path_);
   },
 };
 
-
-function * cartesianProductOf (...args) {
+function* cartesianProductOf(...args) {
   if (args.length < 1) {
     yield [];
     return;
@@ -151,34 +156,29 @@ function * cartesianProductOf (...args) {
   }
 }
 
-
-export function * allBuildOptions () {
-  yield * cartesianProductOf(buildOptions.supportImage);
+export function* allBuildOptions() {
+  yield* cartesianProductOf(buildOptions.supportImage);
 }
 
-
-export function * imageBuildOptions () {
-  yield * cartesianProductOf(buildOptions.supportImage);
+export function* imageBuildOptions() {
+  yield* cartesianProductOf(buildOptions.supportImage);
 }
 
-
-export function getFeatureName (supportImage) {
-  return supportImage ? 'full' : 'lite';
+export function getFeatureName(supportImage) {
+  return supportImage ? "full" : "lite";
 }
 
-
-function parsePackageJSON () {
-  const p = findup('package.json');
+function parsePackageJSON() {
+  const p = findup("package.json");
   const pkg = fs.readFileSync(p, {
-    encoding: 'utf-8',
+    encoding: "utf-8",
   });
   return JSON.parse(pkg);
 }
 
-
-export function finalizeMetadata (supportImage, content) {
+export function finalizeMetadata(supportImage, content) {
   const featureName = getFeatureName(supportImage);
-  const featurePostfix = supportImage ? '' : ' Lite';
+  const featurePostfix = supportImage ? "" : " Lite";
 
   let s = _.template(content);
   s = s({
@@ -187,16 +187,11 @@ export function finalizeMetadata (supportImage, content) {
     supportImage,
     buildName: featureName,
   });
-  s = [
-    '// ==UserScript==\n',
-    s,
-    '// ==/UserScript==\n',
-  ];
-  return s.join('');
+  s = ["// ==UserScript==\n", s, "// ==/UserScript==\n"];
+  return s.join("");
 }
 
-
-export function finalizeNamespace (supportImage, content) {
+export function finalizeNamespace(supportImage, content) {
   let s = _.template(content);
   s = s({
     supportImage,
@@ -204,34 +199,28 @@ export function finalizeNamespace (supportImage, content) {
   return s;
 }
 
-
-export function finalizeHTML (options, content) {
+export function finalizeHTML(options, content) {
   let s = _.template(content);
   s = s(options);
   return s;
 }
 
-
-export function createNamedTask (name, task, ...args) {
+export function createNamedTask(name, task, ...args) {
   const fn = _.partial(task, ...args);
   fn.displayName = name;
   return fn;
 }
 
-
 class RemoveEmptyLines extends stream.Transform {
-
-  _transform (chunk, encoding, callback) {
+  _transform(chunk, encoding, callback) {
     let rv = chunk.contents.toString(encoding);
-    rv = rv.replace(/^\s*[\r\n]/gm, '');
+    rv = rv.replace(/^\s*[\r\n]/gm, "");
     chunk.contents = Buffer.from(rv, encoding);
     callback(null, chunk);
   }
-
 }
 
-
-export function removeEmptyLines () {
+export function removeEmptyLines() {
   return new RemoveEmptyLines({
     objectMode: true,
   });

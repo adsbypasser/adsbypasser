@@ -1,33 +1,27 @@
-import gulp from 'gulp';
-import { exec } from 'child_process';
-import { promisify } from 'util';
+import gulp from "gulp";
+import { exec } from "child_process";
+import { promisify } from "util";
 
-import {
-  plugins,
-  source,
-} from './lib.js';
+import { plugins, source } from "./lib.js";
 
 const execAsync = promisify(exec);
 
-export function createTestTasks () {
+export function createTestTasks() {
   return gulp.parallel(lint, vitest);
 }
 
-
-function lint () {
-  return gulp.src([
-    source.to('src/**/*.js'),
-  ])
+function lint() {
+  return gulp
+    .src([source.to("src/**/*.js")])
     .pipe(plugins.eslint.eslint())
     .pipe(plugins.eslint.format())
     .pipe(plugins.eslint.failAfterError());
 }
-lint.displayName = 'test:lint';
+lint.displayName = "test:lint";
 
-
-function vitest () {
+function vitest() {
   return new Promise((resolve, reject) => {
-    execAsync('npx vitest run')
+    execAsync("npx vitest run")
       .then(() => {
         resolve();
       })
@@ -36,4 +30,4 @@ function vitest () {
       });
   });
 }
-vitest.displayName = 'test:vitest';
+vitest.displayName = "test:vitest";

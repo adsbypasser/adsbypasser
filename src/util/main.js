@@ -1,29 +1,14 @@
-import {
-  nop,
-} from 'util/core.js';
-import {
-  findHandler,
-} from 'util/dispatcher.js';
-import {
-  rawUSW,
-  GMAPI,
-  usw,
-} from 'util/platform.js';
-import {
-  dumpConfig,
-  loadConfig,
-} from 'util/config.js';
-import {
-  warn,
-  info,
-} from 'util/logger.js';
-import '__ADSBYPASSER_HANDLERS__';
+import { nop } from "util/core.js";
+import { findHandler } from "util/dispatcher.js";
+import { rawUSW, GMAPI, usw } from "util/platform.js";
+import { dumpConfig, loadConfig } from "util/config.js";
+import { warn, info } from "util/logger.js";
+import "__ADSBYPASSER_HANDLERS__";
 
+const isSafari =
+  Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0;
 
-const isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-
-
-function disableWindowOpen () {
+function disableWindowOpen() {
   // If ad blockers already hijacked window.open, this will fail
   try {
     usw.open = function () {
@@ -31,23 +16,23 @@ function disableWindowOpen () {
         closed: false,
       };
     };
-  } catch (e) { // eslint-disable-line no-unused-vars
-    warn('cannot mock window.open');
+  } catch (e) {
+    // eslint-disable-line no-unused-vars
+    warn("cannot mock window.open");
   }
   usw.alert = nop;
   usw.confirm = nop;
 }
 
-
 // NOTE maybe break in future Firefox release
-function disableLeavePrompt (element) {
+function disableLeavePrompt(element) {
   if (!element) {
     return;
   }
 
   const seal = {
     set: function () {
-      info('blocked onbeforeunload');
+      info("blocked onbeforeunload");
     },
   };
 
@@ -56,9 +41,9 @@ function disableLeavePrompt (element) {
   // prevent they bind event again
   if (isSafari) {
     // Safiri must use old-style method
-    element.__defineSetter__('onbeforeunload', seal.set);
+    element.__defineSetter__("onbeforeunload", seal.set);
   } else {
-    usw.Object.defineProperty(element, 'onbeforeunload', {
+    usw.Object.defineProperty(element, "onbeforeunload", {
       configurable: true,
       enumerable: false,
       get: undefined,
@@ -70,8 +55,8 @@ function disableLeavePrompt (element) {
   // block addEventListener
   const oael = element.addEventListener;
   const nael = function (type) {
-    if (type === 'beforeunload') {
-      info('blocked addEventListener onbeforeunload');
+    if (type === "beforeunload") {
+      info("blocked addEventListener onbeforeunload");
       return;
     }
     return oael.apply(this, arguments);
@@ -79,46 +64,45 @@ function disableLeavePrompt (element) {
   element.addEventListener = nael;
 }
 
-
-function changeTitle () {
-  document.title += ' - AdsBypasser';
+function changeTitle() {
+  document.title += " - AdsBypasser";
 }
 
-
-async function beforeDOMReady (handler) {
+async function beforeDOMReady(handler) {
   const config = await dumpConfig();
-  info('working on\n%s \nwith\n%s', window.location.toString(), JSON.stringify(config));
+  info(
+    "working on\n%s \nwith\n%s",
+    window.location.toString(),
+    JSON.stringify(config),
+  );
   disableLeavePrompt(usw);
   disableWindowOpen();
   await handler.start();
 }
 
-
-async function afterDOMReady (handler) {
+async function afterDOMReady(handler) {
   // some sites bind the event on body
   disableLeavePrompt(usw.document.body);
   changeTitle();
   await handler.ready();
 }
 
-
-function waitDOM () {
+function waitDOM() {
   return new Promise((resolve) => {
     // DOM is ready
-    if (document.readyState !== 'loading') {
+    if (document.readyState !== "loading") {
       // means 'interactive' or 'complete'
       resolve();
       return;
     }
     // DOM is not ready
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener("DOMContentLoaded", () => {
       resolve();
     });
   });
 }
 
-
-async function main () {
+async function main() {
   // use unsafeWindow here because usi (a manager for Android Firefox) does
   // not implement the sandbox correctly
   if (rawUSW.top !== rawUSW.self) {
@@ -126,8 +110,8 @@ async function main () {
     return;
   }
 
-  GMAPI.registerMenuCommand('AdsBypasser - Configure', () => {
-    GMAPI.openInTab('https://adsbypasser.github.io/configure.html');
+  GMAPI.registerMenuCommand("AdsBypasser - Configure", () => {
+    GMAPI.openInTab("https://adsbypasser.github.io/configure.html");
   });
 
   await loadConfig();

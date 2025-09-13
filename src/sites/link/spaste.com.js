@@ -3,9 +3,9 @@ _.register({
     host: /^www\.spaste\.com$/,
     path: /^\/site\//,
   },
-  async ready () {
+  async ready() {
     // time needed to complete captcha
     await _.wait(15000);
-    $('#template-contactform-submit').click();
+    $("#template-contactform-submit").click();
   },
 });
