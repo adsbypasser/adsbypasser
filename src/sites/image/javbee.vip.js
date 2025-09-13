@@ -22,3 +22,11 @@ _.register({
     await $.openImage(a.href);
   },
 });
+
+_.register({
+  rule: 'https://javbee.vip/upload/en/*',
+  async ready () {
+    const m = $('meta[property="og:image"]');
+    await $.openImage(m.content);
+  },
+});
