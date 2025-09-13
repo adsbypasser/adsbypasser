@@ -85,7 +85,7 @@ copyFiles.displayName = 'ghpages:copy:files';
 function copyReleases () {
   const files = [];
   for (const [supportImage] of allBuildOptions()) {
-    const featureName = supportImage ? 'full' : 'lite';
+    const featureName = getFeatureName(supportImage);
     let js = output.to(`adsbypasser.${featureName}.user.js`);
     files.push(js);
     js = output.to(`adsbypasser.${featureName}.meta.js`);

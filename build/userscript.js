@@ -63,7 +63,7 @@ export function createUserscriptTasks () {
 
 // combine meta and body to userscript
 function linkFiles (supportImage) {
-  const featureName = supportImage ? 'full' : 'lite';
+  const featureName = getFeatureName(supportImage);
 
   return gulp.src([
     output.to(`adsbypasser.${featureName}.meta.js`),
@@ -76,7 +76,7 @@ function linkFiles (supportImage) {
 
 // generate meta.js
 function makeMeta (supportImage) {
-  const featureName = supportImage ? 'full' : 'lite';
+  const featureName = getFeatureName(supportImage);
 
   return gulp.src(source.to('infra/userscript/metadata.template.js'))
     .pipe(plugins.change(_.partial(finalizeMetadata, supportImage)))
@@ -88,7 +88,7 @@ function makeMeta (supportImage) {
 
 // generate body script
 function makeBody (supportImage) {
-  const featureName = supportImage ? 'full' : 'lite';
+  const featureName = getFeatureName(supportImage);
   const namespacePath = output.to(`namespace/${featureName}.js`);
   const handlersPath = output.to(`handlers/${featureName}.js`);
 
@@ -126,7 +126,7 @@ function makeBody (supportImage) {
 
 // combine handlers
 function makeHandlers (supportImage) {
-  const featureName = supportImage ? 'full' : 'lite';
+  const featureName = getFeatureName(supportImage);
   const namespaceScript = 'import { _, $ } from \'__ADSBYPASSER_NAMESPACE__\';\n';
 
   const handlers = [
@@ -145,7 +145,7 @@ function makeHandlers (supportImage) {
 
 // generate namespace
 function makeNamespace (supportImage) {
-  const featureName = supportImage ? 'full' : 'lite';
+  const featureName = getFeatureName(supportImage);
 
   return gulp.src(source.to('infra/userscript/namespace.template.js'))
     .pipe(plugins.change(_.partial(finalizeNamespace, supportImage)))
