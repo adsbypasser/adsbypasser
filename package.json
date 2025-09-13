@@ -17,6 +17,7 @@
     "findup-sync": "^5.0.0",
     "gulp": "^5.0.0",
     "gulp-change": "^1.0.0",
+    "prettier": "^3.0.0",
     "rimraf": "^6.0.1",
     "gulp-cli": "^3.1.0",
     "gulp-concat": "^2.6.1",
@@ -33,6 +34,8 @@
   "scripts": {
     "build": "gulp",
     "clean": "gulp clean",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:gulp": "gulp clean && gulp test",
