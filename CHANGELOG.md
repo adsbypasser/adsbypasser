@@ -3,6 +3,7 @@
 * fixed
     * fastpic.org
     * i.ibb.co
+    * javbee.vip
     * postimg.cc
 * added
     * imgfira.cc
