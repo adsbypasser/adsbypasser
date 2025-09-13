@@ -23,13 +23,11 @@ const ghpagesRepoURL = 'git@github.com:adsbypasser/adsbypasser.github.io.git';
 
 export function createGhpagesTasks (userscriptTask) {
   const copyReleasesTask = gulp.series(userscriptTask, copyReleases);
-  const copyMigrationTask = gulp.series(userscriptTask, createMigrations());
   const ghpagesTasks = gulp.parallel(
     makeHtml,
     makeLess,
     copyFiles,
     copyReleasesTask,
-    copyMigrationTask,
   );
   return gulp.series(clone, ghpagesTasks);
 }
@@ -97,28 +95,6 @@ function copyReleases () {
     .pipe(gulp.dest(output.to('ghpages/releases')));
 }
 copyReleases.displayName = 'ghpages:copy:releases';
-
-
-function createMigrations () {
-  const features = ['full', 'lite'];
-  const components = ['user', 'meta'];
-  const specs = ['es5', 'es7'];
-
-  const tasks = [];
-  for (const feature of features) {
-    for (const component of components) {
-      for (const spec of specs) {
-        const src = output.to(`adsbypasser.${feature}.${component}.js`);
-        const newName = `adsbypasser.${feature}.${spec}.${component}.js`;
-        const dest = output.to('ghpages/releases');
-        const task = () => gulp.src(src).pipe(plugins.rename(newName)).pipe(gulp.dest(dest));
-        task.displayName = `ghpages:copy:releases:migration:${feature}:${spec}:${component}`;
-        tasks.push(task);
-      }
-    }
-  }
-  return gulp.parallel(...tasks);
-}
 
 
 async function clone () {
