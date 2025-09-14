@@ -1,7 +1,6 @@
 // -----------------------------
 // Config Loader
 // -----------------------------
-import { forEach, none } from 'util/core.js';
 import { register } from 'util/dispatcher.js';
 import { usw, GMAPI } from 'util/platform.js';
 
