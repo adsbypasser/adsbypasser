@@ -1,117 +1,108 @@
+// -----------------------------
+// Custom Error
+// -----------------------------
 class AdsBypasserError extends Error {
   constructor(message) {
     super(message);
   }
 
   get name() {
-    return "AdsBypasserError";
+    return 'AdsBypasserError';
   }
 }
 
-function forEach(collection, fn) {
-  if (isArrayLike(collection)) {
-    return Array.prototype.forEach.call(collection, fn);
-  }
-  return Object.keys(collection).forEach((k) => {
-    return fn(collection[k], k, collection);
-  });
-}
-
-function every(collection, fn) {
-  if (isArrayLike(collection)) {
-    return Array.prototype.every.call(collection, fn);
-  }
-  return Object.keys(collection).every((k) => {
-    return fn(collection[k], k, collection);
-  });
-}
-
-function map(collection, fn) {
-  if (isArrayLike(collection)) {
-    return Array.prototype.map.call(collection, fn);
-  }
-  const mapped = Object.assign({}, collection);
-  Object.getOwnPropertyNames(mapped).forEach((k) => {
-    mapped[k] = fn(collection[k], k, collection);
-  });
-  return mapped;
-}
-
-function find(collection, fn) {
-  for (const [k, v] of enumerate(collection)) {
-    const r = fn(v, k, collection);
-    if (r !== none) {
-      return [k, v, r];
-    }
-  }
-  return [none, none, none];
-}
-
-function* enumerate(collection) {
-  if (isArrayLike(collection)) {
-    yield* Array.prototype.entries.call(collection);
-    return;
-  }
-  const keys = Object.getOwnPropertyNames(collection);
-  for (const k of keys) {
-    yield [k, collection[k]];
-  }
-}
-
-function isArrayLike(collection) {
-  return Array.isArray(collection) || isNodeList(collection);
-}
-
-function isNodeList(collection) {
-  return collection.constructor.name === "NodeList";
-}
-
-function partial(fn, ...args) {
-  if (typeof fn !== "function") {
-    throw new AdsBypasserError("must give a function");
-  }
-  // NOTE need to preserve *this* context?
-  return (...innerArgs) => {
-    return fn(...args.concat(innerArgs));
-  };
-}
-
-function isString(value) {
-  return typeof value === "string" || value instanceof String;
-}
-
-function nop() {}
-
+// -----------------------------
+// Sentinel & no-op
+// -----------------------------
+const nop = () => {};
 const none = nop;
 
-function wait(msDelay) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, msDelay);
-  });
-}
+// -----------------------------
+// Type checks
+// -----------------------------
+const isArrayLike = collection => Array.isArray(collection) || isNodeList(collection);
+const isNodeList = collection => collection?.constructor?.name === 'NodeList';
+const isString = value => typeof value === 'string' || value instanceof String;
 
-function tryEvery(msInterval, fn) {
-  return new Promise((resolve) => {
-    const handle = setInterval(function () {
-      const result = fn();
-      if (result !== none) {
-        clearInterval(handle);
-        resolve(result);
-      }
-    }, msInterval);
-  });
-}
+// -----------------------------
+// Collection utilities
+// -----------------------------
+const Collection = {
+  enumerate(collection) {
+    if (isArrayLike(collection)) {
+      return Array.prototype.entries.call(collection);
+    }
+    return Object.getOwnPropertyNames(collection).map(k => [k, collection[k]]);
+  },
 
+  forEach(collection, fn) {
+    for (const [k, v] of this.enumerate(collection)) {
+      fn(v, k, collection);
+    }
+  },
+
+  every(collection, fn) {
+    for (const [k, v] of this.enumerate(collection)) {
+      if (!fn(v, k, collection)) return false;
+    }
+    return true;
+  },
+
+  map(collection, fn) {
+    if (isArrayLike(collection)) {
+      return Array.prototype.map.call(collection, fn);
+    }
+    const result = { ...collection };
+    Object.getOwnPropertyNames(result).forEach(k => {
+      result[k] = fn(collection[k], k, collection);
+    });
+    return result;
+  },
+
+  find(collection, fn) {
+    for (const [k, v] of this.enumerate(collection)) {
+      const r = fn(v, k, collection);
+      if (r !== none) return [k, v, r];
+    }
+    return [none, none, none];
+  },
+};
+
+// -----------------------------
+// Partial application
+// -----------------------------
+const partial = (fn, ...args) => {
+  if (typeof fn !== 'function') {
+    throw new AdsBypasserError('must give a function');
+  }
+  return (...innerArgs) => fn(...args, ...innerArgs);
+};
+
+// -----------------------------
+// Async helpers
+// -----------------------------
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+const tryEvery = (msInterval, fn) => new Promise(resolve => {
+  const handle = setInterval(() => {
+    const result = fn();
+    if (result !== none) {
+      clearInterval(handle);
+      resolve(result);
+    }
+  }, msInterval);
+});
+
+// -----------------------------
 export {
   AdsBypasserError,
-  every,
-  find,
-  forEach,
+  Collection,
+  isArrayLike,
+  isNodeList,
   isString,
-  map,
-  none,
-  nop,
   partial,
-  tryEvery,
+  nop,
+  none,
   wait,
+  tryEvery,
 };
