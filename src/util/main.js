@@ -117,4 +117,4 @@ async function main() {
   }
 }
 
-main().catch((e) => warn(e));
+main().catch((_) => warn(_));
