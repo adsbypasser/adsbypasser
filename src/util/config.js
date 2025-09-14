@@ -1,4 +1,4 @@
-import { AdsBypasserError, every } from 'util/core.js';
+// import { AdsBypasserError, every } from 'util/core.js';
 import { register } from 'util/dispatcher.js';
 import { usw, GMAPI } from 'util/platform.js';
 
