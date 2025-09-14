@@ -1,100 +1,57 @@
-// import { AdsBypasserError, every } from 'util/core.js';
+// -----------------------------
+// Config Loader
+// -----------------------------
+import { forEach, none } from 'util/core.js';
 import { register } from 'util/dispatcher.js';
 import { usw, GMAPI } from 'util/platform.js';
 
-// -----------------------------
-// Config manifest with versioned defaults
-// -----------------------------
 const MANIFEST = [
-  {
-    key: 'version',
-    default_: 0,
-    verify: v => typeof v === 'number' && v >= 0,
-    normalize: toNumber,
-    migrate: async () => {}, // placeholder
-  },
-  {
-    key: 'align_center',
-    default_: true,
-    verify: isBoolean,
-    normalize: toBoolean,
-    label: 'Align Center',
-    help: 'Align image to the center if possible. (default: enabled)',
-    type: 'checkbox',
-    migrate: async value => typeof value !== 'boolean' ? true : value,
-  },
-  {
-    key: 'change_background',
-    default_: true,
-    verify: isBoolean,
-    normalize: toBoolean,
-    label: 'Change Background',
-    help: 'Use Firefox-like image background if possible. (default: enabled)',
-    type: 'checkbox',
-    migrate: async value => typeof value !== 'boolean' ? true : value,
-  },
-  {
-    key: 'redirect_image',
-    default_: true,
-    verify: isBoolean,
-    normalize: toBoolean,
-    label: 'Redirect Image',
-    help: 'Directly open image link if possible. If disabled, redirection only works on link shortener sites.',
-    type: 'checkbox',
-    migrate: async value => typeof value !== 'boolean' ? true : value,
-  },
-  {
-    key: 'scale_image',
-    default_: true,
-    verify: isBoolean,
-    normalize: toBoolean,
-    label: 'Scale Image',
-    help: 'When image loaded, scale it to fit window if possible. (default: enabled)',
-    type: 'checkbox',
-    migrate: async value => typeof value !== 'boolean' ? true : value,
-  },
-  {
-    key: 'log_level',
-    default_: 1,
-    verify: v => typeof v === 'number' && v >= 0 && v <= 2,
-    normalize: toNumber,
-    label: 'Log Level',
-    type: 'select',
-    menu: [[0,'0 (quiet)'],[1,'1 (default)'],[2,'2 (verbose)']],
-    help: 'Log level in developer console. (0: quiet, 1: default, 2: verbose)',
-    migrate: async value => typeof value !== 'number' ? 1 : value,
-  },
+  { key: 'version', default_: 0, verify: v => typeof v === 'number' && v >= 0, normalize: parseInt },
+  { key: 'align_center', default_: true, verify: v => typeof v === 'boolean', normalize: Boolean, label: 'Align Center', help: 'Align image to the center if possible.', type: 'checkbox' },
+  { key: 'change_background', default_: true, verify: v => typeof v === 'boolean', normalize: Boolean, label: 'Change Background', help: 'Use Firefox-like image background.', type: 'checkbox' },
+  { key: 'redirect_image', default_: true, verify: v => typeof v === 'boolean', normalize: Boolean, label: 'Redirect Image', help: 'Directly open image link if possible.', type: 'checkbox' },
+  { key: 'scale_image', default_: true, verify: v => typeof v === 'boolean', normalize: Boolean, label: 'Scale Image', help: 'Scale image to fit window.', type: 'checkbox' },
+  { key: 'log_level', default_: 1, verify: v => typeof v === 'number' && v >= 0 && v <= 2, normalize: parseInt, label: 'Log Level', help: '0: quiet, 1: default, 2: verbose', type: 'select', menu: [[0,'0 (quiet)'],[1,'1 (default)'],[2,'2 (verbose)']] },
 ];
 
 // -----------------------------
 // Helpers
 // -----------------------------
-function isBoolean(v) { return typeof v === 'boolean'; }
-function toBoolean(v) { return !!v; }
-function toNumber(v) { return parseInt(v, 10); }
-
-// -----------------------------
-// Sanity check & dynamic migration
-// -----------------------------
 async function sanityCheck() {
   const values = await Promise.all(MANIFEST.map(d => GMAPI.getValue(d.key)));
-
   const updates = {};
-  for (let i = 0; i < MANIFEST.length; i++) {
-    const d = MANIFEST[i];
+
+  MANIFEST.forEach((d, i) => {
     let val = values[i];
-    val = await d.migrate(val);
     if (!d.verify(val)) val = d.default_;
     updates[d.key] = val;
-  }
+  });
 
-  // Apply all updates
-  await Promise.all(Object.entries(updates).map(([k,v]) => GMAPI.setValue(k,v)));
+  await Promise.all(Object.entries(updates).map(([k, v]) => GMAPI.setValue(k, v)));
 }
 
-// -----------------------------
-// Load config & dynamic UI
-// -----------------------------
+function waitForPage() {
+  return new Promise(resolve => {
+    if (document.readyState === 'complete' && usw.render) return resolve();
+
+    const check = () => {
+      if (document.readyState === 'complete' && usw.render) {
+        clearInterval(interval);
+        resolve();
+      }
+    };
+    const interval = setInterval(check, 50);
+    document.addEventListener('DOMContentLoaded', check);
+  });
+}
+
+async function dumpConfig() {
+  const values = await Promise.all(MANIFEST.map(d => GMAPI.getValue(d.key)));
+  const o = {};
+  MANIFEST.forEach((d, i) => o[d.key] = values[i]);
+  return o;
+}
+
 async function loadConfig() {
   await sanityCheck();
 
@@ -104,7 +61,7 @@ async function loadConfig() {
       await waitForPage();
 
       usw.commit = async data => {
-        for (const [k,v] of Object.entries(data)) await GMAPI.setValue(k,v);
+        for (const [k, v] of Object.entries(data)) await GMAPI.setValue(k, v);
       };
 
       const config = await dumpConfig();
@@ -117,31 +74,8 @@ async function loadConfig() {
       }, {});
 
       usw.render({ version: config.version, options });
-    }
+    },
   });
 }
 
-// -----------------------------
-// Wait for DOM + usw.render
-// -----------------------------
-function waitForPage() {
-  return new Promise(resolve => {
-    if (document.readyState === 'complete' && usw.render) return resolve();
-    const check = () => { if (document.readyState === 'complete' && usw.render) { clearInterval(interval); resolve(); } };
-    const interval = setInterval(check, 50);
-    document.addEventListener('DOMContentLoaded', check);
-  });
-}
-
-// -----------------------------
-// Dump config
-// -----------------------------
-async function dumpConfig() {
-  const values = await Promise.all(MANIFEST.map(d => GMAPI.getValue(d.key)));
-  const o = {};
-  MANIFEST.forEach((d,i) => o[d.key] = values[i]);
-  return o;
-}
-
-// -----------------------------
 export { dumpConfig, loadConfig };
