@@ -1,33 +1,39 @@
-import { isString } from "util/core.js";
+import { isString } from 'util/core.js';
 
 const quiet = false;
 
+// -----------------------------
+// Internal logging helper
+// -----------------------------
 function log(method, args) {
-  if (quiet) {
-    return;
-  }
-  args = Array.prototype.slice.call(args);
-  if (isString(args[0])) {
-    args[0] = "AdsBypasser: " + args[0];
+  if (quiet) return;
+
+  const argsArray = Array.prototype.slice.call(args);
+  if (isString(argsArray[0])) {
+    argsArray[0] = 'AdsBypasser: ' + argsArray[0];
   } else {
-    args.unshift("AdsBypasser:");
+    argsArray.unshift('AdsBypasser:');
   }
-  const f = console[method];
-  if (typeof f === "function") {
-    f.apply(console, args);
+
+  const consoleMethod = console[method];
+  if (typeof consoleMethod === 'function') {
+    consoleMethod.apply(console, argsArray);
   }
 }
 
+// -----------------------------
+// Public logging functions
+// -----------------------------
 function debug() {
-  log("debug", arguments);
+  log('debug', arguments);
 }
 
 function info() {
-  log("info", arguments);
+  log('info', arguments);
 }
 
 function warn() {
-  log("warn", arguments);
+  log('warn', arguments);
 }
 
 export { debug, info, warn };
