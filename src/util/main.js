@@ -17,8 +17,7 @@ const isSafari =
 function disableWindowOpen() {
   try {
     usw.open = () => ({ closed: false });
-  } catch (e) {
-    // eslint-disable-line no-unused-vars
+  } catch {
     warn('cannot mock window.open');
   }
   usw.alert = nop;
@@ -32,10 +31,8 @@ function disableLeavePrompt(element) {
     set: () => info('blocked onbeforeunload'),
   };
 
-  // release existing events
   element.onbeforeunload = undefined;
 
-  // prevent binding again
   if (isSafari) {
     element.__defineSetter__('onbeforeunload', seal.set);
   } else {
@@ -47,7 +44,6 @@ function disableLeavePrompt(element) {
     });
   }
 
-  // block addEventListener for beforeunload
   const originalAddEventListener = element.addEventListener;
   element.addEventListener = function (type) {
     if (type === 'beforeunload') {
