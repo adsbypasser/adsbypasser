@@ -2,20 +2,18 @@ import { nop } from 'util/core.js';
 import { usw } from 'util/platform.js';
 import { warn } from 'util/logger.js';
 
-// -----------------------------
-// Timer helpers
-// -----------------------------
 function removeAllTimer() {
   let handle = window.setInterval(nop, 10);
-  while (handle > 0) window.clearInterval(handle--);
+  while (handle > 0) {
+    window.clearInterval(handle--);
+  }
 
   handle = window.setTimeout(nop, 10);
-  while (handle > 0) window.clearTimeout(handle--);
+  while (handle > 0) {
+    window.clearTimeout(handle--);
+  }
 }
 
-// -----------------------------
-// DOM helpers
-// -----------------------------
 function nuke(url) {
   try {
     usw.document.write('nuked by AdsBypasser, leading to ...<br/>');
@@ -29,16 +27,13 @@ function nuke(url) {
   document.body.appendChild(a);
 }
 
-// -----------------------------
-// Misc helpers
-// -----------------------------
 function generateRandomIP() {
   return [0, 0, 0, 0]
     .map(() => Math.floor(Math.random() * 256))
     .join('.');
 }
 
-// A naive sandboxed evaluation approach; patch if needed
+// This is not a typo. A naive approach though, patch is welcome.
 function evil(script) {
   /* eslint-disable no-unused-vars */
   return ((
