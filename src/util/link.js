@@ -1,20 +1,16 @@
 import { isString, wait, forEach } from 'util/core.js';
 import { info, warn } from 'util/logger.js';
 
-// -----------------------------
-// Helper to append element to DOM and yield execution
-// -----------------------------
 function prepare(element) {
+  // HACK: create a body if called before DOMContentLoaded
   if (!document.body) {
     document.body = document.createElement('body');
   }
   document.body.appendChild(element);
+  // yield execution for the event loop
   return wait(0);
 }
 
-// -----------------------------
-// Simulate a GET link click
-// -----------------------------
 async function get(url) {
   const a = document.createElement('a');
   a.href = url;
@@ -26,7 +22,7 @@ async function get(url) {
       event.stopPropagation();
       clicked = true;
     },
-    true
+    true,
   );
 
   await prepare(a);
@@ -36,16 +32,13 @@ async function get(url) {
     if (clicked) {
       info('already clicked');
       clearInterval(tick);
-    } else {
-      info('try again');
-      a.click();
+      return;
     }
+    info('try again');
+    a.click();
   }, 500);
 }
 
-// -----------------------------
-// Simulate a POST form submission
-// -----------------------------
 async function post(path, params = {}) {
   const form = document.createElement('form');
   form.method = 'post';
@@ -63,16 +56,13 @@ async function post(path, params = {}) {
   form.submit();
 }
 
-// -----------------------------
-// Open link (GET or POST) with optional referer
-// -----------------------------
 async function openLink(to, options = {}) {
   if (!isString(to) || !to) {
     warn('false URL');
     return;
   }
 
-  const withReferer = options.referer !== undefined ? options.referer : true;
+  const withReferer = typeof options.referer === 'undefined' ? true : options.referer;
   const postData = options.post;
 
   const from = window.location.toString();
