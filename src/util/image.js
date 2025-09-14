@@ -1,13 +1,14 @@
-import { openLink } from "util/link.js";
-import { remove } from "util/dom.js";
-import { warn, info } from "util/logger.js";
-import { removeAllTimer } from "util/misc.js";
-import { GMAPI } from "util/platform.js";
+import { openLink } from 'util/link.js';
+import { remove } from 'util/dom.js';
+import { warn, info } from 'util/logger.js';
+import { removeAllTimer } from 'util/misc.js';
+import { GMAPI } from 'util/platform.js';
 
-async function openImage(imgSrc, options) {
-  options = options || {};
+// -----------------------------
+// Main image opener
+// -----------------------------
+async function openImage(imgSrc, options = {}) {
   const replace = !!options.replace;
-  // will be false by default
   const referer = !!options.referer;
 
   if (replace) {
@@ -15,24 +16,25 @@ async function openImage(imgSrc, options) {
     return;
   }
 
-  const redirectImage = await GMAPI.getValue("redirect_image");
+  const redirectImage = await GMAPI.getValue('redirect_image');
   if (redirectImage) {
-    await openLink(imgSrc, {
-      referer: referer,
-    });
+    await openLink(imgSrc, { referer });
   }
 }
 
+// -----------------------------
+// Body / page manipulation helpers
+// -----------------------------
 function enableScrolling() {
-  const o =
-    document.compatMode === "CSS1Compat"
+  const target =
+    document.compatMode === 'CSS1Compat'
       ? document.documentElement
       : document.body;
-  o.style.overflow = "";
+  target.style.overflow = '';
 }
 
 function toggleShrinking() {
-  this.classList.toggle("adsbypasser-shrinked");
+  this.classList.toggle('adsbypasser-shrinked');
 }
 
 function checkScaling() {
@@ -40,109 +42,92 @@ function checkScaling() {
   const nh = this.naturalHeight;
   const cw = document.documentElement.clientWidth;
   const ch = document.documentElement.clientHeight;
-  if (
-    (nw > cw || nh > ch) &&
-    !this.classList.contains("adsbypasser-resizable")
-  ) {
-    this.classList.add("adsbypasser-resizable");
-    this.classList.add("adsbypasser-shrinked");
 
-    this.addEventListener("click", toggleShrinking);
-  } else if (
-    nw <= cw &&
-    nh <= ch &&
-    this.classList.contains("adsbypasser-resizable")
-  ) {
-    this.removeEventListener("click", toggleShrinking);
-
-    this.classList.remove("adsbypasser-shrinked");
-    this.classList.remove("adsbypasser-resizable");
+  if ((nw > cw || nh > ch) && !this.classList.contains('adsbypasser-resizable')) {
+    this.classList.add('adsbypasser-resizable', 'adsbypasser-shrinked');
+    this.addEventListener('click', toggleShrinking);
+  } else if (nw <= cw && nh <= ch && this.classList.contains('adsbypasser-resizable')) {
+    this.removeEventListener('click', toggleShrinking);
+    this.classList.remove('adsbypasser-resizable', 'adsbypasser-shrinked');
   }
 }
 
-async function scaleImage(i) {
-  const siURL = await GMAPI.getResourceUrl("scaleImage");
+async function scaleImage(img) {
+  const siURL = await GMAPI.getResourceUrl('scaleImage');
   appendStyleURL(siURL);
 
-  if (i.naturalWidth && i.naturalHeight) {
-    checkScaling.call(i);
+  if (img.naturalWidth && img.naturalHeight) {
+    checkScaling.call(img);
   } else {
-    i.addEventListener("load", checkScaling);
+    img.addEventListener('load', checkScaling);
   }
 
-  let h = 0;
-  window.addEventListener("resize", () => {
-    window.clearTimeout(h);
-    h = window.setTimeout(checkScaling.bind(i), 100);
+  let resizeTimeout = 0;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(checkScaling.bind(img), 100);
   });
 }
 
 async function changeBackground() {
-  const bgImage = await GMAPI.getResourceUrl("bgImage");
-  document.body.style.backgroundColor = "#222222";
+  const bgImage = await GMAPI.getResourceUrl('bgImage');
+  document.body.style.backgroundColor = '#222222';
   document.body.style.backgroundImage = `url('${bgImage}')`;
 }
 
 async function alignCenter() {
-  const acURL = await GMAPI.getResourceUrl("alignCenter");
+  const acURL = await GMAPI.getResourceUrl('alignCenter');
   appendStyleURL(acURL);
 }
 
-function injectStyle(d, i) {
-  remove("style, link[rel=stylesheet]");
-
-  d.id = "adsbypasser-wrapper";
-  i.id = "adsbypasser-image";
+// -----------------------------
+// DOM / style helpers
+// -----------------------------
+function injectStyle(wrapperDiv, img) {
+  remove('style, link[rel=stylesheet]');
+  wrapperDiv.id = 'adsbypasser-wrapper';
+  img.id = 'adsbypasser-image';
 }
 
 function appendStyleURL(url) {
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.type = "text/css";
+  const link = document.createElement('link');
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
   link.href = url;
   document.head.appendChild(link);
 }
 
+// -----------------------------
+// Replace page body with image
+// -----------------------------
 async function replaceBody(imgSrc) {
-  const redirectImage = await GMAPI.getValue("redirect_image");
-  if (!redirectImage) {
+  const redirectImage = await GMAPI.getValue('redirect_image');
+  if (!redirectImage || !imgSrc) {
+    if (!imgSrc) warn('false url');
     return;
   }
 
-  if (!imgSrc) {
-    warn("false url");
-    return;
-  }
   info(`replacing body with \`${imgSrc}\` ...`);
 
-  // NOTE maybe nuke the whole page
   removeAllTimer();
   enableScrolling();
 
-  document.body = document.createElement("body");
+  document.body = document.createElement('body');
 
-  const d = document.createElement("div");
-  document.body.appendChild(d);
+  const wrapperDiv = document.createElement('div');
+  document.body.appendChild(wrapperDiv);
 
-  const i = document.createElement("img");
-  i.src = imgSrc;
-  d.appendChild(i);
+  const img = document.createElement('img');
+  img.src = imgSrc;
+  wrapperDiv.appendChild(img);
 
-  const ac = await GMAPI.getValue("align_center");
-  const si = await GMAPI.getValue("scale_image");
-  if (ac || si) {
-    injectStyle(d, i);
-  }
-  if (ac) {
-    await alignCenter();
-  }
-  const cb = await GMAPI.getValue("change_background");
-  if (cb) {
-    await changeBackground();
-  }
-  if (si) {
-    await scaleImage(i);
-  }
+  const alignCenterEnabled = await GMAPI.getValue('align_center');
+  const scaleEnabled = await GMAPI.getValue('scale_image');
+
+  if (alignCenterEnabled || scaleEnabled) injectStyle(wrapperDiv, img);
+  if (alignCenterEnabled) await alignCenter();
+  if (await GMAPI.getValue('change_background')) await changeBackground();
+  if (scaleEnabled) await scaleImage(img);
 }
 
 export { openImage };
