@@ -2,10 +2,12 @@ import { AdsBypasserError, map, forEach, none } from 'util/core.js';
 import { GMAPI } from 'util/platform.js';
 import { debug } from 'util/logger.js';
 
+// -----------------------------
+// Custom AjaxError
+// -----------------------------
 class AjaxError extends AdsBypasserError {
   constructor(method, url, data, headers, status, response) {
     super(`${method} ${url} got ${status}`);
-
     this._method = method;
     this._url = url;
     this._data = data;
@@ -14,47 +16,26 @@ class AjaxError extends AdsBypasserError {
     this._response = response;
   }
 
-  get name() {
-    return 'AjaxError';
-  }
-
-  get method() {
-    return this._method;
-  }
-
-  get url() {
-    return this._url;
-  }
-
-  get data() {
-    return this._data;
-  }
-
-  get headers() {
-    return this._headers;
-  }
-
-  get status() {
-    return this._status;
-  }
-
-  get response() {
-    return this._response;
-  }
+  get name() { return 'AjaxError'; }
+  get method() { return this._method; }
+  get url() { return this._url; }
+  get data() { return this._data; }
+  get headers() { return this._headers; }
+  get status() { return this._status; }
+  get response() { return this._response; }
 }
 
+// -----------------------------
+// Object utilities
+// -----------------------------
 function* flattenObject(object) {
-  if (!object) {
-    return;
-  }
+  if (!object) return;
   for (const [k, v] of Object.entries(object)) {
     if (Array.isArray(v)) {
-      for (const v_ of v) {
-        yield [[k, ''], v_];
-      }
+      for (const item of v) yield [[k, ''], item];
     } else if (typeof v === 'object') {
-      for (const [k_, v_] of flattenObject(v)) {
-        yield [[k, ...k_], v_];
+      for (const [nestedKey, nestedVal] of flattenObject(v)) {
+        yield [[k, ...nestedKey], nestedVal];
       }
     } else {
       yield [[k], v];
@@ -62,58 +43,44 @@ function* flattenObject(object) {
   }
 }
 
-function flattenKey(keyList) {
-  const [head, ...rest] = keyList;
-  return `${head}${rest.map((_) => `[${_}]`)}`;
+function flattenKey(keys) {
+  const [head, ...rest] = keys;
+  return `${head}${rest.map(k => `[${k}]`).join('')}`;
 }
 
 function deepJoin(prefix, object) {
   const keys = Object.getOwnPropertyNames(object);
-  const mapped = map(keys, (k) => {
+  const mapped = map(keys, k => {
     const v = object[k];
     const key = `${prefix}[${k}]`;
-    if (typeof v === 'object') { 
-      return deepJoin(key, v);
-    }
-    const tmp = [key, v].map(encodeURIComponent);
-    return tmp.join('=');
+    if (typeof v === 'object') return deepJoin(key, v);
+    return [key, v].map(encodeURIComponent).join('=');
   });
   return mapped.join('&');
 }
 
+// -----------------------------
+// Convert data to query string
+// -----------------------------
 function toQuery(data) {
-  const type = typeof data;
-  if (data === null || (type !== 'string' && type !== 'object')) {
-    return '';
-  }
-  if (type === 'string') {
-    return data;
-  }
-  if (data instanceof String) {
-    return data.toString();
-  }
+  if (data === null || (typeof data !== 'string' && typeof data !== 'object')) return '';
+  if (typeof data === 'string' || data instanceof String) return data.toString();
+
   const keys = Object.getOwnPropertyNames(data);
-  return map(keys, (k) => {
+  return map(keys, k => {
     const v = data[k];
-    if (typeof v === 'object') { 
-      return deepJoin(k, v);
-    }
-    const tmp = [k, v].map(encodeURIComponent);
-    return tmp.join('=');
+    if (typeof v === 'object') return deepJoin(k, v);
+    return [k, v].map(encodeURIComponent).join('=');
   }).join('&');
 }
 
+// -----------------------------
+// Convert data to FormData
+// -----------------------------
 function toForm(data) {
-  const type = typeof data;
-  if (data === null || (type !== 'string' && type !== 'object')) {
-    return '';
-  }
-  if (type === 'string') {
-    return data;
-  }
-  if (data instanceof String) {
-    return data.toString();
-  }
+  if (data === null || (typeof data !== 'string' && typeof data !== 'object')) return '';
+  if (typeof data === 'string' || data instanceof String) return data.toString();
+
   const form = new FormData();
   for (const [k, v] of flattenObject(data)) {
     form.append(flattenKey(k), v);
@@ -121,14 +88,16 @@ function toForm(data) {
   return form;
 }
 
-function ajax(method, url, data, headers) {
+// -----------------------------
+// Core AJAX request
+// -----------------------------
+function ajax(method, url, data, headers = {}) {
   debug('ajax', method, url, data, headers);
 
-  // Host is not always the same as window.location.host, for example
-  // foo.example.org can perform a request to example.org
-  const l = document.createElement('a');
-  l.href = url;
-  const reqHost = l.hostname;
+  // Ensure host headers
+  const link = document.createElement('a');
+  link.href = url;
+  const reqHost = link.hostname;
   const overrideHeaders = {
     Host: reqHost || window.location.host,
     Origin: window.location.origin,
@@ -136,20 +105,16 @@ function ajax(method, url, data, headers) {
     'X-Requested-With': 'XMLHttpRequest',
   };
 
-  // Allow to perform a request without certain parameters by passsing _.none
   forEach(overrideHeaders, (v, k) => {
-    if (headers[k] === none) {
-      delete headers[k];
-    } else {
-      headers[k] = v;
-    }
+    if (headers[k] === none) delete headers[k];
+    else headers[k] = v;
   });
 
-  // deal with payload in POST
+  // Handle payload
   if (data) {
-    if (headers['Content-Type'].indexOf('json') >= 0) {
+    if ((headers['Content-Type'] || '').includes('json')) {
       data = JSON.stringify(data);
-    } else if (headers['Content-Type'].indexOf('multipart') >= 0) {
+    } else if ((headers['Content-Type'] || '').includes('multipart')) {
       data = toForm(data);
     } else {
       data = toQuery(data);
@@ -159,66 +124,39 @@ function ajax(method, url, data, headers) {
 
   return new Promise((resolve, reject) => {
     GMAPI.xmlHttpRequest({
-      method: method,
-      url: url,
-      data: data,
-      headers: headers,
+      method,
+      url,
+      data,
+      headers,
       onload(response) {
-        // HACK use this as fallback for zombie.js
-        response =
-          typeof response.responseText !== 'undefined' ? response : this;
+        response = response.responseText !== undefined ? response : this;
         if (response.status !== 200) {
-          reject(
-            new AjaxError(
-              method,
-              url,
-              data,
-              headers,
-              response.status,
-              response.responseText,
-            ),
-          );
+          reject(new AjaxError(method, url, data, headers, response.status, response.responseText));
         } else {
           resolve(response.responseText);
         }
       },
       onerror(response) {
-        // HACK use this as fallback for zombie.js
-        response =
-          typeof response.responseText !== 'undefined' ? response : this;
-        reject(
-          new AjaxError(
-            method,
-            url,
-            data,
-            headers,
-            response.status,
-            response.responseText,
-          ),
-        );
+        response = response.responseText !== undefined ? response : this;
+        reject(new AjaxError(method, url, data, headers, response.status, response.responseText));
       },
     });
   });
 }
 
-function get(url, data, headers) {
-  data = toQuery(data);
-  // Don't request with '?' if there is no data
-  data = data ? '?' + data : '';
-  headers = headers || {};
-  return ajax('GET', url + data, '', headers);
+// -----------------------------
+// GET and POST helpers
+// -----------------------------
+function get(url, data, headers = {}) {
+  const query = toQuery(data);
+  const fullUrl = query ? `${url}?${query}` : url;
+  return ajax('GET', fullUrl, '', headers);
 }
 
-function post(url, data, headers) {
-  const h = {
-    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-  };
-  if (headers) {
-    forEach(headers, (v, k) => {
-      h[k] = v;
-    });
-  }
+function post(url, data, headers = {}) {
+  const h = { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8', ...headers };
   return ajax('POST', url, data, h);
 }
 
+// -----------------------------
 export { get, post };
