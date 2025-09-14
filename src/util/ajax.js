@@ -1,5 +1,3 @@
-/* global File, Blob */
-
 import { AdsBypasserError, map, forEach, none } from 'util/core.js';
 import { GMAPI } from 'util/platform.js';
 import { debug } from 'util/logger.js';
