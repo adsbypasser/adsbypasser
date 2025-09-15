@@ -4,7 +4,7 @@ class AdsBypasserError extends Error {
   }
 
   get name() {
-    return "AdsBypasserError";
+    return 'AdsBypasserError';
   }
 }
 
@@ -12,18 +12,14 @@ function forEach(collection, fn) {
   if (isArrayLike(collection)) {
     return Array.prototype.forEach.call(collection, fn);
   }
-  return Object.keys(collection).forEach((k) => {
-    return fn(collection[k], k, collection);
-  });
+  return Object.keys(collection).forEach((k) => fn(collection[k], k, collection));
 }
 
 function every(collection, fn) {
   if (isArrayLike(collection)) {
     return Array.prototype.every.call(collection, fn);
   }
-  return Object.keys(collection).every((k) => {
-    return fn(collection[k], k, collection);
-  });
+  return Object.keys(collection).every((k) => fn(collection[k], k, collection));
 }
 
 function map(collection, fn) {
@@ -40,9 +36,7 @@ function map(collection, fn) {
 function find(collection, fn) {
   for (const [k, v] of enumerate(collection)) {
     const r = fn(v, k, collection);
-    if (r !== none) {
-      return [k, v, r];
-    }
+    if (r !== none) return [k, v, r];
   }
   return [none, none, none];
 }
@@ -53,9 +47,7 @@ function* enumerate(collection) {
     return;
   }
   const keys = Object.getOwnPropertyNames(collection);
-  for (const k of keys) {
-    yield [k, collection[k]];
-  }
+  for (const k of keys) yield [k, collection[k]];
 }
 
 function isArrayLike(collection) {
@@ -63,21 +55,16 @@ function isArrayLike(collection) {
 }
 
 function isNodeList(collection) {
-  return collection.constructor.name === "NodeList";
+  return collection.constructor.name === 'NodeList';
 }
 
 function partial(fn, ...args) {
-  if (typeof fn !== "function") {
-    throw new AdsBypasserError("must give a function");
-  }
-  // NOTE need to preserve *this* context?
-  return (...innerArgs) => {
-    return fn(...args.concat(innerArgs));
-  };
+  if (typeof fn !== 'function') throw new AdsBypasserError('must give a function');
+  return (...innerArgs) => fn(...args.concat(innerArgs));
 }
 
 function isString(value) {
-  return typeof value === "string" || value instanceof String;
+  return typeof value === 'string' || value instanceof String;
 }
 
 function nop() {}
@@ -85,14 +72,12 @@ function nop() {}
 const none = nop;
 
 function wait(msDelay) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, msDelay);
-  });
+  return new Promise((resolve) => setTimeout(resolve, msDelay));
 }
 
 function tryEvery(msInterval, fn) {
   return new Promise((resolve) => {
-    const handle = setInterval(function () {
+    const handle = setInterval(() => {
       const result = fn();
       if (result !== none) {
         clearInterval(handle);

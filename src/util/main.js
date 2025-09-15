@@ -1,132 +1,116 @@
-import { nop } from "util/core.js";
-import { findHandler } from "util/dispatcher.js";
-import { rawUSW, GMAPI, usw } from "util/platform.js";
-import { dumpConfig, loadConfig } from "util/config.js";
-import { warn, info } from "util/logger.js";
-import "__ADSBYPASSER_HANDLERS__";
+import { nop } from 'util/core.js';
+import { findHandler } from 'util/dispatcher.js';
+import { rawUSW, GMAPI, usw } from 'util/platform.js';
+import { dumpConfig, loadConfig } from 'util/config.js';
+import { warn, info } from 'util/logger.js';
+import '__ADSBYPASSER_HANDLERS__';
 
+// -----------------------------
+// Safari detection
+// -----------------------------
 const isSafari =
-  Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0;
+  Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
 
+// -----------------------------
+// Window / unload overrides
+// -----------------------------
 function disableWindowOpen() {
-  // If ad blockers already hijacked window.open, this will fail
   try {
-    usw.open = function () {
-      return {
-        closed: false,
-      };
-    };
-  } catch (e) {
-    // eslint-disable-line no-unused-vars
-    warn("cannot mock window.open");
+    usw.open = () => ({ closed: false });
+  } catch {
+    warn('cannot mock window.open');
   }
   usw.alert = nop;
   usw.confirm = nop;
 }
 
-// NOTE maybe break in future Firefox release
 function disableLeavePrompt(element) {
-  if (!element) {
-    return;
-  }
+  if (!element) return;
 
   const seal = {
-    set: function () {
-      info("blocked onbeforeunload");
-    },
+    set: () => info('blocked onbeforeunload'),
   };
 
-  // release existing events
   element.onbeforeunload = undefined;
-  // prevent they bind event again
+
   if (isSafari) {
-    // Safiri must use old-style method
-    element.__defineSetter__("onbeforeunload", seal.set);
+    element.__defineSetter__('onbeforeunload', seal.set);
   } else {
-    usw.Object.defineProperty(element, "onbeforeunload", {
+    usw.Object.defineProperty(element, 'onbeforeunload', {
       configurable: true,
       enumerable: false,
       get: undefined,
-      // this will turn to undefined in Firefox, need upstream fix
       set: seal.set,
     });
   }
 
-  // block addEventListener
-  const oael = element.addEventListener;
-  const nael = function (type) {
-    if (type === "beforeunload") {
-      info("blocked addEventListener onbeforeunload");
+  const originalAddEventListener = element.addEventListener;
+  element.addEventListener = function (type) {
+    if (type === 'beforeunload') {
+      info('blocked addEventListener onbeforeunload');
       return;
     }
-    return oael.apply(this, arguments);
+    return originalAddEventListener.apply(this, arguments);
   };
-  element.addEventListener = nael;
 }
 
+// -----------------------------
+// DOM helpers
+// -----------------------------
 function changeTitle() {
-  document.title += " - AdsBypasser";
+  document.title += ' - AdsBypasser';
 }
 
+function waitDOM() {
+  return new Promise((resolve) => {
+    if (document.readyState !== 'loading') {
+      resolve();
+      return;
+    }
+    document.addEventListener('DOMContentLoaded', () => resolve());
+  });
+}
+
+// -----------------------------
+// Lifecycle hooks
+// -----------------------------
 async function beforeDOMReady(handler) {
   const config = await dumpConfig();
   info(
-    "working on\n%s \nwith\n%s",
+    'working on\n%s \nwith\n%s',
     window.location.toString(),
     JSON.stringify(config),
   );
+
   disableLeavePrompt(usw);
   disableWindowOpen();
   await handler.start();
 }
 
 async function afterDOMReady(handler) {
-  // some sites bind the event on body
   disableLeavePrompt(usw.document.body);
   changeTitle();
   await handler.ready();
 }
 
-function waitDOM() {
-  return new Promise((resolve) => {
-    // DOM is ready
-    if (document.readyState !== "loading") {
-      // means 'interactive' or 'complete'
-      resolve();
-      return;
-    }
-    // DOM is not ready
-    document.addEventListener("DOMContentLoaded", () => {
-      resolve();
-    });
-  });
-}
-
+// -----------------------------
+// Main
+// -----------------------------
 async function main() {
-  // use unsafeWindow here because usi (a manager for Android Firefox) does
-  // not implement the sandbox correctly
-  if (rawUSW.top !== rawUSW.self) {
-    // skip frames
-    return;
-  }
+  if (rawUSW.top !== rawUSW.self) return; // skip frames
 
-  GMAPI.registerMenuCommand("AdsBypasser - Configure", () => {
-    GMAPI.openInTab("https://adsbypasser.github.io/configure.html");
+  GMAPI.registerMenuCommand('AdsBypasser - Configure', () => {
+    GMAPI.openInTab('https://adsbypasser.github.io/configure.html');
   });
 
   await loadConfig();
 
-  // find by URL
   const handler = findHandler();
   if (handler) {
     await beforeDOMReady(handler);
     await waitDOM();
     await afterDOMReady(handler);
-
-    return;
   }
 }
 
-main().catch((e) => {
-  warn(e);
-});
+main().catch((_) => warn(_));

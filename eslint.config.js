@@ -1,8 +1,10 @@
 import js from "@eslint/js";
 import babelParser from "@babel/eslint-parser";
+import prettierConfig from "eslint-config-prettier";
 
 export default [
   js.configs.recommended,
+  prettierConfig,
   {
     files: ["**/*.js", "**/*.mjs"],
     languageOptions: {
@@ -49,10 +51,6 @@ export default [
       },
     },
     rules: {
-      indent: ["error", 2],
-      "linebreak-style": ["error", "unix"],
-      quotes: ["error", "single"],
-      semi: ["error", "always"],
       "no-constant-condition": ["error", { checkLoops: false }],
       "no-var": "error",
       "prefer-const": "error",

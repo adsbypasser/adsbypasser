@@ -1,12 +1,13 @@
-import { nop } from "util/core.js";
-import { usw } from "util/platform.js";
-import { warn } from "util/logger.js";
+import { nop } from 'util/core.js';
+import { usw } from 'util/platform.js';
+import { warn } from 'util/logger.js';
 
 function removeAllTimer() {
   let handle = window.setInterval(nop, 10);
   while (handle > 0) {
     window.clearInterval(handle--);
   }
+
   handle = window.setTimeout(nop, 10);
   while (handle > 0) {
     window.clearTimeout(handle--);
@@ -15,11 +16,12 @@ function removeAllTimer() {
 
 function nuke(url) {
   try {
-    usw.document.write("nuked by AdsBypasser, leading to ...<br/>");
+    usw.document.write('nuked by AdsBypasser, leading to ...<br/>');
   } catch (e) {
-    warn("nuke failed", e);
+    warn('nuke failed', e);
   }
-  const a = document.createElement("a");
+
+  const a = document.createElement('a');
   a.href = url;
   a.textContent = url;
   document.body.appendChild(a);
@@ -27,13 +29,11 @@ function nuke(url) {
 
 function generateRandomIP() {
   return [0, 0, 0, 0]
-    .map(() => {
-      return Math.floor(Math.random() * 256);
-    })
-    .join(".");
+    .map(() => Math.floor(Math.random() * 256))
+    .join('.');
 }
 
-// This is not typo, I mean it. A naive approach though, patch is welcome.
+// This is not a typo. A naive approach though, patch is welcome.
 function evil(script) {
   /* eslint-disable no-unused-vars */
   return ((
