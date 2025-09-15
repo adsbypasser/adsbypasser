@@ -3,7 +3,7 @@ _.register({
     host: [/^imgbb\.com$/, /^ibb\.co$/],
   },
   async ready() {
-    const img = $('meta[property="og:image"]');
-    await $.openImage(img.content);
+    const img = $('.image-viewer-container img');
+    await $.openImage(img.src);
   },
 });
