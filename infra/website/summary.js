@@ -4,24 +4,23 @@ import { fileURLToPath } from "url";
 
 import _ from "lodash";
 import { marked } from "marked";
+import { extractDomainsFromJSDoc } from "./jsdoc-domains.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const CHANGELOG_PATH = toAbsolutePath("../../CHANGELOG.md");
-const SITES_PATH = toAbsolutePath("../../SITES.md");
 const TEMPLATE_PATH = toAbsolutePath("./summary.template.md");
 const MESSAGE_GHPAGES = `**Lite edition** removes image-hosting site support from **Full edition**.
 If you prefer to use other userscripts to deal with image-hosting sites, you can use the Lite edition.
 `;
-const MESSAGE_FULL =
-  "If you do not need image-hosting site support, please see [Lite edition]({url}).";
-const MESSAGE_LITE =
-  "Lite edition does not support image-hosting sites. If you want full-featured edition, please see [here]({url}).";
 
 function getSummaryForGitHubPages() {
   const changeLog = parseChangeLog();
-  const sites = parseSites();
+  const domains = extractDomainsFromJSDoc();
+
+  // Format domains array as markdown list
+  const siteList = domains.map((domain) => `* ${domain}`).join("\n");
 
   let data = fs.readFileSync(TEMPLATE_PATH, {
     encoding: "utf-8",
@@ -30,8 +29,7 @@ function getSummaryForGitHubPages() {
   data = data({
     edition_note: MESSAGE_GHPAGES,
     changelog: changeLog,
-    site_groups: sites.groups,
-    site_count: sites.sites,
+    site_list: siteList,
   });
 
   data = marked(data);
@@ -86,57 +84,6 @@ class ChangeLogParser {
 
   get block_text() {
     return this._block_text;
-  }
-}
-
-// Find sites groups, and counts total supported sites.
-function parseSites() {
-  let data = fs.readFileSync(SITES_PATH, {
-    encoding: "utf-8",
-  });
-  data = marked.lexer(data);
-  const parser = new SitesParser();
-  for (let node of data) {
-    parser.feed(node);
-  }
-  return {
-    groups: parser.groups,
-    sites: parser.sites,
-  };
-}
-
-class SitesParser {
-  constructor() {
-    this._list_level = 0;
-    this._groups = "";
-    this._sites = 0;
-  }
-
-  feed(node) {
-    if (node.type === "list") {
-      this._list_level += 1;
-      if (node.items && node.items.length > 0) {
-        for (const item of node.items) {
-          if (item.type === "list_item") {
-            if (this._list_level === 1) {
-              if (item.text !== "else") {
-                this._groups += `* ${item.text}\n`;
-              }
-            } else if (this._list_level === 2) {
-              this._sites += 1;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  get groups() {
-    return this._groups;
-  }
-
-  get sites() {
-    return this._sites;
   }
 }
 
