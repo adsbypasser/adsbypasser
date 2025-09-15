@@ -1,3 +1,8 @@
+# vX.XX.X - 20xx-xx-xx
+
+* fixed
+    * i.ibb.co
+
 # v7.32.0 - 2025-09-13
 
 * fixed
