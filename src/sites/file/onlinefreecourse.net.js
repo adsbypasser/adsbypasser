@@ -1,3 +1,6 @@
+/**
+ * @domain onlinefreecourse.net
+ */
 _.register({
   rule: {
     host: /^www\.onlinefreecourse\.net$/,

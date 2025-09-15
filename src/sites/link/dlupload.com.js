@@ -1,3 +1,6 @@
+/**
+ * @domain dlupload.com
+ */
 _.register({
   rule: {
     host: /^dlupload\.com$/,

@@ -1,3 +1,7 @@
+/**
+ * @domain exe-links.com
+ * @domain exeo.app
+ */
 _.register({
   rule: {
     host: [/^exeo\.app$/, /^exe-links\.com$/],

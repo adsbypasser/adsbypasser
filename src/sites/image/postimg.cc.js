@@ -1,3 +1,8 @@
+/**
+ * @domain pixxxels.cc
+ * @domain postimg.cc
+ * @domain postlmg.cc
+ */
 _.register({
   rule: {
     host: [/^postimg\.cc$/, /^postlmg\.cc$/, /^pixxxels\.cc$/],

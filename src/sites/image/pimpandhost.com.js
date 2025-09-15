@@ -1,3 +1,6 @@
+/**
+ * @domain pimpandhost.com
+ */
 _.register({
   rule: {
     host: /^(www\.)?pimpandhost\.com$/,

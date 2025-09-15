@@ -1,3 +1,6 @@
+/**
+ * @domain cpmlink.net
+ */
 _.register({
   rule: {
     host: /^cpmlink\.net$/,

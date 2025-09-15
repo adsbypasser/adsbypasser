@@ -1,3 +1,6 @@
+/**
+ * @domain shortmoz.link
+ */
 _.register({
   rule: {
     host: /^shortmoz\.link$/,

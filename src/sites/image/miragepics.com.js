@@ -1,3 +1,6 @@
+/**
+ * @domain miragepics.com
+ */
 (function () {
   _.register({
     rule: {

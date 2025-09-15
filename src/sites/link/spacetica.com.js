@@ -1,3 +1,6 @@
+/**
+ * @domain spacetica.com
+ */
 _.register({
   rule: {
     host: /^spacetica\.com$/,

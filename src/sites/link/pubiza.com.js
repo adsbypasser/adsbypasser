@@ -1,3 +1,6 @@
+/**
+ * @domain icerik.site
+ */
 _.register({
   rule: {
     host: /^icerik\.site$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain uploadhaven.com
+ */
 _.register({
   rule: {
     host: /^uploadhaven\.com$/,

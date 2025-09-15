@@ -1,3 +1,6 @@
+/**
+ * @domain fastpic.org
+ */
 _.register({
   rule: {
     host: /^fastpic\.org$/,

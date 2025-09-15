@@ -1,3 +1,6 @@
+/**
+ * @domain imagetwist.netlify.app
+ */
 _.register({
   rule: {
     host: /^imagetwist\.netlify\.app$/,

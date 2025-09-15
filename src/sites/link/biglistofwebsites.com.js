@@ -1,3 +1,6 @@
+/**
+ * @domain biglistofwebsites.com
+ */
 _.register({
   rule: {
     host: /^(www\.)?biglistofwebsites\.com$/,

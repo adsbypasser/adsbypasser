@@ -1,3 +1,6 @@
+/**
+ * @domain oni.vn
+ */
 _.register({
   rule: {
     host: /^www\.oni\.vn$/,

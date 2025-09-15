@@ -1,3 +1,6 @@
+/**
+ * @domain a2zapk.io
+ */
 _.register({
   rule: {
     host: /^a2zapk\.io$/,

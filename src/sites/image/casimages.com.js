@@ -1,3 +1,6 @@
+/**
+ * @domain casimages.com
+ */
 _.register({
   rule: {
     host: /^www\.casimages\.com$/,

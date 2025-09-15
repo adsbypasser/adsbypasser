@@ -1,3 +1,6 @@
+/**
+ * @domain forex-trnd.com
+ */
 _.register({
   rule: {
     host: /^forex-trnd\.com$/,

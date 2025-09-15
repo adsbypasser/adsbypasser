@@ -1,3 +1,7 @@
+/**
+ * @domain apunkasoftware.net
+ * @domain thefileslocker.net
+ */
 _.register({
   rule: {
     host: /^(www\.)?apunkasoftware\.net$/,

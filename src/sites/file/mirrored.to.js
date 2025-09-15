@@ -1,3 +1,6 @@
+/**
+ * @domain mirrored.to
+ */
 _.register({
   rule: "https://www.mirrored.to/files/*",
   async ready() {

@@ -1,3 +1,6 @@
+/**
+ * @domain katfile.com
+ */
 _.register({
   rule: {
     host: /^katfile\.com$/,

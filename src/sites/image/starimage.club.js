@@ -1,3 +1,6 @@
+/**
+ * @domain starimage.club
+ */
 _.register({
   rule: {
     host: /^starimage\.club$/,

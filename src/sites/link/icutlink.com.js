@@ -1,3 +1,7 @@
+/**
+ * @domain icutlink.com
+ * @domain zegtrends.com
+ */
 _.register({
   rule: {
     host: /^icutlink\.com$/,

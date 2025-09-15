@@ -1,3 +1,7 @@
+/**
+ * @domain ibb.co
+ * @domain imgbb.com
+ */
 _.register({
   rule: {
     host: [/^imgbb\.com$/, /^ibb\.co$/],

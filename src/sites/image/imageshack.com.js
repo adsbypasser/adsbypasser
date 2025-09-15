@@ -1,3 +1,6 @@
+/**
+ * @domain imageshack.com
+ */
 _.register({
   rule: {
     host: /^imageshack\.com$/,

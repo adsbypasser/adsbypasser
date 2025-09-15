@@ -1,3 +1,6 @@
+/**
+ * @domain noelshack.com
+ */
 _.register({
   rule: {
     host: /^www\.noelshack\.com$/,

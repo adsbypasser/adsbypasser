@@ -1,3 +1,6 @@
+/**
+ * @domain lnk2.cc
+ */
 _.register({
   rule: {
     host: /^lnk2\.cc$/,

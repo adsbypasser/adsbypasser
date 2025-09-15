@@ -1,3 +1,6 @@
+/**
+ * @domain hen-tay.net
+ */
 _.register({
   rule: {
     host: /^hen-tay\.net$/,

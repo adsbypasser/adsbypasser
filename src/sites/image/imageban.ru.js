@@ -1,3 +1,6 @@
+/**
+ * @domain imageban.ru
+ */
 _.register({
   rule: {
     host: /^imageban\.ru$/,

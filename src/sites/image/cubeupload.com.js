@@ -1,3 +1,6 @@
+/**
+ * @domain cubeupload.com
+ */
 _.register({
   rule: {
     host: /^cubeupload\.com$/,

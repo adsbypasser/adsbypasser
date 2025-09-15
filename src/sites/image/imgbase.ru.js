@@ -1,3 +1,7 @@
+/**
+ * @domain imgbase.ru
+ * @domain picforall.ru
+ */
 _.register({
   rule: {
     host: [/^(imgbase|picforall)\.ru$/],

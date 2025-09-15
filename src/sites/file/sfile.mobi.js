@@ -1,3 +1,6 @@
+/**
+ * @domain sfile.mobi
+ */
 _.register({
   rule: {
     host: /^sfile\.mobi$/,

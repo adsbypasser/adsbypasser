@@ -1,3 +1,7 @@
+/**
+ * @domain depic.me
+ * @domain dpic.me
+ */
 _.register({
   rule: {
     host: /^(depic|dpic)\.me$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain linkshrink.net
+ */
 _.register({
   rule: {
     host: /^linkshrink\.net$/,

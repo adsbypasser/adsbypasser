@@ -1,3 +1,6 @@
+/**
+ * @domain fotosik.pl
+ */
 _.register({
   rule: {
     host: /^www\.fotosik\.pl$/,

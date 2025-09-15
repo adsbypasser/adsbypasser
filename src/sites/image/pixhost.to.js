@@ -1,3 +1,11 @@
+/**
+ * @domain 3xplanet.com
+ * @domain 3xplanet.net
+ * @domain jav-load.com
+ * @domain javtenshi.com
+ * @domain pixhost.to
+ * @domain uncenav.com
+ */
 _.register({
   rule: [
     {

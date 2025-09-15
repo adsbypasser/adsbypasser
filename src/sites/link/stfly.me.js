@@ -1,3 +1,9 @@
+/**
+ * @domain stfly.me
+ * @domain stfly.xyz
+ * @domain blogbux.net
+ * @domain techtrendmakers.com
+ */
 _.register({
   rule: {
     host: /^stfly\.(me|xyz)$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain segmentnext.com
+ */
 _.register({
   rule: {
     host: /^segmentnext\.com$/,

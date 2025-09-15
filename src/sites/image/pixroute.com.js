@@ -1,3 +1,6 @@
+/**
+ * @domain pixroute.com
+ */
 _.register({
   rule: {
     host: /^(www\.)?pixroute\.com$/,

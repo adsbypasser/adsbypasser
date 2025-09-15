@@ -1,3 +1,6 @@
+/**
+ * @domain techstudify.com
+ */
 _.register({
   rule: {
     host: /^techstudify\.com$/,

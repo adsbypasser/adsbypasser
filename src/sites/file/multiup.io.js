@@ -1,3 +1,6 @@
+/**
+ * @domain multiup.io
+ */
 _.register({
   rule: {
     host: /^multiup\.io$/,

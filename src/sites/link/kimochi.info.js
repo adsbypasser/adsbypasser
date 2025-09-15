@@ -1,3 +1,6 @@
+/**
+ * @domain kimochi.info
+ */
 _.register({
   rule: {
     host: /^kimochi\.info$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain imgflip.com
+ */
 _.register({
   rule: {
     host: /^imgflip\.com$/,

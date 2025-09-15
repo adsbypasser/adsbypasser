@@ -1,3 +1,10 @@
+/**
+ * @domain dewimg.com
+ * @domain outletpic.com
+ * @domain pictwn.com
+ * @domain picyield.com
+ * @domain tezzpic.com
+ */
 _.register({
   rule: {
     host: [

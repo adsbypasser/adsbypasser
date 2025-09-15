@@ -1,3 +1,6 @@
+/**
+ * @domain 1ink.cc
+ */
 _.register({
   rule: {
     host: /^1ink\.cc$/,

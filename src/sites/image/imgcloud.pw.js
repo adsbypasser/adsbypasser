@@ -1,3 +1,18 @@
+/**
+ * @domain 13xpics.space
+ * @domain 14xpics.space
+ * @domain 2i.cz
+ * @domain 2i.sk
+ * @domain 37xpics.space
+ * @domain 47xpics.space
+ * @domain img.javstore.net
+ * @domain imgcloud.pw
+ * @domain imghit.com
+ * @domain lookmyimg.com
+ * @domain pilot007.org
+ * @domain rintor.space
+ * @domain shotcan.com
+ */
 _.register({
   rule: {
     host: [

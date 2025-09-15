@@ -1,3 +1,6 @@
+/**
+ * @domain imageupper.com
+ */
 _.register({
   rule: {
     host: /^imageupper\.com$/,

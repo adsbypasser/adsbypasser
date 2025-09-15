@@ -1,3 +1,6 @@
+/**
+ * @domain getthot.com
+ */
 _.register({
   rule: {
     host: /^getthot\.com$/,

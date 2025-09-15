@@ -1,3 +1,6 @@
+/**
+ * @domain tutwuri.id
+ */
 _.register({
   rule: {
     host: /^tutwuri\.id$/,

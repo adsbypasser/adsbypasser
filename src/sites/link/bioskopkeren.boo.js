@@ -1,3 +1,6 @@
+/**
+ * @domain bioskopkeren.boo
+ */
 _.register({
   rule: {
     host: /^bioskopkeren\.boo$/,

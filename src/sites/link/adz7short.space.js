@@ -1,3 +1,6 @@
+/**
+ * @domain adz7short.space
+ */
 _.register({
   rule: {
     host: /^www\.adz7short\.space$/,
