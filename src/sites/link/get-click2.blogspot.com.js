@@ -1,3 +1,6 @@
+/**
+ * @domain get-click2.blogspot.com
+ */
 _.register({
   rule: {
     host: /^get-click2\.blogspot\.com$/,

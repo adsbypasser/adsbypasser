@@ -1,3 +1,6 @@
+/**
+ * @domain linkpoi.me
+ */
 _.register({
   rule: {
     host: /^linkpoi\.me$/,

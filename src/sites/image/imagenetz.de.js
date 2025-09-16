@@ -1,3 +1,6 @@
+/**
+ * @domain imagenetz.de
+ */
 _.register({
   rule: {
     host: /^www\.imagenetz\.de$/,

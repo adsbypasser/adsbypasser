@@ -1,3 +1,6 @@
+/**
+ * @domain usersdrive.com
+ */
 _.register({
   rule: {
     host: /^usersdrive\.com$/,

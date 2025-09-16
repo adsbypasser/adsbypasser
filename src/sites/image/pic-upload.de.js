@@ -1,3 +1,6 @@
+/**
+ * @domain pic-upload.de
+ */
 _.register({
   rule: {
     host: /^www\.pic-upload\.de$/,

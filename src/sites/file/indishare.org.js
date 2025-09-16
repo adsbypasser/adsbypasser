@@ -1,3 +1,7 @@
+/**
+ * @domain indishare.org
+ * @domain uploadrar.com
+ */
 _.register({
   rule: {
     host: [/^(www\.)?indishare\.org$/, /^uploadrar\.com$/],

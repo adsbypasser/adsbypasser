@@ -1,3 +1,9 @@
+/**
+ * @domain imgbaron.com
+ * @domain imgsto.com
+ * @domain silverpic.com
+ * @domain fappic.com
+ */
 _.register({
   rule: {
     host: [

@@ -1,3 +1,6 @@
+/**
+ * @domain otomi-games.com
+ */
 _.register({
   rule: {
     host: /^otomi-games\.com$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain techgeek.digital
+ */
 _.register({
   rule: {
     host: /^techgeek\.digital$/,

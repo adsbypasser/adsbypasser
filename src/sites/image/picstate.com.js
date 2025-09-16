@@ -1,3 +1,6 @@
+/**
+ * @domain picstate.com
+ */
 _.register({
   rule: {
     host: /^picstate\.com$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain earnlink.io
+ */
 _.register({
   rule: {
     host: /^earnlink\.io$/,

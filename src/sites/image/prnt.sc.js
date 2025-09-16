@@ -1,3 +1,6 @@
+/**
+ * @domain prnt.sc
+ */
 _.register({
   rule: {
     host: [/^prnt\.sc$/],

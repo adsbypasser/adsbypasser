@@ -1,3 +1,8 @@
+/**
+ * @domain fc-lc.com
+ * @domain fc-lc.xyz
+ * @domain loaninsurehub.com
+ */
 _.register({
   rule: {
     host: /^fc-lc\.(com|xyz)$/,

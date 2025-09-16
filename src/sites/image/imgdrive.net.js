@@ -1,3 +1,9 @@
+/**
+ * @domain imgadult.com
+ * @domain imgdrive.net
+ * @domain imgtaxi.com
+ * @domain imgwallet.com
+ */
 _.register({
   rule: {
     host: [

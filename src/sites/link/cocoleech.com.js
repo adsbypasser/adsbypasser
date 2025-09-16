@@ -1,3 +1,6 @@
+/**
+ * @domain cocoleech.com
+ */
 _.register({
   rule: {
     host: /^cocoleech\.com$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain adshnk.com
+ */
 _.register({
   rule: {
     host: /^adshnk\.com$/,

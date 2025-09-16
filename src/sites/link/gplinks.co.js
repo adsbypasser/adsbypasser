@@ -1,3 +1,6 @@
+/**
+ * @domain gplinks.co
+ */
 _.register({
   rule: {
     host: /^gplinks\.co$/,

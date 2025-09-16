@@ -1,3 +1,7 @@
+/**
+ * @domain short.am
+ * @domain srt.am
+ */
 _.register({
   rule: {
     host: /^(short|srt)\.am$/,

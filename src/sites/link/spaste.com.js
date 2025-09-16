@@ -1,3 +1,6 @@
+/**
+ * @domain spaste.com
+ */
 _.register({
   rule: {
     host: /^www\.spaste\.com$/,

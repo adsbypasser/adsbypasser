@@ -1,3 +1,6 @@
+/**
+ * @domain go.tnshort.net
+ */
 _.register({
   rule: {
     host: /^go\.tnshort\.net$/,

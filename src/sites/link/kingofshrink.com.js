@@ -1,3 +1,6 @@
+/**
+ * @domain kingofshrink.com
+ */
 _.register({
   rule: {
     host: /^(www\.)?kingofshrink\.com$/,

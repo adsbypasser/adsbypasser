@@ -1,3 +1,6 @@
+/**
+ * @domain tribuntekno.com
+ */
 _.register({
   rule: {
     host: /^tribuntekno\.com$/,

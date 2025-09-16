@@ -1,3 +1,6 @@
+/**
+ * @domain infidrive.net
+ */
 _.register({
   rule: {
     host: /^infidrive\.net$/,

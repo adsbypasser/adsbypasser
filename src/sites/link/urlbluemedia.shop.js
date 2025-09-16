@@ -1,3 +1,6 @@
+/**
+ * @domain urlbluemedia.shop
+ */
 _.register({
   rule: {
     host: /^urlbluemedia\.shop$/,

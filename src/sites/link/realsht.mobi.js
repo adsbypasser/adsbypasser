@@ -1,3 +1,6 @@
+/**
+ * @domain realsht.mobi
+ */
 _.register({
   rule: {
     host: [/^realsht\.mobi$/],

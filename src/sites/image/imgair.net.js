@@ -1,3 +1,10 @@
+/**
+ * @domain cloudgallery.net
+ * @domain imgair.net
+ * @domain imgblaze.net
+ * @domain imgfira.cc
+ * @domain imgfrost.net
+ */
 _.register({
   rule: {
     host: [

@@ -1,3 +1,6 @@
+/**
+ * @domain turboimagehost.com
+ */
 _.register({
   rule: {
     host: /^www\.turboimagehost\.com$/,

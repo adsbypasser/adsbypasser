@@ -1,3 +1,6 @@
+/**
+ * @domain supercheats.com
+ */
 _.register({
   rule: {
     host: /^(www\.)?supercheats\.com$/,

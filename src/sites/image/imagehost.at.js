@@ -1,3 +1,6 @@
+/**
+ * @domain imagehost.at
+ */
 _.register({
   rule: "https://www.imagehost.at/image/*",
   async ready() {

@@ -1,3 +1,6 @@
+/**
+ * @domain linegee.net
+ */
 _.register({
   rule: {
     host: /^linegee\.net$/,

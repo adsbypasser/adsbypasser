@@ -1,3 +1,6 @@
+/**
+ * @domain k2s.cc
+ */
 _.register({
   rule: {
     host: /^k2s\.cc$/,

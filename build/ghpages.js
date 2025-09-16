@@ -1,6 +1,5 @@
 import childProcess from "child_process";
-import fs from "fs";
-import util from "util";
+import fs from "fs/promises";
 
 import _ from "lodash";
 import gulp from "gulp";
@@ -28,9 +27,9 @@ export function createGhpagesTasks(userscriptTask) {
   return gulp.series(clone, ghpagesTasks);
 }
 
-function makeHtml() {
+async function makeHtml() {
   const options = {
-    summary: getSummaryForGitHubPages(),
+    summary: await getSummaryForGitHubPages(),
     urls: {
       full: "adsbypasser.full.user.js",
       lite: "adsbypasser.lite.user.js",
@@ -91,9 +90,8 @@ copyReleases.displayName = "ghpages:copy:releases";
 async function clone() {
   const repoPath = output.to("ghpages");
 
-  const stat = util.promisify(fs.stat);
   try {
-    const stats = await stat(repoPath);
+    const stats = await fs.stat(repoPath);
     if (stats.isDirectory()) {
       return;
     }

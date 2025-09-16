@@ -1,3 +1,6 @@
+/**
+ * @domain ryuugames.com
+ */
 _.register({
   rule: {
     host: /^www\.ryuugames\.com$/,

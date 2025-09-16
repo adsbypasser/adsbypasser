@@ -1,3 +1,42 @@
+/**
+ * @domain 3minx.com
+ * @domain 4fuk.me
+ * @domain 555fap.com
+ * @domain ai18.pics
+ * @domain anime-jav.com
+ * @domain blackwidof.org
+ * @domain chinese-pics.com
+ * @domain cn-av.com
+ * @domain cnpics.org
+ * @domain cnxx.me
+ * @domain cosplay-xxx.com
+ * @domain cosplay18.pics
+ * @domain fc2ppv.stream
+ * @domain fikfok.net
+ * @domain gofile.download
+ * @domain hentai-sub.com
+ * @domain hentai4f.com
+ * @domain hentaicovid.com
+ * @domain hentaicovid.org
+ * @domain hentaipig.com
+ * @domain hentaixnx.com
+ * @domain idol69.net
+ * @domain javball.com
+ * @domain javring.com
+ * @domain javsunday.com
+ * @domain javtele.net
+ * @domain kin8-av.com
+ * @domain kin8-jav.com
+ * @domain kr-av.com
+ * @domain ovabee.com
+ * @domain pig69.com
+ * @domain porn-pig.com
+ * @domain porn4f.com
+ * @domain porn4f.org
+ * @domain sweetie-fox.com
+ * @domain xcamcovid.com
+ * @domain xxpics.org
+ */
 _.register({
   rule: [
     "https://3minx.com/upload/en/*",

@@ -1,3 +1,6 @@
+/**
+ * @domain keeplinks.org
+ */
 _.register({
   rule: {
     host: /^(www\.)?keeplinks\.org$/,

@@ -1,3 +1,8 @@
+/**
+ * @domain go.bitcosite.com
+ * @domain go.linksly.co
+ * @domain linksly.co
+ */
 _.register({
   rule: {
     host: /^linksly\.co$/,

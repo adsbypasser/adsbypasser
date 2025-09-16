@@ -1,3 +1,6 @@
+/**
+ * @domain n.fcd.su
+ */
 _.register({
   rule: {
     host: /^n\.fcd\.su$/,

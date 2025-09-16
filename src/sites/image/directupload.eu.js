@@ -1,3 +1,6 @@
+/**
+ * @domain directupload.eu
+ */
 _.register({
   rule: {
     host: /^www\.directupload\.eu$/,

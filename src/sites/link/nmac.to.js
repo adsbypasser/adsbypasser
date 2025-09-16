@@ -1,3 +1,6 @@
+/**
+ * @domain nmac.to
+ */
 _.register({
   rule: {
     host: /^nmac\.to$/,

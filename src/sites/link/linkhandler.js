@@ -1,3 +1,28 @@
+/**
+ * @domain adsafelink.com
+ * @domain aylink.co
+ * @domain birdurls.com
+ * @domain clik.pw
+ * @domain clk.sh
+ * @domain cpmlink.pro
+ * @domain dz4link.com
+ * @domain gitlink.pro
+ * @domain linkmoni.com
+ * @domain megalink.pro
+ * @domain met.bz
+ * @domain miniurl.pw
+ * @domain mitly.us
+ * @domain oke.io
+ * @domain oko.sh
+ * @domain pahe.plus
+ * @domain payskip.org
+ * @domain pingit.im
+ * @domain shrinkcash.com
+ * @domain shrt10.com
+ * @domain thotpacks.xyz
+ * @domain tmearn.net
+ * @domain vinaurl.net
+ */
 (function () {
   _.register({
     rule: {

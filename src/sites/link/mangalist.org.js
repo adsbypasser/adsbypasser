@@ -1,3 +1,6 @@
+/**
+ * @domain mangalist.org
+ */
 _.register({
   rule: {
     host: /^mangalist\.org$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain turkdown.com
+ */
 _.register({
   rule: {
     host: /^link\.turkdown\.com$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain javlibrary.com
+ */
 _.register({
   rule: {
     host: /^www\.javlibrary\.com$/,

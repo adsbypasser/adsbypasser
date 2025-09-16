@@ -1,3 +1,7 @@
+/**
+ * @domain bc.vc
+ * @domain bcvc.ink
+ */
 _.register({
   rule: {
     host: /^bcvc\.ink$/,

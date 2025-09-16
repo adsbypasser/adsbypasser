@@ -1,3 +1,7 @@
+/**
+ * @domain image.javbee.vip
+ * @domain javbee.vip
+ */
 _.register({
   rule: {
     host: /^image\.javbee\.vip$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain imgspice.com
+ */
 _.register({
   rule: {
     host: /^imgspice\.com$/,

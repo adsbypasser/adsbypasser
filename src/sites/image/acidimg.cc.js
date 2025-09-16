@@ -1,3 +1,7 @@
+/**
+ * @domain acidimg.cc
+ * @domain imx.to
+ */
 _.register({
   rule: {
     host: [/^acidimg\.cc$/, /^imx\.to$/],

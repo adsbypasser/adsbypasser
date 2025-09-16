@@ -1,3 +1,6 @@
+/**
+ * @domain rlu.ru
+ */
 _.register({
   rule: {
     host: /^preview\.rlu\.ru$/,

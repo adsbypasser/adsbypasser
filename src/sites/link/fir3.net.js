@@ -1,3 +1,6 @@
+/**
+ * @domain fir3.net
+ */
 _.register({
   rule: {
     host: /^fir3\.net$/,

@@ -1,3 +1,6 @@
+/**
+ * @domain ak.sv
+ */
 _.register({
   rule: {
     host: /^ak\.sv$/,

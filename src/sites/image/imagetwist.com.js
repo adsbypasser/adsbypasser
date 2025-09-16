@@ -1,3 +1,11 @@
+/**
+ * @domain croea.com
+ * @domain imagenpic.com
+ * @domain imageshimage.com
+ * @domain imagetwist.com
+ * @domain imagexport.com
+ * @domain vipr.im
+ */
 _.register({
   rule: {
     host: [

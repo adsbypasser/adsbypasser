@@ -1,3 +1,8 @@
+/**
+ * @domain everest.picturedent.org
+ * @domain pacific.picturedent.org
+ * @domain picturedent.org
+ */
 _.register({
   rule: {
     host: [

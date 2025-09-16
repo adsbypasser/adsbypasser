@@ -1,3 +1,8 @@
+/**
+ * @domain im.ge
+ * @domain img.trafficimage.club
+ * @domain trafficimage.club
+ */
 _.register({
   rule: [
     {

@@ -1,3 +1,6 @@
+/**
+ * @domain hotshorturl.com
+ */
 _.register({
   rule: {
     host: /^hotshorturl\.com$/,

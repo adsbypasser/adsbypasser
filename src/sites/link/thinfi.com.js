@@ -1,3 +1,6 @@
+/**
+ * @domain thinfi.com
+ */
 _.register({
   rule: {
     host: /^thinfi\.com$/,

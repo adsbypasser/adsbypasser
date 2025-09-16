@@ -1,3 +1,6 @@
+/**
+ * @domain 1link.club
+ */
 _.register({
   rule: {
     host: /^1link\.club$/,

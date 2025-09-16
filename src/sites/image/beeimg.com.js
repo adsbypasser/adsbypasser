@@ -1,3 +1,6 @@
+/**
+ * @domain beeimg.com
+ */
 _.register({
   rule: {
     host: /^beeimg\.com$/,

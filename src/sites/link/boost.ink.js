@@ -1,3 +1,6 @@
+/**
+ * @domain boost.ink
+ */
 _.register({
   rule: {
     host: /^boost\.ink$/,

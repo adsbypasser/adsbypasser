@@ -1,3 +1,6 @@
+/**
+ * @domain imagevenue.com
+ */
 _.register({
   rule: {
     host: /^www\.imagevenue\.com$/,

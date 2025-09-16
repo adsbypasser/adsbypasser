@@ -1,3 +1,13 @@
+/**
+ * @domain detonating.com
+ * @domain looble.net
+ * @domain pornyhost.com
+ * @domain smilinglinks.com
+ * @domain urlcash.com
+ * @domain urlcash.org
+ * @domain urlgalleries.com
+ * @domain xxxs.org
+ */
 _.register({
   rule: {
     host: [

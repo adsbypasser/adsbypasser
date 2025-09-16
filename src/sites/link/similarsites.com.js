@@ -1,3 +1,6 @@
+/**
+ * @domain similarsites.com
+ */
 _.register({
   rule: {
     host: /^(www\.)?similarsites\.com$/,

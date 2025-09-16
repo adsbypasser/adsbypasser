@@ -1,3 +1,6 @@
+/**
+ * @domain noweconomy.live
+ */
 _.register({
   rule: {
     host: /^noweconomy\.live$/,
