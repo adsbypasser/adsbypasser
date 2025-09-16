@@ -1,6 +1,6 @@
-import { nop } from 'util/core.js';
-import { usw } from 'util/platform.js';
-import { warn } from 'util/logger.js';
+import { nop } from "util/core.js";
+import { usw } from "util/platform.js";
+import { warn } from "util/logger.js";
 
 function removeAllTimer() {
   let handle = window.setInterval(nop, 10);
@@ -16,21 +16,19 @@ function removeAllTimer() {
 
 function nuke(url) {
   try {
-    usw.document.write('nuked by AdsBypasser, leading to ...<br/>');
+    usw.document.write("nuked by AdsBypasser, leading to ...<br/>");
   } catch (e) {
-    warn('nuke failed', e);
+    warn("nuke failed", e);
   }
 
-  const a = document.createElement('a');
+  const a = document.createElement("a");
   a.href = url;
   a.textContent = url;
   document.body.appendChild(a);
 }
 
 function generateRandomIP() {
-  return [0, 0, 0, 0]
-    .map(() => Math.floor(Math.random() * 256))
-    .join('.');
+  return [0, 0, 0, 0].map(() => Math.floor(Math.random() * 256)).join(".");
 }
 
 // This is not a typo. A naive approach though, patch is welcome.

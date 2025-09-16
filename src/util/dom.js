@@ -1,5 +1,5 @@
-import { AdsBypasserError, isString, forEach, find, none } from 'util/core.js';
-import { debug } from 'util/logger.js';
+import { AdsBypasserError, isString, forEach, find, none } from "util/core.js";
+import { debug } from "util/logger.js";
 
 class DomNotFoundError extends AdsBypasserError {
   constructor(selector) {
@@ -7,7 +7,7 @@ class DomNotFoundError extends AdsBypasserError {
   }
 
   get name() {
-    return 'DomNotFoundError';
+    return "DomNotFoundError";
   }
 }
 
@@ -21,7 +21,8 @@ function querySelector(selector, context) {
 function querySelectorOrNull(selector, context) {
   try {
     return querySelector(selector, context);
-  } catch (e) { // eslint-disable-line no-unused-vars
+  } catch (e) {
+    // eslint-disable-line no-unused-vars
     return null;
   }
 }
@@ -34,16 +35,17 @@ function querySelectorAll(selector, context) {
 function toDOM(rawHTML) {
   try {
     const parser = new DOMParser();
-    return parser.parseFromString(rawHTML, 'text/html');
-  } catch (e) { // eslint-disable-line no-unused-vars
-    throw new AdsBypasserError('could not parse HTML to DOM');
+    return parser.parseFromString(rawHTML, "text/html");
+  } catch (e) {
+    // eslint-disable-line no-unused-vars
+    throw new AdsBypasserError("could not parse HTML to DOM");
   }
 }
 
 function remove(selector, context) {
   const nodes = querySelectorAll(selector, context);
   forEach(nodes, (el) => {
-    debug('removed', el);
+    debug("removed", el);
     el.remove();
   });
 }
@@ -52,14 +54,14 @@ function block(selector, context = document) {
   let fn;
   if (isString(selector)) {
     fn = () => remove(selector, context);
-  } else if (typeof selector === 'function') {
+  } else if (typeof selector === "function") {
     fn = (mutation) => {
       mutation.addedNodes.forEach((node) => {
         if (selector(node)) node.parentNode.removeChild(node);
       });
     };
   } else {
-    throw new TypeError('wrong selector');
+    throw new TypeError("wrong selector");
   }
 
   const observer = new MutationObserver((mutations) => {
@@ -73,7 +75,7 @@ function block(selector, context = document) {
 }
 
 function searchFromScriptsByRegExp(pattern, context) {
-  const scripts = querySelectorAll('script', context);
+  const scripts = querySelectorAll("script", context);
   const [, , m] = find(scripts, (s) => {
     const match = s.textContent.match(pattern);
     return match || none;
@@ -82,7 +84,7 @@ function searchFromScriptsByRegExp(pattern, context) {
 }
 
 function searchFromScriptsByString(pattern, context) {
-  const scripts = querySelectorAll('script', context);
+  const scripts = querySelectorAll("script", context);
   const [, m] = find(scripts, (s) => {
     const idx = s.textContent.indexOf(pattern);
     return idx < 0 ? none : idx;
@@ -91,7 +93,8 @@ function searchFromScriptsByString(pattern, context) {
 }
 
 function searchFromScripts(pattern, context) {
-  if (pattern instanceof RegExp) return searchFromScriptsByRegExp(pattern, context);
+  if (pattern instanceof RegExp)
+    return searchFromScriptsByRegExp(pattern, context);
   if (isString(pattern)) return searchFromScriptsByString(pattern, context);
   return null;
 }

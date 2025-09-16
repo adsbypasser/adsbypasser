@@ -1,50 +1,91 @@
 # AdsBypasser
 
-This user script helps you to:
+Install releases and read docs on the project's [Homepage](https://adsbypasser.github.io/).
 
-* skip countdown ads or continue pages.
-* prevent ad pop-up windows.
+---
+## Build Status
+[![Build Status](https://github.com/adsbypasser/adsbypasser/actions/workflows/core.yaml/badge.svg)](https://github.com/adsbypasser/adsbypasser/actions)
 
-It **CANNOT** help you to solve reCAPTCHAs.
+---
+## Features
 
-Forked from [RedirectionHelper] written by [SuYS].
+- Skip countdowns and “continue” redirect pages where possible.
+- Prevent common ad pop-up windows/overlays.
+- Site-specific handlers for many domains (see `SITES.md`).
+- Lightweight client-side userscript — no analytics or phoning home.
+- **Does not** bypass reCAPTCHA or other interactive bot checks.
 
-Please install from [home page][1].
+---
+## Supported Sites & Platforms
 
-[![Build Status][6]][7]
+See the full list of supported sites in [`SITES.md`](SITES.md) and platform notes in the [Wiki](https://github.com/adsbypasser/adsbypasser/wiki)
+- If a site is missing or broken, please open an [Issue](https://github.com/adsbypasser/adsbypasser/issues) with a sample URL and reproduction steps.
 
+---
+## Installation
 
-## Supported Sites and Platforms
+Recommended: install a userscript manager (Tampermonkey / Violentmonkey / Greasemonkey), then install from the homepage.
+- Full edition and Lite edition are available on the [homepage](https://adsbypasser.github.io/).
 
-See [SITES.md](SITES.md) and [Supported Platforms].
+---
+## Runtime Configuration
 
+AdsBypasser supports runtime configuration (enable/disable handlers, toggle auto-close).
+- See the [configuration page](https://adsbypasser.github.io/configure.html) for details.
 
-## Run-time Configurations
+---
+## Development / How to build
 
-Please see [this page][8] to adjust configurations.
-For more information, please see [here][9].
+Requires Node.js.
 
-
-## How To Build
-
-Please install [Node.js], then run:
-
-```
+```bash
+git clone https://github.com/adsbypasser/adsbypasser.git
+cd adsbypasser
 npm install
 npm run build
 ```
 
-Combined userscript will be `dist/adsbypasser.full.es7.user.js`.
+The combined userscript build (full edition) will be produced under:
 
-For more information, please see [Wiki].
+```text
+dist/adsbypasser.full.es7.user.js
+```
 
-[1]: https://adsbypasser.github.io/
-[6]: https://github.com/adsbypasser/adsbypasser/actions/workflows/core.yaml/badge.svg
-[7]: https://github.com/adsbypasser/adsbypasser/actions
-[8]: https://adsbypasser.github.io/configure.html
-[9]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
-[Node.js]: https://nodejs.org/
-[RedirectionHelper]: https://userscripts-mirror.org/scripts/show/69797
-[SuYS]: https://userscripts-mirror.org/users/SuYS.html
-[Wiki]: https://github.com/adsbypasser/adsbypasser/wiki
-[Supported Platforms]: https://github.com/adsbypasser/adsbypasser/wiki/Supported-Platforms
+Use `npm run watch` if you want a dev watch mode.  
+- See the [Wiki](https://github.com/adsbypasser/adsbypasser/wiki) for build-chain and release instructions.
+
+---
+## Contributing
+
+Contributions welcome: bug reports, issues, PRs, new site handlers.
+
+When opening an issue for a broken/missing site handler, include:
+
+- A reproducible example URL (or local HTML if protected).  
+- Browser + userscript manager + script version.  
+- Console errors and expected behaviour.
+
+If you want help implementing a handler, tag the issue or PR and request guidance — maintainers/community can advise.
+
+---
+## Troubleshooting / FAQ
+
+**Q:** Why doesn’t AdsBypasser bypass reCAPTCHA?  
+**A:** reCAPTCHA is an interactive bot check and intentionally not bypassed.
+
+**Q:** AdsBypasser doesn’t work on a page — what now?  
+**A:** Open an issue with the URL, userscript version, browser and a short description; attach console output if available.
+
+---
+## Security & License
+
+- Client-side userscript, no telemetry by default; review `dist/` before installing if concerned.  
+- Do not use to bypass payment walls or violate site terms of service.  
+- Licensed under the 'BSD 3-Clause License' — see [`LICENSE`](LICENSE) in the repo.
+
+---
+## Acknowledgements
+
+Forked from [RedirectionHelper](https://userscripts-mirror.org/scripts/show/69797) by [SuYS](https://userscripts-mirror.org/users/SuYS.html).
+
+Thanks to contributors and maintainers.

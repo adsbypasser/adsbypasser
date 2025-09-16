@@ -1,10 +1,10 @@
-import { isString, wait, forEach } from 'util/core.js';
-import { info, warn } from 'util/logger.js';
+import { isString, wait, forEach } from "util/core.js";
+import { info, warn } from "util/logger.js";
 
 function prepare(element) {
   // HACK: create a body if called before DOMContentLoaded
   if (!document.body) {
-    document.body = document.createElement('body');
+    document.body = document.createElement("body");
   }
   document.body.appendChild(element);
   // yield execution for the event loop
@@ -12,12 +12,12 @@ function prepare(element) {
 }
 
 async function get(url) {
-  const a = document.createElement('a');
+  const a = document.createElement("a");
   a.href = url;
 
   let clicked = false;
   a.addEventListener(
-    'click',
+    "click",
     (event) => {
       event.stopPropagation();
       clicked = true;
@@ -30,23 +30,23 @@ async function get(url) {
 
   const tick = setInterval(() => {
     if (clicked) {
-      info('already clicked');
+      info("already clicked");
       clearInterval(tick);
       return;
     }
-    info('try again');
+    info("try again");
     a.click();
   }, 500);
 }
 
 async function post(path, params = {}) {
-  const form = document.createElement('form');
-  form.method = 'post';
+  const form = document.createElement("form");
+  form.method = "post";
   form.action = path;
 
   forEach(params, (value, key) => {
-    const input = document.createElement('input');
-    input.type = 'hidden';
+    const input = document.createElement("input");
+    input.type = "hidden";
     input.name = key;
     input.value = value;
     form.appendChild(input);
@@ -58,11 +58,12 @@ async function post(path, params = {}) {
 
 async function openLink(to, options = {}) {
   if (!isString(to) || !to) {
-    warn('false URL');
+    warn("false URL");
     return;
   }
 
-  const withReferer = typeof options.referer === 'undefined' ? true : options.referer;
+  const withReferer =
+    typeof options.referer === "undefined" ? true : options.referer;
   const postData = options.post;
 
   const from = window.location.toString();
