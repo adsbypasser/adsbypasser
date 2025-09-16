@@ -22,7 +22,6 @@ function querySelectorOrNull(selector, context) {
   try {
     return querySelector(selector, context);
   } catch {
-    // eslint-disable-line no-unused-vars
     return null;
   }
 }
@@ -37,7 +36,6 @@ function toDOM(rawHTML) {
     const parser = new DOMParser();
     return parser.parseFromString(rawHTML, "text/html");
   } catch {
-    // eslint-disable-line no-unused-vars
     throw new AdsBypasserError("could not parse HTML to DOM");
   }
 }
