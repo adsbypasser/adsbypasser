@@ -1,113 +1,96 @@
 # How to Contribute
 
-Before you create any issue or pull request, please read this guide carefully:
+Before creating any issue or pull request, please read this guide carefully.
 
-* **Please search existing issues first.**
+* **Search existing issues first.**  
+  Avoid creating duplicates. If a similar issue has been closed, consider reopening it.
 
-    Avoid creating a duplicate issue. If the existing issue has been closed,
-    you could reopen it.
+* **One site, one issue.**  
+  Report only one site per issue, unless you are certain they are related.
 
-* **One site, one issue.**
+* **Provide an example link whenever possible.**  
+  A sample link helps speed up testing and development.
 
-    Avoid to report multiple sites in an issue, except you are pretty sure they
-    are similar.
+---
 
-* **Please provide an example link if possible.**
+## TL;DR
 
-    By providing a link, we can speed up testing and developing.
+You are welcome to submit any issue, but it’s appreciated if you review the sections below:
 
-
-## TL; DR
-
-Welcome to submit any issue that you have, but it would be glad if you
-have read sections below:
-
-* [Bug Report](#bug-report)
-* [Feature Request](#feature-request)
+* [Bug Report](#bug-report)  
+* [Feature Request](#feature-request)  
 * [Pull Request](#pull-request)
 
+---
 
 ## Bug Report
 
-Please check your environment matches [Supported Platforms](https://github.com/adsbypasser/adsbypasser/wiki/Supported-Platforms).
+Before submitting, ensure your environment matches [Supported Platforms](https://github.com/adsbypasser/adsbypasser/wiki/Supported-Platforms).
 
-Also please note that it is very hard to guarantee the compatibility to other
-userscripts or browser extensions.
+Compatibility with other userscripts or browser extensions cannot be guaranteed. If others cannot reproduce your problem, try creating a new browser profile.
 
-If other people can not reproduce your problem, you could create a new profile
-and try again.
+**Note:** Requests for new sites are not considered bugs.
 
-**Any new site request is not a bug.**
+### How to Report a Bug
 
-### Opening an issue to report a bug
+Provide as much detail as possible:
 
-Please describe your environment as detial as possible, such as:
+1. **Browser:**  
+   e.g., Mozilla Firefox 23.0.1
 
-1. What browser are you using?
+2. **Userscript manager:**  
+   e.g., GreaseMonkey 1.11
 
-    e.g.: Mozilla Firefox 23.0.1
+3. **Other similar userscripts:**  
+   Are you running any other ad-bypass scripts?
 
-2. What is your userscript manager?
+4. **Other extensions:**  
+   Particularly NoScript, Ghostery, etc.
 
-    e.g.: GreaseMonkey 1.11
+5. **Site being browsed:**  
+   e.g., https://www.google.com/
 
-3. Are you using other similar userscripts to bypass ads as well?
+6. **Steps to reproduce the bug:**  
+   e.g., Visit the above site with other userscripts installed.
 
-4. What other extensions are you using? (notably NoScript or Ghostery)
+7. **What went wrong:**  
+   e.g., The redirect did not happen.
 
-5. What site are you browsing?
+8. **Expected behavior:**  
+   e.g., The redirect should work properly.
 
-    e.g.: https://www.google.com/
+The more information you provide, the easier it is to address the issue.
 
-6. How to reproduce this bug?
-
-    e.g.: Visit the above site with other userscript installed
-    (http://us.o/script/xxxxxx).
-
-7. What went wrong?
-
-    e.g.: It does not redirect.
-
-8. What did you expect?
-
-    e.g.: It should redirect properly.
-
-The more information you provide, the easier the issue could be addressed.
+---
 
 ## Feature Request
 
-Any feature request is welcome but won't always be accepted.
+All feature requests are welcome but may not always be accepted.
 
-### Opening an issue to request a feature
+### How to Request a Feature
 
-Typical feature types are:
+Typical types of feature requests:
 
-* new site
+* **New site:**  
+  Provide a sample link.
 
-    Please provide a sample link.
+* **New functionality:**  
+  Explain why this feature is important.
 
-* new functionality
-
-    Please explain why this is important to you.
-
+---
 
 ## Pull Request
 
-Please send the Pull Request (PR) to the `develop` branch.
+Send pull requests (PRs) to the `develop` branch.
 
-There is something you should keep in mind:
+Keep in mind:
 
-* coding style
+* **Coding style:**  
+  Follow consistent indentation. Using an editor with vim modeline support is recommended.
 
-    Especially indention, you should use an editor which supports vim's
-    modeline feature.
+* **Reusing existing rules:**  
+  Some sites share the same system (e.g., *adf.ly*, *linkbucks.com*, *bc.vc*).  
+  If your site is similar to an existing one, update the URL rule instead of creating a new file.
 
-* some sites use same system
-
-    Such as *adf.ly*, *linkbucks.com*, *bc.vc* ... etc.
-    If you can find an existing site which is homogeneous to your new site,
-    simply update the URL rule instead of adding a new file.
-
-* do not add multiple features in one commit
-
-    Such pull request would be rejected. Please split them into different commits.
+* **One feature per commit:**  
+  PRs adding multiple features in a single commit will be rejected. Split them into separate commits.
