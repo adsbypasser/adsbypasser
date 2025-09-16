@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -9,13 +9,13 @@ const SITES_DIR = path.resolve(__dirname, "../../src/sites");
 
 /**
  * Extract domains from JSDoc @domain tags in site files
- * @returns {string[]} Array of domain strings
+ * @returns {Promise<string[]>} Array of domain strings
  */
-function extractDomainsFromJSDoc() {
+async function extractDomainsFromJSDoc() {
   const domains = new Set();
 
   // Start scanning from the sites directory
-  scanDirectory(SITES_DIR, domains);
+  await scanDirectory(SITES_DIR, domains);
 
   // Convert Set to sorted array
   const sortedDomains = Array.from(domains).sort();
@@ -28,16 +28,16 @@ function extractDomainsFromJSDoc() {
  * @param {string} dir - Directory to scan
  * @param {Set<string>} domains - Set to collect domains
  */
-function scanDirectory(dir, domains) {
-  const entries = fs.readdirSync(dir, { withFileTypes: true });
+async function scanDirectory(dir, domains) {
+  const entries = await fs.readdir(dir, { withFileTypes: true });
 
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
 
     if (entry.isDirectory()) {
-      scanDirectory(fullPath, domains);
+      await scanDirectory(fullPath, domains);
     } else if (entry.isFile() && entry.name.endsWith(".js")) {
-      extractDomainsFromFile(fullPath, domains);
+      await extractDomainsFromFile(fullPath, domains);
     }
   }
 }
@@ -47,9 +47,9 @@ function scanDirectory(dir, domains) {
  * @param {string} filePath - Path to the file to scan
  * @param {Set<string>} domains - Set to collect domains
  */
-function extractDomainsFromFile(filePath, domains) {
+async function extractDomainsFromFile(filePath, domains) {
   try {
-    const content = fs.readFileSync(filePath, "utf-8");
+    const content = await fs.readFile(filePath, "utf-8");
 
     // Find JSDoc comments and extract @domain tags
     const jsdocRegex = /\/\*\*[\s\S]*?\*\//g;

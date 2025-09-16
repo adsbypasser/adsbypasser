@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -15,14 +15,14 @@ const MESSAGE_GHPAGES = `**Lite edition** removes image-hosting site support fro
 If you prefer to use other userscripts to deal with image-hosting sites, you can use the Lite edition.
 `;
 
-function getSummaryForGitHubPages() {
-  const changeLog = parseChangeLog();
-  const domains = extractDomainsFromJSDoc();
+async function getSummaryForGitHubPages() {
+  const changeLog = await parseChangeLog();
+  const domains = await extractDomainsFromJSDoc();
 
   // Format domains array as markdown list
   const siteList = domains.map((domain) => `* ${domain}`).join("\n");
 
-  let data = fs.readFileSync(TEMPLATE_PATH, {
+  let data = await fs.readFile(TEMPLATE_PATH, {
     encoding: "utf-8",
   });
   data = _.template(data);
@@ -41,8 +41,8 @@ function toAbsolutePath(path_) {
 }
 
 // Find the latest version's change log.
-function parseChangeLog() {
-  let data = fs.readFileSync(CHANGELOG_PATH, {
+async function parseChangeLog() {
+  let data = await fs.readFile(CHANGELOG_PATH, {
     encoding: "utf-8",
   });
   data = marked.lexer(data);
