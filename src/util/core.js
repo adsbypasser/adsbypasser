@@ -4,7 +4,7 @@ class AdsBypasserError extends Error {
   }
 
   get name() {
-    return 'AdsBypasserError';
+    return "AdsBypasserError";
   }
 }
 
@@ -12,7 +12,9 @@ function forEach(collection, fn) {
   if (isArrayLike(collection)) {
     return Array.prototype.forEach.call(collection, fn);
   }
-  return Object.keys(collection).forEach((k) => fn(collection[k], k, collection));
+  return Object.keys(collection).forEach((k) =>
+    fn(collection[k], k, collection),
+  );
 }
 
 function every(collection, fn) {
@@ -55,16 +57,17 @@ function isArrayLike(collection) {
 }
 
 function isNodeList(collection) {
-  return collection.constructor.name === 'NodeList';
+  return collection.constructor.name === "NodeList";
 }
 
 function partial(fn, ...args) {
-  if (typeof fn !== 'function') throw new AdsBypasserError('must give a function');
+  if (typeof fn !== "function")
+    throw new AdsBypasserError("must give a function");
   return (...innerArgs) => fn(...args.concat(innerArgs));
 }
 
 function isString(value) {
-  return typeof value === 'string' || value instanceof String;
+  return typeof value === "string" || value instanceof String;
 }
 
 function nop() {}
