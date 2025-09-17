@@ -84,13 +84,27 @@ async function beforeDOMReady(handler) {
 
   disableLeavePrompt(usw);
   disableWindowOpen();
-  await handler.start();
+  if (typeof handler.start === 'function')
+    await handler.start();
+  else {
+    if (handler.start.toSrc) {
+      const targetSrc = handler.start.toSrc;
+      window.location.href = document.querySelector(targetSrc).src;
+    }
+  }
 }
 
 async function afterDOMReady(handler) {
   disableLeavePrompt(usw.document.body);
   changeTitle();
-  await handler.ready();
+  if (typeof handler.ready === 'function')
+    await handler.ready();
+  else {
+    if (handler.ready.toSrc) {
+      const targetSrc = handler.ready.toSrc;
+      window.location.href = document.querySelector(targetSrc).src;
+    }
+  }
 }
 
 // -----------------------------
