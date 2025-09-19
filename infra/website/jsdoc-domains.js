@@ -9,13 +9,22 @@ const SITES_DIR = path.resolve(__dirname, "../../src/sites");
 
 /**
  * Extract domains from JSDoc @domain tags in site files
+ * @param {string[]} [directories] - Optional array of subdirectories to scan (e.g., ['file', 'link'])
  * @returns {Promise<string[]>} Array of domain strings
  */
-async function extractDomainsFromJSDoc() {
+async function extractDomainsFromJSDoc(directories = null) {
   const domains = new Set();
 
-  // Start scanning from the sites directory
-  await scanDirectory(SITES_DIR, domains);
+  if (directories) {
+    // Scan only specified directories
+    for (const dir of directories) {
+      const dirPath = path.join(SITES_DIR, dir);
+      await scanDirectory(dirPath, domains);
+    }
+  } else {
+    // Start scanning from the sites directory
+    await scanDirectory(SITES_DIR, domains);
+  }
 
   // Convert Set to sorted array
   const sortedDomains = Array.from(domains).sort();

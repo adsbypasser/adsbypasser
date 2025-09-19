@@ -78,7 +78,13 @@ function makeMeta(supportImage) {
 
   return gulp
     .src(source.to("infra/userscript/metadata.template.js"))
-    .pipe(plugins.change(_.partial(finalizeMetadata, supportImage)))
+    .pipe(
+      plugins.change((content, done) => {
+        finalizeMetadata(supportImage, content)
+          .then((result) => done(null, result))
+          .catch((error) => done(error));
+      }),
+    )
     .pipe(plugins.rename(`adsbypasser.${featureName}.meta.js`))
     .pipe(removeEmptyLines())
     .pipe(gulp.dest(output.path));
