@@ -36,6 +36,4 @@
 <% } %>
 // @noframes
 // @run-at         document-start
-// @include        http://*
-// @include        https://*
 // @connect        *
