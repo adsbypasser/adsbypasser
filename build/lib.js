@@ -35,9 +35,9 @@ async function extractDomainsForMetadata(supportImage) {
   const domains = await extractDomainsFromJSDoc(directories);
 
   // Convert domains to @match format
-  const matchDirectives = domains.map(
-    (domain) => `// @match          *://*.${domain}/`,
-  );
+  const matchDirectives = domains
+    .flatMap((domain) => [domain, `*.${domain}`])
+    .map((domain) => `// @match          *://${domain}/*`);
 
   return matchDirectives;
 }
