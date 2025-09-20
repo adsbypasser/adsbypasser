@@ -14,9 +14,33 @@ import gulpInjectString from "gulp-inject-string";
 import gulpLess from "gulp-less";
 import gulpRename from "gulp-rename";
 import gulpStripComments from "gulp-strip-comments";
+import { extractDomainsFromJSDoc } from "../infra/website/jsdoc-domains.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+/**
+ * Extract domains from JSDoc @domain tags in site files based on supportImage flag
+ * @param {boolean} supportImage - Whether to include image sites
+ * @returns {Promise<string[]>} Array of @match directive strings
+ */
+async function extractDomainsForMetadata(supportImage) {
+  // Define which directories to scan based on supportImage
+  const directories = ["file", "link"];
+  if (supportImage) {
+    directories.push("image");
+  }
+
+  // Use the shared domain extraction function
+  const domains = await extractDomainsFromJSDoc(directories);
+
+  // Convert domains to @match format
+  const matchDirectives = domains
+    .flatMap((domain) => [domain, `*.${domain}`])
+    .map((domain) => `// @match          *://${domain}/*`);
+
+  return matchDirectives;
+}
 
 // Custom ESLint function to replace gulp-eslint
 function createEslintPlugin() {
@@ -176,9 +200,12 @@ function parsePackageJSON() {
   return JSON.parse(pkg);
 }
 
-export function finalizeMetadata(supportImage, content) {
+export async function finalizeMetadata(supportImage, content) {
   const featureName = getFeatureName(supportImage);
   const featurePostfix = supportImage ? "" : " Lite";
+
+  // Extract domains and generate @match directives
+  const matchDirectives = await extractDomainsForMetadata(supportImage);
 
   let s = _.template(content);
   s = s({
@@ -187,8 +214,23 @@ export function finalizeMetadata(supportImage, content) {
     supportImage,
     buildName: featureName,
   });
-  s = ["// ==UserScript==\n", s, "// ==/UserScript==\n"];
+
+  // Add @match directives before the closing // ==/UserScript==
+  const matchSection =
+    matchDirectives.length > 0 ? matchDirectives.join("\n") + "\n" : "";
+
+  s = ["// ==UserScript==\n", s, matchSection, "// ==/UserScript==\n"];
   return s.join("");
+}
+
+/**
+ * Generate domain metadata file content
+ * @param {boolean} supportImage - Whether to include image sites
+ * @returns {string} Domain metadata content
+ */
+export function generateDomainMetadata(supportImage) {
+  const matchDirectives = extractDomainsForMetadata(supportImage);
+  return matchDirectives.join("\n") + "\n";
 }
 
 export function finalizeNamespace(supportImage, content) {
