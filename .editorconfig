@@ -1,15 +1,19 @@
+# Top-most EditorConfig file
 root = true
 
+# Default settings for all files
 [*]
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
 charset = utf-8
 
+# Settings for code files (JS, CSS, LESS, HTML)
 [*.{js,css,less,html}]
 indent_style = space
 indent_size = 2
 
+# Settings for Markdown files
 [*.md]
 indent_style = space
 indent_size = 4
