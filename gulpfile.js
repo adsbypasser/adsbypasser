@@ -1,13 +1,22 @@
+// Import task creators
 import { createUserscriptTasks } from "./build/userscript.js";
 import { createTestTasks } from "./build/test.js";
 import { createGhpagesTasks } from "./build/ghpages.js";
 import { createCheckTasks } from "./build/check.js";
 import { clean } from "./build/clean.js";
 
-const userscript = createUserscriptTasks();
-const test = createTestTasks();
-const ghpages = createGhpagesTasks(userscript);
-const check = createCheckTasks();
+// Initialize tasks
+const userscriptTasks = createUserscriptTasks();
+const testTasks = createTestTasks();
+const ghpagesTasks = createGhpagesTasks(userscriptTasks);
+const checkTasks = createCheckTasks();
 
 // Export tasks for Gulp 5
-export { check, clean, ghpages, test, userscript as default, userscript };
+export {
+  checkTasks as check,
+  clean,
+  ghpagesTasks as ghpages,
+  testTasks as test,
+  userscriptTasks as default,
+  userscriptTasks as userscript,
+};
