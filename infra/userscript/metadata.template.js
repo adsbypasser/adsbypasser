@@ -37,3 +37,4 @@
 // @noframes
 // @run-at         document-start
 // @connect        *
+// @match          *://adsbypasser.github.io/*
