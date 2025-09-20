@@ -4,13 +4,16 @@ import { fileURLToPath } from "url";
 
 import _ from "lodash";
 import { marked } from "marked";
-import { extractDomainsFromJSDoc } from "./jsdoc-domains.js";
+import { extractDomainsFromJSDoc } from "./jsdoc.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CHANGELOG_PATH = toAbsolutePath("../../CHANGELOG.md");
-const TEMPLATE_PATH = toAbsolutePath("./summary.template.md");
+const CHANGELOG_PATH = path.resolve(__dirname, "../CHANGELOG.md");
+const TEMPLATE_PATH = path.resolve(
+  __dirname,
+  "../templates/ghpages/summary.template.md",
+);
 const MESSAGE_GHPAGES = `**Lite edition** removes image-hosting site support from **Full edition**.
 If you prefer to use other userscripts to deal with image-hosting sites, you can use the Lite edition.
 `;

@@ -14,7 +14,7 @@ import gulpInjectString from "gulp-inject-string";
 import gulpLess from "gulp-less";
 import gulpRename from "gulp-rename";
 import gulpStripComments from "gulp-strip-comments";
-import { extractDomainsFromJSDoc } from "../infra/website/jsdoc-domains.js";
+import { extractDomainsFromJSDoc } from "./jsdoc.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

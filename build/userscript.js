@@ -77,7 +77,7 @@ function makeMeta(supportImage) {
   const featureName = getFeatureName(supportImage);
 
   return gulp
-    .src(source.to("infra/userscript/metadata.template.js"))
+    .src(source.to("templates/userscript/metadata.template.js"))
     .pipe(
       plugins.change((content, done) => {
         finalizeMetadata(supportImage, content)
@@ -148,7 +148,7 @@ function makeNamespace(supportImage) {
   const featureName = getFeatureName(supportImage);
 
   return gulp
-    .src(source.to("infra/userscript/namespace.template.js"))
+    .src(source.to("templates/userscript/namespace.template.js"))
     .pipe(plugins.change(_.partial(finalizeNamespace, supportImage)))
     .pipe(plugins.rename(`${featureName}.js`))
     .pipe(gulp.dest(output.to("namespace")));

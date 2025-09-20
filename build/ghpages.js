@@ -4,7 +4,7 @@ import fs from "fs/promises";
 import _ from "lodash";
 import gulp from "gulp";
 
-import { getSummaryForGitHubPages } from "../infra/website/summary.js";
+import { getSummaryForGitHubPages } from "./summary.js";
 import {
   allBuildOptions,
   finalizeHTML,
@@ -43,7 +43,7 @@ async function makeHtml() {
   const outPath = output.to("ghpages");
 
   return gulp
-    .src([source.to("infra/ghpages/index.template.html")])
+    .src([source.to("templates/ghpages/index.template.html")])
     .pipe(plugins.change(_.partial(finalizeHTML, options)))
     .pipe(
       plugins.rename((path_) => {
@@ -56,7 +56,7 @@ makeHtml.displayName = "ghpages:html";
 
 function makeLess() {
   return gulp
-    .src([source.to("infra/ghpages/**/*.less")])
+    .src([source.to("templates/ghpages/**/*.less")])
     .pipe(plugins.less({}))
     .pipe(gulp.dest(output.to("ghpages")));
 }
@@ -64,9 +64,9 @@ makeLess.displayName = "ghpages:less";
 
 function copyFiles() {
   const files = [
-    "infra/ghpages/**/*.css",
-    "infra/ghpages/**/*.js",
-    "infra/ghpages/configure.html",
+    "templates/ghpages/**/*.css",
+    "templates/ghpages/**/*.js",
+    "templates/ghpages/configure.html",
   ];
   return gulp
     .src(files.map(source.to.bind(source)))
