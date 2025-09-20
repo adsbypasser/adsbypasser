@@ -1,12 +1,6 @@
-import {
-  get,
-  post,
-} from 'util/ajax';
-import {
-  getCookie,
-  setCookie,
-  resetCookies,
-} from 'util/cookie';
+// Core utility imports
+import { get, post } from 'util/ajax';
+import { getCookie, setCookie, resetCookies } from 'util/cookie';
 import {
   AdsBypasserError,
   find,
@@ -16,9 +10,7 @@ import {
   tryEvery,
   wait,
 } from 'util/core';
-import {
-  register,
-} from 'util/dispatcher';
+import { register } from 'util/dispatcher';
 import {
   block,
   querySelector,
@@ -29,28 +21,20 @@ import {
   toDOM,
 } from 'util/dom';
 <% if (supportImage) { %>
-import {
-  openImage,
-} from 'util/image';
+import { openImage } from 'util/image';
 <% } %>
-import {
-  openLink,
-} from 'util/link';
-import {
-  info,
-  warn,
-} from 'util/logger';
+import { openLink } from 'util/link';
+import { info, warn } from 'util/logger';
 import {
   evil,
   generateRandomIP,
   nuke,
   removeAllTimer,
 } from 'util/misc';
-import {
-  usw,
-} from 'util/platform';
+import { usw } from 'util/platform';
 
 
+// Functional utility object
 const _ = {
   AdsBypasserError,
   evil,
@@ -67,11 +51,14 @@ const _ = {
 };
 
 
-function $ (selector, context) {
+// DOM utility wrapper
+function $(selector, context) {
   return querySelector(selector, context);
 }
+
 $.$ = querySelectorOrNull;
 $.$$ = querySelectorAll;
+
 $.block = block;
 $.get = get;
 $.getCookie = getCookie;
@@ -90,6 +77,7 @@ $.toDOM = toDOM;
 $.window = usw;
 
 
+// Export symbols
 export {
   _,
   $,
