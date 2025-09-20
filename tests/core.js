@@ -53,18 +53,14 @@ describe("core", () => {
 
     describe("find", () => {
       it("returns the first even number", () => {
-        const [k, v, r] = find([1, 2, 3], (v) =>
-          v % 2 === 0 ? true : none
-        );
+        const [k, v, r] = find([1, 2, 3], (v) => (v % 2 === 0 ? true : none));
         expect(k).toBe(1);
         expect(v).toBe(2);
         expect(r).toBe(true);
       });
 
       it("returns none when no match is found", () => {
-        const [k, v, r] = find([1, 2, 3], (v) =>
-          v === 0 ? 0 : none
-        );
+        const [k, v, r] = find([1, 2, 3], (v) => (v === 0 ? 0 : none));
         expect(k).toBe(none);
         expect(v).toBe(none);
         expect(r).toBe(none);
