@@ -39,10 +39,6 @@ async function getSummaryForGitHubPages() {
   return data;
 }
 
-function toAbsolutePath(path_) {
-  return path.resolve(__dirname, path_);
-}
-
 // Find the latest version's change log.
 async function parseChangeLog() {
   let data = await fs.readFile(CHANGELOG_PATH, {

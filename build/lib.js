@@ -1,4 +1,4 @@
-import fs from "fs";
+import fs from "fs/promises";
 import path from "path";
 import stream from "stream";
 import { fileURLToPath } from "url";
@@ -129,7 +129,6 @@ function createEslintPlugin() {
 const buildOptions = {
   supportImage: [true, false],
 };
-const packageJSON = parsePackageJSON();
 
 // Create ESLint plugin instance
 const eslintPlugin = createEslintPlugin();
@@ -192,9 +191,9 @@ export function getFeatureName(supportImage) {
   return supportImage ? "full" : "lite";
 }
 
-function parsePackageJSON() {
+async function parsePackageJSON() {
   const p = findup("package.json");
-  const pkg = fs.readFileSync(p, {
+  const pkg = await fs.readFile(p, {
     encoding: "utf-8",
   });
   return JSON.parse(pkg);
@@ -204,12 +203,15 @@ export async function finalizeMetadata(supportImage, content) {
   const featureName = getFeatureName(supportImage);
   const featurePostfix = supportImage ? "" : " Lite";
 
+  // Load package.json
+  const pkg = await parsePackageJSON();
+
   // Extract domains and generate @match directives
   const matchDirectives = await extractDomainsForMetadata(supportImage);
 
   let s = _.template(content);
   s = s({
-    version: packageJSON.version,
+    version: pkg.version,
     title: `AdsBypasser${featurePostfix}`,
     supportImage,
     buildName: featureName,
