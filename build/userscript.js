@@ -1,10 +1,12 @@
+import fs from "fs/promises";
+
 import _ from "lodash";
+import findup from "findup-sync";
 import gulp from "gulp";
 
+import { extractDomainsFromJSDoc } from "./jsdoc.js";
 import {
   createNamedTask,
-  finalizeMetadata,
-  finalizeNamespace,
   getFeatureName,
   imageBuildOptions,
   output,
@@ -152,4 +154,69 @@ function makeNamespace(supportImage) {
     .pipe(plugins.change(_.partial(finalizeNamespace, supportImage)))
     .pipe(plugins.rename(`${featureName}.js`))
     .pipe(gulp.dest(output.to("namespace")));
+}
+
+/**
+ * Extract domains from JSDoc @domain tags in site files based on supportImage flag
+ * @param {boolean} supportImage - Whether to include image sites
+ * @returns {Promise<string[]>} Array of @match directive strings
+ */
+async function extractDomainsForMetadata(supportImage) {
+  // Define which directories to scan based on supportImage
+  const directories = ["file", "link"];
+  if (supportImage) {
+    directories.push("image");
+  }
+
+  // Use the shared domain extraction function
+  const domains = await extractDomainsFromJSDoc(directories);
+
+  // Convert domains to @match format
+  const matchDirectives = domains
+    .flatMap((domain) => [domain, `*.${domain}`])
+    .map((domain) => `// @match          *://${domain}/*`);
+
+  return matchDirectives;
+}
+
+async function parsePackageJSON() {
+  const p = findup("package.json");
+  const pkg = await fs.readFile(p, {
+    encoding: "utf-8",
+  });
+  return JSON.parse(pkg);
+}
+
+async function finalizeMetadata(supportImage, content) {
+  const featureName = getFeatureName(supportImage);
+  const featurePostfix = supportImage ? "" : " Lite";
+
+  // Load package.json
+  const pkg = await parsePackageJSON();
+
+  // Extract domains and generate @match directives
+  const matchDirectives = await extractDomainsForMetadata(supportImage);
+
+  let s = _.template(content);
+  s = s({
+    version: pkg.version,
+    title: `AdsBypasser${featurePostfix}`,
+    supportImage,
+    buildName: featureName,
+  });
+
+  // Add @match directives before the closing // ==/UserScript==
+  const matchSection =
+    matchDirectives.length > 0 ? matchDirectives.join("\n") + "\n" : "";
+
+  s = ["// ==UserScript==\n", s, matchSection, "// ==/UserScript==\n"];
+  return s.join("");
+}
+
+function finalizeNamespace(supportImage, content) {
+  let s = _.template(content);
+  s = s({
+    supportImage,
+  });
+  return s;
 }

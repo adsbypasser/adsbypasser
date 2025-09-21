@@ -7,7 +7,6 @@ import gulp from "gulp";
 import { getSummaryForGitHubPages } from "./summary.js";
 import {
   allBuildOptions,
-  finalizeHTML,
   getFeatureName,
   output,
   plugins,
@@ -118,3 +117,9 @@ async function clone() {
   return await cloneTask;
 }
 clone.displayName = "ghpages:clone";
+
+function finalizeHTML(options, content) {
+  let s = _.template(content);
+  s = s(options);
+  return s;
+}
