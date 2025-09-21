@@ -4,7 +4,7 @@ Install releases and read docs on the project's [Homepage](https://adsbypasser.g
 
 ---
 ## Build Status
-[![Build Status](https://github.com/adsbypasser/adsbypasser/actions/workflows/release.yaml/badge.svg)](https://github.com/adsbypasser/adsbypasser/actions)
+[![Build Status](https://github.com/adsbypasser/adsbypasser/actions/workflows/unit-test.yaml/badge.svg)](https://github.com/adsbypasser/adsbypasser/actions)
 
 ---
 ## Features
@@ -51,7 +51,7 @@ The combined userscript build (full edition) will be produced under:
 dist/adsbypasser.full.user.js
 ```
 
-Use `npm run watch` if you want a dev watch mode.  
+Use `npm run watch` if you want a dev watch mode.
 - See the [Wiki](https://github.com/adsbypasser/adsbypasser/wiki) for build-chain and release instructions.
 
 ---
@@ -61,8 +61,8 @@ Contributions welcome: bug reports, issues, PRs, new site handlers.
 
 When opening an issue for a broken/missing site handler, include:
 
-- A reproducible example URL (or local HTML if protected).  
-- Browser + userscript manager + script version.  
+- A reproducible example URL (or local HTML if protected).
+- Browser + userscript manager + script version.
 - Console errors and expected behaviour.
 
 If you want help implementing a handler, tag the issue or PR and request guidance — maintainers/community can advise.
@@ -70,17 +70,17 @@ If you want help implementing a handler, tag the issue or PR and request guidanc
 ---
 ## Troubleshooting / FAQ
 
-**Q:** Why doesn’t AdsBypasser bypass reCAPTCHA?  
+**Q:** Why doesn’t AdsBypasser bypass reCAPTCHA?
 **A:** reCAPTCHA is an interactive bot check and intentionally not bypassed.
 
-**Q:** AdsBypasser doesn’t work on a page — what now?  
+**Q:** AdsBypasser doesn’t work on a page — what now?
 **A:** Open an issue with the URL, userscript version, browser and a short description; attach console output if available.
 
 ---
 ## Security & License
 
-- Client-side userscript, no telemetry by default; review `dist/` before installing if concerned.  
-- Do not use to bypass payment walls or violate site terms of service.  
+- Client-side userscript, no telemetry by default; review `dist/` before installing if concerned.
+- Do not use to bypass payment walls or violate site terms of service.
 - Licensed under the 'BSD 3-Clause License' — see [`LICENSE`](LICENSE.txt) in the repo.
 
 ---
