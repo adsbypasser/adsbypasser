@@ -8,7 +8,6 @@
  * @domain dz4link.com
  * @domain gitlink.pro
  * @domain linkmoni.com
- * @domain megalink.pro
  * @domain met.bz
  * @domain miniurl.pw
  * @domain mitly.us
@@ -46,7 +45,6 @@
         /^(clk|oko)\.sh$/,
         /^cpmlink\.pro$/,
         /^gitlink\.pro$/,
-        /^megalink\.pro$/,
         /^met\.bz/,
         /^mitly\.us$/,
         /^oke\.io$/,
