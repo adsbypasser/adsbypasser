@@ -5,6 +5,7 @@ import findup from "findup-sync";
 import gulp from "gulp";
 
 import { extractDomainsFromJSDoc } from "./jsdoc.js";
+import { deduplicateRootDomains } from "./domain.js";
 import {
   createNamedTask,
   getFeatureName,
@@ -171,8 +172,11 @@ async function extractDomainsForMetadata(supportImage) {
   // Use the shared domain extraction function
   const domains = await extractDomainsFromJSDoc(directories);
 
+  // Dedupe domains by root domain
+  const uniqueDomains = deduplicateRootDomains(domains);
+
   // Convert domains to @match format
-  const matchDirectives = domains
+  const matchDirectives = uniqueDomains
     .flatMap((domain) => [domain, `*.${domain}`])
     .map((domain) => `// @match          *://${domain}/*`);
 

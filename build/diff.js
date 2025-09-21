@@ -4,6 +4,7 @@ import {
   extractDomainsFromContent,
   isValidDomain,
   extractDomainsFromCommitMessage,
+  deduplicateRootDomains,
 } from "./domain.js";
 
 /**
@@ -146,8 +147,8 @@ export async function extractDomainDiff(fromTag, toTag) {
   const fixed = extractFixedDomains(fromTag, toTag, existingDomains);
 
   return {
-    added: Array.from(added).sort(),
-    retired: Array.from(retired).sort(),
-    fixed: Array.from(fixed).sort(),
+    added: deduplicateRootDomains(Array.from(added)).sort(),
+    retired: deduplicateRootDomains(Array.from(retired)).sort(),
+    fixed: deduplicateRootDomains(Array.from(fixed)).sort(),
   };
 }
