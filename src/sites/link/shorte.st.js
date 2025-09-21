@@ -1,6 +1,5 @@
 /**
  * @domain ceesty.com
- * @domain clkmein.com
  * @domain cllkme.com
  * @domain corneey.com
  * @domain destyy.com
@@ -10,8 +9,7 @@
  */
 (function () {
   const hostRules = [
-    /^(cllkme|clkmein|corneey|ceesty)\.com$/,
-    /^(destyy|festyy|gestyy)\.com$/,
+    /^(ceesty|cllkme|corneey|destyy|festyy|gestyy)\.com$/,
     // else
     /^sh\.st$/,
   ];
