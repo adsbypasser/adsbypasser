@@ -26,6 +26,7 @@
     "gulp-strip-comments": "^2.5.1",
     "lodash": "^4.17.19",
     "marked": "^16.2.1",
+    "parse-domain": "^8.2.2",
     "prettier": "^3.0.0",
     "rimraf": "^6.0.1",
     "vitest": "^3.2.4",
