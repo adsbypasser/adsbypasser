@@ -20,12 +20,6 @@ need more information.
 Please check [this page][2] to see if your browser/userscript manager is
 supported.
 
-# Changelog
-
-<%= changelog %>
-
-[more ...][3]
-
 # Supported Sites
 
 <%= site_list %>
@@ -78,7 +72,6 @@ contributors. (sort by GitHub account)
 
 [1]: https://adsbypasser.github.io/configure.html
 [2]: https://github.com/adsbypasser/adsbypasser/wiki/Supported-Platforms
-[3]: https://github.com/adsbypasser/adsbypasser/blob/master/CHANGELOG.md
 [5]: https://github.com/adsbypasser/adsbypasser/wiki/Runtime-Configurations
 [RedirectionHelper]: https://userscripts-mirror.org/scripts/show/69797
 [SuYS]: https://userscripts-mirror.org/users/SuYS.html

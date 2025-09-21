@@ -2,7 +2,6 @@ import { execSync } from "child_process";
 import { extractDomainsFromJSDoc } from "./jsdoc.js";
 import {
   extractDomainsFromContent,
-  isValidDomain,
   extractDomainsFromCommitMessage,
   deduplicateRootDomains,
 } from "./domain.js";
