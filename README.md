@@ -4,7 +4,7 @@ Install releases and read docs on the project's [Homepage](https://adsbypasser.g
 
 ---
 ## Build Status
-[![Build Status](https://github.com/adsbypasser/adsbypasser/actions/workflows/core.yaml/badge.svg)](https://github.com/adsbypasser/adsbypasser/actions)
+[![Build Status](https://github.com/adsbypasser/adsbypasser/actions/workflows/release.yaml/badge.svg)](https://github.com/adsbypasser/adsbypasser/actions)
 
 ---
 ## Features
