@@ -7,7 +7,8 @@ This user script helps you to:
 
 It **CANNOT** help you to solve reCAPTCHAs.
 
-<%= edition_note %>
+**Lite edition** removes image-hosting site support from **Full edition**.
+If you prefer to use other userscripts to deal with image-hosting sites, you can use the Lite edition.
 
 Any feature request or bug report is welcome. (either in English, 中文 or 日本語)
 You could use [GitHub] to report issues or send pull requests.

@@ -14,9 +14,6 @@ const TEMPLATE_PATH = path.resolve(
   __dirname,
   "../templates/ghpages/summary.template.md",
 );
-const MESSAGE_GHPAGES = `**Lite edition** removes image-hosting site support from **Full edition**.
-If you prefer to use other userscripts to deal with image-hosting sites, you can use the Lite edition.
-`;
 
 async function getSummaryForGitHubPages() {
   const domains = await extractDomainsFromJSDoc();
@@ -32,7 +29,6 @@ async function getSummaryForGitHubPages() {
   });
   data = _.template(data);
   data = data({
-    edition_note: MESSAGE_GHPAGES,
     site_list: siteList,
   });
 
