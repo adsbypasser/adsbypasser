@@ -42,15 +42,10 @@ jobs:
           cat release-notes.md >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
-      - name: Deploy to GitHub Pages with Tag
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          token: ${{ secrets.GH_PAT }}
-          repository-name: adsbypasser/adsbypasser.github.io
-          branch: master
-          folder: ./dist/ghpages
-          tag: ${{ github.ref_name }}
-          commit-message: "${{ github.ref_name }}"
+      - name: Deploy to GitHub Pages
+        run: ./ci/deploy-gh-pages.sh ${{ github.ref_name }} ./dist/ghpages adsbypasser/adsbypasser.github.io
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
 
       - name: Create GitHub Release
         uses: actions/create-release@v1
