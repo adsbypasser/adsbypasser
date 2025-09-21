@@ -43,12 +43,14 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Deploy to GitHub Pages with Tag
-        uses: peaceiris/actions-gh-pages@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/ghpages
-          tag_name: ${{ github.ref_name }}
-          tag_message: ${{ github.ref_name }}
+          token: ${{ secrets.GH_PAT }}
+          repository-name: adsbypasser/adsbypasser.github.io
+          branch: master
+          folder: ./dist/ghpages
+          tag: ${{ github.ref_name }}
+          commit-message: "${{ github.ref_name }}"
 
       - name: Create GitHub Release
         uses: actions/create-release@v1
