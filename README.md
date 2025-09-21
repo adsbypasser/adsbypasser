@@ -18,7 +18,7 @@ Install releases and read docs on the project's [Homepage](https://adsbypasser.g
 ---
 ## Supported Sites & Platforms
 
-See the full list of supported sites in [`SITES.md`](SITES.md) and platform notes in the [Wiki](https://github.com/adsbypasser/adsbypasser/wiki)
+See the full list of supported sites in [homepage](https://adsbypasser.github.io/) and platform notes in the [Wiki](https://github.com/adsbypasser/adsbypasser/wiki)
 - If a site is missing or broken, please open an [Issue](https://github.com/adsbypasser/adsbypasser/issues) with a sample URL and reproduction steps.
 
 ---
@@ -48,7 +48,7 @@ npm run build
 The combined userscript build (full edition) will be produced under:
 
 ```text
-dist/adsbypasser.full.es7.user.js
+dist/adsbypasser.full.user.js
 ```
 
 Use `npm run watch` if you want a dev watch mode.  
@@ -81,7 +81,7 @@ If you want help implementing a handler, tag the issue or PR and request guidanc
 
 - Client-side userscript, no telemetry by default; review `dist/` before installing if concerned.  
 - Do not use to bypass payment walls or violate site terms of service.  
-- Licensed under the 'BSD 3-Clause License' — see [`LICENSE`](LICENSE) in the repo.
+- Licensed under the 'BSD 3-Clause License' — see [`LICENSE`](LICENSE.txt) in the repo.
 
 ---
 ## Acknowledgements
