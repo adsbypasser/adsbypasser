@@ -16,7 +16,6 @@
  * @domain pahe.plus
  * @domain payskip.org
  * @domain pingit.im
- * @domain shrinkcash.com
  * @domain shrt10.com
  * @domain thotpacks.xyz
  * @domain tmearn.net
@@ -30,7 +29,7 @@
         /^adsafelink\.com$/,
         /^birdurls\.com$/,
         /^dz4link\.com$/,
-        /^(linkmoni|shrinkcash)\.com$/,
+        /^linkmoni\.com$/,
         /^shrt10\.com$/,
         // net
         /^tmearn\.net$/,
