@@ -1,6 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import { fileURLToPath } from "url";
+import { extractDomainsFromContent } from "./domain.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,7 +13,7 @@ const SITES_DIR = path.resolve(__dirname, "../src/sites");
  * @param {string[]} [directories] - Optional array of subdirectories to scan (e.g., ['file', 'link'])
  * @returns {Promise<string[]>} Array of domain strings
  */
-async function extractDomainsFromJSDoc(directories = null) {
+export async function extractDomainsFromJSDoc(directories = null) {
   const domains = new Set();
 
   if (directories) {
@@ -59,25 +60,9 @@ async function scanDirectory(dir, domains) {
 async function extractDomainsFromFile(filePath, domains) {
   try {
     const content = await fs.readFile(filePath, "utf-8");
-
-    // Find JSDoc comments and extract @domain tags
-    const jsdocRegex = /\/\*\*[\s\S]*?\*\//g;
-    const domainRegex = /@domain\s+([^\s\*]+)/g;
-
-    let match;
-    while ((match = jsdocRegex.exec(content)) !== null) {
-      const jsdocComment = match[0];
-      let domainMatch;
-      while ((domainMatch = domainRegex.exec(jsdocComment)) !== null) {
-        const domain = domainMatch[1].trim();
-        if (domain) {
-          domains.add(domain);
-        }
-      }
-    }
+    const fileDomains = extractDomainsFromContent(content);
+    fileDomains.forEach((domain) => domains.add(domain));
   } catch (error) {
     console.warn(`Warning: Could not read file ${filePath}:`, error.message);
   }
 }
-
-export { extractDomainsFromJSDoc };

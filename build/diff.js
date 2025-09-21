@@ -1,5 +1,10 @@
 import { execSync } from "child_process";
 import { extractDomainsFromJSDoc } from "./jsdoc.js";
+import {
+  extractDomainsFromContent,
+  isValidDomain,
+  extractDomainsFromCommitMessage,
+} from "./domain.js";
 
 /**
  * Extract domains from JSDoc at a specific git tag using git show
@@ -37,36 +42,6 @@ async function extractDomainsFromJSDocAtTag(tag) {
   }
 
   return domains;
-}
-
-/**
- * Extract domains from file content using JSDoc @domain tags
- * @param {string} content - File content
- * @returns {string[]} Array of domain names
- */
-function extractDomainsFromContent(content) {
-  const domains = [];
-  const domainRegex = /@domain\s+([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/g;
-  let match;
-
-  while ((match = domainRegex.exec(content)) !== null) {
-    const domain = match[1].trim();
-    if (isValidDomain(domain)) {
-      domains.push(domain);
-    }
-  }
-
-  return domains;
-}
-
-/**
- * Validate domain name format
- * @param {string} domain - Domain to validate
- * @returns {boolean} True if valid domain
- */
-function isValidDomain(domain) {
-  // Basic domain validation - contains dots and valid characters
-  return /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(domain);
 }
 
 /**
@@ -134,10 +109,9 @@ function extractFixedDomains(fromTag, toTag, existingDomains) {
 
     for (const commit of commits) {
       // Look for fix: patterns (fixes)
-      const fixMatch = commit.match(/fix:\s*([a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/);
-      if (fixMatch) {
-        const domain = fixMatch[1].trim();
-        if (isValidDomain(domain) && existingDomains.has(domain)) {
+      const domains = extractDomainsFromCommitMessage(commit);
+      for (const domain of domains) {
+        if (existingDomains.has(domain)) {
           fixed.add(domain);
         }
       }
