@@ -1,6 +1,3 @@
-import childProcess from "child_process";
-import fs from "fs/promises";
-
 import _ from "lodash";
 import gulp from "gulp";
 
@@ -13,8 +10,6 @@ import {
   source,
 } from "./lib.js";
 
-const ghpagesRepoURL = "git@github.com:adsbypasser/adsbypasser.github.io.git";
-
 export function createGhpagesTasks(userscriptTask) {
   const copyReleasesTask = gulp.series(userscriptTask, copyReleases);
   const ghpagesTasks = gulp.parallel(
@@ -23,7 +18,7 @@ export function createGhpagesTasks(userscriptTask) {
     copyFiles,
     copyReleasesTask,
   );
-  return gulp.series(clone, ghpagesTasks);
+  return ghpagesTasks;
 }
 
 async function makeHtml() {
@@ -85,38 +80,6 @@ function copyReleases() {
   return gulp.src(files).pipe(gulp.dest(output.to("ghpages/releases")));
 }
 copyReleases.displayName = "ghpages:copy:releases";
-
-async function clone() {
-  const repoPath = output.to("ghpages");
-
-  try {
-    const stats = await fs.stat(repoPath);
-    if (stats.isDirectory()) {
-      return;
-    }
-  } catch (e) {
-    // not exists
-  }
-
-  const cloneTask = new Promise((resolve, reject) => {
-    const p = childProcess.spawn("git", [
-      "clone",
-      ghpagesRepoURL,
-      "-b",
-      "master",
-      repoPath,
-    ]);
-    p.on("exit", (code) => {
-      if (code !== 0) {
-        reject(new Error("process error"));
-      }
-      resolve();
-    });
-  });
-
-  return await cloneTask;
-}
-clone.displayName = "ghpages:clone";
 
 function finalizeHTML(options, content) {
   let s = _.template(content);
