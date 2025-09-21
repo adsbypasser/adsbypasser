@@ -1,11 +1,27 @@
 {
   "name": "adsbypasser",
   "version": "8.0.0",
-  "license": "BSD-2-Clause",
+  "description": "A lightweight userscript that automatically skips countdown ads, bypasses continue pages, and prevents ad pop-up windows on many supported sites.",
+  "keywords": [
+    "userscript",
+    "adblock",
+    "bypass",
+    "skip",
+    "countdown",
+    "ads",
+    "tampermonkey",
+    "violentmonkey",
+    "greasemonkey"
+  ],
+  "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
     "url": "https://github.com/adsbypasser/adsbypasser.git"
   },
+  "bugs": {
+    "url": "https://github.com/adsbypasser/adsbypasser/issues"
+  },
+  "homepage": "https://adsbypasser.github.io/",
   "type": "module",
   "engines": {
     "node": ">=20.19.0",
