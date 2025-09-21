@@ -42,6 +42,7 @@
     "test:watch": "vitest",
     "test:gulp": "gulp clean && gulp test",
     "ghpages": "gulp clean && gulp ghpages",
-    "ci:release-notes": "node ci/release-notes-cli.js"
+    "ci:release-notes": "node ci/release-notes-cli.js",
+    "ci:check-domains": "node ci/check-domains.js"
   }
 }
