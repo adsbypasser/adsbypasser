@@ -1,4 +1,4 @@
-name: core test
+name: unit test
 
 on:
   push:
