@@ -178,14 +178,12 @@ async function main() {
       unreachableDomains.forEach((domain) => console.log(`  - ${domain}`));
     }
 
-    // Exit with error code if any domains are invalid
+    // Report summary (no exit codes for reporting mode)
     const invalidCount = expiredCount + unreachableCount;
     if (invalidCount > 0) {
       console.log(`\n⚠️  Found ${invalidCount} invalid domain(s)`);
-      process.exit(1);
     } else {
       console.log("\n✅ All domains are valid!");
-      process.exit(0);
     }
   } catch (error) {
     console.error(`Error: ${error.message}`);
