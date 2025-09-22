@@ -4,6 +4,7 @@
  * @domain imgblaze.net
  * @domain imgfira.cc
  * @domain imgfrost.net
+ * @domain imgouhmde.sbs
  */
 _.register({
   rule: {
