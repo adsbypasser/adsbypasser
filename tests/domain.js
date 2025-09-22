@@ -1,3 +1,11 @@
+/**
+ * Unit tests for domain utility functions
+ *
+ * This file contains comprehensive tests for the domain utility functions
+ * used in the AdsBypasser project. These functions handle domain validation,
+ * extraction from various sources, and deduplication of root domains.
+ */
+
 import { describe, it, expect } from "vitest";
 import {
   isValidDomain,
@@ -6,8 +14,20 @@ import {
   deduplicateRootDomains,
 } from "../build/domain.js";
 
+/**
+ * Test suite for domain utility functions
+ */
 describe("domain", () => {
+  /**
+   * Test suite for domain validation
+   *
+   * The isValidDomain function validates domain name formats using
+   * the parse-domain package with additional custom validation rules.
+   */
   describe("isValidDomain", () => {
+    /**
+     * Test that valid domain formats are correctly identified
+     */
     it("validates correct domain formats", () => {
       const validDomains = [
         "example.com",
@@ -23,6 +43,9 @@ describe("domain", () => {
       });
     });
 
+    /**
+     * Test that invalid domain formats are correctly rejected
+     */
     it("rejects invalid domain formats", () => {
       const invalidDomains = [
         "invalid", // no TLD
@@ -46,6 +69,9 @@ describe("domain", () => {
       });
     });
 
+    /**
+     * Test edge cases for domain validation
+     */
     it("handles edge cases", () => {
       expect(isValidDomain("a.b")).toBe(true); // parse-domain considers this valid
       expect(isValidDomain("a.bc")).toBe(true); // valid 2-char TLD
@@ -54,7 +80,16 @@ describe("domain", () => {
     });
   });
 
+  /**
+   * Test suite for domain extraction from file content
+   *
+   * The extractDomainsFromContent function extracts domains from JSDoc
+   * comments using @domain tags in source files.
+   */
   describe("extractDomainsFromContent", () => {
+    /**
+     * Test extraction of domains from standard JSDoc comments
+     */
     it("extracts domains from JSDoc comments", () => {
       const content = `
         /**
@@ -63,7 +98,7 @@ describe("domain", () => {
          * Some other content
          */
         function test() {}
-        
+
         /**
          * @domain another.com
          */
@@ -78,6 +113,9 @@ describe("domain", () => {
       ]);
     });
 
+    /**
+     * Test handling of multiple @domain tags in a single comment
+     */
     it("handles multiple @domain tags in single comment", () => {
       const content = `
         /**
@@ -92,6 +130,9 @@ describe("domain", () => {
       expect(domains).toEqual(["first.com", "second.com", "third.com"]);
     });
 
+    /**
+     * Test that invalid domains are filtered out
+     */
     it("filters out invalid domains", () => {
       const content = `
         /**
@@ -107,6 +148,9 @@ describe("domain", () => {
       expect(domains).toEqual(["valid.com", "another-valid.org"]);
     });
 
+    /**
+     * Test handling of content without JSDoc comments
+     */
     it("handles content without JSDoc comments", () => {
       const content = `
         function test() {
@@ -118,11 +162,17 @@ describe("domain", () => {
       expect(domains).toEqual([]);
     });
 
+    /**
+     * Test handling of empty content
+     */
     it("handles empty content", () => {
       const domains = extractDomainsFromContent("");
       expect(domains).toEqual([]);
     });
 
+    /**
+     * Test handling of malformed JSDoc comments
+     */
     it("handles malformed JSDoc comments", () => {
       const content = `
         /* @domain valid.com */
@@ -138,7 +188,16 @@ describe("domain", () => {
     });
   });
 
+  /**
+   * Test suite for domain extraction from commit messages
+   *
+   * The extractDomainsFromCommitMessage function extracts domains from
+   * commit messages, specifically those following the "fix: domain" format.
+   */
   describe("extractDomainsFromCommitMessage", () => {
+    /**
+     * Test extraction of domains from standard fix: commit messages
+     */
     it("extracts domains from fix: commit messages", () => {
       const commitMessages = [
         "fix: example.com",
@@ -154,18 +213,27 @@ describe("domain", () => {
       });
     });
 
+    /**
+     * Test that only the first domain is extracted from commit messages
+     */
     it("handles multiple domains in single commit message", () => {
       const message = "fix: example.com and sub.example.org";
       const domains = extractDomainsFromCommitMessage(message);
       expect(domains).toEqual(["example.com"]);
     });
 
+    /**
+     * Test that invalid domains are filtered out
+     */
     it("filters out invalid domains", () => {
       const message = "fix: invalid";
       const domains = extractDomainsFromCommitMessage(message);
       expect(domains).toEqual([]);
     });
 
+    /**
+     * Test handling of non-fix commit messages
+     */
     it("handles non-fix commit messages", () => {
       const messages = [
         "feat: add new feature",
@@ -180,6 +248,9 @@ describe("domain", () => {
       });
     });
 
+    /**
+     * Test handling of empty or malformed commit messages
+     */
     it("handles empty or malformed commit messages", () => {
       const messages = ["", "fix:", "fix: ", "not a commit message"];
 
@@ -189,6 +260,9 @@ describe("domain", () => {
       });
     });
 
+    /**
+     * Test handling of commit messages with extra whitespace
+     */
     it("handles commit messages with extra whitespace", () => {
       const message = "fix:   example.com   ";
       const domains = extractDomainsFromCommitMessage(message);
@@ -196,7 +270,17 @@ describe("domain", () => {
     });
   });
 
+  /**
+   * Test suite for domain deduplication
+   *
+   * The deduplicateRootDomains function removes duplicated root domains
+   * from an array, keeping only the root domain when multiple subdomains
+   * exist for the same root.
+   */
   describe("deduplicateRootDomains", () => {
+    /**
+     * Test deduplication of subdomains to root domain
+     */
     it("deduplicates subdomains to root domain", () => {
       const domains = [
         "www.example.org",
@@ -208,18 +292,27 @@ describe("domain", () => {
       expect(result).toEqual(["example.org"]);
     });
 
+    /**
+     * Test that root domain is preferred when it exists
+     */
     it("prefers root domain when it exists", () => {
       const domains = ["example.com", "www.example.com", "api.example.com"];
       const result = deduplicateRootDomains(domains);
       expect(result).toEqual(["example.com"]);
     });
 
+    /**
+     * Test handling of only subdomains by returning root domain
+     */
     it("handles only subdomains by returning root domain", () => {
       const domains = ["www.example.com", "api.example.com", "sub.example.com"];
       const result = deduplicateRootDomains(domains);
       expect(result).toEqual(["example.com"]);
     });
 
+    /**
+     * Test handling of mixed domains correctly
+     */
     it("handles mixed domains correctly", () => {
       const domains = [
         "www.example.com",
@@ -232,18 +325,27 @@ describe("domain", () => {
       expect(result).toEqual(["example.com", "test.org"]);
     });
 
+    /**
+     * Test handling of single domains
+     */
     it("handles single domains", () => {
       const domains = ["example.com"];
       const result = deduplicateRootDomains(domains);
       expect(result).toEqual(["example.com"]);
     });
 
+    /**
+     * Test handling of multiple unrelated domains
+     */
     it("handles multiple unrelated domains", () => {
       const domains = ["example.com", "test.org", "another.net"];
       const result = deduplicateRootDomains(domains);
       expect(result).toEqual(["another.net", "example.com", "test.org"]);
     });
 
+    /**
+     * Test that invalid domains are filtered out
+     */
     it("filters out invalid domains", () => {
       const domains = [
         "www.example.com",
@@ -256,11 +358,17 @@ describe("domain", () => {
       expect(result).toEqual(["example.com", "test.org"]);
     });
 
+    /**
+     * Test handling of empty array
+     */
     it("handles empty array", () => {
       const result = deduplicateRootDomains([]);
       expect(result).toEqual([]);
     });
 
+    /**
+     * Test handling of domains with different TLDs
+     */
     it("handles domains with different TLDs", () => {
       const domains = [
         "www.example.com",
@@ -277,6 +385,9 @@ describe("domain", () => {
       ]);
     });
 
+    /**
+     * Test handling of complex subdomain structures
+     */
     it("handles complex subdomain structures", () => {
       const domains = [
         "a.b.example.com",
@@ -289,7 +400,16 @@ describe("domain", () => {
     });
   });
 
+  /**
+   * Integration tests for domain functions
+   *
+   * These tests verify that the domain functions work correctly together
+   * in real-world scenarios.
+   */
   describe("integration tests", () => {
+    /**
+     * Test with real-world JSDoc content
+     */
     it("works with real-world JSDoc content", () => {
       const content = `
         /**
@@ -301,7 +421,7 @@ describe("domain", () => {
         function handleExample() {
           // implementation
         }
-        
+
         /**
          * Another handler
          * @domain test.org
@@ -320,6 +440,9 @@ describe("domain", () => {
       ]);
     });
 
+    /**
+     * Test with real-world commit messages
+     */
     it("works with real-world commit messages", () => {
       const commits = [
         "fix: example.com - resolve timeout issue",
@@ -332,6 +455,9 @@ describe("domain", () => {
       expect(allDomains).toEqual(["example.com", "sub.example.org"]);
     });
 
+    /**
+     * Test consistent validation across functions
+     */
     it("validates domains consistently across functions", () => {
       const testDomains = ["example.com", "invalid", "bad..domain"];
 
@@ -350,6 +476,9 @@ describe("domain", () => {
       });
     });
 
+    /**
+     * Test deduplication in real-world scenarios
+     */
     it("works with deduplication in real-world scenarios", () => {
       // Simulate extracting domains from multiple site files
       const siteDomains = [
