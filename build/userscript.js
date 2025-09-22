@@ -16,13 +16,17 @@ import {
   source,
 } from "./lib.js";
 
-// generate userscripts for all configurations
+/**
+ * Create userscript generation tasks for all configurations
+ * @returns {Function} Gulp parallel task function
+ */
 export function createUserscriptTasks() {
   const tasks = [];
 
   for (const [supportImage] of imageBuildOptions()) {
     const featureName = getFeatureName(supportImage);
 
+    // Create namespace and handlers tasks
     const namespaceTask = createNamedTask(
       `userscript:body:namespace:${featureName}`,
       makeNamespace,
@@ -35,6 +39,7 @@ export function createUserscriptTasks() {
     );
     const namespaceAndHandlers = gulp.parallel(namespaceTask, handlersTask);
 
+    // Create body task
     const bodyTask = createNamedTask(
       `userscript:body:${featureName}`,
       makeBody,
@@ -42,6 +47,7 @@ export function createUserscriptTasks() {
     );
     const body = gulp.series(namespaceAndHandlers, bodyTask);
 
+    // Create meta task
     const metaTask = createNamedTask(
       `userscript:meta:${featureName}`,
       makeMeta,
@@ -49,12 +55,14 @@ export function createUserscriptTasks() {
     );
     const metaAndBody = gulp.parallel(metaTask, body);
 
+    // Create link task
     const linkTask = createNamedTask(
       `userscript:${featureName}`,
       linkFiles,
       supportImage,
     );
 
+    // Combine all tasks for this configuration
     const task = gulp.series(metaAndBody, linkTask);
     tasks.push(task);
   }
@@ -62,7 +70,11 @@ export function createUserscriptTasks() {
   return gulp.parallel(...tasks);
 }
 
-// combine meta and body to userscript
+/**
+ * Combine meta and body files into final userscript
+ * @param {boolean} supportImage - Whether image support is enabled
+ * @returns {stream.Readable} Gulp stream
+ */
 function linkFiles(supportImage) {
   const featureName = getFeatureName(supportImage);
 
@@ -75,7 +87,11 @@ function linkFiles(supportImage) {
     .pipe(gulp.dest(output.path));
 }
 
-// generate meta.js
+/**
+ * Generate meta.js file from template
+ * @param {boolean} supportImage - Whether image support is enabled
+ * @returns {stream.Readable} Gulp stream
+ */
 function makeMeta(supportImage) {
   const featureName = getFeatureName(supportImage);
 
@@ -93,7 +109,11 @@ function makeMeta(supportImage) {
     .pipe(gulp.dest(output.path));
 }
 
-// generate body script
+/**
+ * Generate body script using webpack
+ * @param {boolean} supportImage - Whether image support is enabled
+ * @returns {stream.Readable} Gulp stream
+ */
 function makeBody(supportImage) {
   const featureName = getFeatureName(supportImage);
   const namespacePath = output.to(`namespace/${featureName}.js`);
@@ -130,15 +150,21 @@ function makeBody(supportImage) {
     .pipe(gulp.dest(output.to("body")));
 }
 
-// combine handlers
+/**
+ * Combine handlers from site files
+ * @param {boolean} supportImage - Whether image support is enabled
+ * @returns {stream.Readable} Gulp stream
+ */
 function makeHandlers(supportImage) {
   const featureName = getFeatureName(supportImage);
   const namespaceScript = "import { _, $ } from '__ADSBYPASSER_NAMESPACE__';\n";
 
+  // Define which handlers to include based on image support
   const handlers = ["src/sites/file/*.js", "src/sites/link/*.js"];
   if (supportImage) {
     handlers.push("src/sites/image/*.js");
   }
+
   return gulp
     .src(handlers.map(source.to.bind(source)))
     .pipe(plugins.concat(`${featureName}.js`))
@@ -146,7 +172,11 @@ function makeHandlers(supportImage) {
     .pipe(gulp.dest(output.to("handlers")));
 }
 
-// generate namespace
+/**
+ * Generate namespace file from template
+ * @param {boolean} supportImage - Whether image support is enabled
+ * @returns {stream.Readable} Gulp stream
+ */
 function makeNamespace(supportImage) {
   const featureName = getFeatureName(supportImage);
 
@@ -183,6 +213,10 @@ async function extractDomainsForMetadata(supportImage) {
   return matchDirectives;
 }
 
+/**
+ * Parse package.json file
+ * @returns {Promise<Object>} Parsed package.json object
+ */
 async function parsePackageJSON() {
   const p = findup("package.json");
   const pkg = await fs.readFile(p, {
@@ -191,6 +225,12 @@ async function parsePackageJSON() {
   return JSON.parse(pkg);
 }
 
+/**
+ * Finalize metadata content by injecting package data and domains
+ * @param {boolean} supportImage - Whether image support is enabled
+ * @param {string} content - Template content
+ * @returns {Promise<string>} Finalized metadata content
+ */
 async function finalizeMetadata(supportImage, content) {
   const featureName = getFeatureName(supportImage);
   const featurePostfix = supportImage ? "" : " Lite";
@@ -217,6 +257,12 @@ async function finalizeMetadata(supportImage, content) {
   return s.join("");
 }
 
+/**
+ * Finalize namespace content
+ * @param {boolean} supportImage - Whether image support is enabled
+ * @param {string} content - Template content
+ * @returns {string} Finalized namespace content
+ */
 function finalizeNamespace(supportImage, content) {
   let s = _.template(content);
   s = s({

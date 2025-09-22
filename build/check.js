@@ -2,11 +2,18 @@ import childProcess from "child_process";
 
 import gulp from "gulp";
 
+/**
+ * Create check tasks
+ * @returns {Function} Gulp series task function
+ */
 export function createCheckTasks() {
   return gulp.series(checkGit);
 }
 
-// to ensure there is no experimental code
+/**
+ * Check if the git working tree is clean
+ * @returns {Promise<void>} Promise that resolves if tree is clean, rejects if dirty
+ */
 function checkGit() {
   return new Promise((resolve, reject) => {
     const git = childProcess.spawn("git", ["status", "--porcelain"]);

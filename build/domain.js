@@ -9,6 +9,7 @@ import { parseDomain } from "parse-domain";
  * @returns {boolean} True if valid domain
  */
 export function isValidDomain(domain) {
+  // Check if domain is a valid string
   if (!domain || typeof domain !== "string") {
     return false;
   }
@@ -20,9 +21,8 @@ export function isValidDomain(domain) {
     domain.endsWith(".") || // Ends with dot
     domain.includes("..") || // Consecutive dots
     domain.includes("_") || // Underscore not allowed
-    !domain.includes(".")
+    !domain.includes(".") // Must contain at least one dot
   ) {
-    // Must contain at least one dot
     return false;
   }
 

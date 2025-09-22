@@ -37,6 +37,7 @@ export async function extractDomainsFromJSDoc(directories = null) {
  * Recursively scan all .js files in sites directory
  * @param {string} dir - Directory to scan
  * @param {Set<string>} domains - Set to collect domains
+ * @returns {Promise<void>} Promise that resolves when scanning is complete
  */
 async function scanDirectory(dir, domains) {
   const entries = await fs.readdir(dir, { withFileTypes: true });
@@ -56,6 +57,7 @@ async function scanDirectory(dir, domains) {
  * Extract domains from a single file
  * @param {string} filePath - Path to the file to scan
  * @param {Set<string>} domains - Set to collect domains
+ * @returns {Promise<void>} Promise that resolves when extraction is complete
  */
 async function extractDomainsFromFile(filePath, domains) {
   try {

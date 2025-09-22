@@ -130,9 +130,11 @@ function extractFixedDomains(fromTag, toTag, existingDomains) {
  * @returns {Promise<Object>} Object with added, retired, fixed arrays and metadata
  */
 export async function extractDomainDiff(fromTag, toTag) {
+  // Extract domains at both tags
   const oldDomains = await extractDomainsAtTag(fromTag);
   const newDomains = await extractDomainsAtTag(toTag);
 
+  // Compare domains to find added and retired
   const { added, retired } = compareDomains(oldDomains, newDomains);
 
   // Find domains that exist in both tags for fixed domain detection
@@ -143,8 +145,10 @@ export async function extractDomainDiff(fromTag, toTag) {
     }
   }
 
+  // Extract fixed domains from commit messages
   const fixed = extractFixedDomains(fromTag, toTag, existingDomains);
 
+  // Return sorted results
   return {
     added: deduplicateRootDomains(Array.from(added)).sort(),
     retired: deduplicateRootDomains(Array.from(retired)).sort(),

@@ -10,6 +10,11 @@ import {
   source,
 } from "./lib.js";
 
+/**
+ * Create GitHub Pages generation tasks
+ * @param {Function} userscriptTask - Userscript generation task
+ * @returns {Function} Gulp parallel task function
+ */
 export function createGhpagesTasks(userscriptTask) {
   const copyReleasesTask = gulp.series(userscriptTask, copyReleases);
   const ghpagesTasks = gulp.parallel(
@@ -21,6 +26,10 @@ export function createGhpagesTasks(userscriptTask) {
   return ghpagesTasks;
 }
 
+/**
+ * Generate HTML files from templates
+ * @returns {stream.Readable} Gulp stream
+ */
 async function makeHtml() {
   const options = {
     summary: await getSummaryForGitHubPages(),
@@ -29,11 +38,14 @@ async function makeHtml() {
       lite: "adsbypasser.lite.user.js",
     },
   };
+
+  // Add URLs for all feature combinations
   for (const [supportImage] of allBuildOptions()) {
     const featureName = getFeatureName(supportImage);
     const js = `adsbypasser.${featureName}.user.js`;
     options.urls[featureName] = js;
   }
+
   const outPath = output.to("ghpages");
 
   return gulp
@@ -48,6 +60,10 @@ async function makeHtml() {
 }
 makeHtml.displayName = "ghpages:html";
 
+/**
+ * Compile LESS files to CSS
+ * @returns {stream.Readable} Gulp stream
+ */
 function makeLess() {
   return gulp
     .src([source.to("templates/ghpages/**/*.less")])
@@ -56,6 +72,10 @@ function makeLess() {
 }
 makeLess.displayName = "ghpages:less";
 
+/**
+ * Copy static files to ghpages directory
+ * @returns {stream.Readable} Gulp stream
+ */
 function copyFiles() {
   const files = [
     "templates/ghpages/**/*.css",
@@ -68,8 +88,14 @@ function copyFiles() {
 }
 copyFiles.displayName = "ghpages:copy:files";
 
+/**
+ * Copy release files to ghpages/releases directory
+ * @returns {stream.Readable} Gulp stream
+ */
 function copyReleases() {
   const files = [];
+
+  // Add all feature combinations
   for (const [supportImage] of allBuildOptions()) {
     const featureName = getFeatureName(supportImage);
     let js = output.to(`adsbypasser.${featureName}.user.js`);
@@ -77,10 +103,17 @@ function copyReleases() {
     js = output.to(`adsbypasser.${featureName}.meta.js`);
     files.push(js);
   }
+
   return gulp.src(files).pipe(gulp.dest(output.to("ghpages/releases")));
 }
 copyReleases.displayName = "ghpages:copy:releases";
 
+/**
+ * Finalize HTML content by injecting options
+ * @param {Object} options - Options to inject
+ * @param {string} content - Template content
+ * @returns {string} Finalized HTML content
+ */
 function finalizeHTML(options, content) {
   let s = _.template(content);
   s = s(options);

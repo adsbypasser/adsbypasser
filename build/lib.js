@@ -16,11 +16,18 @@ import gulpStripComments from "gulp-strip-comments";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Custom ESLint function to replace gulp-eslint
+/**
+ * Custom ESLint function to replace gulp-eslint
+ * Provides linting capabilities for Gulp streams
+ */
 function createEslintPlugin() {
   let eslint;
 
   return {
+    /**
+     * Lint files in a Gulp stream
+     * @returns {stream.Transform} Transform stream that lints files
+     */
     eslint: function () {
       return new stream.Transform({
         objectMode: true,
@@ -57,6 +64,10 @@ function createEslintPlugin() {
       });
     },
 
+    /**
+     * Format ESLint results
+     * @returns {stream.Transform} Transform stream that formats results
+     */
     format: function () {
       return new stream.Transform({
         objectMode: true,
@@ -82,6 +93,10 @@ function createEslintPlugin() {
       });
     },
 
+    /**
+     * Fail the stream if ESLint found errors
+     * @returns {stream.Transform} Transform stream that fails on errors
+     */
     failAfterError: function () {
       return new stream.Transform({
         objectMode: true,
@@ -100,14 +115,24 @@ function createEslintPlugin() {
   };
 }
 
+/**
+ * Build configuration options
+ * @type {Object}
+ */
 const buildOptions = {
   supportImage: [true, false],
 };
 
-// Create ESLint plugin instance
+/**
+ * ESLint plugin instance
+ * @type {Object}
+ */
 const eslintPlugin = createEslintPlugin();
 
-// Direct plugin exports for ES modules
+/**
+ * Gulp plugins wrapper
+ * Provides a consistent interface for accessing Gulp plugins
+ */
 export const plugins = {
   change: gulpChange,
   concat: gulpConcat,
@@ -116,28 +141,66 @@ export const plugins = {
   less: gulpLess,
   rename: gulpRename,
   stripComments: gulpStripComments,
+  /**
+   * Webpack plugin wrapper
+   * @param {Object} arg - Webpack configuration
+   * @returns {stream.Transform} Webpack stream
+   */
   webpack: (arg) => {
     arg.mode = "none";
     return webpackStream(arg, webpack);
   },
 };
+
+/**
+ * Source path utilities
+ * Provides methods for resolving source paths
+ */
 export const source = {
+  /**
+   * Get the source root path
+   * @returns {string} Absolute path to source root
+   */
   get path() {
     return path.resolve(__dirname, "..");
   },
-  to(path_) {
-    return path.resolve(this.path, path_);
-  },
-};
-export const output = {
-  get path() {
-    return path.resolve(__dirname, "../dist");
-  },
+  /**
+   * Resolve a path relative to the source root
+   * @param {string} path_ - Relative path to resolve
+   * @returns {string} Absolute path
+   */
   to(path_) {
     return path.resolve(this.path, path_);
   },
 };
 
+/**
+ * Output path utilities
+ * Provides methods for resolving output paths
+ */
+export const output = {
+  /**
+   * Get the output root path
+   * @returns {string} Absolute path to output root
+   */
+  get path() {
+    return path.resolve(__dirname, "../dist");
+  },
+  /**
+   * Resolve a path relative to the output root
+   * @param {string} path_ - Relative path to resolve
+   * @returns {string} Absolute path
+   */
+  to(path_) {
+    return path.resolve(this.path, path_);
+  },
+};
+
+/**
+ * Generate cartesian product of arrays
+ * @param {...Array} args - Arrays to combine
+ * @returns {Generator} Generator that yields combinations
+ */
 function* cartesianProductOf(...args) {
   if (args.length < 1) {
     yield [];
@@ -153,25 +216,55 @@ function* cartesianProductOf(...args) {
   }
 }
 
+/**
+ * Generate all build option combinations
+ * @returns {Generator} Generator that yields build option combinations
+ */
 export function* allBuildOptions() {
   yield* cartesianProductOf(buildOptions.supportImage);
 }
 
+/**
+ * Generate image build option combinations
+ * @returns {Generator} Generator that yields image build option combinations
+ */
 export function* imageBuildOptions() {
   yield* cartesianProductOf(buildOptions.supportImage);
 }
 
+/**
+ * Get feature name based on supportImage flag
+ * @param {boolean} supportImage - Whether image support is enabled
+ * @returns {string} Feature name ("full" or "lite")
+ */
 export function getFeatureName(supportImage) {
   return supportImage ? "full" : "lite";
 }
 
+/**
+ * Create a named Gulp task
+ * @param {string} name - Task name
+ * @param {Function} task - Task function
+ * @param {...any} args - Arguments to pass to task function
+ * @returns {Function} Named task function
+ */
 export function createNamedTask(name, task, ...args) {
   const fn = _.partial(task, ...args);
   fn.displayName = name;
   return fn;
 }
 
+/**
+ * Transform stream that removes empty lines
+ * @extends stream.Transform
+ */
 class RemoveEmptyLines extends stream.Transform {
+  /**
+   * Transform implementation
+   * @param {Object} chunk - Data chunk
+   * @param {string} encoding - Encoding
+   * @param {Function} callback - Callback function
+   */
   _transform(chunk, encoding, callback) {
     let rv = chunk.contents.toString(encoding);
     rv = rv.replace(/^\s*[\r\n]/gm, "");
@@ -180,6 +273,10 @@ class RemoveEmptyLines extends stream.Transform {
   }
 }
 
+/**
+ * Create a remove empty lines transform stream
+ * @returns {RemoveEmptyLines} Transform stream
+ */
 export function removeEmptyLines() {
   return new RemoveEmptyLines({
     objectMode: true,
