@@ -10,9 +10,9 @@
 _.register({
   rule: {
     host: [
-      /(^|\.)urlcash\.(com|org)$/,
       /^(detonating|smilinglinks|urlgalleries)\.com$/,
       /^looble\.net$/,
+      /(^|\.)urlcash\.(com|org)$/,
       /^xxxs\.org$/,
     ],
   },

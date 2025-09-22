@@ -7,8 +7,8 @@
 _.register({
   rule: {
     host: [
+      /^(www\.)?(imgadult|imgtaxi|imgwallet)\.com$/,
       /^(www\.)?imgdrive\.net$/,
-      /^(www\.)?(imgtaxi|imgwallet|imgadult)\.com$/,
     ],
   },
   async ready() {

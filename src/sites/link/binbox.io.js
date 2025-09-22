@@ -1,7 +1,6 @@
 /**
  * @domain binbox.io
  */
-// Binbox links
 _.register({
   rule: [
     {

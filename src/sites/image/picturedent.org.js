@@ -6,9 +6,9 @@
 _.register({
   rule: {
     host: [
-      /^picturedent\.org$/,
       /^everest\.picturedent\.org$/,
       /^pacific\.picturedent\.org$/,
+      /^picturedent\.org$/,
     ],
     path: /^\/image\//,
   },

@@ -4,7 +4,10 @@
  */
 _.register({
   rule: {
-    host: [/^imgbb\.com$/, /^ibb\.co$/],
+    host: [
+      /^ibb\.co$/,
+      /^imgbb\.com$/,
+    ],
   },
   async ready() {
     const img = $(".image-viewer-container img");

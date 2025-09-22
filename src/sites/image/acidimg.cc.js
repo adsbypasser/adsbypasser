@@ -4,7 +4,10 @@
  */
 _.register({
   rule: {
-    host: [/^acidimg\.cc$/, /^imx\.to$/],
+    host: [
+      /^acidimg\.cc$/,
+      /^imx\.to$/,
+    ],
   },
   async ready() {
     let a = $.$("#continuebutton, .button");

@@ -4,7 +4,10 @@
  */
 _.register({
   rule: {
-    host: [/^shortlinkto\.biz$/, /^uplinkto\.hair$/],
+    host: [
+      /^shortlinkto\.biz$/,
+      /^uplinkto\.hair$/,
+    ],
   },
   async ready() {
     const a = $(".view-well a");

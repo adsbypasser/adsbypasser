@@ -10,7 +10,6 @@
 (function () {
   const hostRules = [
     /^(ceesty|cllkme|corneey|destyy|festyy|gestyy)\.com$/,
-    // else
     /^sh\.st$/,
   ];
 

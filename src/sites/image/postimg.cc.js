@@ -5,7 +5,11 @@
  */
 _.register({
   rule: {
-    host: [/^postimg\.cc$/, /^postlmg\.cc$/, /^pixxxels\.cc$/],
+    host: [
+      /^pixxxels\.cc$/,
+      /^postimg\.cc$/,
+      /^postlmg\.cc$/,
+    ],
   },
   async ready() {
     const ele = $("#download");

@@ -9,11 +9,11 @@
 _.register({
   rule: {
     host: [
-      /^imagetwist\.com$/,
-      /^imagenpic\.com$/,
-      /^imagexport\.com$/,
-      /^imageshimage\.com$/,
       /^croea\.com$/,
+      /^imagenpic\.com$/,
+      /^imageshimage\.com$/,
+      /^imagetwist\.com$/,
+      /^imagexport\.com$/,
       /^vipr\.im$/,
     ],
   },

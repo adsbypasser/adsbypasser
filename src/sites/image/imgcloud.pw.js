@@ -17,12 +17,12 @@ _.register({
   rule: {
     host: [
       /^2i\.(cz|sk)$/,
-      /^rintor\.space$/,
       /^[0-9]{1,3}xpics\.space$/,
-      /^imgcloud\.pw$/,
-      /^pilot007\.org$/,
       /^img\.javstore\.net$/,
+      /^imgcloud\.pw$/,
       /^(lookmyimg|shotcan)\.com$/,
+      /^pilot007\.org$/,
+      /^rintor\.space$/,
       /^www\.imghit\.com$/,
     ],
     path: /^\/(image|i)\/.*/,

@@ -1,5 +1,4 @@
 /**
- * @domain bc.vc
  * @domain bcvc.ink
  */
 _.register({
