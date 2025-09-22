@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: AdsBypasser Documentation
+    url: https://github.com/adsbypasser/adsbypasser/blob/master/README.md
+    about: Check the documentation before creating an issue

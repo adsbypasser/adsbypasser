@@ -1,0 +1,50 @@
+name: Request Site
+about: Request support for a new site
+title: '[Request] <site-domain>'
+labels: [enhancement]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **AdsBypasser DOES NOT bypass reCAPTCHA**
+        
+        Note: If FULL LINK is NOT provided in the description, the ticket will be CLOSED after 7 DAYS.
+        
+        **IMPORTANT**: Please update the issue title to include the site domain:
+        `[Request] example.com`
+
+  - type: input
+    id: site-domain
+    attributes:
+      label: Site Domain
+      description: What is the domain of the site you want to be supported?
+      placeholder: example.com
+    validations:
+      required: true
+
+  - type: input
+    id: full-link
+    attributes:
+      label: Full Link
+      description: Please provide a full link from this site
+      placeholder: https://example.com/redirect-link
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of why you'd like this site to be supported
+      placeholder: Describe the site and why it should be supported
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting:
+        1. Please check if there's an existing ticket for the same site
+        2. Make sure you've provided the full link from the site

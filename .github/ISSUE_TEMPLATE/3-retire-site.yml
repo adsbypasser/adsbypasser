@@ -1,0 +1,41 @@
+name: Retire Site
+about: Request removal of support for a site that is no longer active
+title: '[Retire] <site-domain>'
+labels: [retired]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **AdsBypasser DOES NOT bypass reCAPTCHA**
+        
+        Note: If FULL LINK is NOT provided in the description, the ticket will be CLOSED after 7 DAYS.
+        
+        **IMPORTANT**: Please update the issue title to include the site domain:
+        `[Retire] example.com`
+
+  - type: input
+    id: site-domain
+    attributes:
+      label: Site Domain
+      description: What is the domain of the site that should no longer be supported?
+      placeholder: example.com
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of why this site should be retired
+      placeholder: Explain why the site should be removed (e.g., domain expired, site shut down)
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting:
+        1. Please check if there's an existing ticket for the same site
+        2. Make sure you've provided information about why the site should be retired
