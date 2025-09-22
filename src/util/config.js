@@ -1,9 +1,21 @@
+/**
+ * Configuration loader and manager for AdsBypasser
+ *
+ * This module handles loading, validating, and managing user configuration
+ * for the AdsBypasser userscript. It includes functionality for the
+ * configuration page and runtime config access.
+ */
+
 // -----------------------------
 // Config Loader
 // -----------------------------
 import { register } from "util/dispatcher.js";
 import { usw, GMAPI } from "util/platform.js";
 
+/**
+ * Configuration manifest defining all available settings
+ * Each entry defines a configuration option with its properties
+ */
 const MANIFEST = [
   {
     key: "version",
@@ -66,6 +78,12 @@ const MANIFEST = [
 // -----------------------------
 // Helpers
 // -----------------------------
+
+/**
+ * Perform sanity check on configuration values
+ * Ensures all config values are valid and sets defaults for invalid ones
+ * @returns {Promise} - Resolves when sanity check is complete
+ */
 async function sanityCheck() {
   const values = await Promise.all(MANIFEST.map((d) => GMAPI.getValue(d.key)));
   const updates = {};
@@ -81,6 +99,10 @@ async function sanityCheck() {
   );
 }
 
+/**
+ * Wait for the page to be fully loaded
+ * @returns {Promise} - Resolves when page is ready
+ */
 function waitForPage() {
   return new Promise((resolve) => {
     if (document.readyState === "complete" && usw.render) return resolve();
@@ -96,6 +118,10 @@ function waitForPage() {
   });
 }
 
+/**
+ * Dump current configuration values
+ * @returns {Promise<Object>} - Object containing all config values
+ */
 async function dumpConfig() {
   const values = await Promise.all(MANIFEST.map((d) => GMAPI.getValue(d.key)));
   const o = {};
@@ -103,6 +129,11 @@ async function dumpConfig() {
   return o;
 }
 
+/**
+ * Load configuration and set up the configuration page
+ * Registers a handler for the configuration page and sets up rendering
+ * @returns {Promise} - Resolves when configuration is loaded
+ */
 async function loadConfig() {
   await sanityCheck();
 

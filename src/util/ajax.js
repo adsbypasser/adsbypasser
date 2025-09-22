@@ -1,8 +1,27 @@
+/**
+ * AJAX utility functions for AdsBypasser
+ *
+ * This module provides utility functions for making HTTP requests
+ * with proper error handling and data formatting.
+ */
+
 import { AdsBypasserError, map, forEach, none } from "util/core.js";
 import { GMAPI } from "util/platform.js";
 import { debug } from "util/logger.js";
 
+/**
+ * Custom error class for AJAX-related errors
+ */
 class AjaxError extends AdsBypasserError {
+  /**
+   * Create an AjaxError
+   * @param {string} method - HTTP method (GET, POST, etc.)
+   * @param {string} url - Request URL
+   * @param {any} data - Request data
+   * @param {Object} headers - Request headers
+   * @param {number} status - HTTP status code
+   * @param {string} response - Response text
+   */
   constructor(method, url, data, headers, status, response) {
     super(`${method} ${url} got ${status}`);
     this._method = method;
@@ -37,6 +56,11 @@ class AjaxError extends AdsBypasserError {
   }
 }
 
+/**
+ * Flatten nested objects into key-value pairs
+ * @param {Object} object - Object to flatten
+ * @yields {Array} - Array containing flattened key path and value
+ */
 function* flattenObject(object) {
   if (!object) return;
   for (const [k, v] of Object.entries(object)) {
@@ -50,11 +74,22 @@ function* flattenObject(object) {
   }
 }
 
+/**
+ * Flatten key list into a string representation
+ * @param {Array} keyList - List of keys to flatten
+ * @returns {string} - Flattened key string
+ */
 function flattenKey(keyList) {
   const [head, ...rest] = keyList;
   return `${head}${rest.map((_) => `[${_}]`)}`;
 }
 
+/**
+ * Recursively join object properties into a query string
+ * @param {string} prefix - Prefix for the keys
+ * @param {Object} object - Object to join
+ * @returns {string} - Joined query string
+ */
 function deepJoin(prefix, object) {
   const keys = Object.getOwnPropertyNames(object);
   const mapped = map(keys, (k) => {
@@ -66,6 +101,11 @@ function deepJoin(prefix, object) {
   return mapped.join("&");
 }
 
+/**
+ * Convert data to query string format
+ * @param {any} data - Data to convert
+ * @returns {string} - Query string representation
+ */
 function toQuery(data) {
   const type = typeof data;
   if (data === null || (type !== "string" && type !== "object")) return "";
@@ -80,6 +120,11 @@ function toQuery(data) {
   }).join("&");
 }
 
+/**
+ * Convert data to FormData format
+ * @param {any} data - Data to convert
+ * @returns {FormData} - FormData representation
+ */
 function toForm(data) {
   const type = typeof data;
   if (data === null || (type !== "string" && type !== "object")) return "";
@@ -93,6 +138,14 @@ function toForm(data) {
   return form;
 }
 
+/**
+ * Make an AJAX request
+ * @param {string} method - HTTP method
+ * @param {string} url - Request URL
+ * @param {any} data - Request data
+ * @param {Object} headers - Request headers
+ * @returns {Promise} - Promise that resolves with response text or rejects with AjaxError
+ */
 function ajax(method, url, data, headers) {
   debug("ajax", method, url, data, headers);
 
@@ -167,6 +220,13 @@ function ajax(method, url, data, headers) {
   });
 }
 
+/**
+ * Make a GET request
+ * @param {string} url - Request URL
+ * @param {any} data - Query parameters
+ * @param {Object} headers - Request headers
+ * @returns {Promise} - Promise that resolves with response text
+ */
 function get(url, data, headers) {
   data = toQuery(data);
   data = data ? `?${data}` : "";
@@ -174,6 +234,13 @@ function get(url, data, headers) {
   return ajax("GET", url + data, "", headers);
 }
 
+/**
+ * Make a POST request
+ * @param {string} url - Request URL
+ * @param {any} data - POST data
+ * @param {Object} headers - Request headers
+ * @returns {Promise} - Promise that resolves with response text
+ */
 function post(url, data, headers) {
   const h = {
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
