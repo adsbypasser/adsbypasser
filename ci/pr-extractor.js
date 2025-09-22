@@ -2,6 +2,10 @@ import { execSync } from "child_process";
 
 /**
  * Extract merged PR commits from git log between two tags
+ *
+ * This function looks for commits ending with (#<pr number>) which is typical
+ * of squash merges from GitHub PRs.
+ *
  * @param {string} fromTag - Starting tag
  * @param {string} toTag - Ending tag
  * @returns {Array<Object>} Array of commit objects with hash, author, message, prNumber
@@ -46,6 +50,9 @@ export function extractPRsBetweenTags(fromTag, toTag) {
 
 /**
  * Extract author statistics from git log between two tags
+ *
+ * Counts the number of commits per author in the specified range.
+ *
  * @param {string} fromTag - Starting tag
  * @param {string} toTag - Ending tag
  * @returns {Array<Object>} Array of author objects with name, email, commitCount
@@ -89,6 +96,9 @@ export function extractAuthorsBetweenTags(fromTag, toTag) {
 
 /**
  * Get the previous tag for comparison
+ *
+ * Finds the most recent tag before the current tag when sorted by version.
+ *
  * @param {string} currentTag - Current tag
  * @returns {string} Previous tag or null if not found
  */

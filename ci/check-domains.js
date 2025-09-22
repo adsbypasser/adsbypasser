@@ -1,8 +1,20 @@
 #!/usr/bin/env node
 
 /**
- * Simple domain checker - extracts domains from src/sites/**.js and reports validity
+ * Domain Checker
+ *
+ * Extracts domains from src/sites/**.js and reports their validity.
+ * Checks both DNS resolution and HTTP/HTTPS accessibility.
+ *
+ * Usage:
+ *   node check-domains.js [category1] [category2] ...
+ *
+ * Examples:
+ *   node check-domains.js          # Check all categories
+ *   node check-domains.js file     # Check only file category
+ *   node check-domains.js file link image  # Check specific categories
  */
+
 import { extractDomainsFromJSDoc } from "../build/jsdoc.js";
 import { deduplicateRootDomains } from "../build/domain.js";
 import dns from "dns/promises";
@@ -12,6 +24,9 @@ import { URL } from "url";
 
 /**
  * Check if a domain is resolvable via DNS
+ *
+ * Attempts to resolve the domain using both IPv4 and IPv6.
+ *
  * @param {string} domain - Domain to check
  * @returns {Promise<boolean>} True if resolvable
  */
@@ -33,6 +48,9 @@ async function isDomainResolvable(domain) {
 
 /**
  * Check if a domain is accessible via HTTP/HTTPS
+ *
+ * Attempts to make a HEAD request to the domain using both HTTPS and HTTP.
+ *
  * @param {string} domain - Domain to check
  * @returns {Promise<boolean>} True if accessible
  */
@@ -46,14 +64,14 @@ async function isDomainAccessible(domain) {
       const isHttps = protocol === "https";
       const client = isHttps ? https : http;
 
-      const result = await new Promise((resolve, reject) => {
+      const result = await new Promise((resolve) => {
         const req = client.request(
           {
             hostname: urlObj.hostname,
             port: urlObj.port || (isHttps ? 443 : 80),
             path: urlObj.pathname,
             method: "HEAD",
-            timeout: 5000,
+            timeout: 5000, // 5 second timeout
             headers: {
               "User-Agent": "Mozilla/5.0 (compatible; DomainChecker/1.0)",
             },
@@ -64,12 +82,16 @@ async function isDomainAccessible(domain) {
         );
 
         req.on("error", () => resolve(false));
-        req.on("timeout", () => resolve(false));
+        req.on("timeout", () => {
+          req.destroy();
+          resolve(false);
+        });
         req.end();
       });
 
       if (result) return true;
     } catch (error) {
+      // Continue to next protocol
       continue;
     }
   }
@@ -79,20 +101,33 @@ async function isDomainAccessible(domain) {
 
 /**
  * Check domain status
+ *
+ * Determines if a domain is valid, expired, or unreachable.
+ *
  * @param {string} domain - Domain to check
- * @returns {Promise<Object>} Status object
+ * @returns {Promise<Object>} Status object with domain, status, resolvable, and accessible properties
  */
 async function checkDomain(domain) {
   const isResolvable = await isDomainResolvable(domain);
 
   if (!isResolvable) {
-    return { domain, status: "EXPIRED", resolvable: false, accessible: false };
+    return {
+      domain,
+      status: "EXPIRED",
+      resolvable: false,
+      accessible: false
+    };
   }
 
   const isAccessible = await isDomainAccessible(domain);
 
   if (isAccessible) {
-    return { domain, status: "VALID", resolvable: true, accessible: true };
+    return {
+      domain,
+      status: "VALID",
+      resolvable: true,
+      accessible: true
+    };
   } else {
     return {
       domain,
@@ -105,11 +140,17 @@ async function checkDomain(domain) {
 
 /**
  * Main function
+ *
+ * Extracts domains from the sites directory and checks their status.
+ *
+ * @returns {Promise<void>}
  */
 async function main() {
+  // Parse command line arguments
   const args = process.argv.slice(2);
   const categories = args.length > 0 ? args : null;
 
+  // Display extraction information
   console.log("Extracting domains from sites directory...");
   if (categories) {
     console.log(`Categories: ${categories.join(", ")}`);
@@ -124,6 +165,7 @@ async function main() {
 
     console.log(`Found ${uniqueDomains.length} unique root domains\n`);
 
+    // Handle case with no domains found
     if (uniqueDomains.length === 0) {
       console.log("No domains found.");
       return;
@@ -136,6 +178,7 @@ async function main() {
       const result = await checkDomain(domain);
       results.push(result);
 
+      // Display status with appropriate emoji
       const statusIcon =
         result.status === "VALID"
           ? "✅"
@@ -145,7 +188,7 @@ async function main() {
       console.log(`${statusIcon} ${result.status}`);
     }
 
-    // Summary
+    // Generate and display summary
     console.log("\n" + "=".repeat(50));
     console.log("SUMMARY:");
 
@@ -160,7 +203,7 @@ async function main() {
     console.log(`⚠️  Unreachable: ${unreachableCount}`);
     console.log(`📊 Total: ${results.length}`);
 
-    // Show expired domains
+    // Show expired domains if any
     const expiredDomains = results
       .filter((r) => r.status === "EXPIRED")
       .map((r) => r.domain);
@@ -169,7 +212,7 @@ async function main() {
       expiredDomains.forEach((domain) => console.log(`  - ${domain}`));
     }
 
-    // Show unreachable domains
+    // Show unreachable domains if any
     const unreachableDomains = results
       .filter((r) => r.status === "UNREACHABLE")
       .map((r) => r.domain);
@@ -178,7 +221,7 @@ async function main() {
       unreachableDomains.forEach((domain) => console.log(`  - ${domain}`));
     }
 
-    // Report summary (no exit codes for reporting mode)
+    // Display final summary -- (no exit codes for reporting mode)
     const invalidCount = expiredCount + unreachableCount;
     if (invalidCount > 0) {
       console.log(`\n⚠️  Found ${invalidCount} invalid domain(s)`);
