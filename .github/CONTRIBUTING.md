@@ -108,6 +108,9 @@ Send pull requests (PRs) to the `develop` branch.
 
 Keep in mind:
 
+* **Security considerations:**
+  Review our [Security Policy](../SECURITY.md) before submitting code that might have security implications
+
 * **Coding style:**
   Follow consistent indentation. Using an editor with vim modeline support is recommended.
 
