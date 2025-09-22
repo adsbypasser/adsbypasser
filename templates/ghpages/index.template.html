@@ -1,10 +1,16 @@
 <!doctype html>
 <html lang="en">
+  <!--
+    Main index page template for AdsBypasser GitHub Pages
+    This page serves as the landing page for the AdsBypasser project,
+    providing information about the project and links to install the userscript.
+  -->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <title>AdsBypasser</title>
 
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="/css/index.css" />
     <meta
       name="viewport"
@@ -13,6 +19,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- GitHub project link -->
       <header>
         <p class="view">
           <a href="https://github.com/adsbypasser/adsbypasser">
@@ -21,6 +28,7 @@
           </a>
         </p>
 
+        <!-- Installation links -->
         <div class="links" id="releases">
           <a href="/releases/<%= urls.full %>">
             <strong>Install Full Edition</strong>
@@ -30,12 +38,14 @@
           </a>
         </div>
 
+        <!-- Configuration link -->
         <div class="links">
           <a href="/configure.html">
             <strong>Configure Settings</strong>
           </a>
         </div>
 
+        <!-- Issue reporting link -->
         <div class="links">
           <a href="https://github.com/adsbypasser/adsbypasser/issues">
             <strong>Report Bug / Request Feature</strong>
@@ -43,8 +53,10 @@
         </div>
       </header>
 
+      <!-- Main content section populated from summary template -->
       <section><%= summary %></section>
 
+      <!-- Footer with maintainer information -->
       <footer>
         <p>
           This project is maintained by&nbsp;
@@ -58,6 +70,7 @@
       </footer>
     </div>
 
+    <!-- Viewport scaling fix for mobile devices -->
     <script defer src="/js/scale.fix.js"></script>
   </body>
 </html>

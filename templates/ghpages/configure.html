@@ -1,15 +1,22 @@
 <!doctype html>
 <html lang="en">
+  <!--
+    Configuration page template for AdsBypasser
+    This page allows users to configure AdsBypasser settings through a web interface.
+    It dynamically renders configuration options and handles saving user preferences.
+  -->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <title>AdsBypasser Configuration</title>
 
+    <!-- External CSS dependencies -->
     <link
       rel="stylesheet"
       media="screen"
       href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css"
     />
+    <!-- Custom CSS for configuration page -->
     <link rel="stylesheet" media="screen" href="/css/configure.css" />
 
     <meta
@@ -18,6 +25,7 @@
     />
   </head>
   <body>
+    <!-- Warning message displayed when JavaScript is disabled -->
     <div class="container">
       <noscript>
         <div class="alert alert-warning text-center" id="noscript-hint">
@@ -28,10 +36,12 @@
         </div>
       </noscript>
 
+      <!-- Success message displayed when configuration is saved -->
       <div class="alert alert-success text-center" id="msg" role="alert">
         <strong>Configuration Updated</strong>
       </div>
 
+      <!-- Warning message displayed when AdsBypasser is not detected -->
       <div class="alert alert-warning text-center" id="install-hint">
         <strong>
           It seems that AdsBypasser is not installed or active,&nbsp;
@@ -42,6 +52,7 @@
         </strong>
       </div>
 
+      <!-- Main configuration panel -->
       <div id="panel" role="form">
         <div class="form-group" id="options"></div>
         <div class="form-group">
@@ -52,6 +63,7 @@
         </div>
       </div>
 
+      <!-- Template for checkbox configuration options -->
       <script type="text/plain" id="template-checkbox">
         <div class="checkbox">
           <label>
@@ -61,6 +73,7 @@
         </div>
       </script>
 
+      <!-- Template for select/drop-down configuration options -->
       <script type="text/plain" id="template-select">
         <div class="form-group">
           <label class="control-label" for="select-<%= key %>"><%= label %></label>
@@ -74,6 +87,7 @@
       </script>
     </div>
 
+    <!-- External JavaScript dependencies -->
     <script
       defer
       src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"
@@ -86,6 +100,7 @@
       defer
       src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"
     ></script>
+    <!-- Custom JavaScript for rendering and handling configuration -->
     <script defer src="/js/render.js"></script>
   </body>
 </html>

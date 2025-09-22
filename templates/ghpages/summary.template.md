@@ -1,3 +1,9 @@
+<!--
+  Summary template for AdsBypasser GitHub Pages
+  This markdown template provides an overview of the AdsBypasser project,
+  including features, supported platforms, sites, and contributors.
+-->
+
 # Feature
 
 This user script helps you to:
@@ -27,7 +33,7 @@ supported.
 
 # Contributors
 
-Forked from [RedirectionHelper] writen by [SuYS], and here are our nice
+Forked from [RedirectionHelper] written by [SuYS], and here are our nice
 contributors. (sort by GitHub account)
 
 * [a123b](https://github.com/a123b)

@@ -1,3 +1,11 @@
+/**
+ * Namespace template for AdsBypasser userscript
+ *
+ * This template provides the core utility imports and namespace setup
+ * for the AdsBypasser userscript. It imports various utility modules
+ * and creates a unified interface for accessing them.
+ */
+
 // Core utility imports
 import { get, post } from 'util/ajax';
 import { getCookie, setCookie, resetCookies } from 'util/cookie';

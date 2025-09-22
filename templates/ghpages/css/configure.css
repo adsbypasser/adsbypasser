@@ -1,3 +1,11 @@
+/**
+ * Stylesheet for the AdsBypasser configuration page
+ *
+ * This CSS file provides styling for the configuration interface
+ * where users can adjust AdsBypasser settings.
+ */
+
+/* Main configuration panel styling */
 #panel {
   border-width: 1px;
   border-style: solid;
@@ -8,11 +16,13 @@
   display: none;
 }
 
+/* Success message styling */
 #msg {
   margin: 3em;
   opacity: 0;
 }
 
+/* Animation for message transitions */
 .animated {
   -webkit-transition-property: opacity;
   transition-property: opacity;
@@ -22,6 +32,7 @@
   transition-timing-function: linear;
 }
 
+/* Dismissed message styling */
 .dismissed {
   opacity: 1;
   -webkit-transition-duration: 0.5s;
@@ -33,10 +44,12 @@
   opacity: 1;
 }
 
+/* No JavaScript warning styling */
 #noscript-hint {
   margin: 3em;
 }
 
+/* Installation hint styling */
 #install-hint {
   margin: 3em;
   opacity: 0;

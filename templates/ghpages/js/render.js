@@ -1,8 +1,18 @@
+/**
+ * Configuration page rendering logic for AdsBypasser
+ *
+ * This script handles the dynamic rendering of configuration options
+ * and manages user interactions on the configuration page.
+ */
+
 window.render = null;
 window.commit = function commit() {};
+
+// Immediately-invoked function expression (IIFE) to avoid global namespace pollution
 (function () {
   "use strict";
 
+  // DOM element references
   var view = {
     panel: $("#panel"),
     options: $("#options"),
@@ -10,11 +20,21 @@ window.commit = function commit() {};
     msg: $("#msg"),
     installHint: $("#install-hint"),
   };
+
+  // Template functions for different configuration option types
   var template = {
     checkbox: _.template($("#template-checkbox").text()),
     select: _.template($("#template-select").text()),
   };
+
+  // Factory functions for creating UI elements for different option types
   var factory = {
+    /**
+     * Create a checkbox UI element
+     * @param {string} key - Configuration option key
+     * @param {Object} data - Configuration option data
+     * @returns {HTMLElement} - Created checkbox element
+     */
     checkbox: function (key, data) {
       var html = template.checkbox({
         key: key,
@@ -25,6 +45,12 @@ window.commit = function commit() {};
       return $.parseHTML(html);
     },
 
+    /**
+     * Create a select/dropdown UI element
+     * @param {string} key - Configuration option key
+     * @param {Object} data - Configuration option data
+     * @returns {HTMLElement} - Created select element
+     */
     select: function (key, data) {
       var html = template.select({
         key: key,
@@ -37,11 +63,16 @@ window.commit = function commit() {};
     },
   };
 
+  /**
+   * Render configuration options on the page
+   * @param {Object} data - Configuration data to render
+   */
   window.render = function (data) {
     clearTimeout(detection);
 
     view.msg.addClass("animated");
 
+    // Iterate through configuration options and create UI elements
     _.each(data.options, function (v, k) {
       var createUI = factory[v.type];
 
@@ -53,28 +84,32 @@ window.commit = function commit() {};
       view.options.append(d);
     });
 
+    // Show the configuration panel
     view.panel.css("display", "block");
 
+    // Handle message transition end events
     view.msg.on("transitionend webkitTransitionEnd", function () {
       view.msg.removeClass("dismissed");
     });
 
+    // Handle save button click events
     view.save.on("click", function (event) {
       event.preventDefault();
 
       var data = {};
 
-      // checkbox
+      // Collect checkbox values
       view.options.find('input[type="checkbox"]').each(function (k, v) {
         data[v.name] = v.checked;
       });
-      // select
+
+      // Collect select values
       view.options.find("select").each(function (k, v) {
         // TODO not always integer
         data[v.name] = parseInt(v.value, 10);
       });
 
-      // commit changes
+      // Commit changes
       // TODO this returns a promise.
       commit(data);
 
@@ -82,6 +117,7 @@ window.commit = function commit() {};
     });
   };
 
+  // Detection timeout for showing installation hint
   var detection = setTimeout(function () {
     view.installHint.addClass("animated");
     view.installHint.css({
