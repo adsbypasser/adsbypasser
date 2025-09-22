@@ -1,3 +1,11 @@
+/**
+ * Align Center CSS
+ *
+ * Styles for centering content both horizontally and vertically
+ * in the AdsBypasser userscript.
+ */
+
+/* Ensure full height for html and body elements */
 html {
   height: 100%;
 }
@@ -7,6 +15,10 @@ body {
   margin: 0;
 }
 
+/**
+ * Wrapper element for centered content
+ * Uses relative positioning with text alignment for horizontal centering
+ */
 #adsbypasser-wrapper {
   width: 100%;
   height: 100%;
@@ -15,6 +27,10 @@ body {
   line-height: 0;
 }
 
+/**
+ * Image element styling for vertical centering
+ * Uses margin auto with positioning to center vertically
+ */
 #adsbypasser-image {
   margin: auto;
   top: 0;

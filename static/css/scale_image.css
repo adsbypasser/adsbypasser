@@ -1,9 +1,26 @@
+/**
+ * Scale Image CSS
+ *
+ * Styles for resizable images in the AdsBypasser userscript.
+ * Provides zoom cursors and responsive sizing.
+ */
+
+/**
+ * Resizable image styling
+ * Shows zoom-out cursor to indicate the image can be resized
+ * Vendor prefixes are included for maximum browser compatibility
+ */
 #adsbypasser-image.adsbypasser-resizable {
   cursor: -webkit-zoom-out;
   cursor: -moz-zoom-out;
   cursor: zoom-out;
 }
 
+/**
+ * Shrinked resizable image styling
+ * Shows zoom-in cursor and constrains image size to container
+ * Vendor prefixes are included for maximum browser compatibility
+ */
 #adsbypasser-image.adsbypasser-resizable.adsbypasser-shrinked {
   max-width: 100%;
   max-height: 100%;
