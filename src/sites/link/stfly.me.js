@@ -1,7 +1,6 @@
 /**
  * @domain stfly.me
  * @domain stfly.xyz
- * @domain blogbux.net
  * @domain techtrendmakers.com
  */
 _.register({
@@ -10,17 +9,6 @@ _.register({
   },
   async ready() {
     const b = $(".btn-captcha.m-2.form-send");
-    b.click();
-  },
-});
-
-_.register({
-  rule: {
-    host: /^blogbux\.net$/,
-  },
-  async ready() {
-    const b = $(".btn-captcha.m-2.form-send");
-    await _.wait(12000);
     b.click();
   },
 });

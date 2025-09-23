@@ -5,12 +5,10 @@
  * @domain destyy.com
  * @domain festyy.com
  * @domain gestyy.com
- * @domain sh.st
  */
 (function () {
   const hostRules = [
     /^(ceesty|cllkme|corneey|destyy|festyy|gestyy)\.com$/,
-    /^sh\.st$/,
   ];
 
   _.register({
