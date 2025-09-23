@@ -108,14 +108,6 @@ async function isDomainResolvable(domain) {
 async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
   debugLog("Fetching", url);
 
-  // Log the headers we're sending
-  if (DEBUG) {
-    debugLog("Sending headers:");
-    Object.entries(DEFAULT_HEADERS).forEach(([key, value]) => {
-      debugLog(`  ${key}: ${value}`);
-    });
-  }
-
   return new Promise((resolve) => {
     const urlObj = new URL(url);
     const client = urlObj.protocol === "https:" ? https : http;
@@ -137,7 +129,7 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
     const req = client.request(requestOptions, (res) => {
       clearTimeout(timer);
 
-      // Log response headers for debugging
+      // Log response headers for debugging (only if DEBUG is enabled)
       if (DEBUG) {
         debugLog("Response headers:");
         Object.entries(res.headers).forEach(([key, value]) => {
