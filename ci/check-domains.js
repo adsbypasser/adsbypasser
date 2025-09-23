@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * CI Domain Checker (Sequential + Debug)
+ * CI Domain Checker
  *
  * Features:
  *  - DNS resolution
@@ -13,7 +13,6 @@
  *  - Cloudflare / WAF / 5xx error detection
  *  - Blank or JS-only page detection
  *  - Sequential domain checking
- *  - Debug logging for GitHub Actions
  *
  * Note on Cloudflare Bot Protection:
  * Some sites use Cloudflare's advanced bot detection which cannot be bypassed
@@ -21,10 +20,6 @@
  * realistic browser headers. Such sites are marked as CLOUDFLARE_BOT_PROTECTION.
  * For these sites, manual verification is required to determine if they are
  * actually accessible to real users.
- *
- * Environment Variables:
- *  - DEBUG: Set to 'true' to enable debug logging, 'false' to disable.
- *           If not set, defaults to false (debug disabled).
  */
 
 import { extractDomainsFromJSDoc } from "../build/jsdoc.js";
@@ -37,8 +32,6 @@ import { URL } from "url";
 /* ------------------------ CONFIG ------------------------ */
 const MAX_REDIRECTS = 5;
 const REQUEST_TIMEOUT_MS = 30000; // Increased from 10s to 30s to handle slow websites
-// Read DEBUG from environment variable, default to false if not set
-const DEBUG = process.env.DEBUG === 'true' ? true : false;
 
 // Add browser-like headers to avoid bot detection
 // Updated to mimic Firefox browser more closely
@@ -115,26 +108,21 @@ const STATUS_ICONS = {
   CLOUDFLARE_524: "☁️524"
 };
 
-/* ------------------------ DEBUG HELPER ------------------------ */
-function debugLog(...args) {
-  if (DEBUG) console.log("[DEBUG]", ...args);
-}
-
 /* ------------------------ UTILITIES ------------------------ */
 
 /** Check if a domain is resolvable via DNS (IPv4/IPv6) */
 async function isDomainResolvable(domain) {
   try {
     await dns.resolve4(domain);
-    debugLog(domain, "DNS resolved via A record");
+    console.log(domain, "DNS resolved via A record");
     return true;
   } catch {
     try {
       await dns.resolve6(domain);
-      debugLog(domain, "DNS resolved via AAAA record");
+      console.log(domain, "DNS resolved via AAAA record");
       return true;
     } catch {
-      debugLog(domain, "DNS NOT resolved");
+      console.log(domain, "DNS NOT resolved");
       return false;
     }
   }
@@ -142,7 +130,7 @@ async function isDomainResolvable(domain) {
 
 /** Fetch a URL with timeout and return status, headers, and body */
 async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
-  debugLog("Fetching", url);
+  console.log("Fetching", url);
 
   // Extract domain from URL for error logging
   const urlObj = new URL(url);
@@ -161,52 +149,46 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
     };
 
     const timer = setTimeout(() => {
-      debugLog("Timeout fetching", url, "after", timeoutMs, "ms");
+      console.log("Timeout fetching", url, "after", timeoutMs, "ms");
       resolve({ status: "TIMEOUT" });
     }, timeoutMs);
 
     const req = client.request(requestOptions, (res) => {
       clearTimeout(timer);
 
-      // Log response headers for debugging (only if DEBUG is enabled)
-      if (DEBUG) {
-        debugLog("Response received for", url, "with status", res.statusCode);
-        debugLog("Response headers:");
-        Object.entries(res.headers).forEach(function(entry) {
-          var key = entry[0];
-          var value = entry[1];
-          debugLog("  " + key + ": " + value);
-        });
-      }
+      // Log response headers
+      console.log("Response received for", url, "with status", res.statusCode);
+      console.log("Response headers:");
+      Object.entries(res.headers).forEach(function(entry) {
+        var key = entry[0];
+        var value = entry[1];
+        console.log("  " + key + ": " + value);
+      });
 
       let body = "";
       res.on("data", (chunk) => {
         if (body.length < 8192) body += chunk.toString();
       });
       res.on("end", () => {
-        if (DEBUG) {
-          debugLog("Response body size:", body.length, "bytes");
-        }
+        console.log("Response body size:", body.length, "bytes");
         resolve({ statusCode: res.statusCode, headers: res.headers, body });
       });
     });
 
     req.on("error", (err) => {
       clearTimeout(timer);
-      debugLog("Request error for", url, err.code, err.message);
+      console.log("Request error for", url, err.code, err.message);
       if (["ECONNREFUSED", "ENOTFOUND", "EHOSTUNREACH"].includes(err.code))
         resolve({ status: "REFUSED" });
       else if (["CERT_HAS_EXPIRED", "DEPTH_ZERO_SELF_SIGNED_CERT", "UNABLE_TO_VERIFY_LEAF_SIGNATURE"].includes(err.code)) {
-        debugLog(domain, "SSL certificate issue detected:", err.code, err.message);
+        console.log(domain, "SSL certificate issue detected:", err.code, err.message);
         resolve({ status: "SSL_ISSUE", error: err.code, message: err.message });
       }
       else resolve({ status: "UNREACHABLE" });
     });
 
     // Log when request is initiated
-    if (DEBUG) {
-      debugLog("Initiating request to", url);
-    }
+    console.log("Initiating request to", url);
 
     req.end();
   });
@@ -243,7 +225,7 @@ async function checkDomainStatus(domain) {
 
     while (redirects < MAX_REDIRECTS) {
       if (visited.has(url)) {
-        debugLog(domain, "Redirect loop detected at", url);
+        console.log(domain, "Redirect loop detected at", url);
         return "REDIRECT_LOOP";
       }
       visited.add(url);
@@ -251,13 +233,13 @@ async function checkDomainStatus(domain) {
       const { status, statusCode, headers, body, error, message } = await fetchUrl(url);
 
       if (status) {
-        debugLog(domain, "Low-level status:", status);
+        console.log(domain, "Low-level status:", status);
         // Special handling for SSL errors
         if (status === "SSL_ISSUE") {
-          debugLog(domain, "SSL issue:", error, message);
+          console.log(domain, "SSL issue:", error, message);
           // Try HTTP instead of HTTPS for sites with SSL issues
           if (protocol === "https") {
-            debugLog(domain, "Will try HTTP instead of HTTPS");
+            console.log(domain, "Will try HTTP instead of HTTPS");
             break; // Exit the while loop to try HTTP
           }
           return status;
@@ -276,7 +258,7 @@ async function checkDomainStatus(domain) {
             // Check if we've already visited this protocol for this domain
             const protocolKey = `${redirectUrl.protocol}//${redirectUrl.hostname}${redirectUrl.pathname}${redirectUrl.search}`;
             if (visited.has(protocolKey)) {
-              debugLog(domain, "Protocol flip redirect loop detected:", url, "->", redirectUrl.toString());
+              console.log(domain, "Protocol flip redirect loop detected:", url, "->", redirectUrl.toString());
               // This is a special case - the site works but has a protocol flip loop
               // Let's try to determine if the site is actually accessible
               return "PROTOCOL_FLIP_LOOP";
@@ -285,22 +267,22 @@ async function checkDomainStatus(domain) {
 
           url = redirectUrl.toString();
           redirects++;
-          debugLog(domain, "Redirect to", url);
+          console.log(domain, "Redirect to", url);
           continue;
         } catch (e) {
-          debugLog(domain, "Error parsing redirect URL:", headers.location);
+          console.log(domain, "Error parsing redirect URL:", headers.location);
           return "INVALID_REDIRECT";
         }
       }
 
       // HTTP errors
       if (statusCode >= 500) {
-        debugLog(domain, "Server error", statusCode);
+        console.log(domain, "Server error", statusCode);
         // Check for Cloudflare-specific errors and add descriptions
         if (statusCode >= 500 && statusCode <= 526) {
           const errorCode = statusCode.toString();
           if (CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]) {
-            debugLog(domain, `Cloudflare Error ${errorCode}:`, CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]);
+            console.log(domain, `Cloudflare Error ${errorCode}:`, CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]);
             // Handle Cloudflare SSL errors (525 and 526) as SSL issues
             if (errorCode === "525" || errorCode === "526") {
               return "SSL_ISSUE";
@@ -312,23 +294,23 @@ async function checkDomainStatus(domain) {
         return `SERVER_ERROR_${statusCode}`;
       }
       if (statusCode >= 400) {
-        debugLog(domain, "Client error", statusCode);
+        console.log(domain, "Client error", statusCode);
         // Add more specific handling for 403 errors
         if (statusCode === 403) {
-          debugLog(domain, "403 Forbidden - Possible bot detection or access restriction");
+          console.log(domain, "403 Forbidden - Possible bot detection or access restriction");
           // Check if it's a Cloudflare protection
           const isCloudflare = headers['server'] && headers['server'].includes('cloudflare');
           const isCloudflareMitigated = headers['cf-mitigated'] === 'challenge';
 
           if (isCloudflare || isCloudflareMitigated) {
-            debugLog(domain, "403 appears to be from Cloudflare bot detection");
+            console.log(domain, "403 appears to be from Cloudflare bot detection");
             return "CLOUDFLARE_BOT_PROTECTION";
           }
 
           // Check for DDoS-Guard protection
           const isDDoSGuard = headers['server'] && headers['server'].includes('ddos-guard');
           if (isDDoSGuard) {
-            debugLog(domain, "403 appears to be from DDoS-Guard protection");
+            console.log(domain, "403 appears to be from DDoS-Guard protection");
             return "DDOS_GUARD_PROTECTION";
           }
         }
@@ -340,9 +322,9 @@ async function checkDomainStatus(domain) {
         // Cloudflare 5xx detection
         for (const code of ["500", "502", "503", "504", "520", "521", "522", "523", "524", "525", "526"]) {
           if (body.includes(`Error ${code}`)) {
-            debugLog(domain, "Cloudflare error detected:", code);
+            console.log(domain, "Cloudflare error detected:", code);
             if (CLOUDFLARE_ERROR_DESCRIPTIONS[code]) {
-              debugLog(domain, `Cloudflare Error ${code}:`, CLOUDFLARE_ERROR_DESCRIPTIONS[code]);
+              console.log(domain, `Cloudflare Error ${code}:`, CLOUDFLARE_ERROR_DESCRIPTIONS[code]);
               // Handle Cloudflare SSL errors (525 and 526) as SSL issues
               if (code === "525" || code === "526") {
                 return "SSL_ISSUE";
@@ -356,19 +338,19 @@ async function checkDomainStatus(domain) {
 
         // WAF / protection detection
         if (body.includes("Cloudflare Ray ID") || WAF_PATTERNS.some((p) => body.includes(p))) {
-          debugLog(domain, "Protected by WAF");
+          console.log(domain, "Protected by WAF");
           return "PROTECTED";
         }
 
         // Placeholder / blank / JS-only detection
         const emptyCheck = isEmptyOrJsOnly(body);
         if (emptyCheck) {
-          debugLog(domain, "Empty/JS-only page detected:", emptyCheck);
+          console.log(domain, "Empty/JS-only page detected:", emptyCheck);
           return emptyCheck;
         }
 
         if (PLACEHOLDER_PATTERNS.some((p) => body.includes(p))) {
-          debugLog(domain, "Placeholder page detected");
+          console.log(domain, "Placeholder page detected");
           return "PLACEHOLDER";
         }
       }
@@ -379,7 +361,7 @@ async function checkDomainStatus(domain) {
     // If we've reached the max redirects, check if it's a protocol flip situation
     if (redirects >= MAX_REDIRECTS) {
       // Check if the last few redirects were protocol flips
-      debugLog(domain, "Max redirects reached, checking for protocol flip pattern");
+      console.log(domain, "Max redirects reached, checking for protocol flip pattern");
       return "REDIRECT_LOOP";
     }
   }
