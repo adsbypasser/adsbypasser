@@ -91,7 +91,7 @@ const STATUS_ICONS = {
   REFUSED: "⛔",
   TIMEOUT: "⏱️",
   REDIRECT_LOOP: "🔁",
-  PROTOCOL_FLIP_LOOP: "🔄", // New icon for protocol flip loops
+  PROTOCOL_FLIP_LOOP: "🔄",
   INVALID_REDIRECT: "🔀",
   PROTECTED: "🛡️",
   CLOUDFLARE_BOT_PROTECTION: "🛡️403",
@@ -105,8 +105,7 @@ const STATUS_ICONS = {
   CLOUDFLARE_523: "☁️523",
   CLOUDFLARE_524: "☁️524",
   CLOUDFLARE_525: "☁️525",
-  CLOUDFLARE_526: "☁️526",
-  UNKNOWN: "❓",
+  CLOUDFLARE_526: "☁️526"
 };
 
 /* ------------------------ DEBUG HELPER ------------------------ */
@@ -138,8 +137,11 @@ async function isDomainResolvable(domain) {
 async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
   debugLog("Fetching", url);
 
+  // Extract domain from URL for error logging
+  const urlObj = new URL(url);
+  const domain = urlObj.hostname;
+
   return new Promise((resolve) => {
-    const urlObj = new URL(url);
     const client = urlObj.protocol === "https:" ? https : http;
 
     // Add default headers to the request
@@ -162,8 +164,10 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
       // Log response headers for debugging (only if DEBUG is enabled)
       if (DEBUG) {
         debugLog("Response headers:");
-        Object.entries(res.headers).forEach(([key, value]) => {
-          debugLog(`  ${key}: ${value}`);
+        Object.entries(res.headers).forEach(function(entry) {
+          var key = entry[0];
+          var value = entry[1];
+          debugLog("  " + key + ": " + value);
         });
       }
 
@@ -196,13 +200,15 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
 function isEmptyOrJsOnly(body) {
   if (!body) return "EMPTY_PAGE";
 
-  const stripped = body
-    .replace(/<head[^>]*>[\s\S]*?<\/head>/gi, "")
-    .replace(/<noscript[^>]*>[\s\S]*?<\/noscript>/gi, "")
-    .replace(/\s/g, "");
+  // Remove head and noscript sections
+  let stripped = body.replace(/<head[^>]*>[\s\S]*?<\/head>/gi, "");
+  stripped = stripped.replace(/<noscript[^>]*>[\s\S]*?<\/noscript>/gi, "");
+  stripped = stripped.replace(/\s/g, "");
 
-  const scriptMatches = [...body.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)];
-  const scriptContent = scriptMatches.map((m) => m[1]).join("").trim();
+  // Extract script content
+  const scriptMatches = body.match(/<script[^>]*>([\s\S]*?)<\/script>/gi);
+  const scriptContent = scriptMatches ? scriptMatches.map(script =>
+    script.replace(/<script[^>]*>|<\/script>/gi, "")).join("").trim() : "";
 
   if (stripped === "" && scriptContent) return "JS_ONLY";
   return stripped.length === 0 ? "EMPTY_PAGE" : false;
@@ -364,76 +370,97 @@ async function main() {
   console.log("Extracting domains from sites directory...");
   console.log(`Categories: ${categories ? categories.join(", ") : "all"}`);
 
-  const domains = await extractDomainsFromJSDoc(categories);
-  const uniqueDomains = deduplicateRootDomains(domains);
+  try {
+    const domains = await extractDomainsFromJSDoc(categories);
+    const uniqueDomains = deduplicateRootDomains(domains);
 
-  console.log(`Found ${uniqueDomains.length} unique domains\n`);
-  if (!uniqueDomains.length) return console.log("No domains found.");
+    console.log(`Found ${uniqueDomains.length} unique domains\n`);
+    if (!uniqueDomains.length) return console.log("No domains found.");
 
-  const results = [];
+    const results = [];
 
-  // Sequential checking
-  for (const domain of uniqueDomains) {
-    console.log(`\nChecking ${domain}...`);
-    const result = await checkDomain(domain);
-    results.push(result);
-    const icon = STATUS_ICONS[result.status] || "❓";
+    // Sequential checking
+    for (const domain of uniqueDomains) {
+      console.log(`\nChecking ${domain}...`);
+      try {
+        const result = await checkDomain(domain);
+        results.push(result);
+        const icon = STATUS_ICONS[result.status] || "❓";
 
-    // For Cloudflare errors, show the description
-    if (result.status.startsWith("CLOUDFLARE_") && CLOUDFLARE_ERROR_DESCRIPTIONS[result.status.split("_")[1]]) {
-      const errorCode = result.status.split("_")[1];
-      console.log(`${icon} ${result.status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]}`);
-    } else if (result.status === "PROTOCOL_FLIP_LOOP") {
-      console.log(`${icon} ${result.status} - Site has HTTP/HTTPS protocol flip but is likely accessible`);
-    } else {
-      console.log(`${icon} ${result.status}`);
-    }
-  }
-
-  // Summary
-  console.log("\n" + "=".repeat(50));
-  console.log("SUMMARY:");
-
-  const counts = results.reduce((acc, r) => {
-    acc[r.status] = (acc[r.status] || 0) + 1;
-    return acc;
-  }, {});
-
-  Object.keys(STATUS_ICONS).forEach((status) => {
-    if (counts[status]) {
-      // For Cloudflare errors, show the description in summary
-      if (status.startsWith("CLOUDFLARE_") && CLOUDFLARE_ERROR_DESCRIPTIONS[status.split("_")[1]]) {
-        const errorCode = status.split("_")[1];
-        console.log(`${STATUS_ICONS[status]} ${status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]}: ${counts[status]}`);
-      } else if (status === "PROTOCOL_FLIP_LOOP") {
-        console.log(`${STATUS_ICONS[status]} ${status} - Sites with HTTP/HTTPS protocol flip but likely accessible: ${counts[status]}`);
-      } else {
-        console.log(`${STATUS_ICONS[status]} ${status}: ${counts[status]}`);
+        // For Cloudflare errors, show the description
+        if (result.status.startsWith("CLOUDFLARE_") && CLOUDFLARE_ERROR_DESCRIPTIONS[result.status.split("_")[1]]) {
+          const errorCode = result.status.split("_")[1];
+          console.log(`${icon} ${result.status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]}`);
+        } else if (result.status === "PROTOCOL_FLIP_LOOP") {
+          console.log(`${icon} ${result.status} - Site has HTTP/HTTPS protocol flip but is likely accessible`);
+        } else {
+          console.log(`${icon} ${result.status}`);
+        }
+      } catch (error) {
+        console.error(`Error checking domain ${domain}:`, error.message);
+        results.push({ domain, status: "CHECK_FAILED" });
+        console.log(`❌ CHECK_FAILED`);
       }
     }
-  });
 
-  console.log(`📊 Total: ${results.length}`);
+    // Summary
+    console.log("\n" + "=".repeat(50));
+    console.log("SUMMARY:");
 
-  const problematic = results.filter((r) => r.status !== "VALID");
-  problematic.forEach((r) => {
-    const icon = STATUS_ICONS[r.status] || "❓";
-    // For Cloudflare errors, show the description in detailed list
-    if (r.status.startsWith("CLOUDFLARE_") && CLOUDFLARE_ERROR_DESCRIPTIONS[r.status.split("_")[1]]) {
-      const errorCode = r.status.split("_")[1];
-      console.log(`${icon} ${r.status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]} -> ${r.domain}`);
-    } else if (r.status === "PROTOCOL_FLIP_LOOP") {
-      console.log(`${icon} ${r.status} - Site has HTTP/HTTPS protocol flip but is likely accessible -> ${r.domain}`);
-    } else {
-      console.log(`${icon} ${r.status} -> ${r.domain}`);
+    const counts = results.reduce((acc, r) => {
+      acc[r.status] = (acc[r.status] || 0) + 1;
+      return acc;
+    }, {});
+
+    Object.keys(STATUS_ICONS).forEach((status) => {
+      if (counts[status]) {
+        // For Cloudflare errors, show the description in summary
+        if (status.startsWith("CLOUDFLARE_") && CLOUDFLARE_ERROR_DESCRIPTIONS[status.split("_")[1]]) {
+          const errorCode = status.split("_")[1];
+          console.log(`${STATUS_ICONS[status]} ${status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]}: ${counts[status]}`);
+        } else if (status === "PROTOCOL_FLIP_LOOP") {
+          console.log(`${STATUS_ICONS[status]} ${status} - Sites with HTTP/HTTPS protocol flip but likely accessible: ${counts[status]}`);
+        } else {
+          console.log(`${STATUS_ICONS[status]} ${status}: ${counts[status]}`);
+        }
+      }
+    });
+
+    // Show CHECK_FAILED count if any
+    if (counts["CHECK_FAILED"]) {
+      console.log(`❌ CHECK_FAILED: ${counts["CHECK_FAILED"]}`);
     }
-  });
 
-  console.log(
-    problematic.length
-      ? `\n⚠️ Found ${problematic.length} problematic domain(s)`
-      : "\n✅ All domains are valid!"
-  );
+    console.log(`📊 Total: ${results.length}`);
+
+    const problematic = results.filter((r) => r.status !== "VALID");
+    problematic.forEach((r) => {
+      const icon = STATUS_ICONS[r.status] || "❓";
+      // For Cloudflare errors, show the description in detailed list
+      if (r.status.startsWith("CLOUDFLARE_") && CLOUDFLARE_ERROR_DESCRIPTIONS[r.status.split("_")[1]]) {
+        const errorCode = r.status.split("_")[1];
+        console.log(`${icon} ${r.status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]} -> ${r.domain}`);
+      } else if (r.status === "PROTOCOL_FLIP_LOOP") {
+        console.log(`${icon} ${r.status} - Site has HTTP/HTTPS protocol flip but is likely accessible -> ${r.domain}`);
+      } else if (r.status === "CHECK_FAILED") {
+        console.log(`${icon} ${r.status} -> ${r.domain}`);
+      } else {
+        console.log(`${icon} ${r.status} -> ${r.domain}`);
+      }
+    });
+
+    console.log(
+      problematic.length
+        ? `\n⚠️ Found ${problematic.length} problematic domain(s)`
+        : "\n✅ All domains are valid!"
+    );
+  } catch (error) {
+    console.error("Error during domain checking:", error);
+    process.exit(1);
+  }
 }
 
-main().catch(console.error);
+main().catch(error => {
+  console.error("Unhandled error:", error);
+  process.exit(1);
+});
