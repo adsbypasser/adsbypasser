@@ -63,6 +63,21 @@ const WAF_PATTERNS = [
   "DDOS protection by",
 ];
 
+// Cloudflare error descriptions for better understanding
+const CLOUDFLARE_ERROR_DESCRIPTIONS = {
+  "500": "Internal Server Error - Cloudflare could not retrieve the web page",
+  "502": "Bad Gateway - Cloudflare could not contact the origin server",
+  "503": "Service Temporarily Unavailable - The server is temporarily unable to handle the request",
+  "504": "Gateway Timeout - Cloudflare timed out contacting the origin server",
+  "520": "Web Server Returns an Unknown Error - The origin server returned an empty, unknown, or unexplained response",
+  "521": "Web Server Is Down - The origin server refused the connection",
+  "522": "Connection Timed Out - Cloudflare could not negotiate a TCP handshake with the origin server",
+  "523": "Origin Is Unreachable - Cloudflare could not reach the origin server",
+  "524": "A Timeout Occurred - Cloudflare was able to complete a TCP connection but timed out waiting for an HTTP response",
+  "525": "SSL Handshake Failed - Cloudflare could not negotiate an SSL/TLS handshake with the origin server",
+  "526": "Invalid SSL Certificate - Cloudflare could not validate the SSL certificate of the origin server"
+};
+
 const STATUS_ICONS = {
   VALID: "✅",
   PLACEHOLDER: "⚠️",
@@ -70,19 +85,27 @@ const STATUS_ICONS = {
   JS_ONLY: "📜",
   CLIENT_ERROR: "🚫",
   SERVER_ERROR: "🔥",
-  INVALID_SSL: "🔒",
+  SSL_ISSUE: "🔒",
   EXPIRED: "❌",
   UNREACHABLE: "🌐",
   REFUSED: "⛔",
   TIMEOUT: "⏱️",
   REDIRECT_LOOP: "🔁",
+  PROTOCOL_FLIP_LOOP: "🔄", // New icon for protocol flip loops
+  INVALID_REDIRECT: "🔀",
   PROTECTED: "🛡️",
-  CLOUDFLARE_BOT_PROTECTION: "🛡️403", // Specific icon for Cloudflare bot protection
+  CLOUDFLARE_BOT_PROTECTION: "🛡️403",
+  CLOUDFLARE_500: "☁️500",
+  CLOUDFLARE_502: "☁️502",
+  CLOUDFLARE_503: "☁️503",
+  CLOUDFLARE_504: "☁️504",
+  CLOUDFLARE_520: "☁️520",
   CLOUDFLARE_521: "☁️521",
   CLOUDFLARE_522: "☁️522",
   CLOUDFLARE_523: "☁️523",
   CLOUDFLARE_524: "☁️524",
   CLOUDFLARE_525: "☁️525",
+  CLOUDFLARE_526: "☁️526",
   UNKNOWN: "❓",
 };
 
@@ -155,11 +178,13 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
 
     req.on("error", (err) => {
       clearTimeout(timer);
-      debugLog("Request error for", url, err.code);
+      debugLog("Request error for", url, err.code, err.message);
       if (["ECONNREFUSED", "ENOTFOUND", "EHOSTUNREACH"].includes(err.code))
         resolve({ status: "REFUSED" });
-      else if (["CERT_HAS_EXPIRED", "DEPTH_ZERO_SELF_SIGNED_CERT"].includes(err.code))
-        resolve({ status: "INVALID_SSL" });
+      else if (["CERT_HAS_EXPIRED", "DEPTH_ZERO_SELF_SIGNED_CERT", "UNABLE_TO_VERIFY_LEAF_SIGNATURE"].includes(err.code)) {
+        debugLog(domain, "SSL certificate issue detected:", err.code, err.message);
+        resolve({ status: "SSL_ISSUE", error: err.code, message: err.message });
+      }
       else resolve({ status: "UNREACHABLE" });
     });
 
@@ -195,27 +220,67 @@ async function checkDomainStatus(domain) {
     let redirects = 0;
 
     while (redirects < MAX_REDIRECTS) {
-      if (visited.has(url)) return "REDIRECT_LOOP";
+      if (visited.has(url)) {
+        debugLog(domain, "Redirect loop detected at", url);
+        return "REDIRECT_LOOP";
+      }
       visited.add(url);
 
-      const { status, statusCode, headers, body } = await fetchUrl(url);
+      const { status, statusCode, headers, body, error, message } = await fetchUrl(url);
 
       if (status) {
         debugLog(domain, "Low-level status:", status);
+        // Special handling for SSL errors
+        if (status === "SSL_ISSUE") {
+          debugLog(domain, "SSL issue:", error, message);
+          // Try HTTP instead of HTTPS for sites with SSL issues
+          if (protocol === "https") {
+            debugLog(domain, "Will try HTTP instead of HTTPS");
+            break; // Exit the while loop to try HTTP
+          }
+          return status;
+        }
         return status;
       }
 
       // Follow redirects
       if (statusCode >= 300 && statusCode < 400 && headers.location) {
-        url = new URL(headers.location, url).toString();
-        redirects++;
-        debugLog(domain, "Redirect to", url);
-        continue;
+        try {
+          const redirectUrl = new URL(headers.location, url);
+          // Check if this is a protocol flip (HTTPS to HTTP or vice versa) to the same domain
+          if (redirectUrl.hostname === domain &&
+              ((url.startsWith('https://') && redirectUrl.protocol === 'http:') ||
+               (url.startsWith('http://') && redirectUrl.protocol === 'https:'))) {
+            // Check if we've already visited this protocol for this domain
+            const protocolKey = `${redirectUrl.protocol}//${redirectUrl.hostname}${redirectUrl.pathname}${redirectUrl.search}`;
+            if (visited.has(protocolKey)) {
+              debugLog(domain, "Protocol flip redirect loop detected:", url, "->", redirectUrl.toString());
+              // This is a special case - the site works but has a protocol flip loop
+              // Let's try to determine if the site is actually accessible
+              return "PROTOCOL_FLIP_LOOP";
+            }
+          }
+
+          url = redirectUrl.toString();
+          redirects++;
+          debugLog(domain, "Redirect to", url);
+          continue;
+        } catch (e) {
+          debugLog(domain, "Error parsing redirect URL:", headers.location);
+          return "INVALID_REDIRECT";
+        }
       }
 
       // HTTP errors
       if (statusCode >= 500) {
         debugLog(domain, "Server error", statusCode);
+        // Check for Cloudflare-specific errors and add descriptions
+        if (statusCode >= 500 && statusCode <= 526) {
+          const errorCode = statusCode.toString();
+          if (CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]) {
+            debugLog(domain, `Cloudflare Error ${errorCode}:`, CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]);
+          }
+        }
         return `SERVER_ERROR_${statusCode}`;
       }
       if (statusCode >= 400) {
@@ -238,9 +303,12 @@ async function checkDomainStatus(domain) {
       // Inspect body
       if (body) {
         // Cloudflare 5xx detection
-        for (const code of ["521", "522", "523", "524", "525"]) {
+        for (const code of ["521", "522", "523", "524", "525", "526"]) {
           if (body.includes(`Error ${code}`)) {
             debugLog(domain, "Cloudflare error detected:", code);
+            if (CLOUDFLARE_ERROR_DESCRIPTIONS[code]) {
+              debugLog(domain, `Cloudflare Error ${code}:`, CLOUDFLARE_ERROR_DESCRIPTIONS[code]);
+            }
             return `CLOUDFLARE_${code}`;
           }
         }
@@ -267,7 +335,12 @@ async function checkDomainStatus(domain) {
       return "VALID";
     }
 
-    return "REDIRECT_LOOP";
+    // If we've reached the max redirects, check if it's a protocol flip situation
+    if (redirects >= MAX_REDIRECTS) {
+      // Check if the last few redirects were protocol flips
+      debugLog(domain, "Max redirects reached, checking for protocol flip pattern");
+      return "REDIRECT_LOOP";
+    }
   }
 
   return "UNREACHABLE";
@@ -305,7 +378,16 @@ async function main() {
     const result = await checkDomain(domain);
     results.push(result);
     const icon = STATUS_ICONS[result.status] || "❓";
-    console.log(`${icon} ${result.status}`);
+
+    // For Cloudflare errors, show the description
+    if (result.status.startsWith("CLOUDFLARE_") && CLOUDFLARE_ERROR_DESCRIPTIONS[result.status.split("_")[1]]) {
+      const errorCode = result.status.split("_")[1];
+      console.log(`${icon} ${result.status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]}`);
+    } else if (result.status === "PROTOCOL_FLIP_LOOP") {
+      console.log(`${icon} ${result.status} - Site has HTTP/HTTPS protocol flip but is likely accessible`);
+    } else {
+      console.log(`${icon} ${result.status}`);
+    }
   }
 
   // Summary
@@ -318,14 +400,33 @@ async function main() {
   }, {});
 
   Object.keys(STATUS_ICONS).forEach((status) => {
-    if (counts[status]) console.log(`${STATUS_ICONS[status]} ${status}: ${counts[status]}`);
+    if (counts[status]) {
+      // For Cloudflare errors, show the description in summary
+      if (status.startsWith("CLOUDFLARE_") && CLOUDFLARE_ERROR_DESCRIPTIONS[status.split("_")[1]]) {
+        const errorCode = status.split("_")[1];
+        console.log(`${STATUS_ICONS[status]} ${status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]}: ${counts[status]}`);
+      } else if (status === "PROTOCOL_FLIP_LOOP") {
+        console.log(`${STATUS_ICONS[status]} ${status} - Sites with HTTP/HTTPS protocol flip but likely accessible: ${counts[status]}`);
+      } else {
+        console.log(`${STATUS_ICONS[status]} ${status}: ${counts[status]}`);
+      }
+    }
   });
 
   console.log(`📊 Total: ${results.length}`);
 
   const problematic = results.filter((r) => r.status !== "VALID");
   problematic.forEach((r) => {
-    console.log(`${STATUS_ICONS[r.status] || "❓"} ${r.status} -> ${r.domain}`);
+    const icon = STATUS_ICONS[r.status] || "❓";
+    // For Cloudflare errors, show the description in detailed list
+    if (r.status.startsWith("CLOUDFLARE_") && CLOUDFLARE_ERROR_DESCRIPTIONS[r.status.split("_")[1]]) {
+      const errorCode = r.status.split("_")[1];
+      console.log(`${icon} ${r.status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]} -> ${r.domain}`);
+    } else if (r.status === "PROTOCOL_FLIP_LOOP") {
+      console.log(`${icon} ${r.status} - Site has HTTP/HTTPS protocol flip but is likely accessible -> ${r.domain}`);
+    } else {
+      console.log(`${icon} ${r.status} -> ${r.domain}`);
+    }
   });
 
   console.log(
