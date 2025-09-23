@@ -1,10 +1,7 @@
 /**
- * @domain 13xpics.space
  * @domain 14xpics.space
  * @domain 2i.cz
  * @domain 2i.sk
- * @domain 37xpics.space
- * @domain 47xpics.space
  * @domain img.javstore.net
  * @domain imgcloud.pw
  * @domain imghit.com
@@ -17,7 +14,7 @@ _.register({
   rule: {
     host: [
       /^2i\.(cz|sk)$/,
-      /^[0-9]{1,3}xpics\.space$/,
+      /^14xpics\.space$/,
       /^img\.javstore\.net$/,
       /^imgcloud\.pw$/,
       /^(lookmyimg|shotcan)\.com$/,
