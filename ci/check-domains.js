@@ -32,21 +32,24 @@ import { URL } from "url";
 
 /* ------------------------ CONFIG ------------------------ */
 const MAX_REDIRECTS = 5;
-const REQUEST_TIMEOUT_MS = 10000;
+const REQUEST_TIMEOUT_MS = 30000; // Increased from 10s to 30s to handle slow websites
 const DEBUG = true; // toggle debug messages
 
 // Add browser-like headers to avoid bot detection
+// Updated to mimic Firefox browser more closely
 const DEFAULT_HEADERS = {
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:143.0) Gecko/20100101 Firefox/143.0',
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
   'Accept-Language': 'en-US,en;q=0.5',
-  'Accept-Encoding': 'gzip, deflate',
+  'Accept-Encoding': 'gzip, deflate, br, zstd',
   'Connection': 'keep-alive',
   'Upgrade-Insecure-Requests': '1',
   'Sec-Fetch-Dest': 'document',
   'Sec-Fetch-Mode': 'navigate',
-  'Sec-Fetch-Site': 'none',
-  'Cache-Control': 'max-age=0'
+  'Sec-Fetch-Site': 'cross-site',
+  'Sec-GPC': '1',
+  'DNT': '1',
+  'TE': 'trailers'
 };
 
 const PLACEHOLDER_PATTERNS = [
@@ -95,6 +98,7 @@ const STATUS_ICONS = {
   INVALID_REDIRECT: "🔀",
   PROTECTED: "🛡️",
   CLOUDFLARE_BOT_PROTECTION: "🛡️403",
+  DDOS_GUARD_PROTECTION: "🛡️403",
   CLOUDFLARE_500: "☁️500",
   CLOUDFLARE_502: "☁️502",
   CLOUDFLARE_503: "☁️503",
@@ -103,9 +107,7 @@ const STATUS_ICONS = {
   CLOUDFLARE_521: "☁️521",
   CLOUDFLARE_522: "☁️522",
   CLOUDFLARE_523: "☁️523",
-  CLOUDFLARE_524: "☁️524",
-  CLOUDFLARE_525: "☁️525",
-  CLOUDFLARE_526: "☁️526"
+  CLOUDFLARE_524: "☁️524"
 };
 
 /* ------------------------ DEBUG HELPER ------------------------ */
@@ -154,7 +156,7 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
     };
 
     const timer = setTimeout(() => {
-      debugLog("Timeout fetching", url);
+      debugLog("Timeout fetching", url, "after", timeoutMs, "ms");
       resolve({ status: "TIMEOUT" });
     }, timeoutMs);
 
@@ -163,6 +165,7 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
 
       // Log response headers for debugging (only if DEBUG is enabled)
       if (DEBUG) {
+        debugLog("Response received for", url, "with status", res.statusCode);
         debugLog("Response headers:");
         Object.entries(res.headers).forEach(function(entry) {
           var key = entry[0];
@@ -175,9 +178,12 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
       res.on("data", (chunk) => {
         if (body.length < 8192) body += chunk.toString();
       });
-      res.on("end", () =>
-        resolve({ statusCode: res.statusCode, headers: res.headers, body })
-      );
+      res.on("end", () => {
+        if (DEBUG) {
+          debugLog("Response body size:", body.length, "bytes");
+        }
+        resolve({ statusCode: res.statusCode, headers: res.headers, body });
+      });
     });
 
     req.on("error", (err) => {
@@ -191,6 +197,11 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
       }
       else resolve({ status: "UNREACHABLE" });
     });
+
+    // Log when request is initiated
+    if (DEBUG) {
+      debugLog("Initiating request to", url);
+    }
 
     req.end();
   });
@@ -285,6 +296,12 @@ async function checkDomainStatus(domain) {
           const errorCode = statusCode.toString();
           if (CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]) {
             debugLog(domain, `Cloudflare Error ${errorCode}:`, CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]);
+            // Handle Cloudflare SSL errors (525 and 526) as SSL issues
+            if (errorCode === "525" || errorCode === "526") {
+              return "SSL_ISSUE";
+            }
+            // Handle other Cloudflare errors as CLOUDFLARE_ codes
+            return `CLOUDFLARE_${errorCode}`;
           }
         }
         return `SERVER_ERROR_${statusCode}`;
@@ -302,6 +319,13 @@ async function checkDomainStatus(domain) {
             debugLog(domain, "403 appears to be from Cloudflare bot detection");
             return "CLOUDFLARE_BOT_PROTECTION";
           }
+
+          // Check for DDoS-Guard protection
+          const isDDoSGuard = headers['server'] && headers['server'].includes('ddos-guard');
+          if (isDDoSGuard) {
+            debugLog(domain, "403 appears to be from DDoS-Guard protection");
+            return "DDOS_GUARD_PROTECTION";
+          }
         }
         return `CLIENT_ERROR_${statusCode}`;
       }
@@ -309,11 +333,17 @@ async function checkDomainStatus(domain) {
       // Inspect body
       if (body) {
         // Cloudflare 5xx detection
-        for (const code of ["521", "522", "523", "524", "525", "526"]) {
+        for (const code of ["500", "502", "503", "504", "520", "521", "522", "523", "524", "525", "526"]) {
           if (body.includes(`Error ${code}`)) {
             debugLog(domain, "Cloudflare error detected:", code);
             if (CLOUDFLARE_ERROR_DESCRIPTIONS[code]) {
               debugLog(domain, `Cloudflare Error ${code}:`, CLOUDFLARE_ERROR_DESCRIPTIONS[code]);
+              // Handle Cloudflare SSL errors (525 and 526) as SSL issues
+              if (code === "525" || code === "526") {
+                return "SSL_ISSUE";
+              }
+              // Handle other Cloudflare errors as CLOUDFLARE_ codes
+              return `CLOUDFLARE_${code}`;
             }
             return `CLOUDFLARE_${code}`;
           }
@@ -393,6 +423,8 @@ async function main() {
           console.log(`${icon} ${result.status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]}`);
         } else if (result.status === "PROTOCOL_FLIP_LOOP") {
           console.log(`${icon} ${result.status} - Site has HTTP/HTTPS protocol flip but is likely accessible`);
+        } else if (result.status === "DDOS_GUARD_PROTECTION") {
+          console.log(`${icon} ${result.status} - Site is protected by DDoS-Guard and may be accessible in browsers`);
         } else {
           console.log(`${icon} ${result.status}`);
         }
@@ -420,9 +452,19 @@ async function main() {
           console.log(`${STATUS_ICONS[status]} ${status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]}: ${counts[status]}`);
         } else if (status === "PROTOCOL_FLIP_LOOP") {
           console.log(`${STATUS_ICONS[status]} ${status} - Sites with HTTP/HTTPS protocol flip but likely accessible: ${counts[status]}`);
+        } else if (status === "DDOS_GUARD_PROTECTION") {
+          console.log(`${STATUS_ICONS[status]} ${status} - Sites protected by DDoS-Guard but likely accessible: ${counts[status]}`);
         } else {
           console.log(`${STATUS_ICONS[status]} ${status}: ${counts[status]}`);
         }
+      }
+    });
+
+    // Show counts for Cloudflare errors that don't have icons
+    Object.keys(counts).forEach((status) => {
+      if (status.startsWith("CLOUDFLARE_") && !STATUS_ICONS[status] && CLOUDFLARE_ERROR_DESCRIPTIONS[status.split("_")[1]]) {
+        const errorCode = status.split("_")[1];
+        console.log(`☁️${errorCode} ${status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]}: ${counts[status]}`);
       }
     });
 
@@ -442,6 +484,8 @@ async function main() {
         console.log(`${icon} ${r.status} - ${CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]} -> ${r.domain}`);
       } else if (r.status === "PROTOCOL_FLIP_LOOP") {
         console.log(`${icon} ${r.status} - Site has HTTP/HTTPS protocol flip but is likely accessible -> ${r.domain}`);
+      } else if (r.status === "DDOS_GUARD_PROTECTION") {
+        console.log(`${icon} ${r.status} - Site is protected by DDoS-Guard and may be accessible in browsers -> ${r.domain}`);
       } else if (r.status === "CHECK_FAILED") {
         console.log(`${icon} ${r.status} -> ${r.domain}`);
       } else {
