@@ -8,7 +8,6 @@
  * @domain dz4link.com
  * @domain gitlink.pro
  * @domain linkmoni.com
- * @domain met.bz
  * @domain miniurl.pw
  * @domain mitly.us
  * @domain oke.io
@@ -16,10 +15,8 @@
  * @domain pahe.plus
  * @domain payskip.org
  * @domain pingit.im
- * @domain shrt10.com
  * @domain thotpacks.xyz
  * @domain tmearn.net
- * @domain vinaurl.net
  */
 (function () {
   _.register({
@@ -30,10 +27,8 @@
         /^birdurls\.com$/,
         /^dz4link\.com$/,
         /^linkmoni\.com$/,
-        /^shrt10\.com$/,
         // net
         /^tmearn\.net$/,
-        /^vinaurl\.net$/,
         // org
         /^payskip\.org$/,
         // pw
@@ -44,7 +39,6 @@
         /^(clk|oko)\.sh$/,
         /^cpmlink\.pro$/,
         /^gitlink\.pro$/,
-        /^met\.bz/,
         /^mitly\.us$/,
         /^oke\.io$/,
         /^pahe\.plus$/,

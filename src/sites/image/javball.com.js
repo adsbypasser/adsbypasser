@@ -9,7 +9,6 @@
  * @domain cn-av.com
  * @domain cnpics.org
  * @domain cnxx.me
- * @domain cosplay-xxx.com
  * @domain cosplay18.pics
  * @domain fc2ppv.stream
  * @domain fikfok.net
@@ -49,7 +48,6 @@ _.register({
     "https://cn-av.com/upload/en/*",
     "https://cnpics.org/upload/en/*",
     "https://cnxx.me/upload/en/*",
-    "https://cosplay-xxx.com/upload/en/*",
     "https://cosplay18.pics/upload/en/*",
     "https://fc2ppv.stream/upload/en/*",
     "https://fikfok.net/upload/en/*",
