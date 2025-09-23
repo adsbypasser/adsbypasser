@@ -1,238 +1,284 @@
 #!/usr/bin/env node
 
 /**
- * Domain Checker
+ * CI Domain Checker (Sequential + Debug)
  *
- * Extracts domains from src/sites/**.js and reports their validity.
- * Checks both DNS resolution and HTTP/HTTPS accessibility.
- *
- * Usage:
- *   node check-domains.js [category1] [category2] ...
- *
- * Examples:
- *   node check-domains.js          # Check all categories
- *   node check-domains.js file     # Check only file category
- *   node check-domains.js file link image  # Check specific categories
+ * Features:
+ *  - DNS resolution
+ *  - HTTP/HTTPS accessibility
+ *  - SSL/TLS validation
+ *  - Redirect loop detection
+ *  - Timeout handling
+ *  - Placeholder / parked page detection
+ *  - Cloudflare / WAF / 5xx error detection
+ *  - Blank or JS-only page detection
+ *  - Sequential domain checking
+ *  - Debug logging for GitHub Actions
  */
 
 import { extractDomainsFromJSDoc } from "../build/jsdoc.js";
 import { deduplicateRootDomains } from "../build/domain.js";
 import dns from "dns/promises";
-import https from "https";
 import http from "http";
+import https from "https";
 import { URL } from "url";
 
-/**
- * Check if a domain is resolvable via DNS
- *
- * Attempts to resolve the domain using both IPv4 and IPv6.
- *
- * @param {string} domain - Domain to check
- * @returns {Promise<boolean>} True if resolvable
- */
+/* ------------------------ CONFIG ------------------------ */
+const MAX_REDIRECTS = 5;
+const REQUEST_TIMEOUT_MS = 10000;
+const DEBUG = true; // toggle debug messages
+
+const PLACEHOLDER_PATTERNS = [
+  "Welcome to nginx!",
+  "This domain is parked",
+  "Buy this domain",
+  "Domain for sale",
+  "Default PLESK Page",
+];
+
+const WAF_PATTERNS = [
+  "Attention Required! | Cloudflare",
+  "Checking your browser before accessing",
+  "DDOS protection by",
+];
+
+const STATUS_ICONS = {
+  VALID: "✅",
+  PLACEHOLDER: "⚠️",
+  EMPTY_PAGE: "📄",
+  JS_ONLY: "📜",
+  CLIENT_ERROR: "🚫",
+  SERVER_ERROR: "🔥",
+  INVALID_SSL: "🔒",
+  EXPIRED: "❌",
+  UNREACHABLE: "🌐",
+  REFUSED: "⛔",
+  TIMEOUT: "⏱️",
+  REDIRECT_LOOP: "🔁",
+  PROTECTED: "🛡️",
+  CLOUDFLARE_521: "☁️521",
+  CLOUDFLARE_522: "☁️522",
+  CLOUDFLARE_523: "☁️523",
+  CLOUDFLARE_524: "☁️524",
+  CLOUDFLARE_525: "☁️525",
+  UNKNOWN: "❓",
+};
+
+/* ------------------------ DEBUG HELPER ------------------------ */
+function debugLog(...args) {
+  if (DEBUG) console.log("[DEBUG]", ...args);
+}
+
+/* ------------------------ UTILITIES ------------------------ */
+
+/** Check if a domain is resolvable via DNS (IPv4/IPv6) */
 async function isDomainResolvable(domain) {
   try {
-    // Try IPv4 first
     await dns.resolve4(domain);
+    debugLog(domain, "DNS resolved via A record");
     return true;
-  } catch (ipv4Error) {
+  } catch {
     try {
-      // Try IPv6 if IPv4 fails
       await dns.resolve6(domain);
+      debugLog(domain, "DNS resolved via AAAA record");
       return true;
-    } catch (ipv6Error) {
+    } catch {
+      debugLog(domain, "DNS NOT resolved");
       return false;
     }
   }
 }
 
-/**
- * Check if a domain is accessible via HTTP/HTTPS
- *
- * Attempts to make a HEAD request to the domain using both HTTPS and HTTP.
- *
- * @param {string} domain - Domain to check
- * @returns {Promise<boolean>} True if accessible
- */
-async function isDomainAccessible(domain) {
+/** Fetch a URL with timeout and return status, headers, and body */
+async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
+  debugLog("Fetching", url);
+
+  return new Promise((resolve) => {
+    const urlObj = new URL(url);
+    const client = urlObj.protocol === "https:" ? https : http;
+
+    const timer = setTimeout(() => {
+      debugLog("Timeout fetching", url);
+      resolve({ status: "TIMEOUT" });
+    }, timeoutMs);
+
+    const req = client.get(urlObj, (res) => {
+      clearTimeout(timer);
+      let body = "";
+      res.on("data", (chunk) => {
+        if (body.length < 8192) body += chunk.toString();
+      });
+      res.on("end", () =>
+        resolve({ statusCode: res.statusCode, headers: res.headers, body })
+      );
+    });
+
+    req.on("error", (err) => {
+      clearTimeout(timer);
+      debugLog("Request error for", url, err.code);
+      if (["ECONNREFUSED", "ENOTFOUND", "EHOSTUNREACH"].includes(err.code))
+        resolve({ status: "REFUSED" });
+      else if (["CERT_HAS_EXPIRED", "DEPTH_ZERO_SELF_SIGNED_CERT"].includes(err.code))
+        resolve({ status: "INVALID_SSL" });
+      else resolve({ status: "UNREACHABLE" });
+    });
+  });
+}
+
+/** Determine if a page is blank or only contains JavaScript */
+function isEmptyOrJsOnly(body) {
+  if (!body) return "EMPTY_PAGE";
+
+  const stripped = body
+    .replace(/<head[^>]*>[\s\S]*?<\/head>/gi, "")
+    .replace(/<noscript[^>]*>[\s\S]*?<\/noscript>/gi, "")
+    .replace(/\s/g, "");
+
+  const scriptMatches = [...body.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)];
+  const scriptContent = scriptMatches.map((m) => m[1]).join("").trim();
+
+  if (stripped === "" && scriptContent) return "JS_ONLY";
+  return stripped.length === 0 ? "EMPTY_PAGE" : false;
+}
+
+/* ------------------------ DOMAIN CHECK ------------------------ */
+
+/** Sequential domain check for one domain */
+async function checkDomainStatus(domain) {
   const protocols = ["https", "http"];
 
   for (const protocol of protocols) {
-    try {
-      const url = `${protocol}://${domain}`;
-      const urlObj = new URL(url);
-      const isHttps = protocol === "https";
-      const client = isHttps ? https : http;
+    let url = `${protocol}://${domain}`;
+    const visited = new Set();
+    let redirects = 0;
 
-      const result = await new Promise((resolve) => {
-        const req = client.request(
-          {
-            hostname: urlObj.hostname,
-            port: urlObj.port || (isHttps ? 443 : 80),
-            path: urlObj.pathname,
-            method: "HEAD",
-            timeout: 5000, // 5 second timeout
-            headers: {
-              "User-Agent": "Mozilla/5.0 (compatible; DomainChecker/1.0)",
-            },
-          },
-          (res) => {
-            resolve(true);
-          },
-        );
+    while (redirects < MAX_REDIRECTS) {
+      if (visited.has(url)) return "REDIRECT_LOOP";
+      visited.add(url);
 
-        req.on("error", () => resolve(false));
-        req.on("timeout", () => {
-          req.destroy();
-          resolve(false);
-        });
-        req.end();
-      });
+      const { status, statusCode, headers, body } = await fetchUrl(url);
 
-      if (result) return true;
-    } catch (error) {
-      // Continue to next protocol
-      continue;
+      if (status) {
+        debugLog(domain, "Low-level status:", status);
+        return status;
+      }
+
+      // Follow redirects
+      if (statusCode >= 300 && statusCode < 400 && headers.location) {
+        url = new URL(headers.location, url).toString();
+        redirects++;
+        debugLog(domain, "Redirect to", url);
+        continue;
+      }
+
+      // HTTP errors
+      if (statusCode >= 500) {
+        debugLog(domain, "Server error", statusCode);
+        return `SERVER_ERROR_${statusCode}`;
+      }
+      if (statusCode >= 400) {
+        debugLog(domain, "Client error", statusCode);
+        return `CLIENT_ERROR_${statusCode}`;
+      }
+
+      // Inspect body
+      if (body) {
+        // Cloudflare 5xx detection
+        for (const code of ["521", "522", "523", "524", "525"]) {
+          if (body.includes(`Error ${code}`)) {
+            debugLog(domain, "Cloudflare error detected:", code);
+            return `CLOUDFLARE_${code}`;
+          }
+        }
+
+        // WAF / protection detection
+        if (body.includes("Cloudflare Ray ID") || WAF_PATTERNS.some((p) => body.includes(p))) {
+          debugLog(domain, "Protected by WAF");
+          return "PROTECTED";
+        }
+
+        // Placeholder / blank / JS-only detection
+        const emptyCheck = isEmptyOrJsOnly(body);
+        if (emptyCheck) {
+          debugLog(domain, "Empty/JS-only page detected:", emptyCheck);
+          return emptyCheck;
+        }
+
+        if (PLACEHOLDER_PATTERNS.some((p) => body.includes(p))) {
+          debugLog(domain, "Placeholder page detected");
+          return "PLACEHOLDER";
+        }
+      }
+
+      return "VALID";
     }
+
+    return "REDIRECT_LOOP";
   }
 
-  return false;
+  return "UNREACHABLE";
 }
 
-/**
- * Check domain status
- *
- * Determines if a domain is valid, expired, or unreachable.
- *
- * @param {string} domain - Domain to check
- * @returns {Promise<Object>} Status object with domain, status, resolvable, and accessible properties
- */
+/** Wrapper with DNS resolution */
 async function checkDomain(domain) {
-  const isResolvable = await isDomainResolvable(domain);
+  const resolvable = await isDomainResolvable(domain);
+  if (!resolvable)
+    return { domain, status: "EXPIRED", resolvable: false, accessible: false };
 
-  if (!isResolvable) {
-    return {
-      domain,
-      status: "EXPIRED",
-      resolvable: false,
-      accessible: false
-    };
-  }
-
-  const isAccessible = await isDomainAccessible(domain);
-
-  if (isAccessible) {
-    return {
-      domain,
-      status: "VALID",
-      resolvable: true,
-      accessible: true
-    };
-  } else {
-    return {
-      domain,
-      status: "UNREACHABLE",
-      resolvable: true,
-      accessible: false,
-    };
-  }
+  const status = await checkDomainStatus(domain);
+  return { domain, status, resolvable: true, accessible: status === "VALID" };
 }
 
-/**
- * Main function
- *
- * Extracts domains from the sites directory and checks their status.
- *
- * @returns {Promise<void>}
- */
+/* ------------------------ MAIN ------------------------ */
 async function main() {
-  // Parse command line arguments
   const args = process.argv.slice(2);
-  const categories = args.length > 0 ? args : null;
+  const categories = args.length ? args : null;
 
-  // Display extraction information
   console.log("Extracting domains from sites directory...");
-  if (categories) {
-    console.log(`Categories: ${categories.join(", ")}`);
-  } else {
-    console.log("Categories: all");
+  console.log(`Categories: ${categories ? categories.join(", ") : "all"}`);
+
+  const domains = await extractDomainsFromJSDoc(categories);
+  const uniqueDomains = deduplicateRootDomains(domains);
+
+  console.log(`Found ${uniqueDomains.length} unique domains\n`);
+  if (!uniqueDomains.length) return console.log("No domains found.");
+
+  const results = [];
+
+  // Sequential checking
+  for (const domain of uniqueDomains) {
+    console.log(`\nChecking ${domain}...`);
+    const result = await checkDomain(domain);
+    results.push(result);
+    const icon = STATUS_ICONS[result.status] || "❓";
+    console.log(`${icon} ${result.status}`);
   }
 
-  try {
-    // Extract domains from sites
-    const domains = await extractDomainsFromJSDoc(categories);
-    const uniqueDomains = deduplicateRootDomains(domains);
+  // Summary
+  console.log("\n" + "=".repeat(50));
+  console.log("SUMMARY:");
 
-    console.log(`Found ${uniqueDomains.length} unique root domains\n`);
+  const counts = results.reduce((acc, r) => {
+    acc[r.status] = (acc[r.status] || 0) + 1;
+    return acc;
+  }, {});
 
-    // Handle case with no domains found
-    if (uniqueDomains.length === 0) {
-      console.log("No domains found.");
-      return;
-    }
+  Object.keys(STATUS_ICONS).forEach((status) => {
+    if (counts[status]) console.log(`${STATUS_ICONS[status]} ${status}: ${counts[status]}`);
+  });
 
-    // Check each domain
-    const results = [];
-    for (const domain of uniqueDomains) {
-      process.stdout.write(`Checking ${domain}... `);
-      const result = await checkDomain(domain);
-      results.push(result);
+  console.log(`📊 Total: ${results.length}`);
 
-      // Display status with appropriate emoji
-      const statusIcon =
-        result.status === "VALID"
-          ? "✅"
-          : result.status === "EXPIRED"
-            ? "❌"
-            : "⚠️";
-      console.log(`${statusIcon} ${result.status}`);
-    }
+  const problematic = results.filter((r) => r.status !== "VALID");
+  problematic.forEach((r) => {
+    console.log(`${STATUS_ICONS[r.status] || "❓"} ${r.status} -> ${r.domain}`);
+  });
 
-    // Generate and display summary
-    console.log("\n" + "=".repeat(50));
-    console.log("SUMMARY:");
-
-    const validCount = results.filter((r) => r.status === "VALID").length;
-    const expiredCount = results.filter((r) => r.status === "EXPIRED").length;
-    const unreachableCount = results.filter(
-      (r) => r.status === "UNREACHABLE",
-    ).length;
-
-    console.log(`✅ Valid: ${validCount}`);
-    console.log(`❌ Expired: ${expiredCount}`);
-    console.log(`⚠️  Unreachable: ${unreachableCount}`);
-    console.log(`📊 Total: ${results.length}`);
-
-    // Show expired domains if any
-    const expiredDomains = results
-      .filter((r) => r.status === "EXPIRED")
-      .map((r) => r.domain);
-    if (expiredDomains.length > 0) {
-      console.log("\n❌ EXPIRED DOMAINS:");
-      expiredDomains.forEach((domain) => console.log(`  - ${domain}`));
-    }
-
-    // Show unreachable domains if any
-    const unreachableDomains = results
-      .filter((r) => r.status === "UNREACHABLE")
-      .map((r) => r.domain);
-    if (unreachableDomains.length > 0) {
-      console.log("\n⚠️  UNREACHABLE DOMAINS:");
-      unreachableDomains.forEach((domain) => console.log(`  - ${domain}`));
-    }
-
-    // Display final summary -- (no exit codes for reporting mode)
-    const invalidCount = expiredCount + unreachableCount;
-    if (invalidCount > 0) {
-      console.log(`\n⚠️  Found ${invalidCount} invalid domain(s)`);
-    } else {
-      console.log("\n✅ All domains are valid!");
-    }
-  } catch (error) {
-    console.error(`Error: ${error.message}`);
-    process.exit(1);
-  }
+  console.log(
+    problematic.length
+      ? `\n⚠️ Found ${problematic.length} problematic domain(s)`
+      : "\n✅ All domains are valid!"
+  );
 }
 
-// Execute main function directly
 main().catch(console.error);
