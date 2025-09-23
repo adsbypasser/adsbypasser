@@ -21,6 +21,10 @@
  * realistic browser headers. Such sites are marked as CLOUDFLARE_BOT_PROTECTION.
  * For these sites, manual verification is required to determine if they are
  * actually accessible to real users.
+ *
+ * Environment Variables:
+ *  - DEBUG: Set to 'true' to enable debug logging, 'false' to disable.
+ *           If not set, defaults to false (debug disabled).
  */
 
 import { extractDomainsFromJSDoc } from "../build/jsdoc.js";
@@ -33,7 +37,8 @@ import { URL } from "url";
 /* ------------------------ CONFIG ------------------------ */
 const MAX_REDIRECTS = 5;
 const REQUEST_TIMEOUT_MS = 30000; // Increased from 10s to 30s to handle slow websites
-const DEBUG = true; // toggle debug messages
+// Read DEBUG from environment variable, default to false if not set
+const DEBUG = process.env.DEBUG === 'true' ? true : false;
 
 // Add browser-like headers to avoid bot detection
 // Updated to mimic Firefox browser more closely
