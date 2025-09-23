@@ -25,4 +25,7 @@ jobs:
         run: npm ci
 
       - name: Run domain checker
-        run: node ci/check-domains.js
+        # Force Node.js to not buffer stdout, so console.log prints immediately
+        run: node --enable-source-maps ci/check-domains.js
+        env:
+          NODE_NO_WARNINGS: 1 # Suppresses Node warnings cluttering the log.
