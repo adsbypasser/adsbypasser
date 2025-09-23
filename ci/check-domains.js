@@ -14,6 +14,13 @@
  *  - Blank or JS-only page detection
  *  - Sequential domain checking
  *  - Debug logging for GitHub Actions
+ *
+ * Note on Cloudflare Bot Protection:
+ * Some sites use Cloudflare's advanced bot detection which cannot be bypassed
+ * by simple header spoofing. These sites will return 403 errors even with
+ * realistic browser headers. Such sites are marked as CLOUDFLARE_BOT_PROTECTION.
+ * For these sites, manual verification is required to determine if they are
+ * actually accessible to real users.
  */
 
 import { extractDomainsFromJSDoc } from "../build/jsdoc.js";
@@ -70,7 +77,7 @@ const STATUS_ICONS = {
   TIMEOUT: "⏱️",
   REDIRECT_LOOP: "🔁",
   PROTECTED: "🛡️",
-  CLOUDFLARE_403: "☁️403", // Add specific icon for Cloudflare 403
+  CLOUDFLARE_BOT_PROTECTION: "🛡️403", // Specific icon for Cloudflare bot protection
   CLOUDFLARE_521: "☁️521",
   CLOUDFLARE_522: "☁️522",
   CLOUDFLARE_523: "☁️523",
@@ -216,10 +223,13 @@ async function checkDomainStatus(domain) {
         // Add more specific handling for 403 errors
         if (statusCode === 403) {
           debugLog(domain, "403 Forbidden - Possible bot detection or access restriction");
-          // Check if it's a Cloudflare or other protection service
-          if (headers['server'] && headers['server'].includes('cloudflare')) {
-            debugLog(domain, "403 appears to be from Cloudflare");
-            return "CLOUDFLARE_403";
+          // Check if it's a Cloudflare protection
+          const isCloudflare = headers['server'] && headers['server'].includes('cloudflare');
+          const isCloudflareMitigated = headers['cf-mitigated'] === 'challenge';
+
+          if (isCloudflare || isCloudflareMitigated) {
+            debugLog(domain, "403 appears to be from Cloudflare bot detection");
+            return "CLOUDFLARE_BOT_PROTECTION";
           }
         }
         return `CLIENT_ERROR_${statusCode}`;
