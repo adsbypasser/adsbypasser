@@ -28,6 +28,20 @@ const MAX_REDIRECTS = 5;
 const REQUEST_TIMEOUT_MS = 10000;
 const DEBUG = true; // toggle debug messages
 
+// Add browser-like headers to avoid bot detection
+const DEFAULT_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'Accept-Language': 'en-US,en;q=0.5',
+  'Accept-Encoding': 'gzip, deflate',
+  'Connection': 'keep-alive',
+  'Upgrade-Insecure-Requests': '1',
+  'Sec-Fetch-Dest': 'document',
+  'Sec-Fetch-Mode': 'navigate',
+  'Sec-Fetch-Site': 'none',
+  'Cache-Control': 'max-age=0'
+};
+
 const PLACEHOLDER_PATTERNS = [
   "Welcome to nginx!",
   "This domain is parked",
@@ -56,6 +70,7 @@ const STATUS_ICONS = {
   TIMEOUT: "⏱️",
   REDIRECT_LOOP: "🔁",
   PROTECTED: "🛡️",
+  CLOUDFLARE_403: "☁️403", // Add specific icon for Cloudflare 403
   CLOUDFLARE_521: "☁️521",
   CLOUDFLARE_522: "☁️522",
   CLOUDFLARE_523: "☁️523",
@@ -93,17 +108,43 @@ async function isDomainResolvable(domain) {
 async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
   debugLog("Fetching", url);
 
+  // Log the headers we're sending
+  if (DEBUG) {
+    debugLog("Sending headers:");
+    Object.entries(DEFAULT_HEADERS).forEach(([key, value]) => {
+      debugLog(`  ${key}: ${value}`);
+    });
+  }
+
   return new Promise((resolve) => {
     const urlObj = new URL(url);
     const client = urlObj.protocol === "https:" ? https : http;
+
+    // Add default headers to the request
+    const requestOptions = {
+      hostname: urlObj.hostname,
+      port: urlObj.port,
+      path: urlObj.pathname + urlObj.search,
+      method: 'GET',
+      headers: DEFAULT_HEADERS
+    };
 
     const timer = setTimeout(() => {
       debugLog("Timeout fetching", url);
       resolve({ status: "TIMEOUT" });
     }, timeoutMs);
 
-    const req = client.get(urlObj, (res) => {
+    const req = client.request(requestOptions, (res) => {
       clearTimeout(timer);
+
+      // Log response headers for debugging
+      if (DEBUG) {
+        debugLog("Response headers:");
+        Object.entries(res.headers).forEach(([key, value]) => {
+          debugLog(`  ${key}: ${value}`);
+        });
+      }
+
       let body = "";
       res.on("data", (chunk) => {
         if (body.length < 8192) body += chunk.toString();
@@ -122,6 +163,8 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
         resolve({ status: "INVALID_SSL" });
       else resolve({ status: "UNREACHABLE" });
     });
+
+    req.end();
   });
 }
 
@@ -178,6 +221,15 @@ async function checkDomainStatus(domain) {
       }
       if (statusCode >= 400) {
         debugLog(domain, "Client error", statusCode);
+        // Add more specific handling for 403 errors
+        if (statusCode === 403) {
+          debugLog(domain, "403 Forbidden - Possible bot detection or access restriction");
+          // Check if it's a Cloudflare or other protection service
+          if (headers['server'] && headers['server'].includes('cloudflare')) {
+            debugLog(domain, "403 appears to be from Cloudflare");
+            return "CLOUDFLARE_403";
+          }
+        }
         return `CLIENT_ERROR_${statusCode}`;
       }
 
