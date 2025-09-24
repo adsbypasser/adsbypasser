@@ -6,7 +6,8 @@ _.register({
     host: /^linegee\.net$/,
   },
   async ready() {
-    const b = $("p.kecil a");
+    await _.wait(3000);
+    const b = $(".btn-xs");
     b.click();
   },
 });
