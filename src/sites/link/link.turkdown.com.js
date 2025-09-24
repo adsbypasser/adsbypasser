@@ -1,5 +1,5 @@
 /**
- * @domain turkdown.com
+ * @domain link.turkdown.com
  */
 _.register({
   rule: {
