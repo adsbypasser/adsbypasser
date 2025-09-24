@@ -1,5 +1,5 @@
 /**
- * @domain rlu.ru
+ * @domain preview.rlu.ru
  */
 _.register({
   rule: {
