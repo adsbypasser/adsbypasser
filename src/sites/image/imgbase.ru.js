@@ -4,9 +4,7 @@
  */
 _.register({
   rule: {
-    host: [
-      /^(imgbase|picforall)\.ru$/,
-    ],
+    host: [/^(imgbase|picforall)\.ru$/],
   },
   async ready() {
     let i = $("#pay_thumb_img img, #d1 table tbody tr td img");

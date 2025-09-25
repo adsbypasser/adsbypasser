@@ -6,10 +6,7 @@
 _.register({
   rule: [
     {
-      host: [
-        /^img\.trafficimage\.club$/,
-        /^trafficimage\.club$/,
-      ],
+      host: [/^img\.trafficimage\.club$/, /^trafficimage\.club$/],
       path: /^\/image\//,
     },
     {

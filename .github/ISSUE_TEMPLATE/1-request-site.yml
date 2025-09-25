@@ -1,6 +1,6 @@
 name: Request Site
 about: Request support for a new site
-title: '[Request] <site-domain>'
+title: "[Request] <site-domain>"
 labels: [enhancement]
 assignees: []
 
@@ -9,9 +9,9 @@ body:
     attributes:
       value: |
         **AdsBypasser DOES NOT bypass reCAPTCHA**
-        
+
         Note: If FULL LINK is NOT provided in the description, the ticket will be CLOSED after 7 DAYS.
-        
+
         **IMPORTANT**: Please update the issue title to include the site domain:
         `[Request] example.com`
 

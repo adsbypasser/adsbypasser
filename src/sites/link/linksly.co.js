@@ -15,10 +15,7 @@ _.register({
 
 _.register({
   rule: {
-    host: [
-      /^go\.bitcosite\.com$/,
-      /^go\.linksly\.co$/,
-    ],
+    host: [/^go\.bitcosite\.com$/, /^go\.linksly\.co$/],
   },
   async ready() {
     await _.wait(8000);

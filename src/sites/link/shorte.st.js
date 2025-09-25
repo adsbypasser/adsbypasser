@@ -7,9 +7,7 @@
  * @domain gestyy.com
  */
 (function () {
-  const hostRules = [
-    /^(ceesty|cllkme|corneey|destyy|festyy|gestyy)\.com$/,
-  ];
+  const hostRules = [/^(ceesty|cllkme|corneey|destyy|festyy|gestyy)\.com$/];
 
   _.register({
     rule: {

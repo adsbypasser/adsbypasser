@@ -1,6 +1,6 @@
 name: Bug Report
 about: Report a supported site that is not working correctly
-title: '[Bug] <site-domain>'
+title: "[Bug] <site-domain>"
 labels: [bug]
 assignees: []
 
@@ -9,9 +9,9 @@ body:
     attributes:
       value: |
         **AdsBypasser DOES NOT bypass reCAPTCHA**
-        
+
         Note: If FULL LINK is NOT provided in the description, the ticket will be CLOSED after 7 DAYS.
-        
+
         **IMPORTANT**: Please update the issue title to include the site domain:
         `[Bug] example.com`
 

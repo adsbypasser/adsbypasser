@@ -19,9 +19,7 @@ export default defineConfig({
     environment: "node",
 
     // Specify test file patterns
-    include: [
-      "tests/**/*.js"
-    ],
+    include: ["tests/**/*.js"],
 
     // Configure test coverage (optional)
     // coverage: {
@@ -49,7 +47,7 @@ export default defineConfig({
       // For example:
       // "@": path.resolve(__dirname, "./src"),
       // "~": path.resolve(__dirname)
-    }
+    },
   },
 
   // Additional configuration options can be added here

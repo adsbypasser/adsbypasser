@@ -4,10 +4,7 @@
  */
 _.register({
   rule: {
-    host: [
-      /^exe-links\.com$/,
-      /^exeo\.app$/,
-    ],
+    host: [/^exe-links\.com$/, /^exeo\.app$/],
   },
   async ready() {
     const a = $(".link-button.button");
