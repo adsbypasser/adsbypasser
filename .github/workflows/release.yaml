@@ -37,7 +37,7 @@ jobs:
       - name: Generate Release Notes
         id: release-notes
         run: |
-          node ci/release-notes-cli.js ${{ github.ref_name }} > release-notes.md
+          node ci/release-notes.js ${{ github.ref_name }} > release-notes.md
           echo "notes<<EOF" >> $GITHUB_OUTPUT
           cat release-notes.md >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { extractDomainDiff } from "../build/diff.js";
 import { extractPRsBetweenTags, getPreviousTag } from "./pr-extractor.js";
 
@@ -132,4 +134,45 @@ This is the first release of adsbypasser.
 
   // Generate release notes comparing with previous tag
   return await generateReleaseNotes(previousTag, currentTag);
+}
+
+/**
+ * Main CLI function
+ *
+ * Parses command line arguments and generates release notes.
+ * This function runs when the script is executed directly with Node.js.
+ *
+ * @returns {Promise<void>}
+ */
+async function main() {
+  // Extract tag from command line arguments
+  const currentTag = process.argv[2];
+
+  // Validate required arguments
+  if (!currentTag) {
+    console.error("Usage: node ci/release-notes.js <tag>");
+    console.error("Example: node ci/release-notes.js v8.0.0");
+    console.error("");
+    console.error(
+      "This script generates release notes for a specific git tag.",
+    );
+    console.error(
+      "It will compare the tag with the previous tag to show changes.",
+    );
+    process.exit(1);
+  }
+
+  try {
+    // Generate and display release notes
+    const releaseNotes = await generateReleaseNotesForTag(currentTag);
+    console.log(releaseNotes);
+  } catch (error) {
+    console.error(`Error: ${error.message}`);
+    process.exit(1);
+  }
+}
+
+// Run the CLI when this script is executed directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
 }
