@@ -112,7 +112,10 @@ Keep in mind:
   Review our [Security Policy](../SECURITY.md) before submitting code that might have security implications
 
 * **Coding style:**
-  Follow consistent indentation. Using an editor with vim modeline support is recommended.
+  We are using prettier to keep coding style consistant. There is a npm script to do this:
+  ```sh
+  npm run format
+  ```
 
 * **Reusing existing rules:**
   Some sites share the same system (e.g., *adf.ly*, *linkbucks.com*, *bc.vc*).
