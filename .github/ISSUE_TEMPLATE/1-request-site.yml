@@ -1,4 +1,5 @@
-name: Request Site
+name: Request_Site
+description: Request support for a new site
 title: "[Request] <site-domain>"
 labels: [enhancement]
 assignees: []

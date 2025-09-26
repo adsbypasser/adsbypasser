@@ -1,4 +1,5 @@
-name: Bug Report
+name: Bug_Report
+description: Report a supported site that is not working correctly
 title: "[Bug] <site-domain>"
 labels: [bug]
 assignees: []

@@ -1,4 +1,5 @@
-name: Retire Site
+name: Retire_Site
+description: Request removal of support for a site that is no longer active
 title: "[Retire] <site-domain>"
 labels: [retired]
 assignees: []
