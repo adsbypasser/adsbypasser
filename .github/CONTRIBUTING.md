@@ -117,6 +117,23 @@ Keep in mind:
   npm run format
   ```
 
+* **Commit Message:**
+  Your pull request title will be the commit message.
+  Please follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), and include the domain name in the title if possible.
+  For example, to fix a site:
+  ```
+  fix: example.org
+
+  Update selector ... etc.
+  ```
+  To add or remove a site:
+  ```
+  feat: example.com
+
+  Remove dead site.
+  ```
+  We will use the commit messages to do semantic release.
+
 * **Reusing existing rules:**
   Some sites share the same system (e.g., *adf.ly*, *linkbucks.com*, *bc.vc*).
   If your site is similar to an existing one, update the URL rule instead of creating a new file.
