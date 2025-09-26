@@ -1,5 +1,4 @@
 import js from "@eslint/js";
-import babelParser from "@babel/eslint-parser";
 import prettierConfig from "eslint-config-prettier";
 
 // Global variables organized by category
@@ -55,11 +54,9 @@ export default [
   {
     files: ["**/*.js", "**/*.mjs"],
     languageOptions: {
-      parser: babelParser,
       parserOptions: {
         sourceType: "module",
         ecmaVersion: "latest",
-        requireConfigFile: false,
       },
       globals: {
         // Combine all globals
