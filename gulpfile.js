@@ -8,19 +8,14 @@
 // Import task creators
 import { createUserscriptTasks } from "./build/tasks/userscript.js";
 import { createGhpagesTasks } from "./build/tasks/ghpages.js";
-import { createCheckTasks } from "./build/tasks/check.js";
 import { clean } from "./build/tasks/clean.js";
 
 // Initialize all task collections
 const userscriptTasks = createUserscriptTasks();
 const ghpagesTasks = createGhpagesTasks(userscriptTasks);
-const checkTasks = createCheckTasks();
 
 // Export tasks with descriptive names for Gulp 5
 export {
-  // Validation and checking tasks
-  checkTasks as check,
-
   // Cleanup task
   clean,
 
