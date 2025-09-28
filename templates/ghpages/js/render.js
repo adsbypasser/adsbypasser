@@ -13,7 +13,7 @@ window.commit = function commit() {};
   "use strict";
 
   // DOM element references
-  var view = {
+  const view = {
     panel: $("#panel"),
     options: $("#options"),
     save: $("#save"),
@@ -22,13 +22,13 @@ window.commit = function commit() {};
   };
 
   // Template functions for different configuration option types
-  var template = {
+  const template = {
     checkbox: _.template($("#template-checkbox").text()),
     select: _.template($("#template-select").text()),
   };
 
   // Factory functions for creating UI elements for different option types
-  var factory = {
+  const factory = {
     /**
      * Create a checkbox UI element
      * @param {string} key - Configuration option key
@@ -36,7 +36,7 @@ window.commit = function commit() {};
      * @returns {HTMLElement} - Created checkbox element
      */
     checkbox: function (key, data) {
-      var html = template.checkbox({
+      const html = template.checkbox({
         key: key,
         checked: data.value,
         label: data.label,
@@ -52,7 +52,7 @@ window.commit = function commit() {};
      * @returns {HTMLElement} - Created select element
      */
     select: function (key, data) {
-      var html = template.select({
+      const html = template.select({
         key: key,
         value: data.value,
         menu: data.menu,
@@ -74,13 +74,13 @@ window.commit = function commit() {};
 
     // Iterate through configuration options and create UI elements
     _.each(data.options, function (v, k) {
-      var createUI = factory[v.type];
+      const createUI = factory[v.type];
 
       if (!createUI) {
         return;
       }
 
-      var d = createUI(k, v);
+      const d = createUI(k, v);
       view.options.append(d);
     });
 
@@ -96,7 +96,7 @@ window.commit = function commit() {};
     view.save.on("click", function (event) {
       event.preventDefault();
 
-      var data = {};
+      const data = {};
 
       // Collect checkbox values
       view.options.find('input[type="checkbox"]').each(function (k, v) {
@@ -118,7 +118,7 @@ window.commit = function commit() {};
   };
 
   // Detection timeout for showing installation hint
-  var detection = setTimeout(function () {
+  const detection = setTimeout(function () {
     view.installHint.addClass("animated");
     view.installHint.css({
       opacity: 1,

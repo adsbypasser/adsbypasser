@@ -29,7 +29,7 @@ export function isValidDomain(domain) {
   try {
     const result = parseDomain(domain);
     return result.type === "LISTED" || result.type === "NOT_LISTED";
-  } catch (error) {
+  } catch {
     return false;
   }
 }
@@ -93,7 +93,7 @@ function extractRootDomain(domain) {
     // Build the root domain from the parsed result
     const rootDomain = result.domain + "." + result.topLevelDomains.join(".");
     return rootDomain;
-  } catch (error) {
+  } catch {
     return null;
   }
 }

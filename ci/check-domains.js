@@ -160,9 +160,7 @@ async function fetchUrl(url, timeoutMs = REQUEST_TIMEOUT_MS) {
       // Log response headers
       console.log("Response received for", url, "with status", res.statusCode);
       console.log("Response headers:");
-      Object.entries(res.headers).forEach(function (entry) {
-        var key = entry[0];
-        var value = entry[1];
+      Object.entries(res.headers).forEach(function ([key, value]) {
         console.log("  " + key + ": " + value);
       });
 
@@ -293,7 +291,7 @@ async function checkDomainStatus(domain) {
           redirects++;
           console.log(domain, "Redirect to", url);
           continue;
-        } catch (e) {
+        } catch {
           console.log(domain, "Error parsing redirect URL:", headers.location);
           return "INVALID_REDIRECT";
         }
