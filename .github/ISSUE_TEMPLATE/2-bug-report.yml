@@ -12,7 +12,7 @@ body:
         Note #1: AdsBypasser DOES NOT bypass reCAPTCHA
 
         Note #2: Please update the issue title to include the site domain:
-        `[Request] example.com`
+        `[Bug] example.com`
 
   - type: input
     id: site-domain
