@@ -8,7 +8,7 @@ import { execSync } from "child_process";
  *
  * @param {string} fromTag - Starting tag
  * @param {string} toTag - Ending tag
- * @returns {Array<Object>} Array of commit objects with hash, author, message, prNumber
+ * @returns {Array<Object>} Array of commit objects with message and prNumber
  */
 export function extractPRsBetweenTags(fromTag, toTag) {
   const commits = [];
@@ -18,26 +18,20 @@ export function extractPRsBetweenTags(fromTag, toTag) {
       toTag === "HEAD" ? `${fromTag}..HEAD` : `${fromTag}..${toTag}`;
 
     // Get all commits between tags
-    const allCommits = execSync(
-      `git log --pretty=format:"%H|%an|%ae|%s" ${commitRange}`,
-      { encoding: "utf8" },
-    )
+    const allCommits = execSync(`git log --pretty=format:"%s" ${commitRange}`, {
+      encoding: "utf8",
+    })
       .split("\n")
       .filter((line) => line.trim());
 
-    for (const commit of allCommits) {
-      const [hash, author, email, message] = commit.split("|");
-
+    for (const message of allCommits) {
       // Look for commits ending with (#<pr number>) - typical of squash merges
       const prMatch = message.match(/\(#(\d+)\)$/);
       if (prMatch) {
         const prNumber = parseInt(prMatch[1]);
         commits.push({
-          hash,
-          author,
           message: message.replace(/\s*\(#\d+\)$/, ""), // Remove the PR number suffix
           prNumber,
-          url: `https://github.com/adsbypasser/adsbypasser/pull/${prNumber}`,
         });
       }
     }
