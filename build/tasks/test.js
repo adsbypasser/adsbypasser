@@ -2,7 +2,8 @@ import gulp from "gulp";
 import { exec } from "child_process";
 import { promisify } from "util";
 
-import { plugins, source } from "./lib.js";
+import { plugins } from "../lib/plugins.js";
+import { source } from "../lib/paths.js";
 
 const execAsync = promisify(exec);
 

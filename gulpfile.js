@@ -6,11 +6,11 @@
  */
 
 // Import task creators
-import { createUserscriptTasks } from "./build/userscript.js";
-import { createTestTasks } from "./build/test.js";
-import { createGhpagesTasks } from "./build/ghpages.js";
-import { createCheckTasks } from "./build/check.js";
-import { clean } from "./build/clean.js";
+import { createUserscriptTasks } from "./build/tasks/userscript.js";
+import { createTestTasks } from "./build/tasks/test.js";
+import { createGhpagesTasks } from "./build/tasks/ghpages.js";
+import { createCheckTasks } from "./build/tasks/check.js";
+import { clean } from "./build/tasks/clean.js";
 
 // Initialize all task collections
 const userscriptTasks = createUserscriptTasks();

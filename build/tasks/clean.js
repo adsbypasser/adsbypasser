@@ -1,6 +1,6 @@
 import { rimraf } from "rimraf";
 
-import { output } from "./lib.js";
+import { output } from "../lib/paths.js";
 
 /**
  * Clean the output directory

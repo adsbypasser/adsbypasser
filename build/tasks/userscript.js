@@ -4,17 +4,16 @@ import _ from "lodash";
 import findup from "findup-sync";
 import gulp from "gulp";
 
-import { extractDomainsFromJSDoc } from "./jsdoc.js";
-import { deduplicateRootDomains } from "./domain.js";
+import { extractDomainsFromJSDoc } from "../jsdoc.js";
+import { deduplicateRootDomains } from "../lib/domain.js";
 import {
   createNamedTask,
   getFeatureName,
   imageBuildOptions,
-  output,
-  plugins,
-  removeEmptyLines,
-  source,
-} from "./lib.js";
+} from "../lib/build.js";
+import { output, source } from "../lib/paths.js";
+import { plugins } from "../lib/plugins.js";
+import { removeEmptyLines } from "../lib/streams.js";
 
 /**
  * Create userscript generation tasks for all configurations

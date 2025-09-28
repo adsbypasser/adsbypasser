@@ -23,7 +23,7 @@
  */
 
 import { extractDomainsFromJSDoc } from "../build/jsdoc.js";
-import { deduplicateRootDomains } from "../build/domain.js";
+import { deduplicateRootDomains } from "../build/lib/domain.js";
 import dns from "dns/promises";
 import http from "http";
 import https from "https";

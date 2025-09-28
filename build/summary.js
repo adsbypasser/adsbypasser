@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import _ from "lodash";
 import { marked } from "marked";
 import { extractDomainsFromJSDoc } from "./jsdoc.js";
-import { deduplicateRootDomains } from "./domain.js";
+import { deduplicateRootDomains } from "./lib/domain.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
