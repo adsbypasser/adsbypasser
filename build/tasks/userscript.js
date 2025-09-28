@@ -109,7 +109,7 @@ function makeMeta(supportImage) {
 }
 
 /**
- * Generate body script using webpack
+ * Generate body script using rollup
  * @param {boolean} supportImage - Whether image support is enabled
  * @returns {stream.Readable} Gulp stream
  */
@@ -121,25 +121,16 @@ function makeBody(supportImage) {
   return gulp
     .src(source.to("src/util/main.js"))
     .pipe(
-      plugins.webpack({
-        resolve: {
-          alias: {
-            __ADSBYPASSER_NAMESPACE__: namespacePath,
-            __ADSBYPASSER_HANDLERS__: handlersPath,
-          },
-          modules: [source.to("src"), "node_modules"],
-          extensions: [".js", ".json"],
-          fullySpecified: false,
-        },
-        module: {
-          rules: [
-            {
-              test: /\.js$/,
-              resolve: {
-                fullySpecified: false,
-              },
-            },
-          ],
+      plugins.rollup({
+        alias: [
+          { find: "__ADSBYPASSER_NAMESPACE__", replacement: namespacePath },
+          { find: "__ADSBYPASSER_HANDLERS__", replacement: handlersPath },
+        ],
+        modules: [source.to("src"), "node_modules"],
+        extensions: [".js", ".json"],
+        output: {
+          format: "iife",
+          name: "AdsBypasser",
         },
       }),
     )
