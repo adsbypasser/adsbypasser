@@ -14,7 +14,7 @@ import { clean } from "./build/tasks/clean.js";
 
 // Initialize all task collections
 const userscriptTasks = createUserscriptTasks();
-const testTasks = createTestTasks();
+const testTask = createTestTasks();
 const ghpagesTasks = createGhpagesTasks(userscriptTasks);
 const checkTasks = createCheckTasks();
 
@@ -29,8 +29,8 @@ export {
   // GitHub Pages deployment tasks
   ghpagesTasks as ghpages,
 
-  // Testing tasks
-  testTasks as test,
+  // Testing task
+  testTask as test,
 
   // Main build tasks (default export)
   userscriptTasks as default,

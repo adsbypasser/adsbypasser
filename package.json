@@ -53,6 +53,8 @@
     "clean": "gulp clean",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:gulp": "gulp clean && gulp test",

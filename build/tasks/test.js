@@ -1,32 +1,15 @@
-import gulp from "gulp";
 import { exec } from "child_process";
 import { promisify } from "util";
-
-import { plugins } from "../lib/plugins.js";
-import { source } from "../lib/paths.js";
 
 const execAsync = promisify(exec);
 
 /**
  * Create test tasks
- * @returns {Function} Gulp parallel task function
+ * @returns {Function} Gulp series task function
  */
 export function createTestTasks() {
-  return gulp.parallel(lint, vitest);
+  return vitest;
 }
-
-/**
- * Lint source files with ESLint
- * @returns {stream.Readable} Gulp stream
- */
-function lint() {
-  return gulp
-    .src([source.to("src/**/*.js")])
-    .pipe(plugins.eslint.eslint())
-    .pipe(plugins.eslint.format())
-    .pipe(plugins.eslint.failAfterError());
-}
-lint.displayName = "test:lint";
 
 /**
  * Run tests with Vitest
@@ -43,4 +26,4 @@ function vitest() {
       });
   });
 }
-vitest.displayName = "test:vitest";
+vitest.displayName = "test";

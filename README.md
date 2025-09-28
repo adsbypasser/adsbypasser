@@ -76,6 +76,12 @@ npm run watch
 # Run tests
 npm test
 
+# Lint code
+npm run lint
+
+# Fix linting issues
+npm run lint:fix
+
 # Format code
 npm run format
 
