@@ -13,7 +13,6 @@ import {
 } from "../lib/build.js";
 import { output, source } from "../lib/paths.js";
 import { plugins } from "../lib/plugins.js";
-import { removeEmptyLines } from "../lib/streams.js";
 
 /**
  * Create userscript generation tasks for all configurations
@@ -104,7 +103,7 @@ function makeMeta(supportImage) {
       }),
     )
     .pipe(plugins.rename(`adsbypasser.${featureName}.meta.js`))
-    .pipe(removeEmptyLines())
+    .pipe(plugins.removeEmptyLines())
     .pipe(gulp.dest(output.path));
 }
 
@@ -135,7 +134,7 @@ function makeBody(supportImage) {
       }),
     )
     .pipe(plugins.stripComments())
-    .pipe(removeEmptyLines())
+    .pipe(plugins.removeEmptyLines())
     .pipe(plugins.rename(`${featureName}.js`))
     .pipe(gulp.dest(output.to("body")));
 }

@@ -92,4 +92,31 @@ export const plugins = {
       },
     });
   },
+  /**
+   * Remove empty lines from file contents
+   * @returns {stream.Transform} Transform stream
+   */
+  removeEmptyLines: () => {
+    return new Transform({
+      objectMode: true,
+      transform(file, encoding, callback) {
+        if (file.isNull()) {
+          return callback(null, file);
+        }
+
+        if (file.isStream()) {
+          return callback(new Error("Streaming not supported"));
+        }
+
+        try {
+          const decoded = file.contents.toString(encoding);
+          const stripped = decoded.replace(/^\s*[\r\n]/gm, "");
+          file.contents = Buffer.from(stripped, encoding);
+          callback(null, file);
+        } catch (error) {
+          callback(error);
+        }
+      },
+    });
+  },
 };
