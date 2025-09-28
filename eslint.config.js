@@ -19,6 +19,7 @@ const browserGlobals = {
   MutationObserver: "readonly",
   atob: "readonly",
   btoa: "readonly",
+  navigator: "readonly",
 };
 
 const userscriptGlobals = {
@@ -38,6 +39,23 @@ const userscriptGlobals = {
   exportFunction: "readonly",
 };
 
+const nodeGlobals = {
+  // Node.js globals
+  process: "readonly",
+  Buffer: "readonly",
+  __dirname: "readonly",
+  __filename: "readonly",
+  global: "readonly",
+  module: "readonly",
+  require: "readonly",
+  exports: "readonly",
+  console: "readonly",
+  setTimeout: "readonly",
+  clearTimeout: "readonly",
+  setInterval: "readonly",
+  clearInterval: "readonly",
+};
+
 const libraryGlobals = {
   // Third-party library globals
   _: "readonly", // Lodash
@@ -46,24 +64,22 @@ const libraryGlobals = {
 
 const customGlobals = {
   // Project-specific globals
+  commit: "readonly", // Used in templates
 };
 
 export default [
+  {
+    ignores: ["**/*.template.js"],
+  },
   js.configs.recommended,
   prettierConfig,
+  // Base configuration for all files
   {
     files: ["**/*.js", "**/*.mjs"],
     languageOptions: {
       parserOptions: {
         sourceType: "module",
         ecmaVersion: "latest",
-      },
-      globals: {
-        // Combine all globals
-        ...browserGlobals,
-        ...userscriptGlobals,
-        ...libraryGlobals,
-        ...customGlobals,
       },
     },
     rules: {
@@ -72,6 +88,28 @@ export default [
       "prefer-const": "error",
       "no-eval": "error",
       "no-implied-eval": "error",
+    },
+  },
+  // Node.js context: build/, ci/, vitest.config.js
+  {
+    files: ["build/**/*.js", "ci/**/*.js", "vitest.config.js"],
+    languageOptions: {
+      globals: {
+        ...nodeGlobals,
+        ...libraryGlobals,
+      },
+    },
+  },
+  // Browser context: src/, templates/ghpages/js/
+  {
+    files: ["src/**/*.js", "templates/ghpages/js/**/*.js"],
+    languageOptions: {
+      globals: {
+        ...browserGlobals,
+        ...userscriptGlobals,
+        ...libraryGlobals,
+        ...customGlobals,
+      },
     },
   },
 ];
