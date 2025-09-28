@@ -1,7 +1,8 @@
 /**
  * @domain imgbaron.com
  * @domain imgsto.com
- * @domain silverpic.com
+ * @domain pics4you.org
+ * @domain silverpic.net
  * @domain fappic.com
  */
 _.register({
@@ -9,12 +10,13 @@ _.register({
     host: [
       /^imgbaron\.com$/,
       /^imgsto\.com$/,
-      /^silverpic\.com$/,
+      /^pics4you\.org/,
+      /^silverpic\.net$/,
       /^www\.fappic\.com$/,
     ],
   },
   async ready() {
-    const i = $.$("img.pic");
+    const i = $.$(".main-content-image img");
     if (i) {
       await $.openImage(i.src);
       return;
