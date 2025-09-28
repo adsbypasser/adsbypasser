@@ -142,11 +142,13 @@ This is the first release of adsbypasser.
  * Parses command line arguments and generates release notes.
  * This function runs when the script is executed directly with Node.js.
  *
+ * @param {Array<string>} argv - Command line arguments array
  * @returns {Promise<void>}
+ * @throws {Error} When required arguments are missing or when release notes generation fails
  */
-async function main() {
+export async function main(argv) {
   // Extract tag from command line arguments
-  const currentTag = process.argv[2];
+  const currentTag = argv[2];
 
   // Validate required arguments
   if (!currentTag) {
@@ -159,20 +161,20 @@ async function main() {
     console.error(
       "It will compare the tag with the previous tag to show changes.",
     );
-    process.exit(1);
+    throw new Error("Missing required argument: tag");
   }
 
-  try {
-    // Generate and display release notes
-    const releaseNotes = await generateReleaseNotesForTag(currentTag);
-    console.log(releaseNotes);
-  } catch (error) {
-    console.error(`Error: ${error.message}`);
-    process.exit(1);
-  }
+  // Generate and display release notes
+  const releaseNotes = await generateReleaseNotesForTag(currentTag);
+  console.log(releaseNotes);
 }
 
 // Run the CLI when this script is executed directly
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
+if (import.meta.filename === process.argv[1]) {
+  main(process.argv)
+    .then(() => process.exit(0))
+    .catch((error) => {
+      console.error(`Error: ${error.message}`);
+      process.exit(1);
+    });
 }
