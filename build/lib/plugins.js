@@ -1,5 +1,3 @@
-import webpack from "webpack";
-import webpackStream from "webpack-stream";
 import { rollup } from "rollup";
 import alias from "@rollup/plugin-alias";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
@@ -23,15 +21,6 @@ export const plugins = {
   less: gulpLess,
   rename: gulpRename,
   stripComments: gulpStripComments,
-  /**
-   * Webpack plugin wrapper
-   * @param {Object} arg - Webpack configuration
-   * @returns {stream.Transform} Webpack stream
-   */
-  webpack: (arg) => {
-    arg.mode = "none";
-    return webpackStream(arg, webpack);
-  },
   /**
    * Rollup plugin wrapper for Gulp integration
    * @param {Object} config - Rollup configuration
