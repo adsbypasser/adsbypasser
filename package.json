@@ -55,9 +55,7 @@
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:gulp": "gulp clean && gulp test",
+    "test": "vitest",
     "ghpages": "gulp clean && gulp ghpages",
     "ci:release-notes": "node ci/release-notes.js",
     "ci:check-domains": "node ci/check-domains.js"
