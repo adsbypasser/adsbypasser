@@ -28,6 +28,8 @@
     "npm": ">=10.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "findup-sync": "^5.0.0",
