@@ -1,14 +1,14 @@
-<!-- Please fill out the following template to describe your pull request -->
-
-## Related Issue
-<!-- If this PR addresses an issue, please link it here (e.g.,: fixes #123) -->
+<!-- Thank you for your contribution! Please fill out the following form: -->
+## 🔗 Related Issue
+<!-- Link to the related issue. e.g. Fixes #123 -->
+Fixes #
 
 ## Type of Change
-<!-- Please delete options that are not relevant -->
-- Bug fix
-- New/Enhancement
-- Retire
-- Documentation update
+<!-- Please check all that apply -->
+- [ ] 🐞 Bug Fix
+- [ ] ✨ New Feature / Enhancement
+- [ ] 🔥 Remove Feature
+- [ ] 📝 Documentation
 
-## Further Comments
-<!-- Add any additional information or context about the pull request here -->
+## 📄 Description
+<!-- A brief description of the change and why it was needed -->
