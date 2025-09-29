@@ -1,4 +1,3 @@
-REFACT:
 # AdsBypasser
 
 [![Build Status](https://github.com/adsbypasser/adsbypasser/actions/workflows/unit-test.yaml/badge.svg)](https://github.com/adsbypasser/adsbypasser/actions)
