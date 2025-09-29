@@ -10,7 +10,7 @@ _.register({
     host: [
       /^imgbaron\.com$/,
       /^imgsto\.com$/,
-      /^pics4you\.org/,
+      /^pics4you\.org$/,
       /^silverpic\.net$/,
       /^www\.fappic\.com$/,
     ],
