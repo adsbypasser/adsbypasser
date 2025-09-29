@@ -1,11 +1,12 @@
 /**
  * @domain go.bitcosite.com
  * @domain go.linksly.co
+ * @domain goo.st
  * @domain linksly.co
  */
 _.register({
   rule: {
-    host: /^linksly\.co$/,
+    host: [/^linksly\.co$/, /^goo\.st$/],
   },
   async ready() {
     const b = $(".btn-primary");
