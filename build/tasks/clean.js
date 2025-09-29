@@ -1,4 +1,4 @@
-import { rimraf } from "rimraf";
+import fs from "fs/promises";
 
 import { output } from "../lib/paths.js";
 
@@ -7,5 +7,5 @@ import { output } from "../lib/paths.js";
  * @returns {Promise<void>} Promise that resolves when cleaning is complete
  */
 export function clean() {
-  return rimraf(output.path);
+  return fs.rm(output.path, { recursive: true, force: true });
 }
