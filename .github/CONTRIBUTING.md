@@ -109,7 +109,7 @@ Send pull requests (PRs) to the `develop` branch.
 Keep in mind:
 
 * **Security considerations:**
-  Review our [Security Policy](../SECURITY.md) before submitting code that might have security implications
+  Review our [Security Policy](SECURITY.md) before submitting code that might have security implications
 
 * **Coding style:**
   We are using prettier to keep coding style consistant. There is a npm script to do this:
