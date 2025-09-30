@@ -19,10 +19,6 @@ _.register({
   },
   async ready() {
     const i = $("img.pic");
-    if (window.location.host === "vipr.im") {
-      await $.openImage(i.src, { replace: true });
-    } else {
-      await $.openImage(i.src);
-    }
+    await $.openImage(i.src);
   },
 });
