@@ -40,7 +40,7 @@ function getCookie(key) {
  * Clears cookies for various domain variations
  */
 function resetCookies() {
-  const domainFull = document.domain;
+  const domainFull = location.hostname;
   const domainNoWWW = domainFull.replace(/^www\./, "");
   const domainRoot = domainFull.replace(/^(\w+\.)+?(\w+\.\w+)$/, "$2");
   const expired = new Date(1e3).toUTCString();
