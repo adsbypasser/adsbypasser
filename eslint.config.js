@@ -59,7 +59,7 @@ const nodeGlobals = {
 const libraryGlobals = {
   // Third-party library globals
   _: "readonly", // Lodash
-  $: "readonly", // jQuery (if used)
+  $: "readonly", // AdsBypasser
 };
 
 const customGlobals = {
