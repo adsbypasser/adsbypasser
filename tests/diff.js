@@ -7,17 +7,17 @@
  */
 
 import { describe, it, expect, vi, beforeEach } from "vitest";
-import { extractDomainDiff, compareDomains } from "../build/diff.js";
+import { extractDomainDiff, compareDomains } from "$build/diff.js";
 
 // Mock the git operations module
-vi.mock("../build/git.js", () => ({
+vi.mock("$build/git.js", () => ({
   extractDomainsAtTag: vi.fn(),
   extractFixedDomains: vi.fn(),
 }));
 
 // Import the actual domain utilities
 
-import { extractDomainsAtTag, extractFixedDomains } from "../build/git.js";
+import { extractDomainsAtTag, extractFixedDomains } from "$build/git.js";
 
 /**
  * Test suite for domain diff functionality

@@ -43,6 +43,9 @@ export default defineConfig({
       // Alias for utility modules
       $lib: path.resolve(__dirname, "./src/lib"),
 
+      // Alias for build utilities
+      $build: path.resolve(__dirname, "./build"),
+
       // You can add more aliases here as needed
       // For example:
       // "@": path.resolve(__dirname, "./src"),
