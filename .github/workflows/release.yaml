@@ -28,9 +28,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build userscripts
-        run: npm run build
-
       - name: Generate GitHub Pages content
         run: npm run ghpages
 
