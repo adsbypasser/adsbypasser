@@ -1,7 +1,7 @@
 /**
  * @domain goo.st
-   @domain shortmoz.link
-   @domain swzz.xyz
+ * @domain shortmoz.link
+ * @domain swzz.xyz
  */
 _.register({
   rule: {
