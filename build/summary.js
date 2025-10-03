@@ -1,25 +1,18 @@
 import fs from "fs/promises";
-import path from "path";
-import { fileURLToPath } from "url";
 
 import _ from "lodash";
 import { marked } from "marked";
 import { extractDomainsFromJSDoc } from "./jsdoc.js";
+import { source } from "./lib/paths.js";
 import { deduplicateRootDomains } from "./lib/domain.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const TEMPLATE_PATH = path.resolve(
-  __dirname,
-  "../templates/ghpages/summary.template.md",
-);
+const TEMPLATE_PATH = source.to("templates/ghpages/summary.template.md");
 
 /**
  * Generate summary for GitHub Pages
  * @returns {Promise<string>} HTML summary content
  */
-async function getSummaryForGitHubPages() {
+export async function getSummaryForGitHubPages() {
   // Extract domains from JSDoc
   const domains = await extractDomainsFromJSDoc();
 
@@ -44,5 +37,3 @@ async function getSummaryForGitHubPages() {
   data = marked(data);
   return data;
 }
-
-export { getSummaryForGitHubPages };
