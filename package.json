@@ -56,7 +56,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest",
-    "ghpages": "gulp clean && gulp ghpages",
+    "ghpages": "gulp ghpages",
     "ci:release-notes": "node ci/release-notes.js",
     "ci:check-domains": "node ci/check-domains.js"
   }
