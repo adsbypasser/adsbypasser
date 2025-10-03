@@ -118,7 +118,7 @@ function makeBody(supportImage) {
   const handlersPath = output.to(`handlers/${featureName}.js`);
 
   return gulp
-    .src(source.to("src/util/main.js"))
+    .src(source.to("src/main.js"))
     .pipe(
       plugins.rollup({
         alias: [
