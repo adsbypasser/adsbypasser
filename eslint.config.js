@@ -69,7 +69,7 @@ const customGlobals = {
 
 export default [
   {
-    ignores: ["**/*.template.js"],
+    ignores: ["dist", "**/*.template.js"],
   },
   js.configs.recommended,
   prettierConfig,
