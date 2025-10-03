@@ -5,7 +5,7 @@
  * including setting, getting, and resetting cookies.
  */
 
-import { none, forEach, find } from "util/core.js";
+import { none, forEach, find } from "./core.js";
 
 /**
  * Set a cookie value

@@ -15,7 +15,7 @@ import {
   isString,
   map,
   every,
-} from "util/core.js";
+} from "./core.js";
 
 /**
  * Array of registered patterns and their handlers

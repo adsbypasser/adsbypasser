@@ -1,5 +1,5 @@
-import { AdsBypasserError, isString, forEach, find, none } from "util/core.js";
-import { debug } from "util/logger.js";
+import { AdsBypasserError, isString, forEach, find, none } from "./core.js";
+import { debug } from "./logger.js";
 
 class DomNotFoundError extends AdsBypasserError {
   constructor(selector) {

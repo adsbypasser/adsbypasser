@@ -5,9 +5,9 @@
  * with proper error handling and data formatting.
  */
 
-import { AdsBypasserError, map, forEach, none } from "util/core.js";
-import { GMAPI } from "util/platform.js";
-import { debug } from "util/logger.js";
+import { AdsBypasserError, map, forEach, none } from "./core.js";
+import { GMAPI } from "./platform.js";
+import { debug } from "./logger.js";
 
 /**
  * Custom error class for AJAX-related errors
