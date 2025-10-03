@@ -6,9 +6,6 @@
  * configuration page and runtime config access.
  */
 
-// -----------------------------
-// Config Loader
-// -----------------------------
 import { register } from "util/dispatcher.js";
 import { usw, GMAPI } from "util/platform.js";
 

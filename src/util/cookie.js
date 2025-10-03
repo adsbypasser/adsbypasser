@@ -5,9 +5,6 @@
  * including setting, getting, and resetting cookies.
  */
 
-// -----------------------------
-// Cookie Utility
-// -----------------------------
 import { none, forEach, find } from "util/core.js";
 
 /**
