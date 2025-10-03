@@ -41,7 +41,7 @@ export default defineConfig({
   resolve: {
     alias: {
       // Alias for utility modules
-      util: path.resolve(__dirname, "./src/util"),
+      $lib: path.resolve(__dirname, "./src/lib"),
 
       // You can add more aliases here as needed
       // For example:

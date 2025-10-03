@@ -46,10 +46,10 @@ export const plugins = {
               alias({
                 entries: [
                   ...(config.alias || []),
-                  // Add util alias to resolve util/* imports
+                  // Add $lib alias to resolve $lib/* imports
                   {
-                    find: /^util\/(.+)$/,
-                    replacement: path.resolve(process.cwd(), "src/util/$1"),
+                    find: /^\$lib\/(.+)$/,
+                    replacement: path.resolve(process.cwd(), "src/lib/$1"),
                   },
                 ],
               }),

@@ -15,7 +15,7 @@ import {
   none,
   forEach,
   map,
-} from "util/core";
+} from "$lib/core";
 
 /**
  * Test suite for core utility functions

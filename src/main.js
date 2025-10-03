@@ -1,8 +1,8 @@
-import { nop } from "util/core.js";
-import { findHandler } from "util/dispatcher.js";
-import { rawUSW, GMAPI, usw } from "util/platform.js";
-import { dumpConfig, loadConfig } from "util/config.js";
-import { warn, info } from "util/logger.js";
+import { nop } from "./lib/core.js";
+import { findHandler } from "./lib/dispatcher.js";
+import { rawUSW, GMAPI, usw } from "./lib/platform.js";
+import { dumpConfig, loadConfig } from "./lib/config.js";
+import { warn, info } from "./lib/logger.js";
 import "__ADSBYPASSER_HANDLERS__";
 
 // -----------------------------
