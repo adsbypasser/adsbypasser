@@ -221,7 +221,6 @@ async function fetchUrl(domain, url, timeoutMs = REQUEST_TIMEOUT_MS) {
   // Extract domain from URL for error logging
   // This provides more detailed error information when debugging
   const urlObj = new URL(url);
-  const urlDomain = urlObj.hostname;
 
   return new Promise((resolve) => {
     // Choose the appropriate HTTP client based on protocol
