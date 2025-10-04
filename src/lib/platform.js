@@ -83,11 +83,34 @@ function getGMInfo() {
   return {};
 }
 
+/// Test if structured clone is needed for unsafeWindow access.
+function needStructuredClone() {
+  const isFirefox = typeof mozInnerScreenX === "number";
+  if (!isFirefox) {
+    // Only Firefox has Xray vision restrictions.
+    return false;
+  }
+  const { scriptHandler } = getGMInfo();
+  // These handlers do not need structured clone even on Firefox.
+  const excludedHandlers = new Set(["Tampermonkey", "Violentmonkey"]);
+  return !excludedHandlers.has(scriptHandler);
+}
+
 const MAGIC_KEY = "__adsbypasser_reverse_proxy__";
 
+/**
+ * Get a proxy for the unsafe window.
+ * @returns {Window} The unsafe window proxy.
+ *
+ * In Firefox, direct access to unsafeWindow is restricted and requires
+ * structured clone. This proxy wraps unsafeWindow to handle structured clone
+ * transparently.
+ * See https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
+ * for details.
+ * If you are not sure what this code does, **DO NOT** try to modify it.
+ */
 function getUnsafeWindowProxy() {
-  const isGreaseMonkey = getGMInfo().scriptHandler === "Greasemonkey";
-  if (!isGreaseMonkey) {
+  if (!needStructuredClone()) {
     return rawUSW;
   }
 
