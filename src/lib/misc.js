@@ -1,6 +1,6 @@
-import { nop } from "util/core.js";
-import { usw } from "util/platform.js";
-import { warn } from "util/logger.js";
+import { nop } from "./core.js";
+import { usw } from "./platform.js";
+import { warn } from "./logger.js";
 
 function removeAllTimer() {
   let handle = window.setInterval(nop, 10);

@@ -12,7 +12,7 @@ import {
   extractDomainsFromContent,
   extractDomainsFromCommitMessage,
   deduplicateRootDomains,
-} from "../build/domain.js";
+} from "$build/lib/domain.js";
 
 /**
  * Test suite for domain utility functions

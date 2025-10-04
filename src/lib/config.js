@@ -6,11 +6,8 @@
  * configuration page and runtime config access.
  */
 
-// -----------------------------
-// Config Loader
-// -----------------------------
-import { register } from "util/dispatcher.js";
-import { usw, GMAPI } from "util/platform.js";
+import { register } from "./dispatcher.js";
+import { usw, GMAPI } from "./platform.js";
 
 /**
  * Configuration manifest defining all available settings

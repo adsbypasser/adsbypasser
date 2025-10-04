@@ -28,4 +28,4 @@ jobs:
       - name: Run tests
         run: |
           npm install
-          npm run test:gulp
+          npm test

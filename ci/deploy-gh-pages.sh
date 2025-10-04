@@ -5,40 +5,22 @@
 # This script deploys files to a GitHub Pages repository and creates a git tag.
 # It handles both new deployments and updates to existing repositories.
 #
-# Usage: ./ci/deploy-gh-pages.sh <tag-name> <source-dir> <target-repo>
-#
-# Arguments:
-#   tag-name    - The git tag to create (e.g., v1.2.3)
-#   source-dir  - The local directory containing files to deploy
-#   target-repo - The target GitHub repository (format: owner/repo)
-#
 # Environment variables:
-#   GH_PAT - Personal Access Token (required for external repo access)
+#   TAG_NAME           - The git tag to create (e.g., v1.2.3)
+#   SOURCE_DIR         - The local directory containing files to deploy
+#   TARGET_REPO        - The target GitHub repository (format: owner/repo)
+#   TARGET_REPO_TOKEN  - Personal Access Token for target repository access
 #
 # Examples:
-#   ./ci/deploy-gh-pages.sh v1.2.3 ./dist/ghpages adsbypasser/adsbypasser.github.io
+#   TAG_NAME=v1.2.3 SOURCE_DIR=./dist/ghpages TARGET_REPO=adsbypasser/adsbypasser.github.io ./ci/deploy-gh-pages.sh
 
 set -e # Exit on any error
 
-# Extract command line arguments
-TAG_NAME="$1"
-SOURCE_DIR="$2"
-TARGET_REPO="$3"
-
-# Validate required arguments
-if [ -z "${TAG_NAME}" ] || [ -z "${SOURCE_DIR}" ] || [ -z "${TARGET_REPO}" ]; then
-    echo "Error: Missing required arguments"
-    echo "Usage: $0 <tag-name> <source-dir> <target-repo>"
-    echo "Example: $0 v1.2.3 ./dist/ghpages adsbypasser/adsbypasser.github.io"
-    exit 1
-fi
-
-# Use GH_PAT for external repository access
-TOKEN="${GH_PAT}"
-
 # Validate required environment variables
-if [ -z "${TOKEN}" ]; then
-    echo "Error: GH_PAT not found in environment (required for external repo access)"
+if [ -z "${TAG_NAME}" ] || [ -z "${SOURCE_DIR}" ] || [ -z "${TARGET_REPO}" ] || [ -z "${TARGET_REPO_TOKEN}" ]; then
+    echo "Error: Missing required environment variables"
+    echo "Required: TAG_NAME, SOURCE_DIR, TARGET_REPO, TARGET_REPO_TOKEN"
+    echo "Example: TAG_NAME=v1.2.3 SOURCE_DIR=./dist/ghpages TARGET_REPO=adsbypasser/adsbypasser.github.io TARGET_REPO_TOKEN=your_token $0"
     exit 1
 fi
 
@@ -63,7 +45,7 @@ echo "🚀 Deploying ${TAG_NAME} to ${TARGET_REPO}..."
 
 # Clone the target repository
 echo "📥 Cloning ${TARGET_REPO}..."
-REPO_URL="https://${TOKEN}@github.com/${TARGET_REPO}.git"
+REPO_URL="https://${TARGET_REPO_TOKEN}@github.com/${TARGET_REPO}.git"
 git clone "${REPO_URL}" "${TEMP_DIR}"
 
 # Enter the cloned repository

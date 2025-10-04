@@ -28,6 +28,8 @@
     "npm": ">=10.0.0"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^5.1.1",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
     "findup-sync": "^5.0.0",
@@ -43,20 +45,18 @@
     "marked": "^16.3.0",
     "parse-domain": "^8.2.2",
     "prettier": "^3.0.0",
-    "rimraf": "^6.0.1",
-    "vitest": "^3.2.4",
-    "webpack": "^5.94.0",
-    "webpack-stream": "^7.0.0"
+    "rollup": "^4.52.3",
+    "vitest": "^3.2.4"
   },
   "scripts": {
     "build": "gulp",
     "clean": "gulp clean",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "test:gulp": "gulp clean && gulp test",
-    "ghpages": "gulp clean && gulp ghpages",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest",
+    "ghpages": "gulp ghpages",
     "ci:release-notes": "node ci/release-notes.js",
     "ci:check-domains": "node ci/check-domains.js"
   }

@@ -1,12 +1,9 @@
 import fs from "fs/promises";
 import path from "path";
-import { fileURLToPath } from "url";
-import { extractDomainsFromContent } from "./domain.js";
+import { source } from "./lib/paths.js";
+import { extractDomainsFromContent } from "./lib/domain.js";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const SITES_DIR = path.resolve(__dirname, "../src/sites");
+const SITES_DIR = source.to("src/sites");
 
 /**
  * Extract domains from JSDoc @domain tags in site files

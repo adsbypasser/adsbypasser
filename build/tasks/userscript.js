@@ -4,17 +4,15 @@ import _ from "lodash";
 import findup from "findup-sync";
 import gulp from "gulp";
 
-import { extractDomainsFromJSDoc } from "./jsdoc.js";
-import { deduplicateRootDomains } from "./domain.js";
+import { extractDomainsFromJSDoc } from "../jsdoc.js";
+import { deduplicateRootDomains } from "../lib/domain.js";
 import {
   createNamedTask,
   getFeatureName,
   imageBuildOptions,
-  output,
-  plugins,
-  removeEmptyLines,
-  source,
-} from "./lib.js";
+} from "../lib/build.js";
+import { output, source } from "../lib/paths.js";
+import { plugins } from "../lib/plugins.js";
 
 /**
  * Create userscript generation tasks for all configurations
@@ -105,12 +103,12 @@ function makeMeta(supportImage) {
       }),
     )
     .pipe(plugins.rename(`adsbypasser.${featureName}.meta.js`))
-    .pipe(removeEmptyLines())
+    .pipe(plugins.removeEmptyLines())
     .pipe(gulp.dest(output.path));
 }
 
 /**
- * Generate body script using webpack
+ * Generate body script using rollup
  * @param {boolean} supportImage - Whether image support is enabled
  * @returns {stream.Readable} Gulp stream
  */
@@ -120,32 +118,23 @@ function makeBody(supportImage) {
   const handlersPath = output.to(`handlers/${featureName}.js`);
 
   return gulp
-    .src(source.to("src/util/main.js"))
+    .src(source.to("src/main.js"))
     .pipe(
-      plugins.webpack({
-        resolve: {
-          alias: {
-            __ADSBYPASSER_NAMESPACE__: namespacePath,
-            __ADSBYPASSER_HANDLERS__: handlersPath,
-          },
-          modules: [source.to("src"), "node_modules"],
-          extensions: [".js", ".json"],
-          fullySpecified: false,
-        },
-        module: {
-          rules: [
-            {
-              test: /\.js$/,
-              resolve: {
-                fullySpecified: false,
-              },
-            },
-          ],
+      plugins.rollup({
+        alias: [
+          { find: "__ADSBYPASSER_NAMESPACE__", replacement: namespacePath },
+          { find: "__ADSBYPASSER_HANDLERS__", replacement: handlersPath },
+        ],
+        modules: [source.to("src"), "node_modules"],
+        extensions: [".js", ".json"],
+        output: {
+          format: "iife",
+          name: "AdsBypasser",
         },
       }),
     )
     .pipe(plugins.stripComments())
-    .pipe(removeEmptyLines())
+    .pipe(plugins.removeEmptyLines())
     .pipe(plugins.rename(`${featureName}.js`))
     .pipe(gulp.dest(output.to("body")));
 }

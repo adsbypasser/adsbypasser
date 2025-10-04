@@ -7,8 +7,8 @@
  */
 
 // Core utility imports
-import { get, post } from 'util/ajax';
-import { getCookie, setCookie, resetCookies } from 'util/cookie';
+import { get, post } from '$lib/ajax';
+import { getCookie, setCookie, resetCookies } from '$lib/cookie';
 import {
   AdsBypasserError,
   find,
@@ -17,8 +17,8 @@ import {
   partial,
   tryEvery,
   wait,
-} from 'util/core';
-import { register } from 'util/dispatcher';
+} from '$lib/core';
+import { register } from '$lib/dispatcher';
 import {
   block,
   querySelector,
@@ -27,19 +27,19 @@ import {
   remove,
   searchFromScripts,
   toDOM,
-} from 'util/dom';
+} from '$lib/dom';
 <% if (supportImage) { %>
-import { openImage } from 'util/image';
+import { openImage } from '$lib/image';
 <% } %>
-import { openLink } from 'util/link';
-import { info, warn } from 'util/logger';
+import { openLink } from '$lib/link';
+import { info, warn } from '$lib/logger';
 import {
   evil,
   generateRandomIP,
   nuke,
   removeAllTimer,
-} from 'util/misc';
-import { usw } from 'util/platform';
+} from '$lib/misc';
+import { usw } from '$lib/platform';
 
 
 // Functional utility object

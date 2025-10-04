@@ -28,9 +28,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build userscripts
-        run: npm run build
-
       - name: Generate GitHub Pages content
         run: npm run ghpages
 
@@ -43,9 +40,12 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Deploy to GitHub Pages
-        run: ./ci/deploy-gh-pages.sh ${{ github.ref_name }} ./dist/ghpages adsbypasser/adsbypasser.github.io
+        run: ./ci/deploy-gh-pages.sh
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+          TAG_NAME: ${{ github.ref_name }}
+          SOURCE_DIR: ./dist/ghpages
+          TARGET_REPO: ${{ vars.GH_PAGES_REPO }}
+          TARGET_REPO_TOKEN: ${{ secrets.GH_PAT }}
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

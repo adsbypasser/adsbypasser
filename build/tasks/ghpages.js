@@ -1,14 +1,10 @@
 import _ from "lodash";
 import gulp from "gulp";
 
-import { getSummaryForGitHubPages } from "./summary.js";
-import {
-  allBuildOptions,
-  getFeatureName,
-  output,
-  plugins,
-  source,
-} from "./lib.js";
+import { getSummaryForGitHubPages } from "../summary.js";
+import { allBuildOptions, getFeatureName } from "../lib/build.js";
+import { output, source } from "../lib/paths.js";
+import { plugins } from "../lib/plugins.js";
 
 /**
  * Create GitHub Pages generation tasks

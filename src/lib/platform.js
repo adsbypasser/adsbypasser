@@ -1,4 +1,4 @@
-import { forEach, nop } from "util/core.js";
+import { forEach, nop } from "./core.js";
 
 const rawUSW = getUnsafeWindow();
 const usw = getUnsafeWindowProxy();

@@ -1,4 +1,4 @@
-import { isString } from "util/core.js";
+import { isString } from "./core.js";
 
 const quiet = false;
 

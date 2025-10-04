@@ -1,11 +1,11 @@
-import { rimraf } from "rimraf";
+import fs from "fs/promises";
 
-import { output } from "./lib.js";
+import { output } from "../lib/paths.js";
 
 /**
  * Clean the output directory
  * @returns {Promise<void>} Promise that resolves when cleaning is complete
  */
 export function clean() {
-  return rimraf(output.path);
+  return fs.rm(output.path, { recursive: true, force: true });
 }

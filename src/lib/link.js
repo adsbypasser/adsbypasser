@@ -1,5 +1,5 @@
-import { isString, wait, forEach } from "util/core.js";
-import { info, warn } from "util/logger.js";
+import { isString, wait, forEach } from "./core.js";
+import { info, warn } from "./logger.js";
 
 function prepare(element) {
   // HACK: create a body if called before DOMContentLoaded

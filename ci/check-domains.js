@@ -21,7 +21,7 @@
  */
 
 import { extractDomainsFromJSDoc } from "../build/jsdoc.js";
-import { deduplicateRootDomains } from "../build/domain.js";
+import { deduplicateRootDomains } from "../build/lib/domain.js";
 import dns from "dns/promises";
 import http from "http";
 import https from "https";
@@ -80,7 +80,7 @@ const CONTENT_PATTERNS = {
 
   /**
    * Text patterns indicating Web Application Firewall protection
-   * These indicate the site is protected by security services and may not 
+   * These indicate the site is protected by security services and may not
    * be accessible to automated tools without proper handling
    */
   WAF: [
@@ -164,11 +164,11 @@ function handleSSLError(domain, errorCode, errorMessage) {
     errorCode,
     errorMessage,
   );
-  
-  return { 
-    status: "SSL_ISSUE", 
-    error: errorCode, 
-    message: errorMessage 
+
+  return {
+    status: "SSL_ISSUE",
+    error: errorCode,
+    message: errorMessage
   };
 }
 
@@ -183,7 +183,7 @@ function debugLog(domain, ...args) {
     console.log("[DEBUG]", ...args);
     return;
   }
-  
+
   // If specific domain debug is enabled and this is that domain, log it
   if (SPECIFIC_DOMAIN_DEBUG && domain === SPECIFIC_DOMAIN_DEBUG) {
     console.log("[DEBUG]", ...args);
@@ -259,9 +259,7 @@ async function fetchUrl(domain, url, timeoutMs = REQUEST_TIMEOUT_MS) {
       // This information is valuable for diagnosing issues
       debugLog(domain, "Response received for", url, "with status", res.statusCode);
       debugLog(domain, "Response headers:");
-      Object.entries(res.headers).forEach(function (entry) {
-        var key = entry[0];
-        var value = entry[1];
+      Object.entries(res.headers).forEach(function ([key, value]) {
         debugLog(domain, "  " + key + ": " + value);
       });
 
@@ -387,7 +385,7 @@ async function checkDomainStatus(domain) {
       if (statusCode >= 300 && statusCode < 400 && headers.location) {
         try {
           const redirectUrl = new URL(headers.location, url);
-          
+
           // Special handling for protocol flips (HTTP ↔ HTTPS)
           // Some sites legitimately flip between protocols for the same domain
           // This is common for sites that want to ensure users are on the correct protocol
@@ -419,7 +417,7 @@ async function checkDomainStatus(domain) {
           redirects++;
           debugLog(domain, domain, "Redirect to", url);
           continue;
-        } catch (e) {
+        } catch {
           debugLog(domain, domain, "Error parsing redirect URL:", headers.location);
           return "INVALID_REDIRECT";
         }
@@ -446,8 +444,8 @@ async function checkDomainStatus(domain) {
             if (errorCode === "525" || errorCode === "526") {
               // Use unified SSL error handling for consistency
               const sslError = handleSSLError(
-                domain, 
-                `CLOUDFLARE_${errorCode}`, 
+                domain,
+                `CLOUDFLARE_${errorCode}`,
                 CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]
               );
               return sslError.status;
@@ -458,7 +456,7 @@ async function checkDomainStatus(domain) {
         }
         return `SERVER_ERROR_${statusCode}`;
       }
-      
+
       // Client errors (4xx errors)
       // These often indicate access restrictions or bot detection
       if (statusCode >= 400) {
@@ -524,8 +522,8 @@ async function checkDomainStatus(domain) {
             if (code === "525" || code === "526") {
               // Use unified SSL error handling for consistency
               const sslError = handleSSLError(
-                domain, 
-                `CLOUDFLARE_${code}`, 
+                domain,
+                `CLOUDFLARE_${code}`,
                 CLOUDFLARE_ERROR_DESCRIPTIONS[code]
               );
               return sslError.status;
@@ -603,24 +601,24 @@ async function checkDomain(domain) {
  */
 async function main() {
   const args = process.argv.slice(2);
-  
+
   // Parse command-line arguments
   // This allows users to control the script's behavior
   let categories = null;
   let specificDomain = null;
-  
+
   // Check if --verbose is in the arguments
   // This enables detailed debugging output
   const verboseIndex = args.indexOf('--verbose');
   if (verboseIndex !== -1) {
     GLOBAL_DEBUG = true;
-    
+
     // Check if there's a domain specified after --verbose
     // This allows debugging of specific domains only
     if (args[verboseIndex + 1] && !args[verboseIndex + 1].startsWith('-')) {
       specificDomain = args[verboseIndex + 1];
       SPECIFIC_DOMAIN_DEBUG = specificDomain;
-      
+
       // Remove --verbose and the domain from args
       args.splice(verboseIndex, 2);
     } else {
@@ -628,7 +626,7 @@ async function main() {
       args.splice(verboseIndex, 1);
     }
   }
-  
+
   // Remaining args are categories
   categories = args.length ? args : null;
 
@@ -641,7 +639,7 @@ async function main() {
 
   console.log("Extracting domains from sites directory...");
   console.log(`Categories: ${categories ? categories.join(", ") : "all"}`);
-  
+
   if (specificDomain) {
     console.log(`Checking specific domain only: ${specificDomain}`);
   }
@@ -657,7 +655,7 @@ async function main() {
       // This processes all domains found in the codebase
       domains = await extractDomainsFromJSDoc(categories);
     }
-    
+
     // Deduplicate root domains to avoid checking subdomains separately
     // This reduces redundant checks and improves efficiency
     const uniqueDomains = deduplicateRootDomains(domains);
@@ -683,7 +681,7 @@ async function main() {
         // In verbose mode, show detailed information as before
         console.log(`\nChecking ${domain}...`);
       }
-      
+
       try {
         const result = await checkDomain(domain);
         results.push(result);
@@ -765,7 +763,7 @@ async function main() {
       const problematic = results.filter(r => r.status !== "VALID");
       if (problematic.length > 0) {
         console.log("PROBLEMATIC DOMAIN(S):");
-        
+
         // Group domains by status
         const groupedProblems = {};
         problematic.forEach(r => {
@@ -774,17 +772,17 @@ async function main() {
           }
           groupedProblems[r.status].push(r.domain);
         });
-        
+
         // Display grouped problems
         Object.keys(groupedProblems).forEach((status, index) => {
           // Add extra spacing before each group except the first
           if (index > 0) {
             console.log(""); // Extra blank line between groups
           }
-          
+
           const domains = groupedProblems[status];
           let statusLine = `${STATUS_ICONS[status] || "❓"} ${status}`;
-          
+
           // Add Cloudflare error descriptions if applicable
           if (status.startsWith("CLOUDFLARE_")) {
             const errorCode = status.split("_")[1];
@@ -798,15 +796,15 @@ async function main() {
           } else if (status === "PROTOCOL_FLIP_LOOP") {
             statusLine += " - Sites with HTTP/HTTPS protocol flip but likely accessible";
           }
-          
+
           console.log(statusLine);
-          
+
           // List domains with indentation
           domains.forEach(domain => {
             console.log(`- ${domain}`);
           });
         });
-        
+
         console.log(""); // Extra blank line at the end
       }
     }

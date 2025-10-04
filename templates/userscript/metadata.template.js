@@ -1,9 +1,9 @@
 // @name           <%= title %>
 // @namespace      AdsBypasser
 // @description    Bypass Ads
-// @copyright      2012+, Wei-Cheng Pan, https://adsbypasser.github.io/
+// @author         AdsBypasser Team
 // @version        <%= version %>
-// @license        BSD
+// @license        BSD-3-Clause
 // @homepageURL    https://adsbypasser.github.io/
 // @supportURL     https://github.com/adsbypasser/adsbypasser/issues
 // @updateURL      https://adsbypasser.github.io/releases/adsbypasser.<%= buildName %>.meta.js

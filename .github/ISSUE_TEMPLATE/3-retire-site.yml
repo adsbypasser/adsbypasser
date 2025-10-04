@@ -1,5 +1,6 @@
 name: Retire_Site
 description: Request removal of support for a site that is no longer active
+
 title: "[Retire] <site-domain>"
 labels: [retired]
 assignees: []
@@ -8,11 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        **AdsBypasser DOES NOT bypass reCAPTCHA**
-
-        Note: If FULL LINK is NOT provided in the description, the ticket will be CLOSED after 7 DAYS.
-
-        **IMPORTANT**: Please update the issue title to include the site domain:
+        Note #1: Please update the issue title to include the site domain:
         `[Retire] example.com`
 
   - type: input
@@ -37,5 +34,5 @@ body:
     attributes:
       value: |
         Before submitting:
-        1. Please check if there's an existing ticket for the same site
-        2. Make sure you've provided information about why the site should be retired
+        1. Please check if there is an existing ticket open for the same site.
+        2. Make sure you have provided information about why the site should be retired.

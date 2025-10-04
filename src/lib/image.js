@@ -1,8 +1,8 @@
-import { openLink } from "util/link.js";
-import { remove } from "util/dom.js";
-import { warn, info } from "util/logger.js";
-import { removeAllTimer } from "util/misc.js";
-import { GMAPI } from "util/platform.js";
+import { openLink } from "./link.js";
+import { remove } from "./dom.js";
+import { warn, info } from "./logger.js";
+import { removeAllTimer } from "./misc.js";
+import { GMAPI } from "./platform.js";
 
 async function openImage(imgSrc, options = {}) {
   const replace = !!options.replace;
