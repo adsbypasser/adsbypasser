@@ -158,17 +158,12 @@ let SPECIFIC_DOMAIN_DEBUG = null;
  * @returns {Object} Standardized error object with status and details
  */
 function handleSSLError(domain, errorCode, errorMessage) {
-  debugLog(
-    domain,
-    "SSL certificate issue detected:",
-    errorCode,
-    errorMessage,
-  );
+  debugLog(domain, "SSL certificate issue detected:", errorCode, errorMessage);
 
   return {
     status: "SSL_ISSUE",
     error: errorCode,
-    message: errorMessage
+    message: errorMessage,
   };
 }
 
@@ -257,7 +252,13 @@ async function fetchUrl(domain, url, timeoutMs = REQUEST_TIMEOUT_MS) {
 
       // Log response headers for debugging purposes
       // This information is valuable for diagnosing issues
-      debugLog(domain, "Response received for", url, "with status", res.statusCode);
+      debugLog(
+        domain,
+        "Response received for",
+        url,
+        "with status",
+        res.statusCode,
+      );
       debugLog(domain, "Response headers:");
       Object.entries(res.headers).forEach(function ([key, value]) {
         debugLog(domain, "  " + key + ": " + value);
@@ -418,7 +419,12 @@ async function checkDomainStatus(domain) {
           debugLog(domain, domain, "Redirect to", url);
           continue;
         } catch {
-          debugLog(domain, domain, "Error parsing redirect URL:", headers.location);
+          debugLog(
+            domain,
+            domain,
+            "Error parsing redirect URL:",
+            headers.location,
+          );
           return "INVALID_REDIRECT";
         }
       }
@@ -446,7 +452,7 @@ async function checkDomainStatus(domain) {
               const sslError = handleSSLError(
                 domain,
                 `CLOUDFLARE_${errorCode}`,
-                CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode]
+                CLOUDFLARE_ERROR_DESCRIPTIONS[errorCode],
               );
               return sslError.status;
             }
@@ -489,7 +495,11 @@ async function checkDomainStatus(domain) {
           const isDDoSGuard =
             headers["server"] && headers["server"].includes("ddos-guard");
           if (isDDoSGuard) {
-            debugLog(domain, domain, "403 appears to be from DDoS-Guard protection");
+            debugLog(
+              domain,
+              domain,
+              "403 appears to be from DDoS-Guard protection",
+            );
             return "DDOS_GUARD_PROTECTION";
           }
         }
@@ -524,7 +534,7 @@ async function checkDomainStatus(domain) {
               const sslError = handleSSLError(
                 domain,
                 `CLOUDFLARE_${code}`,
-                CLOUDFLARE_ERROR_DESCRIPTIONS[code]
+                CLOUDFLARE_ERROR_DESCRIPTIONS[code],
               );
               return sslError.status;
             }
@@ -609,13 +619,13 @@ async function main() {
 
   // Check if --verbose is in the arguments
   // This enables detailed debugging output
-  const verboseIndex = args.indexOf('--verbose');
+  const verboseIndex = args.indexOf("--verbose");
   if (verboseIndex !== -1) {
     GLOBAL_DEBUG = true;
 
     // Check if there's a domain specified after --verbose
     // This allows debugging of specific domains only
-    if (args[verboseIndex + 1] && !args[verboseIndex + 1].startsWith('-')) {
+    if (args[verboseIndex + 1] && !args[verboseIndex + 1].startsWith("-")) {
       specificDomain = args[verboseIndex + 1];
       SPECIFIC_DOMAIN_DEBUG = specificDomain;
 
@@ -703,7 +713,9 @@ async function main() {
           } else if (result.status === "SSL_ISSUE") {
             // For SSL issues, show the error details if available
             if (result.error && result.message) {
-              console.log(`${icon} ${result.status} - ${result.error}: ${result.message}`);
+              console.log(
+                `${icon} ${result.status} - ${result.error}: ${result.message}`,
+              );
             } else {
               console.log(`${icon} ${result.status}`);
             }
@@ -752,7 +764,7 @@ async function main() {
       console.log(`✅ VALID: ${validCount}`);
 
       // Show Problem count (all non-VALID domains)
-      const problemCount = results.filter(r => r.status !== "VALID").length;
+      const problemCount = results.filter((r) => r.status !== "VALID").length;
       console.log(`⚠️ Problem: ${problemCount}`);
 
       // Show Total count
@@ -760,13 +772,13 @@ async function main() {
       console.log(""); // Ensure blank line after summary counts
 
       // Show detailed problematic domains grouped by status
-      const problematic = results.filter(r => r.status !== "VALID");
+      const problematic = results.filter((r) => r.status !== "VALID");
       if (problematic.length > 0) {
         console.log("PROBLEMATIC DOMAIN(S):");
 
         // Group domains by status
         const groupedProblems = {};
-        problematic.forEach(r => {
+        problematic.forEach((r) => {
           if (!groupedProblems[r.status]) {
             groupedProblems[r.status] = [];
           }
@@ -794,13 +806,14 @@ async function main() {
             // For SSL issues, add a general description
             statusLine += " - SSL/TLS certificate or handshake issues";
           } else if (status === "PROTOCOL_FLIP_LOOP") {
-            statusLine += " - Sites with HTTP/HTTPS protocol flip but likely accessible";
+            statusLine +=
+              " - Sites with HTTP/HTTPS protocol flip but likely accessible";
           }
 
           console.log(statusLine);
 
           // List domains with indentation
-          domains.forEach(domain => {
+          domains.forEach((domain) => {
             console.log(`- ${domain}`);
           });
         });
@@ -808,7 +821,6 @@ async function main() {
         console.log(""); // Extra blank line at the end
       }
     }
-
   } catch (error) {
     console.error("Error during domain checking:", error);
     process.exit(1);
