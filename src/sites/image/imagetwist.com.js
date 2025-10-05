@@ -1,5 +1,7 @@
 /**
  * @domain croea.com
+ * @domain fappic.com
+ * @domain imagehaha.com
  * @domain imagenpic.com
  * @domain imageshimage.com
  * @domain imagetwist.com
@@ -10,6 +12,8 @@ _.register({
   rule: {
     host: [
       /^croea\.com$/,
+      /^fappic\.com$/,
+      /^imagehaha\.com$/,
       /^imagenpic\.com$/,
       /^imageshimage\.com$/,
       /^imagetwist\.com$/,

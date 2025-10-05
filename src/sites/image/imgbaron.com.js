@@ -3,7 +3,6 @@
  * @domain imgsto.com
  * @domain pics4you.org
  * @domain silverpic.net
- * @domain fappic.com
  */
 _.register({
   rule: {
@@ -12,7 +11,6 @@ _.register({
       /^imgsto\.com$/,
       /^pics4you\.org$/,
       /^silverpic\.net$/,
-      /^www\.fappic\.com$/,
     ],
   },
   async ready() {
