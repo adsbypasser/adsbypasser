@@ -6,11 +6,11 @@ _.register({
     host: /^network-loop\.com$/,
     query: /u=([^&]+)/,
   },
-  async start(m) {
+  async start() {
     await _.wait(3000);
-    const shadowHost = document.querySelector('#print_button');
+    const shadowHost = document.querySelector("#print_button");
     const shadowRoot = shadowHost.shadowRoot;
-    const buttonInShadow = shadowRoot.querySelector('a#pb_2');
+    const buttonInShadow = shadowRoot.querySelector("a#pb_2");
     await $.openLink(buttonInShadow.href);
   },
 });
