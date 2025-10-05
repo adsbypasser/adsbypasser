@@ -1,16 +1,10 @@
 /**
- * @domain detonating.com
  * @domain urlcash.com
- * @domain urlgalleries.com
- * @domain xxxs.org
  */
 _.register({
   rule: {
-    host: [
-      /^(detonating|urlgalleries)\.com$/,
+    host:
       /(^|\.)urlcash\.com$/,
-      /^xxxs\.org$/,
-    ],
   },
   async ready() {
     if ($.window && $.window.linkDestUrl) {
