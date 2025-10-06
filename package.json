@@ -45,7 +45,7 @@
     "marked": "^16.3.0",
     "parse-domain": "^8.2.2",
     "prettier": "^3.0.0",
-    "rollup": "^4.52.3",
+    "rollup": "^4.52.4",
     "vitest": "^3.2.4"
   },
   "scripts": {
