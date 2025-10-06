@@ -1,20 +1,16 @@
 /**
  * @domain adsafelink.com
  * @domain aylink.co
- * @domain birdurls.com
  * @domain clik.pw
  * @domain clk.sh
  * @domain cpmlink.pro
  * @domain dz4link.com
  * @domain gitlink.pro
- * @domain linkmoni.com
- * @domain miniurl.pw
  * @domain mitly.us
  * @domain oke.io
  * @domain oko.sh
  * @domain pahe.plus
  * @domain payskip.org
- * @domain pingit.im
  * @domain thotpacks.xyz
  * @domain tmearn.net
  */
@@ -24,16 +20,13 @@
       host: [
         // com
         /^adsafelink\.com$/,
-        /^birdurls\.com$/,
         /^dz4link\.com$/,
-        /^linkmoni\.com$/,
         // net
         /^tmearn\.net$/,
         // org
         /^payskip\.org$/,
         // pw
         /^clik\.pw$/,
-        /^miniurl\.pw$/,
         // else
         /^aylink\.co$/,
         /^(clk|oko)\.sh$/,
@@ -42,7 +35,6 @@
         /^mitly\.us$/,
         /^oke\.io$/,
         /^pahe\.plus$/,
-        /^pingit\.im$/,
         /^thotpacks\.xyz$/,
       ],
     },
