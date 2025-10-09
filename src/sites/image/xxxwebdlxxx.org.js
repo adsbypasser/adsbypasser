@@ -1,10 +1,14 @@
 /**
+ * @domain imgdawgknuttz.com
  * @domain xxxwebdlxxx.org
  * @domain xxxwebdlxxx.top
  */
 _.register({
   rule: {
-    host: /^xxxwebdlxxx\.(org|top)$/,
+    host: [
+      /^imgdawgknuttz\.com$/,
+      /^xxxwebdlxxx\.(org|top)$/,
+    ],
   },
   async ready() {
     const a = $(".centred, .centred_resized");
