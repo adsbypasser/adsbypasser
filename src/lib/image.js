@@ -58,7 +58,7 @@ function checkScaling() {
   }
 }
 
-async function scaleImage(img) {
+function scaleImage(img) {
   appendStyleURL(SCALE_IMAGE);
 
   if (img.naturalWidth && img.naturalHeight) {
@@ -74,12 +74,12 @@ async function scaleImage(img) {
   });
 }
 
-async function changeBackground() {
+function changeBackground() {
   document.body.style.backgroundColor = "#222222";
   document.body.style.backgroundImage = `url('${BACKGROUND_IMAGE}')`;
 }
 
-async function alignCenter() {
+function alignCenter() {
   appendStyleURL(ALIGN_CENTER);
 }
 
@@ -120,11 +120,19 @@ async function replaceBody(imgSrc) {
 
   const ac = await GMAPI.getValue("align_center");
   const si = await GMAPI.getValue("scale_image");
-  if (ac || si) injectStyle(wrapper, img);
-  if (ac) await alignCenter();
+  if (ac || si) {
+    injectStyle(wrapper, img);
+  }
+  if (ac) {
+    alignCenter();
+  }
   const cb = await GMAPI.getValue("change_background");
-  if (cb) await changeBackground();
-  if (si) await scaleImage(img);
+  if (cb) {
+    changeBackground();
+  }
+  if (si) {
+    scaleImage(img);
+  }
 }
 
 export { openImage };
