@@ -3,8 +3,7 @@ import { forEach } from "./core.js";
 const rawUSW = getUnsafeWindow();
 const usw = getUnsafeWindowProxy();
 const GMAPI = getGreaseMonkeyAPI();
-const FALLBACK_VERSION = "8.0.0";
-const VERSION = getGMInfo().script?.version ?? FALLBACK_VERSION;
+const VERSION = getGMInfo().script?.version ?? "";
 
 function getUnsafeWindow() {
   let w = null;
