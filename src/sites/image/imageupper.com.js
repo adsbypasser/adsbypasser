@@ -4,10 +4,7 @@
  */
 _.register({
   rule: {
-    host: [
-      /^imageupper\.com$/,
-      /^imgbox\.com$/,
-    ],
+    host: [/^imageupper\.com$/, /^imgbox\.com$/],
   },
   async ready() {
     const i = $("#img");

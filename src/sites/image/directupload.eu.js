@@ -4,10 +4,7 @@
  */
 _.register({
   rule: {
-    host: [
-      /^www\.directupload\.eu$/, 
-      /^www\.noelshack\.com$/,
-    ],
+    host: [/^www\.directupload\.eu$/, /^www\.noelshack\.com$/],
   },
   async ready() {
     const i = $('meta[property="og:image"]');

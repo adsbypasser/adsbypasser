@@ -5,10 +5,7 @@
  */
 _.register({
   rule: {
-    host: [
-      /^imgdawgknuttz\.com$/,
-      /^xxxwebdlxxx\.(org|top)$/,
-    ],
+    host: [/^imgdawgknuttz\.com$/, /^xxxwebdlxxx\.(org|top)$/],
   },
   async ready() {
     const a = $(".centred, .centred_resized");

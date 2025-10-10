@@ -3,8 +3,7 @@
  */
 _.register({
   rule: {
-    host:
-      /(^|\.)urlcash\.com$/,
+    host: /(^|\.)urlcash\.com$/,
   },
   async ready() {
     if ($.window && $.window.linkDestUrl) {
