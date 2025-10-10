@@ -1,4 +1,4 @@
-import { forEach, nop } from "./core.js";
+import { forEach } from "./core.js";
 
 const rawUSW = getUnsafeWindow();
 const usw = getUnsafeWindowProxy();
@@ -41,12 +41,7 @@ function promisify(fn) {
 }
 
 function getGMInfo() {
-  if (typeof GM_info === "object" && GM_info) {
-    return GM_info;
-  } else if (typeof GM === "object" && GM && GM.info) {
-    return GM.info;
-  }
-  return {};
+  return GM?.info ?? GM_info ?? {};
 }
 
 /// Test if structured clone is needed for unsafeWindow access.
