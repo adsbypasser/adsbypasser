@@ -1,4 +1,4 @@
-import { forEach, nop } from "./core.js";
+import { forEach } from "./core.js";
 
 const rawUSW = getUnsafeWindow();
 const usw = getUnsafeWindowProxy();
@@ -21,84 +21,96 @@ function getUnsafeWindow() {
 }
 
 function getGreaseMonkeyAPI() {
-  if (rawUSW.global) return null;
-
-  const gm = {};
-
-  gm.openInTab =
-    typeof GM_openInTab === "function" ? GM_openInTab : GM.openInTab;
-
-  gm.getValue =
-    typeof GM_getValue === "function"
-      ? (name, default_) => Promise.resolve(GM_getValue(name, default_))
-      : GM.getValue;
-
-  gm.setValue =
-    typeof GM_setValue === "function"
-      ? (name, value) => Promise.resolve(GM_setValue(name, value))
-      : GM.setValue;
-
-  gm.deleteValue =
-    typeof GM_deleteValue === "function"
-      ? (name) => Promise.resolve(GM_deleteValue(name))
-      : GM.deleteValue;
-
-  gm.xmlHttpRequest =
-    typeof GM_xmlhttpRequest === "function"
-      ? GM_xmlhttpRequest
-      : GM.xmlHttpRequest;
-
-  gm.registerMenuCommand =
-    typeof GM_registerMenuCommand === "function" ? GM_registerMenuCommand : nop;
-
-  if (typeof GM_getResourceURL === "function") {
-    gm.getResourceUrl = (resourceName) =>
-      Promise.resolve(GM_getResourceURL(resourceName));
-  } else if (typeof GM === "object" && GM && GM.getResourceUrl) {
-    gm.getResourceUrl = GM.getResourceUrl;
+  if (rawUSW.global) {
+    return null;
   }
 
-  return gm;
+  return {
+    openInTab: GM?.openInTab ?? GM_openInTab,
+    getValue: GM?.getValue ?? promisify(GM_getValue),
+    setValue: GM?.setValue ?? promisify(GM_setValue),
+    deleteValue: GM?.deleteValue ?? promisify(GM_deleteValue),
+    xmlHttpRequest: GM?.xmlHttpRequest ?? GM_xmlhttpRequest,
+    registerMenuCommand: GM?.registerMenuCommand ?? GM_registerMenuCommand,
+    getResourceUrl: GM?.getResourceUrl ?? promisify(GM_getResourceURL),
+  };
+}
+
+function promisify(fn) {
+  return (...args) => Promise.resolve(fn(...args));
 }
 
 function getGMInfo() {
-  if (typeof GM_info === "object" && GM_info) return GM_info;
-  if (typeof GM === "object" && GM && GM.info) return GM.info;
-  return {};
+  return GM?.info ?? GM_info ?? {};
+}
+
+/// Test if structured clone is needed for unsafeWindow access.
+function needStructuredClone() {
+  const isFirefox = typeof mozInnerScreenX === "number";
+  if (!isFirefox) {
+    // Only Firefox has Xray vision restrictions.
+    return false;
+  }
+  const { scriptHandler } = getGMInfo();
+  // These handlers do not need structured clone even on Firefox.
+  const excludedHandlers = new Set(["Tampermonkey", "Violentmonkey"]);
+  return !excludedHandlers.has(scriptHandler);
 }
 
 const MAGIC_KEY = "__adsbypasser_reverse_proxy__";
 
+/**
+ * Get a proxy for the unsafe window.
+ * @returns {Window} The unsafe window proxy.
+ *
+ * In Firefox, direct access to unsafeWindow is restricted and requires
+ * structured clone. This proxy wraps unsafeWindow to handle structured clone
+ * transparently.
+ * See https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
+ * for details.
+ * If you are not sure what this code does, **DO NOT** try to modify it.
+ */
 function getUnsafeWindowProxy() {
-  const isGreaseMonkey = getGMInfo().scriptHandler === "Greasemonkey";
-  if (!isGreaseMonkey) return rawUSW;
+  if (!needStructuredClone()) {
+    return rawUSW;
+  }
 
   const decorator = {
     set(target, key, value) {
-      if (key === MAGIC_KEY) return false;
-      target[key] = clone(value);
+      if (key === MAGIC_KEY) {
+        return false;
+      } else {
+        target[key] = clone(value);
+      }
       return true;
     },
     get(target, key) {
-      if (key === MAGIC_KEY) return target;
+      if (key === MAGIC_KEY) {
+        return target;
+      }
       const value = target[key];
       const type = typeof value;
-      if (value === null || (type !== "function" && type !== "object"))
+      if (value === null || (type !== "function" && type !== "object")) {
         return value;
+      }
       return new Proxy(value, decorator);
     },
     apply(target, self, args) {
       args = Array.prototype.slice.call(args);
 
-      if (target === unsafeWindow.Object.defineProperty)
+      if (target === unsafeWindow.Object.defineProperty) {
         args[0] = args[0][MAGIC_KEY];
+      }
       if (target === unsafeWindow.Function.apply) {
         self = self[MAGIC_KEY];
         args[1] = Array.prototype.slice.call(args[1]);
       }
-      if (target === unsafeWindow.document.querySelector)
+      if (target === unsafeWindow.document.querySelector) {
         self = self[MAGIC_KEY];
-      if (target === unsafeWindow.document.write) self = self[MAGIC_KEY];
+      }
+      if (target === unsafeWindow.document.write) {
+        self = self[MAGIC_KEY];
+      }
 
       const usargs = clone(args);
       return target.apply(self, usargs);
@@ -116,16 +128,25 @@ function getUnsafeWindowProxy() {
 }
 
 function clone(safe) {
-  if (safe === null || !(safe instanceof Object)) return safe;
-  if (safe === unsafeWindow) return safe;
-  if (safe instanceof String) return safe.toString();
-  if (safe instanceof Function)
+  if (safe === null || !(safe instanceof Object)) {
+    return safe;
+  }
+  if (safe === unsafeWindow) {
+    return safe;
+  }
+  if (safe instanceof String) {
+    return safe.toString();
+  }
+  if (safe instanceof Function) {
     return exportFunction(safe, unsafeWindow, {
       allowCrossOriginArguments: true,
     });
+  }
   if (safe instanceof Array) {
     const unsafe = new unsafeWindow.Array();
-    for (let i = 0; i < safe.length; i++) unsafe.push(clone(safe[i]));
+    for (let i = 0; i < safe.length; i++) {
+      unsafe.push(clone(safe[i]));
+    }
     return unsafe;
   }
 
