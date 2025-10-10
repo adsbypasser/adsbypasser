@@ -3,6 +3,8 @@ import { forEach } from "./core.js";
 const rawUSW = getUnsafeWindow();
 const usw = getUnsafeWindowProxy();
 const GMAPI = getGreaseMonkeyAPI();
+const FALLBACK_VERSION = "8.0.0";
+const VERSION = getGMInfo().script?.version ?? FALLBACK_VERSION;
 
 function getUnsafeWindow() {
   let w = null;
@@ -32,7 +34,6 @@ function getGreaseMonkeyAPI() {
     deleteValue: GM?.deleteValue ?? promisify(GM_deleteValue),
     xmlHttpRequest: GM?.xmlHttpRequest ?? GM_xmlhttpRequest,
     registerMenuCommand: GM?.registerMenuCommand ?? GM_registerMenuCommand,
-    getResourceUrl: GM?.getResourceUrl ?? promisify(GM_getResourceURL),
   };
 }
 
@@ -157,4 +158,4 @@ function clone(safe) {
   return unsafe;
 }
 
-export { rawUSW, usw, GMAPI };
+export { rawUSW, usw, GMAPI, VERSION };

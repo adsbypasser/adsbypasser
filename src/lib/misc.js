@@ -37,7 +37,6 @@ function evil(script) {
   return ((
     GM,
     GM_deleteValue,
-    GM_getResourceURL,
     GM_getValue,
     GM_openInTab,
     GM_registerMenuCommand,

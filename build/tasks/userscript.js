@@ -234,7 +234,6 @@ async function finalizeMetadata(supportImage, content) {
   s = s({
     version: pkg.version,
     title: `AdsBypasser${featurePostfix}`,
-    supportImage,
     buildName: featureName,
   });
 

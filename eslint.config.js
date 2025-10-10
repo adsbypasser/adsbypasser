@@ -33,7 +33,6 @@ const userscriptGlobals = {
   GM_registerMenuCommand: "readonly",
   GM_setValue: "readonly",
   GM_xmlhttpRequest: "readonly",
-  GM_getResourceURL: "readonly",
   GM_info: "readonly",
   unsafeWindow: "readonly",
   exportFunction: "readonly",

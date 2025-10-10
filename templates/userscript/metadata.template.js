@@ -10,9 +10,6 @@
 // @downloadURL    https://adsbypasser.github.io/releases/adsbypasser.<%= buildName %>.user.js
 // @icon           https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/static/img/logo.png
 // @grant          GM_deleteValue
-<% if (supportImage) { %>
-// @grant          GM_getResourceURL
-<% } %>
 // @grant          GM_getValue
 // @grant          GM_info
 // @grant          GM_openInTab
@@ -20,9 +17,6 @@
 // @grant          GM_setValue
 // @grant          GM_xmlhttpRequest
 // @grant          GM.deleteValue
-<% if (supportImage) { %>
-// @grant          GM.getResourceUrl
-<% } %>
 // @grant          GM.getValue
 // @grant          GM.info
 // @grant          GM.openInTab
@@ -30,11 +24,6 @@
 // @grant          GM.setValue
 // @grant          GM.xmlHttpRequest
 // @grant          unsafeWindow
-<% if (supportImage) { %>
-// @resource       alignCenter https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/static/css/align_center.css
-// @resource       scaleImage https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/static/css/scale_image.css
-// @resource       bgImage https://raw.githubusercontent.com/adsbypasser/adsbypasser/v<%= version %>/static/img/imagedoc-darknoise.png
-<% } %>
 // @noframes
 // @run-at         document-start
 // @connect        *

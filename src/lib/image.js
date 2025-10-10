@@ -2,7 +2,12 @@ import { openLink } from "./link.js";
 import { remove } from "./dom.js";
 import { warn, info } from "./logger.js";
 import { removeAllTimer } from "./misc.js";
-import { GMAPI } from "./platform.js";
+import { GMAPI, VERSION } from "./platform.js";
+
+const RESOURCE_ROOT = `https://raw.githubusercontent.com/adsbypasser/adsbypasser/v${VERSION}/static`;
+const ALIGN_CENTER = `${RESOURCE_ROOT}/css/align_center.css`;
+const SCALE_IMAGE = `${RESOURCE_ROOT}/css/scale_image.css`;
+const BACKGROUND_IMAGE = `${RESOURCE_ROOT}/img/imagedoc-darknoise.png`;
 
 async function openImage(imgSrc, options = {}) {
   const replace = !!options.replace;
@@ -54,8 +59,7 @@ function checkScaling() {
 }
 
 async function scaleImage(img) {
-  const siURL = await GMAPI.getResourceUrl("scaleImage");
-  appendStyleURL(siURL);
+  appendStyleURL(SCALE_IMAGE);
 
   if (img.naturalWidth && img.naturalHeight) {
     checkScaling.call(img);
@@ -71,14 +75,12 @@ async function scaleImage(img) {
 }
 
 async function changeBackground() {
-  const bgImage = await GMAPI.getResourceUrl("bgImage");
   document.body.style.backgroundColor = "#222222";
-  document.body.style.backgroundImage = `url('${bgImage}')`;
+  document.body.style.backgroundImage = `url('${BACKGROUND_IMAGE}')`;
 }
 
 async function alignCenter() {
-  const acURL = await GMAPI.getResourceUrl("alignCenter");
-  appendStyleURL(acURL);
+  appendStyleURL(ALIGN_CENTER);
 }
 
 function injectStyle(wrapper, img) {
