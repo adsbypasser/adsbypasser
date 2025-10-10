@@ -25,53 +25,19 @@ function getGreaseMonkeyAPI() {
     return null;
   }
 
-  const gm = {};
+  return {
+    openInTab: GM?.openInTab ?? GM_openInTab,
+    getValue: GM?.getValue ?? promisify(GM_getValue),
+    setValue: GM?.setValue ?? promisify(GM_setValue),
+    deleteValue: GM?.deleteValue ?? promisify(GM_deleteValue),
+    xmlHttpRequest: GM?.xmlHttpRequest ?? GM_xmlhttpRequest,
+    registerMenuCommand: GM?.registerMenuCommand ?? GM_registerMenuCommand,
+    getResourceUrl: GM?.getResourceUrl ?? promisify(GM_getResourceURL),
+  };
+}
 
-  if (typeof GM_openInTab === "function") {
-    gm.openInTab = GM_openInTab;
-  } else {
-    gm.openInTab = GM.openInTab;
-  }
-
-  if (typeof GM_getValue === "function") {
-    gm.getValue = (name, default_) =>
-      Promise.resolve(GM_getValue(name, default_));
-  } else {
-    gm.getValue = GM.getValue;
-  }
-
-  if (typeof GM_setValue === "function") {
-    gm.setValue = (name, value) => Promise.resolve(GM_setValue(name, value));
-  } else {
-    gm.setValue = GM.setValue;
-  }
-
-  if (typeof GM_deleteValue === "function") {
-    gm.deleteValue = (name) => Promise.resolve(GM_deleteValue(name));
-  } else {
-    gm.deleteValue = GM.deleteValue;
-  }
-
-  if (typeof GM_xmlhttpRequest === "function") {
-    gm.xmlHttpRequest = GM_xmlhttpRequest;
-  } else {
-    gm.xmlHttpRequest = GM.xmlHttpRequest;
-  }
-
-  if (typeof GM_registerMenuCommand === "function") {
-    gm.registerMenuCommand = GM_registerMenuCommand;
-  } else {
-    gm.registerMenuCommand = nop;
-  }
-
-  if (typeof GM_getResourceURL === "function") {
-    gm.getResourceUrl = (resourceName) =>
-      Promise.resolve(GM_getResourceURL(resourceName));
-  } else if (typeof GM === "object" && GM && GM.getResourceUrl) {
-    gm.getResourceUrl = GM.getResourceUrl;
-  }
-
-  return gm;
+function promisify(fn) {
+  return (...args) => Promise.resolve(fn(...args));
 }
 
 function getGMInfo() {

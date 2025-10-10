@@ -26,6 +26,7 @@
 // @grant          GM.getValue
 // @grant          GM.info
 // @grant          GM.openInTab
+// @grant          GM.registerMenuCommand
 // @grant          GM.setValue
 // @grant          GM.xmlHttpRequest
 // @grant          unsafeWindow
