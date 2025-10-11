@@ -195,9 +195,9 @@ async function extractDomainsForMetadata(supportImage) {
   const uniqueDomains = deduplicateRootDomains(domains);
 
   // Convert domains to @match format
-  const matchDirectives = uniqueDomains
-    .flatMap((domain) => [domain, `*.${domain}`])
-    .map((domain) => `// @match          *://${domain}/*`);
+  const matchDirectives = uniqueDomains.map(
+    (domain) => `// @match          *://*.${domain}/*`,
+  );
 
   return matchDirectives;
 }
