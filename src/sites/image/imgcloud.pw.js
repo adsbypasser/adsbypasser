@@ -3,24 +3,28 @@
  * @domain 2i.cz
  * @domain 2i.sk
  * @domain img.javstore.net
+ * @domain img.trafficimage.club
  * @domain imgcloud.pw
  * @domain imghit.com
  * @domain lookmyimg.com
  * @domain pilot007.org
  * @domain rintor.space
  * @domain shotcan.com
+ * @domain trafficimage.club
  */
 _.register({
   rule: {
     host: [
-      /^2i\.(cz|sk)$/,
       /^14xpics\.space$/,
-      /^img\.javstore\.net$/,
+      /^www\.2i\.(cz|sk)$/,
       /^imgcloud\.pw$/,
-      /^(lookmyimg|shotcan)\.com$/,
+      /^www\.imghit\.com$/,
+      /^img\.javstore\.net$/,
+      /^lookmyimg\.com$/,
       /^pilot007\.org$/,
       /^rintor\.space$/,
-      /^www\.imghit\.com$/,
+      /^shotcan\.com$/,
+      /^(img\.)?trafficimage\.club$/,
     ],
     path: /^\/(image|i)\/.*/,
   },
