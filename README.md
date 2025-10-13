@@ -29,7 +29,8 @@ If a site is missing or broken, please open an [Issue](https://github.com/adsbyp
 1. Install a userscript manager:
    - [Tampermonkey](https://www.tampermonkey.net/) (Chrome, Firefox, Edge, Safari, Opera)
    - [Violentmonkey](https://violentmonkey.github.io/) (Chrome, Firefox, Edge)
-   - [Greasemonkey](https://www.greasespot.net/), [FireMonkey](https://github.com/erosman/firemonkey/) (Firefox)
+   - [Greasemonkey](https://www.greasespot.net/) (Firefox)
+   - [FireMonkey](https://github.com/erosman/firemonkey/) (Firefox)
 
 2. Install AdsBypasser from the [homepage](https://adsbypasser.github.io/)
 
