@@ -6,7 +6,7 @@ _.register({
     host: /^multiup\.io$/,
   },
   async ready() {
-    const b = $(".btn-info.btn-lg.btn-block");
+    const b = $("#download-button");
     b.click();
   },
 });
