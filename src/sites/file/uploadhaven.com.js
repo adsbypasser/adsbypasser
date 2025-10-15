@@ -8,7 +8,7 @@ _.register({
   },
   async ready() {
     await _.wait(18000);
-    const f = $(".btn-submit-free.btn-download-free");
+    const f = $("#submitFree");
     f.click();
   },
 });
