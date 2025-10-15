@@ -2,9 +2,12 @@
  * @domain mirrored.to
  */
 _.register({
-  rule: "https://www.mirrored.to/files/*",
+  rule: {
+    host: /^(www\.)?mirrored\.to$/,
+    path: /^\/files\//,
+  },
   async ready() {
-    const a = $(".col-sm.centered.extra-top a");
-    await $.openLink(a.href);
+    const a = $(".secondary");
+    a.click();
   },
 });
