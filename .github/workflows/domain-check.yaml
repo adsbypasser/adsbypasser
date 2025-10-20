@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
-        with:
-          ref: develop
 
       - name: Setup Node.js
         uses: actions/setup-node@v5
