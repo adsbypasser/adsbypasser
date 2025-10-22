@@ -104,7 +104,7 @@ If a previously supported site is no longer active:
 
 ## Pull Request
 
-Send pull requests (PRs) to the `develop` branch.
+Send pull requests (PRs) to the `master` branch.
 
 Keep in mind:
 
