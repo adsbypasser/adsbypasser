@@ -70,9 +70,6 @@ The built userscripts will be available in the `dist/` directory:
 # Build once
 npm run build
 
-# Watch mode for development
-npm run watch
-
 # Run tests
 npm test
 
