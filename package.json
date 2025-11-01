@@ -1,6 +1,6 @@
 {
   "name": "adsbypasser",
-  "version": "8.4.0",
+  "version": "8.5.0",
   "description": "A lightweight userscript that automatically skips countdown ads, bypasses continue pages, and prevents ad pop-up windows on many supported sites.",
   "keywords": [
     "userscript",
