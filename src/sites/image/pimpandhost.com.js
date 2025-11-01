@@ -19,6 +19,6 @@ _.register({
     path: /^\/image\/\d+/,
   },
   async start(m) {
-    await $.openLink(m.path + "?size=original");
+    await $.openImage(m.path + "?size=original");
   },
 });

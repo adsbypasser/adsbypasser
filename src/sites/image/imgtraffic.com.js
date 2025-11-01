@@ -8,7 +8,7 @@ _.register({
   },
   async start() {
     const path = window.location.href.replace("/a-", "/").replace(".html", "");
-    await $.openLink(path);
+    await $.openImage(path);
   },
 });
 
@@ -19,7 +19,7 @@ _.register({
   },
   async start() {
     const path = window.location.href.replace("/i-", "/").replace(".html", "");
-    await $.openLink(path);
+    await $.openImage(path);
   },
 });
 
@@ -30,7 +30,7 @@ _.register({
   },
   async start() {
     const path = window.location.href.replace("/n-", "/").replace(".html", "");
-    await $.openLink(path);
+    await $.openImage(path);
   },
 });
 
@@ -41,6 +41,6 @@ _.register({
   },
   async start() {
     const path = window.location.href.replace("/z-", "/").replace(".html", "");
-    await $.openLink(path);
+    await $.openImage(path);
   },
 });
