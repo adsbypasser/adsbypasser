@@ -615,6 +615,14 @@ async function main() {
   // This allows users to control the script's behavior
   let categories = null;
   let specificDomain = null;
+  let skipDeduplication = false;
+
+  // Check for --all flag to skip deduplication
+  const allIndex = args.indexOf("--all");
+  if (allIndex !== -1) {
+    skipDeduplication = true;
+    args.splice(allIndex, 1);
+  }
 
   // Check if --verbose is in the arguments
   // This enables detailed debugging output
@@ -634,6 +642,25 @@ async function main() {
       // Just remove --verbose from args
       args.splice(verboseIndex, 1);
     }
+  }
+
+  // Check for --help flag
+  if (args.includes("--help") || args.includes("-h")) {
+    console.log("Usage: node ci/check-domains.js [options] [categories...]");
+    console.log("");
+    console.log("Options:");
+    console.log("  --all      Check all domains including duplicates (skip deduplication)");
+    console.log("  --verbose  Enable verbose output");
+    console.log("  --help, -h Show this help message");
+    console.log("");
+    console.log("Categories:");
+    console.log("  file, image, link  Check only specific site categories");
+    console.log("");
+    console.log("Examples:");
+    console.log("  node ci/check-domains.js --all  Check all domains without deduplication");
+    console.log("  node ci/check-domains.js file link  Check only file and link domains");
+    console.log("  node ci/check-domains.js --verbose  Check domains with verbose output");
+    process.exit(0);
   }
 
   // Remaining args are categories
@@ -667,9 +694,9 @@ async function main() {
 
     // Deduplicate root domains to avoid checking subdomains separately
     // This reduces redundant checks and improves efficiency
-    const uniqueDomains = deduplicateRootDomains(domains);
+    const uniqueDomains = skipDeduplication ? domains : deduplicateRootDomains(domains);
 
-    console.log(`Found ${uniqueDomains.length} unique domains`);
+    console.log(`Found ${uniqueDomains.length} ${skipDeduplication ? 'domains' : 'unique domains'}`);
     if (!uniqueDomains.length) return console.log("No domains found.");
 
     // In non-verbose mode, show the "Checking:" header
