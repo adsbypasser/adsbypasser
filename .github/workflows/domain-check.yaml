@@ -23,4 +23,4 @@ jobs:
         run: npm ci
 
       - name: Run domain checker
-        run: node ci/check-domains.js
+        run: node ci/check-domains.js --all
