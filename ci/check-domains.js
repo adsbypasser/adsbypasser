@@ -649,7 +649,9 @@ async function main() {
     console.log("Usage: node ci/check-domains.js [options] [categories...]");
     console.log("");
     console.log("Options:");
-    console.log("  --all      Check all domains including duplicates (skip deduplication)");
+    console.log(
+      "  --all      Check all domains including duplicates (skip deduplication)",
+    );
     console.log("  --verbose  Enable verbose output");
     console.log("  --help, -h Show this help message");
     console.log("");
@@ -657,9 +659,15 @@ async function main() {
     console.log("  file, image, link  Check only specific site categories");
     console.log("");
     console.log("Examples:");
-    console.log("  node ci/check-domains.js --all  Check all domains without deduplication");
-    console.log("  node ci/check-domains.js file link  Check only file and link domains");
-    console.log("  node ci/check-domains.js --verbose  Check domains with verbose output");
+    console.log(
+      "  node ci/check-domains.js --all  Check all domains without deduplication",
+    );
+    console.log(
+      "  node ci/check-domains.js file link  Check only file and link domains",
+    );
+    console.log(
+      "  node ci/check-domains.js --verbose  Check domains with verbose output",
+    );
     process.exit(0);
   }
 
@@ -694,9 +702,13 @@ async function main() {
 
     // Deduplicate root domains to avoid checking subdomains separately
     // This reduces redundant checks and improves efficiency
-    const uniqueDomains = skipDeduplication ? domains : deduplicateRootDomains(domains);
+    const uniqueDomains = skipDeduplication
+      ? domains
+      : deduplicateRootDomains(domains);
 
-    console.log(`Found ${uniqueDomains.length} ${skipDeduplication ? 'domains' : 'unique domains'}`);
+    console.log(
+      `Found ${uniqueDomains.length} ${skipDeduplication ? "domains" : "unique domains"}`,
+    );
     if (!uniqueDomains.length) return console.log("No domains found.");
 
     // In non-verbose mode, show the "Checking:" header
