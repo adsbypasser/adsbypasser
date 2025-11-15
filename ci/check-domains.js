@@ -18,10 +18,11 @@
  *  - Cloudflare/WAF/5xx error detection
  *  - Blank or JavaScript-only page detection
  *  - Sequential domain checking to avoid overwhelming servers
+ *  - Random delays between requests to reduce bot detection
+ *  - Referer header to appear more like legitimate traffic
  */
 
 import { extractDomainsFromJSDoc } from "../build/jsdoc.js";
-import { deduplicateRootDomains } from "../build/lib/domain.js";
 import dns from "dns/promises";
 import http from "http";
 import https from "https";
@@ -43,6 +44,7 @@ const REQUEST_TIMEOUT_MS = 60000;
 /**
  * Browser-like headers to avoid bot detection
  * Mimics Firefox browser to appear as a legitimate user agent
+ * Includes Referer header to appear more like legitimate traffic
  */
 const DEFAULT_HEADERS = {
   "User-Agent":
@@ -58,6 +60,7 @@ const DEFAULT_HEADERS = {
   "Sec-GPC": "1",
   DNT: "1",
   TE: "trailers",
+  Referer: "https://www.google.com/"
 };
 
 /**
@@ -605,7 +608,7 @@ async function checkDomain(domain) {
 
 /**
  * Main function that orchestrates the domain checking process
- * Extracts domains from JSDoc comments, deduplicates them, and checks each one
+ * Extracts domains from JSDoc comments and checks each one
  * This function handles command-line arguments and controls the overall flow
  */
 async function main() {
@@ -615,16 +618,8 @@ async function main() {
   // This allows users to control the script's behavior
   let categories = null;
   let specificDomain = null;
-  let skipDeduplication = false;
 
-  // Check for --all flag to skip deduplication
-  const allIndex = args.indexOf("--all");
-  if (allIndex !== -1) {
-    skipDeduplication = true;
-    args.splice(allIndex, 1);
-  }
-
-  // Check if --verbose is in the arguments
+    // Check if --verbose is in the arguments
   // This enables detailed debugging output
   const verboseIndex = args.indexOf("--verbose");
   if (verboseIndex !== -1) {
@@ -649,20 +644,14 @@ async function main() {
     console.log("Usage: node ci/check-domains.js [options] [categories...]");
     console.log("");
     console.log("Options:");
-    console.log(
-      "  --all      Check all domains including duplicates (skip deduplication)",
-    );
-    console.log("  --verbose  Enable verbose output");
+        console.log("  --verbose  Enable verbose output");
     console.log("  --help, -h Show this help message");
     console.log("");
     console.log("Categories:");
     console.log("  file, image, link  Check only specific site categories");
     console.log("");
     console.log("Examples:");
-    console.log(
-      "  node ci/check-domains.js --all  Check all domains without deduplication",
-    );
-    console.log(
+        console.log(
       "  node ci/check-domains.js file link  Check only file and link domains",
     );
     console.log(
@@ -700,14 +689,10 @@ async function main() {
       domains = await extractDomainsFromJSDoc(categories);
     }
 
-    // Deduplicate root domains to avoid checking subdomains separately
-    // This reduces redundant checks and improves efficiency
-    const uniqueDomains = skipDeduplication
-      ? domains
-      : deduplicateRootDomains(domains);
+    const uniqueDomains = domains;
 
     console.log(
-      `Found ${uniqueDomains.length} ${skipDeduplication ? "domains" : "unique domains"}`,
+      `Found ${uniqueDomains.length} domains`,
     );
     if (!uniqueDomains.length) return console.log("No domains found.");
 
@@ -721,7 +706,12 @@ async function main() {
 
     // Sequential checking to avoid overwhelming servers
     // Processing domains one at a time prevents rate limiting issues
+    // Added random delays between requests to reduce bot detection
     for (const domain of uniqueDomains) {
+      // Add random delay (300-1000ms) to help reduce Cloudflare bot detection
+      const delay = 300 + Math.random() * 700;
+      await new Promise(r => setTimeout(r, delay));
+
       // In non-verbose mode, just show the domain being checked
       if (!GLOBAL_DEBUG) {
         console.log(`- ${domain}`);
