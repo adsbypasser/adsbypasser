@@ -60,7 +60,7 @@ const DEFAULT_HEADERS = {
   "Sec-GPC": "1",
   DNT: "1",
   TE: "trailers",
-  Referer: "https://www.google.com/"
+  Referer: "https://www.google.com/",
 };
 
 /**
@@ -619,7 +619,7 @@ async function main() {
   let categories = null;
   let specificDomain = null;
 
-    // Check if --verbose is in the arguments
+  // Check if --verbose is in the arguments
   // This enables detailed debugging output
   const verboseIndex = args.indexOf("--verbose");
   if (verboseIndex !== -1) {
@@ -644,14 +644,14 @@ async function main() {
     console.log("Usage: node ci/check-domains.js [options] [categories...]");
     console.log("");
     console.log("Options:");
-        console.log("  --verbose  Enable verbose output");
+    console.log("  --verbose  Enable verbose output");
     console.log("  --help, -h Show this help message");
     console.log("");
     console.log("Categories:");
     console.log("  file, image, link  Check only specific site categories");
     console.log("");
     console.log("Examples:");
-        console.log(
+    console.log(
       "  node ci/check-domains.js file link  Check only file and link domains",
     );
     console.log(
@@ -691,9 +691,7 @@ async function main() {
 
     const uniqueDomains = domains;
 
-    console.log(
-      `Found ${uniqueDomains.length} domains`,
-    );
+    console.log(`Found ${uniqueDomains.length} domains`);
     if (!uniqueDomains.length) return console.log("No domains found.");
 
     // In non-verbose mode, show the "Checking:" header
@@ -710,7 +708,7 @@ async function main() {
     for (const domain of uniqueDomains) {
       // Add random delay (300-1000ms) to help reduce Cloudflare bot detection
       const delay = 300 + Math.random() * 700;
-      await new Promise(r => setTimeout(r, delay));
+      await new Promise((r) => setTimeout(r, delay));
 
       // In non-verbose mode, just show the domain being checked
       if (!GLOBAL_DEBUG) {
