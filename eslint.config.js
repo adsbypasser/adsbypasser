@@ -87,6 +87,7 @@ export default [
       "prefer-const": "error",
       "no-eval": "error",
       "no-implied-eval": "error",
+      curly: "error",
     },
   },
   // Node.js context: build/, ci/, vitest.config.js
