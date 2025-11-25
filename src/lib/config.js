@@ -87,7 +87,9 @@ async function sanityCheck() {
 
   MANIFEST.forEach((d, i) => {
     let val = values[i];
-    if (!d.verify(val)) val = d.default_;
+    if (!d.verify(val)) {
+      val = d.default_;
+    }
     updates[d.key] = val;
   });
 
@@ -102,7 +104,9 @@ async function sanityCheck() {
  */
 function waitForPage() {
   return new Promise((resolve) => {
-    if (document.readyState === "complete" && usw.render) return resolve();
+    if (document.readyState === "complete" && usw.render) {
+      return resolve();
+    }
 
     const check = () => {
       if (document.readyState === "complete" && usw.render) {
@@ -140,20 +144,26 @@ async function loadConfig() {
       await waitForPage();
 
       usw.commit = async (data) => {
-        for (const [k, v] of Object.entries(data)) await GMAPI.setValue(k, v);
+        for (const [k, v] of Object.entries(data)) {
+          await GMAPI.setValue(k, v);
+        }
       };
 
       const config = await dumpConfig();
 
       const options = MANIFEST.reduce((acc, d) => {
-        if (!d.type || d.key === "version") return acc;
+        if (!d.type || d.key === "version") {
+          return acc;
+        }
         acc[d.key] = {
           type: d.type,
           value: config[d.key],
           label: d.label,
           help: d.help,
         };
-        if (d.type === "select") acc[d.key].menu = d.menu;
+        if (d.type === "select") {
+          acc[d.key].menu = d.menu;
+        }
         return acc;
       }, {});
 

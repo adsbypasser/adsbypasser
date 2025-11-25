@@ -3,7 +3,9 @@ import { isString } from "./core.js";
 const quiet = false;
 
 function log(method, args) {
-  if (quiet) return;
+  if (quiet) {
+    return;
+  }
 
   args = Array.prototype.slice.call(args);
   if (isString(args[0])) {

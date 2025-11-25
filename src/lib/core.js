@@ -76,7 +76,9 @@ function map(collection, fn) {
 function find(collection, fn) {
   for (const [k, v] of enumerate(collection)) {
     const r = fn(v, k, collection);
-    if (r !== none) return [k, v, r];
+    if (r !== none) {
+      return [k, v, r];
+    }
   }
   return [none, none, none];
 }
@@ -92,7 +94,9 @@ function* enumerate(collection) {
     return;
   }
   const keys = Object.getOwnPropertyNames(collection);
-  for (const k of keys) yield [k, collection[k]];
+  for (const k of keys) {
+    yield [k, collection[k]];
+  }
 }
 
 /**
@@ -120,8 +124,9 @@ function isNodeList(collection) {
  * @returns {Function} - Partially applied function
  */
 function partial(fn, ...args) {
-  if (typeof fn !== "function")
+  if (typeof fn !== "function") {
     throw new AdsBypasserError("must give a function");
+  }
   return (...innerArgs) => fn(...args.concat(innerArgs));
 }
 

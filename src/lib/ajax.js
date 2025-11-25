@@ -62,12 +62,18 @@ class AjaxError extends AdsBypasserError {
  * @yields {Array} - Array containing flattened key path and value
  */
 function* flattenObject(object) {
-  if (!object) return;
+  if (!object) {
+    return;
+  }
   for (const [k, v] of Object.entries(object)) {
     if (Array.isArray(v)) {
-      for (const v_ of v) yield [[k, ""], v_];
+      for (const v_ of v) {
+        yield [[k, ""], v_];
+      }
     } else if (typeof v === "object") {
-      for (const [k_, v_] of flattenObject(v)) yield [[k, ...k_], v_];
+      for (const [k_, v_] of flattenObject(v)) {
+        yield [[k, ...k_], v_];
+      }
     } else {
       yield [[k], v];
     }
@@ -95,7 +101,9 @@ function deepJoin(prefix, object) {
   const mapped = map(keys, (k) => {
     const v = object[k];
     const key = `${prefix}[${k}]`;
-    if (typeof v === "object") return deepJoin(key, v);
+    if (typeof v === "object") {
+      return deepJoin(key, v);
+    }
     return [key, v].map(encodeURIComponent).join("=");
   });
   return mapped.join("&");
@@ -108,14 +116,22 @@ function deepJoin(prefix, object) {
  */
 function toQuery(data) {
   const type = typeof data;
-  if (data === null || (type !== "string" && type !== "object")) return "";
-  if (type === "string") return data;
-  if (data instanceof String) return data.toString();
+  if (data === null || (type !== "string" && type !== "object")) {
+    return "";
+  }
+  if (type === "string") {
+    return data;
+  }
+  if (data instanceof String) {
+    return data.toString();
+  }
 
   const keys = Object.getOwnPropertyNames(data);
   return map(keys, (k) => {
     const v = data[k];
-    if (typeof v === "object") return deepJoin(k, v);
+    if (typeof v === "object") {
+      return deepJoin(k, v);
+    }
     return [k, v].map(encodeURIComponent).join("=");
   }).join("&");
 }
@@ -127,9 +143,15 @@ function toQuery(data) {
  */
 function toForm(data) {
   const type = typeof data;
-  if (data === null || (type !== "string" && type !== "object")) return "";
-  if (type === "string") return data;
-  if (data instanceof String) return data.toString();
+  if (data === null || (type !== "string" && type !== "object")) {
+    return "";
+  }
+  if (type === "string") {
+    return data;
+  }
+  if (data instanceof String) {
+    return data.toString();
+  }
 
   const form = new FormData();
   for (const [k, v] of flattenObject(data)) {
@@ -245,10 +267,11 @@ function post(url, data, headers) {
   const h = {
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
   };
-  if (headers)
+  if (headers) {
     forEach(headers, (v, k) => {
       h[k] = v;
     });
+  }
   return ajax("POST", url, data, h);
 }
 

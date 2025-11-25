@@ -370,11 +370,15 @@ describe("diff", () => {
     it("maintains consistent behavior across multiple calls", async () => {
       // Mock to return different domains based on tag
       extractDomainsAtTag.mockImplementation((tag) => {
-        if (tag === "v1.0.0") return Promise.resolve(new Set(["example.com"]));
-        if (tag === "v1.1.0")
+        if (tag === "v1.0.0") {
+          return Promise.resolve(new Set(["example.com"]));
+        }
+        if (tag === "v1.1.0") {
           return Promise.resolve(new Set(["example.com", "test.org"]));
-        if (tag === "v1.2.0")
+        }
+        if (tag === "v1.2.0") {
           return Promise.resolve(new Set(["example.com", "test.org"]));
+        }
         return Promise.resolve(new Set());
       });
 

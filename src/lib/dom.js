@@ -12,9 +12,13 @@ class DomNotFoundError extends AdsBypasserError {
 }
 
 function querySelector(selector, context) {
-  if (!context || !context.querySelector) context = document;
+  if (!context || !context.querySelector) {
+    context = document;
+  }
   const node = context.querySelector(selector);
-  if (!node) throw new DomNotFoundError(selector);
+  if (!node) {
+    throw new DomNotFoundError(selector);
+  }
   return node;
 }
 
@@ -27,7 +31,9 @@ function querySelectorOrNull(selector, context) {
 }
 
 function querySelectorAll(selector, context) {
-  if (!context || !context.querySelectorAll) context = document;
+  if (!context || !context.querySelectorAll) {
+    context = document;
+  }
   return context.querySelectorAll(selector);
 }
 
@@ -55,7 +61,9 @@ function block(selector, context = document) {
   } else if (typeof selector === "function") {
     fn = (mutation) => {
       mutation.addedNodes.forEach((node) => {
-        if (selector(node)) node.parentNode.removeChild(node);
+        if (selector(node)) {
+          node.parentNode.removeChild(node);
+        }
       });
     };
   } else {
@@ -91,9 +99,12 @@ function searchFromScriptsByString(pattern, context) {
 }
 
 function searchFromScripts(pattern, context) {
-  if (pattern instanceof RegExp)
+  if (pattern instanceof RegExp) {
     return searchFromScriptsByRegExp(pattern, context);
-  if (isString(pattern)) return searchFromScriptsByString(pattern, context);
+  }
+  if (isString(pattern)) {
+    return searchFromScriptsByString(pattern, context);
+  }
   return null;
 }
 

@@ -270,7 +270,9 @@ async function fetchUrl(domain, url, timeoutMs = REQUEST_TIMEOUT_MS) {
       // We limit the body size to prevent memory issues with very large responses
       let body = "";
       res.on("data", (chunk) => {
-        if (body.length < 8192) body += chunk.toString();
+        if (body.length < 8192) {
+          body += chunk.toString();
+        }
       });
       res.on("end", () => {
         debugLog(domain, "Response body size:", body.length, "bytes");
@@ -283,9 +285,9 @@ async function fetchUrl(domain, url, timeoutMs = REQUEST_TIMEOUT_MS) {
     req.on("error", (err) => {
       clearTimeout(timer);
       debugLog(domain, "Request error for", url, err.code, err.message);
-      if (["ECONNREFUSED", "ENOTFOUND", "EHOSTUNREACH"].includes(err.code))
+      if (["ECONNREFUSED", "ENOTFOUND", "EHOSTUNREACH"].includes(err.code)) {
         resolve({ status: "REFUSED" });
-      else if (
+      } else if (
         [
           "CERT_HAS_EXPIRED",
           "DEPTH_ZERO_SELF_SIGNED_CERT",
@@ -295,7 +297,9 @@ async function fetchUrl(domain, url, timeoutMs = REQUEST_TIMEOUT_MS) {
         // Use unified SSL error handling
         const sslError = handleSSLError(domain, err.code, err.message);
         resolve(sslError);
-      } else resolve({ status: "UNREACHABLE" });
+      } else {
+        resolve({ status: "UNREACHABLE" });
+      }
     });
 
     // Log when request is initiated
@@ -314,7 +318,9 @@ async function fetchUrl(domain, url, timeoutMs = REQUEST_TIMEOUT_MS) {
  */
 function isEmptyOrJsOnly(domain, body) {
   // Handle empty response bodies
-  if (!body) return "EMPTY_PAGE";
+  if (!body) {
+    return "EMPTY_PAGE";
+  }
 
   // Remove head and noscript sections
   // These sections often contain metadata or fallback content that isn't relevant to content analysis
@@ -335,7 +341,9 @@ function isEmptyOrJsOnly(domain, body) {
   // Classify pages based on content
   // JS_ONLY: Pages with no visible content but with JavaScript (may load content dynamically)
   // EMPTY_PAGE: Pages with no meaningful content at all
-  if (stripped === "" && scriptContent) return "JS_ONLY";
+  if (stripped === "" && scriptContent) {
+    return "JS_ONLY";
+  }
   return stripped.length === 0 ? "EMPTY_PAGE" : false;
 }
 
@@ -597,8 +605,9 @@ async function checkDomainStatus(domain) {
  */
 async function checkDomain(domain) {
   const resolvable = await isDomainResolvable(domain);
-  if (!resolvable)
+  if (!resolvable) {
     return { domain, status: "EXPIRED", resolvable: false, accessible: false };
+  }
 
   const status = await checkDomainStatus(domain);
   return { domain, status, resolvable: true, accessible: status === "VALID" };
@@ -692,7 +701,9 @@ async function main() {
     const uniqueDomains = domains;
 
     console.log(`Found ${uniqueDomains.length} domains`);
-    if (!uniqueDomains.length) return console.log("No domains found.");
+    if (!uniqueDomains.length) {
+      return console.log("No domains found.");
+    }
 
     // In non-verbose mode, show the "Checking:" header
     // This provides a clean list of domains being processed

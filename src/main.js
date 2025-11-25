@@ -25,7 +25,9 @@ function disableWindowOpen() {
 }
 
 function disableLeavePrompt(element) {
-  if (!element) return;
+  if (!element) {
+    return;
+  }
 
   const seal = {
     set: () => info("blocked onbeforeunload"),
@@ -97,8 +99,10 @@ async function afterDOMReady(handler) {
 // Main
 // -----------------------------
 async function main() {
-  if (rawUSW.top !== rawUSW.self) return; // skip frames
-
+  if (rawUSW.top !== rawUSW.self) {
+    // skip frames
+    return;
+  }
   GMAPI.registerMenuCommand("AdsBypasser - Configure", () => {
     GMAPI.openInTab("https://adsbypasser.github.io/configure.html");
   });

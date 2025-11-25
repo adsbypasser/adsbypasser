@@ -100,7 +100,9 @@ function appendStyleURL(url) {
 async function replaceBody(imgSrc) {
   const redirectImage = await GMAPI.getValue("redirect_image");
   if (!redirectImage || !imgSrc) {
-    if (!imgSrc) warn("false url");
+    if (!imgSrc) {
+      warn("false url");
+    }
     return;
   }
 
