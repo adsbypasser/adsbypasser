@@ -1,15 +1,13 @@
 /**
  * @domain pixxxels.cc
  * @domain postimg.cc
- * @domain postlmg.cc
  */
 _.register({
   rule: {
-    host: [/^pixxxels\.cc$/, /^postimg\.cc$/, /^postlmg\.cc$/],
+    host: [/^pixxxels\.cc$/, /^postimg\.cc$/],
   },
   async ready() {
-    const ele = $("#download");
-    const img = ele.href.replace("?dl=1", "");
-    await $.openImage(img);
+    const img = $(".img-fluid");
+    await $.openImage(img.src);
   },
 });
