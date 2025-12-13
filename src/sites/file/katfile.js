@@ -1,9 +1,9 @@
 /**
- * @domain katfile.cloud
+ * @domain katfile.online
  */
 _.register({
   rule: {
-    host: /^katfile\.cloud$/,
+    host: /^katfile\.online$/,
   },
   async ready() {
     const a = $('a[id="dlink"]');
