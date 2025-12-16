@@ -7,7 +7,8 @@ _.register({
     host: [/^pixxxels\.cc$/, /^postimg\.cc$/],
   },
   async ready() {
-    const img = $(".img-fluid");
-    await $.openImage(img.src);
+    const ele = $("#download");
+    const img = ele.href.replace("?dl=1", "");
+    await $.openImage(img, { referer: true });
   },
 });
