@@ -6,7 +6,12 @@ _.register({
     host: /^www\.imagevenue\.com$/,
   },
   async ready() {
-    const i = $("#main-image");
-    await $.openImage(i.src);
+    const i = $.$("#main-image");
+    if (i) {
+     await $.openImage(i.src);
+     return;
+    }
+    const a = $('a[title="Continue to ImageVenue"]');
+    await $.openLink(a.href);
   },
 });
