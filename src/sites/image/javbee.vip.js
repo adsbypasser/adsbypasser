@@ -1,6 +1,5 @@
 /**
  * @domain image.javbee.vip
- * @domain javbee.vip
  */
 _.register({
   rule: {
@@ -24,13 +23,5 @@ _.register({
   async ready() {
     const a = $("a");
     await $.openImage(a.href);
-  },
-});
-
-_.register({
-  rule: "https://javbee.vip/upload/en/*",
-  async ready() {
-    const m = $('meta[property="og:image"]');
-    await $.openImage(m.content);
   },
 });

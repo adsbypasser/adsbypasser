@@ -21,6 +21,7 @@
  * @domain hentaixnx.com
  * @domain idol69.net
  * @domain javball.com
+ * @domain javbee.vip
  * @domain javring.com
  * @domain javsunday.com
  * @domain javtele.net
@@ -62,6 +63,7 @@ _.register({
     "https://hentaixnx.com/upload/en/*",
     "https://idol69.net/upload/en/*",
     "https://javball.com/upload/en/*",
+    "https://javbee.vip/upload/en/*",
     "https://javring.com/upload/en/*",
     "https://javsunday.com/upload/en/*",
     "https://javtele.net/upload/en/*",
