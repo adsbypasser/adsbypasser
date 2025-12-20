@@ -14,6 +14,9 @@
  * @domain shotcan.com
  * @domain trafficimage.club
  */
+
+// These are all sites powered by Chevereto image hosting software
+
 _.register({
   rule: {
     host: [
