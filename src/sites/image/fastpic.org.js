@@ -4,9 +4,15 @@
 _.register({
   rule: {
     host: /^fastpic\.org$/,
+    path: /^\/view\//
   },
   async ready() {
-    const img = $("img.image.img-fluid");
-    await $.openImage(img.src);
+  const a = $.$("#imglink");
+  if (a) {
+    await $.openLink(a.href);
+    return;
+  }
+  const directUrl = $.searchFromScripts(/loading_img = '([^"]+)';/);
+  await $.openLink(directUrl[1]);
   },
 });
