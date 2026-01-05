@@ -7,6 +7,7 @@
  * @domain imgcloud.pw
  * @domain imghit.com
  * @domain imgpulse.top
+ * @domain imgxxt.in
  * @domain lookmyimg.com
  * @domain orangepix.is
  * @domain pilot007.org
@@ -26,6 +27,7 @@ _.register({
       /^www\.imghit\.com$/,
       /^img\.javstore\.net$/,
       /^imgpulse\.top$/,
+      /^imgxxt\.in$/,
       /^lookmyimg\.com$/,
       /^orangepix\.is$/,
       /^pilot007\.org$/,
