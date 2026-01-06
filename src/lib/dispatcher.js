@@ -135,18 +135,6 @@ function dispatchByString(rule, urlObj) {
 }
 
 /**
- * Dispatch by function pattern matching
- * @param {Function} rule - Function that takes URL parameters and returns match
- * @param {string} url1 - Full URL string
- * @param {Object} url3 - Parsed URL object (scheme, host, path)
- * @param {Object} url6 - Detailed URL object (scheme, host, port, path, query, hash)
- * @returns {any} - Function result
- */
-function dispatchByFunction(rule, url1, url3, url6) {
-  return rule(url1, url3, url6);
-}
-
-/**
  * Main dispatch function that routes to appropriate dispatcher
  * @param {any} rule - Rule to dispatch
  * @param {string} url1 - Full URL string
@@ -157,9 +145,6 @@ function dispatchByFunction(rule, url1, url3, url6) {
 function dispatch(rule, url1, url3, url6) {
   if (Array.isArray(rule)) {
     return dispatchByArray(rule, url1, url3, url6);
-  }
-  if (typeof rule === "function") {
-    return dispatchByFunction(rule, url1, url3, url6);
   }
   if (rule instanceof RegExp) {
     return dispatchByRegExp(rule, url1);
