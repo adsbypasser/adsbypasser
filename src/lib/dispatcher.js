@@ -31,6 +31,14 @@ function register(pattern) {
 }
 
 /**
+ * Reset the dispatcher by clearing all registered patterns
+ * This is primarily useful for testing to ensure a clean state
+ */
+function resetDispatcher() {
+  patterns.length = 0;
+}
+
+/**
  * Dispatch by object pattern matching
  * @param {Object} rule - Rule object with pattern properties
  * @param {Object} urlObj - URL object to match against
@@ -193,4 +201,4 @@ function findHandler() {
   };
 }
 
-export { register, findHandler };
+export { register, findHandler, resetDispatcher };
