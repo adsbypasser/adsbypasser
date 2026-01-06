@@ -24,7 +24,6 @@ import { extractDomainsAtTag, extractFixedDomains } from "$build/git.js";
  */
 describe("diff", () => {
   beforeEach(() => {
-    vi.clearAllMocks();
     extractDomainsAtTag.mockReset();
     extractFixedDomains.mockReset();
   });

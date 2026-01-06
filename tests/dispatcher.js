@@ -50,7 +50,6 @@ function createPattern(rule, handlers) {
 describe("dispatcher", () => {
   beforeEach(() => {
     resetDispatcher();
-    vi.clearAllMocks();
   });
 
   /**
