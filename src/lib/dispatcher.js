@@ -88,7 +88,7 @@ function dispatchByArray(rules, url1, url3, url6) {
  * @returns {Object|null} - Matched URL object or null
  */
 function dispatchByString(rule, urlObj) {
-  const schemeRegex = /\*|https?|file|ftp|chrome-extension/;
+  const schemeRegex = /\*|https?|file/;
   const hostRegex = /\*|(\*\.)?([^/*]+)/;
   const pathRegex = /\/.*/;
 
@@ -101,17 +101,22 @@ function dispatchByString(rule, urlObj) {
 
   const [, scheme, host, wc, sd, path] = matched;
 
-  if (
-    (scheme === "*" && !/https?/.test(urlObj.scheme)) ||
-    scheme !== urlObj.scheme
-  ) {
+  if (scheme === "*") {
+    if (!/https?/.test(urlObj.scheme)) {
+      return null;
+    }
+  } else if (scheme !== urlObj.scheme) {
+    return null;
+  }
+
+  if (scheme !== "file" && !host) {
     return null;
   }
 
   if (scheme !== "file" && host !== "*") {
     if (wc) {
       const idx = urlObj.host.indexOf(sd);
-      if (idx < 0 || idx + sd.length !== urlObj.host.length) {
+      if (idx <= 0 || idx + sd.length !== urlObj.host.length) {
         return null;
       }
     } else if (host !== urlObj.host) {
