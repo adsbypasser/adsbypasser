@@ -46,7 +46,7 @@
     "parse-domain": "^8.2.2",
     "prettier": "^3.0.0",
     "rollup": "^4.52.3",
-    "vitest": "^3.2.4"
+    "vitest": "^4.0.0"
   },
   "scripts": {
     "build": "gulp",
