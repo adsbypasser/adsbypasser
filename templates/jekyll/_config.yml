@@ -1,0 +1,20 @@
+remote_theme: pages-themes/minimal@v0.2.0
+
+title: AdsBypasser
+description: A lightweight userscript that automatically skips countdown ads
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+sass:
+  style: compressed
+
+exclude:
+  - node_modules/
+  - Gemfile
+  - Gemfile.lock
+
+include:
+  - _data

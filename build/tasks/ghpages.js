@@ -1,88 +1,45 @@
-import _ from "lodash";
 import gulp from "gulp";
 
-import { getSummaryForGitHubPages } from "../summary.js";
+import { generateSitesData, generateUrlsData } from "../lib/jekyll.js";
 import { allBuildOptions, getFeatureName } from "../lib/build.js";
 import { output, source } from "../lib/paths.js";
-import { plugins } from "../lib/plugins.js";
 
 /**
  * Create GitHub Pages generation tasks
  * @param {Function} userscriptTask - Userscript generation task
- * @returns {Function} Gulp parallel task function
+ * @returns {Function} Gulp series task function
  */
 export function createGhpagesTasks(userscriptTask) {
-  const copyReleasesTask = gulp.series(userscriptTask, copyReleases);
-  const ghpagesTasks = gulp.parallel(
-    makeHtml,
-    makeLess,
-    copyFiles,
-    copyReleasesTask,
+  const ghpagesTasks = gulp.series(
+    userscriptTask, // Build userscripts first
+    copyJekyllSource, // Copy Jekyll source to dist/ghpages/
+    generateData, // Generate Jekyll data files (to dist/ghpages/_data/)
+    copyReleases, // Copy releases to dist/ghpages/releases/
   );
   return ghpagesTasks;
 }
 
 /**
- * Generate HTML files from templates
+ * Generate Jekyll data files (_data/sites.json and _data/urls.json)
+ * @returns {Promise<void>}
+ */
+async function generateData() {
+  await generateSitesData();
+  await generateUrlsData();
+}
+generateData.displayName = "ghpages:generate:data";
+
+/**
+ * Copy Jekyll source files to dist/ghpages/
  * @returns {stream.Readable} Gulp stream
  */
-async function makeHtml() {
-  const options = {
-    summary: await getSummaryForGitHubPages(),
-    urls: {
-      full: "adsbypasser.full.user.js",
-      lite: "adsbypasser.lite.user.js",
-    },
-  };
-
-  // Add URLs for all feature combinations
-  for (const [supportImage] of allBuildOptions()) {
-    const featureName = getFeatureName(supportImage);
-    const js = `adsbypasser.${featureName}.user.js`;
-    options.urls[featureName] = js;
-  }
-
+function copyJekyllSource() {
+  const jekyllPath = source.to("templates/jekyll");
   const outPath = output.to("ghpages");
 
-  return gulp
-    .src([source.to("templates/ghpages/index.template.html")])
-    .pipe(plugins.change(_.partial(finalizeHTML, options)))
-    .pipe(
-      plugins.rename((path_) => {
-        path_.basename = path_.basename.replace(".template", "");
-      }),
-    )
-    .pipe(gulp.dest(outPath));
+  return gulp.src([`${jekyllPath}/**/*`]).pipe(gulp.dest(outPath));
 }
-makeHtml.displayName = "ghpages:html";
-
-/**
- * Compile LESS files to CSS
- * @returns {stream.Readable} Gulp stream
- */
-function makeLess() {
-  return gulp
-    .src([source.to("templates/ghpages/**/*.less")])
-    .pipe(plugins.less({}))
-    .pipe(gulp.dest(output.to("ghpages")));
-}
-makeLess.displayName = "ghpages:less";
-
-/**
- * Copy static files to ghpages directory
- * @returns {stream.Readable} Gulp stream
- */
-function copyFiles() {
-  const files = [
-    "templates/ghpages/**/*.css",
-    "templates/ghpages/**/*.js",
-    "templates/ghpages/configure.html",
-  ];
-  return gulp
-    .src(files.map(source.to.bind(source)))
-    .pipe(gulp.dest(output.to("ghpages")));
-}
-copyFiles.displayName = "ghpages:copy:files";
+copyJekyllSource.displayName = "ghpages:copy:jekyll";
 
 /**
  * Copy release files to ghpages/releases directory
@@ -103,15 +60,3 @@ function copyReleases() {
   return gulp.src(files).pipe(gulp.dest(output.to("ghpages/releases")));
 }
 copyReleases.displayName = "ghpages:copy:releases";
-
-/**
- * Finalize HTML content by injecting options
- * @param {Object} options - Options to inject
- * @param {string} content - Template content
- * @returns {string} Finalized HTML content
- */
-function finalizeHTML(options, content) {
-  let s = _.template(content);
-  s = s(options);
-  return s;
-}

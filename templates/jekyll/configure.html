@@ -1,3 +1,7 @@
+---
+layout: none
+---
+
 <!doctype html>
 <html lang="en">
   <!--
@@ -17,7 +21,11 @@
       href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css"
     />
     <!-- Custom CSS for configuration page -->
-    <link rel="stylesheet" media="screen" href="/css/configure.css" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="{{ '/assets/css/configure.css' | relative_url }}"
+    />
 
     <meta
       name="viewport"
@@ -101,6 +109,6 @@
       src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/js/bootstrap.min.js"
     ></script>
     <!-- Custom JavaScript for rendering and handling configuration -->
-    <script defer src="/js/render.js"></script>
+    <script defer src="{{ '/assets/js/render.js' | relative_url }}"></script>
   </body>
 </html>

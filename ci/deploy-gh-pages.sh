@@ -59,7 +59,11 @@ else
     SKIP_TAG=false
 fi
 
-# Copy files from source to target
+# Clean copy files from source to target (preserve .git)
+echo "🧹 Cleaning target directory (preserving .git)..."
+# Remove all files and directories except .git
+find . -mindepth 1 -maxdepth 1 ! -name '.git' -exec rm -rf {} +
+
 echo "📋 Copying files from ${SOURCE_DIR}..."
 cp -r "../${SOURCE_DIR}"/* .
 

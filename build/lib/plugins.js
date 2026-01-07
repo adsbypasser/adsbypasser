@@ -6,7 +6,6 @@ import path from "path";
 import gulpChange from "gulp-change";
 import gulpConcat from "gulp-concat";
 import gulpInjectString from "gulp-inject-string";
-import gulpLess from "gulp-less";
 import gulpRename from "gulp-rename";
 import gulpStripComments from "gulp-strip-comments";
 
@@ -18,7 +17,6 @@ export const plugins = {
   change: gulpChange,
   concat: gulpConcat,
   injectString: gulpInjectString,
-  less: gulpLess,
   rename: gulpRename,
   stripComments: gulpStripComments,
   /**

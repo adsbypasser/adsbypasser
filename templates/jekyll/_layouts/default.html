@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{{ site.title }}</title>
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
+    />
+    {% include head-custom.html %}
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="{{ '/' | absolute_url }}">{{ site.title }}</a></h1>
+
+        <p class="view">
+          <a href="https://github.com/adsbypasser/adsbypasser">
+            View the Project on GitHub
+            <small>adsbypasser/adsbypasser</small>
+          </a>
+        </p>
+
+        <!-- Installation links -->
+        <div class="links" id="releases">
+          <a
+            href="{{ '/releases/' | append: site.data.urls.full | relative_url }}"
+          >
+            <strong>Install Full Edition</strong>
+          </a>
+          <a
+            href="{{ '/releases/' | append: site.data.urls.lite | relative_url }}"
+          >
+            <strong>Install Lite Edition</strong>
+          </a>
+        </div>
+
+        <!-- Configuration link -->
+        <div class="links">
+          <a href="{{ '/configure.html' | relative_url }}">
+            <strong>Configure Settings</strong>
+          </a>
+        </div>
+
+        <!-- Issue reporting link -->
+        <div class="links">
+          <a
+            href="https://github.com/adsbypasser/adsbypasser/issues"
+            rel="external"
+          >
+            <strong>Report Bug / Request Feature</strong>
+          </a>
+        </div>
+      </header>
+
+      <section>{{ content }}</section>
+
+      <footer>
+        <p>
+          This project is maintained by
+          <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
+        </p>
+        <p>
+          <small
+            >Hosted on GitHub Pages &mdash; Theme by
+            <a href="https://github.com/orderedlist">orderedlist</a></small
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
