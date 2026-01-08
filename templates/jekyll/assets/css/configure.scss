@@ -27,18 +27,12 @@
 
 /* Animation for message transitions */
 .animated {
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
-  -webkit-transition-duration: 1s;
-  transition-duration: 1s;
-  -webkit-transition-timing-function: linear;
-  transition-timing-function: linear;
+  transition: opacity 1s linear;
 }
 
 /* Dismissed message styling */
 .dismissed {
   opacity: 1;
-  -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
 
@@ -57,4 +51,15 @@
   margin: 3em;
   opacity: 0;
   display: none;
+}
+
+/* Bootstrap 5 form styling enhancements */
+.form-text {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.form-check {
+  margin-bottom: 1rem;
 }
