@@ -1,12 +1,11 @@
 /**
  * @domain imagehost.at
  * @domain im.ge
- * @domain pixxxar.com
  */
 _.register({
   rule: [
     {
-      host: [/^www\.imagehost\.at$/, "pixxxar.com"],
+      host: [/^www\.imagehost\.at$/],
       path: /^\/image\//,
     },
     {
