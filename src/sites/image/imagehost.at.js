@@ -5,7 +5,7 @@
 _.register({
   rule: [
     {
-      host: [/^www\.imagehost\.at$/],
+      host: /^www\.imagehost\.at$/,
       path: /^\/image\//,
     },
     {
