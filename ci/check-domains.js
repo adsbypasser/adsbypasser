@@ -150,7 +150,7 @@ const STATUS_ICONS = {
 /**
  * Global debug flags for controlling verbose output
  */
-let GLOBAL_DEBUG = true;
+let GLOBAL_DEBUG = false;
 let SPECIFIC_DOMAIN_DEBUG = null;
 
 /**
@@ -610,9 +610,7 @@ async function checkDomain(domain) {
   }
 
   const status = await checkDomainStatus(domain);
-  // Define which statuses are considered accessible
-  const accessibleStatuses = ["VALID", "PROTOCOL_FLIP_LOOP"];
-  return { domain, status, resolvable: true, accessible: accessibleStatuses.includes(status) };
+  return { domain, status, resolvable: true, accessible: status === "VALID" };
 }
 
 /* ------------------------ MAIN EXECUTION ------------------------ */
@@ -803,8 +801,7 @@ async function main() {
       console.log(`✅ VALID: ${validCount}`);
 
       // Show Problem count (all non-VALID domains)
-      const NON_PROBLEM_STATUSES = ["VALID", "PROTOCOL_FLIP_LOOP"];
-      const problemCount = results.filter((r) => !NON_PROBLEM_STATUSES.includes(r.status)).length;
+      const problemCount = results.filter((r) => r.status !== "VALID").length;
       console.log(`⚠️ Problem: ${problemCount}`);
 
       // Show Total count
@@ -812,7 +809,7 @@ async function main() {
       console.log(""); // Ensure blank line after summary counts
 
       // Show detailed problematic domains grouped by status
-      const problematic = results.filter((r) => !NON_PROBLEM_STATUSES.includes(r.status));
+      const problematic = results.filter((r) => r.status !== "VALID");
       if (problematic.length > 0) {
         console.log("PROBLEMATIC DOMAIN(S):");
 
