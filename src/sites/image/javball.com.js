@@ -6,6 +6,7 @@
  * @domain anime-jav.com
  * @domain blackwidof.org
  * @domain chinese-pics.com
+ * @domain chinese-pics.vip
  * @domain cn-av.com
  * @domain cnpics.org
  * @domain cnxx.me
@@ -50,6 +51,7 @@ _.register({
     "https://anime-jav.com/upload/en/*",
     "https://blackwidof.org/upload/en/*",
     "https://chinese-pics.com/upload/en/*",
+    "https://chinese-pics.vip/upload/en/*",
     "https://cn-av.com/upload/en/*",
     "https://cnpics.org/upload/en/*",
     "https://cnxx.me/upload/en/*",
