@@ -43,7 +43,7 @@
     "lodash": "^4.17.23",
     "parse-domain": "^8.2.2",
     "prettier": "^3.0.0",
-    "rollup": "^4.52.3",
+    "rollup": "^4.59.0",
     "vitest": "^4.0.0"
   },
   "scripts": {
