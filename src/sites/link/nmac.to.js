@@ -3,7 +3,7 @@
  */
 _.register({
   rule: {
-      host: /^nmac.to$/,
+      host: /^nmac\.to$/,
       path: /^\/ads\/(.+)$/,
   },
   async start(m) {
