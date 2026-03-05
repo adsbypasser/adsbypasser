@@ -17,6 +17,7 @@
  * @domain fc2ppv.stream
  * @domain fikfok.net
  * @domain gofile.download
+ * @domain hentai-manga.org
  * @domain hentai-sub.com
  * @domain hentai4f.com
  * @domain hentaicovid.com
@@ -63,6 +64,7 @@ _.register({
     "https://fc2ppv.stream/upload/en/*",
     "https://fikfok.net/upload/en/*",
     "https://gofile.download/upload/en/*",
+    "https://hentai-manga.org/upload/en/*",
     "https://hentai-sub.com/upload/en/*",
     "https://hentai4f.com/upload/en/*",
     "https://hentaicovid.com/uploads/en/*",
