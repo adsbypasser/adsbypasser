@@ -1,4 +1,5 @@
 /**
+ * @domain 1minx.com
  * @domain 3minx.com
  * @domain 4fuk.me
  * @domain 555fap.com
@@ -44,6 +45,7 @@
  */
 _.register({
   rule: [
+    "https://1minx.com/upload/en/*",
     "https://3minx.com/upload/en/*",
     "https://4fuk.me/upload/en/*",
     "https://555fap.com/upload/en/*",
