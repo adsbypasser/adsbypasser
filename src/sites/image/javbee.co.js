@@ -1,9 +1,9 @@
 /**
- * @domain image.javbee.vip
+ * @domain image.javbee.co
  */
 _.register({
   rule: {
-    host: /^image\.javbee\.vip$/,
+    host: /^image\.javbee\.co$/,
     path: /^\/en\//,
   },
   async ready() {
@@ -17,7 +17,7 @@ _.register({
 
 _.register({
   rule: {
-    host: /^image\.javbee\.vip$/,
+    host: /^image\.javbee\.co$/,
     path: /^\/ib\//,
   },
   async ready() {
