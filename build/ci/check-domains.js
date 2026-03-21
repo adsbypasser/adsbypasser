@@ -22,7 +22,7 @@
  *  - Referer header to appear more like legitimate traffic
  */
 
-import { extractDomainsFromJSDoc } from "../build/jsdoc.js";
+import { extractDomainsFromJSDoc } from "../lib/jsdoc.js";
 import dns from "dns/promises";
 import http from "http";
 import https from "https";

@@ -1,4 +1,4 @@
-import { deduplicateRootDomains } from "./lib/domain.js";
+import { deduplicateRootDomains } from "./domain.js";
 import { extractDomainsAtTag, extractFixedDomains } from "./git.js";
 
 /**

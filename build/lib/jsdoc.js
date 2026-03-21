@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
-import { source } from "./lib/paths.js";
-import { extractDomainsFromContent } from "./lib/domain.js";
+import { source } from "./paths.js";
+import { extractDomainsFromContent } from "./domain.js";
 
 const SITES_DIR = source.to("src/sites");
 

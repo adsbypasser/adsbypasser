@@ -1,5 +1,5 @@
 import fs from "fs/promises";
-import { extractDomainsFromJSDoc } from "../jsdoc.js";
+import { extractDomainsFromJSDoc } from "./jsdoc.js";
 import { deduplicateRootDomains } from "./domain.js";
 import { allBuildOptions, getFeatureName } from "./build.js";
 import { output } from "./paths.js";

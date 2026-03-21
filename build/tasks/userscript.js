@@ -4,7 +4,7 @@ import _ from "lodash";
 import findup from "findup-sync";
 import gulp from "gulp";
 
-import { extractDomainsFromJSDoc } from "../jsdoc.js";
+import { extractDomainsFromJSDoc } from "../lib/jsdoc.js";
 import { deduplicateRootDomains } from "../lib/domain.js";
 import {
   createNamedTask,

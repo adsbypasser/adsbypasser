@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { extractDomainDiff } from "../build/diff.js";
+import { extractDomainDiff } from "../lib/diff.js";
 import { extractPRsBetweenTags, getPreviousTag } from "./pr-extractor.js";
 
 /**
