@@ -35,6 +35,7 @@
  * @domain kin8-av.com
  * @domain kin8-jav.com
  * @domain kr-av.com
+ * @domain old-young.net
  * @domain ovabee.com
  * @domain pig69.com
  * @domain porn-pig.com
@@ -84,6 +85,7 @@ _.register({
     "https://kin8-av.com/upload/en/*",
     "https://kin8-jav.com/upload/en/*",
     "https://kr-av.com/upload/en/*",
+    "https://old-young.net/upload/en/*",
     "https://ovabee.com/upload/en/*",
     "https://pig69.com/upload/en/*",
     "https://porn-pig.com/upload/en/*",
