@@ -34,13 +34,13 @@ jobs:
       - name: Generate Release Notes
         id: release-notes
         run: |
-          node ci/release-notes.js ${{ github.ref_name }} > release-notes.md
+          node build/ci/release-notes.js ${{ github.ref_name }} > release-notes.md
           echo "notes<<EOF" >> $GITHUB_OUTPUT
           cat release-notes.md >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Deploy to GitHub Pages
-        run: ./ci/deploy-gh-pages.sh
+        run: ./build/ci/deploy-gh-pages.sh
         env:
           TAG_NAME: ${{ github.ref_name }}
           SOURCE_DIR: ./dist/ghpages
