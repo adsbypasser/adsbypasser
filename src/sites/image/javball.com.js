@@ -27,6 +27,7 @@
  * @domain hentaipig.com
  * @domain hentaixnx.com
  * @domain idol69.net
+ * @domain imgo.info
  * @domain javball.com
  * @domain javbee.co
  * @domain javring.com
@@ -77,6 +78,7 @@ _.register({
     "https://hentaipig.com/upload/en/*",
     "https://hentaixnx.com/upload/en/*",
     "https://idol69.net/upload/en/*",
+    "https://imgo.info/upload/en/*",
     "https://javball.com/upload/en/*",
     "https://javbee.co/upload/en/*",
     "https://javring.com/upload/en/*",
