@@ -11,7 +11,6 @@
  * @domain oko.sh
  * @domain pahe.plus
  * @domain payskip.org
- * @domain thotpacks.xyz
  * @domain tmearn.net
  */
 (function () {
@@ -35,7 +34,6 @@
         /^mitly\.us$/,
         /^oke\.io$/,
         /^pahe\.plus$/,
-        /^thotpacks\.xyz$/,
       ],
     },
     async ready() {
