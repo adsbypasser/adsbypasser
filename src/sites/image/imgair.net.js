@@ -5,6 +5,7 @@
  * @domain imgfira.cc
  * @domain imgfrost.net
  * @domain imgouhmde.sbs
+ * @domain imgouskel.sbs
  */
 _.register({
   rule: {
