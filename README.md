@@ -48,7 +48,7 @@ See the [configuration page](https://adsbypasser.github.io/configure.html) for d
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) (version 20.19.0 or higher)
+- [Node.js](https://nodejs.org/) (version 22.12.0 or higher)
 - [npm](https://www.npmjs.com/) (version 10.0.0 or higher)
 
 ### Building
