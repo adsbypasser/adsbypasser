@@ -44,6 +44,7 @@
  * @domain porn4f.org
  * @domain s-porn.com
  * @domain shentai-anime.com
+ * @domain sht-link.com
  * @domain sweetie-fox.com
  * @domain xcamcovid.com
  * @domain xxpics.org
@@ -95,6 +96,7 @@ _.register({
     "https://porn4f.org/upload/en/*",
     "https://s-porn.com/upload/en/*",
     "https://shentai-anime.com/upload/en/*",
+    "https://sht-link.com/upload/en/*",
     "https://sweetie-fox.com/upload/en/*",
     "https://xcamcovid.com/upload/en/*",
     "https://xxpics.org/upload/en/*",
