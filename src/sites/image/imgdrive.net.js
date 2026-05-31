@@ -2,12 +2,11 @@
  * @domain imgadult.com
  * @domain imgdrive.net
  * @domain imgtaxi.com
- * @domain imgwallet.com
  */
 _.register({
   rule: {
     host: [
-      /^(www\.)?(imgadult|imgtaxi|imgwallet)\.com$/,
+      /^(www\.)?(imgadult|imgtaxi)\.com$/,
       /^(www\.)?imgdrive\.net$/,
     ],
   },
