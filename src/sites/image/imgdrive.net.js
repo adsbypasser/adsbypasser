@@ -5,10 +5,7 @@
  */
 _.register({
   rule: {
-    host: [
-      /^(www\.)?(imgadult|imgtaxi)\.com$/,
-      /^(www\.)?imgdrive\.net$/,
-    ],
+    host: [/^(www\.)?(imgadult|imgtaxi)\.com$/, /^(www\.)?imgdrive\.net$/],
   },
   async ready() {
     let m = $('meta[property="og:image"]');
