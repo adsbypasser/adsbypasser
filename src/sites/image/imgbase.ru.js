@@ -1,10 +1,10 @@
 /**
  * @domain imgbase.ru
- * @domain picforall.ru
+ * @domain picforall.eu
  */
 _.register({
   rule: {
-    host: [/^(imgbase|picforall)\.ru$/],
+    host: [/^imgbase\.ru$/, /^picforall\.eu$/],
   },
   async ready() {
     let i = $("#pay_thumb_img img, #d1 table tbody tr td img");
