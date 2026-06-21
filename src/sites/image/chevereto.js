@@ -11,6 +11,7 @@
  * @domain lookmyimg.com
  * @domain orangepix.is
  * @domain pilot007.org
+ * @domain pixfy.cfd
  * @domain rintor.space
  * @domain shotcan.com
  * @domain trafficimage.club
@@ -31,6 +32,7 @@ _.register({
       /^lookmyimg\.com$/,
       /^orangepix\.is$/,
       /^pilot007\.org$/,
+      /^pixfy\.cfd$/,
       /^rintor\.space$/,
       /^shotcan\.com$/,
       /^(img\.)?trafficimage\.club$/,
