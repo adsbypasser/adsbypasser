@@ -12,7 +12,7 @@ _.register({
 });
 _.register({
   rule: {
-    host: /^media1\.tenor\.com$/,
+    host: /^media[0-9]\.tenor\.com$/,
   },
   async ready() {
     const i = $('a#media-link.file img');
