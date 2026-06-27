@@ -4,7 +4,6 @@
  * @domain 2i.sk
  * @domain img.javstore.net
  * @domain img.trafficimage.club
- * @domain imgcloud.pw
  * @domain imghit.com
  * @domain imgpulse.top
  * @domain imgxxt.in
@@ -24,7 +23,6 @@ _.register({
     host: [
       /^14xpics\.space$/,
       /^www\.2i\.(cz|sk)$/,
-      /^imgcloud\.pw$/,
       /^www\.imghit\.com$/,
       /^img\.javstore\.net$/,
       /^imgpulse\.top$/,
