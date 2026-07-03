@@ -15,16 +15,24 @@ function removeAllTimer() {
 }
 
 function nuke(url) {
+  // document.write() mid-execution implicitly calls document.open(), which
+  // clears the current document *and removes document.body*. The subsequent
+  // document.body.appendChild(a) then throws on the null body, silently
+  // dropping the URL link. Do the full replace atomically instead: open the
+  // document once, write both the message and the link, then close.
+  const doc = usw.document;
+  const safeUrl = String(url).replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
+  );
   try {
-    usw.document.write("nuked by AdsBypasser, leading to ...<br/>");
+    doc.open();
+    doc.write(
+      `nuked by AdsBypasser, leading to <a href="${safeUrl}">${safeUrl}</a>`,
+    );
+    doc.close();
   } catch (e) {
     warn("nuke failed", e);
   }
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.textContent = url;
-  document.body.appendChild(a);
 }
 
 function generateRandomIP() {
