@@ -4,12 +4,16 @@
  * @domain jav-load.com
  * @domain javtenshi.com
  * @domain pixhost.to
+ * @domain pixhost.cc
  * @domain uncenav.com
  */
 _.register({
   rule: [
     {
-      host: /^(www\.)?pixhost\.to$/,
+      host: [
+        /^(www\.)?pixhost\.to$/,
+        /^(www\.)?pixhost\.cc$/,
+      ],
       path: /^\/show\//,
     },
     {
