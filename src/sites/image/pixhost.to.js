@@ -10,10 +10,7 @@
 _.register({
   rule: [
     {
-      host: [
-        /^(www\.)?pixhost\.to$/,
-        /^(www\.)?pixhost\.cc$/,
-      ],
+      host: /^(www\.)?pixhost\.(cc|to)$/,
       path: /^\/show\//,
     },
     {
