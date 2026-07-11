@@ -21,8 +21,12 @@ function nuke(url) {
   // dropping the URL link. Do the full replace atomically instead: open the
   // document once, write both the message and the link, then close.
   const doc = usw.document;
-  const safeUrl = String(url).replace(/[&<>"']/g, (c) =>
-    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c],
+  const safeUrl = String(url).replace(
+    /[&<>"']/g,
+    (c) =>
+      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
+        c
+      ],
   );
   try {
     doc.open();
