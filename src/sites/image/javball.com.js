@@ -26,7 +26,6 @@
  * @domain hentaicovid.org
  * @domain hentaicovid.vip
  * @domain hentaipig.com
- * @domain hentaixnx.com
  * @domain idol69.net
  * @domain imgo.info
  * @domain javball.com
@@ -79,7 +78,6 @@ _.register({
     "https://hentaicovid.org/upload/en/*",
     "https://hentaicovid.vip/upload/en/*",
     "https://hentaipig.com/upload/en/*",
-    "https://hentaixnx.com/upload/en/*",
     "https://idol69.net/upload/en/*",
     "https://imgo.info/upload/en/*",
     "https://javball.com/upload/en/*",
