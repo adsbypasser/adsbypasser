@@ -27,8 +27,8 @@ body:
     id: full-link
     attributes:
       label: Full Link
-      description: Please provide the full link where the issue occurs
-      placeholder: https://example.com/redirect-link
+      description: Please paste the complete URL, including `https://`
+      placeholder: https://example.com/link
     validations:
       required: true
 
