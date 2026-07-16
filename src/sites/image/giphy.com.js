@@ -4,7 +4,7 @@
 _.register({
   rule: {
     host: /^giphy\.com$/,
-    path: /^\/gifs\/*\//,
+    path: /^\/gifs\//,
   },
   async ready() {
     const i = $('meta[property="og:image"]');
