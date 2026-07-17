@@ -4,6 +4,7 @@
 _.register({
   rule: {
     host: /^tenor\.com$/,
+    path: /^\/view\//,
   },
   async ready() {
     const img = $('meta[property="og:url"]');
