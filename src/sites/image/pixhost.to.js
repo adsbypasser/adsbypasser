@@ -3,6 +3,7 @@
  * @domain 3xplanet.net
  * @domain jav-load.com
  * @domain javtenshi.com
+ * @domain pixho.st
  * @domain pixhost.to
  * @domain pixhost.cc
  * @domain uncenav.com
@@ -10,7 +11,7 @@
 _.register({
   rule: [
     {
-      host: /^(www\.)?pixhost\.(cc|to)$/,
+      host: [/^(www\.)?pixhost\.(cc|to)$/, /^pixho\.st$/],
       path: /^\/show\//,
     },
     {
