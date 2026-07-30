@@ -1,40 +1,18 @@
 /**
- * @domain 3xplanet.com
- * @domain 3xplanet.net
- * @domain jav-load.com
- * @domain javtenshi.com
  * @domain pixho.st
  * @domain pixhost.cc
- * @domain uncenav.com
+ * @domain pixhost.to
  */
 _.register({
-  rule: [
-    {
-      host: [
-        /^(www\.)?pixhost\.cc$/,
-        /^pixho\.st$/
-      ],
-      path: /^\/show\//,
-    },
-    {
-      host: [
-        /^3xplanet\.(com|net)$/,
-        /^jav-load\.com$/,
-        /^javtenshi\.com$/,
-        /^uncenav\.com$/,
-      ],
-      path: /^\/viewimage\//,
-    },
-  ],
+  rule: {
+    host: [
+      /^(www\.)?pixhost\.(cc|to)$/,
+      /^pixho\.st$/
+    ],
+    path: /^\/show\//,
+  },
   async ready() {
-    $.remove("iframe, #ad");
-
-    let o = $.$("#all");
-    if (o) {
-      o.style.display = "";
-    }
-
-    o = $("#show_image, #image");
-    await $.openImage(o.src);
+    const i = $("#image");
+    await $.openImage(i.src);
   },
 });
