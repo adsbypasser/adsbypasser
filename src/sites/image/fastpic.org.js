@@ -4,10 +4,7 @@
 _.register({
   rule: {
     host: /^fastpic\.org$/,
-    path: [
-      /^\/view\//,
-      /^\/fullview\//,
-    ],
+    path: [/^\/view\//, /^\/fullview\//],
   },
   async ready() {
     const a = $.$("#imglink");

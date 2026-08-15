@@ -19,9 +19,9 @@ _.register({
       /^uncenav\.com$/,
     ],
     path: /^\/viewimage\//,
-    },
-    async ready() {
-      const o = $("#show_image");
-      await $.openImage(o.src);
+  },
+  async ready() {
+    const o = $("#show_image");
+    await $.openImage(o.src);
   },
 });

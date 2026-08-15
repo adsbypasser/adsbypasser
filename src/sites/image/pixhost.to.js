@@ -5,10 +5,7 @@
  */
 _.register({
   rule: {
-    host: [
-      /^(www\.)?pixhost\.(cc|to)$/,
-      /^pixho\.st$/
-    ],
+    host: [/^(www\.)?pixhost\.(cc|to)$/, /^pixho\.st$/],
     path: /^\/show\//,
   },
   async ready() {
