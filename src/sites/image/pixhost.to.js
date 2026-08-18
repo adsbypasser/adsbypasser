@@ -10,6 +10,6 @@ _.register({
   },
   async ready() {
     const i = $("#image");
-    await $.openImage(i.src);
+    window.location.replace(i.src);
   },
 });
