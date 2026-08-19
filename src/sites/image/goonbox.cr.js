@@ -6,7 +6,7 @@ _.register({
     host: /^goonbox\.cr$/,
   },
   async ready() {
-    await _.wait(300);
+    await _.wait(1000);
     const a = $("img.max-w-full");
     await $.openImage(a.src);
   },
