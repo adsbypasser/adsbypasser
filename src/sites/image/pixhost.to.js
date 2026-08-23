@@ -23,9 +23,13 @@ _.register({
       }
     }
     const image = document.querySelector("#image");
-    if (!image) return;
+    if (!image) {
+      return;
+    }
     const url = image.currentSrc || image.src;
-    if (!url) return;
+    if (!url) {
+      return;
+    }
     location.replace(url);
   },
 });
