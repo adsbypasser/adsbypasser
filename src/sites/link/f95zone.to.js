@@ -7,7 +7,7 @@ _.register({
     path: [/^\/masked\//],
   },
   async ready() {
-    const a = await _.tryEvery(500, () => $('.host_link'));
+    const a = await _.tryEvery(500, () => $.$(".host_link") ?? _.none);
     a.click();
   },
 });
