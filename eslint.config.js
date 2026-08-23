@@ -17,6 +17,8 @@ const browserGlobals = {
   FormData: "readonly",
   DOMParser: "readonly",
   MutationObserver: "readonly",
+  HTMLElement: "readonly",
+  customElements: "readonly",
   atob: "readonly",
   btoa: "readonly",
   navigator: "readonly",
@@ -53,6 +55,7 @@ const nodeGlobals = {
   clearTimeout: "readonly",
   setInterval: "readonly",
   clearInterval: "readonly",
+  URL: "readonly",
 };
 
 const libraryGlobals = {
@@ -90,9 +93,9 @@ export default [
       curly: "error",
     },
   },
-  // Node.js context: build/, ci/, vitest.config.js
+  // Node.js context: build/, ci/, tests/, vitest.config.js
   {
-    files: ["build/**/*.js", "ci/**/*.js", "vitest.config.js"],
+    files: ["build/**/*.js", "ci/**/*.js", "tests/**/*.js", "vitest.config.js"],
     languageOptions: {
       globals: {
         ...nodeGlobals,
@@ -100,9 +103,13 @@ export default [
       },
     },
   },
-  // Browser context: src/, templates/ghpages/js/
+  // Browser context: src/, templates/ghpages/js/, templates/jekyll/assets/js/
   {
-    files: ["src/**/*.js", "templates/ghpages/js/**/*.js"],
+    files: [
+      "src/**/*.js",
+      "templates/ghpages/js/**/*.js",
+      "templates/jekyll/assets/js/**/*.js",
+    ],
     languageOptions: {
       globals: {
         ...browserGlobals,
