@@ -1,11 +1,10 @@
 /**
  * @domain goo.st
- * @domain shortmoz.link
  * @domain swzz.xyz
  */
 _.register({
   rule: {
-    host: [/^goo\.st$/, /^shortmoz\.link$/, /^swzz\.xyz$/],
+    host: [/^goo\.st$/, /^swzz\.xyz$/],
   },
   async ready() {
     const button = $(".btn-primary");
