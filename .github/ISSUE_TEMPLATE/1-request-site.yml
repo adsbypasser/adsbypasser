@@ -9,9 +9,9 @@ body:
   - type: markdown
     attributes:
       value: |
-        Note #1: AdsBypasser DOES NOT bypass reCAPTCHA
+        **Important:** AdsBypasser does **NOT** bypass reCAPTCHA.
 
-        Note #2: Please update the issue title to include the site domain:
+        **Note:** Please update the issue title to include the site domain:
         `[Request] example.com`
 
   - type: input
@@ -27,7 +27,7 @@ body:
     id: full-link
     attributes:
       label: Full Link
-      description: Please paste the complete URL, including `https://`
+      description: Please paste the complete URL, including https://
       placeholder: https://example.com/link
     validations:
       required: true
@@ -36,13 +36,22 @@ body:
     id: description
     attributes:
       label: Description
-      description: A clear and concise description of why you'd like this site to be supported
-      placeholder: Describe the site and why it should be supported
+      description: Clearly describe the site and why you would like it to be supported.
+      placeholder: Describe the site and why it should be supported.
     validations:
       required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information
+      description: Provide any other information that may be useful.
+      placeholder: Add any relevant details, examples, or screenshots here.
 
   - type: markdown
     attributes:
       value: |
-        Before submitting:
+        **Before submitting:**
         1. Please check if there is an existing ticket open for the same site.
+        2. Make sure the site is not already supported by AdsBypasser.
+        3. Make sure you have provided a complete URL and a clear description of the site.
