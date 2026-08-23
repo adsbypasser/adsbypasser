@@ -9,7 +9,6 @@ _.register({
     path: /^\/show\//,
   },
   async ready() {
-    const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
     const button = document.querySelector("[data-age-gate-enter]");
     if (button) {
       button.click();
@@ -20,7 +19,7 @@ _.register({
         if (document.cookie.includes("pixhost_age_verified=1")) {
           break;
         }
-        await sleep(25);
+        await _.wait(25);
       }
     }
     const image = document.querySelector("#image");
