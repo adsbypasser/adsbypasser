@@ -161,16 +161,38 @@ function wait(msDelay) {
 /**
  * Repeatedly try a function until it returns a non-none value
  * @param {number} msInterval - Interval between tries in milliseconds
- * @param {Function} fn - Function to try
- * @returns {Promise} - Promise that resolves with the function result
+ * @param {Function} fn - Synchronous function to try
+ * @param {number} [maxAttempts] - Maximum number of attempts
+ * @returns {Promise} - Resolves with the result, or rejects on error/exhaustion
+ * @throws {AdsBypasserError} - If maxAttempts is not a positive integer
  */
-function tryEvery(msInterval, fn) {
-  return new Promise((resolve) => {
+function tryEvery(msInterval, fn, maxAttempts) {
+  if (
+    maxAttempts !== undefined &&
+    (!Number.isInteger(maxAttempts) || maxAttempts <= 0)
+  ) {
+    throw new AdsBypasserError("maxAttempts must be a positive integer");
+  }
+
+  return new Promise((resolve, reject) => {
+    let attempts = 0;
     const handle = setInterval(() => {
-      const result = fn();
+      let result;
+      try {
+        result = fn();
+      } catch (error) {
+        clearInterval(handle);
+        reject(error);
+        return;
+      }
+
+      attempts += 1;
       if (result !== none) {
         clearInterval(handle);
         resolve(result);
+      } else if (attempts === maxAttempts) {
+        clearInterval(handle);
+        reject(new AdsBypasserError("maximum attempts reached"));
       }
     }, msInterval);
   });

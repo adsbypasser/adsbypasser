@@ -6,7 +6,7 @@
  * essential functional programming capabilities and collection operations.
  */
 
-import { describe, it, expect } from "vitest";
+import { afterEach, describe, it, expect, vi } from "vitest";
 import {
   AdsBypasserError,
   partial,
@@ -15,12 +15,17 @@ import {
   none,
   forEach,
   map,
+  tryEvery,
 } from "$lib/core";
 
 /**
  * Test suite for core utility functions
  */
 describe("core", () => {
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   /**
    * Test suite for partial function application
    *
@@ -160,5 +165,69 @@ describe("core", () => {
         expect(result).toEqual([false, true, false]);
       });
     });
+  });
+
+  describe("tryEvery", () => {
+    it("retries without a limit until the callback succeeds", async () => {
+      vi.useFakeTimers();
+      const fn = vi.fn().mockReturnValueOnce(none).mockReturnValue("result");
+
+      const result = tryEvery(100, fn);
+      await vi.advanceTimersByTimeAsync(200);
+
+      await expect(result).resolves.toBe("result");
+      expect(fn).toHaveBeenCalledTimes(2);
+    });
+
+    it("resolves when the callback succeeds on the final attempt", async () => {
+      vi.useFakeTimers();
+      const fn = vi
+        .fn()
+        .mockReturnValueOnce(none)
+        .mockReturnValueOnce(none)
+        .mockReturnValue("result");
+
+      const result = tryEvery(100, fn, 3);
+      await vi.advanceTimersByTimeAsync(300);
+
+      await expect(result).resolves.toBe("result");
+      expect(fn).toHaveBeenCalledTimes(3);
+    });
+
+    it("rejects and stops retrying after the maximum attempts", async () => {
+      vi.useFakeTimers();
+      const fn = vi.fn(() => none);
+
+      const result = tryEvery(100, fn, 2);
+      const rejection = expect(result).rejects.toThrow(AdsBypasserError);
+      await vi.advanceTimersByTimeAsync(300);
+
+      await rejection;
+      expect(fn).toHaveBeenCalledTimes(2);
+    });
+
+    it("rejects with a callback error and stops retrying", async () => {
+      vi.useFakeTimers();
+      const error = new Error("callback failed");
+      const fn = vi.fn(() => {
+        throw error;
+      });
+
+      const result = tryEvery(100, fn);
+      const rejection = expect(result).rejects.toBe(error);
+      await vi.advanceTimersByTimeAsync(200);
+
+      await rejection;
+      expect(fn).toHaveBeenCalledTimes(1);
+    });
+
+    it.each([0, -1, 1.5, NaN])(
+      "throws for an invalid maximum attempt count of %s",
+      (maxAttempts) => {
+        expect(() => tryEvery(100, () => none, maxAttempts)).toThrow(
+          AdsBypasserError,
+        );
+      },
+    );
   });
 });
