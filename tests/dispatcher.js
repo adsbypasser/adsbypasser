@@ -369,17 +369,13 @@ describe("dispatcher", () => {
     it("should match first pattern in array", () => {
       mockLocation("https://example.com/path");
 
-      const handler1 = vi.fn();
-      const handler2 = vi.fn();
-
       register(
         createPattern([{ host: /^example\.com$/ }, { host: /^test\.org$/ }], {
-          ready: handler1,
+          ready: () => "handler",
         }),
       );
 
-      const handler = findHandler();
-      expect(handler).not.toBeNull();
+      expect(findHandler().ready()).toBe("handler");
     });
 
     it("should match second pattern when first fails", () => {
