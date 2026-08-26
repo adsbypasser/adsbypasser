@@ -14,7 +14,7 @@ _.register({
     const b = $(".link-button");
     b.click();
     await _.wait(6000);
-    const c = $(".link-button.get-link");
+    const c = $(".button.link-button");
     c.click();
   },
 });
