@@ -16,7 +16,7 @@ _.register({
     host: /^media[0-9]\.giphy\.com$/,
   },
   async ready() {
-    const img = $("a img.media_gif__MBeQG");
+    const img = $("img.block");
     await $.openImage(img.src);
   },
 });
