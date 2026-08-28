@@ -7,7 +7,7 @@ _.register({
     host: [/^ibb\.co$/, /^imgbb\.com$/],
   },
   async ready() {
-    const img = $(".image-viewer-container img");
-    await $.openImage(img.src);
+    const l = $('link[rel="image_src"]');
+    await $.openImage(l.href);
   },
 });
