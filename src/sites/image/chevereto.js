@@ -1,5 +1,4 @@
 /**
- * @domain 14xpics.space
  * @domain 2i.cz
  * @domain 2i.sk
  * @domain img.javstore.net
@@ -21,7 +20,6 @@
 _.register({
   rule: {
     host: [
-      /^14xpics\.space$/,
       /^www\.2i\.(cz|sk)$/,
       /^www\.imghit\.com$/,
       /^img\.javstore\.net$/,
