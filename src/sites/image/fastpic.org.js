@@ -7,93 +7,45 @@ _.register({
     path: [/^\/view\//, /^\/fullview\//],
   },
   async ready() {
-    if (document.readyState === "loading") {
-      await new Promise((resolve) => {
-        document.addEventListener("DOMContentLoaded", resolve, { once: true });
-      });
-    }
-    const extraRedirect = () => {
-      const bodyText = (document.body?.textContent || "").toLowerCase();
-      const hasContinueButton = [...document.querySelectorAll("a, button")].some((el) => {
-        const text = (el.textContent || "").trim().toLowerCase();
-        return text.includes("continue to image") || text.includes("click to continue to image") || text.includes("перейти к изображению");
-      });
-      const hasFallbackText = bodyText.includes("button not working?") && bodyText.includes("open the image page with this link");
-      if (!hasContinueButton || !hasFallbackText) {
-        return null;
-      }
-      const fallbackText = [...document.querySelectorAll("body *")].find((el) => {
-        const text = (el.textContent || "").trim().toLowerCase();
-        return text.includes("button not working?") && text.includes("open the image page with this link") && [...el.querySelectorAll("a[href]")].length > 0;
-      });
-      if (fallbackText) {
-        const link = fallbackText.querySelector("a[href]");
-        if (link?.href) {
-          return link.href;
+    const findUrl = () => {
+        const links = [document.querySelectorAll("a[href]")];
+        const body = document.body?.textContent?.toLowerCase() || "";
+        const fallback = links.find(a =>
+            /open the image page with this link/i.test(a.textContent)
+        );
+
+        if (
+            /button not working?/i.test(body) &&
+            /open the image page with this link/i.test(body)
+        ) {
+            return fallback?.href;
         }
-      }
-      for (const a of document.querySelectorAll("a[href]")) {
-        const text = (a.textContent || "").trim().toLowerCase();
-        if (text.includes("open the image page with this link") && a.href) {
-          return a.href;
-        }
-      }
-      return null;
+
+        return links.find(a =>
+            /fullview/i.test(a.href) &&
+            /continue to image|click to continue to image|перейти к изображению/i.test(a.textContent))?.href;
     };
-    const extraRedirectUrl = extraRedirect();
-    if (extraRedirectUrl) {
-      await $.openLink(extraRedirectUrl);
-      return;
-    }
-    const bypassContinue = () => {
-      const links = document.querySelectorAll("a[href*='/fullview/']");
-      for (const a of links) {
-        const text = (a.textContent || "").trim().toLowerCase();
-        if (text.includes("continue to image") || text.includes("click to continue to image") || text.includes("перейти к изображению")) {
-          const style = getComputedStyle(a);
-          const visible = style.display !== "none" && style.visibility !== "hidden" && a.getBoundingClientRect().width > 0 && a.getBoundingClientRect().height > 0;
-          if (visible && a.href) {
-            return a.href;
-          }
+
+    let url = findUrl();
+
+    if (!url) {
+        const scripts = document.scripts;
+
+        for (const script of scripts) {
+            const match = script.textContent.match(/pp0["sr"+"c"]="([^"]+)"/);
+
+            if (match) {
+                url = match[1];
+                break;
+            }
         }
-      }
-      return null;
-    };
-    const continueUrl = await new Promise((resolve) => {
-      let finished = false;
-      const finish = (url) => {
-        if (finished) return;
-        finished = true;
-        observer.disconnect();
-        clearInterval(timer);
-        clearTimeout(timeout);
-        resolve(url);
-      };
-      const check = () => {
-        const url = bypassContinue();
-        if (url) finish(url);
-      };
-      const observer = new MutationObserver(check);
-      observer.observe(document.documentElement, {
-        childList: true,
-        subtree: true,
-      });
-      const timer = setInterval(check, 50);
-      const timeout = setTimeout(() => finish(null), 3000);
-      check();
-    });
-    if (continueUrl) {
-      await $.openLink(continueUrl);
-      return;
     }
-    const directUrl = $.searchFromScripts(/pp0\["sr"\+"c"\]="([^"]+)"/);
-    if (directUrl?.[1]) {
-      await $.openLink(directUrl[1]);
-      return;
+    if (!url) {
+        url = document.querySelector("#imglink, #imga")?.href;
     }
-    const a = $.$("#imglink, #imga");
-    if (a?.href) {
-      await $.openLink(a.href);
+
+    if (url) {
+        window.location.href = url;
     }
-  },
+ },
 });
