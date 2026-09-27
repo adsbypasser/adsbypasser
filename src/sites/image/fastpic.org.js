@@ -9,7 +9,7 @@ _.register({
   async ready() {
     const extraRedirect = () => {
       const bodyText = (document.body?.textContent || "").toLowerCase();
-      const hasContinueButton = [document.querySelectorAll("a, button")].some((el) => {
+      const hasContinueButton = [...document.querySelectorAll("a, button")].some((el) => {
         const text = (el.textContent || "").trim().toLowerCase();
         return text.includes("continue to image") || text.includes("click to continue to image") || text.includes("перейти к изображению");
       });
@@ -17,9 +17,9 @@ _.register({
       if (!hasContinueButton || !hasFallbackText) {
         return null;
       }
-      const fallbackText = [document.querySelectorAll("body *")].find((el) => {
+      const fallbackText = [...document.querySelectorAll("body *")].find((el) => {
         const text = (el.textContent || "").trim().toLowerCase();
-        return text.includes("button not working?") && text.includes("open the image page with this link") && [el.querySelectorAll("a[href]")].length > 0;
+        return text.includes("button not working?") && text.includes("open the image page with this link") && [...el.querySelectorAll("a[href]")].length > 0;
       });
       if (fallbackText) {
         const link = fallbackText.querySelector("a[href]");
