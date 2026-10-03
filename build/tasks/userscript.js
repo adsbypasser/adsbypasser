@@ -215,6 +215,37 @@ async function parsePackageJSON() {
 }
 
 /**
+ * Get release channel specific metadata values
+ *
+ * Nightly builds are enabled by setting ADSBYPASSER_NIGHTLY to a version
+ * suffix (e.g. 20261004.123456) and ADSBYPASSER_COMMIT to the commit sha.
+ * @param {string} version - Package version
+ * @returns {Object} Template data for version, description, URLs and icon
+ */
+function getChannelData(version) {
+  const nightly = process.env.ADSBYPASSER_NIGHTLY;
+  if (!nightly) {
+    return {
+      version,
+      description: "Bypass Ads",
+      releaseBase: "https://adsbypasser.github.io/releases",
+      iconRef: `v${version}`,
+    };
+  }
+
+  const commit = process.env.ADSBYPASSER_COMMIT;
+  if (!commit) {
+    throw new Error("ADSBYPASSER_COMMIT is required for nightly builds");
+  }
+  return {
+    version: `${version}.${nightly}`,
+    description: `Bypass Ads (nightly ${commit.slice(0, 7)})`,
+    releaseBase: "https://adsbypasser.github.io/nightly",
+    iconRef: commit,
+  };
+}
+
+/**
  * Finalize metadata content by injecting package data and domains
  * @param {boolean} supportImage - Whether image support is enabled
  * @param {string} content - Template content
@@ -232,7 +263,7 @@ async function finalizeMetadata(supportImage, content) {
 
   let s = _.template(content);
   s = s({
-    version: pkg.version,
+    ...getChannelData(pkg.version),
     title: `AdsBypasser${featurePostfix}`,
     buildName: featureName,
   });

@@ -1,0 +1,49 @@
+name: Nightly
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: nightly
+  cancel-in-progress: true
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test
+
+      - name: Compute nightly version
+        run: |
+          echo "ADSBYPASSER_NIGHTLY=$(TZ=UTC git log -1 --format=%cd --date=format-local:%Y%m%d.%H%M%S)" >> $GITHUB_ENV
+          echo "ADSBYPASSER_COMMIT=${{ github.sha }}" >> $GITHUB_ENV
+
+      - name: Build userscripts
+        run: npm run build
+
+      - name: Deploy to nightly repository
+        run: ./build/ci/deploy-nightly.sh
+        env:
+          SOURCE_DIR: ./dist
+          TARGET_REPO: ${{ vars.GH_NIGHTLY_REPO }}
+          TARGET_REPO_TOKEN: ${{ secrets.GH_PAT }}
+          COMMIT_SHA: ${{ github.sha }}
