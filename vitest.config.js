@@ -40,15 +40,15 @@ export default defineConfig({
   resolve: {
     alias: {
       // Alias for utility modules
-      $lib: path.resolve(__dirname, "./src/lib"),
+      $lib: path.resolve(import.meta.dirname, "./src/lib"),
 
       // Alias for build utilities
-      $build: path.resolve(__dirname, "./build"),
+      $build: path.resolve(import.meta.dirname, "./build"),
 
       // You can add more aliases here as needed
       // For example:
-      // "@": path.resolve(__dirname, "./src"),
-      // "~": path.resolve(__dirname)
+      // "@": path.resolve(import.meta.dirname, "./src"),
+      // "~": path.resolve(import.meta.dirname)
     },
   },
 
