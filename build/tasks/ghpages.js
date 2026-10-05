@@ -1,22 +1,20 @@
-import gulp from "gulp";
+import fs from "fs/promises";
+import path from "path";
 
 import { generateSitesData, generateUrlsData } from "../lib/jekyll.js";
 import { allBuildOptions, getFeatureName } from "../lib/build.js";
 import { output, source } from "../lib/paths.js";
+import { userscript } from "./userscript.js";
 
 /**
- * Create GitHub Pages generation tasks
- * @param {Function} userscriptTask - Userscript generation task
- * @returns {Function} Gulp series task function
+ * Generate GitHub Pages site
+ * @returns {Promise<void>}
  */
-export function createGhpagesTasks(userscriptTask) {
-  const ghpagesTasks = gulp.series(
-    userscriptTask, // Build userscripts first
-    copyJekyllSource, // Copy Jekyll source to dist/ghpages/
-    generateData, // Generate Jekyll data files (to dist/ghpages/_data/)
-    copyReleases, // Copy releases to dist/ghpages/releases/
-  );
-  return ghpagesTasks;
+export async function ghpages() {
+  await userscript(); // Build userscripts first
+  await copyJekyllSource(); // Copy Jekyll source to dist/ghpages/
+  await generateData(); // Generate Jekyll data files (to dist/ghpages/_data/)
+  await copyReleases(); // Copy releases to dist/ghpages/releases/
 }
 
 /**
@@ -27,36 +25,34 @@ async function generateData() {
   await generateSitesData();
   await generateUrlsData();
 }
-generateData.displayName = "ghpages:generate:data";
 
 /**
  * Copy Jekyll source files to dist/ghpages/
- * @returns {stream.Readable} Gulp stream
+ * @returns {Promise<void>}
  */
 function copyJekyllSource() {
-  const jekyllPath = source.to("templates/jekyll");
-  const outPath = output.to("ghpages");
-
-  return gulp.src([`${jekyllPath}/**/*`]).pipe(gulp.dest(outPath));
+  return fs.cp(source.to("templates/jekyll"), output.to("ghpages"), {
+    recursive: true,
+  });
 }
-copyJekyllSource.displayName = "ghpages:copy:jekyll";
 
 /**
  * Copy release files to ghpages/releases directory
- * @returns {stream.Readable} Gulp stream
+ * @returns {Promise<void>}
  */
-function copyReleases() {
-  const files = [];
+async function copyReleases() {
+  const outPath = output.to("ghpages/releases");
+  await fs.mkdir(outPath, { recursive: true });
 
   // Add all feature combinations
+  const files = [];
   for (const [supportImage] of allBuildOptions()) {
     const featureName = getFeatureName(supportImage);
-    let js = output.to(`adsbypasser.${featureName}.user.js`);
-    files.push(js);
-    js = output.to(`adsbypasser.${featureName}.meta.js`);
-    files.push(js);
+    files.push(`adsbypasser.${featureName}.user.js`);
+    files.push(`adsbypasser.${featureName}.meta.js`);
   }
 
-  return gulp.src(files).pipe(gulp.dest(output.to("ghpages/releases")));
+  await Promise.all(
+    files.map((file) => fs.copyFile(output.to(file), path.join(outPath, file))),
+  );
 }
-copyReleases.displayName = "ghpages:copy:releases";

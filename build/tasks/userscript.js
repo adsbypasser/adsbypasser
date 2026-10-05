@@ -1,179 +1,157 @@
 import fs from "fs/promises";
 
 import _ from "lodash";
-import findup from "findup-sync";
-import gulp from "gulp";
 
 import { extractDomainsFromJSDoc } from "../lib/jsdoc.js";
 import { deduplicateRootDomains } from "../lib/domain.js";
 import {
-  createNamedTask,
   getFeatureName,
   imageBuildOptions,
+  listFiles,
+  readFiles,
+  writeFile,
 } from "../lib/build.js";
 import { output, source } from "../lib/paths.js";
-import { plugins } from "../lib/plugins.js";
+import { bundle, removeEmptyLines, stripComments } from "../lib/transform.js";
 
 /**
- * Create userscript generation tasks for all configurations
- * @returns {Function} Gulp parallel task function
+ * Generate userscripts for all configurations
+ * @returns {Promise<void>}
  */
-export function createUserscriptTasks() {
-  const tasks = [];
+export async function userscript() {
+  await Promise.all(
+    Array.from(imageBuildOptions(), ([supportImage]) =>
+      buildUserscript(supportImage),
+    ),
+  );
+}
 
-  for (const [supportImage] of imageBuildOptions()) {
-    const featureName = getFeatureName(supportImage);
-
-    // Create namespace and handlers tasks
-    const namespaceTask = createNamedTask(
-      `userscript:body:namespace:${featureName}`,
-      makeNamespace,
-      supportImage,
-    );
-    const handlersTask = createNamedTask(
-      `userscript:body:handlers:${featureName}`,
-      makeHandlers,
-      supportImage,
-    );
-    const namespaceAndHandlers = gulp.parallel(namespaceTask, handlersTask);
-
-    // Create body task
-    const bodyTask = createNamedTask(
-      `userscript:body:${featureName}`,
-      makeBody,
-      supportImage,
-    );
-    const body = gulp.series(namespaceAndHandlers, bodyTask);
-
-    // Create meta task
-    const metaTask = createNamedTask(
-      `userscript:meta:${featureName}`,
-      makeMeta,
-      supportImage,
-    );
-    const metaAndBody = gulp.parallel(metaTask, body);
-
-    // Create link task
-    const linkTask = createNamedTask(
-      `userscript:${featureName}`,
-      linkFiles,
-      supportImage,
-    );
-
-    // Combine all tasks for this configuration
-    const task = gulp.series(metaAndBody, linkTask);
-    tasks.push(task);
-  }
-
-  return gulp.parallel(...tasks);
+/**
+ * Generate the userscript for one configuration
+ * @param {boolean} supportImage - Whether image support is enabled
+ * @returns {Promise<void>}
+ */
+async function buildUserscript(supportImage) {
+  const body = async () => {
+    await Promise.all([
+      makeNamespace(supportImage),
+      makeHandlers(supportImage),
+    ]);
+    await makeBody(supportImage);
+  };
+  await Promise.all([makeMeta(supportImage), body()]);
+  await linkFiles(supportImage);
 }
 
 /**
  * Combine meta and body files into final userscript
  * @param {boolean} supportImage - Whether image support is enabled
- * @returns {stream.Readable} Gulp stream
+ * @returns {Promise<void>}
  */
-function linkFiles(supportImage) {
+async function linkFiles(supportImage) {
   const featureName = getFeatureName(supportImage);
 
-  return gulp
-    .src([
-      output.to(`adsbypasser.${featureName}.meta.js`),
-      output.to(`body/${featureName}.js`),
-    ])
-    .pipe(plugins.concat(`adsbypasser.${featureName}.user.js`))
-    .pipe(gulp.dest(output.path));
+  const contents = await readFiles([
+    output.to(`adsbypasser.${featureName}.meta.js`),
+    output.to(`body/${featureName}.js`),
+  ]);
+  await writeFile(
+    output.to(`adsbypasser.${featureName}.user.js`),
+    contents.join("\n"),
+  );
 }
 
 /**
  * Generate meta.js file from template
  * @param {boolean} supportImage - Whether image support is enabled
- * @returns {stream.Readable} Gulp stream
+ * @returns {Promise<void>}
  */
-function makeMeta(supportImage) {
+async function makeMeta(supportImage) {
   const featureName = getFeatureName(supportImage);
 
-  return gulp
-    .src(source.to("templates/userscript/metadata.template.js"))
-    .pipe(
-      plugins.change((content, done) => {
-        finalizeMetadata(supportImage, content)
-          .then((result) => done(null, result))
-          .catch((error) => done(error));
-      }),
-    )
-    .pipe(plugins.rename(`adsbypasser.${featureName}.meta.js`))
-    .pipe(plugins.removeEmptyLines())
-    .pipe(gulp.dest(output.path));
+  const template = await fs.readFile(
+    source.to("templates/userscript/metadata.template.js"),
+    "utf-8",
+  );
+  const content = await finalizeMetadata(supportImage, template);
+  await writeFile(
+    output.to(`adsbypasser.${featureName}.meta.js`),
+    removeEmptyLines(content),
+  );
 }
 
 /**
  * Generate body script using rollup
  * @param {boolean} supportImage - Whether image support is enabled
- * @returns {stream.Readable} Gulp stream
+ * @returns {Promise<void>}
  */
-function makeBody(supportImage) {
+async function makeBody(supportImage) {
   const featureName = getFeatureName(supportImage);
   const namespacePath = output.to(`namespace/${featureName}.js`);
   const handlersPath = output.to(`handlers/${featureName}.js`);
 
-  return gulp
-    .src(source.to("src/main.js"))
-    .pipe(
-      plugins.rollup({
-        alias: [
-          { find: "__ADSBYPASSER_NAMESPACE__", replacement: namespacePath },
-          { find: "__ADSBYPASSER_HANDLERS__", replacement: handlersPath },
-        ],
-        modules: [source.to("src"), "node_modules"],
-        extensions: [".js", ".json"],
-        output: {
-          format: "iife",
-          name: "AdsBypasser",
-        },
-      }),
-    )
-    .pipe(plugins.stripComments())
-    .pipe(plugins.removeEmptyLines())
-    .pipe(plugins.rename(`${featureName}.js`))
-    .pipe(gulp.dest(output.to("body")));
+  const code = await bundle(source.to("src/main.js"), {
+    alias: [
+      { find: "__ADSBYPASSER_NAMESPACE__", replacement: namespacePath },
+      { find: "__ADSBYPASSER_HANDLERS__", replacement: handlersPath },
+    ],
+    modules: [source.to("src"), "node_modules"],
+    extensions: [".js", ".json"],
+    output: {
+      format: "iife",
+      name: "AdsBypasser",
+    },
+  });
+  await writeFile(
+    output.to(`body/${featureName}.js`),
+    removeEmptyLines(stripComments(code)),
+  );
 }
 
 /**
  * Combine handlers from site files
  * @param {boolean} supportImage - Whether image support is enabled
- * @returns {stream.Readable} Gulp stream
+ * @returns {Promise<void>}
  */
-function makeHandlers(supportImage) {
+async function makeHandlers(supportImage) {
   const featureName = getFeatureName(supportImage);
   const namespaceScript = "import { _, $ } from '__ADSBYPASSER_NAMESPACE__';\n";
 
   // Define which handlers to include based on image support
-  const handlers = ["src/sites/file/*.js", "src/sites/link/*.js"];
+  const directories = ["file", "link"];
   if (supportImage) {
-    handlers.push("src/sites/image/*.js");
+    directories.push("image");
   }
 
-  return gulp
-    .src(handlers.map(source.to.bind(source)))
-    .pipe(plugins.concat(`${featureName}.js`))
-    .pipe(plugins.injectString.prepend(namespaceScript))
-    .pipe(gulp.dest(output.to("handlers")));
+  const files = [];
+  for (const directory of directories) {
+    files.push(
+      ...(await listFiles(source.to(`src/sites/${directory}`), ".js")),
+    );
+  }
+  const contents = await readFiles(files);
+  await writeFile(
+    output.to(`handlers/${featureName}.js`),
+    namespaceScript + contents.join("\n"),
+  );
 }
 
 /**
  * Generate namespace file from template
  * @param {boolean} supportImage - Whether image support is enabled
- * @returns {stream.Readable} Gulp stream
+ * @returns {Promise<void>}
  */
-function makeNamespace(supportImage) {
+async function makeNamespace(supportImage) {
   const featureName = getFeatureName(supportImage);
 
-  return gulp
-    .src(source.to("templates/userscript/namespace.template.js"))
-    .pipe(plugins.change(_.partial(finalizeNamespace, supportImage)))
-    .pipe(plugins.rename(`${featureName}.js`))
-    .pipe(gulp.dest(output.to("namespace")));
+  const template = await fs.readFile(
+    source.to("templates/userscript/namespace.template.js"),
+    "utf-8",
+  );
+  await writeFile(
+    output.to(`namespace/${featureName}.js`),
+    finalizeNamespace(supportImage, template),
+  );
 }
 
 /**
@@ -207,8 +185,7 @@ async function extractDomainsForMetadata(supportImage) {
  * @returns {Promise<Object>} Parsed package.json object
  */
 async function parsePackageJSON() {
-  const p = findup("package.json");
-  const pkg = await fs.readFile(p, {
+  const pkg = await fs.readFile(source.to("package.json"), {
     encoding: "utf-8",
   });
   return JSON.parse(pkg);

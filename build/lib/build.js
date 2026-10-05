@@ -1,4 +1,5 @@
-import _ from "lodash";
+import fs from "fs/promises";
+import path from "path";
 
 /**
  * Build configuration options
@@ -54,14 +55,35 @@ export function getFeatureName(supportImage) {
 }
 
 /**
- * Create a named Gulp task
- * @param {string} name - Task name
- * @param {Function} task - Task function
- * @param {...any} args - Arguments to pass to task function
- * @returns {Function} Named task function
+ * List files with the given extension in a directory, sorted by name
+ * @param {string} directory - Directory path
+ * @param {string} extension - File extension, including the dot
+ * @returns {Promise<string[]>} Absolute file paths
  */
-export function createNamedTask(name, task, ...args) {
-  const fn = _.partial(task, ...args);
-  fn.displayName = name;
-  return fn;
+export async function listFiles(directory, extension) {
+  const entries = await fs.readdir(directory, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isFile() && entry.name.endsWith(extension))
+    .map((entry) => path.join(directory, entry.name))
+    .sort();
+}
+
+/**
+ * Read text files in order
+ * @param {string[]} files - File paths
+ * @returns {Promise<string[]>} File contents
+ */
+export function readFiles(files) {
+  return Promise.all(files.map((file) => fs.readFile(file, "utf-8")));
+}
+
+/**
+ * Write a text file, creating parent directories as needed
+ * @param {string} file - File path
+ * @param {string} content - File content
+ * @returns {Promise<void>}
+ */
+export async function writeFile(file, content) {
+  await fs.mkdir(path.dirname(file), { recursive: true });
+  await fs.writeFile(file, content);
 }

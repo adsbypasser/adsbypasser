@@ -31,8 +31,7 @@ export default defineConfig({
     //     "build/",
     //     "coverage/",
     //     "tests/",
-    //     "vitest.config.js",
-    //     "gulpfile.js"
+    //     "vitest.config.js"
     //   ]
     // }
   },

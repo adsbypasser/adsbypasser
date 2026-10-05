@@ -30,16 +30,9 @@
   "devDependencies": {
     "@rollup/plugin-alias": "^6.0.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
+    "decomment": "^0.9.5",
     "eslint": "^9.36.0",
     "eslint-config-prettier": "^10.1.8",
-    "findup-sync": "^5.0.0",
-    "gulp": "^5.0.0",
-    "gulp-change": "^1.0.0",
-    "gulp-cli": "^3.1.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-inject-string": "^1.1.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-strip-comments": "^2.5.1",
     "lodash": "^4.18.1",
     "parse-domain": "^8.2.2",
     "prettier": "^3.0.0",
@@ -47,14 +40,14 @@
     "vitest": "^4.1.11"
   },
   "scripts": {
-    "build": "gulp",
-    "clean": "gulp clean",
+    "build": "node build/make.js userscript",
+    "clean": "node build/make.js clean",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "test": "vitest",
-    "ghpages": "gulp ghpages",
+    "ghpages": "node build/make.js ghpages",
     "ci:release-notes": "node build/ci/release-notes.js"
   }
 }
