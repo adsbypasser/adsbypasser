@@ -12,6 +12,7 @@ concurrency:
 
 jobs:
   nightly:
+    if: github.repository == 'adsbypasser/adsbypasser'
     runs-on: ubuntu-latest
     permissions:
       contents: read
