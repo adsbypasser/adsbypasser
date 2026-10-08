@@ -6,7 +6,6 @@
  * @domain imageshimage.com
  * @domain imagetwist.com
  * @domain imagexport.com
- * @domain vipr.im
  */
 _.register({
   rule: {
@@ -18,7 +17,6 @@ _.register({
       /^imageshimage\.com$/,
       /^imagetwist\.com$/,
       /^imagexport\.com$/,
-      /^vipr\.im$/,
     ],
   },
   async ready() {
