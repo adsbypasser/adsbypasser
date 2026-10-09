@@ -3,35 +3,253 @@
 
 @import "{{ site.theme }}";
 
-/* Custom navigation links styling for AdsBypasser */
-header div.links {
-  margin-top: 25px;
-  margin-bottom: 25px;
+/* Color palette, matching the midnight theme */
+:root {
+  /* Text and surfaces */
+  --color-text: #f0e7d5;
+  --color-text-on-button: #1c1c1c;
+  --color-focus: #ffcc00;
+  --color-tip-bg: #111;
+  --color-tip-border: #434343;
+  --color-switch-bg: #2a2a2a;
+  --color-switch-border: #434343;
 
-  > a {
-    display: block;
+  /* Release channel: the theme's green */
+  --color-release: #93bd20;
+  --color-release-dark: #659e10;
+  --color-release-hover: #a6d12a;
+  --color-release-hover-dark: #7fb51a;
 
-    width: 270px;
-    height: 40px;
+  /* Nightly channel: amber */
+  --color-nightly: #ffb000;
+  --color-nightly-button: #e89a00;
+  --color-nightly-button-dark: #b87400;
+  --color-nightly-hover: #ffb31a;
+  --color-nightly-hover-dark: #d98c00;
+}
 
+/* Header buttons: dark text and no border, like the install buttons */
+#header nav ul li a {
+  border: 0;
+  box-shadow: none;
+  background: linear-gradient(var(--color-release), var(--color-release-dark));
+  color: var(--color-text-on-button);
+  font-family:
+    "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  &:hover {
+    border: 0;
+    box-shadow: none;
+    background: linear-gradient(
+      var(--color-release-hover),
+      var(--color-release-hover-dark)
+    );
+  }
+}
+
+/* Installation links for AdsBypasser: channel switch x editions */
+#install {
+  margin: 0 0 50px 0;
+
+  /* Release / Nightly segmented switch */
+  .switch {
+    display: flex;
+    margin: 0 0 10px 0;
     padding: 0;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    border: 0;
 
-    border-radius: 5px;
-    border: 1px solid #d2d2d2;
-    box-shadow:
-      inset #fff 0 1px 0,
-      inset rgba(0, 0, 0, 0.03) 0 -1px 0;
+    legend {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
 
-    background: #eee;
-    background: -webkit-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-    background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-    background: -ms-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-    background: -o-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-    background: linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
+    input {
+      position: absolute;
+      opacity: 0;
+    }
 
+    label {
+      flex: 1;
+      padding: 6px 0;
+      border: 1px solid var(--color-switch-border);
+      background: var(--color-switch-bg);
+      color: var(--color-text);
+      font-size: 15px;
+      text-align: center;
+      cursor: pointer;
+
+      &:first-of-type {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &:last-of-type {
+        border-left: 0;
+        border-radius: 0 4px 4px 0;
+      }
+    }
+
+    input:focus-visible + label {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 1px;
+    }
+
+    #channel-release:checked + label {
+      background: var(--color-release);
+      color: var(--color-text-on-button);
+      font-weight: bold;
+    }
+
+    #channel-nightly:checked + label {
+      background: var(--color-nightly);
+      color: var(--color-text-on-button);
+      font-weight: bold;
+    }
+  }
+
+  .note {
+    margin: 0 0 15px 0;
+    font-size: 13px;
+
+    &.nightly {
+      color: var(--color-nightly);
+    }
+  }
+
+  .editions {
+    display: flex;
+    gap: 10px;
+  }
+
+  .edition {
+    flex: 1;
     text-align: center;
-    line-height: 40px;
+  }
+
+  .name {
+    margin: 0 0 6px 0;
+    font-size: 16px;
+  }
+
+  a.button {
+    display: block;
+    padding: 8px 0;
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--color-text-on-button);
+
+    &.release {
+      background: linear-gradient(
+        var(--color-release),
+        var(--color-release-dark)
+      );
+
+      &:hover {
+        background: linear-gradient(
+          var(--color-release-hover),
+          var(--color-release-hover-dark)
+        );
+      }
+    }
+
+    &.nightly {
+      background: linear-gradient(
+        var(--color-nightly-button),
+        var(--color-nightly-button-dark)
+      );
+
+      &:hover {
+        background: linear-gradient(
+          var(--color-nightly-hover),
+          var(--color-nightly-hover-dark)
+        );
+      }
+    }
+  }
+
+  /* Show only the selected channel; release is the default */
+  .nightly,
+  a.button.nightly {
+    display: none;
+  }
+
+  &:has(#channel-nightly:checked) {
+    .release,
+    a.button.release {
+      display: none;
+    }
+
+    .nightly,
+    a.button.nightly {
+      display: block;
+    }
+  }
+
+  /* (?) badge with a tooltip on hover or keyboard focus */
+  .hint {
+    position: relative;
+    display: inline-block;
+    margin-left: 4px;
+  }
+
+  .help {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    cursor: help;
+    opacity: 0.7;
+
+    &:focus {
+      outline: 2px solid var(--color-focus);
+      outline-offset: 1px;
+    }
+  }
+
+  .tip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 220px;
+    padding: 8px 10px;
+    border: 1px solid var(--color-tip-border);
+    border-radius: 4px;
+    background: var(--color-tip-bg);
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.7);
+    color: var(--color-text);
+    font-family:
+      "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.4;
+    text-align: left;
+    transition: opacity 0.15s;
+  }
+
+  /* Keep tooltips at the table edges inside the page */
+  .hint.start .tip {
+    left: 0;
+    transform: none;
+  }
+
+  .hint.end .tip {
+    left: auto;
+    right: 0;
+    transform: none;
+  }
+
+  .hint:hover .tip,
+  .hint:focus-within .tip {
+    visibility: visible;
+    opacity: 1;
   }
 }
