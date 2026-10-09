@@ -1,11 +1,12 @@
 /**
  * @domain forumdinheiro.com
+ * @domain guis2.com
  * @domain tarviral.com
  * @domain umconto.com
  */
 _.register({
   rule: {
-    host: /^(www\.)?(forumdinheiro|tarviral|umconto)\.com$/,
+    host: /^(www\.)?(forumdinheiro|guis2|tarviral|umconto)\.com$/,
   },
   async start() {
     const api = `${window.location.origin}/api`;
