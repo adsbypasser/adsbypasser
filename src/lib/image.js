@@ -3,10 +3,10 @@ import { remove } from "./dom.js";
 import { warn, info } from "./logger.js";
 import { removeAllTimer } from "./misc.js";
 import { GMAPI, VERSION } from "./platform.js";
+import alignCenterCSS from "../../static/css/align_center.css";
+import scaleImageCSS from "../../static/css/scale_image.css";
 
 const RESOURCE_ROOT = `https://raw.githubusercontent.com/adsbypasser/adsbypasser/v${VERSION}/static`;
-const ALIGN_CENTER = `${RESOURCE_ROOT}/css/align_center.css`;
-const SCALE_IMAGE = `${RESOURCE_ROOT}/css/scale_image.css`;
 const BACKGROUND_IMAGE = `${RESOURCE_ROOT}/img/imagedoc-darknoise.png`;
 
 async function openImage(imgSrc, options = {}) {
@@ -59,7 +59,7 @@ function checkScaling() {
 }
 
 function scaleImage(img) {
-  appendStyleURL(SCALE_IMAGE);
+  GMAPI.addStyle(scaleImageCSS);
 
   if (img.naturalWidth && img.naturalHeight) {
     checkScaling.call(img);
@@ -80,21 +80,13 @@ function changeBackground() {
 }
 
 function alignCenter() {
-  appendStyleURL(ALIGN_CENTER);
+  GMAPI.addStyle(alignCenterCSS);
 }
 
 function injectStyle(wrapper, img) {
   remove("style, link[rel=stylesheet]");
   wrapper.id = "adsbypasser-wrapper";
   img.id = "adsbypasser-image";
-}
-
-function appendStyleURL(url) {
-  const link = document.createElement("link");
-  link.rel = "stylesheet";
-  link.type = "text/css";
-  link.href = url;
-  document.head.appendChild(link);
 }
 
 async function replaceBody(imgSrc) {

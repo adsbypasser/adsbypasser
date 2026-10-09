@@ -9,6 +9,7 @@
 // @updateURL      https://adsbypasser.github.io/<%= releaseChannel %>/adsbypasser.<%= buildName %>.meta.js
 // @downloadURL    https://adsbypasser.github.io/<%= releaseChannel %>/adsbypasser.<%= buildName %>.user.js
 // @icon           https://raw.githubusercontent.com/adsbypasser/adsbypasser/<%= iconRef %>/static/img/logo.png
+// @grant          GM_addStyle
 // @grant          GM_deleteValue
 // @grant          GM_getValue
 // @grant          GM_info
@@ -16,6 +17,7 @@
 // @grant          GM_registerMenuCommand
 // @grant          GM_setValue
 // @grant          GM_xmlhttpRequest
+// @grant          GM.addStyle
 // @grant          GM.deleteValue
 // @grant          GM.getValue
 // @grant          GM.info

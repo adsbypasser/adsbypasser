@@ -32,6 +32,7 @@ export async function bundle(input, config) {
         extensions: config.extensions ?? [".js", ".json"],
         preferBuiltins: false,
       }),
+      cssString(),
     ],
     external: config.external ?? [],
     onwarn(warning, warn) {
@@ -58,6 +59,39 @@ export async function bundle(input, config) {
   } finally {
     await result.close();
   }
+}
+
+/**
+ * Rollup plugin that imports CSS files as minified strings
+ * @returns {Object} Rollup plugin
+ */
+function cssString() {
+  return {
+    name: "css-string",
+    transform(code, id) {
+      if (!id.endsWith(".css")) {
+        return null;
+      }
+      return {
+        code: `export default ${JSON.stringify(minifyCSS(code))};`,
+        map: null,
+      };
+    },
+  };
+}
+
+/**
+ * Minify CSS by removing comments and redundant whitespace
+ * @param {string} content - CSS code
+ * @returns {string} Minified CSS
+ */
+export function minifyCSS(content) {
+  return content
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .replace(/\s+/g, " ")
+    .replace(/\s*([{}:;,])\s*/g, "$1")
+    .replace(/;}/g, "}")
+    .trim();
 }
 
 /**

@@ -33,7 +33,21 @@ function getGreaseMonkeyAPI() {
     deleteValue: GM?.deleteValue ?? promisify(GM_deleteValue),
     xmlHttpRequest: GM?.xmlHttpRequest ?? GM_xmlhttpRequest,
     registerMenuCommand: GM?.registerMenuCommand ?? GM_registerMenuCommand,
+    addStyle:
+      GM?.addStyle ??
+      (typeof GM_addStyle === "function" ? GM_addStyle : addStyleFallback),
   };
+}
+
+// Polyfill for Greasemonkey 4, which has no addStyle.
+// NOTE: unlike the native addStyle of Tampermonkey/Violentmonkey, an injected
+// <style> is subject to the page's CSP; on pages whose style-src forbids
+// inline styles it is silently ignored (the image still shows, unstyled).
+function addStyleFallback(css) {
+  const style = document.createElement("style");
+  style.textContent = css;
+  (document.head ?? document.documentElement).appendChild(style);
+  return style;
 }
 
 function promisify(fn) {
