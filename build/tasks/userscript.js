@@ -205,7 +205,7 @@ function getChannelData(version) {
     return {
       version,
       description: "Bypass Ads",
-      releaseBase: "https://adsbypasser.github.io/releases",
+      releaseChannel: "releases",
       iconRef: `v${version}`,
     };
   }
@@ -217,7 +217,7 @@ function getChannelData(version) {
   return {
     version: `${version}.${nightly}`,
     description: `Bypass Ads (nightly ${commit.slice(0, 7)})`,
-    releaseBase: "https://adsbypasser.github.io/nightly",
+    releaseChannel: "nightly",
     iconRef: commit,
   };
 }

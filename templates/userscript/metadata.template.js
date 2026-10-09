@@ -6,8 +6,8 @@
 // @license        BSD-3-Clause
 // @homepageURL    https://adsbypasser.github.io/
 // @supportURL     https://github.com/adsbypasser/adsbypasser/issues
-// @updateURL      <%= releaseBase %>/adsbypasser.<%= buildName %>.meta.js
-// @downloadURL    <%= releaseBase %>/adsbypasser.<%= buildName %>.user.js
+// @updateURL      https://adsbypasser.github.io/<%= releaseChannel %>/adsbypasser.<%= buildName %>.meta.js
+// @downloadURL    https://adsbypasser.github.io/<%= releaseChannel %>/adsbypasser.<%= buildName %>.user.js
 // @icon           https://raw.githubusercontent.com/adsbypasser/adsbypasser/<%= iconRef %>/static/img/logo.png
 // @grant          GM_deleteValue
 // @grant          GM_getValue
