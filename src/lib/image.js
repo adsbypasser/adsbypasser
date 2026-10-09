@@ -32,8 +32,25 @@ function enableScrolling() {
   el.style.overflow = "";
 }
 
-function toggleShrinking() {
-  this.classList.toggle("adsbypasser-shrinked");
+function toggleShrinking(event) {
+  if (!this.classList.contains("adsbypasser-shrinked")) {
+    this.classList.add("adsbypasser-shrinked");
+    return;
+  }
+
+  // Remember the clicked point relative to the image.
+  const before = this.getBoundingClientRect();
+  const rx = (event.clientX - before.left) / before.width;
+  const ry = (event.clientY - before.top) / before.height;
+
+  this.classList.remove("adsbypasser-shrinked");
+
+  // Keep the clicked point under the cursor after expanding.
+  const after = this.getBoundingClientRect();
+  window.scrollBy(
+    after.left + rx * after.width - event.clientX,
+    after.top + ry * after.height - event.clientY,
+  );
 }
 
 function checkScaling() {
