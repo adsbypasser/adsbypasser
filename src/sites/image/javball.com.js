@@ -41,6 +41,7 @@
  * @domain porn-pig.com
  * @domain porn4f.com
  * @domain porn4f.org
+ * @domain ria-kurumi.vip
  * @domain s-porn.com
  * @domain shentai-anime.com
  * @domain sht-link.com
@@ -92,6 +93,7 @@ _.register({
     "https://porn-pig.com/upload/en/*",
     "https://porn4f.com/upload/en/*",
     "https://porn4f.org/upload/en/*",
+    "https://ria-kurumi.vip/upload/en/*",
     "https://s-porn.com/upload/en/*",
     "https://shentai-anime.com/upload/en/*",
     "https://sht-link.com/upload/en/*",
