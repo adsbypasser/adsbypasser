@@ -36,7 +36,6 @@ import { info, warn } from '$lib/logger';
 import {
   evil,
   generateRandomIP,
-  nuke,
   removeAllTimer,
 } from '$lib/misc';
 import { usw } from '$lib/platform';
@@ -70,7 +69,6 @@ $.$$ = querySelectorAll;
 $.block = block;
 $.get = get;
 $.getCookie = getCookie;
-$.nuke = nuke;
 <% if (supportImage) { %>
 $.openImage = openImage;
 <% } %>

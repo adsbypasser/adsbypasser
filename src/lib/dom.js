@@ -108,6 +108,16 @@ function searchFromScripts(pattern, context) {
   return null;
 }
 
+function waitDOM() {
+  return new Promise((resolve) => {
+    if (document.readyState !== "loading") {
+      resolve();
+      return;
+    }
+    document.addEventListener("DOMContentLoaded", () => resolve());
+  });
+}
+
 export {
   block,
   querySelector,
@@ -116,4 +126,5 @@ export {
   remove,
   searchFromScripts,
   toDOM,
+  waitDOM,
 };

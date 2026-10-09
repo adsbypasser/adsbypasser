@@ -1,6 +1,10 @@
 import { nop } from "./core.js";
+import { waitDOM } from "./dom.js";
+import { info } from "./logger.js";
 import { usw } from "./platform.js";
-import { warn } from "./logger.js";
+
+const isSafari =
+  Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0;
 
 function removeAllTimer() {
   let handle = window.setInterval(nop, 10);
@@ -14,29 +18,59 @@ function removeAllTimer() {
   }
 }
 
-function nuke(url) {
-  // document.write() mid-execution implicitly calls document.open(), which
-  // clears the current document *and removes document.body*. The subsequent
-  // document.body.appendChild(a) then throws on the null body, silently
-  // dropping the URL link. Do the full replace atomically instead: open the
-  // document once, write both the message and the link, then close.
-  const doc = usw.document;
-  const safeUrl = String(url).replace(
-    /[&<>"']/g,
-    (c) =>
-      ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[
-        c
-      ],
-  );
-  try {
-    doc.open();
-    doc.write(
-      `nuked by AdsBypasser, leading to <a href="${safeUrl}">${safeUrl}</a>`,
-    );
-    doc.close();
-  } catch (e) {
-    warn("nuke failed", e);
+function disableLeavePrompt(element) {
+  if (!element) {
+    return;
   }
+
+  const seal = {
+    set: () => info("blocked onbeforeunload"),
+  };
+
+  element.onbeforeunload = undefined;
+
+  if (isSafari) {
+    element.__defineSetter__("onbeforeunload", seal.set);
+  } else {
+    usw.Object.defineProperty(element, "onbeforeunload", {
+      configurable: true,
+      enumerable: false,
+      get: undefined,
+      set: seal.set,
+    });
+  }
+
+  const originalAddEventListener = element.addEventListener;
+  element.addEventListener = function (type) {
+    if (type === "beforeunload") {
+      info("blocked addEventListener onbeforeunload");
+      return;
+    }
+    return originalAddEventListener.apply(this, arguments);
+  };
+}
+
+/**
+ * Replace the whole document with an empty one, purging page styles, nodes,
+ * event listeners and timers.
+ *
+ * This is a DOM operation: it waits for DOMContentLoaded, so callers must
+ * await it. Errors are not caught.
+ * @returns {Promise<void>}
+ */
+async function rebuildDocument() {
+  await waitDOM();
+
+  // Parsing an empty input yields a fresh <html><head></head><body></body>.
+  const doc = usw.document;
+  doc.open();
+  doc.close();
+
+  if (doc.adoptedStyleSheets?.length) {
+    doc.adoptedStyleSheets.length = 0;
+  }
+  removeAllTimer();
+  disableLeavePrompt(doc.body);
 }
 
 function generateRandomIP() {
@@ -63,4 +97,10 @@ function evil(script) {
   /* eslint-enable no-unused-vars */
 }
 
-export { removeAllTimer, nuke, generateRandomIP, evil };
+export {
+  disableLeavePrompt,
+  evil,
+  generateRandomIP,
+  rebuildDocument,
+  removeAllTimer,
+};

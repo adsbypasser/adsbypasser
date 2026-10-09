@@ -1,7 +1,6 @@
 import { openLink } from "./link.js";
-import { remove } from "./dom.js";
 import { warn, info } from "./logger.js";
-import { removeAllTimer } from "./misc.js";
+import { rebuildDocument } from "./misc.js";
 import { GMAPI, VERSION } from "./platform.js";
 import alignCenterCSS from "../../static/css/align_center.css";
 import scaleImageCSS from "../../static/css/scale_image.css";
@@ -9,6 +8,18 @@ import scaleImageCSS from "../../static/css/scale_image.css";
 const RESOURCE_ROOT = `https://raw.githubusercontent.com/adsbypasser/adsbypasser/v${VERSION}/static`;
 const BACKGROUND_IMAGE = `${RESOURCE_ROOT}/img/imagedoc-darknoise.png`;
 
+/**
+ * Open an image, either by redirecting to it or, with `options.replace`, by
+ * replacing the whole document with it.
+ *
+ * Replacing is a DOM operation: it waits for DOMContentLoaded, so callers
+ * must await it. Errors are not caught.
+ * @param {string} imgSrc - Image URL
+ * @param {Object} [options]
+ * @param {boolean} [options.replace] - Replace the document instead of redirecting
+ * @param {boolean} [options.referer] - Send referer when redirecting
+ * @returns {Promise<void>}
+ */
 async function openImage(imgSrc, options = {}) {
   const replace = !!options.replace;
   const referer = !!options.referer;
@@ -22,14 +33,6 @@ async function openImage(imgSrc, options = {}) {
   if (redirectImage) {
     await openLink(imgSrc, { referer });
   }
-}
-
-function enableScrolling() {
-  const el =
-    document.compatMode === "CSS1Compat"
-      ? document.documentElement
-      : document.body;
-  el.style.overflow = "";
 }
 
 function toggleShrinking(event) {
@@ -100,8 +103,7 @@ function alignCenter() {
   GMAPI.addStyle(alignCenterCSS);
 }
 
-function injectStyle(wrapper, img) {
-  remove("style, link[rel=stylesheet]");
+function setIds(wrapper, img) {
   wrapper.id = "adsbypasser-wrapper";
   img.id = "adsbypasser-image";
 }
@@ -117,10 +119,11 @@ async function replaceBody(imgSrc) {
 
   info(`replacing body with \`${imgSrc}\` ...`);
 
-  removeAllTimer();
-  enableScrolling();
+  const ac = await GMAPI.getValue("align_center");
+  const si = await GMAPI.getValue("scale_image");
+  const cb = await GMAPI.getValue("change_background");
 
-  document.body = document.createElement("body");
+  await rebuildDocument();
 
   const wrapper = document.createElement("div");
   document.body.appendChild(wrapper);
@@ -129,15 +132,12 @@ async function replaceBody(imgSrc) {
   img.src = imgSrc;
   wrapper.appendChild(img);
 
-  const ac = await GMAPI.getValue("align_center");
-  const si = await GMAPI.getValue("scale_image");
   if (ac || si) {
-    injectStyle(wrapper, img);
+    setIds(wrapper, img);
   }
   if (ac) {
     alignCenter();
   }
-  const cb = await GMAPI.getValue("change_background");
   if (cb) {
     changeBackground();
   }

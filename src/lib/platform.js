@@ -122,7 +122,10 @@ function getUnsafeWindowProxy() {
       if (target === unsafeWindow.document.querySelector) {
         self = self[MAGIC_KEY];
       }
-      if (target === unsafeWindow.document.write) {
+      if (
+        target === unsafeWindow.document.open ||
+        target === unsafeWindow.document.close
+      ) {
         self = self[MAGIC_KEY];
       }
 

@@ -1,18 +1,14 @@
 import { nop } from "./lib/core.js";
 import { findHandler } from "./lib/dispatcher.js";
+import { waitDOM } from "./lib/dom.js";
+import { disableLeavePrompt } from "./lib/misc.js";
 import { rawUSW, GMAPI, usw } from "./lib/platform.js";
 import { dumpConfig, loadConfig } from "./lib/config.js";
 import { warn, info } from "./lib/logger.js";
 import "__ADSBYPASSER_HANDLERS__";
 
 // -----------------------------
-// Safari detection
-// -----------------------------
-const isSafari =
-  Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0;
-
-// -----------------------------
-// Window / unload overrides
+// Window overrides
 // -----------------------------
 function disableWindowOpen() {
   try {
@@ -24,53 +20,11 @@ function disableWindowOpen() {
   usw.confirm = nop;
 }
 
-function disableLeavePrompt(element) {
-  if (!element) {
-    return;
-  }
-
-  const seal = {
-    set: () => info("blocked onbeforeunload"),
-  };
-
-  element.onbeforeunload = undefined;
-
-  if (isSafari) {
-    element.__defineSetter__("onbeforeunload", seal.set);
-  } else {
-    usw.Object.defineProperty(element, "onbeforeunload", {
-      configurable: true,
-      enumerable: false,
-      get: undefined,
-      set: seal.set,
-    });
-  }
-
-  const originalAddEventListener = element.addEventListener;
-  element.addEventListener = function (type) {
-    if (type === "beforeunload") {
-      info("blocked addEventListener onbeforeunload");
-      return;
-    }
-    return originalAddEventListener.apply(this, arguments);
-  };
-}
-
 // -----------------------------
 // DOM helpers
 // -----------------------------
 function changeTitle() {
   document.title += " - AdsBypasser";
-}
-
-function waitDOM() {
-  return new Promise((resolve) => {
-    if (document.readyState !== "loading") {
-      resolve();
-      return;
-    }
-    document.addEventListener("DOMContentLoaded", () => resolve());
-  });
 }
 
 // -----------------------------
