@@ -20,16 +20,14 @@ function log(method, args) {
   }
 }
 
-function debug() {
+export function debug() {
   log("debug", arguments);
 }
 
-function info() {
+export function info() {
   log("info", arguments);
 }
 
-function warn() {
+export function warn() {
   log("warn", arguments);
 }
-
-export { debug, info, warn };

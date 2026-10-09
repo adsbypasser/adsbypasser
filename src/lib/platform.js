@@ -1,9 +1,9 @@
 import { forEach } from "./core.js";
 
-const rawUSW = getUnsafeWindow();
-const usw = getUnsafeWindowProxy();
-const GMAPI = getGreaseMonkeyAPI();
-const VERSION = getGMInfo().script?.version ?? "";
+export const rawUSW = getUnsafeWindow();
+export const usw = getUnsafeWindowProxy();
+export const GMAPI = getGreaseMonkeyAPI();
+export const VERSION = getGMInfo().script?.version ?? "";
 
 function getUnsafeWindow() {
   let w = null;
@@ -173,5 +173,3 @@ function clone(safe) {
   });
   return unsafe;
 }
-
-export { rawUSW, usw, GMAPI, VERSION };

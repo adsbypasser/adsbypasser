@@ -12,7 +12,7 @@ import { none, forEach, find } from "./core.js";
  * @param {string} key - Cookie key
  * @param {string} value - Cookie value
  */
-function setCookie(key, value) {
+export function setCookie(key, value) {
   document.cookie = `${key}=${value};path=${location.pathname};`;
 }
 
@@ -21,7 +21,7 @@ function setCookie(key, value) {
  * @param {string} key - Cookie key
  * @returns {string|null} - Cookie value or null if not found
  */
-function getCookie(key) {
+export function getCookie(key) {
   const [, c] = find(document.cookie.split(";"), (v) => {
     const k = v.replace(/^\s*([a-zA-Z0-9-_]+)=.+$/, "$1");
     if (k !== key) {
@@ -40,7 +40,7 @@ function getCookie(key) {
  * Reset all cookies for the current domain
  * Clears cookies for various domain variations
  */
-function resetCookies() {
+export function resetCookies() {
   const domainFull = location.hostname;
   const domainNoWWW = domainFull.replace(/^www\./, "");
   const domainRoot = domainFull.replace(/^(\w+\.)+?(\w+\.\w+)$/, "$2");
@@ -59,5 +59,3 @@ function resetCookies() {
     document.cookie = cookieString(k, domainRoot, expired);
   });
 }
-
-export { setCookie, getCookie, resetCookies };

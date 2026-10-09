@@ -20,7 +20,7 @@ const BACKGROUND_IMAGE = `${RESOURCE_ROOT}/img/imagedoc-darknoise.png`;
  * @param {boolean} [options.referer] - Send referer when redirecting
  * @returns {Promise<void>}
  */
-async function openImage(imgSrc, options = {}) {
+export async function openImage(imgSrc, options = {}) {
   const replace = !!options.replace;
   const referer = !!options.referer;
 
@@ -145,5 +145,3 @@ async function replaceBody(imgSrc) {
     scaleImage(img);
   }
 }
-
-export { openImage };

@@ -56,7 +56,7 @@ async function post(path, params = {}) {
   form.submit();
 }
 
-async function openLink(to, options = {}) {
+export async function openLink(to, options = {}) {
   if (!isString(to) || !to) {
     warn("false URL");
     return;
@@ -81,5 +81,3 @@ async function openLink(to, options = {}) {
 
   window.top.location.replace(to);
 }
-
-export { openLink };

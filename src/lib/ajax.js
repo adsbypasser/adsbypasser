@@ -249,7 +249,7 @@ function ajax(method, url, data, headers) {
  * @param {Object} headers - Request headers
  * @returns {Promise} - Promise that resolves with response text
  */
-function get(url, data, headers) {
+export function get(url, data, headers) {
   data = toQuery(data);
   data = data ? `?${data}` : "";
   headers = headers || {};
@@ -263,7 +263,7 @@ function get(url, data, headers) {
  * @param {Object} headers - Request headers
  * @returns {Promise} - Promise that resolves with response text
  */
-function post(url, data, headers) {
+export function post(url, data, headers) {
   const h = {
     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
   };
@@ -274,5 +274,3 @@ function post(url, data, headers) {
   }
   return ajax("POST", url, data, h);
 }
-
-export { get, post };

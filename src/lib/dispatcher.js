@@ -26,7 +26,7 @@ const patterns = [];
  * Register a pattern with its handlers
  * @param {Object} pattern - Pattern object containing rule and handlers
  */
-function register(pattern) {
+export function register(pattern) {
   patterns.push(pattern);
 }
 
@@ -34,7 +34,7 @@ function register(pattern) {
  * Reset the dispatcher by clearing all registered patterns
  * This is primarily useful for testing to ensure a clean state
  */
-function resetDispatcher() {
+export function resetDispatcher() {
   patterns.length = 0;
 }
 
@@ -167,7 +167,7 @@ function dispatch(rule, url1, url3, url6) {
  * Find the appropriate handler for the current URL
  * @returns {Object|null} - Handler object with start and ready functions or null
  */
-function findHandler() {
+export function findHandler() {
   const url1 = window.location.toString();
   const url3 = {
     scheme: window.location.protocol.slice(0, -1),
@@ -200,5 +200,3 @@ function findHandler() {
     ready: pattern.ready ? partial(pattern.ready, matched) : nop,
   };
 }
-
-export { register, findHandler, resetDispatcher };

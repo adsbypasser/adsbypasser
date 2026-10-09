@@ -8,7 +8,7 @@
 /**
  * Custom error class for AdsBypasser-specific errors
  */
-class AdsBypasserError extends Error {
+export class AdsBypasserError extends Error {
   /**
    * Create an AdsBypasserError
    * @param {string} message - Error message
@@ -28,7 +28,7 @@ class AdsBypasserError extends Error {
  * @param {Array|Object} collection - Collection to iterate over
  * @param {Function} fn - Function to execute for each element
  */
-function forEach(collection, fn) {
+export function forEach(collection, fn) {
   if (isArrayLike(collection)) {
     return Array.prototype.forEach.call(collection, fn);
   }
@@ -43,7 +43,7 @@ function forEach(collection, fn) {
  * @param {Function} fn - Test function
  * @returns {boolean} - True if all elements pass the test
  */
-function every(collection, fn) {
+export function every(collection, fn) {
   if (isArrayLike(collection)) {
     return Array.prototype.every.call(collection, fn);
   }
@@ -56,7 +56,7 @@ function every(collection, fn) {
  * @param {Function} fn - Function to apply to each element
  * @returns {Array|Object} - New collection with transformed elements
  */
-function map(collection, fn) {
+export function map(collection, fn) {
   if (isArrayLike(collection)) {
     return Array.prototype.map.call(collection, fn);
   }
@@ -73,7 +73,7 @@ function map(collection, fn) {
  * @param {Function} fn - Condition function
  * @returns {Array} - Array containing [key, value, result] or [none, none, none]
  */
-function find(collection, fn) {
+export function find(collection, fn) {
   for (const [k, v] of enumerate(collection)) {
     const r = fn(v, k, collection);
     if (r !== none) {
@@ -123,7 +123,7 @@ function isNodeList(collection) {
  * @param {...any} args - Arguments to pre-fill
  * @returns {Function} - Partially applied function
  */
-function partial(fn, ...args) {
+export function partial(fn, ...args) {
   if (typeof fn !== "function") {
     throw new AdsBypasserError("must give a function");
   }
@@ -135,26 +135,26 @@ function partial(fn, ...args) {
  * @param {any} value - Value to check
  * @returns {boolean} - True if value is a string
  */
-function isString(value) {
+export function isString(value) {
   return typeof value === "string" || value instanceof String;
 }
 
 /**
  * No-operation function
  */
-function nop() {}
+export function nop() {}
 
 /**
  * Sentinel value used to represent "no value"
  */
-const none = nop;
+export const none = nop;
 
 /**
  * Create a promise that resolves after a delay
  * @param {number} msDelay - Delay in milliseconds
  * @returns {Promise} - Promise that resolves after delay
  */
-function wait(msDelay) {
+export function wait(msDelay) {
   return new Promise((resolve) => setTimeout(resolve, msDelay));
 }
 
@@ -166,7 +166,7 @@ function wait(msDelay) {
  * @returns {Promise} - Resolves with the result, or rejects on error/exhaustion
  * @throws {AdsBypasserError} - If maxAttempts is not a positive integer
  */
-function tryEvery(msInterval, fn, maxAttempts) {
+export function tryEvery(msInterval, fn, maxAttempts) {
   if (
     maxAttempts !== undefined &&
     (!Number.isInteger(maxAttempts) || maxAttempts <= 0)
@@ -197,17 +197,3 @@ function tryEvery(msInterval, fn, maxAttempts) {
     }, msInterval);
   });
 }
-
-export {
-  AdsBypasserError,
-  every,
-  find,
-  forEach,
-  isString,
-  map,
-  none,
-  nop,
-  partial,
-  tryEvery,
-  wait,
-};

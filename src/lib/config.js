@@ -123,7 +123,7 @@ function waitForPage() {
  * Dump current configuration values
  * @returns {Promise<Object>} - Object containing all config values
  */
-async function dumpConfig() {
+export async function dumpConfig() {
   const values = await Promise.all(MANIFEST.map((d) => GMAPI.getValue(d.key)));
   const o = {};
   MANIFEST.forEach((d, i) => (o[d.key] = values[i]));
@@ -135,7 +135,7 @@ async function dumpConfig() {
  * Registers a handler for the configuration page and sets up rendering
  * @returns {Promise} - Resolves when configuration is loaded
  */
-async function loadConfig() {
+export async function loadConfig() {
   await sanityCheck();
 
   register({
@@ -171,5 +171,3 @@ async function loadConfig() {
     },
   });
 }
-
-export { dumpConfig, loadConfig };

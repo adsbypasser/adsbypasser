@@ -11,7 +11,7 @@ class DomNotFoundError extends AdsBypasserError {
   }
 }
 
-function querySelector(selector, context) {
+export function querySelector(selector, context) {
   if (!context || !context.querySelector) {
     context = document;
   }
@@ -22,7 +22,7 @@ function querySelector(selector, context) {
   return node;
 }
 
-function querySelectorOrNull(selector, context) {
+export function querySelectorOrNull(selector, context) {
   try {
     return querySelector(selector, context);
   } catch {
@@ -30,14 +30,14 @@ function querySelectorOrNull(selector, context) {
   }
 }
 
-function querySelectorAll(selector, context) {
+export function querySelectorAll(selector, context) {
   if (!context || !context.querySelectorAll) {
     context = document;
   }
   return context.querySelectorAll(selector);
 }
 
-function toDOM(rawHTML) {
+export function toDOM(rawHTML) {
   try {
     const parser = new DOMParser();
     return parser.parseFromString(rawHTML, "text/html");
@@ -46,7 +46,7 @@ function toDOM(rawHTML) {
   }
 }
 
-function remove(selector, context) {
+export function remove(selector, context) {
   const nodes = querySelectorAll(selector, context);
   forEach(nodes, (el) => {
     debug("removed", el);
@@ -54,7 +54,7 @@ function remove(selector, context) {
   });
 }
 
-function block(selector, context = document) {
+export function block(selector, context = document) {
   let fn;
   if (isString(selector)) {
     fn = () => remove(selector, context);
@@ -98,7 +98,7 @@ function searchFromScriptsByString(pattern, context) {
   return m === none ? null : m.textContent;
 }
 
-function searchFromScripts(pattern, context) {
+export function searchFromScripts(pattern, context) {
   if (pattern instanceof RegExp) {
     return searchFromScriptsByRegExp(pattern, context);
   }
@@ -108,7 +108,7 @@ function searchFromScripts(pattern, context) {
   return null;
 }
 
-function waitDOM() {
+export function waitDOM() {
   return new Promise((resolve) => {
     if (document.readyState !== "loading") {
       resolve();
@@ -117,14 +117,3 @@ function waitDOM() {
     document.addEventListener("DOMContentLoaded", () => resolve());
   });
 }
-
-export {
-  block,
-  querySelector,
-  querySelectorAll,
-  querySelectorOrNull,
-  remove,
-  searchFromScripts,
-  toDOM,
-  waitDOM,
-};

@@ -6,7 +6,7 @@ import { usw } from "./platform.js";
 const isSafari =
   Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0;
 
-function removeAllTimer() {
+export function removeAllTimer() {
   let handle = window.setInterval(nop, 10);
   while (handle > 0) {
     window.clearInterval(handle--);
@@ -18,7 +18,7 @@ function removeAllTimer() {
   }
 }
 
-function disableLeavePrompt(element) {
+export function disableLeavePrompt(element) {
   if (!element) {
     return;
   }
@@ -58,7 +58,7 @@ function disableLeavePrompt(element) {
  * await it. Errors are not caught.
  * @returns {Promise<void>}
  */
-async function rebuildDocument() {
+export async function rebuildDocument() {
   await waitDOM();
 
   // Parsing an empty input yields a fresh <html><head></head><body></body>.
@@ -73,12 +73,12 @@ async function rebuildDocument() {
   disableLeavePrompt(doc.body);
 }
 
-function generateRandomIP() {
+export function generateRandomIP() {
   return [0, 0, 0, 0].map(() => Math.floor(Math.random() * 256)).join(".");
 }
 
 // This is not a typo. A naive approach though, patch is welcome.
-function evil(script) {
+export function evil(script) {
   /* eslint-disable no-unused-vars */
   return ((
     GM,
@@ -96,11 +96,3 @@ function evil(script) {
   })();
   /* eslint-enable no-unused-vars */
 }
-
-export {
-  disableLeavePrompt,
-  evil,
-  generateRandomIP,
-  rebuildDocument,
-  removeAllTimer,
-};
