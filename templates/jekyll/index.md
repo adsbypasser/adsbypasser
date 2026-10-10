@@ -2,28 +2,40 @@
 layout: default
 ---
 
-# Feature
+# Features
 
-This user script helps you to:
+This userscript helps you:
 
-* skip countdown ads or continue pages.
-* prevent ad pop-up windows.
+* Skip countdown ads and continue pages.
+* Prevent ad pop-up windows from opening.
 
-It **CANNOT** help you to solve reCAPTCHAs.
+It **CANNOT** solve reCAPTCHAs.
 
-**Lite edition** removes image-hosting site support from **Full edition**.
-If you prefer to use other userscripts to deal with image-hosting sites, you can use the Lite edition.
+Feature requests and bug reports are welcome!
+You can report issues or submit pull requests on [GitHub].
 
-Any feature request or bug report is welcome.
-You could use [GitHub] to report issues or send pull requests.
+You can also configure some features on [this page][1]. See [here][5] for more
+information.
 
-You could configure some function in [this page][1], please see [here][5] if you
-need more information.
+# Nightly Builds
+
+Nightly builds are automatically generated from the latest source code, so they
+include the latest site fixes before the next release.
+However, they are not reviewed like official releases and **may break things**.
+If you encounter any issues, please report them on [GitHub] and include the
+nightly build's version number.
+
+* Installing a nightly build replaces the release build in your userscript
+  manager, because both builds share the same name.
+* Once installed, the nightly build keeps receiving updates from the nightly
+  channel, even after a new release becomes available.
+* To switch back to release builds, uninstall the nightly build first, then
+  install the release build.
 
 # Supported Platforms
 
-Please check [this page][2] to see if your browser/userscript manager is
-supported.
+Please see [this page][2] for a list of supported browsers and userscript
+managers.
 
 # Supported Sites
 

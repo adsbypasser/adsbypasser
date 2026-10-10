@@ -1,89 +1,141 @@
 <!doctype html>
 <html lang="{{ site.lang | default: 'en-US' }}">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>{{ site.title }}</title>
+    {% seo %}
     <link
       rel="stylesheet"
       href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% include head-custom.html %}
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <h1><a href="{{ '/' | absolute_url }}">{{ site.title }}</a></h1>
+    <div id="header">
+      <nav>
+        <ul>
+          <li class="fork">
+            <a href="https://github.com/adsbypasser/adsbypasser"
+              >View On GitHub</a
+            >
+          </li>
+          <li class="downloads">
+            <a
+              href="https://github.com/adsbypasser/adsbypasser/issues"
+              rel="external"
+              >Report Bug</a
+            >
+          </li>
+          <li class="downloads">
+            <a href="{{ '/configure.html' | relative_url }}">Configure</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end header -->
 
-        <p class="view">
-          <a href="https://github.com/adsbypasser/adsbypasser">
-            View the Project on GitHub
-            <small>adsbypasser/adsbypasser</small>
-          </a>
-        </p>
+    <div class="wrapper">
+      <section>
+        <div id="title">
+          <h1>{{ site.title }}</h1>
+          <p>{{ site.description }}</p>
+          <hr />
+          <span class="credits left"
+            >Project maintained by
+            <a href="https://github.com/adsbypasser">adsbypasser</a></span
+          >
+          <span class="credits right"
+            >Hosted on GitHub Pages &mdash; Theme by
+            <a href="https://twitter.com/mattgraham">mattgraham</a></span
+          >
+        </div>
 
         <!-- Installation links -->
-        <div class="links" id="releases">
-          <a
-            href="{{ '/releases/' | append: site.data.urls.full | relative_url }}"
-          >
-            <strong>Install Full Edition</strong>
-          </a>
-          <a
-            href="{{ '/releases/' | append: site.data.urls.lite | relative_url }}"
-          >
-            <strong>Install Lite Edition</strong>
-          </a>
+        <div id="install">
+          <fieldset class="switch">
+            <legend>Channel</legend>
+            <input
+              type="radio"
+              id="channel-release"
+              name="channel"
+              value="release"
+              checked
+            />
+            <label for="channel-release">Release</label>
+            <input
+              type="radio"
+              id="channel-nightly"
+              name="channel"
+              value="nightly"
+            />
+            <label for="channel-nightly">Nightly</label>
+          </fieldset>
+
+          <p class="note release">
+            Stable builds, recommended for most users. Updated when a new
+            version is published.
+          </p>
+          <p class="note nightly">
+            Beta builds from the latest source code. They may break things,
+            <a href="#nightly-builds">read before installing</a>.
+          </p>
+
+          <div class="editions">
+            <div class="edition">
+              <div class="name">
+                Full
+                <span class="hint">
+                  <span class="help" tabindex="0" aria-describedby="tip-full"
+                    >?</span
+                  >
+                  <span class="tip" role="tooltip" id="tip-full"
+                    >All supported sites, including image-hosting sites.</span
+                  >
+                </span>
+              </div>
+              <a
+                class="button release"
+                href="{{ '/releases/' | append: site.data.urls.full | relative_url }}"
+                >Install Full</a
+              >
+              <a
+                class="button nightly"
+                href="{{ '/nightly/' | append: site.data.urls.full | relative_url }}"
+                >Install Full Nightly</a
+              >
+            </div>
+            <div class="edition">
+              <div class="name">
+                Lite
+                <span class="hint end">
+                  <span class="help" tabindex="0" aria-describedby="tip-lite"
+                    >?</span
+                  >
+                  <span class="tip" role="tooltip" id="tip-lite"
+                    >Same as Full, but without image-hosting sites. Choose this
+                    if you use another userscript for image-hosting sites.</span
+                  >
+                </span>
+              </div>
+              <a
+                class="button release"
+                href="{{ '/releases/' | append: site.data.urls.lite | relative_url }}"
+                >Install Lite</a
+              >
+              <a
+                class="button nightly"
+                href="{{ '/nightly/' | append: site.data.urls.lite | relative_url }}"
+                >Install Lite Nightly</a
+              >
+            </div>
+          </div>
         </div>
+        <script src="{{ '/assets/js/install.js' | relative_url }}"></script>
 
-        <!-- Nightly installation links -->
-        <div class="links" id="nightly">
-          <a
-            href="{{ '/nightly/' | append: site.data.urls.full | relative_url }}"
-          >
-            <strong>Install Full Edition (Nightly)</strong>
-          </a>
-          <a
-            href="{{ '/nightly/' | append: site.data.urls.lite | relative_url }}"
-          >
-            <strong>Install Lite Edition (Nightly)</strong>
-          </a>
-        </div>
-
-        <!-- Configuration link -->
-        <div class="links">
-          <a href="{{ '/configure.html' | relative_url }}">
-            <strong>Configure Settings</strong>
-          </a>
-        </div>
-
-        <!-- Issue reporting link -->
-        <div class="links">
-          <a
-            href="https://github.com/adsbypasser/adsbypasser/issues"
-            rel="external"
-          >
-            <strong>Report Bug / Request Feature</strong>
-          </a>
-        </div>
-      </header>
-
-      <section>{{ content }}</section>
-
-      <footer>
-        <p>
-          This project is maintained by
-          <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>
-        </p>
-        <p>
-          <small
-            >Hosted on GitHub Pages &mdash; Theme by
-            <a href="https://github.com/orderedlist">orderedlist</a></small
-          >
-        </p>
-      </footer>
+        {{ content }}
+      </section>
     </div>
   </body>
 </html>

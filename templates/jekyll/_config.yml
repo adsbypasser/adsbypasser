@@ -1,4 +1,7 @@
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: pages-themes/midnight@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
 
 title: AdsBypasser
 description: A lightweight userscript that automatically skips countdown ads
