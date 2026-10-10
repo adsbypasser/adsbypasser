@@ -4,7 +4,7 @@
 
 _.register({
   rule: {
-    host: [/^vipr\.im$/],
+    host: /^vipr\.im$/,
   },
   async ready() {
     const i = $(".pic");
