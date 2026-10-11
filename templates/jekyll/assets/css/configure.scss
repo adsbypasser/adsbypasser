@@ -13,7 +13,7 @@
   border-width: 1px;
   border-style: solid;
   border-radius: 1em;
-  border-color: gray;
+  border-color: var(--bs-border-color);
   margin: 5em;
   padding: 3em;
   display: none;
@@ -57,7 +57,7 @@
 .form-text {
   margin-top: 0.25rem;
   font-size: 0.875rem;
-  color: #6c757d;
+  color: var(--bs-secondary-color);
 }
 
 .form-check {
