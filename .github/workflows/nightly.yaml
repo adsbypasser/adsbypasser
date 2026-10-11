@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # Fetch tags to resolve the latest release
 
       - name: Setup Node.js
         uses: actions/setup-node@v7
@@ -33,13 +35,10 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Compute nightly version
-        run: |
-          echo "ADSBYPASSER_NIGHTLY=$(TZ=UTC git log -1 --format=%cd --date=format-local:%Y%m%d.%H%M%S)" >> $GITHUB_ENV
-          echo "ADSBYPASSER_COMMIT=${{ github.sha }}" >> $GITHUB_ENV
-
       - name: Build userscripts
         run: npm run build
+        env:
+          ADSBYPASSER_NIGHTLY: "1"
 
       - name: Deploy to nightly repository
         run: ./build/ci/deploy-nightly.sh

@@ -3,7 +3,6 @@ import { forEach } from "./core.js";
 export const rawUSW = getUnsafeWindow();
 export const usw = getUnsafeWindowProxy();
 export const GMAPI = getGreaseMonkeyAPI();
-export const VERSION = getGMInfo().script?.version ?? "";
 
 function getUnsafeWindow() {
   let w = null;

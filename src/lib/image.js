@@ -1,11 +1,12 @@
 import { openLink } from "./link.js";
 import { warn, info } from "./logger.js";
 import { rebuildDocument } from "./misc.js";
-import { GMAPI, VERSION } from "./platform.js";
+import { GMAPI } from "./platform.js";
 import alignCenterCSS from "../../static/css/align_center.css";
 import scaleImageCSS from "../../static/css/scale_image.css";
+import { RELEASE_TAG } from "__ADSBYPASSER_BUILD_INFO__";
 
-const RESOURCE_ROOT = `https://raw.githubusercontent.com/adsbypasser/adsbypasser/v${VERSION}/static`;
+const RESOURCE_ROOT = `https://raw.githubusercontent.com/adsbypasser/adsbypasser/${RELEASE_TAG}/static`;
 const BACKGROUND_IMAGE = `${RESOURCE_ROOT}/img/imagedoc-darknoise.png`;
 
 /**

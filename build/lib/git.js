@@ -64,6 +64,37 @@ function getCommitsBetweenTags(fromTag, toTag) {
 }
 
 /**
+ * Get the sha and commit time of HEAD
+ * @returns {{sha: string, timestamp: string}} Commit sha and Unix timestamp
+ */
+export function getHeadCommit() {
+  try {
+    const [sha, timestamp] = execSync("git log -1 --format=%H:%ct", {
+      encoding: "utf8",
+    })
+      .trim()
+      .split(":");
+    return { sha, timestamp };
+  } catch (error) {
+    throw new Error(`Failed to get HEAD commit: ${error.message}`);
+  }
+}
+
+/**
+ * Get the most recent release tag reachable from HEAD
+ * @returns {string} Git tag
+ */
+export function getLatestTag() {
+  try {
+    return execSync('git describe --tags --abbrev=0 --match "v*"', {
+      encoding: "utf8",
+    }).trim();
+  } catch (error) {
+    throw new Error(`Failed to get latest tag: ${error.message}`);
+  }
+}
+
+/**
  * Extract domains from JSDoc at a specific git tag using git show
  * @param {string} tag - Git tag
  * @returns {Promise<Set<string>>} Set of domain names

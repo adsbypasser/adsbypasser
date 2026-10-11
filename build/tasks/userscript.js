@@ -11,6 +11,7 @@ import {
   readFiles,
   writeFile,
 } from "../lib/build.js";
+import { getHeadCommit, getLatestTag } from "../lib/git.js";
 import { output, source } from "../lib/paths.js";
 import { bundle, removeEmptyLines, stripComments } from "../lib/transform.js";
 
@@ -19,9 +20,12 @@ import { bundle, removeEmptyLines, stripComments } from "../lib/transform.js";
  * @returns {Promise<void>}
  */
 export async function userscript() {
+  const pkg = await parsePackageJSON();
+  const buildInfo = getBuildInfo(pkg.version);
+  await makeBuildInfo(buildInfo);
   await Promise.all(
     Array.from(imageBuildOptions(), ([supportImage]) =>
-      buildUserscript(supportImage),
+      buildUserscript(supportImage, buildInfo),
     ),
   );
 }
@@ -29,9 +33,10 @@ export async function userscript() {
 /**
  * Generate the userscript for one configuration
  * @param {boolean} supportImage - Whether image support is enabled
+ * @param {Object} buildInfo - Build information from getBuildInfo
  * @returns {Promise<void>}
  */
-async function buildUserscript(supportImage) {
+async function buildUserscript(supportImage, buildInfo) {
   const body = async () => {
     await Promise.all([
       makeNamespace(supportImage),
@@ -39,7 +44,7 @@ async function buildUserscript(supportImage) {
     ]);
     await makeBody(supportImage);
   };
-  await Promise.all([makeMeta(supportImage), body()]);
+  await Promise.all([makeMeta(supportImage, buildInfo), body()]);
   await linkFiles(supportImage);
 }
 
@@ -64,19 +69,32 @@ async function linkFiles(supportImage) {
 /**
  * Generate meta.js file from template
  * @param {boolean} supportImage - Whether image support is enabled
+ * @param {Object} buildInfo - Build information from getBuildInfo
  * @returns {Promise<void>}
  */
-async function makeMeta(supportImage) {
+async function makeMeta(supportImage, buildInfo) {
   const featureName = getFeatureName(supportImage);
 
   const template = await fs.readFile(
     source.to("templates/userscript/metadata.template.js"),
     "utf-8",
   );
-  const content = await finalizeMetadata(supportImage, template);
+  const content = await finalizeMetadata(supportImage, template, buildInfo);
   await writeFile(
     output.to(`adsbypasser.${featureName}.meta.js`),
     removeEmptyLines(content),
+  );
+}
+
+/**
+ * Generate the module that exposes build information to the userscript
+ * @param {Object} buildInfo - Build information from getBuildInfo
+ * @returns {Promise<void>}
+ */
+async function makeBuildInfo(buildInfo) {
+  await writeFile(
+    output.to("build-info.js"),
+    `export const RELEASE_TAG = ${JSON.stringify(buildInfo.releaseTag)};\n`,
   );
 }
 
@@ -94,6 +112,10 @@ async function makeBody(supportImage) {
     alias: [
       { find: "__ADSBYPASSER_NAMESPACE__", replacement: namespacePath },
       { find: "__ADSBYPASSER_HANDLERS__", replacement: handlersPath },
+      {
+        find: "__ADSBYPASSER_BUILD_INFO__",
+        replacement: output.to("build-info.js"),
+      },
     ],
     modules: [source.to("src"), "node_modules"],
     extensions: [".js", ".json"],
@@ -192,33 +214,34 @@ async function parsePackageJSON() {
 }
 
 /**
- * Get release channel specific metadata values
+ * Get release channel specific build information
  *
- * Nightly builds are enabled by setting ADSBYPASSER_NIGHTLY to a version
- * suffix (e.g. 20261004.123456) and ADSBYPASSER_COMMIT to the commit sha.
+ * Nightly builds are enabled by setting ADSBYPASSER_NIGHTLY. Their version
+ * is the package version followed by the commit Unix timestamp, kept as a
+ * single integer because Greasemonkey rejects versions with more than four
+ * numeric parts. They have no tag of their own, so static resources are
+ * loaded from the latest release tag.
  * @param {string} version - Package version
- * @returns {Object} Template data for version, description, URLs and icon
+ * @returns {Object} Version, description, URLs, icon and resource refs
  */
-function getChannelData(version) {
-  const nightly = process.env.ADSBYPASSER_NIGHTLY;
-  if (!nightly) {
+function getBuildInfo(version) {
+  if (!process.env.ADSBYPASSER_NIGHTLY) {
     return {
       version,
       description: "Bypass Ads",
       releaseChannel: "releases",
       iconRef: `v${version}`,
+      releaseTag: `v${version}`,
     };
   }
 
-  const commit = process.env.ADSBYPASSER_COMMIT;
-  if (!commit) {
-    throw new Error("ADSBYPASSER_COMMIT is required for nightly builds");
-  }
+  const { sha, timestamp } = getHeadCommit();
   return {
-    version: `${version}.${nightly}`,
-    description: `Bypass Ads (nightly ${commit.slice(0, 7)})`,
+    version: `${version}.${timestamp}`,
+    description: `Bypass Ads (nightly ${sha.slice(0, 7)})`,
     releaseChannel: "nightly",
-    iconRef: commit,
+    iconRef: sha,
+    releaseTag: getLatestTag(),
   };
 }
 
@@ -226,21 +249,22 @@ function getChannelData(version) {
  * Finalize metadata content by injecting package data and domains
  * @param {boolean} supportImage - Whether image support is enabled
  * @param {string} content - Template content
+ * @param {Object} buildInfo - Build information from getBuildInfo
  * @returns {Promise<string>} Finalized metadata content
  */
-async function finalizeMetadata(supportImage, content) {
+async function finalizeMetadata(supportImage, content, buildInfo) {
   const featureName = getFeatureName(supportImage);
   const featurePostfix = supportImage ? "" : " Lite";
-
-  // Load package.json
-  const pkg = await parsePackageJSON();
 
   // Extract domains and generate @match directives
   const matchDirectives = await extractDomainsForMetadata(supportImage);
 
   let s = _.template(content);
   s = s({
-    ...getChannelData(pkg.version),
+    version: buildInfo.version,
+    description: buildInfo.description,
+    releaseChannel: buildInfo.releaseChannel,
+    iconRef: buildInfo.iconRef,
     title: `AdsBypasser${featurePostfix}`,
     buildName: featureName,
   });
