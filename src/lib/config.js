@@ -35,7 +35,7 @@ const MANIFEST = [
     verify: (v) => typeof v === "boolean",
     normalize: Boolean,
     label: "Change Background",
-    help: "Use Firefox-like image background.",
+    help: "Use dark image background.",
     type: "checkbox",
   },
   {

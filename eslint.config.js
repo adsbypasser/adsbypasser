@@ -27,7 +27,6 @@ const browserGlobals = {
 const userscriptGlobals = {
   // Greasemonkey/Tampermonkey userscript APIs
   GM: "readonly",
-  GM_addStyle: "readonly",
   GM_deleteValue: "readonly",
   GM_getValue: "readonly",
   GM_listValues: "readonly",

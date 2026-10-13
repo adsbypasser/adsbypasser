@@ -11,7 +11,7 @@ import {
   readFiles,
   writeFile,
 } from "../lib/build.js";
-import { getHeadCommit, getLatestTag } from "../lib/git.js";
+import { getHeadCommit } from "../lib/git.js";
 import { output, source } from "../lib/paths.js";
 import { bundle, removeEmptyLines, stripComments } from "../lib/transform.js";
 
@@ -22,7 +22,6 @@ import { bundle, removeEmptyLines, stripComments } from "../lib/transform.js";
 export async function userscript() {
   const pkg = await parsePackageJSON();
   const buildInfo = getBuildInfo(pkg.version);
-  await makeBuildInfo(buildInfo);
   await Promise.all(
     Array.from(imageBuildOptions(), ([supportImage]) =>
       buildUserscript(supportImage, buildInfo),
@@ -87,18 +86,6 @@ async function makeMeta(supportImage, buildInfo) {
 }
 
 /**
- * Generate the module that exposes build information to the userscript
- * @param {Object} buildInfo - Build information from getBuildInfo
- * @returns {Promise<void>}
- */
-async function makeBuildInfo(buildInfo) {
-  await writeFile(
-    output.to("build-info.js"),
-    `export const RELEASE_TAG = ${JSON.stringify(buildInfo.releaseTag)};\n`,
-  );
-}
-
-/**
  * Generate body script using rollup
  * @param {boolean} supportImage - Whether image support is enabled
  * @returns {Promise<void>}
@@ -112,10 +99,6 @@ async function makeBody(supportImage) {
     alias: [
       { find: "__ADSBYPASSER_NAMESPACE__", replacement: namespacePath },
       { find: "__ADSBYPASSER_HANDLERS__", replacement: handlersPath },
-      {
-        find: "__ADSBYPASSER_BUILD_INFO__",
-        replacement: output.to("build-info.js"),
-      },
     ],
     modules: [source.to("src"), "node_modules"],
     extensions: [".js", ".json"],
@@ -219,10 +202,9 @@ async function parsePackageJSON() {
  * Nightly builds are enabled by setting ADSBYPASSER_NIGHTLY. Their version
  * is the package version followed by the commit Unix timestamp, kept as a
  * single integer because Greasemonkey rejects versions with more than four
- * numeric parts. They have no tag of their own, so static resources are
- * loaded from the latest release tag.
+ * numeric parts.
  * @param {string} version - Package version
- * @returns {Object} Version, description, URLs, icon and resource refs
+ * @returns {Object} Version, description, release channel and icon ref
  */
 function getBuildInfo(version) {
   if (!process.env.ADSBYPASSER_NIGHTLY) {
@@ -231,7 +213,6 @@ function getBuildInfo(version) {
       description: "Bypass Ads",
       releaseChannel: "releases",
       iconRef: `v${version}`,
-      releaseTag: `v${version}`,
     };
   }
 
@@ -241,7 +222,6 @@ function getBuildInfo(version) {
     description: `Bypass Ads (nightly ${sha.slice(0, 7)})`,
     releaseChannel: "nightly",
     iconRef: sha,
-    releaseTag: getLatestTag(),
   };
 }
 

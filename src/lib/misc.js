@@ -56,6 +56,11 @@ export function disableLeavePrompt(element) {
  *
  * This is a DOM operation: it waits for DOMContentLoaded, so callers must
  * await it. Errors are not caught.
+ *
+ * document.open() also erases the window listeners some userscript managers
+ * (e.g. Violentmonkey in page mode) use to serve GM APIs, so those may stop
+ * working afterwards. Call any GM API you need before this, and use plain
+ * DOM after.
  * @returns {Promise<void>}
  */
 export async function rebuildDocument() {
