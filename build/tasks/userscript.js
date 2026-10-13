@@ -204,7 +204,7 @@ async function parsePackageJSON() {
  * single integer because Greasemonkey rejects versions with more than four
  * numeric parts.
  * @param {string} version - Package version
- * @returns {Object} Version, description, release channel and icon ref
+ * @returns {Object} Version, description and release channel
  */
 function getBuildInfo(version) {
   if (!process.env.ADSBYPASSER_NIGHTLY) {
@@ -212,7 +212,6 @@ function getBuildInfo(version) {
       version,
       description: "Bypass Ads",
       releaseChannel: "releases",
-      iconRef: `v${version}`,
     };
   }
 
@@ -221,7 +220,6 @@ function getBuildInfo(version) {
     version: `${version}.${timestamp}`,
     description: `Bypass Ads (nightly ${sha.slice(0, 7)})`,
     releaseChannel: "nightly",
-    iconRef: sha,
   };
 }
 
@@ -244,7 +242,6 @@ async function finalizeMetadata(supportImage, content, buildInfo) {
     version: buildInfo.version,
     description: buildInfo.description,
     releaseChannel: buildInfo.releaseChannel,
-    iconRef: buildInfo.iconRef,
     title: `AdsBypasser${featurePostfix}`,
     buildName: featureName,
   });

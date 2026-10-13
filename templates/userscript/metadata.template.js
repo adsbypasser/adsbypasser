@@ -8,7 +8,7 @@
 // @supportURL     https://github.com/adsbypasser/adsbypasser/issues
 // @updateURL      https://adsbypasser.github.io/<%= releaseChannel %>/adsbypasser.<%= buildName %>.meta.js
 // @downloadURL    https://adsbypasser.github.io/<%= releaseChannel %>/adsbypasser.<%= buildName %>.user.js
-// @icon           https://raw.githubusercontent.com/adsbypasser/adsbypasser/<%= iconRef %>/static/img/logo.png
+// @icon           https://adsbypasser.github.io/assets/img/logo.png
 // @grant          GM_deleteValue
 // @grant          GM_getValue
 // @grant          GM_info
