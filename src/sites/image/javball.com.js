@@ -35,6 +35,7 @@
  * @domain kin8-av.com
  * @domain kin8-jav.com
  * @domain kr-av.com
+ * @domain kr1min.com
  * @domain misa.homes
  * @domain old-young.net
  * @domain ovabee.com
@@ -88,6 +89,7 @@ _.register({
     "https://kin8-av.com/upload/en/*",
     "https://kin8-jav.com/upload/en/*",
     "https://kr-av.com/upload/en/*",
+    "https://kr1min.com/upload/en/*",
     "https://misa.homes/upload/en/*",
     "https://old-young.net/upload/en/*",
     "https://ovabee.com/upload/en/*",
