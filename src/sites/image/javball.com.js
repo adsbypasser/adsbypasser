@@ -10,6 +10,7 @@
  * @domain chinese-pics.com
  * @domain chinese-pics.vip
  * @domain cn-av.com
+ * @domain cn1min.com
  * @domain cnpics.org
  * @domain cnxx.me
  * @domain cnxxx.org
@@ -64,6 +65,7 @@ _.register({
     "https://chinese-pics.com/upload/en/*",
     "https://chinese-pics.vip/upload/en/*",
     "https://cn-av.com/upload/en/*",
+    "https://cn1min.com/upload/en/*",
     "https://cnpics.org/upload/en/*",
     "https://cnxx.me/upload/en/*",
     "https://cnxxx.org/upload/en/*",
