@@ -34,6 +34,7 @@
  * @domain javring.com
  * @domain javsunday.com
  * @domain javtele.net
+ * @domain javtele.org
  * @domain kin8-av.com
  * @domain kin8-jav.com
  * @domain kr-av.com
@@ -90,6 +91,7 @@ _.register({
     "https://javring.com/upload/en/*",
     "https://javsunday.com/upload/en/*",
     "https://javtele.net/upload/en/*",
+    "https://javtele.org/upload/en/*",
     "https://kin8-av.com/upload/en/*",
     "https://kin8-jav.com/upload/en/*",
     "https://kr-av.com/upload/en/*",
