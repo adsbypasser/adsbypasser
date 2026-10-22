@@ -19,7 +19,9 @@ function getFilesAtTag(tag, path) {
       .split("\n")
       .filter((line) => line.trim());
   } catch (error) {
-    throw new Error(`Failed to get files at tag ${tag}: ${error.message}`);
+    throw new Error(`Failed to get files at tag ${tag}: ${error.message}`, {
+      cause: error,
+    });
   }
 }
 
@@ -37,6 +39,7 @@ function getFileContentAtTag(tag, filePath) {
   } catch (error) {
     throw new Error(
       `Failed to get file content at tag ${tag}: ${error.message}`,
+      { cause: error },
     );
   }
 }
@@ -59,6 +62,7 @@ function getCommitsBetweenTags(fromTag, toTag) {
   } catch (error) {
     throw new Error(
       `Failed to get commits between ${fromTag} and ${toTag}: ${error.message}`,
+      { cause: error },
     );
   }
 }
@@ -76,7 +80,9 @@ export function getHeadCommit() {
       .split(":");
     return { sha, timestamp };
   } catch (error) {
-    throw new Error(`Failed to get HEAD commit: ${error.message}`);
+    throw new Error(`Failed to get HEAD commit: ${error.message}`, {
+      cause: error,
+    });
   }
 }
 
@@ -108,7 +114,9 @@ export async function extractDomainsFromJSDocAtTag(tag) {
       }
     }
   } catch (error) {
-    throw new Error(`Failed to read files at tag ${tag}: ${error.message}`);
+    throw new Error(`Failed to read files at tag ${tag}: ${error.message}`, {
+      cause: error,
+    });
   }
 
   return domains;
