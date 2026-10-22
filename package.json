@@ -24,14 +24,15 @@
   "homepage": "https://adsbypasser.github.io/",
   "type": "module",
   "engines": {
-    "node": ">=22.12.0",
+    "node": ">=22.19.0",
     "npm": ">=10.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@rollup/plugin-alias": "^6.0.0",
     "@rollup/plugin-node-resolve": "^16.0.1",
     "decomment": "^0.9.5",
-    "eslint": "^9.36.0",
+    "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "lodash": "^4.18.1",
     "parse-domain": "^8.2.2",
