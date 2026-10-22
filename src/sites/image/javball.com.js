@@ -53,6 +53,7 @@
  * @domain sweetie-fox.com
  * @domain xcamcovid.com
  * @domain xxpics.org
+ * @domain xxxfans.org
  */
 _.register({
   rule: [
@@ -110,6 +111,7 @@ _.register({
     "https://sweetie-fox.com/upload/en/*",
     "https://xcamcovid.com/upload/en/*",
     "https://xxpics.org/upload/en/*",
+    "https://xxxfans.org/upload/en/*",
   ],
   async ready() {
     const m = $('meta[property="og:image"]');
