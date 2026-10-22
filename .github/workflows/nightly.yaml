@@ -4,6 +4,13 @@ on:
   push:
     branches:
       - master
+    paths:
+      - "src/**"
+      - "templates/userscript/**"
+      - "build/**"
+      - "package.json"
+      - "package-lock.json"
+      - ".github/workflows/nightly.yaml"
   workflow_dispatch:
 
 concurrency:
