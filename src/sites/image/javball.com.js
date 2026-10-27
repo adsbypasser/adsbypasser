@@ -6,6 +6,7 @@
  * @domain 555fap.com
  * @domain ai18.pics
  * @domain anime-jav.com
+ * @domain anime-jav.vip
  * @domain blackwidof.org
  * @domain chinese-pics.com
  * @domain chinese-pics.vip
@@ -64,6 +65,7 @@ _.register({
     "https://555fap.com/upload/en/*",
     "https://ai18.pics/upload/en/*",
     "https://anime-jav.com/upload/en/*",
+    "https://anime-jav.vip/upload/en/*",
     "https://blackwidof.org/upload/en/*",
     "https://chinese-pics.com/upload/en/*",
     "https://chinese-pics.vip/upload/en/*",
