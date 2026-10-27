@@ -6,7 +6,9 @@ _.register({
     host: /^imgpv\.com$/,
   },
   async ready() {
-    const b = $("div > button");
-    b.click();
+    const a = $("#img-preview");
+    await $.openImage(a.src, {
+      replace: true,
+    });
   },
 });
