@@ -1,7 +1,6 @@
 /**
  * @domain 1minx.com
  * @domain 2minx.com
- * @domain 4up.pics
  * @domain 555fap.com
  * @domain ai18.pics
  * @domain anime-jav.vip
@@ -42,7 +41,6 @@
  */
 _.register({
   rule: [
-    "https://*.4up.pics/en/*",
     "https://1minx.com/upload/en/*",
     "https://2minx.com/upload/en/*",
     "https://555fap.com/upload/en/*",
