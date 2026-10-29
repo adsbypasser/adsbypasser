@@ -5,6 +5,7 @@
  * @domain 555fap.com
  * @domain ai18.pics
  * @domain anime-jav.vip
+ * @domain bbcuck.com
  * @domain chinese-pics.vip
  * @domain cn-av.vip
  * @domain cn1min.com
@@ -47,6 +48,7 @@ _.register({
     "https://555fap.com/upload/en/*",
     "https://ai18.pics/upload/en/*",
     "https://anime-jav.vip/upload/en/*",
+    "https://bbcuck.com/upload/en/*",
     "https://chinese-pics.vip/upload/en/*",
     "https://cn-av.vip/upload/en/*",
     "https://cn1min.com/upload/en/*",
