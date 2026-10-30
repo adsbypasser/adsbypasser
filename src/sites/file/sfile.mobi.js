@@ -1,13 +1,13 @@
 /**
- * @domain sfile.mobi
+ * @domain sfile.co
  */
 _.register({
   rule: {
-    host: /^sfile\.mobi$/,
+    host: /^sfile\.co$/,
   },
   async ready() {
     await _.wait(8000);
-    const btn = $("#download");
-    btn.click();
+    const a = $('a[id="download"]');
+    await $.openLink(a.href);
   },
 });
