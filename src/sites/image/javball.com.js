@@ -12,13 +12,10 @@
  * @domain fc2ppv.me
  * @domain fc2ppv.stream
  * @domain girlxxx.vip
- * @domain gofile.download
  * @domain hentai-manga.org
- * @domain hentai-sub.com
  * @domain hentai4f.com
- * @domain hentaicovid.com
- * @domain hentaicovid.vip
  * @domain hentaishine.com
+ * @domain homexxx.vip
  * @domain idol69.net
  * @domain jav1min.com
  * @domain javball.com
@@ -33,6 +30,7 @@
  * @domain pig69.vip
  * @domain porn-pig.com
  * @domain ria-kurumi.vip
+ * @domain russian18.vip
  * @domain s-porn.com
  * @domain sht-link.com
  * @domain thaiav.org
@@ -54,13 +52,11 @@ _.register({
     "https://fc2ppv.me/upload/en/*",
     "https://fc2ppv.stream/upload/en/*",
     "https://girlxxx.vip/upload/en/*",
-    "https://gofile.download/upload/en/*",
     "https://hentai-manga.org/upload/en/*",
     "https://hentai-sub.com/upload/en/*",
     "https://hentai4f.com/upload/en/*",
-    "https://hentaicovid.com/uploads/en/*",
-    "https://hentaicovid.vip/upload/en/*",
     "https://hentaishine.com/upload/en/*",
+    "https://homexxx.vip/upload/en/*",
     "https://idol69.net/upload/en/*",
     "https://jav1min.com/upload/en/*",
     "https://javball.com/upload/en/*",
@@ -75,6 +71,7 @@ _.register({
     "https://pig69.vip/upload/en/*",
     "https://porn-pig.com/upload/en/*",
     "https://ria-kurumi.vip/upload/en/*",
+    "https://russian18.vip/upload/en/*",
     "https://s-porn.com/upload/en/*",
     "https://sht-link.com/upload/en/*",
     "https://thaiav.org/upload/en/*",
