@@ -1,5 +1,4 @@
 /**
- * @domain 1minx.com
  * @domain 2minx.com
  * @domain ai18.pics
  * @domain anime-jav.vip
@@ -42,7 +41,6 @@
  */
 _.register({
   rule: [
-    "https://1minx.com/upload/en/*",
     "https://2minx.com/upload/en/*",
     "https://ai18.pics/upload/en/*",
     "https://anime-jav.vip/upload/en/*",
