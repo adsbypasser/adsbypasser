@@ -19,6 +19,7 @@
  * @domain hentai4f.com
  * @domain hentaicovid.com
  * @domain hentaicovid.vip
+ * @domain hentaishine.com
  * @domain idol69.net
  * @domain jav1min.com
  * @domain javball.com
@@ -61,6 +62,7 @@ _.register({
     "https://hentai4f.com/upload/en/*",
     "https://hentaicovid.com/uploads/en/*",
     "https://hentaicovid.vip/upload/en/*",
+    "https://hentaishine.com/upload/en/*",
     "https://idol69.net/upload/en/*",
     "https://jav1min.com/upload/en/*",
     "https://javball.com/upload/en/*",
