@@ -20,8 +20,7 @@
 _.register({
   rule: {
     host: [
-      /^www\.2i\.(cz|sk)$/,
-      /^www\.imghit\.com$/,
+      /^(img\.)?trafficimage\.club$/,
       /^img\.javstore\.net$/,
       /^imgpulse\.top$/,
       /^imgxxt\.in$/,
@@ -31,7 +30,8 @@ _.register({
       /^pixfy\.cfd$/,
       /^rintor\.space$/,
       /^shotcan\.com$/,
-      /^(img\.)?trafficimage\.club$/,
+      /^www\.2i\.(cz|sk)$/,
+      /^www\.imghit\.com$/,
     ],
     path: /^\/(image|i)\/.*/,
   },

@@ -11,11 +11,11 @@ _.register({
   rule: {
     host: [
       /^cloudgallery\.net$/,
+      /^img[a-z]{2,10}\.(sbs|shop)$/,
       /^imgair\.net$/,
       /^imgblaze\.net$/,
       /^imgfira\.cc$/,
       /^imgfrost\.net$/,
-      /^img[a-z]{2,10}\.(sbs|shop)$/,
       /^pic[a-z]{2,10}\.(sbs|shop)$/,
       /^pix[a-z]{2,10}\.sbs$/,
     ],
