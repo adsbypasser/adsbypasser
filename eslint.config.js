@@ -1,5 +1,6 @@
 import js from "@eslint/js";
 import prettierConfig from "eslint-config-prettier";
+import sites from "./build/eslint-plugin-sites.js";
 
 // Global variables organized by category
 const browserGlobals = {
@@ -74,6 +75,14 @@ export default [
   },
   js.configs.recommended,
   prettierConfig,
+  {
+    files: ["src/sites/**/*.js"],
+    plugins: { sites },
+    rules: {
+      "sites/sort-domains": "error",
+      "sites/sort-hosts": "error",
+    },
+  },
   // Base configuration for all files
   {
     files: ["**/*.js", "**/*.mjs"],
