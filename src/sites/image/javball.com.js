@@ -53,7 +53,6 @@ _.register({
     "https://fc2ppv.stream/upload/en/*",
     "https://girlxxx.vip/upload/en/*",
     "https://hentai-manga.org/upload/en/*",
-    "https://hentai-sub.com/upload/en/*",
     "https://hentai4f.com/upload/en/*",
     "https://hentaishine.com/upload/en/*",
     "https://homexxx.vip/upload/en/*",
