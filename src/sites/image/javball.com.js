@@ -30,7 +30,7 @@
  * @domain kr1min.com
  * @domain misa.homes
  * @domain old-young.vip
- * @domain pig69.com
+ * @domain pig69.vip
  * @domain porn-pig.com
  * @domain ria-kurumi.vip
  * @domain s-porn.com
@@ -72,7 +72,7 @@ _.register({
     "https://kr1min.com/upload/en/*",
     "https://misa.homes/upload/en/*",
     "https://old-young.vip/upload/en/*",
-    "https://pig69.com/upload/en/*",
+    "https://pig69.vip/upload/en/*",
     "https://porn-pig.com/upload/en/*",
     "https://ria-kurumi.vip/upload/en/*",
     "https://s-porn.com/upload/en/*",
