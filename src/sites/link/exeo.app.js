@@ -6,7 +6,7 @@
  */
 _.register({
   rule: {
-    host: [/^exe-links\.com$/, /^exeo\.app$/, /^exe\.io$/, /^exeygo\.com$/],
+    host: [/^exe-links\.com$/, /^exe\.io$/, /^exeo\.app$/, /^exeygo\.com$/],
   },
   async ready() {
     await _.wait(2000);
