@@ -1,9 +1,10 @@
 /**
+ * @domain ibb.co
  * @domain imgbb.com
  */
 _.register({
   rule: {
-    host: [/^imgbb\.com$/],
+    host: [/^ibb\.co$/, /^imgbb\.com$/],
   },
   async ready() {
     const l = $('link[rel="image_src"]');
