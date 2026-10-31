@@ -1,11 +1,11 @@
 /**
  * @domain exe-links.com
+ * @domain exe.io
  * @domain exeo.app
- * @domain exeygo.com
  */
 _.register({
   rule: {
-    host: [/^exe-links\.com$/, /^exeo\.app$/, /^exeygo\.com$/],
+    host: [/^exe-links\.com$/, /^exeo\.app$/, /^exe\.io$/],
   },
   async ready() {
     const a = $(".link-button.button");
