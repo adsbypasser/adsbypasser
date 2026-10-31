@@ -1,9 +1,10 @@
 /**
+ * @domain cuttty.com
  * @domain cuty.io
  */
 _.register({
   rule: {
-    host: /^cuty\.io$/,
+    host: [/^cutty\.com$/, /^cuty\.io$/],
   },
   async ready() {
     await _.wait(9000);
