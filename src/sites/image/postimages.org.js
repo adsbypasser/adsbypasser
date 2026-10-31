@@ -1,10 +1,9 @@
 /**
  * @domain postimages.org
- * @domain postimg.cc
  */
 _.register({
   rule: {
-    host: [/^postimages\.org$/, /^postimg\.cc$/],
+    host: [/^postimages\.org$/],
   },
   async ready() {
     const ele = $("#download");
