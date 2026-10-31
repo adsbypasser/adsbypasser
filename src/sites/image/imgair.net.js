@@ -2,10 +2,10 @@
  * @domain cloudgallery.net
  * @domain imgair.net
  * @domain imgblaze.net
- * @domain imgfira.cc
  * @domain imgfrost.net
  * @domain imgouhmde.sbs
  * @domain imgouskel.sbs
+ * @domain pixsera.net
  */
 _.register({
   rule: {
@@ -14,10 +14,10 @@ _.register({
       /^img[a-z]{2,10}\.(sbs|shop)$/,
       /^imgair\.net$/,
       /^imgblaze\.net$/,
-      /^imgfira\.cc$/,
       /^imgfrost\.net$/,
       /^pic[a-z]{2,10}\.(sbs|shop)$/,
       /^pix[a-z]{2,10}\.sbs$/,
+      /^pixsera\.net$/,
     ],
   },
   async ready() {
