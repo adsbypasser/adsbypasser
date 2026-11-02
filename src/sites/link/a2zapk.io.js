@@ -1,9 +1,10 @@
 /**
+ * @domain a2zapk.dev
  * @domain a2zapk.io
  */
 _.register({
   rule: {
-    host: /^a2zapk\.io$/,
+    host: [/^a2zapk\.dev$/, /^a2zapk\.io$/],
   },
   async ready() {
     const a = $("#dlbtn li a");
