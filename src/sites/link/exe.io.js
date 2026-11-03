@@ -1,12 +1,11 @@
 /**
- * @domain exe-links.com
  * @domain exe.io
  * @domain exeo.app
  * @domain exeygo.com
  */
 _.register({
   rule: {
-    host: [/^exe-links\.com$/, /^exe\.io$/, /^exeo\.app$/, /^exeygo\.com$/],
+    host: [/^exe\.io$/, /^exeo\.app$/, /^exeygo\.com$/],
   },
   async ready() {
     await _.wait(2000);
