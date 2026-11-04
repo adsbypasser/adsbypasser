@@ -16,7 +16,6 @@
  * @domain hentai4f.com
  * @domain hentaishine.com
  * @domain homexxx.vip
- * @domain idol69.net
  * @domain jav1min.com
  * @domain javball.com
  * @domain javbee.co
@@ -56,7 +55,6 @@ _.register({
     "https://hentai4f.com/upload/en/*",
     "https://hentaishine.com/upload/en/*",
     "https://homexxx.vip/upload/en/*",
-    "https://idol69.net/upload/en/*",
     "https://jav1min.com/upload/en/*",
     "https://javball.com/upload/en/*",
     "https://javbee.co/upload/en/*",
