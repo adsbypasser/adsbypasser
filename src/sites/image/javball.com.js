@@ -10,6 +10,7 @@
  * @domain cnxxx.org
  * @domain cosplaytele.vip
  * @domain fc2ppv.me
+ * @domain fc2ppv.vip
  * @domain fc2ppv.stream
  * @domain girlxxx.vip
  * @domain hentai-manga.org
@@ -48,6 +49,7 @@ _.register({
     "https://cnxxx.org/upload/en/*",
     "https://cosplaytele.vip/upload/en/*",
     "https://fc2ppv.me/upload/en/*",
+    "https://fc2ppv.vip/upload/en/*",
     "https://fc2ppv.stream/upload/en/*",
     "https://girlxxx.vip/upload/en/*",
     "https://hentai-manga.org/upload/en/*",
