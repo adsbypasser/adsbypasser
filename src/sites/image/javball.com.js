@@ -19,7 +19,6 @@
  * @domain jav1min.com
  * @domain javball.com
  * @domain javbee.co
- * @domain javsunday.com
  * @domain javtele.net
  * @domain javtele.org
  * @domain kr-av.com
@@ -58,7 +57,6 @@ _.register({
     "https://jav1min.com/upload/en/*",
     "https://javball.com/upload/en/*",
     "https://javbee.co/upload/en/*",
-    "https://javsunday.com/upload/en/*",
     "https://javtele.net/upload/en/*",
     "https://javtele.org/upload/en/*",
     "https://kr-av.com/upload/en/*",
