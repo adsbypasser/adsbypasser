@@ -1,9 +1,10 @@
 /**
  * @domain katfile.co
+ * @domain katfile.com
  */
 _.register({
   rule: {
-    host: /^katfile\.co$/,
+    host: [/^katfile\.co$/,/^katfile\.com$/],
   },
   async ready() {
     await _.wait(1000);
