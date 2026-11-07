@@ -9,6 +9,7 @@
  * @domain cnpics.org
  * @domain cnxxx.org
  * @domain cosplaytele.vip
+ * @domain cute-porn.com
  * @domain fc2ppv.me
  * @domain fc2ppv.stream
  * @domain fc2ppv.vip
@@ -48,6 +49,7 @@ _.register({
     "https://cnpics.org/upload/en/*",
     "https://cnxxx.org/upload/en/*",
     "https://cosplaytele.vip/upload/en/*",
+    "https://cute-porn.com/c/en/*",
     "https://fc2ppv.me/upload/en/*",
     "https://fc2ppv.stream/upload/en/*",
     "https://fc2ppv.vip/upload/en/*",
