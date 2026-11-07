@@ -18,10 +18,9 @@ _.register({
       /^imagehaha\.com$/,
       /^imagenpic\.com$/,
       /^imageshimage\.com$/,
-      /^imagetwist\.com$/,
+      /^(?:phun\.)?imagetwist\.com$/,
       /^imagexport\.com$/,
       /^picshick\.com$/,
-      /^phun\.imagetwist\.com$/,
     ],
   },
   async ready() {
