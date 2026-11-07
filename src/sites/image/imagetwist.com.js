@@ -6,6 +6,7 @@
  * @domain imagetwist.com
  * @domain imagexport.com
  * @domain picshick.com
+ * @domain phun.imagetwist.com
  */
 
 // These are all domains of imagetwist.com
@@ -20,6 +21,7 @@ _.register({
       /^imagetwist\.com$/,
       /^imagexport\.com$/,
       /^picshick\.com$/,
+      /^phun\.imagetwist\.com$/,
     ],
   },
   async ready() {
