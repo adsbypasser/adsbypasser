@@ -4,9 +4,9 @@
 _.register({
   rule: {
     host: /^www\.lolinez\.com$/,
-    query: /\?(.+)/,
+    query: /^\?./,
   },
-  async start(m) {
-    await $.openLink(m.query[1]);
+  async start() {
+    await $.openLink($.url.search.slice(1));
   },
 });

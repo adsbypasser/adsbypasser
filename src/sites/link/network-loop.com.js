@@ -4,7 +4,7 @@
 _.register({
   rule: {
     host: /^network-loop\.com$/,
-    query: /u=([^&]+)/,
+    query: /[?&]u=/,
   },
   async start() {
     await _.wait(3000);

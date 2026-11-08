@@ -4,9 +4,9 @@
 _.register({
   rule: {
     host: /^www\.javlibrary\.com$/,
-    query: /url=([^&]+)/,
+    query: /[?&]url=/,
   },
-  async start(m) {
-    await $.openLink(decodeURIComponent(m.query[1]));
+  async start() {
+    await $.openLink($.url.searchParams.get("url"));
   },
 });

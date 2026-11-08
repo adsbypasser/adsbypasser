@@ -5,9 +5,9 @@ _.register({
   rule: {
     host: /^(www\.)?supercheats\.com$/,
     path: /^\/interstitial\.html$/,
-    query: /(?:\?|&)oldurl=([^&]+)(?:$|&)/,
+    query: /[?&]oldurl=/,
   },
-  async start(m) {
-    await $.openLink(m.query[1]);
+  async start() {
+    await $.openLink($.url.searchParams.get("oldurl"));
   },
 });
