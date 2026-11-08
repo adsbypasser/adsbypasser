@@ -21,6 +21,7 @@ import {
 import { register } from '$lib/dispatcher';
 import {
   block,
+  getCurrentURL,
   querySelector,
   querySelectorAll,
   querySelectorOrNull,
@@ -81,6 +82,12 @@ $.searchFromScripts = searchFromScripts;
 $.setCookie = setCookie;
 $.toDOM = toDOM;
 $.window = usw;
+
+// Current page URL, re-read from location on every access
+Object.defineProperty($, 'url', {
+  get: getCurrentURL,
+  enumerable: true,
+});
 
 
 // Export symbols

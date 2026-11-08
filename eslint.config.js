@@ -23,6 +23,8 @@ const browserGlobals = {
   atob: "readonly",
   btoa: "readonly",
   navigator: "readonly",
+  URL: "readonly",
+  URLSearchParams: "readonly",
 };
 
 const userscriptGlobals = {

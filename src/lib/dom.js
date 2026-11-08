@@ -117,3 +117,13 @@ export function waitDOM() {
     document.addEventListener("DOMContentLoaded", () => resolve());
   });
 }
+
+/**
+ * Get a URL object for the current page location.
+ * A new object is created on every call, so it always reflects the
+ * current location and mutations do not leak to other callers.
+ * @returns {URL} - Current page URL
+ */
+export function getCurrentURL() {
+  return new URL(window.location.href);
+}
