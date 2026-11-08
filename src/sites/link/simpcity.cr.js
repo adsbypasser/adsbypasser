@@ -4,12 +4,10 @@
 _.register({
   rule: {
     host: /^simpcity\.cr$/,
-    path: [/^\/redirect\/?$/],
+    path: /^\/redirect\/?$/,
+    query: /(?:\?|&)to=([^&]+)/,
   },
-  ready() {
-    const link = document.querySelector(".simpLinkProxy-targetLink");
-    if (link?.href) {
-      location.replace(link.href);
-    }
+  async start(m) {
+    await $.openLink(atob(decodeURIComponent(m.query[1])));
   },
 });
