@@ -26,6 +26,7 @@
  * @domain kr-av.com
  * @domain kr1min.com
  * @domain misa.homes
+ * @domain nudestreet.vip
  * @domain old-young.vip
  * @domain pig69.vip
  * @domain porn-pig.com
@@ -66,6 +67,7 @@ _.register({
     "https://kr-av.com/upload/en/*",
     "https://kr1min.com/upload/en/*",
     "https://misa.homes/upload/en/*",
+    "https://nudestreet.vip/img/en/*",
     "https://old-young.vip/upload/en/*",
     "https://pig69.vip/upload/en/*",
     "https://porn-pig.com/upload/en/*",
