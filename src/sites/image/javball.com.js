@@ -2,6 +2,7 @@
  * @domain 2minx.com
  * @domain 3sporn.com
  * @domain ai18.pics
+ * @domain aixxx.vip
  * @domain anime-jav.vip
  * @domain bbcuck.com
  * @domain chinese-pics.vip
@@ -45,6 +46,7 @@ _.register({
     "https://2minx.com/upload/en/*",
     "https://3sporn.com/s/en/*",
     "https://ai18.pics/upload/en/*",
+    "https://aixxx.vip/upload/en/*",
     "https://anime-jav.vip/upload/en/*",
     "https://bbcuck.com/upload/en/*",
     "https://chinese-pics.vip/upload/en/*",
