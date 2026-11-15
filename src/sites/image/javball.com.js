@@ -35,6 +35,7 @@
  * @domain russian18.vip
  * @domain s-porn.com
  * @domain sht-link.com
+ * @domain stits.vip
  * @domain thaiav.org
  * @domain xxpics.org
  * @domain xxxfans.org
@@ -77,6 +78,7 @@ _.register({
     "https://russian18.vip/upload/en/*",
     "https://s-porn.com/upload/en/*",
     "https://sht-link.com/upload/en/*",
+    "https://stits.vip/s/en/*",
     "https://thaiav.org/upload/en/*",
     "https://xxpics.org/upload/en/*",
     "https://xxxfans.org/upload/en/*",
