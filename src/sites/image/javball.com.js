@@ -21,6 +21,7 @@
  * @domain hentaishine.com
  * @domain homexxx.vip
  * @domain housewife.homes
+ * @domain indianx.vip
  * @domain jav1min.com
  * @domain javball.com
  * @domain javbee.co
@@ -67,6 +68,7 @@ _.register({
     "https://hentaishine.com/upload/en/*",
     "https://homexxx.vip/upload/en/*",
     "https://housewife.homes/h/en/*",
+    "https://indianx.vip/i/en/*",
     "https://jav1min.com/upload/en/*",
     "https://javball.com/upload/en/*",
     "https://javbee.co/upload/en/*",
