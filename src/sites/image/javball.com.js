@@ -41,6 +41,7 @@
  * @domain sht-link.com
  * @domain stits.vip
  * @domain thaiav.org
+ * @domain tight-pussy.com
  * @domain xxpics.org
  * @domain xxxfans.org
  */
@@ -88,6 +89,7 @@ _.register({
     "https://sht-link.com/upload/en/*",
     "https://stits.vip/s/en/*",
     "https://thaiav.org/upload/en/*",
+    "https://tight-pussy.com/t/en/*",
     "https://xxpics.org/upload/en/*",
     "https://xxxfans.org/upload/en/*",
   ],
