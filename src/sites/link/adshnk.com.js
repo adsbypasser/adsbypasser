@@ -35,11 +35,32 @@ _.register({
 
     const entries = JSON.parse(response);
     const response0 = entries["0"];
-    if (!response0 || !response0.destination) {
+    if (!response0) {
       _.warn("destination link not found");
       return;
     }
 
-    await $.openLink(response0.destination);
+    // destination may be HTML-entity-encoded; metadata.url is the plain URL
+    let destination;
+    if (response0.metadata) {
+      try {
+        destination = JSON.parse(response0.metadata).url;
+      } catch {
+        // fall back to destination
+      }
+    }
+    if (!destination && response0.destination) {
+      destination = response0.destination.replace(
+        /&[a-zA-Z0-9#]+;/g,
+        (entity) => $.toDOM(entity).body.textContent,
+      );
+    }
+
+    if (!destination) {
+      _.warn("destination link not found");
+      return;
+    }
+
+    await $.openLink(destination);
   },
 });
