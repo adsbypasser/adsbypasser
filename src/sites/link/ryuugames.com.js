@@ -3,14 +3,14 @@
  */
 _.register({
   rule: {
-    host: /^(www\.)?ryuugames\.com$/,
+    host: /^www\.ryuugames\.com$/,
     path: /^\/processing(?:\/download)?\/?$/,
   },
   async ready() {
     const isHttpUrl = (url) =>
       typeof url === "string" && /^https?:\/\//i.test(url);
 
-    // Stage 1 (/processing/): resolve the safelink API directly from the Base64-encoded host payload
+    // Stage 1 (/processing/): open the destination URL from the Base64-encoded host payload directly
     const form = $.$("#continueForm");
     if (form) {
       const hostInput = $.$('input[name="host"]', form);
@@ -25,28 +25,12 @@ _.register({
             "=",
           );
           const payload = JSON.parse(atob(padded));
-          if (
-            payload &&
-            payload.post_id &&
-            payload.shortcode_id &&
-            payload.link_key
-          ) {
-            const response = await $.get(
-              `${window.location.origin}/wp-json/ryuu-safelink/v1/url`,
-              {
-                post_id: payload.post_id,
-                shortcode_id: payload.shortcode_id,
-                link_key: payload.link_key,
-              },
-            );
-            const data = JSON.parse(response);
-            if (data && data.success && isHttpUrl(data.url)) {
-              await $.openLink(data.url);
-              return;
-            }
+          if (payload && isHttpUrl(payload.url)) {
+            await $.openLink(payload.url);
+            return;
           }
         } catch (e) {
-          _.warn("failed to resolve safelink from processing page", e);
+          _.warn("failed to decode host payload from processing page", e);
         }
       }
 
@@ -85,7 +69,7 @@ _.register({
 
 _.register({
   rule: {
-    host: /^(www\.)?ryuugames\.com$/,
+    host: /^www\.ryuugames\.com$/,
     query: /^\?eroge=/,
   },
   async ready() {
