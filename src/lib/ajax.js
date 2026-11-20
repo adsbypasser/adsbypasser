@@ -197,7 +197,10 @@ function ajax(method, url, data, headers) {
     } else {
       data = toQuery(data);
     }
-    headers["Content-Length"] = data.length;
+    // Must be a string: Violentmonkey MV3 applies forbidden headers through
+    // declarativeNetRequest, which rejects non-string values and drops the
+    // whole request.
+    headers["Content-Length"] = String(data.length);
   }
 
   return new Promise((resolve, reject) => {
