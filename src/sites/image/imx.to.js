@@ -6,11 +6,11 @@ _.register({
     host: /^imx\.to$/,
   },
   async ready() {
-    let a = $.$("#continuebutton, .button");
+    let a = $.$(".btn");
     if (a) {
       a.click();
     }
-    a = $(".centred");
-    await $.openImage(a.src);
+    a = $(".img-photo");
+    await $.openLink(a.href);
   },
 });
