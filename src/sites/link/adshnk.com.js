@@ -1,7 +1,6 @@
 /**
  * @domain adshnk.com
  * @domain ashnk.com
- * @domain dshnk.com
  * @domain shrink-service.it
  */
 _.register({
@@ -9,7 +8,6 @@ _.register({
     host: [
       /^(?:\w+\.)?adshnk\.com$/,
       /^(?:\w+\.)?ashnk\.com$/,
-      /^(?:\w+\.)?dshnk\.com$/,
       /^(?:\w+\.)?shrink-service\.it$/,
     ],
     path: /^\/(?:(?:btn|s)\/)?([A-Za-z0-9]{2,})\/?$/,
