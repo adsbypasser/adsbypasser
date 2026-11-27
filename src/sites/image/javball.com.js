@@ -43,6 +43,7 @@
  * @domain stits.vip
  * @domain thaiav.org
  * @domain tight-pussy.com
+ * @domain xvintage.org
  * @domain xxpics.org
  * @domain xxxfans.org
  */
@@ -92,6 +93,7 @@ _.register({
     "https://stits.vip/s/en/*",
     "https://thaiav.org/upload/en/*",
     "https://tight-pussy.com/t/en/*",
+    "https://xvintage.org/x/en/*",
     "https://xxpics.org/upload/en/*",
     "https://xxxfans.org/upload/en/*",
   ],
