@@ -11,6 +11,7 @@
  * @domain cn1min.com
  * @domain cnpics.org
  * @domain cnxxx.org
+ * @domain colombian18.com
  * @domain cosplaytele.vip
  * @domain cute-porn.com
  * @domain fc2ppv.me
@@ -61,6 +62,7 @@ _.register({
     "https://cn1min.com/upload/en/*",
     "https://cnpics.org/upload/en/*",
     "https://cnxxx.org/upload/en/*",
+    "https://colombian18.com/c/en/*",
     "https://cosplaytele.vip/upload/en/*",
     "https://cute-porn.com/c/en/*",
     "https://fc2ppv.me/upload/en/*",
