@@ -22,7 +22,7 @@ _.register({
       /^imageshimage\.com$/,
       /^imagexport\.com$/,
       /^picshick\.com$/,
-      /^picturelol\.com$/
+      /^picturelol\.com$/,
     ],
   },
   async ready() {
