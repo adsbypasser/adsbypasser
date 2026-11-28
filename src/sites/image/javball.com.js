@@ -5,6 +5,7 @@
  * @domain aixxx.vip
  * @domain anime-jav.vip
  * @domain bbcuck.com
+ * @domain brazilian18.com
  * @domain british18.com
  * @domain chinese-pics.vip
  * @domain cn-av.vip
@@ -57,6 +58,7 @@ _.register({
     "https://aixxx.vip/upload/en/*",
     "https://anime-jav.vip/upload/en/*",
     "https://bbcuck.com/upload/en/*",
+    "https://brazilian18.com/b/en/*",
     "https://british18.com/b/en/*",
     "https://chinese-pics.vip/upload/en/*",
     "https://cn-av.vip/upload/en/*",
