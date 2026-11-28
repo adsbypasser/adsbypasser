@@ -18,6 +18,7 @@
  * @domain fc2ppv.me
  * @domain fc2ppv.stream
  * @domain fc2ppv.vip
+ * @domain giantxporn.com
  * @domain girlxxx.vip
  * @domain hentai-manga.org
  * @domain hentai4f.com
@@ -71,6 +72,7 @@ _.register({
     "https://fc2ppv.me/upload/en/*",
     "https://fc2ppv.stream/upload/en/*",
     "https://fc2ppv.vip/upload/en/*",
+    "https://giantxporn.com/g/en/*",
     "https://girlxxx.vip/upload/en/*",
     "https://hentai-manga.org/upload/en/*",
     "https://hentai4f.com/upload/en/*",
